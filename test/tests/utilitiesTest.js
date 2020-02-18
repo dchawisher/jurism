@@ -456,7 +456,6 @@ describe("Zotero.Utilities", function() {
 			for (let i in dataRaw) {
 				let json = dataRaw[i];
 				let item = new Zotero.Item();
-				Zotero.debug("XXX HELLO! Missing creator here??? " + json.type + "\n" + JSON.stringify(json, null, 2), 1);
 				Zotero.Utilities.itemFromCSLJSON(item, json);
 				yield item.saveTx();
 				
