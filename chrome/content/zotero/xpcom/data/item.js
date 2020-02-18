@@ -284,7 +284,7 @@ Zotero.Item.prototype.getField = function(field, unformatted, includeBaseMapped,
 			value = Zotero.Date.multipartToStr(value);
 		}
 	}
-	if (['jurisdiction', 'court'].indexOf(field) > -1) {
+	if ('jurisdiction' === field) {
 		var offset = parseInt(value.slice(0,3), 10);
 		if (offset) {
 			offset += 3;
