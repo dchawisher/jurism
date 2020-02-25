@@ -4794,11 +4794,13 @@ Zotero.Item.prototype.isCollection = function() {
 	
 	var isValidForType = {};
 	var setFields = new Set();
-	/*var { fields: extraFields, creators: extraCreators, extra } = Zotero.Utilities.Internal.extractExtraFields(
+	var { fields: extraFields, creators: extraCreators, extra } = Zotero.Utilities.Internal.extractExtraFields(
 		json.extra !== undefined ? json.extra : '',
 		this,
 		Object.keys(json)
-	);*/
+			// TEMP until we move creator lines to real creators
+			.concat('creators')
+	);
 	
 	// Transfer valid fields from Extra to regular fields
 	// Currently disabled
@@ -4906,12 +4908,11 @@ Zotero.Item.prototype.isCollection = function() {
 					throw e;
 				}
 				// Otherwise store in Extra
-				// TEMP: Disabled for now, along with tests in itemTest.js
-				/*if (typeof val == 'string') {
+				if (typeof val == 'string') {
 					Zotero.warn(`Storing unknown field '${field}' in Extra for item ${this.libraryKey}`);
 					extraFields.set(field, val);
 					break;
-				}*/
+				}
 				Zotero.warn(`Discarding unknown JSON ${typeof val} '${field}' for item ${this.libraryKey}`);
 				continue;
 			}
@@ -4933,12 +4934,9 @@ Zotero.Item.prototype.isCollection = function() {
 					throw e;
 				}
 				// Otherwise store in Extra
-				// TEMP: Disabled for now, since imports can assign values to multiple versions of
-				// fields
-				// https://groups.google.com/d/msg/zotero-dev/a1IPUJ2m_3s/hfmdK2P3BwAJ
-				/*Zotero.warn(`Storing invalid field '${origField}' for type ${type} in Extra for `
+				Zotero.warn(`Storing invalid field '${origField}' for type ${type} in Extra for `
 					+ `item ${this.libraryKey}`);
-				extraFields.set(field, val);*/
+				extraFields.set(field, val);
 				continue;
 			}
 			this.setField(field, json[origField], false, json.multi.main[origField], true);
@@ -4963,8 +4961,73 @@ Zotero.Item.prototype.isCollection = function() {
 		}
 	}
 	
-	//this.setField('extra', Zotero.Utilities.Internal.combineExtraFields(extra, extraFields));
-	this.setField('extra', json.extra !== undefined ? json.extra : '');
+	// If one of the valid fields is a base field or a base-mapped field, remove all other
+	// associated fields from Extra. This could be removed if we made sure that translators didn't
+	// try to save multiple versions of base-mapped fields, which they shouldn't need to do.
+	//
+	// https://github.com/zotero/zotero/issues/1504#issuecomment-572415083
+	if (!strict && extraFields.size) {
+		for (let field of setFields.keys()) {
+			let baseField;
+			if (Zotero.ItemFields.isBaseField(field)) {
+				baseField = field;
+			}
+			else {
+				let baseFieldID = Zotero.ItemFields.getBaseIDFromTypeAndField(itemTypeID, field);
+				if (baseFieldID) {
+					baseField = baseFieldID;
+				}
+			}
+			if (baseField) {
+				let mappedFieldNames = Zotero.ItemFields.getTypeFieldsFromBase(baseField, true);
+				for (let mappedField of mappedFieldNames) {
+					if (extraFields.has(mappedField)) {
+						Zotero.warn(`Removing redundant Extra field '${mappedField}' for item `
+							+ this.libraryKey);
+						extraFields.delete(mappedField);
+					}
+				}
+			}
+		}
+		
+		//
+		// Deduplicate remaining Extra fields
+		//
+		// For each invalid-for-type base field, remove any mapped fields with the same value
+		let baseFields = [];
+		for (let field of extraFields.keys()) {
+			if (Zotero.ItemFields.getID(field) && Zotero.ItemFields.isBaseField(field)) {
+				baseFields.push(field);
+			}
+		}
+		for (let baseField of baseFields) {
+			let value = extraFields.get(baseField);
+			let mappedFieldNames = Zotero.ItemFields.getTypeFieldsFromBase(baseField, true);
+			for (let mappedField of mappedFieldNames) {
+				if (extraFields.has(mappedField) && extraFields.get(mappedField) === value) {
+					Zotero.warn(`Removing redundant Extra field '${mappedField}' for item `
+						+ this.libraryKey);
+					extraFields.delete(mappedField);
+				}
+			}
+		}
+		
+		// Remove Type-mapped fields from Extra, since 'Type' is mapped to Item Type by citeproc-js
+		// and Type values mostly aren't going to be useful for item types without a Type-mapped field.
+		let typeFieldNames = Zotero.ItemFields.getTypeFieldsFromBase('type', true)
+			// This is actually 'medium' but as of 2/2020 the Embedded Metadata translator
+			// assigns it along with the other 'type' fields.
+			.concat('audioFileType');
+		for (let typeFieldName of typeFieldNames) {
+			if (extraFields.has(typeFieldName)) {
+				Zotero.warn(`Removing invalid-for-type Type field '${typeFieldName}' from Extra for item `
+					+ this.libraryKey);
+				extraFields.delete(typeFieldName);
+			}
+		}
+	}
+	
+	this.setField('extra', Zotero.Utilities.Internal.combineExtraFields(extra, extraFields));
 	
 	if (json.collections || this._collections.length) {
 		this.setCollections(json.collections);
@@ -5108,7 +5171,7 @@ Zotero.Item.prototype.toJSON = function (options = {}) {
 			// XXX an operation on an item [formerly] contained in it. Reverted to
 			// XXX follow Zotero, which is the wiser policy.
 			if (!key) {
-				throw new Error("Item collection " + id + " not found");
+				throw new Error("Collection " + id + " not found for item " + this.libraryKey);
 			}
 			return key;
 		}.bind(this));

@@ -1069,7 +1069,7 @@ Zotero.Utilities.Internal = {
 			}
 			
 			let possibleCreatorType = creatorTypes.get(key);
-			if (possibleCreatorType) {
+			if (possibleCreatorType && !additionalFields.has('creators')) {
 				let c = {
 					creatorType: possibleCreatorType
 				};
@@ -1150,7 +1150,7 @@ Zotero.Utilities.Internal = {
 			}
 		}
 		var fieldPairs = Array.from(fields.entries())
-			.map(x => x[0] + ': ' + x[1]);
+			.map(x => this.camelToTitleCase(x[0]) + ': ' + x[1]);
 		fieldPairs.sort();
 		return fieldPairs.join('\n')
 			+ ((fieldPairs.length && keepLines.length) ? "\n" : "")
@@ -1401,7 +1401,7 @@ Zotero.Utilities.Internal = {
 	
 	
 	camelToTitleCase: function (str) {
-		str = str.replace(/([A-Z])/g, " $1");
+		str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
 		return str.charAt(0).toUpperCase() + str.slice(1);
 	},
 	

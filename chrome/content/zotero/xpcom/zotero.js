@@ -706,8 +706,6 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 			yield Zotero.Libraries.init();
 			
 			// Initialize various services
-			Zotero.Integration.init();
-			
 			if(Zotero.Prefs.get("httpServer.enabled")) {
 				Zotero.Server.init();
 			}
@@ -2096,7 +2094,7 @@ Zotero.Browser = new function() {
 		// Create a hidden browser
 		var hiddenBrowser = win.document.createElement("browser");
 		hiddenBrowser.setAttribute('type', 'content');
-		hiddenBrowser.setAttribute('disablehistory', 'true');
+		hiddenBrowser.setAttribute('disableglobalhistory', 'true');
 		win.document.documentElement.appendChild(hiddenBrowser);
 		// Disable some features
 		hiddenBrowser.docShell.allowAuth = false;
