@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "ជម្រើសអាទិភាពផ្សេងៗ...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "លុបឯកសារ...">
-<!ENTITY zotero.toolbar.rtfScan.label "វិភាគអ៊ែរធីអែហ្វ...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "គាំទ្រ និង ឯកសារ">
 <!ENTITY zotero.toolbar.tab.tooltip "បើកពេញអេក្រង់">
 <!ENTITY zotero.toolbar.tagSelector.label "បង្ហាញ/លាក់ជម្រើសស្លាក">

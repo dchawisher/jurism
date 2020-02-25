@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Preferências...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Remover Item...">
-<!ENTITY zotero.toolbar.rtfScan.label "Processamento de RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Suporte e Documentação">
 <!ENTITY zotero.toolbar.tab.tooltip "Alternar Modo de Separadores">
 <!ENTITY zotero.toolbar.tagSelector.label "Mostrar/Esconder Selector de Etiquetas">

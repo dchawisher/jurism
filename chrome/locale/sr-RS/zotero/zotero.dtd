@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Поставке…">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Уклони ставку…">
-<!ENTITY zotero.toolbar.rtfScan.label "РТФ скенирање…">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Подршка и документација">
 <!ENTITY zotero.toolbar.tab.tooltip "Пређи у режим језичка">
 <!ENTITY zotero.toolbar.tagSelector.label "Покажи/сакриј изборника ознаке">

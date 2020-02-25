@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Ezarpenak...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Itema bildumatik kendu">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF eskaneatze...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Laguntza eta dokumentazioa">
 <!ENTITY zotero.toolbar.tab.tooltip "Toggle Tab Mode">
 <!ENTITY zotero.toolbar.tagSelector.label "Erakutsi/ezkutatu estaka hautatzailea">

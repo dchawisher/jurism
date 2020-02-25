@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Impostazioni...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Elimina elemento...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Aiuto e documentazione">
 <!ENTITY zotero.toolbar.tab.tooltip "Attiva la modalità tab">
 <!ENTITY zotero.toolbar.tagSelector.label "Visualizza o nascondi selettore tag">

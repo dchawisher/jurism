@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Налаштування...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Видалити документ...">
-<!ENTITY zotero.toolbar.rtfScan.label "Сканувати RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Підтримка і документація">
 <!ENTITY zotero.toolbar.tab.tooltip "Переключити режим вкладки">
 <!ENTITY zotero.toolbar.tagSelector.label "Показати/сховати панель вибору тегів">

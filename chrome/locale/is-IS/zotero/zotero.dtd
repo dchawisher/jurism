@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Kjörstillingar…">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Fjarlægja færslu…">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF skönnun…">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Stuðningur og leiðbeiningar">
 <!ENTITY zotero.toolbar.tab.tooltip "Víxla Tab ham">
 <!ENTITY zotero.toolbar.tagSelector.label "Birta/fela merkjaveljara">

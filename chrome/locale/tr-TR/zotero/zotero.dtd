@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Tercihler...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Eseri Kaldır...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Tarama...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Tarama">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Destek ve Belgeleme">
 <!ENTITY zotero.toolbar.tab.tooltip "Sekme Modunu Değiştir">
 <!ENTITY zotero.toolbar.tagSelector.label "Etiket Seçiciyi Göster/Gizle">

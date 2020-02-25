@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Preferințe...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Șterge înregistrare...">
-<!ENTITY zotero.toolbar.rtfScan.label "Scanare RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "Scanare RTF">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Suport și documentație">
 <!ENTITY zotero.toolbar.tab.tooltip "Comută în modul filă">
 <!ENTITY zotero.toolbar.tagSelector.label "Arată/Ascunde selectorul de etichete">

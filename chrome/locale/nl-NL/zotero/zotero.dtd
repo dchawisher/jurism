@@ -32,7 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "Achtervoegsel:">
 <!ENTITY zotero.citation.suppressAuthor.label "Auteur weglaten">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
-<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
+<!ENTITY zotero.collections.showRetractedItems "Teruggetrokken items tonen">
 <!ENTITY zotero.collections.showUnfiledItems "Ongesorteerde items tonen">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "Selectie toevoegen aan Zotero-aantekening">
 <!ENTITY zotero.contextMenu.addTextToNewNote "Zotero-item en -aantekening maken van selectie">
@@ -68,7 +68,7 @@
 <!ENTITY zotero.file.choose.label "Kies bestand…">
 <!ENTITY zotero.file.noneSelected.label "Geen bestand geselecteerd">
 <!ENTITY zotero.general.advancedOptions.label "Geavanceerde opties">
-<!ENTITY zotero.general.bigger "Bigger">
+<!ENTITY zotero.general.bigger "Groter">
 <!ENTITY zotero.general.cancel "Annuleren">
 <!ENTITY zotero.general.close "Sluiten">
 <!ENTITY zotero.general.delete "Verwijderen">
@@ -84,10 +84,10 @@
 <!ENTITY zotero.general.options "Opties">
 <!ENTITY zotero.general.other "Andere...">
 <!ENTITY zotero.general.refresh "Vernieuwen">
-<!ENTITY zotero.general.reset "Reset">
+<!ENTITY zotero.general.reset "Herstellen">
 <!ENTITY zotero.general.saveAs "Opslaan als...">
 <!ENTITY zotero.general.selectAll "Alles selecteren">
-<!ENTITY zotero.general.smaller "Smaller">
+<!ENTITY zotero.general.smaller "Kleiner">
 <!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Ja">
 <!ENTITY zotero.import "Importeren">
@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Voorkeuren…">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Item verwijderen…">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF-scan…">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Ondersteuning en documentatie">
 <!ENTITY zotero.toolbar.tab.tooltip "Tabbladmodus veranderen">
 <!ENTITY zotero.toolbar.tagSelector.label "Labelkiezer tonen/verbergen">

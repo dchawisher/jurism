@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Nastavitve ...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Odstrani vnos ...">
-<!ENTITY zotero.toolbar.rtfScan.label "Pregled RTF ...">
+<!ENTITY zotero.toolbar.rtfScan.label "Pregled RTF">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Podpora in dokumentacija">
 <!ENTITY zotero.toolbar.tab.tooltip "Preklopi med načini zavihkov">
 <!ENTITY zotero.toolbar.tagSelector.label "Pokaži/skrij izbirnik značk">

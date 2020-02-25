@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "環境設定...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "アイテムを削除...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF スキャン...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "サポートとヘルプ">
 <!ENTITY zotero.toolbar.tab.tooltip "タブのモードを切り替える">
 <!ENTITY zotero.toolbar.tagSelector.label "タグ選択ボックスを表示する／隠す">

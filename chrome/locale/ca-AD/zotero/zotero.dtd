@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Preferències...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Esborra l'element...">
-<!ENTITY zotero.toolbar.rtfScan.label "Escaneig de l'RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Assistència i documentació">
 <!ENTITY zotero.toolbar.tab.tooltip "Commuta el mode tabulació">
 <!ENTITY zotero.toolbar.tagSelector.label "Mostra/Oculta el selector d&apos;etiquetes">

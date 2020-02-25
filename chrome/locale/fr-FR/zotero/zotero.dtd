@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Préférences…">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Supprimer le document…">
-<!ENTITY zotero.toolbar.rtfScan.label "Analyse d'un fichier RTF…">
+<!ENTITY zotero.toolbar.rtfScan.label "Analyse d'un fichier RTF">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Assistance et documentation">
 <!ENTITY zotero.toolbar.tab.tooltip "Activer / Désactiver le mode onglet">
 <!ENTITY zotero.toolbar.tagSelector.label "Afficher / Cacher le sélecteur de marqueurs">

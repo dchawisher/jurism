@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Asetukset...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Poista nimike...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF-skannaus...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Ohjeet ja tuki">
 <!ENTITY zotero.toolbar.tab.tooltip "Välilehtitila päälle/pois">
 <!ENTITY zotero.toolbar.tagSelector.label "Näytä/piilota merkkivalitsin">

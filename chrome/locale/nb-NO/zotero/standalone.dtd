@@ -1,19 +1,19 @@
-<!ENTITY aboutProduct.accesskey "A">
+<!ENTITY aboutProduct.accesskey "O">
 <!ENTITY aboutProduct.label "Om &brandShortName;">
 <!ENTITY addons.label "Tillegg">
 <!ENTITY bidiSwitchPageDirectionItem.accesskey "g">
-<!ENTITY bidiSwitchPageDirectionItem.label "Switch Page Direction">
+<!ENTITY bidiSwitchPageDirectionItem.label "Bytt sideretning">
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">
 <!ENTITY bidiSwitchTextDirectionItem.commandkey "X">
-<!ENTITY bidiSwitchTextDirectionItem.label "Switch Text Direction">
-<!ENTITY bringAllToFront.label "Bring All to Front">
+<!ENTITY bidiSwitchTextDirectionItem.label "Bytt tekstretning">
+<!ENTITY bringAllToFront.label "Bring alle fram">
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Lukk">
-<!ENTITY collectionsPane.label "Collections Pane">
-<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
+<!ENTITY collectionsPane.label "Rute for samlinger">
+<!ENTITY convertToStored.label "Konverter koblede filer til lagrede filer…">
 <!ENTITY copyBibliographyCmd.label "Kopier bibliografi">
-<!ENTITY copyCitationCmd.label "Kopier sitat">
+<!ENTITY copyCitationCmd.label "Kopier henvisning">
 <!ENTITY copyCmd.accesskey "C">
 <!ENTITY copyCmd.key "C">
 <!ENTITY copyCmd.label "Copy">
@@ -21,15 +21,15 @@
 <!ENTITY cutCmd.key "X">
 <!ENTITY cutCmd.label "Cut">
 <!ENTITY debugOutputLogging.accesskey "L">
-<!ENTITY debugOutputLogging.clear "Clear Output">
-<!ENTITY debugOutputLogging.label "Debug Output Logging">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Restart with Logging Enabled…">
-<!ENTITY debugOutputLogging.submit "Submit Output">
-<!ENTITY debugOutputLogging.view "View Output">
+<!ENTITY debugOutputLogging.clear "Fjern output">
+<!ENTITY debugOutputLogging.label "Feilsøk logging av output">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Start på ny med logging  aktivert…">
+<!ENTITY debugOutputLogging.submit "Send inn output">
+<!ENTITY debugOutputLogging.view "Vis output">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Delete">
-<!ENTITY developer.label "Developer">
+<!ENTITY developer.label "Utvikler">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Edit">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Font Size">
+<!ENTITY fontSize.label "Skriftstørrelse">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -62,34 +62,34 @@
 <!ENTITY fullZoomResetCmd.label "Reset">
 <!ENTITY fullZoomToggleCmd.accesskey "T">
 <!ENTITY fullZoomToggleCmd.label "Zoom Text Only">
-<!ENTITY helpCheckForUpdates.accesskey "U">
-<!ENTITY helpCheckForUpdates.label "Sjekk etter oppdateringer...">
+<!ENTITY helpCheckForUpdates.accesskey "S">
+<!ENTITY helpCheckForUpdates.label "Se etter oppdateringer...">
 <!ENTITY helpFeedbackPage.accesskey "F">
-<!ENTITY helpFeedbackPage.label "Discussion Forums">
+<!ENTITY helpFeedbackPage.label "Diskusjonsfora">
 <!ENTITY helpMac.commandkey "?">
 <!ENTITY helpMenu.accesskey "H">
 <!ENTITY helpMenu.label "Hjelp">
 <!ENTITY helpMenuWin.accesskey "H">
 <!ENTITY helpMenuWin.label "Hjelp">
 <!ENTITY helpReportErrors.accesskey "R">
-<!ENTITY helpReportErrors.label "Report Errors…">
-<!ENTITY helpTroubleshootingInfo.accesskey "T">
-<!ENTITY helpTroubleshootingInfo.label "Troubleshooting Information">
+<!ENTITY helpReportErrors.label "Rapporter feil...">
+<!ENTITY helpTroubleshootingInfo.accesskey "I">
+<!ENTITY helpTroubleshootingInfo.label "Informasjon for feilsøking">
 <!ENTITY hideOtherAppsCmdMac.commandkey "H">
 <!ENTITY hideOtherAppsCmdMac.label "Skjul andre">
 <!ENTITY hideThisAppCmdMac.commandkey "H">
 <!ENTITY hideThisAppCmdMac.label "Skjul &brandShortName;">
 <!ENTITY importCmd.key "I">
-<!ENTITY importCmd.label "Import…">
-<!ENTITY importFromClipboardCmd.label "Import from Clipboard">
+<!ENTITY importCmd.label "Importer…">
+<!ENTITY importFromClipboardCmd.label "Importer fra utklippstavle">
 <!ENTITY installConnector.accesskey "C">
-<!ENTITY installConnector.label "Install Browser Connector">
-<!ENTITY itemPane.label "Item Pane">
-<!ENTITY layout.label "Layout">
-<!ENTITY manageAttachments.label "Manage Attachments">
+<!ENTITY installConnector.label "Innstaller Connector for nettleser">
+<!ENTITY itemPane.label "Rute for element">
+<!ENTITY layout.label "Utforming">
+<!ENTITY manageAttachments.label "Behandle vedlegg">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimer">
-<!ENTITY noteFontSize.label "Note Font Size">
+<!ENTITY noteFontSize.label "Skriftstørrelse for notat">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Sideoppsett...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -105,14 +105,14 @@
 <!ENTITY printCmd.key "P">
 <!ENTITY printCmd.label "Skriv ut...">
 <!ENTITY productHelp.accesskey "D">
-<!ENTITY productHelp.label "Support and Documentation">
+<!ENTITY productHelp.label "Støtte og dokumentasjon">
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Avslutt">
 <!ENTITY quitApplicationCmdMac.key "Q">
 <!ENTITY quitApplicationCmdMac.label "Avslutt Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Avslutt">
-<!ENTITY recursiveCollections.label "Show Items from Subcollections">
+<!ENTITY recursiveCollections.label "Vis elementer fra under-samlinger">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Redo">
@@ -124,14 +124,14 @@
 <!ENTITY selectAllCmd.label "Select All">
 <!ENTITY servicesMenuMac.label "Tjenester">
 <!ENTITY showAllAppsCmdMac.label "Vis alle">
-<!ENTITY stackedView.label "Stacked View">
-<!ENTITY standardView.label "Standard View">
-<!ENTITY tagSelector.label "Tag Selector">
+<!ENTITY stackedView.label "Stablet visning">
+<!ENTITY standardView.label "Standardvisning">
+<!ENTITY tagSelector.label "Rute for emneordvelger">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Verktøy">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Undo">
-<!ENTITY viewMenu.label "View">
+<!ENTITY viewMenu.label "Vis">
 <!ENTITY windowMenu.label "Vindu">
 <!ENTITY zoomWindow.label "Zoom">

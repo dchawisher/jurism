@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Možnosti...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Odstrániť záznam...">
-<!ENTITY zotero.toolbar.rtfScan.label "Spracovať RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Podpora a dokumentácia">
 <!ENTITY zotero.toolbar.tab.tooltip "Režim prepínania záložiek">
 <!ENTITY zotero.toolbar.tagSelector.label "Ukázať/skryť výber značiek">

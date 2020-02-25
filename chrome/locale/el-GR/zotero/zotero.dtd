@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Προτιμήσεις...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Απομάκρυνση στοιχείου...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan…">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Υποστήριξη και Τεκμηρίωση">
 <!ENTITY zotero.toolbar.tab.tooltip "Εναλλαγή της λειτουργίας καρτέλας">
 <!ENTITY zotero.toolbar.tagSelector.label "Εμφάνιση/Απόκρυψη επιλογέα ετικετών">

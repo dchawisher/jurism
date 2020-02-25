@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Preferensi...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Buang Item...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Dukungan dan Dokuementasi">
 <!ENTITY zotero.toolbar.tab.tooltip "Hidup/Matikan Mode Tab">
 <!ENTITY zotero.toolbar.tagSelector.label "Tunjukkan/Sembunyikan Selektor Tag">

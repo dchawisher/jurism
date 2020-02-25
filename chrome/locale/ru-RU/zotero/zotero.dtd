@@ -76,7 +76,7 @@
 <!ENTITY zotero.general.edit "Редактировать">
 <!ENTITY zotero.general.loading "Загрузка...">
 <!ENTITY zotero.general.minimize "Свернуть">
-<!ENTITY zotero.general.more "More">
+<!ENTITY zotero.general.more "Еще">
 <!ENTITY zotero.general.no "Нет">
 <!ENTITY zotero.general.note "Примечание:">
 <!ENTITY zotero.general.ok "ОК">
@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Настройки…">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Удалить документ">
-<!ENTITY zotero.toolbar.rtfScan.label "Сканировать RTF…">
+<!ENTITY zotero.toolbar.rtfScan.label "Поиск ссылок в RTF-документе">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Поддержка и документация">
 <!ENTITY zotero.toolbar.tab.tooltip "Переключить режим вкладки">
 <!ENTITY zotero.toolbar.tagSelector.label "Показать/спрятать панель выбора тегов">

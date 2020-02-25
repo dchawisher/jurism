@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "ค่าตั้งพึงใจ...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "ลบรายการ...">
-<!ENTITY zotero.toolbar.rtfScan.label "กราดตรวจ RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "การสนับสนุนและเอกสาร">
 <!ENTITY zotero.toolbar.tab.tooltip "ปรับสู่แบบแท็บ">
 <!ENTITY zotero.toolbar.tagSelector.label "แสดง/ซ่อนตัวเลือกแท็ก">
