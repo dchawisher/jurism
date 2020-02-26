@@ -51,7 +51,7 @@ Zotero.Utilities = {
 		Zotero.Jurism.MapTools.patchMap("FIELDS", Zotero.Schema.CSL_TEXT_MAPPINGS);
 		Zotero.Jurism.MapTools.patchMap("DATES", Zotero.Schema.CSL_DATE_MAPPINGS);
 
-		Zotero.Jurism.MapTools.patchMap("TYPES", Zotero.Schema.CSL_TYPE_MAPPINGS);
+		// Types are a little weird
 		for (var zoteroType in Zotero.Jurism.PATCH.TYPES.override) {
 			var cslType = Zotero.Jurism.PATCH.TYPES.override[zoteroType];
 			Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslType] = zoteroType;
@@ -108,7 +108,7 @@ Zotero.Utilities = {
 	},
 
 	"getCslTypeFromItemType":function(itemType) {
-		if (!this._mapsinitialized) this.initMaps();
+		if (!this._mapsInitialized) this.initMaps();
 		return Zotero.Schema.CSL_TYPE_MAPPINGS[itemType];
 	},
 
@@ -1855,7 +1855,7 @@ Zotero.Utilities = {
 	 *     is passed
 	 */
 	"itemToCSLJSON":function(zoteroItem, portableJSON, includeRelations) {
-		if (!this._mapsinitialized) this.initMaps();
+		if (!this._mapsInitialized) this.initMaps();
 		// If a Zotero.Item was passed, convert it to the proper format (skipping child items) and
 		// call this function again with that object
 		//
@@ -2123,7 +2123,7 @@ Zotero.Utilities = {
      * type mapping in Juris-M
      */
     "getZoteroTypeFromCslType": function(cslItem, strict) {
-		if (!this._mapsinitialized) this.initMaps();
+		if (!this._mapsInitialized) this.initMaps();
 		// Some special cases to help us map item types correctly
 		// This ensures that we don't lose data on import. The fields
 		// we check are incompatible with the alternative item types
@@ -2183,7 +2183,7 @@ Zotero.Utilities = {
     },		
 	
     "getValidCslFields": function (cslItem) {
-		if (!this._mapsinitialized) this.initMaps();
+		if (!this._mapsInitialized) this.initMaps();
         var zoteroType = this.getZoteroTypeFromCslType(cslItem);
         var zoteroTypeID = Zotero.ItemTypes.getID(zoteroType);
         var zoteroFields = Zotero.ItemFields.getItemTypeFields(zoteroTypeID);
@@ -2214,7 +2214,7 @@ Zotero.Utilities = {
 	 * @param {Object} cslItem
 	 */
 	"itemFromCSLJSON":function(item, cslItem, libraryID, portableJSON) {
-		if (!this._mapsinitialized) this.initMaps();
+		if (!this._mapsInitialized) this.initMaps();
 		var isZoteroItem = !!item.setType,
 			zoteroType;
 
