@@ -44,7 +44,7 @@ Zotero.Jurism.SyncRecode = {
 	},
 	
 	"decode": function (json) {
-		if (!Zotero.Utilities._mapsinitialized) Zotero.Utilities.initMaps();
+		if (!Zotero.Utilities._mapsInitialized) Zotero.Utilities.initMaps();
 		if (!json) return;
 
 		var newjson = JSON.parse(JSON.stringify(json));
