@@ -1978,7 +1978,7 @@ Zotero.Utilities = {
 		}
 		
 		// separate name variables
-		if (zoteroItem.type != "attachment" && zoteroItem.type != "note") {
+		if (zoteroItem.itemType != "attachment" && zoteroItem.itemType != "note") {
 			var author = Zotero.CreatorTypes.getName(Zotero.CreatorTypes.getPrimaryIDForType(itemTypeID));
 			var creators = zoteroItem.creators;
 			for(var i=0; creators && i<creators.length; i++) {
