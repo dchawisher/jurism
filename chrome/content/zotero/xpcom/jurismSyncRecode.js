@@ -493,7 +493,7 @@ Zotero.Jurism.SyncRecode = {
 		// xtype
 		if (Zotero.Jurism.EXTENDED.TYPES[newjson.itemType]) {
 			extradata.xtype = newjson.itemType;
-			newjson.itemType = Zotero.Jurism.EXTENDED.TYPES[newjson.itemType.zotero];
+			newjson.itemType = Zotero.Jurism.EXTENDED.TYPES[newjson.itemType].zotero;
 		}
 
 		// Bundle it
