@@ -64,7 +64,8 @@ Zotero.Jurism.PATCH = {
 			"document-name": ["documentName"],
 			"volume-title": ["volumeTitle"],
 			jurisdiction: ["jurisdiction"],
-			"publication-number": ["publicationNumber"]
+			"publication-number": ["publicationNumber"],
+			supplement: ["supplementName"]
 		},
 		extend: {
 			"container-title": ["album", "websiteTitle", "bookTitle"],
@@ -72,7 +73,7 @@ Zotero.Jurism.PATCH = {
 			"collection-number": ["assemblyNumber", "regnalYear", "yearAsVolume"],
 			authority: ["institution", "regulatoryBody"],
 			section: ["opus"],
-			genre: ["genre", "reign", "supplementName", "sessionType", "regulationType"],
+			genre: ["genre", "reign", "sessionType", "regulationType"],
 			"issue": ["meetingNumber"],
 			status: ["status"],
 			edition: ["release"],

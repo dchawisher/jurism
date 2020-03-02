@@ -1278,7 +1278,8 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 			platform: Zotero.platform,
 			oscpu: Zotero.oscpu,
 			locale: Zotero.locale,
-			appName: Services.appinfo.name,
+			// appName: Services.appinfo.name,
+			appName: "Jurism",
 			appVersion: Services.appinfo.version
 		};
 		

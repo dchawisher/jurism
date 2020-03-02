@@ -44,7 +44,7 @@ Zotero.Jurism.SyncRecode = {
 	},
 	
 	"decode": function (json) {
-		if (!Zotero.Utilities._mapsinitialized) Zotero.Utilities.initMaps();
+		if (!Zotero.Utilities._mapsInitialized) Zotero.Utilities.initMaps();
 		if (!json) return;
 
 		var newjson = JSON.parse(JSON.stringify(json));
@@ -493,7 +493,7 @@ Zotero.Jurism.SyncRecode = {
 		// xtype
 		if (Zotero.Jurism.EXTENDED.TYPES[newjson.itemType]) {
 			extradata.xtype = newjson.itemType;
-			newjson.itemType = Zotero.Jurism.EXTENDED.TYPES[newjson.itemType.zotero];
+			newjson.itemType = Zotero.Jurism.EXTENDED.TYPES[newjson.itemType].zotero;
 		}
 
 		// Bundle it
