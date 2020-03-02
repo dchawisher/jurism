@@ -10,8 +10,8 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Zatvoriť">
-<!ENTITY collectionsPane.label "Collections Pane">
-<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
+<!ENTITY collectionsPane.label "Tabla zbierok">
+<!ENTITY convertToStored.label "Konvertovať prelinkované súbory na uložené súbory...">
 <!ENTITY copyBibliographyCmd.label "Kopírovať bibliografiu">
 <!ENTITY copyCitationCmd.label "Kopírovať citáciu">
 <!ENTITY copyCmd.accesskey "C">
@@ -29,7 +29,7 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Zmazať">
-<!ENTITY developer.label "Developer">
+<!ENTITY developer.label "Vývojár">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Upraviť">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Font Size">
+<!ENTITY fontSize.label "Veľkosť písma">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -84,12 +84,12 @@
 <!ENTITY importFromClipboardCmd.label "Importovať zo schránky">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Nainštalovať konektor prehliadača">
-<!ENTITY itemPane.label "Item Pane">
-<!ENTITY layout.label "Layout">
-<!ENTITY manageAttachments.label "Manage Attachments">
+<!ENTITY itemPane.label "Tabla exemplárov">
+<!ENTITY layout.label "Rozloženie">
+<!ENTITY manageAttachments.label "Spravovať prílohy">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimalizovať">
-<!ENTITY noteFontSize.label "Note Font Size">
+<!ENTITY noteFontSize.label "Veľkosť písma v poznámkach">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Nastavenie strany...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -112,7 +112,7 @@
 <!ENTITY quitApplicationCmdMac.label "Zavrieť Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Zavrieť">
-<!ENTITY recursiveCollections.label "Show Items from Subcollections">
+<!ENTITY recursiveCollections.label "Zobraziť exempláre v podadresároch">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Krok vpred">
@@ -124,14 +124,14 @@
 <!ENTITY selectAllCmd.label "Vybrať všetko">
 <!ENTITY servicesMenuMac.label "Služby">
 <!ENTITY showAllAppsCmdMac.label "Zobraziť všetko">
-<!ENTITY stackedView.label "Stacked View">
-<!ENTITY standardView.label "Standard View">
-<!ENTITY tagSelector.label "Tag Selector">
+<!ENTITY stackedView.label "Poskladané zobrazenie">
+<!ENTITY standardView.label "Štandardné zobrazenie">
+<!ENTITY tagSelector.label "Výber značiek">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Nástroje">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Krok späť">
-<!ENTITY viewMenu.label "View">
+<!ENTITY viewMenu.label "Zobraziť">
 <!ENTITY windowMenu.label "Okno">
 <!ENTITY zoomWindow.label "Zväčšiť">

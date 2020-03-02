@@ -26,7 +26,7 @@
 <!ENTITY zotero.preferences.cite.wordProcessors.getPlugins "Erweiterungen für Textverarbeitungsprogramme herunterladen...">
 <!ENTITY zotero.preferences.cite.wordProcessors.getPlugins.url "http://www.zotero.org/support/word_processor_plugin_installation_for_zotero_2.1">
 <!ENTITY zotero.preferences.cite.wordProcessors.noWordProcessorPluginsInstalled "Keine Erweiterungen für Textverarbeitungsprogramme installiert.">
-<!ENTITY zotero.preferences.cite.wordProcessors.useClassicAddCitationDialog "Alten Zitations-Dialog nutzen">
+<!ENTITY zotero.preferences.cite.wordProcessors.useClassicAddCitationDialog "Klassische Ansicht beim Zitations-Dialog nutzen">
 <!ENTITY zotero.preferences.configEditor "Konfigurationseditor">
 <!ENTITY zotero.preferences.custom "Benutzerdefiniert...">
 <!ENTITY zotero.preferences.dataDir "Speicherort">

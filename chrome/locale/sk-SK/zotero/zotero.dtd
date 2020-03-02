@@ -32,7 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "Prípona:">
 <!ENTITY zotero.citation.suppressAuthor.label "Vynechať autora">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
-<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
+<!ENTITY zotero.collections.showRetractedItems "Zobraziť odobraté exempláre">
 <!ENTITY zotero.collections.showUnfiledItems "Zobraziť nezaradené záznam">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "Pridať výber do Zotera ako poznámku">
 <!ENTITY zotero.contextMenu.addTextToNewNote "Pridať výber do Zotera ako nový záznam a poznámku">
@@ -68,7 +68,7 @@
 <!ENTITY zotero.file.choose.label "Vybrať súbor">
 <!ENTITY zotero.file.noneSelected.label "Nie je označený žiaden súbor">
 <!ENTITY zotero.general.advancedOptions.label "Rozšírené možnosti">
-<!ENTITY zotero.general.bigger "Bigger">
+<!ENTITY zotero.general.bigger "Väčší">
 <!ENTITY zotero.general.cancel "Zrušiť">
 <!ENTITY zotero.general.close "Zavrieť">
 <!ENTITY zotero.general.delete "Vymazať">
@@ -84,16 +84,16 @@
 <!ENTITY zotero.general.options "Možnosti">
 <!ENTITY zotero.general.other "Iné...">
 <!ENTITY zotero.general.refresh "Obnoviť">
-<!ENTITY zotero.general.reset "Reset">
+<!ENTITY zotero.general.reset "Obnoviť">
 <!ENTITY zotero.general.saveAs "Uložiť ako...">
 <!ENTITY zotero.general.selectAll "Označiť všetko">
-<!ENTITY zotero.general.smaller "Smaller">
+<!ENTITY zotero.general.smaller "Menší">
 <!ENTITY zotero.general.tools "Nástroje">
 <!ENTITY zotero.general.yes "Áno">
 <!ENTITY zotero.import "Import">
 <!ENTITY zotero.import.createCollection "Vložte naimportované kolekcie a záznamy do novej kolekcie">
 <!ENTITY zotero.import.database "Databáza">
-<!ENTITY zotero.import.fileHandling "File Handling">
+<!ENTITY zotero.import.fileHandling "Spracovanie súborov">
 <!ENTITY zotero.import.importing "Importujem...">
 <!ENTITY zotero.import.lastModified "Naposledy upravené">
 <!ENTITY zotero.import.size "Veľkosť">
@@ -114,7 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "Zobraziť citácie ako:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "poznámky na konci textu">
-<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
+<!ENTITY zotero.integration.prefs.exportDocument "Prepnúť na iný textový editor...">
 <!ENTITY zotero.integration.prefs.footnotes.label "poznámky pod čiarou">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Uschovať citácie ako:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Možnosti...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Odstrániť záznam...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
+<!ENTITY zotero.toolbar.rtfScan.label "Preskúmať RTF">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Podpora a dokumentácia">
 <!ENTITY zotero.toolbar.tab.tooltip "Režim prepínania záložiek">
 <!ENTITY zotero.toolbar.tagSelector.label "Ukázať/skryť výber značiek">
