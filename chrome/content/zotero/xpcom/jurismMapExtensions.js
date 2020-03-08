@@ -77,7 +77,8 @@ Zotero.Jurism.PATCH = {
 			"issue": ["meetingNumber"],
 			status: ["status"],
 			edition: ["release"],
-			event: ["resolutionLabel"]
+			event: ["resolutionLabel"],
+			number: ["treatyNumber"]
 		},
 		remove: {
 			"section": ["committee"] // ?? What's going on with this in the hearing type?
