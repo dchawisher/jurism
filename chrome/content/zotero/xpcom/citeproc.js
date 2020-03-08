@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.2.31",
+    PROCESSOR_VERSION: "1.2.32",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -5372,6 +5372,7 @@ CSL.Output.Queue.prototype.string = function (state, myblobs, blob) {
                 if (state.normalDecorIsOrphan(blobjr, params)) {
                     continue;
                 }
+                if (!params[0]) continue;
                 if ("string" === typeof blobs_start) {
                     blobs_start = state.fun.decorate[params[0]][params[1]].call(blob, state, blobs_start, params[2]);
                 }
@@ -20535,10 +20536,6 @@ CSL.Util.FlipFlopper = function(state) {
         }
     }
     
-    function _nestingFix (tag, pos) {
-        return _pushNestingState(tag, pos);
-    }
-    
     function _doppelString(str) {
         var forcedSpaces = [];
         // Normalize markup
@@ -20619,10 +20616,10 @@ CSL.Util.FlipFlopper = function(state) {
     function _apostropheForce(tag, str) {
         if (tag === "\'") {
             if (str && str.match(/^[^\,\.\?\:\;\ ]/)) {
-                return true;
+                return "\u2019";
             }
         } else if (tag === " \'" && str && str.match(/^[\ ]/)) {
-            return true;
+            return " \u2019";
         }
         return false;
     }
@@ -20750,25 +20747,18 @@ CSL.Util.FlipFlopper = function(state) {
             return;
         }
         var quoteFormSeen = false;
-        // ZZZ
-        // It is inside THIS loop that we can convert the nocase and nodecor
-        // tags and companion spans to string
-        // Um. Maybe. Or maybe it needs to happen inside _nestingFix() somewhere.
         
     	for (var i=0,ilen=doppel.tags.length;i<ilen;i++) {
             var tag = doppel.tags[i];
             var str = doppel.strings[i+1];
-            if (_apostropheForce(tag, str)) {
-                if (tag === " \'") {
-                    doppel.strings[i+1] = " \u2019" + doppel.strings[i+1];
-                } else {
-                    doppel.strings[i+1] = "\u2019" + doppel.strings[i+1];
-                }
+            var apostrophe = _apostropheForce(tag, str);
+            if (apostrophe) {
+                doppel.strings[i+1] = apostrophe + doppel.strings[i+1];
                 doppel.tags[i] = "";
             } else {
                 var tagInfo;
                 while (true) {
-                    tagInfo = _nestingFix(tag, i);
+                    tagInfo = _pushNestingState(tag, i);
                     if (tagInfo) {
                         if (Object.keys(tagInfo).indexOf("fixtag") > -1) {
                             if (tag.match(_tagRex.close)
@@ -20785,7 +20775,11 @@ CSL.Util.FlipFlopper = function(state) {
                                 doppel.tags[tagInfo.fixtag] = "";
                             }
                             if (_nestingState.length > 0) {
-                                _nestingState.pop();
+                                if (tag !== "\'") {
+                                    _nestingState.pop();
+                                } else {
+                                    break;
+                                }
                             } else {
                                 break;
                             }
