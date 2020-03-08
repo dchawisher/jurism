@@ -1162,15 +1162,13 @@ Zotero.Item.prototype.updateDisplayTitle = function () {
 	else if (itemTypeID === itemTypeBill) {
 		if (!title) {
 			var res = [];
-			var myBody = this.getField('legislativeBody', true);
-			if (myBody) {
-				res.push(myBody);
+			for (var fieldName of ["legislativeBody", "resolutionLabel", "billNumber"]) {
+				var val = this.getField(fieldName, true);
+				if (val) {
+					res.push(val);
+				}
 			}
-			var myNum = this.getField('billNumber', true);
-			if (myNum) {
-				res.push(myNum);
-			}
-			title = '[' + res.join(' ') + ']'
+			title = '[' + res.join(' ') + ']';
 		}
 	}
 	
