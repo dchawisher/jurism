@@ -4793,7 +4793,7 @@ Zotero.Item.prototype.isCollection = function() {
 	var isValidForType = {};
 	var setFields = new Set();
 	var { fields: extraFields, creators: extraCreators, extra } = Zotero.Utilities.Internal.extractExtraFields(
-		json.extra !== undefined ? json.extra : '',
+		json.extra || '',
 		this,
 		Object.keys(json)
 			// TEMP until we move creator lines to real creators
