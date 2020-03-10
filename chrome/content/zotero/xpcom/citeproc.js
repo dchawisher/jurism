@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.2.32",
+    PROCESSOR_VERSION: "1.2.33",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -18849,6 +18849,7 @@ CSL.Util.substituteStart = function (state, target) {
     // Contains body code for both substitute and first-field/remaining-fields
     // formatting.
     //
+
     nodetypes = ["number", "date", "names"];
     if (("text" === this.name && !this.postponed_macro) || nodetypes.indexOf(this.name) > -1) {
         element_trace = function (state, Item, item) {
@@ -19082,6 +19083,7 @@ CSL.Util.substituteEnd = function (state, target) {
 
     if ("names" === this.name || ("text" === this.name && this.variables_real !== "title")) {
         author_substitute = new CSL.Token("text", CSL.SINGLETON);
+        var substitution_name = this.name;
         func = function (state, Item) {
             if (state.tmp.area !== "bibliography") {
                 return;
@@ -19092,7 +19094,10 @@ CSL.Util.substituteEnd = function (state, target) {
             if (this.variables_real && !Item[this.variables_real]) {
                 return;
             }
-            if (state.tmp.substituted_variable !== this.variables_real) {
+            // The logic of these two is not obvious. The effect is to enable placeholder substitution
+            // on a text macro name substitution, without printing both the text macro AND the placeholder.
+            // See https://forums.zotero.org/discussion/comment/350407
+            if (this.variables_real && substitution_name === "names") {
                 return;
             }
 
@@ -19113,7 +19118,6 @@ CSL.Util.substituteEnd = function (state, target) {
                             if (dosub
                                 && state.tmp.last_rendered_name && state.tmp.last_rendered_name.length > (i - 1)
                                 && name && !name.localeCompare(state.tmp.last_rendered_name[i])) {
-                                
                                 str = new CSL.Blob(state[state.tmp.area].opt["subsequent-author-substitute"]);
                                 state.tmp.name_node.children[i].blobs = [str];
                                 if ("partial-first" === subrule) {
@@ -19149,7 +19153,7 @@ CSL.Util.substituteEnd = function (state, target) {
                                 } else {
                                     state.tmp.name_node.top.blobs = [str];
                                 }
-                                state.tmp.substituted_variable = this.variables_real;
+                                state.tmp.substituted_variable = substitution_name;
                             }
                             state.tmp.last_rendered_name = rendered_name;
                         }
