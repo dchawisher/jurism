@@ -2528,6 +2528,7 @@
 		"itemType": "treaty",
 		"language": "en-US",
 		"libraryCatalog": "Library catalog",
+		"number": 3,
 		"pages": "1-10",
 		"openingDate": "Opening date",
 		"parentTreaty": "Parent treaty",
