@@ -89,6 +89,37 @@ describe("Support Functions for Unit Testing", function() {
 		it("all types and fields sample data should be up to date", function() {
 			var fileData = loadSampleData('allTypesAndFields');
 			var generatedData = generateAllTypesAndFieldsData();
+			for (var key in fileData) {
+				assert.isTrue(!!generatedData[key], "generated data has all keys in sample");
+			}
+			for (var key in generatedData) {
+				assert.isTrue(!!fileData[key], "sample has all keys in generated data");
+			}
+			for (var key in fileData) {
+				for (var field in fileData[key]) {
+					if ("string" === typeof fileData[key][field] || "number" === typeof fileData[key][field]) {
+						assert.equal(fileData[key][field], generatedData[key][field], "text/number field " + field + " in sample matches generated data");
+					}
+				}
+			}
+			for (var key in generatedData) {
+				for (var field in generatedData[key]) {
+					if ("string" === typeof generatedData[key][field] || "number" === typeof generatedData[key][field]) {
+						assert.equal(generatedData[key][field], fileData[key][field], "text/number field " + field +" in generated data matches the sample");
+					}
+				}
+			}
+			for (var key in fileData) {
+				assert.equal(fileData[key].creators.length, generatedData[key].creators.length, "sample and generated data have the same number of creators for "  + key);
+				for (var i in fileData[key].creators) {
+					var sampleCreator = fileData[key].creators[i];
+					var generatedCreator = generatedData[key].creators[i];
+					assert.deepEqual(sampleCreator, generatedCreator, "sample creator matches generated creator");
+				}
+			}
+			for (var key in fileData) {
+				assert.deepEqual(fileData[key], generatedData[key], "sample data for item type matches generated data");
+			}
 			assert.deepEqual(loadSampleData('allTypesAndFields'), generateAllTypesAndFieldsData());
 		});
 	});
@@ -113,7 +144,39 @@ describe("Support Functions for Unit Testing", function() {
 					}
 				}
 			}
-
+			// START
+			for (var key in oldData) {
+				assert.isTrue(!!newData[key], "generated data has all keys in sample");
+			}
+			for (var key in newData) {
+				assert.isTrue(!!oldData[key], "sample has all keys in generated data");
+			}
+			for (var key in oldData) {
+				for (var field in oldData[key]) {
+					if ("string" === typeof oldData[key][field] || "number" === typeof oldData[key][field]) {
+						assert.equal(oldData[key][field], newData[key][field], "text/number field " + field + " in sample matches generated data");
+					}
+				}
+			}
+			for (var key in newData) {
+				for (var field in newData[key]) {
+					if ("string" === typeof newData[key][field] || "number" === typeof newData[key][field]) {
+						assert.equal(newData[key][field], oldData[key][field], "text/number field " + field +" in generated data matches the sample");
+					}
+				}
+			}
+			for (var key in oldData) {
+				assert.equal(oldData[key].creators.length, newData[key].creators.length, "sample and generated data have the same number of creators for "  + key);
+				for (var i in oldData[key].creators) {
+					var sampleCreator = oldData[key].creators[i];
+					var generatedCreator = newData[key].creators[i];
+					assert.deepEqual(sampleCreator, generatedCreator, "sample creator matches generated creator");
+				}
+			}
+			for (var key in oldData) {
+				assert.deepEqual(oldData[key], newData[key], "sample data for item type matches generated data");
+			}
+			// END
 			assert.deepEqual(oldData, newData);
 		}));
 	});
@@ -167,7 +230,41 @@ describe("Support Functions for Unit Testing", function() {
 					}
 				}
 			}
-
+			// START
+			for (var key in oldData) {
+				assert.isTrue(!!newData[key], "generated data has all keys in sample");
+			}
+			for (var key in newData) {
+				assert.isTrue(!!oldData[key], "sample has all keys in generated data");
+			}
+			Zotero.debug("OLD "+JSON.stringify(oldData.treaty), 1);
+			Zotero.debug("NEW "+JSON.stringify(newData.treaty), 1);
+			for (var key in oldData) {
+				for (var field in oldData[key]) {
+					if ("string" === typeof oldData[key][field] || "number" === typeof oldData[key][field]) {
+						assert.equal(oldData[key][field], newData[key][field], "text/number field " + field + " in sample matches generated data for type " + key);
+					}
+				}
+			}
+			for (var key in newData) {
+				for (var field in newData[key]) {
+					if ("string" === typeof newData[key][field] || "number" === typeof newData[key][field]) {
+						assert.equal(newData[key][field], oldData[key][field], "text/number field " + field +" in generated data matches the sample for type " + key);
+					}
+				}
+			}
+			for (var key in oldData) {
+				assert.equal(oldData[key].creators.length, newData[key].creators.length, "sample and generated data have the same number of creators for "  + key);
+				for (var i in oldData[key].creators) {
+					var sampleCreator = oldData[key].creators[i];
+					var generatedCreator = newData[key].creators[i];
+					assert.deepEqual(sampleCreator, generatedCreator, "sample creator matches generated creator");
+				}
+			}
+			for (var key in oldData) {
+				assert.deepEqual(oldData[key], newData[key], "sample data for item type matches generated data");
+			}
+			// END
 			assert.deepEqual(oldData, newData, 'translator export data has not changed');
 		}));
 		it("data should be up to date", Zotero.Promise.coroutine(function* () {
@@ -189,7 +286,39 @@ describe("Support Functions for Unit Testing", function() {
 					}
 				}
 			}
-			
+			// START
+			for (var key in oldData) {
+				assert.isTrue(!!newData[key], "generated data has all keys in sample");
+			}
+			for (var key in newData) {
+				assert.isTrue(!!oldData[key], "sample has all keys in generated data");
+			}
+			for (var key in oldData) {
+				for (var field in oldData[key]) {
+					if ("string" === typeof oldData[key][field] || "number" === typeof oldData[key][field]) {
+						assert.equal(oldData[key][field], newData[key][field], "text/number field " + field + " in sample matches generated data");
+					}
+				}
+			}
+			for (var key in newData) {
+				for (var field in newData[key]) {
+					if ("string" === typeof newData[key][field] || "number" === typeof newData[key][field]) {
+						assert.equal(newData[key][field], oldData[key][field], "text/number field " + field +" in generated data matches the sample");
+					}
+				}
+			}
+			for (var key in oldData) {
+				assert.equal(oldData[key].creators.length, newData[key].creators.length, "sample and generated data have the same number of creators for "  + key);
+				for (var i in oldData[key].creators) {
+					var sampleCreator = oldData[key].creators[i];
+					var generatedCreator = newData[key].creators[i];
+					assert.deepEqual(sampleCreator, generatedCreator, "sample creator matches generated creator");
+				}
+			}
+			for (var key in oldData) {
+				assert.deepEqual(oldData[key], newData[key], "sample data for item type matches generated data");
+			}
+			// END
 			assert.deepEqual(oldData, newData, 'translator export data has not changed');
 		}));
 	});

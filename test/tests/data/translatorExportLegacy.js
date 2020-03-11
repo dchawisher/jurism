@@ -3787,6 +3787,8 @@
     "reporter": "Reporter",
     "libraryCatalog": "Library catalog",
     "language": "en-US",
+	"treatyNumber": "3",
+	"number": "3",
     "abstractNote": "Abstract note",
     "title": "Title",
     "shortTitle": "Short title",
@@ -3879,7 +3881,8 @@
       "signingDate": "Signing date",
       "openingDate": "Opening date",
       "adoptionDate": "Adoption date",
-      "parentTreaty": "Parent treaty"
+	  "parentTreaty": "Parent treaty",
+	  "number": "3"
     },
     "itemID": 39,
     "key": "RKSCLQWM",
