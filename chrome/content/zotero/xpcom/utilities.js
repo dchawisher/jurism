@@ -2048,10 +2048,11 @@ Zotero.Utilities = {
 				}
 				if (Zotero.Prefs.get('hackUseCiteprocJsDateParser')) {
 					var country = Zotero.locale ? Zotero.locale.substr(3) : "US";
-					if(country == "US" ||	// The United States
-					   country == "FM" ||	// The Federated States of Micronesia
-					   country == "PW" ||	// Palau
-					   country == "PH") {	// The Philippines
+					if(variable === "accessed" ||
+					   (country == "US" ||	// The United States
+						country == "FM" ||	// The Federated States of Micronesia
+						country == "PW" ||	// Palau
+						country == "PH")) {	// The Philippines
 						Zotero.DateParser.setOrderMonthDay();
 					} else {
 						Zotero.DateParser.setOrderDayMonth();
