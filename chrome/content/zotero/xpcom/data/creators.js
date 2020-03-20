@@ -175,6 +175,16 @@ Zotero.Creators = new function() {
 		//	&& data1.firstName === data2.firstName
 		//	&& data1.fieldMode === data2.fieldMode
 		//	&& data1.creatorTypeID === data2.creatorTypeID;
+		if (!data1.multi) {
+			data1.multi = {
+				_key: {}
+			};
+		}
+		if (!data2.multi) {
+			data2.multi = {
+				_key: {}
+			};
+		}
 		return Zotero.DataObjectUtilities.equals(data1, data2);
 	},
 	
