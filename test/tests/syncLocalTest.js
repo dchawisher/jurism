@@ -1316,6 +1316,241 @@ describe("Zotero.Sync.Data.Local", function() {
 				assert.lengthOf(result.conflicts, 0);
 			})
 			
+			it("[Jurism] should XXX ignore non-conflicting local changes and return remote changes when remote multi is missing", function () {
+				var cacheJSON = {
+					key: "AAAAAAAA",
+					version: 1234,
+					itemType: "book",
+					title: "Title 1",
+					creators: [
+						{
+							firstName: "First1",
+							lastName: "Last1",
+							creatorType: "author",
+							multi: {
+								_key: {}
+							}
+						}
+					],
+					url: "http://zotero.org/",
+					publicationTitle: "Publisher", // Remove locally
+					extra: "Extra", // Removed on both
+					dateModified: "2015-05-14 12:34:56",
+					collections: [
+						'AAAAAAAA', // Removed locally
+						'DDDDDDDD', // Removed remotely,
+						'EEEEEEEE' // Removed from both
+					],
+					relations: {
+						a: 'A', // Unchanged string
+						c: ['C1', 'C2'], // Unchanged array
+						d: 'D', // String removed locally
+						e: ['E'], // Array removed locally
+						f: 'F1', // String changed locally
+						g: [
+							'G1', // Unchanged
+							'G2', // Removed remotely
+							'G3' // Removed from both
+						],
+						h: 'H', // String removed remotely
+						i: ['I'], // Array removed remotely
+					},
+					tags: [
+						{ tag: 'A' }, // Removed locally
+						{ tag: 'D' }, // Removed remotely
+						{ tag: 'E' } // Removed from both
+					]
+				};
+				var json1 = {
+					key: "AAAAAAAA",
+					version: 1234,
+					itemType: "book",
+					title: "Title 2", // Changed locally
+					creators: [
+						{
+							firstName: "First1",
+							lastName: "Last1",
+							creatorType: "author",
+							multi: {
+								_key: {}
+							}
+						},
+						// Same new creator on local and remote
+						{
+							firstName: "First2",
+							lastName: "Last2",
+							creatorType: "editor",
+							multi: {
+								_key: {}
+							}
+						}
+					],
+					url: "https://www.zotero.org/", // Same change on local and remote
+					place: "Place", // Added locally
+					dateModified: "2015-05-14 14:12:34", // Changed locally and remotely, but ignored
+					collections: [
+						'BBBBBBBB', // Added locally
+						'DDDDDDDD',
+						'FFFFFFFF' // Added on both
+					],
+					relations: {
+						'a': 'A',
+						'b': 'B', // String added locally
+						'f': 'F2',
+						'g': [
+							'G1',
+							'G2',
+							'G6' // Added locally and remotely
+						],
+						h: 'H', // String removed remotely
+						i: ['I'], // Array removed remotely
+	
+					},
+					tags: [
+						{ tag: 'B' },
+						{ tag: 'D' },
+						{ tag: 'F', type: 1 }, // Added on both
+						{ tag: 'G' }, // Added on both, but with different types
+						{ tag: 'H', type: 1 } // Added on both, but with different types
+					]
+				};
+				var json2 = {
+					key: "AAAAAAAA",
+					version: 1235,
+					itemType: "book",
+					title: "Title 1",
+					creators: [
+						{
+							firstName: "First1",
+							lastName: "Last1",
+							creatorType: "author"
+						},
+						// Same new creator on local and remote
+						{
+							firstName: "First2",
+							lastName: "Last2",
+							creatorType: "editor"
+						}
+					],
+					url: "https://www.zotero.org/",
+					publicationTitle: "Publisher",
+					date: "2015-05-15", // Added remotely
+					dateModified: "2015-05-14 13:45:12",
+					collections: [
+						'AAAAAAAA',
+						'CCCCCCCC', // Added remotely
+						'FFFFFFFF'
+					],
+					relations: {
+						'a': 'A',
+						'd': 'D',
+						'e': ['E'],
+						'f': 'F1',
+						'g': [
+							'G1',
+							'G4', // Added remotely
+							'G6'
+						],
+					},
+					tags: [
+						{ tag: 'A' },
+						{ tag: 'C' },
+						{ tag: 'F', type: 1 },
+						{ tag: 'G', type: 1 },
+						{ tag: 'H' }
+					]
+				};
+				var ignoreFields = ['dateAdded', 'dateModified'];
+				var result = Zotero.Sync.Data.Local._reconcileChanges(
+					'item', cacheJSON, json1, json2, ignoreFields
+				);
+				assert.sameDeepMembers(
+					result.changes,
+					[
+						{
+							field: "date",
+							op: "add",
+							value: "2015-05-15"
+						},
+						{
+							field: "collections",
+							op: "member-add",
+							value: "CCCCCCCC"
+						},
+						{
+							field: "collections",
+							op: "member-remove",
+							value: "DDDDDDDD"
+						},
+						// Relations
+						{
+							field: "relations",
+							op: "property-member-remove",
+							value: {
+								key: 'g',
+								value: 'G2'
+							}
+						},
+						{
+							field: "relations",
+							op: "property-member-add",
+							value: {
+								key: 'g',
+								value: 'G4'
+							}
+						},
+						{
+							field: "relations",
+							op: "property-member-remove",
+							value: {
+								key: 'h',
+								value: 'H'
+							}
+						},
+						{
+							field: "relations",
+							op: "property-member-remove",
+							value: {
+								key: 'i',
+								value: 'I'
+							}
+						},
+						// Tags
+						{
+							field: "tags",
+							op: "member-add",
+							value: {
+								tag: 'C'
+							}
+						},
+						{
+							field: "tags",
+							op: "member-remove",
+							value: {
+								tag: 'D'
+							}
+						},
+						{
+							field: "tags",
+							op: "member-remove",
+							value: {
+								tag: 'H',
+								type: 1
+							}
+						},
+						{
+							field: "tags",
+							op: "member-add",
+							value: {
+								tag: 'H'
+							}
+						}
+					]
+				);
+				assert.lengthOf(result.conflicts, 0);
+			})
+
+
 			it("should return empty arrays when no remote changes to apply", function () {
 				// Similar to above but without differing remote changes
 				var cacheJSON = {
