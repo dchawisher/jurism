@@ -124,7 +124,7 @@
 <!ENTITY selectAllCmd.label "全选">
 <!ENTITY servicesMenuMac.label "服务">
 <!ENTITY showAllAppsCmdMac.label "显示所有">
-<!ENTITY stackedView.label "堆栈视图&lt;br&gt;">
+<!ENTITY stackedView.label "堆栈视图">
 <!ENTITY standardView.label "标准视图">
 <!ENTITY tagSelector.label "标签选择器">
 <!ENTITY toolsMenu.accesskey "T">

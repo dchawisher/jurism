@@ -44,7 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Font Size">
+<!ENTITY fontSize.label "Fonttikoko">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -85,8 +85,8 @@
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Asenna selainlisäosa">
 <!ENTITY itemPane.label "Item Pane">
-<!ENTITY layout.label "Layout">
-<!ENTITY manageAttachments.label "Manage Attachments">
+<!ENTITY layout.label "Asettelu">
+<!ENTITY manageAttachments.label "Hallitse liitteitä">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Pienennä">
 <!ENTITY noteFontSize.label "Note Font Size">
@@ -124,14 +124,14 @@
 <!ENTITY selectAllCmd.label "Valitse kaikki">
 <!ENTITY servicesMenuMac.label "Palvelut">
 <!ENTITY showAllAppsCmdMac.label "Näytä kaikki">
-<!ENTITY stackedView.label "Stacked View">
-<!ENTITY standardView.label "Standard View">
+<!ENTITY stackedView.label "Pinottu näkymä">
+<!ENTITY standardView.label "Vakionäkymä">
 <!ENTITY tagSelector.label "Tag Selector">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Työkalut">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Peru">
-<!ENTITY viewMenu.label "View">
+<!ENTITY viewMenu.label "Näytä">
 <!ENTITY windowMenu.label "Ikkuna">
 <!ENTITY zoomWindow.label "Lähennä">

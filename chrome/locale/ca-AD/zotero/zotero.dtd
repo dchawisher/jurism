@@ -175,7 +175,7 @@
 <!ENTITY zotero.items.menu.attach.file "Adjunta la còpia emmagatzemada del fitxer...">
 <!ENTITY zotero.items.menu.attach.fileLink "Adjunta un enllaç al fitxer...">
 <!ENTITY zotero.items.menu.attach.link "Adjunta un enllaç a la pàgina actual">
-<!ENTITY zotero.items.menu.attach.link.uri "Adjunta un enllaç a l'identificador uniforme de recursos...">
+<!ENTITY zotero.items.menu.attach.link.uri "Adjunta un enllaç a l'URI...">
 <!ENTITY zotero.items.menu.attach.note "Afegeix una nota">
 <!ENTITY zotero.items.menu.attach.snapshot "Adjunta la captura de la pàgina actual">
 <!ENTITY zotero.items.menu.changeTag "Change Tag">
@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Preferències...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Esborra l'element...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
+<!ENTITY zotero.toolbar.rtfScan.label "Escaneig de l'RTF">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Assistència i documentació">
 <!ENTITY zotero.toolbar.tab.tooltip "Commuta el mode tabulació">
 <!ENTITY zotero.toolbar.tagSelector.label "Mostra/Oculta el selector d&apos;etiquetes">

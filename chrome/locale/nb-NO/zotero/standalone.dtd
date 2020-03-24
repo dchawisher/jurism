@@ -23,7 +23,7 @@
 <!ENTITY debugOutputLogging.accesskey "L">
 <!ENTITY debugOutputLogging.clear "Fjern output">
 <!ENTITY debugOutputLogging.label "Feilsøk logging av output">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Start på ny med logging aktivert…">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Start på nytt med logging aktivert…">
 <!ENTITY debugOutputLogging.submit "Send inn output">
 <!ENTITY debugOutputLogging.view "Vis output">
 <!ENTITY deleteCmd.accesskey "D">

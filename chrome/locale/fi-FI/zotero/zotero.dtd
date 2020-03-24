@@ -68,7 +68,7 @@
 <!ENTITY zotero.file.choose.label "Valitse tiedosto...">
 <!ENTITY zotero.file.noneSelected.label "Tiedostoa ei ole valittu">
 <!ENTITY zotero.general.advancedOptions.label "Lisäasetukset">
-<!ENTITY zotero.general.bigger "Bigger">
+<!ENTITY zotero.general.bigger "Suurempi">
 <!ENTITY zotero.general.cancel "Peruuta">
 <!ENTITY zotero.general.close "Sulje">
 <!ENTITY zotero.general.delete "Poista">
@@ -84,16 +84,16 @@
 <!ENTITY zotero.general.options "Asetukset">
 <!ENTITY zotero.general.other "Muu...">
 <!ENTITY zotero.general.refresh "Päivitä">
-<!ENTITY zotero.general.reset "Reset">
+<!ENTITY zotero.general.reset "Palauta">
 <!ENTITY zotero.general.saveAs "Tallenna nimellä...">
 <!ENTITY zotero.general.selectAll "Valitse kaikki">
-<!ENTITY zotero.general.smaller "Smaller">
+<!ENTITY zotero.general.smaller "Pienempi">
 <!ENTITY zotero.general.tools "Työkalut">
 <!ENTITY zotero.general.yes "Kyllä">
 <!ENTITY zotero.import "Tuonti">
 <!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
 <!ENTITY zotero.import.database "Tietokanta">
-<!ENTITY zotero.import.fileHandling "File Handling">
+<!ENTITY zotero.import.fileHandling "Tiedostojen käsittely">
 <!ENTITY zotero.import.importing "Tuodaan...">
 <!ENTITY zotero.import.lastModified "Viimeksi muokattu">
 <!ENTITY zotero.import.size "Koko">
@@ -114,7 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "Näytä sitaatit muodossa:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "Loppuviitteet">
-<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
+<!ENTITY zotero.integration.prefs.exportDocument "Vaihda eri tekstinkäsittelyohjelmaan…">
 <!ENTITY zotero.integration.prefs.footnotes.label "Alaviitteet">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">

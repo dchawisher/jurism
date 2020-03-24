@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "首选项...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "移除条目...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF 扫描">
 <!ENTITY zotero.toolbar.supportAndDocumentation "支持与文档">
 <!ENTITY zotero.toolbar.tab.tooltip "切换标签模式">
 <!ENTITY zotero.toolbar.tagSelector.label "显示/隐藏标签选择器">
