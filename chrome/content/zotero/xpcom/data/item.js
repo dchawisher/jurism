@@ -583,10 +583,12 @@ Zotero.Item.prototype.setType = function(itemTypeID, loadIn) {
 		let creators = this.getCreators();
 		if (creators.length) {
 			let removeAll = !Zotero.CreatorTypes.itemTypeHasCreators(itemTypeID);
-			for (let i=0; i<creators.length; i++) {
+			for (let i = 0; i < this.getCreators().length; i++) {
 				// Remove all creators if new item type doesn't have any
 				if (removeAll) {
+					throw new Error("Disabled");
 					this.removeCreator(i);
+					i--;
 					continue;
 				}
 				
@@ -5025,7 +5027,9 @@ Zotero.Item.prototype.isCollection = function() {
 		}
 	}
 	
-	this.setField('extra', Zotero.Utilities.Internal.combineExtraFields(extra, extraFields));
+	if (extra || extraFields.size || this.getField('extra')) {
+		this.setField('extra', Zotero.Utilities.Internal.combineExtraFields(extra, extraFields));
+	}
 	
 	if (json.collections || this._collections.length) {
 		this.setCollections(json.collections);
@@ -5257,34 +5261,81 @@ Zotero.Item.prototype.toResponseJSON = function (options = {}) {
  * A separate save is required
  */
 Zotero.Item.prototype.migrateExtraFields = function () {
-	var { itemType, fields, creators, extra } = Zotero.Utilities.Internal.extractExtraFields(
-		this.getField('extra'), this
-	);
-	if (itemType) {
-		this.setType(Zotero.ItemTypes.getID(itemType));
-	}
-	for (let [field, value] of fields) {
-		this.setField(field, value);
-	}
-	if (creators.length) {
-		this.setCreators([...item.getCreators(), ...creators]);
-	}
-	this.setField('extra', extra);
-	if (!this.hasChanged()) {
+	if (!this.isEditable()) {
 		return false;
 	}
 	
+	var originalExtra = this.getField('extra');
+	
+	var log = function () {
+		Zotero.debug("Original Extra:\n\n" + originalExtra);
+		if (itemType) {
+			Zotero.debug("Item Type: " + itemType);
+		}
+		if (fields && fields.size) {
+			Zotero.debug("Fields:\n\n" + Array.from(fields.entries()).map(x => `${x[0]}: ${x[1]}`).join("\n"));
+		}
+		if (creators && creators.length) {
+			Zotero.debug("Creators:");
+			Zotero.debug(creators);
+		}
+		if (extra) {
+			Zotero.debug("Remaining Extra:\n\n" + extra);
+		}
+	};
+	
+	try {
+		var { itemType, fields, creators, extra } = Zotero.Utilities.Internal.extractExtraFields(
+			originalExtra, this
+		);
+		if (itemType) {
+			let originalType = this.itemTypeID;
+			let preJSON = this.toJSON();
+			let preKeys = Object.keys(preJSON);
+			
+			this.setType(Zotero.ItemTypes.getID(itemType));
+			
+			// Move any fields that were removed by the item type switch to Extra
+			let postJSON = this.toJSON();
+			let postKeys = Object.keys(postJSON)
+			let removedKeys = Zotero.Utilities.arrayDiff(preKeys, postKeys);
+			let addToExtra = [];
+			for (let key of removedKeys) {
+				// Follow base-field mappings
+				let baseFieldID = Zotero.ItemFields.getBaseIDFromTypeAndField(originalType, key);
+				let newField = baseFieldID
+					? Zotero.ItemFields.getFieldIDFromTypeAndBase(itemType, baseFieldID)
+					: null;
+				if (!newField) {
+					// "numPages" → "Num Pages"
+					let formattedKey = key[0].toUpperCase()
+						+ key.substr(1).replace(/([a-z])([A-Z])/, '$1 $2');
+					addToExtra.push(formattedKey + ': ' + preJSON[key]);
+				}
+			}
+			if (addToExtra.length) {
+				extra = (addToExtra.join('\n') + '\n' + extra).trim();
+			}
+		}
+		for (let [field, value] of fields) {
+			this.setField(field, value);
+		}
+		if (creators.length) {
+			this.setCreators([...this.getCreators(), ...creators]);
+		}
+		this.setField('extra', extra);
+		if (!this.hasChanged()) {
+			return false;
+		}
+	}
+	catch (e) {
+		Zotero.logError("Error migrating Extra fields for item " + this.libraryKey);
+		log();
+		throw e;
+	}
+	
 	Zotero.debug("Migrating Extra fields for item " + this.libraryKey);
-	if (itemType) {
-		Zotero.debug("Item Type: " + itemType);
-	}
-	if (fields.size) {
-		Zotero.debug(Array.from(fields.entries()));
-	}
-	if (creators.length) {
-		Zotero.debug(creators);
-	}
-	Zotero.debug(extra);
+	log();
 	
 	return true;
 }

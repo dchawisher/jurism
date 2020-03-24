@@ -55,7 +55,6 @@ var ZoteroPane = new function()
 	this.clearItemsPaneMessage = clearItemsPaneMessage;
 	this.viewSelectedAttachment = viewSelectedAttachment;
 	this.reportErrors = reportErrors;
-	this.displayErrorMessage = displayErrorMessage;
 	
 	this.document = document;
 	
@@ -154,7 +153,7 @@ var ZoteroPane = new function()
 		ZoteroPane_Local.collectionsView = new Zotero.CollectionTreeView();
 		// Handle an error in setTree()/refresh()
 		ZoteroPane_Local.collectionsView.onError = function (e) {
-			ZoteroPane_Local.displayErrorMessage();
+			Zotero.crash();
 		};
 		var collectionsTree = document.getElementById('zotero-collections-tree');
 		collectionsTree.view = ZoteroPane_Local.collectionsView;
@@ -387,7 +386,7 @@ var ZoteroPane = new function()
 		}
 		
 		// If Zotero could not be initialized, display an error message and return
-		if (!Zotero || Zotero.skipLoading) {
+		if (!Zotero || Zotero.skipLoading || Zotero.crashed) {
 			this.displayStartupError();
 			return false;
 		}
@@ -914,7 +913,7 @@ var ZoteroPane = new function()
 			fp.appendFilter(Zotero.getString('fileInterface.OPMLFeedFilter'), '*.opml; *.xml');
 			fp.appendFilters(fp.filterAll);
 			if (await fp.show() == fp.returnOK) {
-				var contents = await Zotero.File.getContentsAsync(fp.file.path);
+				var contents = await Zotero.File.getContentsAsync(fp.file);
 				var success = await Zotero.Feeds.importFromOPML(contents);
 				if (success) {
 					return true;
@@ -1188,7 +1187,7 @@ var ZoteroPane = new function()
 			this.itemsView.onError = function () {
 				// Don't reload last folder, in case that's the problem
 				Zotero.Prefs.clear('lastViewedFolder');
-				ZoteroPane_Local.displayErrorMessage();
+				Zotero.crash();
 			};
 			this.itemsView.onRefresh.addListener(() => {
 				this.setTagScope();
@@ -1506,7 +1505,7 @@ var ZoteroPane = new function()
 		}.bind(this))()
 		.catch(function (e) {
 			Zotero.logError(e);
-			this.displayErrorMessage();
+			Zotero.crash();
 			throw e;
 		}.bind(this))
 		.finally(function () {
@@ -1650,7 +1649,7 @@ var ZoteroPane = new function()
 			itemIDs.push(items[i].id);
 		}
 		
-		yield Zotero.Fulltext.indexItems(itemIDs, true);
+		yield Zotero.FullText.indexItems(itemIDs, { complete: true });
 		yield document.getElementById('zotero-attachment-box').updateItemIndexedState();
 	});
 	
@@ -4013,6 +4012,8 @@ var ZoteroPane = new function()
 				throw new Error("Item " + itemID + " is not an attachment");
 			}
 			
+			Zotero.debug("Viewing attachment " + item.libraryKey);
+			
 			if (item.attachmentLinkMode == Zotero.Attachments.LINK_MODE_LINKED_URL) {
 				this.loadURI(item.getField('url'), event);
 				continue;
@@ -4087,15 +4088,29 @@ var ZoteroPane = new function()
 				}
 			}
 			
-			if (fileExists) {
+			let fileSyncingEnabled = Zotero.Sync.Storage.Local.getEnabledForLibrary(item.libraryID);
+			let redownload = false;
+			
+			// TEMP: If file is queued for download, download first. Starting in 5.0.85, files
+			// modified remotely get marked as SYNC_STATE_FORCE_DOWNLOAD, causing them to get
+			// downloaded at sync time even in download-as-needed mode, but this causes files
+			// modified previously to be downloaded on open.
+			if (fileExists
+					&& !isLinkedFile
+					&& fileSyncingEnabled
+					&& (item.attachmentSyncState == Zotero.Sync.Storage.Local.SYNC_STATE_TO_DOWNLOAD)) {
+				Zotero.debug("File exists but is queued for download -- re-downloading");
+				redownload = true;
+			}
+			
+			if (fileExists && !redownload) {
 				Zotero.debug("Opening " + path);
 				Zotero.Notifier.trigger('open', 'file', item.id);
-				
 				launchFile(path, item.attachmentContentType);
 				continue;
 			}
 			
-			if (isLinkedFile || !Zotero.Sync.Storage.Local.getEnabledForLibrary(item.libraryID)) {
+			if (isLinkedFile || !fileSyncingEnabled) {
 				this.showAttachmentNotFoundDialog(
 					itemID,
 					path,
@@ -4109,7 +4124,10 @@ var ZoteroPane = new function()
 			}
 			
 			try {
-				await Zotero.Sync.Runner.downloadFile(item);
+				let results = await Zotero.Sync.Runner.downloadFile(item);
+				if (!results || !results.localChanges) {
+					Zotero.debug("Download failed -- opening existing file");
+				}
 			}
 			catch (e) {
 				// TODO: show error somewhere else
@@ -4130,12 +4148,11 @@ var ZoteroPane = new function()
 				return;
 			}
 			
-			// check if unchanged?
-			// maybe not necessary, since we'll get an error if there's an error
-			
 			Zotero.Notifier.trigger('redraw', 'item', []);
-			// Retry after download
-			i--;
+			
+			Zotero.debug("Opening " + path);
+			Zotero.Notifier.trigger('open', 'file', item.id);
+			launchFile(path, item.attachmentContentType);
 		}
 	});
 	
@@ -4753,37 +4770,9 @@ var ZoteroPane = new function()
 					"zotero-error-report", "chrome,centerscreen,modal", io);
 	}
 	
-	/*
-	 * Display an error message saying that an error has occurred and Firefox
-	 * needs to be restarted.
-	 *
-	 * If |popup| is TRUE, display in popup progress window; otherwise, display
-	 * as items pane message
-	 */
-	function displayErrorMessage(popup) {
-		var reportErrorsStr = Zotero.getString('errorReport.reportErrors');
-		var reportInstructions =
-			Zotero.getString('errorReport.reportInstructions', reportErrorsStr)
-		
-		// Display as popup progress window
-		if (popup) {
-			var pw = new Zotero.ProgressWindow();
-			pw.changeHeadline(Zotero.getString('general.errorHasOccurred'));
-			var msg = Zotero.getString('general.pleaseRestart', Zotero.appName) + ' '
-				+ reportInstructions;
-			pw.addDescription(msg);
-			pw.show();
-			pw.startCloseTimer(8000);
-		}
-		// Display as items pane message
-		else {
-			var msg = Zotero.getString('general.errorHasOccurred') + ' '
-				+ Zotero.getString('general.pleaseRestart', Zotero.appName) + '\n\n'
-				+ reportInstructions;
-			self.setItemsPaneMessage(msg, true);
-		}
-		Zotero.debug(msg, 1);
-		Zotero.debug(new Error().stack, 1);
+	this.displayErrorMessage = function (popup) {
+		Zotero.debug("ZoteroPane.displayErrorMessage() is deprecated -- use Zotero.crash() instead");
+		Zotero.crash(popup);
 	}
 	
 	this.displayStartupError = function(asPaneMessage) {
@@ -4812,9 +4801,7 @@ var ZoteroPane = new function()
 			//if(asPaneMessage) {
 			//	ZoteroPane_Local.setItemsPaneMessage(errMsg, true);
 			//} else {
-				var ps = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
-										.getService(Components.interfaces.nsIPromptService);
-				ps.alert(null, title, errMsg);
+				Zotero.alert(null, title, errMsg);
 			//}
 		}
 	}

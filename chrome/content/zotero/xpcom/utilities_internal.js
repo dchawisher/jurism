@@ -966,14 +966,6 @@ Zotero.Utilities.Internal = {
 		// Build `Map`s of normalized types/fields, including CSL variables, to built-in types/fields
 		//
 		
-		// Built-in item types
-		var itemTypes = new Map(Zotero.ItemTypes.getAll().map(x => [this._normalizeExtraKey(x.name), x.name]));
-		// CSL types
-		for (let i in Zotero.Schema.CSL_TYPE_MAPPINGS) {
-			let cslType = Zotero.Schema.CSL_TYPE_MAPPINGS[i];
-			itemTypes.set(cslType.toLowerCase(), i);
-		}
-		
 		// For fields we use arrays, because there can be multiple possibilities
 		//
 		// Built-in fields
@@ -1009,35 +1001,65 @@ Zotero.Utilities.Internal = {
 		var keepLines = [];
 		var skipKeys = new Set();
 		var lines = extra.split(/\n/g);
-		for (let line of lines) {
+		
+		var getKeyAndValue = (line) => {
 			let parts = line.match(/^([a-z][a-z -_]+):(.+)/i);
 			// Old citeproc.js cheater syntax;
 			if (!parts) {
 				parts = line.match(/^{:([a-z -_]+):(.+)}/i);
 			}
 			if (!parts) {
-				keepLines.push(line);
-				continue;
+				return [null, null];
 			}
 			let [_, originalField, value] = parts;
-
 			let key = this._normalizeExtraKey(originalField);
-			if (skipKeys.has(key)) {
-				keepLines.push(line);
-				continue;
-			}
 			value = value.trim();
+			return [key, value];
+		};
+		
+		// Extract item type from 'type:' lines
+		lines = lines.filter((line) => {
+			let [key, value] = getKeyAndValue(line);
 			
-			if (key == 'type') {
-				let possibleType = itemTypes.get(value);
-				if (possibleType) {
-					// Ignore item type that's the same as the item
-					if (!item || possibleType != Zotero.ItemTypes.getName(itemTypeID)) {
-						itemType = possibleType;
-						skipKeys.add(key);
-						continue;
+			if (!key
+					|| key != 'type'
+					|| skipKeys.has(key)
+					// Ignore 'type: note' and 'type: attachment'
+					|| ['note', 'attachment'].includes(value)) {
+				return true;
+			}
+			
+			// See if it's a Zotero type
+			let possibleType = Zotero.ItemTypes.getName(value);
+			
+			// If not, see if it's a CSL type
+			if (!possibleType && Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[value]) {
+				if (item) {
+					let currentType = Zotero.ItemTypes.getName(itemTypeID);
+					// If the current item type is valid for the given CSL type, remove the line
+					if (Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[value].includes(currentType)) {
+						return false;
 					}
 				}
+				// Use first mapped Zotero type for CSL type
+				possibleType = Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[value][0];
+			}
+			
+			if (possibleType) {
+				itemType = possibleType;
+				itemTypeID = Zotero.ItemTypes.getID(itemType);
+				skipKeys.add(key);
+				return false;
+			}
+			
+			return true;
+		});
+		
+		lines = lines.filter((line) => {
+			let [key, value] = getKeyAndValue(line);
+			
+			if (!key || skipKeys.has(key) || key == 'type') {
+				return true;
 			}
 			
 			// Fields
@@ -1053,7 +1075,7 @@ Zotero.Utilities.Internal = {
 						if (!Zotero.ItemFields.isValidForType(fieldID, itemTypeID)
 								|| item.getField(fieldID)
 								|| additionalFields.has(possibleField)) {
-							continue;
+							return true;
 						}
 					}
 					fields.set(possibleField, value);
@@ -1066,7 +1088,7 @@ Zotero.Utilities.Internal = {
 				}
 				if (added) {
 					skipKeys.add(key);
-					continue;
+					return false;
 				}
 			}
 			
@@ -1076,7 +1098,7 @@ Zotero.Utilities.Internal = {
 					creatorType: possibleCreatorType
 				};
 				if (value.includes('||')) {
-					let [first, last] = value.split(/\s*\|\|\s*/);
+					let [last, first] = value.split(/\s*\|\|\s*/);
 					c.firstName = first;
 					c.lastName = last;
 				}
@@ -1090,24 +1112,24 @@ Zotero.Utilities.Internal = {
 							// to follow citeproc-js behavior
 							&& !item.getCreators().some(x => x.creatorType == possibleCreatorType)) {
 						creators.push(c);
-						continue;
+						return false;
 					}
 				}
 				else {
 					creators.push(c);
-					continue;
+					return false;
 				}
 			}
 			
 			// We didn't find anything, so keep the line in Extra
-			keepLines.push(line);
-		}
+			return true;
+		});
 		
 		return {
 			itemType,
 			fields,
 			creators,
-			extra: keepLines.join('\n')
+			extra: lines.join('\n')
 		};
 	},
 	
@@ -2050,13 +2072,6 @@ Zotero.Utilities.Internal.activate = new function() {
 	
 	return function(win) {
 		if (Zotero.isMac) {
-			const BUNDLE_IDS = {
-				"Zotero":"org.zotero.zotero",
-				"Firefox":"org.mozilla.firefox",
-				"Aurora":"org.mozilla.aurora",
-				"Nightly":"org.mozilla.nightly"
-			};
-			
 			if (win) {
 				Components.utils.import("resource://gre/modules/ctypes.jsm");
 				win.focus();
@@ -2094,7 +2109,13 @@ Zotero.Utilities.Internal.activate = new function() {
 					);
 				}, false);
 			} else {
-				Zotero.Utilities.Internal.executeAppleScript('tell application id "'+BUNDLE_IDS[Zotero.appName]+'" to activate');
+				let pid = Zotero.Utilities.Internal.getProcessID();
+				let script = `
+					tell application "System Events"
+						set frontmost of the first process whose unix id is ${pid} to true
+					end tell
+				`;
+				Zotero.Utilities.Internal.executeAppleScript(script);
 			}
 		} else if(!Zotero.isWin && win) {
 			Components.utils.import("resource://gre/modules/ctypes.jsm");
@@ -2308,15 +2329,25 @@ Zotero.Utilities.Internal.activate = new function() {
 
 Zotero.Utilities.Internal.sendToBack = function() {
 	if (Zotero.isMac) {
+		let pid = Zotero.Utilities.Internal.getProcessID();
 		Zotero.Utilities.Internal.executeAppleScript(`
 			tell application "System Events"
-				if frontmost of application id "org.zotero.zotero" then
-					set visible of process "Zotero" to false
+				set myProcess to first process whose unix id is ${pid}
+				if frontmost of myProcess then
+					set visible of myProcess to false
 				end if
 			end tell
 		`);
 	}
 }
+
+
+Zotero.Utilities.Internal.getProcessID = function () {
+	return Components.classes["@mozilla.org/xre/app-info;1"]
+		.getService(Components.interfaces.nsIXULRuntime)
+		.processID;
+};
+
 
 /**
  *  Base64 encode / decode

@@ -106,10 +106,14 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 	});
 	
 	/**
+	 * @property {Boolean} crashed - True if the application needs to be restarted
+	 */
+	this.crashed = false;
+	
+	/**
 	 * @property	{Boolean}	closing		True if the application is closing.
 	 */
 	this.closing = false;
-	
 	
 	this.unlockDeferred;
 	this.unlockPromise;
@@ -1244,6 +1248,54 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 	}
 	
 	
+	/**
+	 * Display an error message saying that an error has occurred and Zotero needs to be restarted.
+	 *
+	 * If |popup| is TRUE, display in popup progress window; otherwise, display as items pane message
+	 */
+	this.crash = function (popup) {
+		this.crashed = true;
+		
+		var reportErrorsStr = Zotero.getString('errorReport.reportErrors');
+		var reportInstructions = Zotero.getString('errorReport.reportInstructions', reportErrorsStr);
+		
+		var msg;
+		if (popup) {
+			msg = Zotero.getString('general.pleaseRestart', Zotero.appName) + ' '
+				+ reportInstructions;
+		}
+		else {
+			msg = Zotero.getString('general.errorHasOccurred') + ' '
+				+ Zotero.getString('general.pleaseRestart', Zotero.appName) + '\n\n'
+				+ reportInstructions;
+		}
+		Zotero.logError(msg);
+		Zotero.logError(new Error().stack);
+		
+		this.startupError = msg;
+		this.startupErrorHandler = null;
+		
+		var enumerator = Services.wm.getEnumerator("navigator:browser");
+		while (enumerator.hasMoreElements()) {
+			let win = enumerator.getNext();
+			if (!win.ZoteroPane) continue;
+			
+			// Display as popup progress window
+			if (popup) {
+				var pw = new Zotero.ProgressWindow();
+				pw.changeHeadline(Zotero.getString('general.errorHasOccurred'));
+				pw.addDescription(msg);
+				pw.show();
+				pw.startCloseTimer(8000);
+			}
+			// Display as items pane message
+			else {
+				win.ZoteroPane.setItemsPaneMessage(msg, true);
+			}
+		}
+	};
+	
+	
 	this.getErrors = function (asStrings) {
 		var errors = [];
 		
@@ -1796,7 +1848,7 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 		if (Zotero.isMac && OS.Constants.Path.libDir.includes('AppTranslocation')) {
 			let ps = Services.prompt;
 			let buttonFlags = ps.BUTTON_POS_0 * ps.BUTTON_TITLE_IS_STRING;
-			let index = ps.confirmEx(
+			ps.confirmEx(
 				null,
 				Zotero.getString('general.error'),
 				Zotero.getString('startupError.startedFromDiskImage1', Zotero.clientName)

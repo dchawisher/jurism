@@ -2161,6 +2161,16 @@ Zotero.Utilities = {
 		else if (cslItem.type == 'bill' && (cslItem.publisher || cslItem['number-of-volumes'])) {
 			zoteroType = 'hearing';
 		}
+		else if (cslItem.type == 'broadcast'
+				&& (cslItem['archive']
+					|| cslItem['archive_location']
+					|| cslItem['container-title']
+					|| cslItem['event-place']
+					|| cslItem['publisher']
+					|| cslItem['publisher-place']
+					|| cslItem['source'])) {
+			zoteroType = 'tvBroadcast';
+		}
 		else if (cslItem.type == 'book' && cslItem.version) {
 			zoteroType = 'computerProgram';
 		}
@@ -2174,7 +2184,7 @@ Zotero.Utilities = {
 			zoteroType = 'videoRecording';
 		}
 		else {
-			zoteroType = Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslItem.type];
+			zoteroType = Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslItem.type][0];
 		}
 		if (!strict && !zoteroType) {
 			zoteroType = "document";

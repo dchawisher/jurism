@@ -114,12 +114,17 @@ describe("Zotero.Utilities.Internal", function () {
 	
 	
 	describe("#extractExtraFields()", function () {
-		it("should extract a CSL type", function () {
-			var str = 'type: motion_picture';
+		it("should ignore 'type: note' and 'type: attachment'", function () {
+			var str = 'type: note';
+			var { itemType, extra } = Zotero.Utilities.Internal.extractExtraFields(str);
+			assert.isNull(itemType);
+			assert.equal(extra, 'type: note');
+		});
+		
+		it("should use the first mapped Zotero type for a CSL type", function () {
+			var str = 'type: personal_communication';
 			var { itemType, fields, extra } = Zotero.Utilities.Internal.extractExtraFields(str);
-			assert.equal(itemType, 'film');
-			assert.equal(fields.size, 0);
-			assert.strictEqual(extra, '');
+			assert.equal(itemType, 'letter');
 		});
 		
 		it("should extract a field", function () {
@@ -224,7 +229,7 @@ describe("Zotero.Utilities.Internal", function () {
 		});
 		
 		it("should extract a CSL name", function () {
-			var str = 'container-author: First || Last';
+			var str = 'container-author: Last || First';
 			var { creators, extra } = Zotero.Utilities.Internal.extractExtraFields(str);
 			assert.lengthOf(creators, 1);
 			assert.propertyVal(creators[0], 'creatorType', 'bookAuthor');
@@ -235,7 +240,7 @@ describe("Zotero.Utilities.Internal", function () {
 		
 		it("should extract a CSL name that's valid for a given item type", function () {
 			var item = createUnsavedDataObject('item', { itemType: 'bookSection' });
-			var str = 'container-author: First || Last';
+			var str = 'container-author: Last || First';
 			var { creators, extra } = Zotero.Utilities.Internal.extractExtraFields(str, item);
 			assert.lengthOf(creators, 1);
 			assert.propertyVal(creators[0], 'creatorType', 'bookAuthor');
@@ -246,7 +251,7 @@ describe("Zotero.Utilities.Internal", function () {
 		
 		it("shouldn't extract a CSL name that's not valid for a given item type", function () {
 			var item = createUnsavedDataObject('item', { itemType: 'journalArticle' });
-			var str = 'container-author: First || Last';
+			var str = 'container-author: Last || First';
 			var { creators, extra } = Zotero.Utilities.Internal.extractExtraFields(str, item);
 			assert.lengthOf(creators, 0);
 			assert.strictEqual(extra, str);
