@@ -54,7 +54,7 @@ Zotero.Utilities = {
 		// Types are a little weird
 		for (var zoteroType in Zotero.Jurism.PATCH.TYPES.override) {
 			var cslType = Zotero.Jurism.PATCH.TYPES.override[zoteroType];
-			Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslType] = zoteroType;
+			Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslType] = [zoteroType];
 		}
 		for (var jurismType in Zotero.Jurism.PATCH.TYPES.add) {
 			// This one can be confusing. jurismType key is the native Jurism
@@ -62,7 +62,7 @@ Zotero.Utilities = {
 			// csl subkey is what the type maps to in CSL-M, which is the same as the
 			// native Jurism type name.
 			var cslType = Zotero.Jurism.PATCH.TYPES.add[jurismType].csl;
-			Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslType] = jurismType;
+			Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslType] = [jurismType];
 		}
 		
 		//for (let zoteroType in Zotero.Schema.CSL_TYPE_MAPPINGS) {
@@ -2242,7 +2242,6 @@ Zotero.Utilities = {
 				return false;
 			}
 		}
-
         var zoteroType = this.getZoteroTypeFromCslType(cslItem);
 		
 		var itemTypeID = Zotero.ItemTypes.getID(zoteroType);
