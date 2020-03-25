@@ -463,11 +463,19 @@ describe("Zotero.Utilities", function() {
 				let canonicalJSON = dataCanonical[i];
 
 				Zotero.Utilities.initMaps();
-				// Zotero.debug("XXX FROM UTILITIES: " + JSON.stringify(Zotero.Utilities.REVERSE.TYPES, null, 2), 1);
-				// Zotero.debug("XXX FROM SCHEMA: " + JSON.stringify(Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE, null, 2), 1);
 				
 				delete newJSON.id;
 				delete json.id;
+				for (var key in canonicalJSON) {
+					assert.isTrue(!!newJSON[key], "newJSON has key " + key);
+					var cVal = canonicalJSON[key];
+					var nVal = newJSON[key];
+					if ("string" === typeof canonicalJSON[key] || "number" === typeof canonicalJSON[key]) {
+						assert.equal(cVal, nVal);
+					} else {
+						assert.equal(JSON.stringify(cVal), JSON.stringify(nVal), "in type " + canonicalJSON.type);
+					}
+				}
 				assert.deepEqual(newJSON, canonicalJSON, i + ' export -> import -> export is stable');
 			}
 		});
