@@ -4801,6 +4801,7 @@ Zotero.Item.prototype.isCollection = function() {
 			// TEMP until we move creator lines to real creators
 			.concat('creators')
 	);
+	var invalidFieldLogLines = new Map();
 	
 	// Transfer valid fields from Extra to regular fields
 	// Currently disabled
@@ -4934,9 +4935,12 @@ Zotero.Item.prototype.isCollection = function() {
 					throw e;
 				}
 				// Otherwise store in Extra
-				Zotero.warn(`Storing invalid field '${origField}' for type ${type} in Extra for `
-					+ `item ${this.libraryKey}`);
 				extraFields.set(field, val);
+				
+				let msg = `Storing invalid field '${origField}' for type ${type} in Extra for `
+					+ `item ${this.libraryKey}`;
+				invalidFieldLogLines.set(field, msg);
+				
 				continue;
 			}
 			this.setField(field, json[origField], false, json.multi.main[origField], true);
@@ -4982,9 +4986,8 @@ Zotero.Item.prototype.isCollection = function() {
 				let mappedFieldNames = Zotero.ItemFields.getTypeFieldsFromBase(baseField, true);
 				for (let mappedField of mappedFieldNames) {
 					if (extraFields.has(mappedField)) {
-						Zotero.warn(`Removing redundant Extra field '${mappedField}' for item `
-							+ this.libraryKey);
 						extraFields.delete(mappedField);
+						invalidFieldLogLines.delete(mappedField);
 					}
 				}
 			}
@@ -5005,9 +5008,8 @@ Zotero.Item.prototype.isCollection = function() {
 			let mappedFieldNames = Zotero.ItemFields.getTypeFieldsFromBase(baseField, true);
 			for (let mappedField of mappedFieldNames) {
 				if (extraFields.has(mappedField) && extraFields.get(mappedField) === value) {
-					Zotero.warn(`Removing redundant Extra field '${mappedField}' for item `
-						+ this.libraryKey);
 					extraFields.delete(mappedField);
+					invalidFieldLogLines.delete(mappedField);
 				}
 			}
 		}
@@ -5020,11 +5022,22 @@ Zotero.Item.prototype.isCollection = function() {
 			.concat('audioFileType');
 		for (let typeFieldName of typeFieldNames) {
 			if (extraFields.has(typeFieldName)) {
-				Zotero.warn(`Removing invalid-for-type Type field '${typeFieldName}' from Extra for item `
-					+ this.libraryKey);
 				extraFields.delete(typeFieldName);
+				invalidFieldLogLines.delete(typeFieldName);
 			}
 		}
+		
+		// Remove "Version Number" if "Edition" is set, since as of 3/2020 the RDF translator
+		// assigns it
+		if (extraFields.has('versionNumber') && setFields.has('edition')
+				&& extraFields.get('versionNumber') == this.getField('edition')) {
+			extraFields.delete('versionNumber');
+			invalidFieldLogLines.delete('versionNumber');
+		}
+	}
+	
+	for (let line of invalidFieldLogLines.values()) {
+		Zotero.warn(line);
 	}
 	
 	if (extra || extraFields.size || this.getField('extra')) {
