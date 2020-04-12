@@ -39,16 +39,11 @@ Zotero.Jurism.PATCH = {
 		add: Zotero.Jurism.EXTENDED.TYPES,
 		extend: {},
 		remove: {},
-		override: {
-			hearing: "hearing",
-			videoRecording: "video"
-		}
+		override: {}
 	},
 	
 	CREATORS: {
 		add: {
-			artist: "author",
-			testimonyBy: "author",
 			contributor: "contributor",
 			commenter: "commenter"
 		},
@@ -59,7 +54,6 @@ Zotero.Jurism.PATCH = {
 	
 	FIELDS: {
 		add: {
-			committee: ["committee"],
 			"gazette-flag": ["gazetteFlag"],
 			"document-name": ["documentName"],
 			"volume-title": ["volumeTitle"],
