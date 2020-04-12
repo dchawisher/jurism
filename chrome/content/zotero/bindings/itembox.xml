@@ -3716,15 +3716,15 @@
 							valueElement.classList.add('yellow');
 						}
 					} else {
-						// Used to adjust values when SAYT result from a subjurisdiction is selected.
-						var m = result.val.match(/^([^:]+):\s+(.*)$/);
+					    // Used to adjust values when SAYT result from a subjurisdiction is selected.
+						var m = result.comment.match(/^([^:]+):\s+(.*)$/);
 						if (m) {
 							if (this.saveOnEdit) {
 								this.ignoreBlur = true;
 							}
 							// Get the subjurisdiction element to add to the current jurisdiction
 							var jurisdictionStub = m[1];
-							result.val = m[2];
+							result.comment = m[2];
 							var xpath = '*[local-name()="row"]/'
 								+ '*[local-name()="label" and @fieldname="jurisdiction"]/'
 								+ 'following-sibling::*[local-name()="hbox"]/'
