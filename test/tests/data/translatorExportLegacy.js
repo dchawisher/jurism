@@ -1612,17 +1612,17 @@
     "meetingName": "Meeting name",
     "creators": [
       {
-        "firstName": "contributorFirst",
-        "lastName": "contributorLast",
-        "creatorType": "contributor",
+        "firstName": "testimonyByFirst",
+        "lastName": "testimonyByLast",
+        "creatorType": "testimonyBy",
         "multi": {
           "_key": {}
         }
       },
       {
-        "firstName": "testimonyByFirst",
-        "lastName": "testimonyByLast",
-        "creatorType": "testimonyBy",
+        "firstName": "contributorFirst",
+        "lastName": "contributorLast",
+        "creatorType": "contributor",
         "multi": {
           "_key": {}
         }
@@ -1636,7 +1636,7 @@
         }
       },
       {
-        "creatorType": "contributor",
+        "creatorType": "testimonyBy",
         "multi": {
           "_key": {}
         },

@@ -1051,17 +1051,17 @@
 		"committee": "Committee",
 		"creators": [
 			{
-				"creatorType": "contributor",
-				"firstName": "contributorFirst",
-				"lastName": "contributorLast",
+				"creatorType": "testimonyBy",
+				"firstName": "testimonyByFirst",
+				"lastName": "testimonyByLast",
 				"multi": {
 					"_key": {}
 				}
 			},
 			{
-				"creatorType": "testimonyBy",
-				"firstName": "testimonyByFirst",
-				"lastName": "testimonyByLast",
+				"creatorType": "contributor",
+				"firstName": "contributorFirst",
+				"lastName": "contributorLast",
 				"multi": {
 					"_key": {}
 				}
@@ -1075,7 +1075,7 @@
 				}
 			},
 			{
-				"creatorType": "contributor",
+				"creatorType": "testimonyBy",
 				"fieldMode": 1,
 				"lastName": "Institutional Author",
 				"multi": {
