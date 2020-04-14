@@ -47,9 +47,9 @@ Zotero.Utilities = {
 		/**
 		 * Extend mappings
 		 */
-		Zotero.Jurism.MapTools.patchMap("CREATORS", Zotero.Schema.CSL_NAME_MAPPINGS);
-		Zotero.Jurism.MapTools.patchMap("FIELDS", Zotero.Schema.CSL_TEXT_MAPPINGS);
-		Zotero.Jurism.MapTools.patchMap("DATES", Zotero.Schema.CSL_DATE_MAPPINGS);
+		// Zotero.Jurism.MapTools.patchMap("CREATORS", Zotero.Schema.CSL_NAME_MAPPINGS);
+		// Zotero.Jurism.MapTools.patchMap("FIELDS", Zotero.Schema.CSL_TEXT_MAPPINGS);
+		// Zotero.Jurism.MapTools.patchMap("DATES", Zotero.Schema.CSL_DATE_MAPPINGS);
 
 		// Types are a little weird
 		for (var zoteroType in Zotero.Jurism.PATCH.TYPES.override) {
@@ -1868,6 +1868,9 @@ Zotero.Utilities = {
 			);
 		}
 		
+		var originalType = zoteroItem.itemType;
+		var originalItemTypeID = Zotero.ItemTypes.getID(originalType);
+		
 		if (portableJSON) {
 			// Normalize date format to something spartan and unambiguous
 			for (var field in zoteroItem) {
@@ -1879,12 +1882,13 @@ Zotero.Utilities = {
 		}
 
 		var cslType = Zotero.Schema.CSL_TYPE_MAPPINGS[zoteroItem.itemType];
+		
 		if (!cslType) {
 			throw new Error('Unexpected Zotero Item type "' + zoteroItem.itemType + '"');
 		}
 		
 		var itemTypeID = Zotero.ItemTypes.getID(zoteroItem.itemType);
-		
+
 		// Juris-M: used in FORCE FIELDS below
 		var itemType = zoteroItem.itemType;
 
@@ -1920,7 +1924,7 @@ Zotero.Utilities = {
 					baseFieldName,
 					value = null; // So we will try shortTitle on both iterations.
 				
-				if(field in zoteroItem) {
+				if(zoteroItem[field]) {
 					baseFieldName = field;
 					value = zoteroItem[field];
 				} else {
@@ -1928,13 +1932,13 @@ Zotero.Utilities = {
 					var fieldID = Zotero.ItemFields.getID(field),
 						typeFieldID;
 					if(fieldID
-						&& (typeFieldID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, fieldID))
+						&& (typeFieldID = Zotero.ItemFields.getFieldIDFromTypeAndBase(originalItemTypeID, fieldID))
 					) {
 						baseFieldName = Zotero.ItemFields.getName(typeFieldID);
 						value = zoteroItem[baseFieldName];
 					}
 				}
-				
+
 				if (!value) continue;
 				
 				if (typeof value == 'string') {
@@ -1986,9 +1990,9 @@ Zotero.Utilities = {
 				var creatorType = creator.creatorType;
 				if(creatorType == author) {
 					creatorType = "author";
+				} else {
+					creatorType = Zotero.Schema.CSL_NAME_MAPPINGS[creatorType];
 				}
-				
-				creatorType = Zotero.Schema.CSL_NAME_MAPPINGS[creatorType];
 				if(!creatorType) continue;
 
 				if (zoteroItem.itemType === "videoRecording") {
@@ -2242,8 +2246,9 @@ Zotero.Utilities = {
 				return false;
 			}
 		}
+
         var zoteroType = this.getZoteroTypeFromCslType(cslItem);
-		
+
 		var itemTypeID = Zotero.ItemTypes.getID(zoteroType);
 		if(isZoteroItem) {
 			item.setType(itemTypeID);
@@ -2265,7 +2270,7 @@ Zotero.Utilities = {
 				for(var i=0; i<textMappings.length; i++) {
 					var field = textMappings[i];
 					var fieldID = Zotero.ItemFields.getID(field);
-
+					
 					if(Zotero.ItemFields.isBaseField(fieldID)) {
 						var newFieldID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, fieldID);
 						if(newFieldID) fieldID = newFieldID;

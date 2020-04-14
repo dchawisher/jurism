@@ -869,8 +869,8 @@
 		},
 		"author": [
 			{
-				"family": "contributorLast",
-				"given": "contributorFirst",
+				"family": "testimonyByLast",
+				"given": "testimonyByFirst",
 				"multi": {
 					"_key": {}
 				}

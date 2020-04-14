@@ -523,7 +523,7 @@ describe("Zotero.Utilities", function() {
 				delete newPortableJSON.id;
 				delete portablejson.id;
 
-				Zotero.debug("\nSAVED\n" + JSON.stringify(newPortableJSON) + "\nTRUE\n" + JSON.stringify(portablejson) + "\nEND\n",1);
+				// Zotero.debug("\nFrom itemToCSLJSON " + i + "\n" + JSON.stringify(newPortableJSON, null, 2) + "\nOriginal\n" + JSON.stringify(portablejson, null, 2) + "\nEND\n",1);
 				
 				assert.deepEqual(newPortableJSON, portablejson, i + ' export -> import -> export is stable');
 			}

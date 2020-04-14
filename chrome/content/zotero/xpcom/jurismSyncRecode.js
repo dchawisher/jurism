@@ -485,14 +485,16 @@ Zotero.Jurism.SyncRecode = {
 				if (extendedcreators.length) {
 					extradata.extracreators = extendedcreators;
 					var creatorsLength = (newjson.creators.length - extendedcreators.length);
-					newjson.creators = newjson.creators.slice(0, creatorsLength)
+					newjson.creators = newjson.creators.slice(0, creatorsLength);
 				}
 			}
 		}
 
 		// xtype
 		if (Zotero.Jurism.EXTENDED.TYPES[newjson.itemType]) {
-			extradata.xtype = newjson.itemType;
+			if (newjson.itemType !== Zotero.Jurism.EXTENDED.TYPES[newjson.itemType].zotero) {
+				extradata.xtype = newjson.itemType;
+			}
 			newjson.itemType = Zotero.Jurism.EXTENDED.TYPES[newjson.itemType].zotero;
 		}
 

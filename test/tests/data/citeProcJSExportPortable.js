@@ -799,7 +799,7 @@
 		}
 	},
 	"hearing": {
-		"type": "hearing",
+		"type": "bill",
 		"title": "Title",
 		"publisher": "Publisher",
 		"publisher-place": "Place",
@@ -811,20 +811,11 @@
 		"event-place": "Place",
 		"abstract": "Abstract note",
 		"URL": "http://www.example.com",
-		"note": "mlzsync1:0051{\"extrafields\":{\"jurisdiction\":\"002zzAtlantis|ZZ\"}}Extra",
+		"note": "mlzsync1:0237{\"extrafields\":{\"jurisdiction\":\"002zzAtlantis|ZZ\"},\"extracreators\":[{\"name\":\"Institutional Author\",\"creatorType\":\"testimonyBy\"},{\"firstName\":\"testimonyByFirst\",\"lastName\":\"testimonyByLast\",\"creatorType\":\"testimonyBy\"}],\"xtype\":\"hearing\"}Extra",
 		"number": "3",
 		"references": "History",
 		"title-short": "Short title",
 		"language": "en-US",
-		"author": [
-			{
-				"family": "contributorLast",
-				"given": "contributorFirst"
-			},
-			{
-				"literal": "Institutional Author"
-			}
-		],
 		"issued": {
 			"date-parts": [
 				[
