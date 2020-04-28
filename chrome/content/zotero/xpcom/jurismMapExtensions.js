@@ -192,7 +192,8 @@ Zotero.Jurism.MapTools = {
 			var me = this;
 			extMap[itemType].forEach(function(zField){
 				if (objectValues) {
-					ret[itemType][zField.field] = me.getEncodeField(zField.field, cslMap);
+					var field = zField.baseField ? zField.baseField : zField.field;
+					ret[itemType][zField.field] = me.getEncodeField(field, cslMap);
 				} else {
 					ret[itemType][zField] = me.getEncodeField(zField, cslMap);
 				}
