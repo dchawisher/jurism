@@ -3717,14 +3717,14 @@
 						}
 					} else {
 					    // Used to adjust values when SAYT result from a subjurisdiction is selected.
-						var m = result.comment.match(/^([^:]+):\s+(.*)$/);
+						var m = result.val.match(/^([^:]+):\s+(.*)$/);
 						if (m) {
 							if (this.saveOnEdit) {
 								this.ignoreBlur = true;
 							}
 							// Get the subjurisdiction element to add to the current jurisdiction
 							var jurisdictionStub = m[1];
-							result.comment = m[2];
+							result.val = m[2];
 							var xpath = '*[local-name()="row"]/'
 								+ '*[local-name()="label" and @fieldname="jurisdiction"]/'
 								+ 'following-sibling::*[local-name()="hbox"]/'
