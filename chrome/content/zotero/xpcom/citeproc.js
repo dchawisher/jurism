@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.3.7",
+    PROCESSOR_VERSION: "1.3.8",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -17113,6 +17113,7 @@ CSL.Transform = function (state) {
     
     // Internal function
     function abbreviate(state, tok, Item, altvar, basevalue, family_var, use_field) {
+
         var value = "";
         var myabbrev_family = CSL.FIELD_CATEGORY_REMAP[family_var];
         var preferredJurisdiction;
@@ -17122,6 +17123,7 @@ CSL.Transform = function (state) {
 
         var variable = family_var;
         var normalizedKey = basevalue;
+
         if (state.sys.normalizeAbbrevsKey) {
             normalizedKey = state.sys.normalizeAbbrevsKey(family_var, basevalue);
         }
@@ -17129,6 +17131,11 @@ CSL.Transform = function (state) {
         if (variable === "jurisdiction" && normalizedKey) {
             quashCountry = normalizedKey.indexOf(":") === -1;
         }
+        // Fix up jurisdiction codes
+        if (family_var === "jurisdiction" && basevalue === basevalue.toLowerCase()) {
+            normalizedKey = basevalue.toUpperCase();
+        }
+        
         
         // Lazy retrieval of abbreviations.
         if (state.sys.getAbbreviation) {
