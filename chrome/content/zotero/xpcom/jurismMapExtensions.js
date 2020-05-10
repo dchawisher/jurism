@@ -54,6 +54,7 @@ Zotero.Jurism.PATCH = {
 	
 	FIELDS: {
 		add: {
+			"admin-flag": ["adminFlag"],
 			"gazette-flag": ["gazetteFlag"],
 			"document-name": ["documentName"],
 			"volume-title": ["volumeTitle"],

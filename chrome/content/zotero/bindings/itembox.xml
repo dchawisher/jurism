@@ -1078,13 +1078,25 @@
 					if (!isMulti && value.getAttribute('fieldname') == 'gazetteFlag') {
 						var value = document.createElement("hbox");
 						var gazetteFlag = document.createElement("checkbox");
-						// gazetteFlag.setAttribute("label","gazette");
 						gazetteFlag.setAttribute("id","gazette-flag");
 						gazetteFlag.setAttribute("oncommand","document.getBindingParent(this).gazetteFlagCommand(this);");
 						if (this.item.getField("gazetteFlag")) {
 							gazetteFlag.setAttribute("checked",true);
 						}
 						value.appendChild(gazetteFlag);
+						var row = document.createElement("row");
+						row.appendChild(label);
+						row.appendChild(value);
+
+					} else if (!isMulti && value.getAttribute('fieldname') == 'adminFlag') {
+						var value = document.createElement("hbox");
+						var adminFlag = document.createElement("checkbox");
+						adminFlag.setAttribute("id","admin-flag");
+						adminFlag.setAttribute("oncommand","document.getBindingParent(this).adminFlagCommand(this);");
+						if (this.item.getField("adminFlag")) {
+							adminFlag.setAttribute("checked",true);
+						}
+						value.appendChild(adminFlag);
 						var row = document.createElement("row");
 						row.appendChild(label);
 						row.appendChild(value);
@@ -1172,6 +1184,21 @@
 						this.item.setField("gazetteFlag", "1");
 					} else {
 						this.item.setField("gazetteFlag", "");
+					}
+					this.item.saveTx();
+				]]>
+			  </body>
+			</method>
+			
+			<method name="adminFlagCommand">
+			  <parameter name="node"/>
+			  <body>
+				<![CDATA[
+					var checked = node.getAttribute("checked");
+					if (checked) {
+						this.item.setField("adminFlag", "1");
+					} else {
+						this.item.setField("adminFlag", "");
 					}
 					this.item.saveTx();
 				]]>
