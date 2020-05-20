@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.3.8",
+    PROCESSOR_VERSION: "1.3.10",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -182,7 +182,8 @@ var CSL = {
         "report": true,
         "regulation": true,
         "standard": true,
-        "patent": true
+        "patent": true,
+        "locator": true
     },
     checkNestedBrace: function(state) {
         if (state.opt.xclass === "note") {
@@ -1314,7 +1315,7 @@ var CSL = {
         }
     },
 
-    INIT_JURISDICTION_MACROS: function (state, Item, macroName) {
+    INIT_JURISDICTION_MACROS: function (state, Item, item, macroName) {
         if (!state.sys.retrieveStyleModule || !CSL.MODULE_MACROS[macroName] || !Item.jurisdiction) {
             return false;
         }
@@ -1377,6 +1378,11 @@ var CSL = {
         // Identify the best jurisdiction for the item and return true, otherwise return false
         for (var i=0,ilen=jurisdictionList.length;i<ilen;i++) {
             var jurisdiction = jurisdictionList[i];
+            if (item) {
+                if (state.juris[jurisdiction] && !item["best-jurisdiction"] && state.juris[jurisdiction].types.locator) {
+                    item["best-jurisdiction"] = jurisdiction;
+                }
+            }
             if(state.juris[jurisdiction] && state.juris[jurisdiction].types[Item.type]) {
                 Item["best-jurisdiction"] = jurisdiction;
                 return true;
@@ -10235,8 +10241,8 @@ CSL.Node.group = {
                 var if_start = new CSL.Token("if", CSL.START);
 
                 func = (function (macroName) {
-                    return function (Item) {
-                        return CSL.INIT_JURISDICTION_MACROS(state, Item, macroName);
+                    return function (Item, item) {
+                        return CSL.INIT_JURISDICTION_MACROS(state, Item, item, macroName);
                     }
                 }(this.juris));
                 
@@ -10247,10 +10253,14 @@ CSL.Node.group = {
                 var text_node = new CSL.Token("text", CSL.SINGLETON);
                 func = function (state, Item, item) {
                     // This will run the juris- token list.
+                    var itemItem = Item;
+                    if (item && item["best-jurisdiction"] && this.juris === "juris-locator") {
+                        itemItem = item;
+                    }
                     var next = 0;
-                    if (state.juris[Item["best-jurisdiction"]][this.juris]) {
-                        while (next < state.juris[Item["best-jurisdiction"]][this.juris].length) {
-                            next = CSL.tokenExec.call(state, state.juris[Item["best-jurisdiction"]][this.juris][next], Item, item);
+                    if (state.juris[itemItem["best-jurisdiction"]][this.juris]) {
+                        while (next < state.juris[itemItem["best-jurisdiction"]][this.juris].length) {
+                            next = CSL.tokenExec.call(state, state.juris[itemItem["best-jurisdiction"]][this.juris][next], Item, item);
                         }
                     }
                 };
@@ -10781,8 +10791,8 @@ CSL.Node.key = {
                     var transfall = true;
                     func = state.transform.getOutputFunction(this.variables, abbrevfam, abbrfall, altvar, transfall);
                 } else if ("court-class" === variable) {
-                    func = function(state, Item) {
-                        CSL.INIT_JURISDICTION_MACROS(state, Item, "juris-main")
+                    func = function(state, Item, item) {
+                        CSL.INIT_JURISDICTION_MACROS(state, Item, item, "juris-main")
                         // true is for sortKey mode
                         var cls = CSL.GET_COURT_CLASS(state, Item, true);
                         state.output.append(cls, "empty");
@@ -11771,6 +11781,10 @@ CSL.NameOutput.prototype.outputNames = function () {
 
     // For name_SubstituteOnNamesSpanNamesSpanFail
     this.variables = [];
+    
+    // Reset stop-last after rendering
+    this.state.tmp.authority_stop_last = 0;
+
     //SNIP-START
     if (this.debug) {
         print("(19)");
@@ -17132,7 +17146,7 @@ CSL.Transform = function (state) {
             quashCountry = normalizedKey.indexOf(":") === -1;
         }
         // Fix up jurisdiction codes
-        if (family_var === "jurisdiction" && basevalue === basevalue.toLowerCase()) {
+        if (["jurisdiction", "country"].indexOf(family_var) > -1 && basevalue === basevalue.toLowerCase()) {
             normalizedKey = basevalue.toUpperCase();
         }
         
@@ -19996,8 +20010,8 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
 
         setVariableParams(this.tmp.shadow_numbers, variable, values);
         // hack in support for non-numeric numerics like "91 Civ. 5442 (RPP)|91 Civ. 5471"
+        var info = this.tmp.shadow_numbers[variable];
         if (variable === "number") {
-            var info = this.tmp.shadow_numbers[variable];
             if (info.values.length === 1 && info.values[0].value.indexOf("|") > -1) {
                 info.values[0].value = info.values[0].value.replace(/\|/g, ", ");
                 info.values[0].numeric = true;
@@ -20005,6 +20019,16 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
                 info.values[0].collapsible = false;
                 info.numeric = true;
                 info.plural = 1;
+                info.collapsible = false;
+            }
+        }
+        if (info.values.length === 1) {
+            if (info.values[0].value.match(/^[0-9]+(?:\/[0-9]+)+$/)) {
+                info.values[0].numeric = true;
+                info.values[0].plural = 0;
+                info.values[0].collapsible = false;
+                info.numeric = true;
+                info.plural = 0;
                 info.collapsible = false;
             }
         }
