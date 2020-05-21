@@ -500,6 +500,7 @@
     "publisher": "Publisher",
     "callNumber": "Call number",
     "archiveLocation": "Archive location",
+    "adminFlag": "Admin flag",
     "extra": "Extra",
     "accessDate": "1997-06-13T23:59:58Z",
     "history": "History",

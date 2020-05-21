@@ -222,7 +222,7 @@ describe("Support Functions for Unit Testing", function() {
 			let ignoreFields = ['itemID', 'dateAdded', 'dateModified', 'uri', 'key'];
 			for (let itemName in oldData) {
 				for (let i=0; i<ignoreFields.length; i++) {
-					let field = ignoreFields[i]
+					let field = ignoreFields[i];
 					if (oldData[itemName][field] !== undefined) {
 						assert.isDefined(newData[itemName][field], field + ' is set');
 						delete oldData[itemName][field];
@@ -237,8 +237,8 @@ describe("Support Functions for Unit Testing", function() {
 			for (var key in newData) {
 				assert.isTrue(!!oldData[key], "sample has all keys in generated data");
 			}
-			Zotero.debug("OLD "+JSON.stringify(oldData.treaty), 1);
-			Zotero.debug("NEW "+JSON.stringify(newData.treaty), 1);
+			//Zotero.debug("OLD "+JSON.stringify(oldData.treaty), 1);
+			//Zotero.debug("NEW "+JSON.stringify(newData.treaty), 1);
 			for (var key in oldData) {
 				for (var field in oldData[key]) {
 					if ("string" === typeof oldData[key][field] || "number" === typeof oldData[key][field]) {
@@ -262,6 +262,10 @@ describe("Support Functions for Unit Testing", function() {
 				}
 			}
 			for (var key in oldData) {
+				if (key === "case") {
+					Zotero.debug(JSON.stringify(oldData[key], null, 2), 1);
+					Zotero.debug(JSON.stringify(newData[key], null, 2), 1);
+				}
 				assert.deepEqual(oldData[key], newData[key], "sample data for item type matches generated data");
 			}
 			// END
