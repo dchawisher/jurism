@@ -3085,6 +3085,7 @@ Zotero.Item.prototype.renameAttachmentFile = async function (newName, overwrite 
  *     read-only.
  */
 Zotero.Item.prototype.relinkAttachmentFile = Zotero.Promise.coroutine(function* (path, skipItemUpdate) {
+	Zotero.debug("XXX Doing relinkAttachmentFile", 1);
 	if (path instanceof Components.interfaces.nsIFile) {
 		Zotero.debug("WARNING: Zotero.Item.prototype.relinkAttachmentFile() now takes an absolute "
 			+ "file path instead of an nsIFile");
