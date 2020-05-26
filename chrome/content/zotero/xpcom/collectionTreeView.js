@@ -202,6 +202,33 @@ Zotero.CollectionTreeView.prototype.refresh = Zotero.Promise.coroutine(function*
 	
 	// TODO: Unify feed and group adding code
 	
+	// Add groups
+	var groups = Zotero.Groups.getAll();
+	if (groups.length) {
+		this._addRowToArray(
+			newRows,
+			new Zotero.CollectionTreeRow(this, 'separator', false),
+			added++
+		);
+		this._addRowToArray(
+			newRows,
+			new Zotero.CollectionTreeRow(this, 'header', {
+				id: "group-libraries-header",
+				label: Zotero.getString('pane.collections.groupLibraries'),
+				libraryID: -1
+			}, 0),
+			added++
+		);
+		for (let group of groups) {
+			this._addRowToArray(
+				newRows,
+				new Zotero.CollectionTreeRow(this, 'group', group),
+				added++
+			);
+			added += yield this._expandRow(newRows, added - 1);
+		}
+	}
+	
 	// Add feeds
 	if (this.hideSources.indexOf('feeds') == -1) {
 		var feeds = Zotero.Feeds.getAll();
@@ -234,33 +261,6 @@ Zotero.CollectionTreeView.prototype.refresh = Zotero.Promise.coroutine(function*
 					added++
 				);
 			}
-		}
-	}
-	
-	// Add groups
-	var groups = Zotero.Groups.getAll();
-	if (groups.length) {
-		this._addRowToArray(
-			newRows,
-			new Zotero.CollectionTreeRow(this, 'separator', false),
-			added++
-		);
-		this._addRowToArray(
-			newRows,
-			new Zotero.CollectionTreeRow(this, 'header', {
-				id: "group-libraries-header",
-				label: Zotero.getString('pane.collections.groupLibraries'),
-				libraryID: -1
-			}, 0),
-			added++
-		);
-		for (let group of groups) {
-			this._addRowToArray(
-				newRows,
-				new Zotero.CollectionTreeRow(this, 'group', group),
-				added++
-			);
-			added += yield this._expandRow(newRows, added - 1);
 		}
 	}
 	
@@ -1043,7 +1043,7 @@ Zotero.CollectionTreeView.prototype.expandToCollection = Zotero.Promise.coroutin
 	while (parentID = col.parentID) {
 		// Detect infinite loop due to invalid nesting in DB
 		if (seen.has(parentID)) {
-			yield Zotero.Schema.requireIntegrityCheck();
+			yield Zotero.Schema.setIntegrityCheckRequired(true);
 			Zotero.crash();
 			return;
 		}
@@ -2003,7 +2003,6 @@ Zotero.CollectionTreeView.prototype.drop = Zotero.Promise.coroutine(function* (r
 				Zotero.debug("Skipping standalone file attachment on drag");
 				return false;
 			}
-			
 			return Zotero.Attachments.copyAttachmentToLibrary(item, targetLibraryID);
 		}
 		
@@ -2093,7 +2092,7 @@ Zotero.CollectionTreeView.prototype.drop = Zotero.Promise.coroutine(function* (r
 							var collectionID = yield newCollection.save();
 							
 							// Record link
-							yield c.addLinkedCollection(newCollection);
+							yield newCollection.addLinkedCollection(c);
 							
 							// Recursively copy subcollections
 							if (desc.children.length) {
