@@ -417,6 +417,8 @@ Zotero.ItemFields = new function() {
 		field = this.getName(field);
 		var fields = [
 			'title',
+			'nameOfAct',
+			'caseName',
 			'bookTitle'
 		];
 		return fields.indexOf(field) != -1;
