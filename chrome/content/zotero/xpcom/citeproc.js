@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.1",
+    PROCESSOR_VERSION: "1.4.4",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -3753,6 +3753,7 @@ CSL.Engine = function (sys, style, lang, forceLang) {
         this.opt.development_extensions.expect_and_symbol_form = true;
         this.opt.development_extensions.require_explicit_legal_case_title_short = true;
         this.opt.development_extensions.force_jurisdiction = true;
+        this.opt.development_extensions.force_title_abbrev_fallback = true;
     }
     // We seem to have two language specs flying around:
     //   this.opt["default-locale"], and this.opt.lang
@@ -6415,6 +6416,7 @@ CSL.Engine.Opt = function () {
     this.development_extensions.prioritize_disambiguate_condition = false;
     this.development_extensions.force_short_title_casing_alignment = true;
     this.development_extensions.implicit_short_title = false;
+    this.development_extensions.force_title_abbrev_fallback = false;
 };
 
 CSL.Engine.Tmp = function () {
@@ -10228,6 +10230,7 @@ CSL.Node.group = {
                         variable_success_parent: state.tmp.group_context.tip.variable_success,
                         output_tip: state.output.current.tip,
                         label_form: label_form,
+                        label_static: state.tmp.group_context.tip.label_static,
                         label_capitalize_if_first: label_capitalize_if_first,
                         parallel_delimiter_override: this.strings.set_parallel_delimiter_override,
                         condition: condition,
@@ -10244,22 +10247,21 @@ CSL.Node.group = {
                     }
                     if(this.parallel_last) {
                         var parallel_last = state.tmp.group_context.tip.parallel_last;
-                        if (state.tmp.abbrev_trimmer && state.tmp.abbrev_trimmer.LAST_TO_FIRST) {
-                            parallel_last = {};
-                        }
                         if (!parallel_last) {
                             parallel_last = {};
                         }
                         Object.assign(parallel_last, this.parallel_last);
                         context.parallel_last = parallel_last;
-
-                        if (state.tmp.abbrev_trimmer && state.tmp.abbrev_trimmer.LAST_TO_FIRST) {
-                            var parallel_first = state.tmp.group_context.tip.parallel_first;
-                            if (!parallel_first) {
-                                parallel_first = {};
+                    }
+                    if (state.tmp.abbrev_trimmer && state.tmp.abbrev_trimmer.LAST_TO_FIRST && context.parallel_last) {
+                        if (!context.parallel_first) {
+                            context.parallel_first = {};
+                        }
+                        for (var varname in state.tmp.abbrev_trimmer.LAST_TO_FIRST) {
+                            if (context.parallel_last[varname]) {
+                                context.parallel_first[varname] = true;
+                                delete context.parallel_last[varname];
                             }
-                            Object.assign(parallel_first, this.parallel_last);
-                            context.parallel_first = parallel_first;
                         }
                     }
                     if(this.parallel_last_override) {
@@ -10273,7 +10275,12 @@ CSL.Node.group = {
                     state.tmp.group_context.push(context);
 
                     if (state.tmp.abbrev_trimmer && this.parallel_last_to_first) {
-                        state.tmp.abbrev_trimmer.LAST_TO_FIRST = true;
+                        if (!state.tmp.abbrev_trimmer.LAST_TO_FIRST) {
+                            state.tmp.abbrev_trimmer.LAST_TO_FIRST = {};
+                        }
+                        for (var varname in this.parallel_last_to_first) {
+                            state.tmp.abbrev_trimmer.LAST_TO_FIRST[varname] = true;
+                        }
                     }
                     
                     //if (!state.tmp.just_looking) {
@@ -14311,9 +14318,14 @@ CSL.evaluateLabel = function (node, state, Item, item) {
 CSL.castLabel = function (state, node, term, plural, mode) {
     var label_form = node.strings.form;
     var label_capitalize_if_first = node.strings.capitalize_if_first;
-    if (state.tmp.group_context.tip.label_form && label_form !== "static") {
-        label_form = state.tmp.group_context.tip.label_form;
+    if (state.tmp.group_context.tip.label_form) {
+        if (label_form === "static") {
+            state.tmp.group_context.tip.label_static = true;
+        } else {
+            label_form = state.tmp.group_context.tip.label_form;
+        }
     }
+
     if (state.tmp.group_context.tip.label_capitalize_if_first) {
         label_capitalize_if_first = state.tmp.group_context.tip.label_capitalize_if_first;
     }
@@ -16284,7 +16296,11 @@ CSL.Attributes["@parallel-last"] = function (state, arg) {
     }
 };
 CSL.Attributes["@parallel-last-to-first"] = function (state, arg) {
-    this.parallel_last_to_first = true;
+    var vars = arg.split(/\s+/);
+    this.parallel_last_to_first = {};
+    for (var i=0,ilen=vars.length;i<ilen;i++) {
+        this.parallel_last_to_first[vars[i]] = true;
+    }
 };
 CSL.Attributes["@parallel-last-override"] = function (state, arg) {
     var vars = arg.split(/\s+/);
@@ -17366,6 +17382,11 @@ CSL.Transform = function (state) {
 	    }
         if (!value && !quashCountry && (!state.sys.getHumanForm || variable !== "jurisdiction")) {
             value = basevalue;
+        }
+        if (state.opt.development_extensions.force_title_abbrev_fallback) {
+            if (variable === "title" && value === basevalue && Item["title-short"]) {
+                value = Item["title-short"];
+            }
         }
         return value;
     }
@@ -20215,6 +20236,7 @@ CSL.Util.outputNumericField = function(state, varname, itemID) {
     var nums = state.tmp.shadow_numbers[varname].values;
     var masterLabel = nums.length ? nums[0].label : null;
     var labelForm = state.tmp.shadow_numbers[varname].labelForm;
+    var tryStatic = state.tmp.group_context.tip.label_static;
     var embeddedLabelForm;
     if (labelForm) {
         embeddedLabelForm = labelForm;
@@ -20237,10 +20259,27 @@ CSL.Util.outputNumericField = function(state, varname, itemID) {
                 labelName = CSL.STATUTE_SUBDIV_STRINGS[num.label];
             }
             if (labelName) {
+                // Simplify this some day.
                 if (num.label === masterLabel) {
-                    label = state.getTerm(labelName, labelForm, num.plural);
+                    if (tryStatic) {
+                        label = state.getTerm(labelName, "static", num.plural);
+                        if (label.indexOf("%s") === -1) {
+                            label = "";
+                        }
+                    }
+                    if (!label) {
+                        label = state.getTerm(labelName, labelForm, num.plural);
+                    }
                 } else {
-                    label = state.getTerm(labelName, embeddedLabelForm, num.plural);
+                    if (tryStatic) {
+                        label = state.getTerm(labelName, "static", num.plural);
+                        if (label.indexOf("%s") === -1) {
+                            label = "";
+                        }
+                    }
+                    if (!label) {
+                        label = state.getTerm(labelName, embeddedLabelForm, num.plural);
+                    }
                 }
                 if (labelCapitalizeIfFirst) {
                     label = CSL.Output.Formatters["capitalize-first"](state, label);
