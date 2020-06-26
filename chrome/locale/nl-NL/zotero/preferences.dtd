@@ -235,7 +235,7 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Controleren of alle lokale bestanden op de server aanwezig zijn.">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Herstellen vanuit online-bibliotheek">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Lokale Zoterogegevens overschrijven met data uit de online-bibliotheek">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "Replace Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Online Bibliotheek Vervangen">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Alle gegevens op de server wissen en vervangen door de lokale Zotero-gegevens.">
 <!ENTITY zotero.preferences.sync.reset.warning1 "De volgende handelingen moeten alleen uitgevoerd worden in uitzonderlijke, specifieke situaties en zijn niet geschikt voor het oplossen van algemene problemen. In veel gevallen zal herstellen leiden tot aanvullende problemen. Bekijk">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Synchronisatie-herstelopties">

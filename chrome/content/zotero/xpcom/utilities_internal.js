@@ -1014,6 +1014,10 @@ Zotero.Utilities.Internal = {
 			let [_, originalField, value] = parts;
 			let key = this._normalizeExtraKey(originalField);
 			value = value.trim();
+			// Skip empty values
+			if (value === "") {
+				return [null, null];
+			}
 			return [key, value];
 		};
 		
@@ -1059,6 +1063,12 @@ Zotero.Utilities.Internal = {
 			let [key, value] = getKeyAndValue(line);
 			
 			if (!key || skipKeys.has(key) || key == 'type') {
+				return true;
+			}
+			
+			// Skip for now, since the mappings to Place will be changed
+			// https://github.com/citation-style-language/zotero-bits/issues/6
+			if (key == 'event-place' || key == 'publisher-place') {
 				return true;
 			}
 			

@@ -68,7 +68,7 @@ Zotero.Schema = new function(){
 	
 	// If updating from this userdata version or later, don't show "Upgrading database…" and don't make
 	// DB backup first. This should be set to false when breaking compatibility or making major changes.
-	const minorUpdateFrom = false;
+	const minorUpdateFrom = 107;
 	
 	var _dbVersions = [];
 	var _schemaVersions = [];
@@ -347,6 +347,12 @@ Zotero.Schema = new function(){
 					_schemaUpdateDeferred.resolve(true);
 				}
 				catch (e) {
+					// DB corruption already shows an alert
+					if (Zotero.DB.isCorruptionError(e)) {
+						_schemaUpdateDeferred.reject(e);
+						return;
+					}
+					
 					let kbURL = 'https://www.zotero.org/support/kb/unable_to_load_translators_and_styles';
 					let msg = Zotero.getString('startupError.bundledFileUpdateError', Zotero.clientName);
 					
@@ -1709,6 +1715,18 @@ Zotero.Schema = new function(){
 				url += '&m=' + mode;
 			}
 			
+			// TEMP: DB diagnostics
+			let exists = yield Zotero.DB.tableExists('transactionSets');
+			url += "&ts=" + (exists ? "1" : "0");
+			if (exists) {
+				Zotero.logError("DB table 'transactionSets' still exists");
+			}
+			exists = yield Zotero.DB.tableExists('dbDebug1');
+			url += "&db1=" + (exists ? "1" : "0");
+			if (!exists) {
+				Zotero.logError("DB table 'dbDebug1' does not exist");
+			}
+			
 			// Send list of installed styles
 			var styles = Zotero.Styles.getAll();
 			var styleTimestamps = [];
@@ -1728,7 +1746,15 @@ Zotero.Schema = new function(){
 			var body = 'styles=' + encodeURIComponent(JSON.stringify(styleTimestamps));
 			
 			try {
-				var xmlhttp = yield Zotero.HTTP.request("POST", url, { body: body });
+				var xmlhttp = yield Zotero.HTTP.request(
+					"POST",
+					url,
+					{
+						body,
+						errorDelayMax: 5000,
+						errorDelayIntervals: [5000]
+					}
+				);
 				updated = yield _handleRepositoryResponse(xmlhttp, mode);
 			}
 			catch (e) {
@@ -3235,6 +3261,14 @@ Zotero.Schema = new function(){
 					let sql = yield _getSchemaSQL('system-107-jurism');
 					yield Zotero.DB.executeSQLFile(sql);
 				}
+			}
+			
+			else if (i == 108) {
+				yield Zotero.DB.queryAsync(`DELETE FROM itemRelations WHERE predicateID=(SELECT predicateID FROM relationPredicates WHERE predicate='owl:sameAs') AND object LIKE ?`, 'http://zotero.org/users/local/%');
+			}
+			
+			else if (i == 109) {
+				yield Zotero.DB.queryAsync("CREATE TABLE dbDebug1 (\n    a INTEGER PRIMARY KEY\n)");
 			}
 			
 			// If breaking compatibility or doing anything dangerous, clear minorUpdateFrom

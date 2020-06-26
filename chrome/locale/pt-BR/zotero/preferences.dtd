@@ -8,7 +8,15 @@
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Escolha...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Extrair metadados dos PDFs automaticamente">
 <!ENTITY zotero.preferences.autoRenameFiles "Renomeia os arquivos anexos automaticamente, utilizando metadados do item pai">
+<<<<<<< HEAD
 <!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Rename linked files">
+=======
+<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Renomear arquivos linkados">
+<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "Abrir PDFs com">
+<!ENTITY zotero.preferences.fileHandler.systemDefault "O padrão do sistema">
+
+<!ENTITY zotero.preferences.miscellaneous "Outras preferências">
+>>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY zotero.preferences.autoUpdate "Verificar automaticamente atualizações de traduções e estilos">
 <!ENTITY zotero.preferences.automaticSnapshots "Salvar instantâneos automaticamente ao criar itens de páginas web">
 <!ENTITY zotero.preferences.automaticTags "Etiquetar os itens com palavras-chaves e cabeçalhos de assunto automaticamente">
@@ -235,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Comparar todos os arquivos de anexo com o serviço de armazenamento">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restaurar da Biblioteca Online">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Sobrescrever dados locais a partir das informações da biblioteca online.">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "Replace Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Substituir Biblioteca Online">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Sobrescrever biblioteca online a partir de informações locais de Zotero">
 <!ENTITY zotero.preferences.sync.reset.warning1 "As seguintes operações devem ser usadas em situações específicas e raras e não em resoluções de problemas rotineiros. Em muitos casos, reconfigurar causará problemas adicionais. Veja as">
 <!ENTITY zotero.preferences.sync.reset.warning2 " opções de reconfiguração da sincronização ">

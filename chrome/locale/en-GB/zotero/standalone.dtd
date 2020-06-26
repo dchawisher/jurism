@@ -88,6 +88,7 @@
 <!ENTITY layout.label "Layout">
 <!ENTITY manageAttachments.label "Manage Attachments">
 <!ENTITY minimizeWindow.key "m">
+<<<<<<< HEAD
 <!ENTITY minimizeWindow.label "Minimize">
 <!ENTITY noteFontSize.label "Note Font Size">
 <!ENTITY pageSetupCmd.accesskey "U">
@@ -104,6 +105,24 @@
 <!ENTITY printCmd.accesskey "P">
 <!ENTITY printCmd.key "P">
 <!ENTITY printCmd.label "Print…">
+=======
+<!ENTITY minimizeWindow.label "Minimise">
+<!ENTITY bringAllToFront.label "Bring All to Front">
+<!ENTITY zoomWindow.label "Zoom">
+<!ENTITY windowMenu.label "Window">
+
+
+<!ENTITY helpMenu.label "Help">
+<!ENTITY helpMenu.accesskey "H">
+
+
+<!ENTITY helpMenuWin.label "Help">
+<!ENTITY helpMenuWin.accesskey "H">
+<!ENTITY helpMac.commandkey "?">
+<!ENTITY aboutProduct.label "About &brandShortName;">
+<!ENTITY aboutProduct.accesskey "A">
+<!ENTITY productHelp.label "Support and Documentation">
+>>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY productHelp.accesskey "D">
 <!ENTITY productHelp.label "Support and Documentation">
 <!ENTITY quitApplicationCmd.accesskey "Q">

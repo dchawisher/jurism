@@ -312,10 +312,12 @@ Zotero.Date = new function(){
 					date.order += m[4] ? 'm' : '';
 				}
 				date.year = m[6];
-				date.order += 'y';
+				if (m[6] !== undefined) {
+					date.order += 'y';
+				}
 			}
 			
-			var zeroYear = date.year && date.year.toString().startsWith('0');
+			var longYear = date.year && date.year.toString().length > 2;
 			if(date.year) date.year = parseInt(date.year, 10);
 			if(date.day) date.day = parseInt(date.day, 10);
 			if(date.month) {
@@ -334,8 +336,8 @@ Zotero.Date = new function(){
 			}
 			
 			if((!date.month || date.month <= 12) && (!date.day || date.day <= 31)) {
-				// For two digit years, determine proper four-digit year
-				if (date.year && date.year < 100 && !zeroYear) {
+				// Parse pre-100 years with leading zeroes (001, 0001, 012, 0012, 0123, but not 08)
+				if (date.year && date.year < 100 && !longYear) {
 					var today = new Date();
 					var year = today.getFullYear();
 					var twoDigitYear = year % 100;

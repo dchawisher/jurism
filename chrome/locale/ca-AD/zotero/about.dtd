@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 <!ENTITY zotero.about.additionalSoftware "Programari de tercers i estàndards:">
 <!ENTITY zotero.about.close "Tanca">
 <!ENTITY zotero.about.localizations "Traduccions:">
 <!ENTITY zotero.alumni "Alumnes:">
 <!ENTITY zotero.citationProcessing "Processament de bibliografia i cites">
+=======
+<!ENTITY zotero.version "versió">
+<!ENTITY zotero.whatsNew "Què hi ha de nou?">
+>>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY zotero.createdby "Creat per:">
 <!ENTITY zotero.developers "Desenvolupadors:">
 <!ENTITY zotero.director "Director:">

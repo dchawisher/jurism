@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 <!ENTITY zotero.about.additionalSoftware "Стандарты и ПО третьих сторон:">
 <!ENTITY zotero.about.close "Закрыть">
 <!ENTITY zotero.about.localizations "Локализация:">
 <!ENTITY zotero.alumni "Бывшие разработчики:">
 <!ENTITY zotero.citationProcessing "Обработка цитат &amp; библиографии">
+=======
+<!ENTITY zotero.version "версия">
+<!ENTITY zotero.whatsNew "Что нового">
+>>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY zotero.createdby "Авторы:">
 <!ENTITY zotero.developers "Разработчики:">
 <!ENTITY zotero.director "Директор:">
 <!ENTITY zotero.directors "Руководители:">
 <!ENTITY zotero.executiveProducer "Глава разработки:">
 <!ENTITY zotero.moreCreditsAndAcknowledgements "Дополнительные сведения об участниках и источниках">
+<<<<<<< HEAD
 <!ENTITY zotero.thanks "Особая благодарность:">
 <!ENTITY zotero.version "версия">
 <!ENTITY zotero.whatsNew "Новое">
+=======
+<!ENTITY zotero.citationProcessing "Обработка цитат и библиографии">
+>>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b

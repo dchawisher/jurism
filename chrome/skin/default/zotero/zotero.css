@@ -474,6 +474,11 @@ rows.multi .zotero-alien-clicky:hover {
 	margin: 3px 0;
 }
 
+/* Constrain 2x collection/search icons */
+zoterosearch .menulist-icon {
+	height: 16px;
+}
+
 #zotero-attach-uri-container
 {
 	width: 30em;

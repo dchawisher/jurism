@@ -4565,7 +4565,23 @@ Zotero.Item.prototype.clone = function (libraryID, options = {}) {
 	
 	if (sameLibrary) {
 		// DEBUG: this will add reverse-only relateds too
-		newItem.setRelations(this.getRelations());
+		let relations = this.getRelations();
+		
+		// Only include certain relations
+		let predicates = [
+			Zotero.Relations.relatedItemPredicate,
+		];
+		let any = false;
+		let newRelations = {};
+		for (let predicate of predicates) {
+			if (relations[predicate]) {
+				newRelations[predicate] = relations[predicate];
+				any = true;
+			}
+		}
+		if (any) {
+			newItem.setRelations(newRelations);
+		}
 	}
 	
 	return newItem;
@@ -4662,7 +4678,12 @@ Zotero.Item.prototype._eraseData = Zotero.Promise.coroutine(function* (env) {
 	var parentCollectionIDs = this._collections;
 	for (let parentCollectionID of parentCollectionIDs) {
 		let parentCollection = yield Zotero.Collections.getAsync(parentCollectionID);
-		yield parentCollection.removeItem(this.id);
+		yield parentCollection.removeItem(
+			this.id,
+			{
+				skipEditCheck: env.options.skipEditCheck
+			}
+		);
 	}
 	
 	var parentItem = this.parentKey;
@@ -5028,12 +5049,35 @@ Zotero.Item.prototype.isCollection = function() {
 			}
 		}
 		
-		// Remove "Version Number" if "Edition" is set, since as of 3/2020 the RDF translator
-		// assigns it
-		if (extraFields.has('versionNumber') && setFields.has('edition')
-				&& extraFields.get('versionNumber') == this.getField('edition')) {
-			extraFields.delete('versionNumber');
-			invalidFieldLogLines.delete('versionNumber');
+		// Remove Extra lines created by double assignments in the RDF translator for fields that
+		// aren't base-field mappings (which are deduped above). These should probably just become
+		// base-field mappings, at which point this could be removed.
+		var temporaryRDFFixes = [
+			['versionNumber', 'edition'],
+			
+			['conferenceName', 'meetingName'],
+			
+			['publicationTitle', 'reporter'],
+			['bookTitle', 'reporter'],
+			['blogTitle', 'reporter'],
+			['dictionaryTitle', 'reporter'],
+			['encyclopediaTitle', 'reporter'],
+			['forumTitle', 'reporter'],
+			['proceedingsTitle', 'reporter'],
+			['programTitle', 'reporter'],
+			['websiteTitle', 'reporter'],
+		];
+		for (let x of temporaryRDFFixes) {
+			if (extraFields.has(x[0]) && setFields.has(x[1])
+					&& extraFields.get(x[0]) == this.getField(x[1])) {
+				extraFields.delete(x[0]);
+				invalidFieldLogLines.delete(x[0]);
+			}
+			if (extraFields.has(x[1]) && setFields.has(x[0])
+					&& extraFields.get(x[1]) == this.getField(x[0])) {
+				extraFields.delete(x[1]);
+				invalidFieldLogLines.delete(x[1]);
+			}
 		}
 	}
 	
@@ -5215,7 +5259,7 @@ Zotero.Item.prototype.toJSON = function (options = {}) {
 	}
 	
 	// Relations
-	obj.relations = this.getRelations()
+	obj.relations = this.getRelations();
 	
 	if (obj.accessDate) obj.accessDate = Zotero.Date.sqlToISO8601(obj.accessDate);
 	

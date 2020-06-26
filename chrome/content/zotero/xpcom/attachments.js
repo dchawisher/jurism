@@ -1887,9 +1887,14 @@ Zotero.Attachments = new function(){
 					break;
 			}
 			
+			var value;
 			switch (field) {
+				case 'title':
+					value = item.getField('title', false, true);
+					break;
+				
 				case 'year':
-					var value = item.getField('date', true, true);
+					value = item.getField('date', true, true);
 					if (value) {
 						value = Zotero.Date.multipartToSQL(value).substr(0, 4);
 						if (value == '0000') {
@@ -1940,6 +1945,7 @@ Zotero.Attachments = new function(){
 		formatString = rpl('year');
 		formatString = rpl('title');
 		
+		formatString = Zotero.Utilities.cleanTags(formatString);
 		formatString = Zotero.File.getValidFileName(formatString);
 		return formatString;
 	}

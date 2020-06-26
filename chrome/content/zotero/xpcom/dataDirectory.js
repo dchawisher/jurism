@@ -86,7 +86,7 @@ Zotero.DataDirectory = {
 				dataDir = dir;
 			}
 		}
-		else if (Zotero.Prefs.get('useDataDir')) {
+		else if (Zotero.Prefs.get('useDataDir') && Zotero.Prefs.get('dataDir')) {
 			let prefVal = Zotero.Prefs.get('dataDir');
 			// Convert old persistent descriptor pref to string path and clear obsolete lastDataDir pref
 			//
@@ -462,16 +462,44 @@ Zotero.DataDirectory = {
 					let dialogText = '';
 					let dialogTitle = '';
 					
+					// If set to 'storage', offer to use the parent directory
+					if (await this.isStorageDirectory(file.path)) {
+						let buttonFlags = ps.STD_YES_NO_BUTTONS;
+						let parentPath = OS.Path.dirname(file.path);
+						let index = ps.confirmEx(
+							null,
+							Zotero.getString('general.error'),
+							Zotero.getString('dataDir.cannotBeSetWithAlternative', [parentPath]),
+							buttonFlags,
+							null, null, null, null, {}
+						);
+						if (index == 1) {
+							continue;
+						}
+						file = Zotero.File.pathToFile(parentPath)
+					}
+					
 					if (file.path == (Zotero.Prefs.get('lastDataDir') || Zotero.Prefs.get('dataDir'))) {
 						Zotero.debug("Data directory hasn't changed");
 						return false;
 					}
 					
-					// In dropbox folder
-					if (Zotero.File.isDropboxDirectory(file.path)) {
+					if (this.isLinkedAttachmentBaseDirectory(file.path)) {
+						let dialogTitle = Zotero.getString('general.error');
+						let dialogText = Zotero.getString('dataDir.cannotBeLinkedAttachmentBaseDirectory');
+						ps.alert(null, dialogTitle, dialogText);
+						continue;
+					}
+					
+					// In a cloud storage folder (Dropbox, etc.)
+					if (Zotero.File.isCloudStorageFolder(file.path)) {
 						dialogTitle = Zotero.getString('general.warning');
-						dialogText = Zotero.getString('dataDir.unsafeLocation.selected.dropbox') + "\n\n"
-								+ Zotero.getString('dataDir.unsafeLocation.selected.useAnyway');
+						dialogText = Zotero.getString('dataDir.unsafeLocation.selected.cloud') + "\n\n"
+							+ file.path + "\n\n"
+							+ Zotero.getString('dataDir.unsafeLocation.selected.areYouSure');
+						moreInfoCallback = () => {
+							Zotero.launchURL('https://www.zotero.org/support/kb/data_directory_in_cloud_storage_folder');
+						};
 					}
 					else if (file.directoryEntries.hasMoreElements()) {
 						let dbfile = file.clone();
@@ -581,17 +609,24 @@ Zotero.DataDirectory = {
 	
 	
 	checkForUnsafeLocation: Zotero.Promise.coroutine(function* (path) {
-		if (this._warnOnUnsafeLocation && Zotero.File.isDropboxDirectory(path)
-				&& Zotero.Prefs.get('warnOnUnsafeDataDir')) {
+		if (!this._warnOnUnsafeLocation || !Zotero.Prefs.get('warnOnUnsafeDataDir')) {
+			return;
+		}
+		
+		if (Zotero.File.isCloudStorageFolder(path)) {
 			this._warnOnUnsafeLocation = false;
 			let check = {value: false};
+			let ps = Services.prompt;
 			let index = Services.prompt.confirmEx(
 				null,
 				Zotero.getString('general.warning'),
-				Zotero.getString('dataDir.unsafeLocation.existing.dropbox') + "\n\n"
+				Zotero.getString('dataDir.unsafeLocation.existing.cloud', Zotero.appName) + "\n\n"
+					+ path + "\n\n"
 					+ Zotero.getString('dataDir.unsafeLocation.existing.chooseDifferent'),
-				Services.prompt.STD_YES_NO_BUTTONS,
-				null, null, null,
+				ps.STD_YES_NO_BUTTONS
+					+ ps.BUTTON_POS_2 * ps.BUTTON_TITLE_IS_STRING,
+				null, null,
+				Zotero.getString('general.moreInformation'),
 				Zotero.getString('general.dontShowWarningAgain'),
 				check
 			);
@@ -599,6 +634,9 @@ Zotero.DataDirectory = {
 			// Yes - display dialog.
 			if (index == 0) {
 				yield this.choose(true);
+			}
+			else if (index == 2) {
+				Zotero.launchURL('https://www.zotero.org/support/kb/data_directory_in_cloud_storage_folder');
 			}
 			if (check.value) {
 				Zotero.Prefs.set('warnOnUnsafeDataDir', false);
@@ -646,6 +684,31 @@ Zotero.DataDirectory = {
 		yield OS.File.remove(testPath);
 		return false;
 	}),
+	
+	
+	isStorageDirectory: async function (dir) {
+		if (OS.Path.basename(dir) != 'storage') {
+			return false;
+		}
+		let sqlitePath = OS.Path.join(OS.Path.dirname(dir), 'zotero.sqlite');
+		return OS.File.exists(sqlitePath);
+	},
+	
+	
+	isLinkedAttachmentBaseDirectory: function (dir) {
+		var oldPath = Zotero.Prefs.get('baseAttachmentPath');
+		if (!oldPath) return false;
+		
+		try {
+			oldPath = OS.Path.normalize(oldPath);
+		}
+		catch (e) {
+			Zotero.logError(e);
+			return false;
+		}
+		
+		return oldPath === OS.Path.normalize(dir);
+	},
 	
 	
 	// TODO: Remove after 5.0 upgrades

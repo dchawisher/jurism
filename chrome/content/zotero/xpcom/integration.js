@@ -1121,6 +1121,7 @@ Zotero.Integration.Fields.prototype._updateDocument = async function(forceCitati
 	
 	// update bibliographies
 	if (this._session.bibliography	 				// if bibliography exists
+			&& Object.keys(this._session.citationsByIndex).length // and doc has citations
 			&& (this._session.bibliographyHasChanged	// and bibliography changed
 			|| forceBibliography)) {					// or if we should generate regardless of
 														// changes
@@ -1270,6 +1271,8 @@ Zotero.Integration.Fields.prototype.addEditCitation = async function (field) {
 		citation, this._session.style.opt.sort_citations,
 		fieldIndexPromise, citationsByItemIDPromise, previewFn, this._session.style
 	);
+	Zotero.debug(`Editing citation:`);
+	Zotero.debug(JSON.stringify(citation.toJSON()));
 	
 	if (Zotero.Prefs.get("integration.useClassicAddCitationDialog")) {
 		Zotero.Integration.displayDialog('chrome://zotero/content/integration/addCitationDialog.xul',

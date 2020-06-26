@@ -1150,7 +1150,22 @@ describe("Zotero.Item", function () {
 			// DEBUG: Is this necessary?
 			assert.equal(item.attachmentSyncState, Zotero.Sync.Storage.Local.SYNC_STATE_TO_UPLOAD);
 			assert.isNull(item.attachmentSyncedHash);
-		})
+		});
+		
+		// Only relevant on a case-insensitive filesystem
+		it("should rename an attached file with a case-only change (Mac)", async function () {
+			var file = getTestDataDirectory();
+			file.append('test.png');
+			var item = await Zotero.Attachments.importFromFile({
+				file: file
+			});
+			var newName = 'Test.png';
+			await item.renameAttachmentFile(newName);
+			assert.equal(item.attachmentFilename, newName);
+			var path = await item.getFilePathAsync();
+			assert.equal(OS.Path.basename(path), newName)
+			await OS.File.exists(path);
+		});
 		
 		it("should rename a linked file", function* () {
 			var filename = 'test.png';
@@ -1452,6 +1467,20 @@ describe("Zotero.Item", function () {
 				0
 			);
 		});
+		
+		it("should remove an item in a collection in a read-only library", async function () {
+			var group = await createGroup();
+			var libraryID = group.libraryID;
+			var collection = await createDataObject('collection', { libraryID });
+			var item = await createDataObject('item', { libraryID, collections: [collection.id] });
+			
+			group.editable = false;
+			await group.save();
+			
+			await item.eraseTx({
+				skipEditCheck: true
+			});
+		});
 	});
 	
 	
@@ -1504,6 +1533,16 @@ describe("Zotero.Item", function () {
 			var newItem = item.clone();
 			assert.sameDeepMembers(item.getCreators(), newItem.getCreators());
 		})
+		
+		it("shouldn't copy linked-item relation", async function () {
+			var group = await getGroup();
+			var groupItem = await createDataObject('item', { libraryID: group.libraryID });
+			var item = await createDataObject('item');
+			await item.addLinkedItem(groupItem);
+			assert.equal(await item.getLinkedItem(group.libraryID), groupItem);
+			var newItem = item.clone();
+			assert.isEmpty(Object.keys(newItem.toJSON().relations));
+		});
 	})
 	
 	describe("#moveToLibrary()", function () {
@@ -2139,7 +2178,7 @@ describe("Zotero.Item", function () {
 				assert.equal(item.getField('extra'), '');
 			});
 			
-			it("should ignore versionNumber for books", async function () {
+			it("should ignore some redundant fields from RDF translator (temporary)", function () {
 				var json = {
 					itemType: "book",
 					edition: "1",
@@ -2148,6 +2187,36 @@ describe("Zotero.Item", function () {
 				var item = new Zotero.Item;
 				item.fromJSON(json);
 				assert.equal(item.getField('edition'), "1");
+				assert.equal(item.getField('extra'), '');
+				
+				json = {
+					itemType: "presentation",
+					meetingName: "Foo",
+					conferenceName: "Foo"
+				};
+				var item = new Zotero.Item;
+				item.fromJSON(json);
+				assert.equal(item.getField('meetingName'), "Foo");
+				assert.equal(item.getField('extra'), '');
+				
+				json = {
+					itemType: "journalArticle",
+					publicationTitle: "Foo",
+					reporter: "Foo"
+				};
+				var item = new Zotero.Item;
+				item.fromJSON(json);
+				assert.equal(item.getField('publicationTitle'), "Foo");
+				assert.equal(item.getField('extra'), '');
+				
+				json = {
+					itemType: "conferencePaper",
+					proceedingsTitle: "Foo",
+					reporter: "Foo"
+				};
+				var item = new Zotero.Item;
+				item.fromJSON(json);
+				assert.equal(item.getField('proceedingsTitle'), "Foo");
 				assert.equal(item.getField('extra'), '');
 			});
 		});

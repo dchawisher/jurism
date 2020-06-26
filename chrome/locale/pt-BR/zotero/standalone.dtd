@@ -1,10 +1,54 @@
+<<<<<<< HEAD
 <!ENTITY aboutProduct.accesskey "A">
 <!ENTITY aboutProduct.label "Sobre &brandShortName;">
 <!ENTITY addons.label "Extensões">
+=======
+<!ENTITY preferencesCmdMac.label "Preferências...">
+<!ENTITY preferencesCmdMac.commandkey ",">
+<!ENTITY servicesMenuMac.label "Serviços">
+<!ENTITY hideThisAppCmdMac.label "Ocultar &brandShortName;">
+<!ENTITY hideThisAppCmdMac.commandkey "O">
+<!ENTITY hideOtherAppsCmdMac.label "Ocultar os outros">
+<!ENTITY hideOtherAppsCmdMac.commandkey "O">
+<!ENTITY showAllAppsCmdMac.label "Exibir tudo">
+<!ENTITY quitApplicationCmdMac.label "Sair do Zotero">
+<!ENTITY quitApplicationCmdMac.key "S">
+
+
+<!ENTITY fileMenu.label "Arquivo">
+<!ENTITY fileMenu.accesskey "F">
+<!ENTITY saveCmd.label "Salvar...">
+<!ENTITY saveCmd.key "S">
+<!ENTITY saveCmd.accesskey "A">
+<!ENTITY pageSetupCmd.label "Configuração da página...">
+<!ENTITY pageSetupCmd.accesskey "U">
+<!ENTITY printCmd.label "Imprimir...">
+<!ENTITY printCmd.key "P">
+<!ENTITY printCmd.accesskey "P">
+<!ENTITY closeCmd.label "Fechar">
+<!ENTITY closeCmd.key "W">
+<!ENTITY closeCmd.accesskey "C">
+<!ENTITY manageAttachments.label "Gerenciar anexos">
+<!ENTITY convertToStored.label "Converter arquivos linkados para arquivos armazenados...">
+<!ENTITY importCmd.label "Importar...">
+<!ENTITY importCmd.key "I">
+<!ENTITY importFromClipboardCmd.label "Importar da área de transferência">
+<!ENTITY quitApplicationCmdWin.label "Sair">
+<!ENTITY quitApplicationCmdWin.accesskey "x">
+<!ENTITY quitApplicationCmd.label "Sair">
+<!ENTITY quitApplicationCmd.accesskey "Q">
+
+
+<!ENTITY copyCitationCmd.label "Copiar citação">
+<!ENTITY copyBibliographyCmd.label "Copiar bibliografia">
+
+<!ENTITY bidiSwitchPageDirectionItem.label "Inverter direção da página">
+>>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY bidiSwitchPageDirectionItem.accesskey "g">
 <!ENTITY bidiSwitchPageDirectionItem.label "Inverter direção da página">
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">
 <!ENTITY bidiSwitchTextDirectionItem.commandkey "X">
+<<<<<<< HEAD
 <!ENTITY bidiSwitchTextDirectionItem.label "Inverter direção do texto">
 <!ENTITY bringAllToFront.label "Trazer tudo para a frente">
 <!ENTITY closeCmd.accesskey "C">
@@ -87,6 +131,30 @@
 <!ENTITY itemPane.label "Item Pane">
 <!ENTITY layout.label "Layout">
 <!ENTITY manageAttachments.label "Manage Attachments">
+=======
+
+
+<!ENTITY viewMenu.label "Exibir">
+<!ENTITY layout.label "Layout">
+<!ENTITY standardView.label "Exibição padrão">
+<!ENTITY stackedView.label "Exibição empilhada">
+<!ENTITY collectionsPane.label "Painel de coleção">
+<!ENTITY itemPane.label "Painel de item">
+<!ENTITY tagSelector.label "Seletor de etiquetas">
+<!ENTITY recursiveCollections.label "Exibir itens de subcoleções">
+<!ENTITY fontSize.label "Tamanho da fonte">
+<!ENTITY noteFontSize.label "Tamanho da fonte das notas">
+
+
+<!ENTITY toolsMenu.label "Ferramentas">
+<!ENTITY toolsMenu.accesskey "T">
+<!ENTITY installConnector.label "Instalar o conector com o navegador">
+<!ENTITY installConnector.accesskey "C">
+<!ENTITY addons.label "Extensões">
+<!ENTITY developer.label "Desenvolvedor">
+
+
+>>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimizar">
 <!ENTITY noteFontSize.label "Note Font Size">

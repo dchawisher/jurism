@@ -2129,6 +2129,7 @@ Zotero.Utilities = {
      */
     "getZoteroTypeFromCslType": function(cslItem, strict) {
 		if (!this._mapsInitialized) this.initMaps();
+		
 		// Some special cases to help us map item types correctly
 		// This ensures that we don't lose data on import. The fields
 		// we check are incompatible with the alternative item types
@@ -2187,10 +2188,11 @@ Zotero.Utilities = {
 					|| cslItem['number-of-volumes'] || cslItem.ISBN)) {
 			zoteroType = 'videoRecording';
 		}
-		else {
+		else if (Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslItem.type]) {
 			zoteroType = Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE[cslItem.type][0];
 		}
-		if (!strict && !zoteroType) {
+		else if (!strict) {
+			Zotero.debug(`Unknown CSL type '${cslItem.type}' -- using 'document'`, 2);
 			zoteroType = "document";
 		}
 		
@@ -2232,6 +2234,11 @@ Zotero.Utilities = {
 		if (!this._mapsInitialized) this.initMaps();
 		var isZoteroItem = !!item.setType,
 			zoteroType;
+
+		if (!cslItem.type) {
+			Zotero.debug(cslItem, 1);
+			throw new Error("No 'type' provided in CSL-JSON");
+		}
 
 		function _addCreator(creator, cslAuthor) {
 			if(cslAuthor.family || cslAuthor.given) {

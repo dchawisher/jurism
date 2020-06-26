@@ -780,6 +780,7 @@
 						}
 						
 						this.itemTypeMenu.parentNode.hidden = false;
+						this.itemTypeMenu.setAttribute('ztabindex', '0');
 					}
 					// Avoid crashing bug	
 					else if (this.itemTypeMenu) {
@@ -3353,11 +3354,13 @@
 							
 						case event.DOM_VK_TAB:
 							if (event.shiftKey) {
-								this._tabbingInProgress = "backward";
 								this._focusNextField(this._lastTabIndex, true);
 							}
 							else {
-								this._tabbingInProgress = "forward";
+								// If on the last field, allow default tab action
+								if (this._lastTabIndex == this._tabIndexMaxFields) {
+									return;
+								}
 								this._focusNextField(++this._lastTabIndex);
 							}
 							return false;
@@ -3409,16 +3412,6 @@
 					
 					var elem;
 					var [field, creatorIndex, creatorField] = fieldName.split('-');
-
-					if (this._tabbingInProgress === "backward") {
-						if (creatorField === "firstName") {
-							this.saveOnEdit = false;
-						}
-					} else if (this._tabbingInProgress === "forward") {
-						if (creatorField === "lastName") {
-							this.saveOnEdit = false;
-						}
-					}
 
 					var newVal;
 					
@@ -4192,7 +4185,15 @@
 						this._lastTabIndex--;
 						return false;
 					}
-					next.click();
+					
+					// Drop-down needs to be focused
+					if (next.id == 'item-type-menu') {
+						next.focus();
+					}
+					// Fields need to be clicked
+					else {
+						next.click();
+					}
 					
 					// 1) next.parentNode is always null for some reason
 					// 2) For some reason it's necessary to scroll to the next element when

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!ENTITY zotero.preferences.advanced.advancedConfiguration "Configuração Avançada">
 <!ENTITY zotero.preferences.advanced.filesAndFolders "Ficheiros e Pastas">
 <!ENTITY zotero.preferences.advanced.keys "Atalhos">
@@ -9,6 +10,28 @@
 <!ENTITY zotero.preferences.autoRecognizeFiles "Obter automaticamente metadados dos PDF">
 <!ENTITY zotero.preferences.autoRenameFiles "Renomear automaticamente ficheiros anexos utilizando os metadados parentes">
 <!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Renomear ficheiros ligados">
+=======
+<!ENTITY zotero.preferences.title "Preferências do Zotero">
+
+<!ENTITY zotero.preferences.default "Por omissão:">
+<!ENTITY zotero.preferences.items "itens">
+<!ENTITY zotero.preferences.period ".">
+<!ENTITY zotero.preferences.settings "Preferências">
+<!ENTITY zotero.preferences.custom "Personalizado...">
+
+<!ENTITY zotero.preferences.prefpane.general "Gerais">
+
+<!ENTITY zotero.preferences.fileHandling "Manipulação de Ficheiros">
+<!ENTITY zotero.preferences.automaticSnapshots "Capturar automaticamente ao criar itens a partir de páginas Web">
+<!ENTITY zotero.preferences.downloadAssociatedFiles "Anexar automaticamente arquivos PDF e de outros tipos associados a um item quando este é guardado">
+<!ENTITY zotero.preferences.autoRecognizeFiles "Obter automaticamente metadados dos PDF">
+<!ENTITY zotero.preferences.autoRenameFiles "Renomear automaticamente arquivos anexos utilizando os metadados do ascendente">
+<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Renomear arquivos ligados">
+<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "Abrir PDF utilizando">
+<!ENTITY zotero.preferences.fileHandler.systemDefault "Predefinição do Sistema">
+
+<!ENTITY zotero.preferences.miscellaneous "Variadas">
+>>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY zotero.preferences.autoUpdate "Verificar automaticamente actualizações de tradutores e estilos">
 <!ENTITY zotero.preferences.automaticSnapshots "Capturar automaticamente ao criar itens a partir de páginas Web">
 <!ENTITY zotero.preferences.automaticTags "Etiquetar automaticamente os itens com as palavras-chave e cabeçalhos de assunto">

@@ -919,7 +919,6 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 			}
 		} catch(e) {
 			Zotero.logError(e);
-			throw e;
 		}
 	});
 	
