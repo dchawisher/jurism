@@ -1,49 +1,6 @@
-<<<<<<< HEAD
 <!ENTITY aboutProduct.accesskey "O">
 <!ENTITY aboutProduct.label "Om &brandShortName;">
 <!ENTITY addons.label "Tillegg">
-=======
-<!ENTITY preferencesCmdMac.label "Valg...">
-<!ENTITY preferencesCmdMac.commandkey ",">
-<!ENTITY servicesMenuMac.label "Tjenester">
-<!ENTITY hideThisAppCmdMac.label "Skjul &brandShortName;">
-<!ENTITY hideThisAppCmdMac.commandkey "H">
-<!ENTITY hideOtherAppsCmdMac.label "Skjul andre">
-<!ENTITY hideOtherAppsCmdMac.commandkey "H">
-<!ENTITY showAllAppsCmdMac.label "Vis alle">
-<!ENTITY quitApplicationCmdMac.label "Avslutt Zotero">
-<!ENTITY quitApplicationCmdMac.key "Q">
-
-
-<!ENTITY fileMenu.label "Fil">
-<!ENTITY fileMenu.accesskey "F">
-<!ENTITY saveCmd.label "Lagre...">
-<!ENTITY saveCmd.key "S">
-<!ENTITY saveCmd.accesskey "A">
-<!ENTITY pageSetupCmd.label "Sideoppsett...">
-<!ENTITY pageSetupCmd.accesskey "U">
-<!ENTITY printCmd.label "Skriv ut...">
-<!ENTITY printCmd.key "P">
-<!ENTITY printCmd.accesskey "P">
-<!ENTITY closeCmd.label "Lukk">
-<!ENTITY closeCmd.key "W">
-<!ENTITY closeCmd.accesskey "C">
-<!ENTITY manageAttachments.label "Behandle vedlegg">
-<!ENTITY convertToStored.label "Konverter lenkede filer til lagrede filer…">
-<!ENTITY importCmd.label "Importer…">
-<!ENTITY importCmd.key "I">
-<!ENTITY importFromClipboardCmd.label "Importer fra utklippstavle">
-<!ENTITY quitApplicationCmdWin.label "Avslutt">
-<!ENTITY quitApplicationCmdWin.accesskey "x">
-<!ENTITY quitApplicationCmd.label "Avslutt">
-<!ENTITY quitApplicationCmd.accesskey "Q">
-
-
-<!ENTITY copyCitationCmd.label "Kopier henvisning">
-<!ENTITY copyBibliographyCmd.label "Kopier bibliografi">
-
-<!ENTITY bidiSwitchPageDirectionItem.label "Bytt sideretning">
->>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY bidiSwitchPageDirectionItem.accesskey "g">
 <!ENTITY bidiSwitchPageDirectionItem.label "Bytt sideretning">
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">
@@ -54,7 +11,7 @@
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Lukk">
 <!ENTITY collectionsPane.label "Rute for samlinger">
-<!ENTITY convertToStored.label "Konverter koblede filer til lagrede filer…">
+<!ENTITY convertToStored.label "Konverter lenkede filer til lagrede filer…">
 <!ENTITY copyBibliographyCmd.label "Kopier bibliografi">
 <!ENTITY copyCitationCmd.label "Kopier henvisning">
 <!ENTITY copyCmd.accesskey "C">

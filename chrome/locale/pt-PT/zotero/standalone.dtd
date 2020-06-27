@@ -1,61 +1,17 @@
-<<<<<<< HEAD
 <!ENTITY aboutProduct.accesskey "A">
 <!ENTITY aboutProduct.label "Acerca de &brandShortName;">
 <!ENTITY addons.label "Extensões">
-=======
-<!ENTITY preferencesCmdMac.label "Preferências...">
-<!ENTITY preferencesCmdMac.commandkey ",">
-<!ENTITY servicesMenuMac.label "Serviços">
-<!ENTITY hideThisAppCmdMac.label "Ocultar &brandShortName;">
-<!ENTITY hideThisAppCmdMac.commandkey "H">
-<!ENTITY hideOtherAppsCmdMac.label "Ocultar Outras">
-<!ENTITY hideOtherAppsCmdMac.commandkey "H">
-<!ENTITY showAllAppsCmdMac.label "Mostrar Todas">
-<!ENTITY quitApplicationCmdMac.label "Sair do Zotero">
-<!ENTITY quitApplicationCmdMac.key "Q">
-
-
-<!ENTITY fileMenu.label "Ficheiro">
-<!ENTITY fileMenu.accesskey "F">
-<!ENTITY saveCmd.label "Guardar...">
-<!ENTITY saveCmd.key "S">
-<!ENTITY saveCmd.accesskey "A">
-<!ENTITY pageSetupCmd.label "Configuração das Páginas...">
-<!ENTITY pageSetupCmd.accesskey "U">
-<!ENTITY printCmd.label "Imprimir...">
-<!ENTITY printCmd.key "P">
-<!ENTITY printCmd.accesskey "P">
-<!ENTITY closeCmd.label "Fechar">
-<!ENTITY closeCmd.key "W">
-<!ENTITY closeCmd.accesskey "C">
-<!ENTITY manageAttachments.label "Gerir Anexos">
-<!ENTITY convertToStored.label "Converter Arquivos Ligados para Arquivos Armazenados…">
-<!ENTITY importCmd.label "Importar…">
-<!ENTITY importCmd.key "I">
-<!ENTITY importFromClipboardCmd.label "Importar dos Recortes">
-<!ENTITY quitApplicationCmdWin.label "Sair">
-<!ENTITY quitApplicationCmdWin.accesskey "x">
-<!ENTITY quitApplicationCmd.label "Sair">
-<!ENTITY quitApplicationCmd.accesskey "x">
-
-
-<!ENTITY copyCitationCmd.label "Copiar Citação">
-<!ENTITY copyBibliographyCmd.label "Copiar Bibliografia">
-
-<!ENTITY bidiSwitchPageDirectionItem.label "Alternar Direcção da Página">
->>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 <!ENTITY bidiSwitchPageDirectionItem.accesskey "g">
 <!ENTITY bidiSwitchPageDirectionItem.label "Alternar Direcção da Página">
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">
 <!ENTITY bidiSwitchTextDirectionItem.commandkey "X">
-<<<<<<< HEAD
 <!ENTITY bidiSwitchTextDirectionItem.label "Alternar Direcção do Texto">
 <!ENTITY bringAllToFront.label "Trazer Tudo para a Frente">
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Fechar">
-<!ENTITY collectionsPane.label "Collections Pane">
-<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
+<!ENTITY collectionsPane.label "Painel de Colecções">
+<!ENTITY convertToStored.label "Converter Arquivos Ligados para Arquivos Armazenados…">
 <!ENTITY copyBibliographyCmd.label "Copiar Bibliografia">
 <!ENTITY copyCitationCmd.label "Copiar Citação">
 <!ENTITY copyCmd.accesskey "C">
@@ -73,7 +29,7 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Remover">
-<!ENTITY developer.label "Developer">
+<!ENTITY developer.label "Desenvolvedor">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Editar">
 <!ENTITY fileMenu.accesskey "F">
@@ -88,7 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Font Size">
+<!ENTITY fontSize.label "Tamanho da Fonte Tipográfica">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -128,36 +84,12 @@
 <!ENTITY importFromClipboardCmd.label "Importar dos Recortes">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Instalar Conector de Navegador">
-<!ENTITY itemPane.label "Item Pane">
-<!ENTITY layout.label "Layout">
-<!ENTITY manageAttachments.label "Manage Attachments">
-=======
-
-
-<!ENTITY viewMenu.label "Vista">
-<!ENTITY layout.label "Disposição">
-<!ENTITY standardView.label "Vista Padrão">
-<!ENTITY stackedView.label "Vista em Pilha">
-<!ENTITY collectionsPane.label "Painel de Colecções">
 <!ENTITY itemPane.label "Painel de Item">
-<!ENTITY tagSelector.label "Selector de Etiquetas">
-<!ENTITY recursiveCollections.label "Mostrar Itens de Subcolecções">
-<!ENTITY fontSize.label "Tamanho da Fonte Tipográfica">
-<!ENTITY noteFontSize.label "Tamanho da Fonte Tipográfica das Notas">
-
-
-<!ENTITY toolsMenu.label "Ferramentas">
-<!ENTITY toolsMenu.accesskey "T">
-<!ENTITY installConnector.label "Instalar Conector de Navegador">
-<!ENTITY installConnector.accesskey "C">
-<!ENTITY addons.label "Extensões">
-<!ENTITY developer.label "Desenvolvedor">
-
-
->>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
+<!ENTITY layout.label "Disposição">
+<!ENTITY manageAttachments.label "Gerir Anexos">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimizar">
-<!ENTITY noteFontSize.label "Note Font Size">
+<!ENTITY noteFontSize.label "Tamanho da Fonte Tipográfica das Notas">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Configuração das Páginas...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -180,7 +112,7 @@
 <!ENTITY quitApplicationCmdMac.label "Sair do Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Sair">
-<!ENTITY recursiveCollections.label "Show Items from Subcollections">
+<!ENTITY recursiveCollections.label "Mostrar Itens de Subcolecções">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Refazer">
@@ -192,14 +124,14 @@
 <!ENTITY selectAllCmd.label "Seleccionar Tudo">
 <!ENTITY servicesMenuMac.label "Serviços">
 <!ENTITY showAllAppsCmdMac.label "Mostrar Todas">
-<!ENTITY stackedView.label "Stacked View">
-<!ENTITY standardView.label "Standard View">
-<!ENTITY tagSelector.label "Tag Selector">
+<!ENTITY stackedView.label "Vista em Pilha">
+<!ENTITY standardView.label "Vista Padrão">
+<!ENTITY tagSelector.label "Selector de Etiquetas">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Ferramentas">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Desfazer">
-<!ENTITY viewMenu.label "View">
+<!ENTITY viewMenu.label "Vista">
 <!ENTITY windowMenu.label "Janela">
 <!ENTITY zoomWindow.label "Zoom">
