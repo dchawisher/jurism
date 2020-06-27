@@ -29,7 +29,7 @@ describe("Zotero.Schema", function() {
 		var schemaJSON, schema;
 		
 		before(async function () {
-			schemaJSON = await Zotero.File.getResourceAsync('resource://zotero/schema/global/schema.json');
+			schemaJSON = await Zotero.File.getResourceAsync('resource://zotero/schema/global/schema-jurism.json');
 		});
 		
 		beforeEach(async function () {
@@ -50,7 +50,7 @@ describe("Zotero.Schema", function() {
 		describe("#migrateExtraFields()", function () {
 			async function migrate() {
 				schema.version++;
-				schema.itemTypes.find(x => x.itemType == 'book').fields.splice(0, 1, { field: 'fooBar' })
+				schema.itemTypes.find(x => x.itemType == 'book').fields.splice(0, 0, { field: 'fooBar' });
 				var newLocales = {};
 				Object.keys(schema.locales).forEach((locale) => {
 					var o = schema.locales[locale];
