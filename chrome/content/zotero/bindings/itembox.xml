@@ -4128,7 +4128,7 @@
 			<method name="focusFirstField">
 				<body>
 				<![CDATA[
-					this._focusNextField(1);
+					this._focusNextField(2);
 				]]>
 				</body>
 			</method>
