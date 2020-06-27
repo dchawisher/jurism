@@ -997,10 +997,8 @@ Zotero.Item.prototype.getDisplayTitle = function (includeAuthorAndDate) {
 Zotero.Item.prototype.getCourtName = function() {
 	var ret = false;
 	var courtID = this.getField('court');
-	Zotero.debug("XXX courtID=" + courtID, 1);
 	if (courtID) {
 		var jurisdictionID = this.getField('jurisdiction', true);
-		Zotero.debug("XXX jurisdiction==" + jurisdictionID, 1);
 		if (jurisdictionID) {
 			ret = Zotero.CachedJurisdictionData.courtNameFromId(jurisdictionID, courtID);
 		} else {
@@ -1017,7 +1015,10 @@ Zotero.Item.prototype.updateDisplayTitle = function () {
 	var itemTypeID = this.itemTypeID;
 	var itemTypeName = Zotero.ItemTypes.getName(itemTypeID);
 
-	var titleID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, 'title');
+	var titleID = Zotero.ItemFields.getID('title');
+	if (!Zotero.ItemFields.isValidForType(titleID, itemTypeID)) {
+		titleID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, titleID);
+	}
 	var title = this.getField(titleID, false, true);
 
 	var itemTypeLetter = Zotero.ItemTypes.getID('letter');
@@ -1132,24 +1133,36 @@ Zotero.Item.prototype.updateDisplayTitle = function () {
 
 	if (!title) {
 		var strParts = [];
-		var legislativeBodyID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, 'legislativeBody');
+		var legislativeBodyID = Zotero.ItemFields.getID('legislativeBody');
+		if (!Zotero.ItemFields.isValidForType(legislativeBodyID, itemTypeID)) {
+			legislativeBodyID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, legislativeBodyID);
+		}
 		var legislativeBody = this.getField(legislativeBodyID);
 		if (legislativeBody) {
 			strParts.push(legislativeBody);
 		} else {
-			var publicationTitleID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, 'publicationTitle');
+			var publicationTitleID = Zotero.ItemFields.getID('publicationTitle');
+			if (!Zotero.ItemFields.isValidForType(publicationTitleID, itemTypeID)) {
+				publicationTitleID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, publicationTitleID);
+			}
 			var publicationTitle = this.getField(publicationTitleID);
 			if (publicationTitle) {
 				strParts.push(publicationTitle);
 			} else {
-				var codeID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, 'code');
-				var code = this.getField(codeID);
+				var codeID = Zotero.ItemFields.getID('code');
+				if (!Zotero.ItemFields.isValidForType(codeID, itemTypeID)) {
+					var codeID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, codeID);
+				}
+					var code = this.getField(codeID);
 				if (code) {
 					strParts.push(code);
 				}
 			}
 		}
-		var numberID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, 'number');
+		var numberID = Zotero.ItemFields.getID('number');
+		if (!Zotero.ItemFields.isValidForType(numberID, itemTypeID)) {
+			numberID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, numberID);
+		}
 		var number = this.getField(numberID);
 		if (number) {
 			strParts.push(number);
