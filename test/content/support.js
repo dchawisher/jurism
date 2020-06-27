@@ -736,9 +736,6 @@ function generateAllTypesAndFieldsData() {
 		
 		let creatorTypes = Zotero.CreatorTypes.getTypesForItemType(itemTypes[i].id),
 			creators = itemFields.creators = [];
-		if (itemTypes[i].name === "hearing") {
-			Zotero.debug("XXX types: " + JSON.stringify(creatorTypes, null, 2), 1);
-		}
 		for (let j = 0; j < creatorTypes.length; j++) {
 			let typeName = creatorTypes[j].name;
 			creators.push({

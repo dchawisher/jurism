@@ -2533,7 +2533,7 @@
 		"pages": "1-10",
 		"openingDate": "Opening date",
 		"parentTreaty": "Parent treaty",
-		"reporter": "Reporter",
+		"publicationTitle": "Publication title",
 		"publisher": "Publisher",
 		"rights": "Rights",
 		"section": "Section",

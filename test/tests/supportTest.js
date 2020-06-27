@@ -262,10 +262,10 @@ describe("Support Functions for Unit Testing", function() {
 				}
 			}
 			for (var key in oldData) {
-				if (key === "case") {
-					Zotero.debug(JSON.stringify(oldData[key], null, 2), 1);
-					Zotero.debug(JSON.stringify(newData[key], null, 2), 1);
-				}
+				//if (key === "case") {
+				//	Zotero.debug(JSON.stringify(oldData[key], null, 2), 1);
+				//	Zotero.debug(JSON.stringify(newData[key], null, 2), 1);
+				//}
 				assert.deepEqual(oldData[key], newData[key], "sample data for item type matches generated data");
 			}
 			// END

@@ -2818,7 +2818,7 @@
     "archiveLocation": "Archive location",
     "extra": "Extra",
     "accessDate": "1997-06-13T23:59:58Z",
-    "reporter": "Reporter",
+    "reporter": "Publication title",
     "libraryCatalog": "Library catalog",
     "language": "en-US",
 	"treatyNumber": "3",  
