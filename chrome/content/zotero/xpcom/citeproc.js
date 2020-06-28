@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.4",
+    PROCESSOR_VERSION: "1.4.5",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -9943,16 +9943,19 @@ CSL.Node["date-part"] = {
                 var gender = state.locale[state.opt.lang]["noun-genders"][monthnameid];
                 if (this.strings.form) {
                     var myform = this.strings.form;
+                    var myform_end = this.strings.form;
                     if (this.strings.name === "day") {
-                        if (myform === "ordinal"
-                            && state.locale[state.opt.lang].opts["limit-day-ordinals-to-day-1"]
-                            && ("" + value) !== "1") {
-
-                            myform = "numeric";
+                        if (myform === "ordinal" && state.locale[state.opt.lang].opts["limit-day-ordinals-to-day-1"]) {
+                            if (value != 1) {
+                                myform = "numeric";
+                            }
+                            if (value_end != 1) {
+                                myform_end = "numeric";
+                            }
                         }
                     }
                     value = formatAndStrip.call(this, myform, gender, value);
-                    value_end = formatAndStrip.call(this, myform, gender, value_end);
+                    value_end = formatAndStrip.call(this, myform_end, gender, value_end);
                 }
                 state.output.openLevel("empty");
                 if (state.tmp.date_collapse_at.length) {
