@@ -1016,7 +1016,7 @@ Zotero.Item.prototype.updateDisplayTitle = function () {
 	var itemTypeName = Zotero.ItemTypes.getName(itemTypeID);
 
 	var titleID = Zotero.ItemFields.getID('title');
-	if (!Zotero.ItemFields.isValidForType(titleID, itemTypeID)) {
+	if (!this.isNote() && !Zotero.ItemFields.isValidForType(titleID, itemTypeID)) {
 		titleID = Zotero.ItemFields.getFieldIDFromTypeAndBase(itemTypeID, titleID);
 	}
 	var title = this.getField(titleID, false, true);
@@ -3081,7 +3081,6 @@ Zotero.Item.prototype.renameAttachmentFile = async function (newName, overwrite 
  *     read-only.
  */
 Zotero.Item.prototype.relinkAttachmentFile = Zotero.Promise.coroutine(function* (path, skipItemUpdate) {
-	Zotero.debug("XXX Doing relinkAttachmentFile", 1);
 	if (path instanceof Components.interfaces.nsIFile) {
 		Zotero.debug("WARNING: Zotero.Item.prototype.relinkAttachmentFile() now takes an absolute "
 			+ "file path instead of an nsIFile");
