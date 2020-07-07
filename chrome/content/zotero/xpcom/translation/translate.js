@@ -2943,7 +2943,7 @@ Zotero.Translate.IO._RDFSandbox.prototype = {
 	 * @param {Boolean} literal Whether value should be treated as a literal (true) or a resource
 	 *     (false)
 	 */
-	"addStatement":function(about, relation, value, literal, lang) {
+	"addStatement":function(about, relation, value, literal) {
 		if(about === null || about === undefined) {
 			throw new Error("about must be defined in Zotero.RDF.addStatement");
 		}
@@ -2961,7 +2961,7 @@ Zotero.Translate.IO._RDFSandbox.prototype = {
 			value = this._getResource(value);
 		}
 		
-		this._dataStore.add(this._getResource(about), this._getResource(relation), value, false, lang);
+		this._dataStore.add(this._getResource(about), this._getResource(relation), value);
 	},
 	
 	/**
@@ -3135,46 +3135,17 @@ Zotero.Translate.IO._RDFSandbox.prototype = {
 	 * @return {Zotero.RDF.AJAW.Symbol[]}
 	 * @deprecated Since 2.1. Use {@link Zotero.Translate.IO["rdf"]._RDFBase#getStatementsMatching}
 	 */
-	"getTargets":function(resource, property, preserveObject) {
+	"getTargets":function(resource, property) {
 		var statements = this._dataStore.statementsMatching(this._getResource(resource), this._getResource(property));
 		if(!statements.length) return false;
-
+		
 		var returnArray = [];
-		if (preserveObject) {
-			for(var i=0; i<statements.length; i++) {
-				// The object will evaporate if pushed through literally.
-				//
-				// Plan A: Figure out why values are disappearing, fix it,
-				// and use the native object.
-				//
-				// Plan B: Reduce to elements, key on an object, and
-				// then push as a set.
-                //
-                // Plan B works in the short term. Worth asking whether
-                // it is the Right Way.
-				//
-				var obj = {};
-				for (var k in statements[i].object) {
-					obj[k] = statements[i].object[k];
-				}
-				returnArray.push(obj);
-			}
-		} else {
-			for(var i=0; i<statements.length; i++) {
-				if (statements[i].object.termType == "literal") {
-					returnArray.push(statements[i].object.toString())
-				} else {
-					var obj = {};
-					for (var k in statements[i].object) {
-						obj[k] = statements[i].object[k];
-					}
-					returnArray.push(obj);
-				}
-			}
+		for(var i=0; i<statements.length; i++) {
+			returnArray.push(statements[i].object.termType == "literal" ? statements[i].object.toString() : statements[i].object);
 		}
 		return returnArray;
 	},
-
+	
 	/**
 	 * Gets statements matching a certain pattern
 	 *
@@ -3197,7 +3168,7 @@ Zotero.Translate.IO._RDFSandbox.prototype = {
 		
 		var returnArray = [];
 		for(var i=0; i<statements.length; i++) {
-			returnArray.push([statements[i].subject, statements[i].predicate, (statements[i].object.termType == "literal" ? statements[i].object.toString() : statements[i].object), statements[i].object.lang]);
+			returnArray.push([statements[i].subject, statements[i].predicate, (statements[i].object.termType == "literal" ? statements[i].object.toString() : statements[i].object)]);
 		}
 		return returnArray;
 	}
