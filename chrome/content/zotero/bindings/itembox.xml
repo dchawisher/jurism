@@ -1979,7 +1979,6 @@
 					}
 					if (!result && searchString) {
 						result = {val:searchString, comment:searchString};
-						nonMatchHighlight = true;
 					}
 					textbox.mController.input = null;
 					this.hideCourtEditor(textbox, result);
@@ -2554,7 +2553,7 @@
 						t.setAttribute("oldComment",node.getAttribute("value"));
 						t.setAttribute("oldValue",node.getAttribute("label"));
 						t.setAttribute("flex","1");
-						t.setAttribute('emptytext','Select a court or enter its name');
+						t.setAttribute('emptytext','Type a court name or press the ↓ key for a list');
 
 						t.setAttribute('type','autocomplete');
 						t.setAttribute('autocompletesearch','jurism');
@@ -2569,12 +2568,20 @@
 							'autocompletesearchparam', JSON.stringify(params)
 						);
 						t.setAttribute('completeselectedindex', true);
+
 						t.setAttribute('enablehistory', true);
+
+						/*
+						t.setAttribute('disablehistory', false);
+						*/
+
 						t.setAttribute('highlightnonmatches', true);
 
 						node.parentNode.replaceChild(t, node)
 
 						t.select();
+
+Zotero.debug(`ZZZ enablehistory: ${t.getAttribute('enablehistory')}`, 1);
 
 						// Leave text field open when window loses focus
 						var ignoreBlur = function () {
@@ -2583,8 +2590,8 @@
 						var unignoreBlur = function () {
 							this.ignoreBlur = false;
 						}.bind(this);
-						addEventListener("deactivate", ignoreBlur);
-						addEventListener("activate", unignoreBlur);
+						t.addEventListener("deactivate", ignoreBlur);
+						t.addEventListener("activate", unignoreBlur);
 
 						t.addEventListener('blur', function () {
 							var self = document.getBindingParent(this);
