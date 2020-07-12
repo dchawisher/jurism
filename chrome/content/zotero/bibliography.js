@@ -71,7 +71,7 @@ var Zotero_File_Interface_Bibliography = new function() {
 		else {
 			_io = {};
 		}
-		
+
 		var listbox = document.getElementById("style-listbox");
 		
 		// if no style is requested, get the last style used
@@ -441,13 +441,13 @@ var Zotero_File_Interface_Bibliography = new function() {
 		var tag = target.getAttribute('value');
 		var enable = target.hasAttribute('checked');
 		if (enable) {
-			if (_io[param].indexOf(tag) === -1) {
+			if (!_io[param] || _io[param].indexOf(tag) === -1) {
 				if (!_io[param]) {
 					_io[param] = [];
 				}
 				_io[param].push(tag);
 			}
-		} else {
+		} else if (_io[param]) {
 			for (var i = _io[param].length - 1; i > -1; i += -1) {
 				if (_io[param][i] === tag) {
 					_io[param] = _io[param].slice(0,i).concat(_io[param].slice(i + 1));
