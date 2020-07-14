@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.5",
+    PROCESSOR_VERSION: "1.4.7",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -8290,6 +8290,15 @@ CSL.getCite = function (Item, item, prevItemID, blockShadowNumberReset) {
 
 
 CSL.citeStart = function (Item, item, blockShadowNumberReset) {
+    this.tmp.lang_array = [];
+    if (Item.language) {
+        // Guard against garbage locales in user input
+        var m = Item.language.match(/^([a-zA-Z]+).*/);
+        if (m) {
+            this.tmp.lang_array.push(m[1].toLowerCase());
+        }
+    }
+    this.tmp.lang_array.push(this.opt.lang);
     if (!blockShadowNumberReset) {
         this.tmp.shadow_numbers = {};
     }
@@ -11141,9 +11150,12 @@ CSL.Node.layout = {
             // rendering of variables
             //
             // initalize done vars
-            func = function (state, Item) {
+            func = function (state, Item, item) {
 
                 state.tmp.done_vars = [];
+                if (item && item["author-only"]) {
+                    state.tmp.done_vars.push("locator");
+                }
                 if (state.opt.suppressedJurisdictions[Item["country"]]
                     && Item["country"]
                     && ["treaty", "patent"].indexOf(Item.type) === -1) {
@@ -11721,8 +11733,6 @@ CSL.NameOutput.prototype.outputNames = function () {
         print("(10)");
     }
     //SNIP-END
-    this.state.tmp.name_node = {};
-    this.state.tmp.name_node.children = [];
     this.renderAllNames();
     //SNIP-START
     if (this.debug) {
@@ -14571,6 +14581,8 @@ CSL.Node.names = {
             // init names
             func = function (state) {
                 state.tmp.can_substitute.push(true);
+                state.tmp.name_node = {};
+                state.tmp.name_node.children = [];
                 state.nameOutput.init(this);
             };
             this.execs.push(func);
@@ -17462,21 +17474,21 @@ CSL.Transform = function (state) {
 
             ret = {name:"", usedOrig:stopOrig,locale:getFieldLocale(Item,field)};
 
-            opts = state.opt[locale_type];
+            opts = state.opt[locale_type] ? state.opt[locale_type].slice() : [];
             var hasVal = false;
 
             if (locale_type === 'locale-orig') {
-                if (stopOrig) {
-                    ret = {name:"", usedOrig:stopOrig};
-                } else {
-                    ret = {name:Item[field], usedOrig:false, locale:getFieldLocale(Item,field)};
+                if (!stopOrig) {
+                    ret.name = Item[field];
+                    ret.usedOrig = false;
                 }
                 hasVal = true;
                 usingOrig = true;
             } else if (use_default && ("undefined" === typeof opts || opts.length === 0)) {
                 // If we want the original, or if we don't have any specific guidance and we 
                 // definitely want output, just return the original value.
-                var ret = {name:Item[field], usedOrig:true, locale:getFieldLocale(Item,field)};
+                ret.name = Item[field];
+                ret.usedOrig = true;
                 hasVal = true;
                 usingOrig = true;
             }
@@ -17725,6 +17737,12 @@ CSL.Transform = function (state) {
                 }
                 return null;
             }
+            
+            // tmp.lang_array carries the current locale IDs of the style
+            // and the item. Field-level locale IDs are added here, so
+            // we clone it to allow reset.
+            var oldLangArray = state.tmp.lang_array.slice();
+
             // True is for transform fallback
             var res = getTextSubField.call(this, Item, variables[0], slot.primary, true, null, family_var);
             primary = res.name;
@@ -17743,6 +17761,7 @@ CSL.Transform = function (state) {
                 }
             }
             if (publisherCheck(this, Item, primary, family_var)) {
+                state.tmp.lang_array = oldLangArray;
                 return null;
             }
 
@@ -17808,13 +17827,15 @@ CSL.Transform = function (state) {
             if ("title" === variables[0]) {
                 primary = CSL.demoteNoiseWords(state, primary, this["leading-noise-words"]);
             }
-
             if (secondary || tertiary) {
 
                 state.output.openLevel("empty");
 
                 // A little too aggressive maybe.
                 primary_tok.strings.suffix = primary_tok.strings.suffix.replace(/[ .,]+$/,"");
+                if (primary_locale) {
+                    state.tmp.lang_array = [primary_locale].concat(oldLangArray);
+                }
                 state.output.append(primary, primary_tok);
                 state.tmp.probably_rendered_something = true;
 
@@ -17836,6 +17857,9 @@ CSL.Transform = function (state) {
                     }
                     if (secondary_locale !== "en" && secondary_tok.strings["text-case"] === "title") {
                         secondary_tok.strings["text-case"] = "passthrough";
+                    }
+                    if (secondary_locale) {
+                        state.tmp.lang_array = [secondary_locale].concat(oldLangArray);
                     }
                     var secondary_outer = new CSL.Token();
                     secondary_outer.decorations.push(["@font-style", "normal"]);
@@ -17869,6 +17893,9 @@ CSL.Transform = function (state) {
                     if (tertiary_locale !== "en" && tertiary_tok.strings["text-case"] === "title") {
                         tertiary_tok.strings["text-case"] = "passthrough";
                     }
+                    if (tertiary_locale) {
+                        state.tmp.lang_array = [tertiary_locale].concat(oldLangArray);
+                    }
                     var tertiary_outer = new CSL.Token();
                     tertiary_outer.decorations.push(["@font-style", "normal"]);
                     tertiary_outer.decorations.push(["@font-weight", "normal"]);
@@ -17882,10 +17909,20 @@ CSL.Transform = function (state) {
                     // partners of a parallel cite?
                     // See note above.
                 }
+
                 state.output.closeLevel();
             } else {
+                if (primary_locale) {
+                    state.tmp.lang_array = [primary_locale].concat(oldLangArray);
+                }
                 state.output.append(primary, primary_tok);
                 state.tmp.probably_rendered_something = true;
+            }
+
+            state.tmp.lang_array = oldLangArray;
+                
+            if (state.tmp.can_block_substitute) {
+                state.tmp.name_node.children.push(state.output.current.value());
             }
             return null;
         };
@@ -21119,14 +21156,14 @@ CSL.Output.Formatters = (function () {
         "<sup>": "</sup>"
     };
 
-    function _capitalise (word) {
+    function _capitalise (langArray, word) {
         // Weird stuff is (.) transpiled with regexpu
         //   https://github.com/mathiasbynens/regexpu
         var m = word.match(/(^\s*)((?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]))(.*)/);
         // Do not uppercase lone Greek letters
         // (No case transforms in Greek citations, but chars used in titles to science papers)
         if (m && !(m[2].match(/^[\u0370-\u03FF]$/) && !m[3])) {
-            return m[1] + m[2].toUpperCase() + m[3];
+            return m[1] + m[2].toLocaleUpperCase(langArray) + m[3];
         }
         return word;
     }
@@ -21264,8 +21301,8 @@ CSL.Output.Formatters = (function () {
         if (config.lastWordPos) {
             var lastWords = wordDoppel.split(config.doppel.strings[config.lastWordPos.strings]);
             var lastWord = lastWords.strings[config.lastWordPos.words];
-            if (lastWord.length > 1 && lastWord.toLowerCase().match(config.skipWordsRex)) {
-                lastWord = _capitalise(lastWord);
+            if (lastWord.length > 1 && lastWord.toLocaleLowerCase(config.lang_array).match(config.skipWordsRex)) {
+                lastWord = _capitalise(config.lang_array, lastWord);
                 lastWords.strings[config.lastWordPos.words] = lastWord;
             }
             config.doppel.strings[config.lastWordPos.strings] = wordDoppel.join(lastWords);
@@ -21297,7 +21334,7 @@ CSL.Output.Formatters = (function () {
                 for (var i=0,ilen=words.length;i<ilen;i++) {
                     var word = words[i];
                     if (word) {
-                        words[i] = word.toLowerCase();
+                        words[i] = word.toLocaleLowerCase(state.tmp.lang_array);
                     }
                 }
                 return words.join(" ");
@@ -21321,7 +21358,15 @@ CSL.Output.Formatters = (function () {
                 for (var i=0,ilen=words.length;i<ilen;i++) {
                     var word = words[i];
                     if (word) {
-                        words[i] = word.toUpperCase();
+                        // Okay.
+                        // So we need to pick up an array of locales from state.tmp.
+                        // This function is invoked in the context of queue.js, so
+                        // the item is not available here. Three levels to be included
+                        // in the array:
+                        // 1. Field language tag, if any
+                        // 2. Item language tag, if any
+                        // 3. Value of state.opt.lang
+                        words[i] = word.toLocaleUpperCase(state.tmp.lang_array);
                     }
                 }
                 return words.join(" ");
@@ -21340,6 +21385,7 @@ CSL.Output.Formatters = (function () {
      */
     function sentence(state, string) {
         var config = {
+            langArray: state.tmp.lang_array,
             quoteState: [],
             capitaliseWords: function(str) {
                 var words = str.split(" ");
@@ -21347,10 +21393,10 @@ CSL.Output.Formatters = (function () {
                     var word = words[i];
                     if (word) {
                         if (config.isFirst) {
-                            words[i] = _capitalise(word);
+                            words[i] = _capitalise(state.tmp.lang_array, word);
                             config.isFirst = false;
                         } else {
-                            words[i] = word.toLowerCase();
+                            words[i] = word.toLocaleLowerCase(state.tmp.lang_array);
                         }
                     }
                 }
@@ -21366,6 +21412,7 @@ CSL.Output.Formatters = (function () {
 
     function title(state, string) {
         var config = {
+            langArray: state.tmp.lang_array,
             quoteState: [],
             capitaliseWords: function(str, i, followingTag) {
                 if (str.trim()) {
@@ -21377,17 +21424,17 @@ CSL.Output.Formatters = (function () {
                         if (!word) {
                             continue;
                         }
-                        if (word.length > 1 && !word.toLowerCase().match(config.skipWordsRex)) {
+                        if (word.length > 1 && !word.toLocaleLowerCase(state.tmp.lang_array).match(config.skipWordsRex)) {
                             // Capitalize every word that is not a stop-word
-                            words[j] = _capitalise(words[j]);
+                            words[j] = _capitalise(state.tmp.lang_array, words[j]);
                         } else if (j === (words.length - 1) && followingTag === "-") {
-                            words[j] = _capitalise(words[j]);
+                            words[j] = _capitalise(state.tmp.lang_array, words[j]);
                         } else if (config.isFirst) {
                             // Capitalize first word, even if a stop-word
-                            words[j] = _capitalise(words[j]);
+                            words[j] = _capitalise(state.tmp.lang_array, words[j]);
                         } else if (config.afterPunct) {
                             // Capitalize after punctuation
-                            words[j] = _capitalise(words[j]);
+                            words[j] = _capitalise(state.tmp.lang_array, words[j]);
                         }
                         config.afterPunct = false;
                         config.isFirst = false;
@@ -21415,6 +21462,7 @@ CSL.Output.Formatters = (function () {
      */
     function capitalizeFirst(state, string) {
         var config = {
+            langArray: state.tmp.lang_array,
             quoteState: [],
             capitaliseWords: function(str) {
                 var words = str.split(" ");
@@ -21422,7 +21470,7 @@ CSL.Output.Formatters = (function () {
                     var word = words[i];
                     if (word) {
                         if (config.isFirst) {
-                            words[i] = _capitalise(word);
+                            words[i] = _capitalise(state.tmp.lang_array, word);
                             config.isFirst = false;
                             break;
                         }
@@ -21446,13 +21494,14 @@ CSL.Output.Formatters = (function () {
      */
     function capitalizeAll (state, string) {
         var config = {
+            langArray: state.tmp.lang_array,
             quoteState: [],
             capitaliseWords: function(str) {
                 var words = str.split(" ");
                 for (var i=0,ilen=words.length;i<ilen;i++) {
                     var word = words[i];
                     if (word) {
-                        words[i] = _capitalise(word);
+                        words[i] = _capitalise(state.tmp.lang_array, word);
                     }
                 }
                 return words.join(" ");
