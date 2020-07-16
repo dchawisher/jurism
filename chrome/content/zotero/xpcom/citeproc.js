@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.7",
+    PROCESSOR_VERSION: "1.4.8",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -19564,7 +19564,10 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
     var val;
 
     var me = this;
-    
+
+    var realVariable = variable;
+    variable = (variable === "page-first") ? "page" : variable;
+
     var fullformAnd = ",\\s+and\\s+|\\s+and\\s+";
     if (this.opt.lang.slice(0, 2) !== "en") {
         fullformAnd += "|,\\s+" + this.getTerm("and") + "\\s+|\\s+" + this.getTerm("and") + "\\s+";
@@ -19639,12 +19642,12 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
         var info = {};
 
         if (!label && !CSL.STATUTE_SUBDIV_STRINGS_REVERSE[variable]) {
-                label = "var:"+variable;
+            label = "var:"+ variable;
         }
 
         if (label) {
             var m = label.match(/(\s*)([^\s]+)(\s*)/);
-            if (variable === "page" && parsePosition === 0 && ["p.", "pp."].indexOf(m[2]) === -1) {
+            if (realVariable === "page" && parsePosition === 0 && ["p.", "pp."].indexOf(m[2]) === -1) {
                 info.gotosleepability = true;
                 info.labelVisibility = true;
             } else {
@@ -19768,7 +19771,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
                     var slug = m[0].trim();
                     var notAlabel = !CSL.STATUTE_SUBDIV_STRINGS[slug]
                         || "undefined" === typeof me.getTerm(CSL.STATUTE_SUBDIV_STRINGS[slug])
-                            || (["locator", "number", "locator-extra", "page"].indexOf(variable) === -1 && CSL.STATUTE_SUBDIV_STRINGS[slug] !== variable);
+                        || (["locator", "number", "locator-extra", "page"].indexOf(variable) === -1 && CSL.STATUTE_SUBDIV_STRINGS[slug] !== variable);
                     if (notAlabel) {
                         if (i === 0) {
                             m = m.slice(1);
@@ -19866,7 +19869,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
             if (currentLabelInfo.pos === 0) {
                 if (["locator", "number", "locator-extra", "page"].indexOf(variable) > -1) {
                     // Actually, shouldn't we do this always?
-                    if (!me.getTerm(CSL.STATUTE_SUBDIV_STRINGS[currentLabelInfo.label])) {
+                    if ("undefined" === typeof me.getTerm(CSL.STATUTE_SUBDIV_STRINGS[currentLabelInfo.label])) {
                         values[currentLabelInfo.pos].labelVisibility = true;
                     }
                 }
@@ -19922,7 +19925,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
         fixNumericAndCount(values, groupStartPos, currentLabelInfo);
         fixLabelVisibility(values, groupStartPos, currentLabelInfo);
         if (values.length && values[0].numeric && variable.slice(0, 10) === "number-of-") {
-            if (parseInt(ItemObject[variable], 10) > 1) {
+            if (parseInt(ItemObject[realVariable], 10) > 1) {
                 values[0].plural = 1;
             }
         }
@@ -19994,7 +19997,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
     }
 
     function checkPage(variable, val) {
-        return variable === "page" 
+        return "page" === variable
             || (["locator", "locator-extra"].indexOf(variable) > -1 && (["p."].indexOf(val.label) > -1 || ["p."].indexOf(val.origLabel) > -1));
     }
     
@@ -20074,7 +20077,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
         if (!node) {
             return;
         }
-        if (["page", "page-first", "chapter-number", "collection-number", "edition", "issue", "number", "number-of-pages", "number-of-volumes", "volume", "locator", "locator-extra"].indexOf(variable) === -1) {
+        if (["page", "chapter-number", "collection-number", "edition", "issue", "number", "number-of-pages", "number-of-volumes", "volume", "locator", "locator-extra"].indexOf(variable) === -1) {
             return;
         }
 
@@ -20117,8 +20120,8 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
         }
     }
 
-    function setVariableParams(shadow_numbers, variable, values) {
-        var obj = shadow_numbers[variable];
+    function setVariableParams(shadow_numbers, realVariable, values) {
+        var obj = shadow_numbers[realVariable];
         if (values.length) {
             obj.numeric = values[0].numeric;
             obj.collapsible = values[0].collapsible;
@@ -20133,11 +20136,11 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
     // Split out the labels and values.
 
     // short-circuit if object exists: if numeric, set styling, no other action
-    if (node && this.tmp.shadow_numbers[variable] && this.tmp.shadow_numbers[variable].values.length) {
-        var values = this.tmp.shadow_numbers[variable].values;
+    if (node && this.tmp.shadow_numbers[realVariable] && this.tmp.shadow_numbers[realVariable].values.length) {
+        var values = this.tmp.shadow_numbers[realVariable].values;
         fixRanges(values);
         //if (!this.tmp.shadow_numbers[variable].masterStyling && !this.tmp.just_looking) {
-            this.tmp.shadow_numbers[variable].masterStyling = setStyling(values);
+            this.tmp.shadow_numbers[realVariable].masterStyling = setStyling(values);
         //}
         return;
     }
@@ -20147,8 +20150,8 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
     // This carries value, pluralization and numeric info for use in other contexts.
     // XXX We used to use one set of params for the entire variable value.
     // XXX Now params are set on individual objects, of which there may be several after parsing.
-    if (!this.tmp.shadow_numbers[variable]) {
-        this.tmp.shadow_numbers[variable] = {
+    if (!this.tmp.shadow_numbers[realVariable]) {
+        this.tmp.shadow_numbers[realVariable] = {
             values:[]
         };
     }
@@ -20165,10 +20168,10 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
     var languageRole = CSL.LangPrefsMap[variable];
     if (languageRole) {
         var localeType = this.opt["cite-lang-prefs"][languageRole][0];
-        val = this.transform.getTextSubField(ItemObject, variable, "locale-"+localeType, true);
+        val = this.transform.getTextSubField(ItemObject, realVariable, "locale-"+localeType, true);
         val = val.name;
     } else {
-        val = ItemObject[variable];
+        val = ItemObject[realVariable];
     }
 
     // XXX HOLDING THIS
@@ -20211,7 +20214,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
         }
         var defaultLabel = CSL.STATUTE_SUBDIV_STRINGS_REVERSE[variable];
 
-        if (this.tmp.shadow_numbers[variable].values.length === 0) {
+        if (this.tmp.shadow_numbers[realVariable].values.length === 0) {
             // XXX
             var values = parseString(val, defaultLabel);
 
@@ -20224,20 +20227,20 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
             for (var obj of values) {
                 if (!obj.numeric) obj.plural = 0;
             }
-            this.tmp.shadow_numbers[variable].values = values;
+            this.tmp.shadow_numbers[realVariable].values = values;
             // me.sys.print(JSON.stringify(values))
 
             if (node) {
                 fixRanges(values);
                 
-                this.tmp.shadow_numbers[variable].masterStyling = setStyling(values);
-                //print("setStyling(): "+JSON.stringify(values, null, 2));
+                this.tmp.shadow_numbers[realVariable].masterStyling = setStyling(values);
+                // me.sys.print("setStyling(): "+JSON.stringify(values, null, 2));
             }
-            setVariableParams(this.tmp.shadow_numbers, variable, values);
+            setVariableParams(this.tmp.shadow_numbers, realVariable, values);
         }
         
         // hack in support for non-numeric numerics like "91 Civ. 5442 (RPP)|91 Civ. 5471"
-        var info = this.tmp.shadow_numbers[variable];
+        var info = this.tmp.shadow_numbers[realVariable];
         if (variable === "number") {
             if (info.values.length === 1 && info.values[0].value.indexOf("|") > -1) {
                 info.values[0].value = info.values[0].value.replace(/\|/g, ", ");
