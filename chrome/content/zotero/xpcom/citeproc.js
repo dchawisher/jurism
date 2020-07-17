@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.8",
+    PROCESSOR_VERSION: "1.4.9",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -7738,6 +7738,7 @@ CSL.getAmbiguousCite = function (Item, disambig, visualForm, item) {
         parallel_first: flags.parallel_first,
         parallel_last_override: flags.parallel_last_override,
         parallel_delimiter_override: flags.parallel_delimiter_override,
+        parallel_delimiter_override_on_suppress: flags.parallel_delimiter_override_on_suppress,
         condition: flags.condition,
         force_suppress: flags.force_suppress,
         done_vars: flags.done_vars.slice()
@@ -10245,6 +10246,7 @@ CSL.Node.group = {
                         label_static: state.tmp.group_context.tip.label_static,
                         label_capitalize_if_first: label_capitalize_if_first,
                         parallel_delimiter_override: this.strings.set_parallel_delimiter_override,
+                        parallel_delimiter_override_on_suppress: this.strings.set_parallel_delimiter_override_on_suppress,
                         condition: condition,
                         force_suppress: force_suppress,
                         done_vars: state.tmp.group_context.tip.done_vars.slice()
@@ -10423,6 +10425,12 @@ CSL.Node.group = {
                 state.output.endTag();
                 if (this.realGroup) {
                     var flags = state.tmp.group_context.pop();
+                    if (flags.parallel_delimiter_override) {
+                        state.tmp.group_context.tip.parallel_delimiter_override = flags.parallel_delimiter_override;
+                    }
+                    if (flags.parallel_delimiter_override_on_suppress) {
+                        state.tmp.group_context.tip.parallel_delimiter_override_on_suppress = flags.parallel_delimiter_override_on_suppress;
+                    }
                     if (state.tmp.area === "bibliography_sort") {
                         var citationNumberIdx = flags.done_vars.indexOf("citation-number");
                         if (this.strings.sort_direction && citationNumberIdx > -1 && state.tmp.group_context.length() == 1) {
@@ -10451,7 +10459,8 @@ CSL.Node.group = {
                         }
                         var blobs = state.output.current.value().blobs;
                         var pos = state.output.current.value().blobs.length - 1;
-                        if (!state.tmp.just_looking && (flags.parallel_last || flags.parallel_first || flags.parallel_delimiter_override)) {
+                        if (!state.tmp.just_looking && (flags.parallel_last || flags.parallel_first || flags.parallel_delimiter_override || flags.parallel_delimiter_override_on_suppress)) {
+// HOWDY
                             // flags.parallel_last
                             // flags.parallel_first
                             var hasRepeat = state.parallel.checkRepeats(flags);
@@ -10462,7 +10471,9 @@ CSL.Node.group = {
                             }
                             if (state.tmp.cite_index > 0 && (hasRepeat || (!flags.parallel_first && !flags.parallel_last))) {
                                 //state.sys.print(`${state.tmp.cite_index} ${JSON.stringify(state.tmp.suppress_repeats, null, 2)}`)
-                                if (flags.parallel_delimiter_override && state.tmp.suppress_repeats[state.tmp.cite_index-1].SIBLING) {
+                                if (hasRepeat && flags.parallel_delimiter_override_on_suppress && state.tmp.suppress_repeats[state.tmp.cite_index-1].SIBLING) {
+                                    state.output.queue.slice(-1)[0].parallel_delimiter = flags.parallel_delimiter_override_on_suppress;
+                                } else if (flags.parallel_delimiter_override && state.tmp.suppress_repeats[state.tmp.cite_index-1].SIBLING) {
                                     state.output.queue.slice(-1)[0].parallel_delimiter = flags.parallel_delimiter_override;
                                 }
                             }
@@ -16327,6 +16338,9 @@ CSL.Attributes["@parallel-last-override"] = function (state, arg) {
 };
 CSL.Attributes["@parallel-delimiter-override"] = function (state, arg) {
     this.strings.set_parallel_delimiter_override = arg;
+};
+CSL.Attributes["@parallel-delimiter-override-on-suppress"] = function (state, arg) {
+    this.strings.set_parallel_delimiter_override_on_suppress = arg;
 };
 
 
