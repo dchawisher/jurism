@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.10",
+    PROCESSOR_VERSION: "1.4.11",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -74,6 +74,26 @@ var CSL = {
         } else {
             console.log("citeproc-js warning: " + str);
         }
+    },
+
+    toLocaleUpperCase(str) {
+        var arr = this.tmp.lang_array;
+        try {
+            str = str.toLocaleUpperCase(arr);
+        } catch (e) {
+            str = str.toUpperCase();
+        }
+        return str;
+    },
+
+    toLocaleLowerCase(str) {
+        var arr = this.tmp.lang_array;
+        try {
+            str = str.toLocaleLowerCase(arr);
+        } catch (e) {
+            str = str.toLowerCase();
+        }
+        return str;
     },
 
     LOCATOR_LABELS_REGEXP: new RegExp("^((vrs|sv|subpara|op|subch|add|amend|annot|app|art|bibliog|bk|ch|cl|col|cmt|dec|dept|div|ex|fig|fld|fol|n|hypo|illus|intro|l|no|p|pp|para|pt|pmbl|princ|pub|r|sched|sec|ser|subdiv|subsec|supp|tbl|tit|vol)\\.)\\s+(.*)"),
@@ -2639,6 +2659,7 @@ CSL.getSortCompare = function (default_locale) {
     if (CSL.stringCompare) {
         return CSL.stringCompare;
     }
+    var me = this;
     var strcmp;
     var strcmp_opts = {
         sensitivity:"base",
@@ -2652,10 +2673,7 @@ CSL.getSortCompare = function (default_locale) {
         default_locale = "en-US";
     }
     strcmp = function (a, b) {
-        //var ret = a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase(),default_locale,strcmp_opts);
-        // print(ret+' ('+a+') :: ('+b+')');
-        //return ret;
-        return a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase(),default_locale,strcmp_opts);
+        return CSL.toLocaleLowerCase.call(me, a).localeCompare(CSL.toLocaleLowerCase.call(me, b),default_locale,strcmp_opts);
     };
     var stripPunct = function (str) {
         return str.replace(/^[\[\]\'\"]*/g, "");
@@ -17053,9 +17071,6 @@ CSL.Parallel.prototype.StartCitation = function (sortedItems, out) {
     var idxEnd = 0;
     var parallelMatchList = false;
     var siblingRanges = [];
-    // Okay, shit. This is hard.
-    // Start is fine.
-    // End is failing to tag a penultimate item.
     
     for (var i=0,ilen=sortedItems.length-1;i<ilen;i++) {
         var freshMatchList = false;
@@ -18692,10 +18707,9 @@ CSL.Util.Names.doInitialize = function (state, namelist, terminator) {
                     }
                 }
                 if (s.length < m[2].length) {
-                    extra = s.toLocaleLowerCase();
+                    extra = CSL.toLocaleLowerCase.call(state, s);
                 }
             }
-            // namelist[i] = m[1].toLocaleUpperCase() + extra;
             namelist[i] = m[1] + extra;
             if (i < (ilen - 1)) {
                 if (terminator.match("%s")) {
@@ -19036,8 +19050,7 @@ CSL.Util.Sort = {};
 CSL.Util.Sort.strip_prepositions = function (str) {
     var m;
     if ("string" === typeof str) {
-        m = str.toLocaleLowerCase();
-        m = str.match(/^((a|an|the)\s+)/);
+        m = str.match(/^(([aA]|[aA][nN]|[tT][hH][eE])\s+)/);
     }
     if (m) {
         str = str.substr(m[1].length);
@@ -21172,14 +21185,14 @@ CSL.Output.Formatters = (function () {
         "<sup>": "</sup>"
     };
 
-    function _capitalise (langArray, word) {
+    function _capitalise (word) {
         // Weird stuff is (.) transpiled with regexpu
         //   https://github.com/mathiasbynens/regexpu
         var m = word.match(/(^\s*)((?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]))(.*)/);
         // Do not uppercase lone Greek letters
         // (No case transforms in Greek citations, but chars used in titles to science papers)
         if (m && !(m[2].match(/^[\u0370-\u03FF]$/) && !m[3])) {
-            return m[1] + m[2].toLocaleUpperCase(langArray) + m[3];
+            return m[1] + CSL.toLocaleUpperCase.call(this, m[2]) + m[3];
         }
         return word;
     }
@@ -21317,8 +21330,8 @@ CSL.Output.Formatters = (function () {
         if (config.lastWordPos) {
             var lastWords = wordDoppel.split(config.doppel.strings[config.lastWordPos.strings]);
             var lastWord = lastWords.strings[config.lastWordPos.words];
-            if (lastWord.length > 1 && lastWord.toLocaleLowerCase(config.lang_array).match(config.skipWordsRex)) {
-                lastWord = _capitalise(config.lang_array, lastWord);
+            if (lastWord.length > 1 && CSL.toLocaleLowerCase.call(this, lastWord).match(config.skipWordsRex)) {
+                lastWord = _capitalise.call(this, lastWord);
                 lastWords.strings[config.lastWordPos.words] = lastWord;
             }
             config.doppel.strings[config.lastWordPos.strings] = wordDoppel.join(lastWords);
@@ -21350,7 +21363,7 @@ CSL.Output.Formatters = (function () {
                 for (var i=0,ilen=words.length;i<ilen;i++) {
                     var word = words[i];
                     if (word) {
-                        words[i] = word.toLocaleLowerCase(state.tmp.lang_array);
+                        words[i] = CSL.toLocaleLowerCase.call(state, word);
                     }
                 }
                 return words.join(" ");
@@ -21360,7 +21373,7 @@ CSL.Output.Formatters = (function () {
             afterPunct: null,
             isFirst: null
         };
-        return _textcaseEngine(config, string);
+        return _textcaseEngine.call(state, config, string);
     }
 
     /**
@@ -21382,7 +21395,7 @@ CSL.Output.Formatters = (function () {
                         // 1. Field language tag, if any
                         // 2. Item language tag, if any
                         // 3. Value of state.opt.lang
-                        words[i] = word.toLocaleUpperCase(state.tmp.lang_array);
+                        words[i] = CSL.toLocaleUpperCase.call(state, word);
                     }
                 }
                 return words.join(" ");
@@ -21392,7 +21405,7 @@ CSL.Output.Formatters = (function () {
             afterPunct: null,
             isFirst: null
         };
-        return _textcaseEngine(config, string);
+        return _textcaseEngine.call(state, config, string);
     }
 
     /**
@@ -21401,7 +21414,6 @@ CSL.Output.Formatters = (function () {
      */
     function sentence(state, string) {
         var config = {
-            langArray: state.tmp.lang_array,
             quoteState: [],
             capitaliseWords: function(str) {
                 var words = str.split(" ");
@@ -21409,10 +21421,10 @@ CSL.Output.Formatters = (function () {
                     var word = words[i];
                     if (word) {
                         if (config.isFirst) {
-                            words[i] = _capitalise(state.tmp.lang_array, word);
+                            words[i] = _capitalise.call(state, word);
                             config.isFirst = false;
                         } else {
-                            words[i] = word.toLocaleLowerCase(state.tmp.lang_array);
+                            words[i] = CSL.toLocaleLowerCase.call(state, word);
                         }
                     }
                 }
@@ -21423,12 +21435,11 @@ CSL.Output.Formatters = (function () {
             afterPunct: null,
             isFirst: true
         };
-        return _textcaseEngine(config, string);
+        return _textcaseEngine.call(state, config, string);
     }
 
     function title(state, string) {
         var config = {
-            langArray: state.tmp.lang_array,
             quoteState: [],
             capitaliseWords: function(str, i, followingTag) {
                 if (str.trim()) {
@@ -21440,17 +21451,17 @@ CSL.Output.Formatters = (function () {
                         if (!word) {
                             continue;
                         }
-                        if (word.length > 1 && !word.toLocaleLowerCase(state.tmp.lang_array).match(config.skipWordsRex)) {
+                        if (word.length > 1 && !CSL.toLocaleLowerCase.call(state, word).match(config.skipWordsRex)) {
                             // Capitalize every word that is not a stop-word
-                            words[j] = _capitalise(state.tmp.lang_array, words[j]);
+                            words[j] = _capitalise.call(state, words[j]);
                         } else if (j === (words.length - 1) && followingTag === "-") {
-                            words[j] = _capitalise(state.tmp.lang_array, words[j]);
+                            words[j] = _capitalise.call(state, words[j]);
                         } else if (config.isFirst) {
                             // Capitalize first word, even if a stop-word
-                            words[j] = _capitalise(state.tmp.lang_array, words[j]);
+                            words[j] = _capitalise.call(state, words[j]);
                         } else if (config.afterPunct) {
                             // Capitalize after punctuation
-                            words[j] = _capitalise(state.tmp.lang_array, words[j]);
+                            words[j] = _capitalise.call(state, words[j]);
                         }
                         config.afterPunct = false;
                         config.isFirst = false;
@@ -21468,7 +21479,7 @@ CSL.Output.Formatters = (function () {
             afterPunct: false,
             isFirst: true
         };
-        return _textcaseEngine(config, string);
+        return _textcaseEngine.call(state, config, string);
     }
     
     
@@ -21478,7 +21489,6 @@ CSL.Output.Formatters = (function () {
      */
     function capitalizeFirst(state, string) {
         var config = {
-            langArray: state.tmp.lang_array,
             quoteState: [],
             capitaliseWords: function(str) {
                 var words = str.split(" ");
@@ -21486,7 +21496,7 @@ CSL.Output.Formatters = (function () {
                     var word = words[i];
                     if (word) {
                         if (config.isFirst) {
-                            words[i] = _capitalise(state.tmp.lang_array, word);
+                            words[i] = _capitalise.call(state, word);
                             config.isFirst = false;
                             break;
                         }
@@ -21499,7 +21509,7 @@ CSL.Output.Formatters = (function () {
             afterPunct: null,
             isFirst: true
         };
-        return _textcaseEngine(config, string);
+        return _textcaseEngine.call(state, config, string);
     }
 
     /**
@@ -21510,14 +21520,13 @@ CSL.Output.Formatters = (function () {
      */
     function capitalizeAll (state, string) {
         var config = {
-            langArray: state.tmp.lang_array,
             quoteState: [],
             capitaliseWords: function(str) {
                 var words = str.split(" ");
                 for (var i=0,ilen=words.length;i<ilen;i++) {
                     var word = words[i];
                     if (word) {
-                        words[i] = _capitalise(state.tmp.lang_array, word);
+                        words[i] = _capitalise.call(state, word);
                     }
                 }
                 return words.join(" ");
@@ -21527,7 +21536,7 @@ CSL.Output.Formatters = (function () {
             afterPunct: null,
             isFirst: null
         };
-        return _textcaseEngine(config, string);
+        return _textcaseEngine.call(state, config, string);
     }
     return {
         passthrough: passthrough,
@@ -22477,9 +22486,11 @@ CSL.Registry.prototype.dodeletes = function (myhash) {
             if (this.registry[key].siblings) {
                 if (this.registry[key].siblings.length == 1) {
                     var loneSiblingID = this.registry[key].siblings[0];
-                    this.registry[loneSiblingID].master = true;
-                    this.registry[loneSiblingID].siblings.pop();
-                    this.registry[loneSiblingID].parallel = false;
+                    if (this.registry[loneSiblingID].siblings) {
+                        this.registry[loneSiblingID].siblings.pop();
+                        this.registry[loneSiblingID].master = true;
+                        this.registry[loneSiblingID].parallel = false;
+                    }
                 } else if (this.registry[key].siblings.length > 1) {
                     var removeIDs = [key];
                     if (this.registry[key].master) {
@@ -22861,7 +22872,7 @@ CSL.Registry.prototype.sorttokens = function (nosort) {
  */
 CSL.Registry.Comparifier = function (state, keyset) {
     var sort_directions, len, pos, compareKeys;
-    var sortCompare = CSL.getSortCompare(state.opt["default-locale-sort"]);
+    var sortCompare = CSL.getSortCompare.call(state, state.opt["default-locale-sort"]);
     sort_directions = state[keyset].opt.sort_directions;
     this.compareKeys = function (a, b) {
         len = a.sortkeys ? a.sortkeys.length : 0;
