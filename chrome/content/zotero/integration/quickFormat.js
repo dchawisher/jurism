@@ -42,7 +42,7 @@ var Zotero_QuickFormat = new function () {
 	var locatorNode = null;
 	var _searchPromise;
 	
-	const SEARCH_TIMEOUT = 250;
+	const SEARCH_TIMEOUT = 1000;
 	const SHOWN_REFERENCES = 7;
 	
 	/**
