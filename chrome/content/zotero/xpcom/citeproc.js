@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.12",
+    PROCESSOR_VERSION: "1.4.13",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -1948,7 +1948,7 @@ CSL.XmlJSON.prototype.addInstitutionNodes = function(myjson) {
                     institution.attrs.delimiter = attributes.delimiter;
                 }
                 if (attributes.and) {
-                    institution.attrs.and = "text";
+                    institution.attrs.and = attributes.and;
                 }
             }
             myjson.children = myjson.children.slice(0,insertPos+1).concat([institution]).concat(myjson.children.slice(insertPos+1));
@@ -10300,6 +10300,8 @@ CSL.Node.group = {
                             }
                         }
                     }
+                    
+                    /*
                     if(this.parallel_last_override) {
                         var parallel_last_override = state.tmp.group_context.tip.parallel_last_override;
                         if (!parallel_last_override) {
@@ -10308,6 +10310,7 @@ CSL.Node.group = {
                         Object.assign(parallel_last_override, this.parallel_last_override);
                         context.parallel_last_override = parallel_last_override;
                     }
+                     */
                     state.tmp.group_context.push(context);
 
                     if (state.tmp.abbrev_trimmer && this.parallel_last_to_first) {
@@ -10482,9 +10485,10 @@ CSL.Node.group = {
                         var blobs = state.output.current.value().blobs;
                         var pos = state.output.current.value().blobs.length - 1;
                         if (!state.tmp.just_looking && (flags.parallel_last || flags.parallel_first || flags.parallel_delimiter_override || flags.parallel_delimiter_override_on_suppress)) {
-// HOWDY
                             // flags.parallel_last
                             // flags.parallel_first
+
+                            // Returns true ONLY if all variables listed on this group are repeats.
                             var hasRepeat = state.parallel.checkRepeats(flags);
                             if (hasRepeat) {
                                 if (blobs) {
@@ -10716,7 +10720,8 @@ CSL.Node.institution = {
                     this.and_term = state.tmp.institution_delimiter;
                 }
                 if ("undefined" === typeof this.and_term && state.tmp.and_term) {
-                    this.and_term = state.getTerm("and", "long", 0);
+                    // this.and_term = state.getTerm("and", "long", 0);
+                    this.and_term = state.tmp.and_term;
                 }
                 if (CSL.STARTSWITH_ROMANESQUE_REGEXP.test(this.and_term)) {
                     this.and_prefix_single = " ";
@@ -12407,28 +12412,38 @@ CSL.NameOutput.prototype._checkNickname = function (name) {
 
 /*global CSL: true */
 
+CSL.NameOutput.prototype._purgeEmptyBlobs = function (blobs) {
+    for (var i = blobs.length - 1; i > -1; i += -1) {
+        if (!blobs[i] || blobs[i].length === 0 || !blobs[i].blobs.length) {
+            blobs = blobs.slice(0, i).concat(blobs.slice(i + 1));
+        }
+    }
+    return blobs;
+};
+
 CSL.NameOutput.prototype.joinPersons = function (blobs, pos, j, tokenname) {
     var ret;
+    blobs = this._purgeEmptyBlobs(blobs);
     if (!tokenname) {
         tokenname = "name";
     }
     if ("undefined" === typeof j) {
         if (this.etal_spec[pos].freeters === 1) {
-           ret = this._joinEtAl(blobs, tokenname);
+           ret = this._joinEtAl(blobs);
         } else if (this.etal_spec[pos].freeters === 2) {
-            ret = this._joinEllipsis(blobs, tokenname);
+            ret = this._joinEllipsis(blobs);
         } else if (!this.state.tmp.sort_key_flag) {
-            ret = this._joinAnd(blobs, tokenname);
+            ret = this._joinAnd(blobs);
         } else {
             ret = this._join(blobs, " ");
         }
     } else {
         if (this.etal_spec[pos].persons[j] === 1) {
-            ret = this._joinEtAl(blobs, tokenname);
+            ret = this._joinEtAl(blobs);
         } else if (this.etal_spec[pos].persons[j] === 2) {
-            ret = this._joinEllipsis(blobs, tokenname);
+            ret = this._joinEllipsis(blobs);
         } else if (!this.state.tmp.sort_key_flag) {
-            ret = this._joinAnd(blobs, tokenname);
+            ret = this._joinAnd(blobs);
         } else {
             ret = this._join(blobs, " ");
         }
@@ -12439,12 +12454,13 @@ CSL.NameOutput.prototype.joinPersons = function (blobs, pos, j, tokenname) {
 
 CSL.NameOutput.prototype.joinInstitutionSets = function (blobs, pos) {
     var ret;
+    blobs = this._purgeEmptyBlobs(blobs);
     if (this.etal_spec[pos].institutions === 1) {
         ret = this._joinEtAl(blobs, "institution");
     } else if (this.etal_spec[pos].institutions === 2) {
         ret = this._joinEllipsis(blobs, "institution");
     } else {
-        ret = this._joinAnd(blobs, "institution");
+        ret = this._joinAnd(blobs);
     }
     return ret;
 };
@@ -12452,24 +12468,59 @@ CSL.NameOutput.prototype.joinInstitutionSets = function (blobs, pos) {
 
 CSL.NameOutput.prototype.joinPersonsAndInstitutions = function (blobs) {
     //
-    return this._join(blobs, this.state.tmp.name_delimiter);
+    blobs = this._purgeEmptyBlobs(blobs);
+    var ret = this._join(blobs, this.state.tmp.name_delimiter);
+    ret.isInstitution = true;
+    return ret;
 };
 
 // LEGACY
 // This should go away eventually
 CSL.NameOutput.prototype.joinFreetersAndInstitutionSets = function (blobs) {
     // Nothing, one or two, never more
+    blobs = this._purgeEmptyBlobs(blobs);
     var ret = this._join(blobs, "[never here]", this["with"].single, this["with"].multiple);
     //var ret = this._join(blobs, "");
     return ret;
 };
 
-CSL.NameOutput.prototype._joinEtAl = function (blobs, tokenname) {
+CSL.NameOutput.prototype._getAfterInvertedName = function(blobs, delimiter, finalJoin) {
+    if (finalJoin && blobs.length > 1) {
+        if (this.state.inheritOpt(this.name, "delimiter-precedes-last") === "after-inverted-name") {
+            var prevBlob = blobs[blobs.length - 2];
+            if (prevBlob.blobs.length > 0 && prevBlob.blobs[0].isInverted) {
+                finalJoin.strings.prefix = delimiter;
+            }
+        }
+    }
+    return finalJoin;
+}
+
+CSL.NameOutput.prototype._getAndJoin = function (blobs, delimiter) {
+    var finalJoin = false;
+    if (blobs.length > 1) {
+        var singleOrMultiple = "single";
+        if (blobs.length > 2) {
+            singleOrMultiple = "multiple";
+        }
+        if (blobs[blobs.length - 1].isInstitution) {
+            finalJoin = this.institution.and[singleOrMultiple];
+        } else {
+            finalJoin = this.name.and[singleOrMultiple];
+        }
+        // finalJoin = new CSL.Blob(finalJoin);
+        finalJoin = JSON.parse(JSON.stringify(finalJoin));
+        finalJoin = this._getAfterInvertedName(blobs, delimiter, finalJoin);
+    }
+    return finalJoin;
+};
+
+CSL.NameOutput.prototype._joinEtAl = function (blobs) {
     //
     var blob = this._join(blobs, this.state.tmp.name_delimiter);
     
     // notSerious
-    this.state.output.openLevel(this._getToken(tokenname));
+    this.state.output.openLevel(this._getToken("name"));
     // Delimiter is applied from separately saved source in this case,
     // for discriminate application of single and multiple joins.
     this.state.output.current.value().strings.delimiter = "";
@@ -12484,61 +12535,65 @@ CSL.NameOutput.prototype._joinEtAl = function (blobs, tokenname) {
 };
 
 
-CSL.NameOutput.prototype._joinEllipsis = function (blobs, tokenname) {
-    return this._join(blobs, this.state.tmp.name_delimiter, this.name.ellipsis.single, this.name.ellipsis.multiple, tokenname);
+CSL.NameOutput.prototype._joinEllipsis = function (blobs) {
+    var delimiter = this.state.tmp.name_delimiter;
+    if ("undefined" === typeof delimiter) {
+        delimiter = ", ";
+    }
+    var finalJoin = false;
+    if (blobs.length > 1) {
+        var singleOrMultiple = "single";
+        if (blobs.length > 2) {
+            singleOrMultiple = "multiple";
+        }
+        finalJoin = JSON.parse(JSON.stringify(this.name.ellipsis[singleOrMultiple]));
+        finalJoin = this._getAfterInvertedName(blobs, delimiter , finalJoin);
+        
+    }
+    return this._join(blobs, delimiter, finalJoin);
+};
+
+CSL.NameOutput.prototype._joinAnd = function (blobs) {
+    var delimiter = this.state.inheritOpt(this.name, "delimiter");
+    if ("undefined" === typeof delimiter) {
+        delimiter = ", ";
+    }
+    var finalJoin = this._getAndJoin(blobs, delimiter);
+    return this._join(blobs, delimiter, finalJoin);
 };
 
 
-CSL.NameOutput.prototype._joinAnd = function (blobs, tokenname) {
-    return this._join(blobs, this.state.inheritOpt(this[tokenname], "delimiter", (tokenname + "-delimiter"), ", "), this[tokenname].and.single, this[tokenname].and.multiple, tokenname);
-};
-
-
-CSL.NameOutput.prototype._join = function (blobs, delimiter, single, multiple) {
+CSL.NameOutput.prototype._join = function (blobs, delimiter, finalJoin) {
     var i, ilen;
+    if ("undefined" === typeof delimiter) {
+        delimiter = ", ";
+    }
     if (!blobs) {
         return false;
     }
-    // Eliminate false and empty blobs
-    for (i = blobs.length - 1; i > -1; i += -1) {
-        if (!blobs[i] || blobs[i].length === 0 || !blobs[i].blobs.length) {
-            blobs = blobs.slice(0, i).concat(blobs.slice(i + 1));
-        }
-    }
-    // XXXX This needs some attention before moving further.
-    // Code is not sufficiently transparent.
+    blobs = this._purgeEmptyBlobs(blobs);
     if (!blobs.length) {
         return false;
-    } else if (single && blobs.length === 2) {
-        // Clone to avoid corruption of style by affix migration during output
-        if (single) {
-            single = new CSL.Blob(single.blobs,single);
-        }
-        blobs = [blobs[0], single, blobs[1]];
-    } else {
-        var delimiter_offset;
-        if (multiple) {
-            delimiter_offset = 2;
-        } else {
-            delimiter_offset = 1;
-        }
-        // It kind of makes sense down to here.
-        for (i = 0, ilen = blobs.length - delimiter_offset; i < ilen; i += 1) {
-            blobs[i].strings.suffix += delimiter;
-        }
-        if (blobs.length > 1) {
-            var blob = blobs.pop();
-            if (multiple) {
-                // Clone to avoid corruption of style by affix migration during output
-                multiple = new CSL.Blob(multiple.blobs,multiple);
-                blobs.push(multiple);
+    }
+    if (blobs.length > 1) {
+        if (blobs.length === 2) {
+            if (!finalJoin) {
+                blobs[0].strings.suffix += delimiter;
             } else {
-                // Clone to avoid corruption of style by affix migration during output
-                if (single) {
-                    single = new CSL.Blob(single.blobs,single);
-                }
-                blobs.push(single);
+                blobs = [blobs[0], finalJoin, blobs[1]];
             }
+        } else {
+            var offset;
+            if (finalJoin) {
+                offset = 1;
+            } else {
+                offset = 0;
+            }
+            var blob = blobs.pop();
+            for (var i=0,ilen=blobs.length - offset;i<ilen;i++) {
+                blobs[i].strings.suffix += delimiter;
+            }
+            blobs.push(finalJoin);
             blobs.push(blob);
         }
     }
@@ -12549,9 +12604,6 @@ CSL.NameOutput.prototype._join = function (blobs, delimiter, single, multiple) {
     //this.state.output.openLevel(this._getToken("empty"));
     // Delimiter is applied from separately saved source in this case,
     // for discriminate application of single and multiple joins.
-    if (single && multiple) {
-        this.state.output.current.value().strings.delimiter = "";
-    }
     for (i = 0, ilen = blobs.length; i < ilen; i += 1) {
         this.state.output.append(blobs[i], false, true);
     }
@@ -13109,6 +13161,7 @@ CSL.NameOutput.prototype.renderInstitutionNames = function () {
 
             // XXXX FROM HERE (instututions)
             var institution = this._renderInstitutionName(v, name, slot, j);
+
             //this.institutions[v][j] = this._join(institution, "");
             this.institutions[v][j] = institution;
         }
@@ -13201,6 +13254,9 @@ CSL.NameOutput.prototype._renderInstitutionName = function (v, name, slot, j) {
         break;
     }
     var blob = this._join(institution, " ");
+    if (blob) {
+        blob.isInstitution = true;
+    }
     this.state.tmp.name_node.children.push(blob);
     return blob;
 };
@@ -13494,6 +13550,7 @@ CSL.NameOutput.prototype._renderOnePersonalName = function (value, pos, i, j) {
             return hasJoiningPunctuation(blob.blobs[blob.blobs.length-1]);
         }
     }
+    
     var has_hyphenated_non_dropping_particle = hasJoiningPunctuation(non_dropping_particle);
 
     var blob, merged, first, second;
@@ -13572,6 +13629,7 @@ CSL.NameOutput.prototype._renderOnePersonalName = function (value, pos, i, j) {
             merged = this._join([first, second], sort_sep);
             blob = this._join([merged, suffix], sort_sep);
         }
+        blob.isInverted = true;
     } else { // plain vanilla
         if (name["dropping-particle"] && name.family && !name["non-dropping-particle"]) {
             var dp = name["dropping-particle"];
@@ -17178,34 +17236,28 @@ CSL.Parallel.prototype.StartCitation = function (sortedItems, out) {
 
 CSL.Parallel.prototype.checkRepeats = function(params) {
     var idx = this.state.tmp.cite_index;
-    var ret = false;
-    if (params.parallel_first) {
+    if (params.parallel_first && Object.keys(params.parallel_first).length > 0 && this.state.tmp.suppress_repeats) {
+        var arr = [{}].concat(this.state.tmp.suppress_repeats);
+        var ret = true;
         for (var varname in params.parallel_first) {
-            if (params.parallel_last_override) {
-                if (params.parallel_last_override[varname]) {
-                    continue;
-                }
-            }
-            var arr = [{}].concat(this.state.tmp.suppress_repeats);
-            if (arr[idx][varname] && !arr[idx].START) {
-                return true;
+            if (!arr[idx][varname] || arr[idx].START) {
+                // true --> suppress the entry
+                // Test here evaluates as "all", not "any"
+                ret = false;
             }
         }
+        return ret;
     }
-    if (params.parallel_last) {
+    if (params.parallel_last && Object.keys(params.parallel_last).length > 0  && this.state.tmp.suppress_repeats) {
         var arr = this.state.tmp.suppress_repeats.concat([{}]);
-        if (params.parallel_last_override) {
-            for (var v in params.parallel_last_override) {
-                if (params.parallel_first && params.parallel_first[v]) {
-                    params.parallel_last[v] = true;
-                }
-            }
-        }
+        var ret = Object.keys(params.parallel_last).length > 0 ? true : false;
         for (var varname in params.parallel_last) {
-            if (arr[idx][varname] && !arr[idx].END) {
-                return true;
+            if (!arr[idx][varname] || arr[idx].END) {
+                // "all" match, as above.
+                ret = false;
             }
         }
+        return ret;
     }
     return false;
 };
