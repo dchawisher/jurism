@@ -660,6 +660,10 @@ Zotero.Schema = new function(){
 
 		Zotero.Schema.globalSchemaMeta = data.meta;
 		
+		//
+		// Keep in sync with the connector's gulpfile.js
+		//
+		
 		// CSL mappings
 		Zotero.Schema.CSL_TYPE_MAPPINGS = {};
 		Zotero.Schema.CSL_TYPE_MAPPINGS_REVERSE = {};
@@ -1716,22 +1720,46 @@ Zotero.Schema = new function(){
 			}
 			
 			// TEMP: DB diagnostics
-			let exists = yield Zotero.DB.tableExists('transactionSets');
-			url += "&ts=" + (exists ? "1" : "0");
-			if (exists) {
-				Zotero.logError("DB table 'transactionSets' still exists");
-			}
-			exists = yield Zotero.DB.tableExists('dbDebug1');
-			url += "&db1=" + (exists ? "1" : "0");
-			if (!exists) {
-				Zotero.logError("DB table 'dbDebug1' does not exist");
+			if (Zotero.isDevBuild) {
+				let badDB = false;
+				let exists = yield Zotero.DB.tableExists('transactionSets');
+				url += "&ts=" + (exists ? "1" : "0");
+				if (exists) {
+					Zotero.logError("DB table 'transactionSets' still exists");
+					badDB = true;
+				}
+				exists = yield Zotero.DB.tableExists('dbDebug1');
+				url += "&db1=" + (exists ? "1" : "0");
+				if (!exists) {
+					Zotero.logError("DB table 'dbDebug1' does not exist");
+					badDB = true;
+				}
+				if (badDB) {
+					let cloudDir = Zotero.File.isCloudStorageFolder(Zotero.DataDirectory.dir);
+					url += "&cd=" + (cloudDir ? "1" : "0");
+					
+					if (!this._debugDBIntegrityChecked) {
+						try {
+							let dbPath = Zotero.DataDirectory.getDatabase();
+							let dbInfo = yield OS.File.stat(dbPath);
+							if (dbInfo.size < 500000000) {
+								let ok = yield Zotero.DB.quickCheck();
+								url += "&qc=" + (ok ? "1" : "0");
+								this._debugDBIntegrityChecked = true;
+							}
+						}
+						catch (e) {
+							Zotero.logError(e);
+						}
+					}
+				}
 			}
 			
 			// Send list of installed styles
 			var styles = Zotero.Styles.getAll();
 			var styleTimestamps = [];
 			for (let id in styles) {
-				let styleUpdated = Zotero.Date.sqlToDate(styles[id].updated);
+				let styleUpdated = Zotero.Date.sqlToDate(styles[id].updated, true);
 				styleUpdated = styleUpdated ? styleUpdated.getTime() / 1000 : 0;
 				var selfLink = styles[id].url;
 				var data = {
