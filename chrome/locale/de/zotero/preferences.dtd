@@ -204,8 +204,8 @@
 <!ENTITY zotero.preferences.showIn.separateTab "Eigenem Tab">
 <!ENTITY zotero.preferences.statusBarIcon "Statusleisten-Icon:">
 <!ENTITY zotero.preferences.statusBarIcon.none "Kein Icon">
-<!ENTITY zotero.preferences.styleEditor "Zitierstil Editor">
-<!ENTITY zotero.preferences.stylePreview "Zitierstil Vorschau">
+<!ENTITY zotero.preferences.styleEditor "Zitierstil-Editor">
+<!ENTITY zotero.preferences.stylePreview "Zitierstil-Vorschau">
 <!ENTITY zotero.preferences.sync.about "Über Synchronisierung">
 <!ENTITY zotero.preferences.sync.createAccount "Account erstellen">
 <!ENTITY zotero.preferences.sync.fileSyncing "Datei-Synchronisierung">

@@ -236,7 +236,7 @@
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Återställ från onlinebibliotek">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Överskriv lokal Zotero-data med data från onlinebiblioteket.">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Ersätt onlinebibliotek">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Överskriv onlinebiblioteket med lokal Zotero-data">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Skriv över onlinebiblioteket med lokala Zotero-data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Följande åtgärder är endast till för sällsynta, särskilda situationer och ska inte användas för vanlig felsökning. I många fall kan en återställning istället orsaka nya problem. Se">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Återställningsalternativ för synkronisering">
 <!ENTITY zotero.preferences.sync.reset.warning3 "för mer information.">

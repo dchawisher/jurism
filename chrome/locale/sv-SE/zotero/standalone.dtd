@@ -11,7 +11,7 @@
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Stäng">
 <!ENTITY collectionsPane.label "Samlingspanel">
-<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
+<!ENTITY convertToStored.label "Konvertera Länkade filer till Lagrade filer…">
 <!ENTITY copyBibliographyCmd.label "Kopiera källförteckning">
 <!ENTITY copyCitationCmd.label "Kopiera referens">
 <!ENTITY copyCmd.accesskey "C">
@@ -85,11 +85,11 @@
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Installera webbläsaranslutning">
 <!ENTITY itemPane.label "Källpanel">
-<!ENTITY layout.label "Layout">
+<!ENTITY layout.label "Utseende">
 <!ENTITY manageAttachments.label "Hantera bilagor">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimera">
-<!ENTITY noteFontSize.label "Note Font Size">
+<!ENTITY noteFontSize.label "Teckenstorlek för anteckning">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Utskriftsformat…">
 <!ENTITY pasteCmd.accesskey "P">
@@ -112,7 +112,7 @@
 <!ENTITY quitApplicationCmdMac.label "Avsluta Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Avsluta">
-<!ENTITY recursiveCollections.label "Show Items from Subcollections">
+<!ENTITY recursiveCollections.label "Visa källor från undersamling">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Gör om">
@@ -132,6 +132,6 @@
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Ångra">
-<!ENTITY viewMenu.label "View">
+<!ENTITY viewMenu.label "Visa">
 <!ENTITY windowMenu.label "Fönster">
 <!ENTITY zoomWindow.label "Zoom">

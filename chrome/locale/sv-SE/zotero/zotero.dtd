@@ -172,7 +172,7 @@
 <!ENTITY zotero.items.medium_column "Media/format">
 <!ENTITY zotero.items.menu.addTag "Add Tag">
 <!ENTITY zotero.items.menu.attach "Lägg till bilaga">
-<!ENTITY zotero.items.menu.attach.file "Bifoga sparad kopia av filen...">
+<!ENTITY zotero.items.menu.attach.file "Bifoga Lagrad kopia av filen...">
 <!ENTITY zotero.items.menu.attach.fileLink "Bifoga länk till fil...">
 <!ENTITY zotero.items.menu.attach.link "Bifoga länk till aktuell sida">
 <!ENTITY zotero.items.menu.attach.link.uri "Bifoga länk till URI...">
@@ -331,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Inställningar...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Radera källa...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF skanning">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Hjälp och dokumentation">
 <!ENTITY zotero.toolbar.tab.tooltip "Växla flikläge">
 <!ENTITY zotero.toolbar.tagSelector.label "Visa/göm etikettväljare">
