@@ -187,164 +187,181 @@ Zotero.JurisMaps = new function() {
 		_populated = true;
 	});
 
-	this.populateOneJurisdiction = Zotero.Promise.coroutine(function*(jurisID, jurisFilePath, version) {
-		Zotero.debug("Deleting any previous data in jurisdictions table for "+jurisID);
-		yield Zotero.DB.queryAsync('DELETE FROM jurisdictions WHERE jurisdictionID=? OR jurisdictionID LIKE ?', [jurisID, jurisID + ":%"]);
-		yield Zotero.DB.queryAsync('DELETE FROM courtNames WHERE courtNameIdx NOT IN (SELECT courtNameIdx FROM countryCourtLinks)')
-		Zotero.debug("Populating jurisdictions for " + jurisID);
-		this.idxMap = {
-			jurisdictions: {},
-			courtNames: {},
-			countryCourtLinks: {},
-			courts: {},
-			courtJurisdictionLinks: {}			
-		};
-		
-		// Fetch JSON file from data directory
-		try {
-			var fieldNames = [
-				"courtNames",
-				"countryCourtLinks",
-				"courts",
-				"courtJurisdictionLinks"
-			];
-			var jsonStr = yield Zotero.File.getContentsAsync(jurisFilePath);
-			var jObj = JSON.parse(jsonStr);
-			for (var i=0,ilen=fieldNames.length; i<ilen; i++) {
-				var fieldName = fieldNames[i];
-				if (!jObj[fieldName]) {
-					jObj[fieldName] = [];
-				}
-			}
-			yield this.setJurisdictionData(jObj, jurisID);
-			yield this.setCourtNames(jObj);
-			yield this.setCountryCourtLinks(jObj);
-			yield this.setCourts(jObj);
-			yield this.setCourtJurisdictionLinks(jObj);
-			yield this.finalize(jurisID, version);
-		} catch (e) {
-			Zotero.debug("Failed to populate " + jurisID);
-			Zotero.debug(e);
-		}
-	});
-	
 	this.updateProgressMeter = function() {
 		this.progressCount++;
 		if ((this.progressCount % 25) === 0) {
 			Zotero.updateZoteroPaneProgressMeter(Math.round(this.progressCount * 100 / this.totalCount));
 		}
-	}
+	};
 	
-	this.setJurisdictionData = Zotero.Promise.coroutine(function* (jObj) {
-		var jurisdictionsNewSql = "INSERT INTO jurisdictions VALUES (NULL, ?, ?, ?);";
-		var jurisdictionsIdxSql = "SELECT jurisdictionIdx FROM jurisdictions WHERE jurisdictionID=?"
+	this.getNextIdx = (segment) => {
+		var nextIdx = this.indices[`${segment}Holes`][0];
+		if ("number" !== typeof nextIdx) {
+			nextIdx = this.lastIdx[segment];
+			nextIdx++;
+			while (this.indices[segment].indexOf(nextIdx) > -1) {
+				nextIdx++;
+			}
+		} else {
+			this.indices[`${segment}Holes`] = this.indices[`${segment}Holes`].slice(1);
+		}
+		this.lastIdx[segment] = nextIdx;
+		return nextIdx;
+	};
+
+	this.setLanguages = Zotero.Promise.coroutine(function* (obj) {
+		var ret = {};
+		var selSQL = "SELECT langIdx FROM uiLanguages WHERE lang=?";
+		var insSQL = "INSERT INTO uiLanguages VALUES (NULL, ?)";
+		for (var lang in obj.jurisdictions) {
+			var idx = yield Zotero.DB.valueQueryAsync(selSQL, lang);
+			if ("number" !== typeof idx) {
+				yield Zotero.DB.queryAsync(insSQL, [lang]);
+				idx = yield Zotero.DB.valueQueryAsync(selSQL, lang);
+			}
+			ret[lang] = idx;
+		}
+		return ret;
+	});
+	
+	this.setCountry = Zotero.Promise.coroutine(function* (jurisID) {
+		var countryID = jurisID.split(":")[0];
+		var selSQL = "SELECT countryIdx FROM countries WHERE countryID=?";
+		var insSQL = "INSERT INTO countries VALUES (NULL, ?)";
+		var idx = yield Zotero.DB.valueQueryAsync(selSQL, countryID);
+		if ("number" !== typeof idx) {
+			yield Zotero.DB.queryAsync(insSQL, [countryID]);
+			idx = yield Zotero.DB.valueQueryAsync(selSQL, countryID);
+		}
+		return idx;
+	});
+	
+	this.setJurisdictions = Zotero.Promise.coroutine(function* (jurisID, obj) {
+
+		// Assure that country exists
+		var countryIdx = yield this.setCountry(jurisID);
 		
-		var JurisdictionSpider = function(jObj) {
-			this.jObj = jObj;
-			this.jurisdictionIdLst = [];
-			this.jurisdictionNameLst = [];
-		}
-		JurisdictionSpider.prototype.run = function (idx) {
-			var elem = this.jObj.jurisdictions[idx];
-			this.jurisdictionIdLst.push(elem[0]);
-			this.jurisdictionNameLst.push(elem[1]);
-			if (elem.length === 3) {
-			   this.run(elem[2]);
+		// Assure that languages exist
+		this.langIndex = yield this.setLanguages(obj);
+
+		var insSQL = "INSERT INTO jurisdictions VALUES (?, ?, ?, ?, ?);";
+		var insSQLnolang = "INSERT INTO jurisdictions VALUES (?, ?, ?, ?, NULL);";
+
+		var fullIdVals = {};
+		var fullNameVals = {};
+		for (var lang in obj.jurisdictions) {
+			var langIdx = this.langIndex[lang];
+			for (var i=0,ilen=obj.jurisdictions[lang].length; i<ilen; i++) {
+				var jurisdiction = obj.jurisdictions[lang][i];
+				var parentPos = jurisdiction[2];
+				if (parentPos === null) {
+					fullIdVals[i] = jurisdiction[0];
+					fullNameVals[i] = jurisdiction[1] + "|" + jurisdiction[0].toUpperCase();
+				} else {
+					fullIdVals[i] = fullIdVals[jurisdiction[2]] + ":" + jurisdiction[0];
+					fullNameVals[i] = fullNameVals[jurisdiction[2]] + "|" + jurisdiction[1];
+				}
+				var nextIdx = this.getNextIdx("jurisdiction");
+				var fullID = fullIdVals[i];
+				var fullName = fullNameVals[i];
+				var segmentCount = fullName.split("|").length;
+
+				// Potential existing entries are purged before function is run
+				if (lang === "default") {
+					yield Zotero.DB.queryAsync(insSQLnolang, [nextIdx, fullID, fullName, segmentCount]);
+				} else {
+					yield Zotero.DB.queryAsync(insSQL, [nextIdx, fullID, fullName, segmentCount, langIdx]);
+				}
+				for (var courtPos of jurisdiction.slice(3)) {
+					var courtID = obj.courts[courtPos][0];
+					var courtName = obj.courts[courtPos][1];
+					var courtIdx = yield this.setCourt(countryIdx, courtID, courtName, lang);
+					yield this.setJurisdictionCourt(nextIdx, courtIdx, lang);
+				}
+				this.updateProgressMeter();
 			}
-			jIdLst = this.jurisdictionIdLst.slice();
-			jIdLst.reverse();
-			jNameLst = this.jurisdictionNameLst.slice();
-			jNameLst.reverse();
-			return [jIdLst.join(":"), jNameLst.join("|")];
 		}
-		for (let i=0,ilen=jObj.jurisdictions.length;i<ilen;i++) {
-			let entry = jObj.jurisdictions[i];
-			var entryOne, entryZero, segmentCount;
-			if ("undefined" !== typeof entry[2]) {
-				let jurisdictionSpider = new JurisdictionSpider(jObj);
-				let jurisdictionData = jurisdictionSpider.run(entry[2]);
-				entryZero = jurisdictionData[0] + ":" + entry[0];
-				entryOne = jurisdictionData[1] + "|" + entry[1];
+	});
+	
+	// Set a single court. Called from setJurisdictionCourts
+	this.setCourt = Zotero.Promise.coroutine(function* (countryIdx, courtID, courtName, lang) {
+		var langIdx = this.langIndex[lang];
+		var selSQL = "SELECT courtIdx FROM courts WHERE countryIdx=? AND courtID=? AND langIdx=?";
+		var selSQLnolang = "SELECT courtIdx FROM courts WHERE countryIdx=? AND courtID=? AND langIdx IS NULL";
+		var insSQL = "INSERT INTO courts VALUES (?, ?, ?, ?, ?);";
+		var insSQLnolang = "INSERT INTO courts VALUES (?, ?, ?, ?, NULL);";
+
+		var courtIdx;
+		if (lang === "default") {
+			courtIdx = yield Zotero.DB.valueQueryAsync(selSQLnolang, [countryIdx, courtID]);
+		} else {
+			courtIdx = yield Zotero.DB.valueQueryAsync(selSQL, [countryIdx, courtID, langIdx]);
+		}
+		if (!courtIdx) {
+			courtName = courtName.replace(/^%s\s*/, "").replace(/\s*%s$/, "");
+			courtIdx = this.getNextIdx("court");
+			if (lang === "default") {
+				yield Zotero.DB.queryAsync(insSQLnolang, [courtIdx, countryIdx, courtID, courtName]);
 			} else {
-				entryZero = entry[0];
-				// Hack the trailing jurisdictionID into top-level jurisdiction name
-				entry[1] = entry[1] + "|" + entryZero.toUpperCase();
-				entryOne = entry[1];
+				yield Zotero.DB.queryAsync(insSQL, [courtIdx, countryIdx, courtID, courtName, langIdx]);
 			}
-			segmentCount = entryOne.split("|").length;
-			var idx = yield Zotero.DB.valueQueryAsync(jurisdictionsIdxSql, [entryZero]);
-			if ("number" !== typeof idx) {
-				yield Zotero.DB.queryAsync(jurisdictionsNewSql, [entryZero, entryOne, segmentCount]);
-				idx = yield Zotero.DB.valueQueryAsync(jurisdictionsIdxSql, [entryZero]);
-			}
-			this.updateProgressMeter();
-			this.idxMap.jurisdictions[i] = idx;
 		}
+		return courtIdx;
 	});
 
-	this.setCourtNames = Zotero.Promise.coroutine(function* (jObj) {
-		// In contrast to jurisdictions, we could have existing entries in this
-		// table, so the SQL jiggery-pokery is a little more involved.
-		var courtNamesNewSql = "INSERT INTO courtNames VALUES (NULL, ?);";
-		for (let i=0,ilen=jObj.courtNames.length;i<ilen;i++) {
-			let entry = jObj.courtNames[i].replace(/^\<\s*/, "").replace(/\s*\>$/, "");
-			// So ... check for name idx
-			var idx = yield Zotero.DB.valueQueryAsync("SELECT courtNameIdx FROM courtNames WHERE courtName=?", [entry]);
-			if ("number" !== typeof idx) {
-				yield Zotero.DB.queryAsync(courtNamesNewSql, [entry]);
-				idx = yield Zotero.DB.valueQueryAsync("SELECT courtNameIdx FROM courtNames WHERE courtName=?", [entry])
-			}
-			this.updateProgressMeter();
-			this.idxMap.courtNames[i] = idx;
+	this.setJurisdictionCourt = Zotero.Promise.coroutine(function* (jurisdictionIdx, courtIdx, lang) {
+		// Purge at the top of populateOneJurisdiction assures there will be no existing entry
+		var insSQL = "INSERT INTO jurisdictionCourts VALUES (NULL, ?, ?, ?)";
+		var insSQLnolang = "INSERT INTO jurisdictionCourts VALUES (NULL, ?, ?, NULL)";
+		if (lang === "default") {
+			yield Zotero.DB.queryAsync(insSQLnolang, [jurisdictionIdx, courtIdx]);
+		} else {
+			yield Zotero.DB.queryAsync(insSQL, [jurisdictionIdx, courtIdx, lang]);
 		}
 	});
-
-	this.setCountryCourtLinks = Zotero.Promise.coroutine(function* (jObj) {
-		var countryCourtLinksNewSql = "INSERT INTO countryCourtLinks VALUES (NULL, ?, ?);";
-		for (let i=0,ilen=jObj.countryCourtLinks.length;i<ilen;i++) {
-			let entry = jObj.countryCourtLinks[i];
-			let courtNameIdx = this.idxMap.courtNames[entry[0]];
-			let countryIdx = this.idxMap.jurisdictions[entry[1]];
-			var idx = yield Zotero.DB.valueQueryAsync("SELECT countryCourtLinkIdx FROM countryCourtLinks WHERE courtNameIdx=? AND countryIdx=?", [courtNameIdx, countryIdx]);
-			if ("number" !== typeof idx) {
-				yield Zotero.DB.queryAsync(countryCourtLinksNewSql, [courtNameIdx, countryIdx]);
-				idx = yield Zotero.DB.valueQueryAsync("SELECT countryCourtLinkIdx FROM countryCourtLinks WHERE courtNameIdx=? AND countryIdx=?", [courtNameIdx, countryIdx]);
-			}
-			this.updateProgressMeter();
-			this.idxMap.countryCourtLinks[i] = idx;
-		}
-	});
-
-	this.setCourts = Zotero.Promise.coroutine(function* (jObj) {
-		var courtsNewSql = "INSERT INTO courts VALUES(NULL, ?, ?);";
-		for (let i=0,ilen=jObj.courts.length;i<ilen;i++) {
-			let entry = jObj.courts[i];
-			let courtID = entry[0];
-			let countryCourtLinkIdx = this.idxMap.countryCourtLinks[entry[1]];
-			var idx = yield Zotero.DB.valueQueryAsync("SELECT courtIdx FROM courts WHERE courtID=? AND countryCourtLinkIdx=?", [courtID, countryCourtLinkIdx]);
-			if ("number" !== typeof idx) {
-				yield Zotero.DB.queryAsync(courtsNewSql, [courtID, countryCourtLinkIdx]);
-				idx = yield Zotero.DB.valueQueryAsync("SELECT courtIdx FROM courts WHERE courtID=? AND countryCourtLinkIdx=?", [courtID, countryCourtLinkIdx]);
-			}
-			this.updateProgressMeter();
-			this.idxMap.courts[i] = idx;
-		}
-	});
-
-	this.setCourtJurisdictionLinks = Zotero.Promise.coroutine(function* (jObj) {
-		var courtJurisdictionLinksNewSql = "INSERT INTO courtJurisdictionLinks VALUES (?, ?);";
-		for (let i=0,ilen=jObj.courtJurisdictionLinks.length;i<ilen;i++) {
-			let entry = jObj.courtJurisdictionLinks[i];
-			let jurisdictionIdx = this.idxMap.jurisdictions[entry[0]];
-			let courtIdx = this.idxMap.courts[entry[1]];
-			yield Zotero.DB.queryAsync(courtJurisdictionLinksNewSql, [jurisdictionIdx, courtIdx]);
-			this.updateProgressMeter();
-		}
-	});
-
+	
 	this.finalize = Zotero.Promise.coroutine(function* (jurisID, version) {
 		var sql = "INSERT OR REPLACE INTO jurisVersion VALUES (?, ?)";
 		yield Zotero.DB.queryAsync(sql, [jurisID, version]);
+	});
+
+	this.populateOneJurisdiction = Zotero.Promise.coroutine(function*(jurisID, jurisFilePath, version) {
+		try {
+
+			this.indices = {};
+			Zotero.debug("Deleting any previous data in jurisdictions table for "+jurisID);
+			
+			// Get a list of jurisdiction indices to be opened by removal
+			this.indices.jurisdictionHoles = yield Zotero.DB.columnQueryAsync('SELECT jurisdictionIdx FROM jurisdictions WHERE jurisdictionID=? OR jurisdictionID LIKE ? ORDER BY jurisdictionIdx', [jurisID, jurisID + ":%"]);
+			yield Zotero.DB.queryAsync('DELETE FROM jurisdictions WHERE jurisdictionID=? OR jurisdictionID LIKE ?', [jurisID, jurisID + ":%"]);
+			
+			// Get a list of court indices to be opened by removal
+			this.indices.courtHoles = yield Zotero.DB.columnQueryAsync('SELECT courtIdx FROM courts WHERE courtIdx NOT IN (SELECT courtIdx FROM jurisdictionCourts) ORDER BY courtIdx');
+			yield Zotero.DB.queryAsync('DELETE FROM courts WHERE courtIdx NOT IN (SELECT courtIdx FROM jurisdictionCourts)');
+
+			// Get lists of all remaining indices
+			this.indices.court = yield Zotero.DB.columnQueryAsync("SELECT courtIdx FROM courts");
+			this.indices.jurisdiction = yield Zotero.DB.columnQueryAsync("SELECT jurisdictionIdx FROM jurisdictions");
+
+			// Initialize index counters
+			this.lastIdx = {
+				jurisdiction: 1,
+				court: 1
+			};
+			
+			Zotero.debug("Populating jurisdictions for " + jurisID);
+
+			// Fetch JSON file from data directory
+			var jsonStr = yield Zotero.File.getContentsAsync(jurisFilePath);
+			var obj = JSON.parse(jsonStr);
+			
+			yield this.setJurisdictions(jurisID, obj);
+			
+			yield this.finalize(jurisID, version);
+		} catch (e) {
+			Zotero.debug("Failed to populate " + jurisID);
+			Zotero.debug(e);
+		}
 	});
 }
 

@@ -119,21 +119,21 @@ Zotero.CachedJurisdictionData = new function() {
 			return id;
 		}
 	};
-
+	
 	this.setCourt = Zotero.Promise.coroutine(function* (jurisdictionID, courtIdOrName) {
-		let sql = "SELECT courtID,courtName FROM jurisdictions JU "
-			+ "JOIN courtJurisdictionLinks CJL USING(jurisdictionIdx) "
+		var locale = Zotero.locale ? Zotero.locale.split("-")[0] : "en";
+		let sql = "SELECT courtID,courtName FROM (SELECT * FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) WHERE lang=? OR lang IS NULL ORDER BY lang) JU "
+			+ "JOIN jurisdictionCourts JC USING(jurisdictionIdx) "
 			+ "JOIN courts USING(courtIdx) "
-			+ "JOIN countryCourtLinks CCL USING(countryCourtLinkIdx) "
-			+ "JOIN courtNames CN USING(courtNameIdx) "
-			+ "JOIN jurisdictions CO ON CO.jurisdictionIdx=CCL.countryIdx "
-			+ "WHERE (courtID=? OR CN.courtName=?) AND JU.jurisdictionID=? AND CO.jurisdictionID=?"
+			+ "WHERE (courtID=? OR courtName=?) AND jurisdictionID=? OR jurisdictionID LIKE ? "
+			+ "GROUP BY jurisdictionID";
 		var countryID = jurisdictionID.split(':')[0];
 		let row = yield Zotero.DB.rowQueryAsync(sql, [
+			locale,
 			courtIdOrName,
 			courtIdOrName,
 			jurisdictionID,
-			countryID
+			`${countryID}:%`
 		]);
 		var courtName = row.courtName;
 		var courtID = row.courtID

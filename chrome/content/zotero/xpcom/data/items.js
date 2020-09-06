@@ -243,14 +243,11 @@ Zotero.Items = function() {
 			+ "FROM items I "
 			+   "JOIN itemData ID USING (itemID) "
 			+   "JOIN itemDataValues IDV USING (valueID) "
-			+   "LEFT JOIN jurisdictions JU ON JU.jurisdictionID=value AND ID.fieldID=" + jurisdictionFieldID + " "
-			+   "LEFT JOIN (SELECT C.courtID,CN.courtName,J.jurisdictionID "
-			+		"FROM jurisdictions J "
-			+		"JOIN courtJurisdictionLinks USING(jurisdictionIdx) "
+			+   "LEFT JOIN (SELECT * FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) WHERE lang=? OR lang IS NULL ORDER BY lang) JU ON JU.jurisdictionID=value AND ID.fieldID=" + jurisdictionFieldID + " "
+			+   "LEFT JOIN (SELECT C.courtID,C.courtName,J.jurisdictionID "
+			+		"FROM (SELECT * FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) WHERE lang=? OR lang IS NULL ORDER BY lang) J "
+			+		"JOIN jurisdictionCourts USING(jurisdictionIdx) "
 			+		"JOIN courts C USING(courtIdx) "
-			+		"JOIN countryCourtLinks CCL USING(countryCourtLinkIdx) "
-			+		"JOIN courtNames CN USING(courtNameIdx) "
- 			+		"JOIN jurisdictions CO ON CO.jurisdictionIdx=CCL.countryIdx"
 			+   ") CT ON CT.jurisdictionID=JU.jurisdictionID AND CT.courtID=IDV.value "
 			+   "LEFT JOIN itemDataMain IDM USING (itemID, fieldID) "
 			+ "WHERE I.libraryID=? AND I.itemTypeID!=?" + idSQL
@@ -263,7 +260,8 @@ Zotero.Items = function() {
 			+ "JOIN itemDataValues IDV USING (valueID) "
 			+ "WHERE libraryID=? AND itemTypeID!=?" + idSQL;
 
-		var params = [libraryID, Zotero.ItemTypes.getID('note'), libraryID, Zotero.ItemTypes.getID('note')];
+		var lang = Zotero.local ? Zotero.locale.split("-")[0] : "default";
+		var params = [lang, lang, libraryID, Zotero.ItemTypes.getID('note'), libraryID, Zotero.ItemTypes.getID('note')];
 		yield Zotero.DB.queryAsync(
 			sql,
 			params,

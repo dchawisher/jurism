@@ -277,7 +277,7 @@ Zotero.Schema = new function(){
 				}
 				
 				updated = await _migrateUserDataSchema(userdata, options);
-				var multilingual = await _getDBVersion('multilingual')
+				var multilingual = await _getDBVersion('multilingual');
 				var multiUpdated = await _migrateUserMultiDataSchema(multilingual);
 				await _updateSchema('zls');
 				await _updateSchema('jurisdictions');

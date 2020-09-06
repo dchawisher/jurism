@@ -2420,7 +2420,7 @@
 					
 					t.addEventListener('blur', function () {
 						var self = document.getBindingParent(this);
-						if (self.ignoreBlur) return;
+						if (!self || self.ignoreBlur) return;
 
 						removeEventListener("deactivate", ignoreBlur);
 						removeEventListener("activate", unignoreBlur);
@@ -2476,6 +2476,8 @@
 						let params = {
 							fieldName: "jurisdictions"
 						}
+						t.setAttribute('ontextentered',
+							'document.getBindingParent(this).handleJurisdictionAutoCompleteSelect(this)');
 						t.setAttribute('onchange',
 							'document.getBindingParent(this).handleJurisdictionAutoCompleteSelect(this)');
 						t.setAttribute(
@@ -2499,7 +2501,7 @@
 
 						t.addEventListener('blur', function () {
 							var self = document.getBindingParent(this);
-							if (self.ignoreBlur) return;
+							if (!self || self.ignoreBlur) return;
 
 							removeEventListener("deactivate", ignoreBlur);
 							removeEventListener("activate", unignoreBlur);
@@ -2560,8 +2562,10 @@
 						let params = {
 							fieldName: 'courts',
 							jurisdictionName: jurisdictionName,
-							countryID: countryID
+							jurisdictionID: jurisdictionID
 						}
+						t.setAttribute('ontextentered',
+							'document.getBindingParent(this).handleCourtAutoCompleteSelect(this)');
 						t.setAttribute('onchange',
 							'document.getBindingParent(this).handleCourtAutoCompleteSelect(this)');
 						t.setAttribute(
@@ -2569,19 +2573,9 @@
 						);
 						t.setAttribute('completeselectedindex', true);
 
-						t.setAttribute('enablehistory', true);
-
-						/*
-						t.setAttribute('disablehistory', false);
-						*/
-
-						t.setAttribute('highlightnonmatches', true);
-
 						node.parentNode.replaceChild(t, node)
 
 						t.select();
-
-Zotero.debug(`ZZZ enablehistory: ${t.getAttribute('enablehistory')}`, 1);
 
 						// Leave text field open when window loses focus
 						var ignoreBlur = function () {
@@ -2595,7 +2589,7 @@ Zotero.debug(`ZZZ enablehistory: ${t.getAttribute('enablehistory')}`, 1);
 
 						t.addEventListener('blur', function () {
 							var self = document.getBindingParent(this);
-							if (self.ignoreBlur) return;
+							if (!self || self.ignoreBlur) return;
 
 							removeEventListener("deactivate", ignoreBlur);
 							removeEventListener("activate", unignoreBlur);
