@@ -18,7 +18,7 @@ cd ../jurism
 
 # run program
 ../zotero-standalone-build/staging/Jurism_linux-x86_64/jurism --ProfileManager -jsconsole -ZoteroDebug
-#../zotero-standalone-build/staging/Jurism_linux-x86_64/jurism --ProfileManager
+# ../zotero-standalone-build/staging/Jurism_linux-x86_64/jurism --ProfileManager
 echo ../zotero-standalone-build/staging/Jurism_linux-x86_64/jurism --ProfileManager -jsconsole -ZoteroDebug
 
 #../zotero-standalone-build/staging/Zotero_linux-x86_64/zotero -jsconsole -d 1
