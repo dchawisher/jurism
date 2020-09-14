@@ -1962,27 +1962,10 @@
 			<method name="handleCourtAutoCompleteSelect">
 				<parameter name="textbox"/>
 				<body>
-				<![CDATA[
-					// Enables save of non-match text
-					var result = false;
-					var controller = textbox.controller;
-					var searchString = controller.searchString;
-					if (!controller.matchCount) {
-						result = {val:searchString, comment:searchString};
-					} else {
-						for (var i=0; i<controller.matchCount; i++) {
-							if (controller.getCommentAt(i) == textbox.value) {
-								result = {val:controller.getCommentAt(i),comment:controller.getValueAt(i)};
-								break;
-							}
-						}
-					}
-					if (!result && searchString) {
-						result = {val:searchString, comment:searchString};
-					}
-					textbox.mController.input = null;
-					this.hideCourtEditor(textbox, result);
-			]]>
+				  <![CDATA[
+				    // Can't get select to run under Linux, at least
+					return true;
+				  ]]>
 				</body>
 			</method>
 
@@ -2565,13 +2548,14 @@
 							jurisdictionID: jurisdictionID
 						}
 						t.setAttribute('ontextentered',
-							'document.getBindingParent(this).handleCourtAutoCompleteSelect(this)');
+						 	'document.getBindingParent(this).handleCourtAutoCompleteSelect(this)');
 						t.setAttribute('onchange',
 							'document.getBindingParent(this).handleCourtAutoCompleteSelect(this)');
 						t.setAttribute(
 							'autocompletesearchparam', JSON.stringify(params)
 						);
 						t.setAttribute('completeselectedindex', true);
+						t.setAttribute('forcecomplete', true);
 
 						node.parentNode.replaceChild(t, node)
 
@@ -3714,6 +3698,19 @@
 					return (async function () {
 					Zotero.debug(`Hiding court editor for ${node.getAttribute('fieldname')}`);
 
+					var controller = node.controller;
+					var searchString = controller.searchString;
+					if (!controller.matchCount) {
+						result = {val:searchString, comment:searchString};
+					} else {
+						for (var i=0; i<controller.matchCount; i++) {
+							if (controller.getCommentAt(i) == node.value) {
+								result = {val:controller.getCommentAt(i),comment:controller.getValueAt(i)};
+								break;
+							}
+						}
+					}
+
 					// Prevent autocomplete breakage in Firefox 3
 					if (node.mController) {
 						node.mController.input = null;
@@ -3737,7 +3734,9 @@
 							valueElement.classList.add('yellow');
 						}
 					} else {
-					    // Used to adjust values when SAYT result from a subjurisdiction is selected.
+						// Adjusts values in jurisdiction and court fields when SAYT result from a subjurisdiction is selected.
+						// This is horribly convoluted for what it does, but it seems to work. Would be much simpler if
+						// the result of DB selection could be captured directly.
 						var m = result.val.match(/^([^:]+):\s+(.*)$/);
 						if (m) {
 							if (this.saveOnEdit) {
@@ -3791,10 +3790,12 @@
 					if (!courtID) {
 						valueElement.classList.add('yellow');
 					} else {
+						result.comment = result.val;
+						result.val = courtID;
 						valueElement.classList.remove('yellow');
 					}
 					node.parentNode.replaceChild(valueElement,node);
-					this.item.setField("court",result.comment);
+					this.item.setField("court",result.val);
 					if (this._tabDirection) {
 						var focusBox = this._dynamicFields;
 						this._focusNextField(focusBox, this._lastTabIndex, this._tabDirection == -1);
@@ -4225,7 +4226,7 @@
 						}
 						if (blurMode === "jurisdiction") {
 							return this.hideJurisdictionEditor(activeField);
-						} else if (blurMode === "court") {
+							} else if (blurMode === "court") {
 							return this.hideCourtEditor(activeField);
 						} else {
 							return this.blurHandler(activeField);

@@ -44,7 +44,7 @@ Zotero.CachedJurisdictionData = new function() {
 		// Get jurisdiction and court fieldIDs
 		jurisdictionFieldID = Zotero.ItemFields.getID('jurisdiction');
 		courtFieldID = Zotero.ItemFields.getID('court');
-	}
+	};
 
 	this.load = Zotero.Promise.coroutine(function* (item) {
 		var jurisdictionID, courtID;
@@ -60,6 +60,7 @@ Zotero.CachedJurisdictionData = new function() {
 				var jurisdiction = jurisdictions.slice(0,i).join(":");
 				yield this.setJurisdictionByIdOrName(jurisdiction);
 			}
+			/*
 			if (item.getField) {
 				courtID = item.getField("court", true);
 			} else {
@@ -68,6 +69,9 @@ Zotero.CachedJurisdictionData = new function() {
 			if (_jurisdictionIdToName[jurisdictionID] && courtID) {
 				yield this.setCourt(jurisdictionID, courtID);
 			}
+			 */
+			// Set all possible courts for this specific jurisdiction
+			yield this.setCourts(jurisdictionID);
 		}
 	});
 	
@@ -120,33 +124,29 @@ Zotero.CachedJurisdictionData = new function() {
 		}
 	};
 	
-	this.setCourt = Zotero.Promise.coroutine(function* (jurisdictionID, courtIdOrName) {
+	this.setCourts = Zotero.Promise.coroutine(function* (jurisdictionID) {
+		if (_courtIdToName[jurisdictionID]) {
+			return;
+		} else {
+			_courtIdToName[jurisdictionID] = {};
+			_courtNameToId[jurisdictionID] = {};
+		}
 		var locale = Zotero.locale ? Zotero.locale.split("-")[0] : "en";
-		let sql = "SELECT courtID,courtName FROM (SELECT * FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) WHERE lang=? OR lang IS NULL ORDER BY lang) JU "
+		let sql = "SELECT courtID,courtName FROM (SELECT * FROM (SELECT * FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) GROUP BY jurisdictionID) WHERE lang=? OR lang IS NULL ORDER BY lang) JU "
 			+ "JOIN jurisdictionCourts JC USING(jurisdictionIdx) "
 			+ "JOIN courts USING(courtIdx) "
-			+ "WHERE (courtID=? OR courtName=?) AND jurisdictionID=? OR jurisdictionID LIKE ? "
-			+ "GROUP BY jurisdictionID";
-		var countryID = jurisdictionID.split(':')[0];
-		let row = yield Zotero.DB.rowQueryAsync(sql, [
+			+ "WHERE jurisdictionID=? ";
+		let rows = yield Zotero.DB.queryAsync(sql, [
 			locale,
-			courtIdOrName,
-			courtIdOrName,
-			jurisdictionID,
-			`${countryID}:%`
+			jurisdictionID
 		]);
-		var courtName = row.courtName;
-		var courtID = row.courtID
-		if (courtName) {
-			if (!_courtIdToName[jurisdictionID]) {
-				_courtIdToName[jurisdictionID] = {};
+		for (var row of rows) {
+			var courtName = row.courtName;
+			var courtID = row.courtID;
+			if (courtName) {
+				_courtIdToName[jurisdictionID][courtID] = courtName;
+				_courtNameToId[jurisdictionID][courtName] = courtID;
 			}
-			_courtIdToName[jurisdictionID][courtID] = courtName;
-			
-			if (!_courtNameToId[jurisdictionID]) {
-				_courtNameToId[jurisdictionID] = {};
-			}
-			_courtNameToId[jurisdictionID][courtName] = courtID;
 		}
 	});
 
