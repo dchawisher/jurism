@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.13",
+    PROCESSOR_VERSION: "1.4.17",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -1239,7 +1239,7 @@ var CSL = {
 
     UPDATE_GROUP_CONTEXT_CONDITION: function (state, termtxt, valueTerm) {
         if (state.tmp.group_context.tip.condition) {
-            if (state.tmp.group_context.tip.condition.test) {
+            if (!state.tmp.group_context.tip.condition.termtxt) {
                 state.tmp.group_context.tip.condition.termtxt = termtxt;
                 state.tmp.group_context.tip.condition.valueTerm = valueTerm;
             }
@@ -7752,6 +7752,7 @@ CSL.getAmbiguousCite = function (Item, disambig, visualForm, item) {
         variable_success: flags.variable_success,
         output_tip: flags.output_tip,
         label_form: flags.label_form,
+        non_parallel: flags.non_parallel,
         parallel_last: flags.parallel_last,
         parallel_first: flags.parallel_first,
         parallel_last_override: flags.parallel_last_override,
@@ -8163,16 +8164,25 @@ CSL.getCitationCluster = function (inputList, citation) {
                 if (this.opt.development_extensions.throw_on_empty) {
                     CSL.error("Citation would render no content");
                 } else {
-                    composite = "[NO_PRINTED_FORM]"
+                    composite = "[NO_PRINTED_FORM]";
                 }
             }
             return composite;
         }
         if ("object" === typeof composite && composite.length === 0 && !item["suppress-author"]) {
-            var errStr = "[CSL STYLE ERROR: reference with no printed form.]";
-            var preStr = pos === 0 ? txt_esc(this.citation.opt.layout_prefix) : "";
-            var sufStr = pos === (myblobs.length - 1) ? txt_esc(this.citation.opt.layout_suffix) : "";
-            composite.push(preStr + errStr + sufStr);
+            if (pos === 0) {
+                var errStr = "[CSL STYLE ERROR: reference with no printed form.]";
+                var preStr = pos === 0 ? txt_esc(this.citation.opt.layout_prefix) : "";
+                var sufStr = pos === (myblobs.length - 1) ? txt_esc(this.citation.opt.layout_suffix) : "";
+                composite.push(preStr + errStr + sufStr);
+            } else if (pos === myblobs.length - 1) {
+                var tmpobj = objects[objects.length - 1];
+                if (typeof tmpobj === "string") {
+                    objects[objects.length -1] += (txt_esc(this.citation.opt.layout_suffix));
+                } else if (typeof tmpobj === "object") {
+                    tmpobj.strings.suffix += (txt_esc(this.citation.opt.layout_suffix));
+                }
+            }
         }
         if (buffer.length && "string" === typeof composite[0]) {
             composite.reverse();
@@ -8284,6 +8294,7 @@ CSL.getCite = function (Item, item, prevItemID, blockShadowNumberReset) {
     }
     this.tmp.cite_renders_content = false;
     this.tmp.probably_rendered_something = false;
+    this.tmp.prevItemID = prevItemID;
 
     CSL.citeStart.call(this, Item, item, blockShadowNumberReset);
     next = 0;
@@ -8325,6 +8336,7 @@ CSL.citeStart = function (Item, item, blockShadowNumberReset) {
     if (!blockShadowNumberReset) {
         this.tmp.shadow_numbers = {};
     }
+    
     this.tmp.disambiguate_count = 0;
     this.tmp.disambiguate_maxMax = 0;
     this.tmp.same_author_as_previous_cite = false;
@@ -8735,11 +8747,20 @@ CSL.getBibliographyEntries = function (bibsection) {
             }
             // Adjust parameters
             this.parallel.StartCitation(sortedItems);
-            this.output.queue[0].strings.delimiter = ", ";
+            if (this.registry.registry[item.id].parallel_delimiter_override) {
+                this.output.queue[0].strings.delimiter = this.registry.registry[item.id].parallel_delimiter_override;
+            } else {
+                this.output.queue[0].strings.delimiter = ", ";
+            }
             this.tmp.term_predecessor = false;
             this.tmp.cite_index = 0;
             // Run cites
             for (j = 0, jlen = sortedItems.length; j < jlen; j += 1) {
+                if (j < (sortedItems.length - 1)) {
+                    this.tmp.parallel_and_not_last = true;
+                } else {
+                    delete this.tmp.parallel_and_not_last;
+                }
                 entry_item_ids.push("" + CSL.getCite.call(this, sortedItems[j][0], sortedItems[j][1]));
                 this.tmp.cite_index++;
                 skips[sortedItems[j][0].id] = true;
@@ -10224,6 +10245,11 @@ CSL.Node.group = {
                 }
                 
                 if (this.realGroup) {
+                    
+                    if (state.tmp.group_context.tip.condition) {
+                        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, this.strings.prefix);
+                    }
+                    
                     var condition = false;
                     var force_suppress = false;
 
@@ -10273,6 +10299,14 @@ CSL.Node.group = {
                         force_suppress: force_suppress,
                         done_vars: state.tmp.group_context.tip.done_vars.slice()
                     };
+                    if(this.non_parallel) {
+                        var non_parallel = state.tmp.group_context.tip.non_parallel;
+                        if (!non_parallel) {
+                            non_parallel = {};
+                        }
+                        Object.assign(non_parallel, this.non_parallel);
+                        context.non_parallel = non_parallel;
+                    }
                     if(this.parallel_first) {
                         var parallel_first = state.tmp.group_context.tip.parallel_first;
                         if (!parallel_first) {
@@ -10452,6 +10486,9 @@ CSL.Node.group = {
                     var flags = state.tmp.group_context.pop();
                     if (flags.parallel_delimiter_override) {
                         state.tmp.group_context.tip.parallel_delimiter_override = flags.parallel_delimiter_override;
+                        if (!state.tmp.just_looking && state.registry.registry[Item.id].master) {
+                            state.registry.registry[Item.id].parallel_delimiter_override = flags.parallel_delimiter_override;
+                        }
                     }
                     if (flags.parallel_delimiter_override_on_suppress) {
                         state.tmp.group_context.tip.parallel_delimiter_override_on_suppress = flags.parallel_delimiter_override_on_suppress;
@@ -10478,13 +10515,15 @@ CSL.Node.group = {
                     if (state.tmp.group_context.tip.condition) {
                         state.tmp.group_context.tip.force_suppress = flags.force_suppress;
                     }
+                            
                     if (!flags.force_suppress && (flags.variable_success || (flags.term_intended && !flags.variable_attempt))) {
                         if (!this.isJurisLocatorLabel) {
                             state.tmp.group_context.tip.variable_success = true;
                         }
                         var blobs = state.output.current.value().blobs;
                         var pos = state.output.current.value().blobs.length - 1;
-                        if (!state.tmp.just_looking && (flags.parallel_last || flags.parallel_first || flags.parallel_delimiter_override || flags.parallel_delimiter_override_on_suppress)) {
+
+                        if (!state.tmp.just_looking && (flags.non_parallel || flags.parallel_last || flags.parallel_first || flags.parallel_delimiter_override || flags.parallel_delimiter_override_on_suppress)) {
                             // flags.parallel_last
                             // flags.parallel_first
 
@@ -10495,11 +10534,12 @@ CSL.Node.group = {
                                     blobs.pop();
                                 }
                             }
-                            if (state.tmp.cite_index > 0 && (hasRepeat || (!flags.parallel_first && !flags.parallel_last))) {
+                            if (state.tmp.cite_index > 0 && (hasRepeat || (!flags.parallel_first && !flags.parallel_last && !flags.non_parallel))) {
                                 //state.sys.print(`${state.tmp.cite_index} ${JSON.stringify(state.tmp.suppress_repeats, null, 2)}`)
-                                if (hasRepeat && flags.parallel_delimiter_override_on_suppress && state.tmp.suppress_repeats[state.tmp.cite_index-1].SIBLING) {
+                                var info = state.tmp.suppress_repeats[state.tmp.cite_index-1];
+                                if (hasRepeat && flags.parallel_delimiter_override_on_suppress && (info.SIBLING || info.ORPHAN)) {
                                     state.output.queue.slice(-1)[0].parallel_delimiter = flags.parallel_delimiter_override_on_suppress;
-                                } else if (flags.parallel_delimiter_override && state.tmp.suppress_repeats[state.tmp.cite_index-1].SIBLING) {
+                                } else if (flags.parallel_delimiter_override && info.SIBLING) {
                                     state.output.queue.slice(-1)[0].parallel_delimiter = flags.parallel_delimiter_override;
                                 }
                             }
@@ -11127,21 +11167,24 @@ CSL.Node.layout = {
             if (state.build.area === "bibliography") {
                 suffix_token = new CSL.Token("text", CSL.SINGLETON);
                 func = function(state) {
-                    var suffix;
-                    if (state.tmp.cite_affixes[state.tmp.area][state.tmp.last_cite_locale]) {
-                        suffix = state.tmp.cite_affixes[state.tmp.area][state.tmp.last_cite_locale].suffix;
-                    } else {
-                        suffix = state.bibliography.opt.layout_suffix;
-                    }
+                    // Suppress suffix on all but the last item in bibliography parallels
+                    if (!state.tmp.parallel_and_not_last) {
+                        var suffix;
+                        if (state.tmp.cite_affixes[state.tmp.area][state.tmp.last_cite_locale]) {
+                            suffix = state.tmp.cite_affixes[state.tmp.area][state.tmp.last_cite_locale].suffix;
+                        } else {
+                            suffix = state.bibliography.opt.layout_suffix;
+                        }
 
-                    // If @display is used, layout suffix is placed on the last
-                    // immediate child of the layout, which we assume will be a
-                    // @display group node.
-                    var topblob = state.output.current.value();
-                    if (state.opt.using_display) {
-                        topblob.blobs[topblob.blobs.length-1].strings.suffix = suffix;
-                    } else {
-                        topblob.strings.suffix = suffix;
+                        // If @display is used, layout suffix is placed on the last
+                        // immediate child of the layout, which we assume will be a
+                        // @display group node.
+                        var topblob = state.output.current.value();
+                        if (state.opt.using_display) {
+                            topblob.blobs[topblob.blobs.length-1].strings.suffix = suffix;
+                        } else {
+                            topblob.strings.suffix = suffix;
+                        }
                     }
                     if (state.bibliography.opt["second-field-align"]) {
                         // closes bib_other
@@ -14923,6 +14966,7 @@ CSL.Node.number = {
 
             if (["locator", "locator-extra"].indexOf(varname) > -1) {
                 // amazing that we reach this. should abort sooner if no content?
+                CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, node.strings.prefix);
                 state.processNumber.call(state, node, item, varname, Item.type);
             } else {
                 if (!state.tmp.group_context.tip.condition) {
@@ -16422,7 +16466,19 @@ CSL.Attributes["@parallel-delimiter-override"] = function (state, arg) {
 CSL.Attributes["@parallel-delimiter-override-on-suppress"] = function (state, arg) {
     this.strings.set_parallel_delimiter_override_on_suppress = arg;
 };
-
+CSL.Attributes["@no-repeat"] = function (state, arg) {
+    state.opt.parallel.enable = true;
+    var vars = arg.split(/\s+/);
+    if (!state.opt.track_repeat) {
+        state.opt.track_repeat = {};
+    }
+    this.non_parallel = {};
+    for (var i in vars) {
+        var v = vars[i];
+        this.non_parallel[v] = true;
+        state.opt.track_repeat[v] = true;
+    }
+};
 
 CSL.Attributes["@require"] = function (state, arg) {
     this.strings.require = arg;
@@ -17134,8 +17190,10 @@ CSL.Parallel.prototype.StartCitation = function (sortedItems, out) {
     var idxEnd = 0;
     var parallelMatchList = false;
     var siblingRanges = [];
-    
+
     for (var i=0,ilen=sortedItems.length-1;i<ilen;i++) {
+        var currItem = sortedItems[i][0];
+        var nextItem = sortedItems[i+1][0];
         var freshMatchList = false;
         var info = {};
         if (sortedItems[i][0].seeAlso && !parallelMatchList) {
@@ -17161,56 +17219,53 @@ CSL.Parallel.prototype.StartCitation = function (sortedItems, out) {
                 }
             }
         }
-        if (parallelMatchList) {
-            if (i > 0 && freshMatchList) {
-                this.state.tmp.suppress_repeats[i-1].START = true;
-                freshMatchList = false;
-            }
-            var currItem = sortedItems[i][0];
-            var nextItem = sortedItems[i+1][0];
-            for (var varname in this.state.opt.track_repeat) {
-                    // if (varname === "title") {
-                    //    this.state.sys.print(`curr: ${currItem}, next: ${JSON.stringify(nextItem, null, 2)}`);
-                    // }
-                if (!currItem[varname] || !nextItem[varname]) {
-                    // Go ahead and render any value with an empty partner
-                    info[varname] = false;
-                } else if ("string" === typeof nextItem[varname] || "number" === typeof nextItem[varname]) {
-                    // Simple comparison of string values
-                    if (varname === "title" && currItem["title-short"] && nextItem["title-short"]) {
-                        var currVal = currItem["title-short"];
-                        var nextVal = nextItem["title-short"];
-                    } else {
-                        var currVal = currItem[varname];
-                        var nextVal = nextItem[varname];
-                    }
-                    if (currVal == nextVal) {
-                        info[varname] = true;
-                    } else {
-                        info[varname] = false;
-                    }
-                } else if ("undefined" === typeof currItem[varname].length) {
-                    // If a date, use only the year
-                    info[varname] = false;
-                    var currYear = currItem[varname].year;
-                    var nextYear = nextItem[varname].year;
-                    if (currYear && nextYear) {
-                        if (currYear == nextYear) {
-                            info[varname] = true;
-                        }
-                    }
+        // parallelMatchList/freshMatchList relate only to parallels.
+        // no-repeat non-parallels are handled in a separate block.
+        if (i > 0 && freshMatchList) {
+            this.state.tmp.suppress_repeats[i-1].START = true;
+            freshMatchList = false;
+        }
+        for (var varname in this.state.opt.track_repeat) {
+            if (!currItem[varname] || !nextItem[varname]) {
+                // Go ahead and render any value with an empty partner
+                info[varname] = false;
+            } else if ("string" === typeof nextItem[varname] || "number" === typeof nextItem[varname]) {
+                // Simple comparison of string values
+                if (varname === "title" && currItem["title-short"] && nextItem["title-short"]) {
+                    var currVal = currItem["title-short"];
+                    var nextVal = nextItem["title-short"];
                 } else {
-                    // If a creator value, kludge it
-                    var currVal = JSON.stringify(currItem[varname]);
-                    var nextVal = JSON.stringify(nextItem[varname]);
-                    if (currVal === nextVal) {
+                    var currVal = currItem[varname];
+                    var nextVal = nextItem[varname];
+                }
+                if (currVal == nextVal) {
+                    info[varname] = true;
+                } else {
+                    info[varname] = false;
+                }
+            } else if ("undefined" === typeof currItem[varname].length) {
+                // If a date, use only the year
+                info[varname] = false;
+                var currYear = currItem[varname].year;
+                var nextYear = nextItem[varname].year;
+                if (currYear && nextYear) {
+                    if (currYear == nextYear) {
                         info[varname] = true;
-                    } else {
-                        info[varname] = false;
                     }
                 }
+            } else {
+                // If a creator value, kludge it
+                var currVal = JSON.stringify(currItem[varname]);
+                var nextVal = JSON.stringify(nextItem[varname]);
+                if (currVal === nextVal) {
+                    info[varname] = true;
+                } else {
+                    info[varname] = false;
+                }
             }
-            
+        }
+        if (!parallelMatchList) {
+            info.ORPHAN = true;
         }
         if (idxEnd === i) {
             info.END = true;
@@ -17218,6 +17273,12 @@ CSL.Parallel.prototype.StartCitation = function (sortedItems, out) {
         }
         this.state.tmp.suppress_repeats.push(info);
     }
+    
+    // if (!this.state.tmp.just_looking) {
+    //     this.state.sys.print(`${JSON.stringify(this.state.tmp.suppress_repeats, null, 2)}`);
+    // }
+    
+    // Set no-repeat info here?
     for (var j=0,jlen=siblingRanges.length;j<jlen;j++) {
         var masterID = sortedItems[siblingRanges[j][0]][0].id;
         this.state.registry.registry[masterID].master = true;
@@ -17236,28 +17297,40 @@ CSL.Parallel.prototype.StartCitation = function (sortedItems, out) {
 
 CSL.Parallel.prototype.checkRepeats = function(params) {
     var idx = this.state.tmp.cite_index;
-    if (params.parallel_first && Object.keys(params.parallel_first).length > 0 && this.state.tmp.suppress_repeats) {
-        var arr = [{}].concat(this.state.tmp.suppress_repeats);
-        var ret = true;
-        for (var varname in params.parallel_first) {
-            if (!arr[idx][varname] || arr[idx].START) {
-                // true --> suppress the entry
-                // Test here evaluates as "all", not "any"
-                ret = false;
+    if (this.state.tmp.suppress_repeats) {
+        if (params.parallel_first && Object.keys(params.parallel_first).length > 0) {
+            var arr = [{}].concat(this.state.tmp.suppress_repeats);
+            var ret = true;
+            for (var varname in params.parallel_first) {
+                if (!arr[idx][varname] || arr[idx].START) {
+                    // true --> suppress the entry
+                    // Test here evaluates as "all", not "any"
+                    ret = false;
+                }
             }
+            return ret;
         }
-        return ret;
-    }
-    if (params.parallel_last && Object.keys(params.parallel_last).length > 0  && this.state.tmp.suppress_repeats) {
-        var arr = this.state.tmp.suppress_repeats.concat([{}]);
-        var ret = Object.keys(params.parallel_last).length > 0 ? true : false;
-        for (var varname in params.parallel_last) {
-            if (!arr[idx][varname] || arr[idx].END) {
-                // "all" match, as above.
-                ret = false;
+        if (params.parallel_last && Object.keys(params.parallel_last).length > 0) {
+            var arr = this.state.tmp.suppress_repeats.concat([{}]);
+            var ret = Object.keys(params.parallel_last).length > 0 ? true : false;
+            for (var varname in params.parallel_last) {
+                if (!arr[idx][varname] || arr[idx].END) {
+                    // "all" match, as above.
+                    ret = false;
+                }
             }
+            return ret;
         }
-        return ret;
+        if (params.non_parallel && Object.keys(params.non_parallel).length > 0) {
+            var arr = [{}].concat(this.state.tmp.suppress_repeats);
+            var ret = true;
+            for (var varname in params.non_parallel) {
+                if (!arr[idx][varname]) {
+                    ret = false;
+                }
+            }
+            return ret;
+        }
     }
     return false;
 };
@@ -22546,7 +22619,7 @@ CSL.Registry.prototype.dodeletes = function (myhash) {
                     if (this.registry[loneSiblingID].siblings) {
                         this.registry[loneSiblingID].siblings.pop();
                         this.registry[loneSiblingID].master = true;
-                        this.registry[loneSiblingID].parallel = false;
+                        // this.registry[loneSiblingID].parallel = false;
                     }
                 } else if (this.registry[key].siblings.length > 1) {
                     var removeIDs = [key];
@@ -22554,11 +22627,12 @@ CSL.Registry.prototype.dodeletes = function (myhash) {
                         var newmasterID = this.registry[key].siblings[0];
                         var newmaster = this.registry[newmasterID];
                         newmaster.master = true;
-                        newmaster.parallel = false;
+                        // newmaster.parallel_delimiter is set externally, if at all
+                        // newmaster.parallel = false;
                         removeIDs.push(newmasterID);
-                        for (var k = 0, klen = this.registry[key].siblings.length; k < klen; k += 1) {
-                            this.registry[this.registry[key].siblings[k]].parallel = newmasterID;
-                        }
+                        // for (var k = 0, klen = this.registry[key].siblings.length; k < klen; k += 1) {
+                        //     this.registry[this.registry[key].siblings[k]].parallel = newmasterID;
+                        // }
                     }
                     var buffer = [];
                     for (var k = this.registry[key].siblings.length - 1; k > -1; k += -1) {
