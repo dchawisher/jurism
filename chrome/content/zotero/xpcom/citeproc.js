@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.17",
+    PROCESSOR_VERSION: "1.4.18",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -3770,7 +3770,7 @@ CSL.Engine = function (sys, style, lang, forceLang) {
     this.opt.styleName = this.cslXml.getStyleId(this.cslXml.dataObj, true);
 
     if (this.opt.version.slice(0,4) === "1.1m") {
-        this.opt.development_extensions.static_statute_locator = true;
+        this.opt.development_extensions.consolidate_legal_items = true;
         this.opt.development_extensions.main_title_from_short_title = true;
         this.opt.development_extensions.expect_and_symbol_form = true;
         this.opt.development_extensions.require_explicit_legal_case_title_short = true;
@@ -4274,9 +4274,8 @@ CSL.Engine.prototype.retrieveItem = function (id) {
             }
         }
     }
-    if (this.opt.development_extensions.static_statute_locator) {
+    if (this.opt.development_extensions.consolidate_legal_items) {
         if (Item.type && ["bill","gazette","legislation","regulation","treaty"].indexOf(Item.type) > -1) {
-            
             var varname;
             var elements = ["type", "title", "jurisdiction", "genre", "volume", "container-title"];
             var legislation_id = [];
@@ -4296,6 +4295,20 @@ CSL.Engine.prototype.retrieveItem = function (id) {
 				}
 			}
 			Item.legislation_id = legislation_id.join("::");
+        }
+    }
+    if (this.opt.development_extensions.consolidate_legal_items) {
+        if (Item.type === "chapter") {
+            var varname;
+            var elements = ["type", "container-title", "publisher"];
+            var chapters_id = [];
+            for (var i = 0, ilen = elements.length; i < ilen; i += 1) {
+                varname = elements[i];
+				if (Item[varname]) {
+					chapters_id.push(Item[varname]);
+				}
+			}
+			Item.chapters_id = chapters_id.join("::");
         }
     }
     // For authority to name shape in legal styles
@@ -4494,7 +4507,7 @@ CSL.Engine.prototype.remapSectionVariable = function (inputList) {
 CSL.Engine.prototype.setNumberLabels = function (Item) {
      if (Item.number
         && ["bill", "gazette", "legislation","regulation","treaty"].indexOf(Item.type) > -1
-        && this.opt.development_extensions.static_statute_locator
+        && this.opt.development_extensions.consolidate_legal_items
         && !this.tmp.shadow_numbers["number"]) {
 
         this.tmp.shadow_numbers["number"] = {};
@@ -6410,6 +6423,7 @@ CSL.Engine.Opt = function () {
     };
 
     this.has_layout_locale = false;
+    this.disable_duplicate_year_suppression = [];
 
     this.development_extensions = {};
     this.development_extensions.field_hack = true;
@@ -6418,7 +6432,8 @@ CSL.Engine.Opt = function () {
     this.development_extensions.locator_label_parse = true;
     this.development_extensions.raw_date_parsing = true;
     this.development_extensions.clean_up_csl_flaws = true;
-    this.development_extensions.static_statute_locator = false;
+    this.development_extensions.consolidate_legal_items = false;
+    this.development_extensions.consolidate_chapter_items = false;
     this.development_extensions.csl_reverse_lookup_support = false;
     this.development_extensions.wrap_url_and_doi = false;
     this.development_extensions.thin_non_breaking_space_html_hack = false;
@@ -6986,7 +7001,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
             this.transform.loadAbbreviation("default", "hereinafter", Item.id);
         }
         item = CSL.parseLocator.call(this, item);
-        if (this.opt.development_extensions.static_statute_locator) {
+        if (this.opt.development_extensions.consolidate_legal_items) {
             this.remapSectionVariable([[Item,item]]);
         }
         if (this.opt.development_extensions.locator_label_parse) {
@@ -7241,13 +7256,18 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                 //
                 for (k = 0, klen = citations[j].sortedItems.length; k < klen; k += 1) {
                     item = citations[j].sortedItems[k];
-                    var myid = item[0].id;
+                    // Okay ...
+                    // We set up three IDs for use in position evaluation.
+                    // item_id is the real Item.id
+                    // first_id is the legislation_id or Item.id (so statutes backref to first in set, chapters to specific chapter)
+                    // last_id is the legislation_id or chapters_id (so statute AND chapter distance is from any ref in set)
+                    // (replaces myid)
+                    var item_id = item[0].id;
+                    var first_id = item[0].legislation_id ? item[0].legislation_id : item[0].id;
+                    var last_id = item[0].legislation_id ? item[0].legislation_id : item[0].chapters_id ? item[0].chapters_id : item[0].id;
                     var myxloc = item[1]["locator-extra"];
                     var mylocator = item[1].locator;
                     var mylabel = item[1].label;
-                    if (item[0].legislation_id) {
-                        myid = item[0].legislation_id;
-                    }
                     var incitationid;
                     var incitationxloc;
                     if (k > 0) {
@@ -7273,10 +7293,10 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     if (flag === CSL.PREVIEW) {
                         if (onecitation.citationID != citation.citationID) {
                             if ("undefined" === typeof first_ref[item[1].id]) {
-                                first_ref[myid] = onecitation.properties.noteIndex;
-                                last_ref[myid] = onecitation.properties.noteIndex;
+                                first_ref[first_id] = onecitation.properties.noteIndex;
+                                last_ref[last_id] = onecitation.properties.noteIndex;
                             } else {
-                                last_ref[myid] = onecitation.properties.noteIndex;
+                                last_ref[last_id] = onecitation.properties.noteIndex;
                             }
                             continue;
                         }
@@ -7287,24 +7307,24 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     oldvalue["near-note"] = item[1]["near-note"];
                     item[1]["first-reference-note-number"] = 0;
                     item[1]["near-note"] = false;
-                    if (this.registry.citationreg.citationsByItemId[myid]) {
+                    if (this.registry.citationreg.citationsByItemId[item_id]) {
                         if (this.opt.xclass === 'note' && this.opt.has_disambiguate) {
-                            var oldCount = this.registry.registry[myid]["citation-count"];
-                            var newCount = this.registry.citationreg.citationsByItemId[myid].length;
-                            this.registry.registry[myid]["citation-count"] = this.registry.citationreg.citationsByItemId[myid].length;
+                            var oldCount = this.registry.registry[last_id]["citation-count"];
+                            var newCount = this.registry.citationreg.citationsByItemId[item_id].length;
+                            this.registry.registry[last_id]["citation-count"] = this.registry.citationreg.citationsByItemId[item_id].length;
                             if ("number" === typeof oldCount) {
                                 var oldCountCheck = (oldCount < 2);
                                 var newCountCheck = (newCount < 2);
                                 if (oldCountCheck !== newCountCheck) {
-                                    for (var l=0,llen=this.registry.citationreg.citationsByItemId[myid].length;l<llen;l++) {
-                                        rerunAkeys[this.registry.registry[myid].ambig] = true;
-                                        this.tmp.taintedCitationIDs[this.registry.citationreg.citationsByItemId[myid][l].citationID] = true;
+                                    for (var l=0,llen=this.registry.citationreg.citationsByItemId[item_id].length;l<llen;l++) {
+                                        rerunAkeys[this.registry.registry[last_id].ambig] = true;
+                                        this.tmp.taintedCitationIDs[this.registry.citationreg.citationsByItemId[item_id][l].citationID] = true;
                                     }
                                 }
                             } else {
-                                for (var l=0,llen=this.registry.citationreg.citationsByItemId[myid].length;l<llen;l++) {
-                                    rerunAkeys[this.registry.registry[myid].ambig] = true;
-                                    this.tmp.taintedCitationIDs[this.registry.citationreg.citationsByItemId[myid][l].citationID] = true;
+                                for (var l=0,llen=this.registry.citationreg.citationsByItemId[item_id].length;l<llen;l++) {
+                                    rerunAkeys[this.registry.registry[last_id].ambig] = true;
+                                    this.tmp.taintedCitationIDs[this.registry.citationreg.citationsByItemId[item_id][l].citationID] = true;
                                 }
                             }
                         }
@@ -7312,12 +7332,12 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     var oldlastid;
                     var oldlastxloc;
 
-                    if ("undefined" === typeof first_ref[myid] && onecitation.properties.mode !== "author-only") {
-                        first_ref[myid] = onecitation.properties.noteIndex;
-                        if (this.registry.registry[myid]) {
-                            this.registry.registry[myid]['first-reference-note-number'] = onecitation.properties.noteIndex;
+                    if ("undefined" === typeof last_ref[last_id] && onecitation.properties.mode !== "author-only") {
+                        first_ref[first_id] = onecitation.properties.noteIndex;
+                        if (this.registry.registry[first_id]) {
+                            this.registry.registry[first_id]['first-reference-note-number'] = onecitation.properties.noteIndex;
                         }
-                        last_ref[myid] = onecitation.properties.noteIndex;
+                        last_ref[last_id] = onecitation.properties.noteIndex;
                         item[1].position = CSL.POSITION_FIRST;
                     } else {
                         //
@@ -7364,7 +7384,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                             if (prevCitation.sortedItems[0][0].legislation_id) {
                                 oldid = prevCitation.sortedItems[0][0].legislation_id;
                             }
-                            if ((oldid  == myid && prevCitation.properties.noteIndex >= (thisCitation.properties.noteIndex - 1))) {
+                            if ((oldid  == first_id && prevCitation.properties.noteIndex >= (thisCitation.properties.noteIndex - 1))) {
                                 var prevxloc = prevCitation.sortedItems[0][1]["locator-extra"];
                                 var thisxloc = thisCitation.sortedItems[0][1]["locator-extra"];
                                 if ((citationsInNote[prevCitation.properties.noteIndex] === 1 || prevCitation.properties.noteIndex === 0) && prevxloc === thisxloc) {
@@ -7376,7 +7396,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                             } else {
                                 suprame = true;
                             }
-                        } else if (k > 0 && incitationid == myid && incitationxloc == myxloc) {
+                        } else if (k > 0 && incitationid == first_id && incitationxloc == myxloc) {
                             // Case 2: immediately preceding source in this onecitation
                             // (1) Threshold conditions
                             //     (a) there must be an imediately preceding reference to  the
@@ -7384,7 +7404,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                             ibidme = true;
                         } else if (k === 0 && j > 0 && prevCitation.properties.noteIndex == thisCitation.properties.noteIndex
                                    && prevCitation.sortedItems.length 
-                                   && oldlastid == myid && oldlastxloc == myxloc) {
+                                   && oldlastid == first_id && oldlastxloc == myxloc) {
                             // ... in case there are separate citations in the same note ...
                             // Case 2 [take 2]: immediately preceding source in this onecitation
                             // (1) Threshold conditions
@@ -7463,38 +7483,39 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                         }
                         if (suprame) {
                             item[1].position = CSL.POSITION_SUBSEQUENT;
+                            item[1].real_subsequent = !!first_ref[first_id];
                         }
                         if (suprame || ibidme) {
                             if (onecitation.properties.mode === "author-only") {
                                 item[1].position = CSL.POSITION_FIRST;
                             }
-                            if (first_ref[myid] != onecitation.properties.noteIndex) {
-                                item[1]["first-reference-note-number"] = first_ref[myid];
-                                if (this.registry.registry[myid]) {
+                            if (first_ref[first_id] != onecitation.properties.noteIndex) {
+                                item[1]["first-reference-note-number"] = first_ref[first_id];
+                                if (this.registry.registry[first_id]) {
                                     // This is either the earliest recorded number, or the number of the current citation, whichever is smaller.
-                                    var oldFirst = this.registry.citationreg.citationsByItemId[myid][0].properties.noteIndex;
+                                    var oldFirst = this.registry.citationreg.citationsByItemId[item_id][0].properties.noteIndex;
                                     var newFirst = onecitation.properties.noteIndex;
-                                    this.registry.registry[myid]['first-reference-note-number'] = newFirst < oldFirst ? newFirst: oldFirst;
+                                    this.registry.registry[first_id]['first-reference-note-number'] = newFirst < oldFirst ? newFirst: oldFirst;
                                 }
                             }
                         }
                     }
                     if (onecitation.properties.noteIndex) {
-                        var note_distance = parseInt(onecitation.properties.noteIndex, 10) - parseInt(last_ref[myid], 10);
+                        var note_distance = parseInt(onecitation.properties.noteIndex, 10) - parseInt(last_ref[last_id], 10);
                         if (item[1].position !== CSL.POSITION_FIRST 
                             && note_distance <= this.citation.opt["near-note-distance"]) {
                             item[1]["near-note"] = true;
                         }
-                        last_ref[myid] = onecitation.properties.noteIndex;
+                        last_ref[last_id] = onecitation.properties.noteIndex;
                     }
                     if (onecitation.citationID != citation.citationID) {
                         for (n = 0, nlen = CSL.POSITION_TEST_VARS.length; n < nlen; n += 1) {
                             var param = CSL.POSITION_TEST_VARS[n];
                             if (item[1][param] !== oldvalue[param]) {
-                                if (this.registry.registry[myid]) {
+                                if (this.registry.registry[first_id]) {
                                     if (param === 'first-reference-note-number') {
-                                        rerunAkeys[this.registry.registry[myid].ambig] = true;
-                                        this.tmp.taintedItemIDs[myid] = true;
+                                        rerunAkeys[this.registry.registry[first_id].ambig] = true;
+                                        this.tmp.taintedItemIDs[first_id] = true;
                                     }
                                 }
                                 this.tmp.taintedCitationIDs[onecitation.citationID] = true;
@@ -7719,7 +7740,7 @@ CSL.Engine.prototype.makeCitationCluster = function (rawList) {
         newitem = [Item, item];
         inputList.push(newitem);
     }
-    if (this.opt.development_extensions.static_statute_locator) {
+    if (this.opt.development_extensions.consolidate_legal_items) {
         this.remapSectionVariable(inputList);
     }
     if (inputList && inputList.length > 1 && this.citation_sort.tokens.length > 0) {
@@ -8638,6 +8659,32 @@ CSL.getBibliographyEntries = function (bibsection) {
     }
 
     var processed_item_ids = [];
+
+    var consolidatedIDs = {};
+    this.tmp.chapter_count = {};
+    input = input.filter(o => {
+        var ret = o;
+        if (o.legislation_id) {
+            if (consolidatedIDs[o.legislation_id]) {
+                ret = false;
+            } else {
+                consolidatedIDs[o.legislation_id] = true;
+            }
+        } else if (o.chapters_id) {
+            if (!this.tmp.chapter_count[o.chapters_id]) {
+                this.tmp.chapter_count[o.chapters_id] = 0;
+            }
+            this.tmp.chapter_count[o.chapters_id]++;
+            if (this.bibliography.opt.consolidate_chapter_items) {
+                if (consolidatedIDs[o.chapters_id]) {
+                    ret = false;
+                } else {
+                    consolidatedIDs[o.chapters_id] = true;
+                }
+            }
+        }
+        return ret;
+    });
 
     for (i = 0, ilen = input.length; i < ilen; i += 1) {
         
@@ -9841,6 +9888,7 @@ CSL.Node.date = {
                 state.output.startTag("date", this);
                 if (this.variables[0] === "issued"
                     && (Item.type === "legal_case" || Item.type === "legislation")
+                    && state.opt.disable_duplicate_year_suppression.indexOf(Item.country) === -1
                     && !state.tmp.extension
                     && "" + Item["collection-number"] === "" + state.tmp.date_object.year
                     && this.dateparts.length === 1
@@ -15747,6 +15795,20 @@ CSL.Attributes["@position"] = function (state, arg) {
     }
 };
 
+CSL.Attributes["@strict-subsequent"] = function (state, arg) {
+    if (!this.tests) {this.tests = []; };
+    var tryval = arg === "true" ? true : false;
+    var maketest = function(tryval) {
+        return function (Item, item) {
+            if (!state.tmp.just_looking && tryval === item.real_subsequent) {
+                return true;
+            }
+            return false;
+        }
+    }
+    this.tests.push(maketest(tryval));
+}
+
 CSL.Attributes["@type"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
     // XXX This is ALWAYS composed as an "any" match
@@ -16396,6 +16458,21 @@ CSL.Attributes["@court-class"] = function (state, arg) {
     }
 };
 
+CSL.Attributes["@chapter-count"] = function (state, arg) {
+    if (!this.tests) {this.tests = []; };
+	var tryval = parseInt(arg, 10);
+    var maketest = function (tryval) {
+        return function(Item) {
+            if (state.tmp.chapter_count[Item.chapters_id] === tryval) {
+                return true;
+            }
+            return false;
+        };
+    };
+    this.tests.push(maketest(tryval));
+}
+
+
 CSL.Attributes["@has-subunit"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
     var maketest = function(namevar) {
@@ -16415,6 +16492,14 @@ CSL.Attributes["@has-subunit"] = function (state, arg) {
         };
     };
     this.tests.push(maketest(arg));
+}
+
+CSL.Attributes["@disable-duplicate-year-suppression"] = function (state, arg) {
+	state.opt.disable_duplicate_year_suppression = arg.split(/\s+/);
+}
+
+CSL.Attributes["@consolidate-chapter-items"] = function (state, arg) {
+    state.bibliography.opt.consolidate_chapter_items = arg === "true" ? true : false;
 }
 
 // These are not evaluated as conditions immediately: they only
