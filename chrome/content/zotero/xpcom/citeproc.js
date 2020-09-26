@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.18",
+    PROCESSOR_VERSION: "1.4.19",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -346,7 +346,7 @@ var CSL = {
         "country": "place",
         "number": "number",
         "place": "place",
-        "archive": "collection-title",
+        "archive": "container-title",
         "title-short": "title",
         "genre": "title",
         "event": "title",
@@ -3771,6 +3771,7 @@ CSL.Engine = function (sys, style, lang, forceLang) {
 
     if (this.opt.version.slice(0,4) === "1.1m") {
         this.opt.development_extensions.consolidate_legal_items = true;
+        this.opt.development_extensions.consolidate_container_items = true;
         this.opt.development_extensions.main_title_from_short_title = true;
         this.opt.development_extensions.expect_and_symbol_form = true;
         this.opt.development_extensions.require_explicit_legal_case_title_short = true;
@@ -4297,18 +4298,18 @@ CSL.Engine.prototype.retrieveItem = function (id) {
 			Item.legislation_id = legislation_id.join("::");
         }
     }
-    if (this.opt.development_extensions.consolidate_legal_items) {
-        if (Item.type === "chapter") {
+    if (this.bibliography.opt.track_container_items) {
+        if (this.bibliography.opt.track_container_items.indexOf(Item.type) > -1) {
             var varname;
-            var elements = ["type", "container-title", "publisher"];
-            var chapters_id = [];
+            var elements = ["type", "container-title", "publisher", "edition"];
+            var container_id = [];
             for (var i = 0, ilen = elements.length; i < ilen; i += 1) {
                 varname = elements[i];
 				if (Item[varname]) {
-					chapters_id.push(Item[varname]);
+					container_id.push(Item[varname]);
 				}
 			}
-			Item.chapters_id = chapters_id.join("::");
+			Item.container_id = container_id.join("::");
         }
     }
     // For authority to name shape in legal styles
@@ -6433,7 +6434,6 @@ CSL.Engine.Opt = function () {
     this.development_extensions.raw_date_parsing = true;
     this.development_extensions.clean_up_csl_flaws = true;
     this.development_extensions.consolidate_legal_items = false;
-    this.development_extensions.consolidate_chapter_items = false;
     this.development_extensions.csl_reverse_lookup_support = false;
     this.development_extensions.wrap_url_and_doi = false;
     this.development_extensions.thin_non_breaking_space_html_hack = false;
@@ -7260,11 +7260,11 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     // We set up three IDs for use in position evaluation.
                     // item_id is the real Item.id
                     // first_id is the legislation_id or Item.id (so statutes backref to first in set, chapters to specific chapter)
-                    // last_id is the legislation_id or chapters_id (so statute AND chapter distance is from any ref in set)
+                    // last_id is the legislation_id or container_id (so statute AND chapter distance is from any ref in set)
                     // (replaces myid)
                     var item_id = item[0].id;
                     var first_id = item[0].legislation_id ? item[0].legislation_id : item[0].id;
-                    var last_id = item[0].legislation_id ? item[0].legislation_id : item[0].chapters_id ? item[0].chapters_id : item[0].id;
+                    var last_id = item[0].legislation_id ? item[0].legislation_id : item[0].container_id ? item[0].container_id : item[0].id;
                     var myxloc = item[1]["locator-extra"];
                     var mylocator = item[1].locator;
                     var mylabel = item[1].label;
@@ -8661,7 +8661,7 @@ CSL.getBibliographyEntries = function (bibsection) {
     var processed_item_ids = [];
 
     var consolidatedIDs = {};
-    this.tmp.chapter_count = {};
+    this.tmp.container_item_count = {};
     input = input.filter(o => {
         var ret = o;
         if (o.legislation_id) {
@@ -8670,16 +8670,16 @@ CSL.getBibliographyEntries = function (bibsection) {
             } else {
                 consolidatedIDs[o.legislation_id] = true;
             }
-        } else if (o.chapters_id) {
-            if (!this.tmp.chapter_count[o.chapters_id]) {
-                this.tmp.chapter_count[o.chapters_id] = 0;
+        } else if (o.container_id) {
+            if (!this.tmp.container_item_count[o.container_id]) {
+                this.tmp.container_item_count[o.container_id] = 0;
             }
-            this.tmp.chapter_count[o.chapters_id]++;
-            if (this.bibliography.opt.consolidate_chapter_items) {
-                if (consolidatedIDs[o.chapters_id]) {
+            this.tmp.container_item_count[o.container_id]++;
+            if (this.bibliography.opt.consolidate_containers.indexOf(o.type) > -1) {
+                if (consolidatedIDs[o.container_id]) {
                     ret = false;
                 } else {
-                    consolidatedIDs[o.chapters_id] = true;
+                    consolidatedIDs[o.container_id] = true;
                 }
             }
         }
@@ -16458,12 +16458,12 @@ CSL.Attributes["@court-class"] = function (state, arg) {
     }
 };
 
-CSL.Attributes["@chapter-count"] = function (state, arg) {
+CSL.Attributes["@container-item-count"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
 	var tryval = parseInt(arg, 10);
     var maketest = function (tryval) {
         return function(Item) {
-            if (state.tmp.chapter_count[Item.chapters_id] === tryval) {
+            if (state.tmp.container_item_count[Item.container_id] === tryval) {
                 return true;
             }
             return false;
@@ -16498,8 +16498,18 @@ CSL.Attributes["@disable-duplicate-year-suppression"] = function (state, arg) {
 	state.opt.disable_duplicate_year_suppression = arg.split(/\s+/);
 }
 
-CSL.Attributes["@consolidate-chapter-items"] = function (state, arg) {
-    state.bibliography.opt.consolidate_chapter_items = arg === "true" ? true : false;
+CSL.Attributes["@consolidate-containers"] = function (state, arg) {
+    CSL.Attributes["@track-container-items"](state, arg);
+    var args = arg.split(/\s+/);
+    state.bibliography.opt.consolidate_containers = args;
+}
+
+CSL.Attributes["@track-container-items"] = function (state, arg) {
+    var args = arg.split(/\s+/);
+    if (!state.bibliography.opt.track_container_items) {
+        state.bibliography.opt.track_container_items = [];
+    }
+    state.bibliography.opt.track_container_items = state.bibliography.opt.track_container_items.concat(args);
 }
 
 // These are not evaluated as conditions immediately: they only
