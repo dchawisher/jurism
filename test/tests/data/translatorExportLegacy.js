@@ -654,6 +654,142 @@
     "libraryID": null,
     "seeAlso": []
   },
+  "legalCommentary": {
+    "itemType": "legalCommentary",
+    "multi": {
+      "main": {},
+      "_keys": {}
+    },
+    "url": "http://www.example.com",
+    "rights": "Rights",
+    "series": "Series",
+    "volume": "6",
+    "edition": "8",
+    "place": "Place",
+    "publisher": "Publisher",
+    "pages": "1-10",
+    "ISBN": "978-1-234-56789-7",
+    "date": "1999-12-31",
+    "callNumber": "Call number",
+    "archiveLocation": "Archive location",
+    "extra": "Extra",
+    "accessDate": "1997-06-13 23:59:58",
+    "seriesNumber": "9",
+    "numberOfVolumes": "7",
+    "libraryCatalog": "Library catalog",
+    "language": "en-US",
+    "abstractNote": "Abstract note",
+    "title": "Title",
+    "bookTitle": "Publication title",
+    "shortTitle": "Short title",
+    "archive": "Archive",
+    "volumeTitle": "Volume title",
+    "creators": [
+      {
+        "firstName": "authorFirst",
+        "lastName": "authorLast",
+        "creatorType": "author",
+        "multi": {
+          "_key": {}
+        }
+      },
+      {
+        "firstName": "bookAuthorFirst",
+        "lastName": "bookAuthorLast",
+        "creatorType": "bookAuthor",
+        "multi": {
+          "_key": {}
+        }
+      },
+      {
+        "firstName": "contributorFirst",
+        "lastName": "contributorLast",
+        "creatorType": "contributor",
+        "multi": {
+          "_key": {}
+        }
+      },
+      {
+        "firstName": "editorFirst",
+        "lastName": "editorLast",
+        "creatorType": "editor",
+        "multi": {
+          "_key": {}
+        }
+      },
+      {
+        "firstName": "recipientFirst",
+        "lastName": "recipientLast",
+        "creatorType": "recipient",
+        "multi": {
+          "_key": {}
+        }
+      },
+      {
+        "firstName": "seriesEditorFirst",
+        "lastName": "seriesEditorLast",
+        "creatorType": "seriesEditor",
+        "multi": {
+          "_key": {}
+        }
+      },
+      {
+        "firstName": "translatorFirst",
+        "lastName": "translatorLast",
+        "creatorType": "translator",
+        "multi": {
+          "_key": {}
+        }
+      },
+      {
+        "creatorType": "author",
+        "multi": {
+          "_key": {}
+        },
+        "fieldMode": 1,
+        "lastName": "Institutional Author"
+      }
+    ],
+    "tags": [],
+    "collections": [],
+    "relations": {},
+    "dateAdded": "2016-10-09 21:24:50",
+    "dateModified": "2016-10-09 21:24:50",
+    "uri": "http://zotero.org/users/local/nya4mXQL/items/U8Z2X7TH",
+    "attachments": [],
+    "notes": [],
+    "uniqueFields": {
+      "url": "http://www.example.com",
+      "rights": "Rights",
+      "series": "Series",
+      "volume": "6",
+      "edition": "8",
+      "place": "Place",
+      "publisher": "Publisher",
+      "pages": "1-10",
+      "ISBN": "978-1-234-56789-7",
+      "date": "1999-12-31",
+      "callNumber": "Call number",
+      "archiveLocation": "Archive location",
+      "extra": "Extra",
+      "accessDate": "1997-06-13 23:59:58",
+      "seriesNumber": "9",
+      "numberOfVolumes": "7",
+      "libraryCatalog": "Library catalog",
+      "language": "en-US",
+      "abstractNote": "Abstract note",
+      "title": "Title",
+      "publicationTitle": "Publication title",
+      "shortTitle": "Short title",
+      "archive": "Archive",
+      "volumeTitle": "Volume title"
+    },
+    "itemID": 7,
+    "key": "U8Z2X7TH",
+    "publicationTitle": "Publication title",
+    "libraryID": null,
+    "seeAlso": []
+  },
   "case": {
     "itemType": "case",
     "multi": {
@@ -673,6 +809,7 @@
     "history": "History",
     "reporter": "Publication title",
     "court": "Court",
+    "division": "Division",
     "language": "en-US",
     "abstractNote": "Abstract note",
     "dateDecided": "1999-12-31",
@@ -761,6 +898,7 @@
       "history": "History",
       "publicationTitle": "Publication title",
       "court": "Court",
+      "division": "Division",
       "language": "en-US",
       "abstractNote": "Abstract note",
       "date": "1999-12-31",

@@ -432,6 +432,103 @@
 			"_keys": {}
 		}
 	},
+	"legalCommentary": {
+		"ISBN": "978-1-234-56789-7",
+		"abstractNote": "Abstract note",
+		"accessDate": "1997-06-13T23:59:58Z",
+		"archive": "Archive",
+		"archiveLocation": "Archive location",
+		"callNumber": "Call number",
+		"creators": [
+			{
+				"creatorType": "author",
+				"firstName": "authorFirst",
+				"lastName": "authorLast",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"creatorType": "bookAuthor",
+				"firstName": "bookAuthorFirst",
+				"lastName": "bookAuthorLast",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"creatorType": "contributor",
+				"firstName": "contributorFirst",
+				"lastName": "contributorLast",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"creatorType": "editor",
+				"firstName": "editorFirst",
+				"lastName": "editorLast",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"creatorType": "recipient",
+				"firstName": "recipientFirst",
+				"lastName": "recipientLast",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"creatorType": "seriesEditor",
+				"firstName": "seriesEditorFirst",
+				"lastName": "seriesEditorLast",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"creatorType": "translator",
+				"firstName": "translatorFirst",
+				"lastName": "translatorLast",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"creatorType": "author",
+				"fieldMode": 1,
+				"lastName": "Institutional Author",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"date": "1999-12-31",
+		"edition": 8,
+		"extra": "Extra",
+		"itemType": "legalCommentary",
+		"language": "en-US",
+		"libraryCatalog": "Library catalog",
+		"numberOfVolumes": 7,
+		"pages": "1-10",
+		"place": "Place",
+		"publicationTitle": "Publication title",
+		"publisher": "Publisher",
+		"rights": "Rights",
+		"series": "Series",
+		"seriesNumber": 9,
+		"shortTitle": "Short title",
+		"title": "Title",
+		"url": "http://www.example.com",
+		"volume": 6,
+		"volumeTitle": "Volume title",
+		"multi": {
+			"main": {},
+			"_keys": {}
+		}
+	},
 	"case": {
 		"abstractNote": "Abstract note",
 		"accessDate": "1997-06-13T23:59:58Z",
@@ -491,6 +588,7 @@
 			}
 		],
 		"date": "1999-12-31",
+		"division": "Division",
 		"documentName": "Document name",
 		"extra": "Extra",
 		"filingDate": "2000-01-02",
