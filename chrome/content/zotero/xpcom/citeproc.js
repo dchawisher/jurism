@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.19",
+    PROCESSOR_VERSION: "1.4.20",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -594,7 +594,7 @@ var CSL = {
 
     AREAS: ["citation", "citation_sort", "bibliography", "bibliography_sort", "intext"],
 
-    CITE_FIELDS: ["first-reference-note-number", "locator", "locator-extra"],
+    CITE_FIELDS: ["first-reference-note-number", "first-container-reference-note-number", "locator", "locator-extra"],
 
     SWAPPING_PUNCTUATION: [".", "!", "?", ":", ","],
     TERMINAL_PUNCTUATION: [":", ".", ";", "!", "?", " "],
@@ -7220,6 +7220,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
             citations = [textCitations, noteCitations][i];
             var first_ref = {};
             var last_ref = {};
+            var first_container_ref = {};
             for (j = 0, jlen = citations.length; j < jlen; j += 1) {
                 var onecitation = citations[j];
                 if (!citations[j].properties.noteIndex) {
@@ -7230,6 +7231,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     citationsInNote = {};
                     first_ref = {};
                     last_ref = {};
+                    first_container_ref = {};
                 }
                 for (k = 0, klen = onecitation.sortedItems.length; k < klen; k += 1) {
                     if (onecitation.sortedItems[k][1].parallel && onecitation.sortedItems[k][1].parallel !== "first") {
@@ -7304,8 +7306,10 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     var oldvalue = {};
                     oldvalue.position = item[1].position;
                     oldvalue["first-reference-note-number"] = item[1]["first-reference-note-number"];
+                    oldvalue["first-container-reference-note-number"] = item[1]["first-container-reference-note-number"];
                     oldvalue["near-note"] = item[1]["near-note"];
                     item[1]["first-reference-note-number"] = 0;
+                    item[1]["first-container-reference-note-number"] = 0;
                     item[1]["near-note"] = false;
                     if (this.registry.citationreg.citationsByItemId[item_id]) {
                         if (this.opt.xclass === 'note' && this.opt.has_disambiguate) {
@@ -7331,13 +7335,24 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     }
                     var oldlastid;
                     var oldlastxloc;
+                    
+                    // Okay, chill.
+                    // The first test needs to be for presence of last_ref[last_id]. Everything
+                    // after in subsequent evaluation depends on that.
 
+                    // HOWEVER, despite starting with this test, we need to catch every member
+                    // of the set, and set its first-container-reference-note-number to point at the
+                    // first.
+
+                    // ALSO, despite starting with this test, we need to set first-reference-note-number
+                    // on every item.
+                    
+                    // So ... we run an independent test on first_ref[first_id]], and let this ride.
+                    
                     if ("undefined" === typeof last_ref[last_id] && onecitation.properties.mode !== "author-only") {
                         first_ref[first_id] = onecitation.properties.noteIndex;
-                        if (this.registry.registry[first_id]) {
-                            this.registry.registry[first_id]['first-reference-note-number'] = onecitation.properties.noteIndex;
-                        }
                         last_ref[last_id] = onecitation.properties.noteIndex;
+                        first_container_ref[last_id] = onecitation.properties.noteIndex;
                         item[1].position = CSL.POSITION_FIRST;
                     } else {
                         //
@@ -7484,18 +7499,31 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                         if (suprame) {
                             item[1].position = CSL.POSITION_SUBSEQUENT;
                             item[1].real_subsequent = !!first_ref[first_id];
+                            if (!first_ref[first_id]) {
+                                first_ref[first_id] = onecitation.properties.noteIndex;
+                            }
                         }
                         if (suprame || ibidme) {
                             if (onecitation.properties.mode === "author-only") {
                                 item[1].position = CSL.POSITION_FIRST;
                             }
+                            if (first_container_ref[last_id] != onecitation.properties.noteIndex) {
+                                item[1]['first-container-reference-note-number'] = first_container_ref[last_id];
+                                if (this.registry.registry[first_id]) {
+                                    this.registry.registry[first_id]['first-container-reference-note-number'] = first_container_ref[last_id];
+                                }
+                            }
                             if (first_ref[first_id] != onecitation.properties.noteIndex) {
                                 item[1]["first-reference-note-number"] = first_ref[first_id];
                                 if (this.registry.registry[first_id]) {
                                     // This is either the earliest recorded number, or the number of the current citation, whichever is smaller.
+                                    /*
                                     var oldFirst = this.registry.citationreg.citationsByItemId[item_id][0].properties.noteIndex;
                                     var newFirst = onecitation.properties.noteIndex;
                                     this.registry.registry[first_id]['first-reference-note-number'] = newFirst < oldFirst ? newFirst: oldFirst;
+                                     */
+                                    // Try this instead?
+                                    this.registry.registry[first_id]['first-reference-note-number'] = first_ref[first_id];
                                 }
                             }
                         }
@@ -15968,6 +15996,11 @@ CSL.Attributes["@variable"] = function (state, arg) {
                         output = true;
                     }
                     break;
+                } else if ("first-container-reference-note-number" === variable) {
+                    if (item && item["first-container-reference-note-number"]) {
+                        output = true;
+                    }
+                    break;
                 } else if ("hereinafter" === variable) {
                     if (state.transform.abbrevs["default"].hereinafter[Item.id]
                         && state.sys.getAbbreviation
@@ -16022,7 +16055,7 @@ CSL.Attributes["@variable"] = function (state, arg) {
         var maketest = function (variable) {
             return function(Item,item){
                 var myitem = Item;
-                if (item && ["locator", "locator-extra", "first-reference-note-number", "locator-date"].indexOf(variable) > -1) {
+                if (item && ["locator", "locator-extra", "first-reference-note-number", "first-container-reference-note-number", "locator-date"].indexOf(variable) > -1) {
                     myitem = item;
                 }
                 // We don't run loadAbbreviation() here; it is run by the application-supplied
