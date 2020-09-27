@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.23",
+    PROCESSOR_VERSION: "1.4.24",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -16500,7 +16500,7 @@ CSL.Attributes["@court-class"] = function (state, arg) {
     }
 };
 
-CSL.Attributes["@container-item-multiple"] = function (state, arg) {
+CSL.Attributes["@container-multiple"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
 	var retval = "true" === arg ? true : false;
     var maketest = function (retval) {
@@ -16516,7 +16516,7 @@ CSL.Attributes["@container-item-multiple"] = function (state, arg) {
     this.tests.push(maketest(retval));
 };
 
-CSL.Attributes["@container-subsequent-in-bibliography"] = function (state, arg) {
+CSL.Attributes["@container-subsequent"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
 	var retval = "true" === arg ? true : false;
     var maketest = function (retval) {
@@ -16556,12 +16556,12 @@ CSL.Attributes["@disable-duplicate-year-suppression"] = function (state, arg) {
 }
 
 CSL.Attributes["@consolidate-containers"] = function (state, arg) {
-    CSL.Attributes["@track-container-items"](state, arg);
+    CSL.Attributes["@track-containers"](state, arg);
     var args = arg.split(/\s+/);
     state.bibliography.opt.consolidate_containers = args;
 }
 
-CSL.Attributes["@track-container-items"] = function (state, arg) {
+CSL.Attributes["@track-containers"] = function (state, arg) {
     var args = arg.split(/\s+/);
     if (!state.bibliography.opt.track_container_items) {
         state.bibliography.opt.track_container_items = [];
