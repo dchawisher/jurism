@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.20",
+    PROCESSOR_VERSION: "1.4.23",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -589,7 +589,16 @@ var CSL = {
     POSITION_SUBSEQUENT: 1,
     POSITION_IBID: 2,
     POSITION_IBID_WITH_LOCATOR: 3,
+    POSITION_CONTAINER_SUBSEQUENT: 4,
 
+    POSITION_MAP: {
+        "0": 0,
+        "4": 1,
+        "1": 2,
+        "2": 3,
+        "3": 4
+    },
+    
     POSITION_TEST_VARS: ["position", "first-reference-note-number", "near-note"],
 
     AREAS: ["citation", "citation_sort", "bibliography", "bibliography_sort", "intext"],
@@ -7497,8 +7506,10 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                             }
                         }
                         if (suprame) {
-                            item[1].position = CSL.POSITION_SUBSEQUENT;
-                            item[1].real_subsequent = !!first_ref[first_id];
+                            item[1].position = CSL.POSITION_CONTAINER_SUBSEQUENT;
+                            if (first_ref[first_id]) {
+                                item[1].position = CSL.POSITION_SUBSEQUENT;
+                            }
                             if (!first_ref[first_id]) {
                                 first_ref[first_id] = onecitation.properties.noteIndex;
                             }
@@ -7817,7 +7828,7 @@ CSL.getAmbiguousCite = function (Item, disambig, visualForm, item) {
         this.tmp.disambig_request = false;
     }
     var itemSupp = {
-        position: 1,
+        position: CSL.POSITION_SUBSEQUENT,
         "near-note": true
     };
 
@@ -8714,6 +8725,8 @@ CSL.getBibliographyEntries = function (bibsection) {
         return ret;
     });
 
+    this.tmp.container_item_pos = {};
+
     for (i = 0, ilen = input.length; i < ilen; i += 1) {
         
         // For paged returns
@@ -8799,6 +8812,14 @@ CSL.getBibliographyEntries = function (bibsection) {
         if (debug) {
             CSL.debug("BIB: " + item.id);
         }
+
+        if (item.container_id) {
+            if (!this.tmp.container_item_pos[item.container_id]) {
+                this.tmp.container_item_pos[item.container_id] = 0;
+            }
+            this.tmp.container_item_pos[item.container_id]++;
+        }
+        
         //SNIP-END
         bib_entry = new CSL.Token("group", CSL.START);
         bib_entry.decorations = [["@bibliography", "entry"]].concat(this.bibliography.opt.layout_decorations);
@@ -15771,13 +15792,13 @@ CSL.Attributes["@position"] = function (state, arg) {
     state.opt.update_mode = CSL.POSITION;
     var trypositions = arg.split(/\s+/);
     var testSubsequentNear = function (Item, item) {
-        if (item && item.position >= CSL.POSITION_SUBSEQUENT && item["near-note"]) {
+        if (item && CSL.POSITION_MAP[item.position] >= CSL.POSITION_MAP[CSL.POSITION_SUBSEQUENT] && item["near-note"]) {
             return true;
         }
         return false;
     };
     var testSubsequentNotNear = function (Item, item) {
-        if (item && item.position == CSL.POSITION_SUBSEQUENT && !item["near-note"]) {
+        if (item && CSL.POSITION_MAP[item.position] == CSL.POSITION_MAP[CSL.POSITION_SUBSEQUENT] && !item["near-note"]) {
             return true;
         }
         return false;
@@ -15793,7 +15814,7 @@ CSL.Attributes["@position"] = function (state, arg) {
             if (item && typeof item.position === "number") {
                 if (item.position === 0 && tryposition === 0) {
                     return true;
-                } else if (tryposition > 0 && item.position >= tryposition) {
+                } else if (tryposition > 0 && CSL.POSITION_MAP[item.position] >= CSL.POSITION_MAP[tryposition]) {
                     return true;
                 }
             } else if (tryposition === 0) {
@@ -15806,6 +15827,8 @@ CSL.Attributes["@position"] = function (state, arg) {
         var tryposition = trypositions[i];
         if (tryposition === "first") {
             tryposition = CSL.POSITION_FIRST;
+        } else if (tryposition === "container-subsequent") {
+            tryposition = CSL.POSITION_CONTAINER_SUBSEQUENT;
         } else if (tryposition === "subsequent") {
             tryposition = CSL.POSITION_SUBSEQUENT;
         } else if (tryposition === "ibid") {
@@ -15822,20 +15845,6 @@ CSL.Attributes["@position"] = function (state, arg) {
         }
     }
 };
-
-CSL.Attributes["@strict-subsequent"] = function (state, arg) {
-    if (!this.tests) {this.tests = []; };
-    var tryval = arg === "true" ? true : false;
-    var maketest = function(tryval) {
-        return function (Item, item) {
-            if (!state.tmp.just_looking && tryval === item.real_subsequent) {
-                return true;
-            }
-            return false;
-        }
-    }
-    this.tests.push(maketest(tryval));
-}
 
 CSL.Attributes["@type"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
@@ -16491,20 +16500,35 @@ CSL.Attributes["@court-class"] = function (state, arg) {
     }
 };
 
-CSL.Attributes["@container-item-count"] = function (state, arg) {
+CSL.Attributes["@container-item-multiple"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
-	var tryval = parseInt(arg, 10);
-    var maketest = function (tryval) {
+	var retval = "true" === arg ? true : false;
+    var maketest = function (retval) {
         return function(Item) {
-            if (state.tmp.container_item_count[Item.container_id] === tryval) {
-                return true;
+            if (!state.tmp.container_item_count[Item.container_id]) {
+                return !retval;
+            } else if (state.tmp.container_item_count[Item.container_id] > 1) {
+                return retval;
             }
-            return false;
+            return !retval;
         };
     };
-    this.tests.push(maketest(tryval));
-}
+    this.tests.push(maketest(retval));
+};
 
+CSL.Attributes["@container-subsequent-in-bibliography"] = function (state, arg) {
+    if (!this.tests) {this.tests = []; };
+	var retval = "true" === arg ? true : false;
+    var maketest = function (retval) {
+        return function(Item) {
+            if (state.tmp.container_item_pos[Item.container_id] > 1) {
+                return retval;
+            }
+            return !retval;
+        };
+    };
+    this.tests.push(maketest(retval));
+};
 
 CSL.Attributes["@has-subunit"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
@@ -16541,6 +16565,9 @@ CSL.Attributes["@track-container-items"] = function (state, arg) {
     var args = arg.split(/\s+/);
     if (!state.bibliography.opt.track_container_items) {
         state.bibliography.opt.track_container_items = [];
+    }
+    if (!state.bibliography.opt.consolidate_containers) {
+        state.bibliography.opt.consolidate_containers = [];
     }
     state.bibliography.opt.track_container_items = state.bibliography.opt.track_container_items.concat(args);
 }
@@ -19468,6 +19495,7 @@ CSL.Util.substituteStart = function (state, target) {
                 }
                 var positionMap = [
                     "first",
+                    "container-subsequent",
                     "subsequent",
                     "ibid",
                     "ibid-with-locator"
@@ -19479,6 +19507,10 @@ CSL.Util.substituteStart = function (state, target) {
                 var firstReferenceNoteNumber = 0;
                 if (item && item['first-reference-note-number']) {
                     firstReferenceNoteNumber = item['first-reference-note-number'];
+                }
+                var firstContainerReferenceNoteNumber = 0;
+                if (item && item['first-container-reference-note-number']) {
+                    firstContainerReferenceNoteNumber = item['first-container-reference-note-number'];
                 }
                 var citationNumber = 0;
                 // XXX Will this EVER happen?
@@ -19497,6 +19529,7 @@ CSL.Util.substituteStart = function (state, target) {
                     position: positionMap[position],
                     "note-number": noteNumber,
                     "first-reference-note-number": firstReferenceNoteNumber,
+                    "first-container-reference-note-number": firstContainerReferenceNoteNumber,
                     "citation-number": citationNumber,
                     "index": index,
                     "mode": state.opt.mode
