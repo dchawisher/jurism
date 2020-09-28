@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.24",
+    PROCESSOR_VERSION: "1.4.25",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -13660,7 +13660,8 @@ CSL.NameOutput.prototype._renderOnePersonalName = function (value, pos, i, j) {
     var dropping_particle = this._droppingParticle(name, pos, j);
     var family = this._familyName(name);
     var non_dropping_particle = this._nonDroppingParticle(name);
-    var given = this._givenName(name, pos, i);
+    var givenInfo = this._givenName(name, pos, i);
+    var given = givenInfo.blob;
     var suffix = this._nameSuffix(name);
     if (given === false) {
         dropping_particle = false;
@@ -13693,19 +13694,29 @@ CSL.NameOutput.prototype._renderOnePersonalName = function (value, pos, i, j) {
     
     var has_hyphenated_non_dropping_particle = hasJoiningPunctuation(non_dropping_particle);
 
+    var nbspace;
+    if (["fr", "ru", "cs"].indexOf(this.state.opt["default-locale"][0].slice(0, 2)) > -1) {
+        nbspace = "\u00a0";
+    } else {
+        nbspace = " ";
+    }
+
     var blob, merged, first, second;
     if (romanesque === 0) {
         // XXX handle affixes for given and family
         blob = this._join([non_dropping_particle, family, given], "");
     } else if (romanesque === 1 || name["static-ordering"]) { // entry likes sort order
-        blob = this._join([non_dropping_particle, family, given], " ");
+        merged = this._join([non_dropping_particle, family], nbspace);
+        blob = this._join([merged, given], " ");
     } else if (name["reverse-ordering"]) { // entry likes reverse order
-        blob = this._join([given, non_dropping_particle, family], " ");
+        merged = this._join([non_dropping_particle, family], nbspace);
+        blob = this._join([given, merged], " ");
     } else if (this.state.tmp.sort_key_flag) {
         // ok with no affixes here
         if (this.state.opt["demote-non-dropping-particle"] === "never") {
-            first = this._join([non_dropping_particle, family, dropping_particle], " ");
-            merged = this._join([first, given], this.state.opt.sort_sep);
+            merged = this._join([non_dropping_particle, family], nbspace);
+            merged = this._join([merged, dropping_particle], " ");
+            merged = this._join([merged, given], this.state.opt.sort_sep);
             blob = this._join([merged, suffix], " ");
         } else {
             second = this._join([given, dropping_particle, non_dropping_particle], " ");
@@ -13752,7 +13763,7 @@ CSL.NameOutput.prototype._renderOnePersonalName = function (value, pos, i, j) {
             if (has_hyphenated_non_dropping_particle) {
                 first = this._join([non_dropping_particle, family], "");
             } else {
-                first = this._join([non_dropping_particle, family], " ");
+                first = this._join([non_dropping_particle, family], nbspace);
             }
             if (first && this.family) {
                 first.strings.prefix = this.family.strings.prefix;
@@ -13780,18 +13791,11 @@ CSL.NameOutput.prototype._renderOnePersonalName = function (value, pos, i, j) {
             }
         }
 
-        var space = " ";
-        if (this.state.inheritOpt(this.name, "initialize-with")
-            && this.state.inheritOpt(this.name, "initialize-with").match(/[\u00a0\ufeff]/)
-            && ["fr", "ru", "cs"].indexOf(this.state.opt["default-locale"][0].slice(0, 2)) > -1) {
-            space = "\u00a0";
-        }
-
         if (has_hyphenated_non_dropping_particle) {
             second = this._join([non_dropping_particle, family], "");
-            second = this._join([dropping_particle, second], space);
+            second = this._join([dropping_particle, second], nbspace);
         } else {
-            second = this._join([dropping_particle, non_dropping_particle, family], space);
+            second = this._join([dropping_particle, non_dropping_particle, family], nbspace);
         }
         second = this._join([second, suffix], suffix_sep);
         if (second && this.family) {
@@ -13804,6 +13808,16 @@ CSL.NameOutput.prototype._renderOnePersonalName = function (value, pos, i, j) {
         }
         if (second.strings.prefix) {
             name["comma-dropping-particle"] = "";
+        }
+
+        var space;
+        if (this.state.inheritOpt(this.name, "initialize-with")
+            && this.state.inheritOpt(this.name, "initialize-with").match(/[\u00a0\ufeff]/)
+            && givenInfo.initializationLevel === 1) {
+            
+            space = nbspace;
+        } else {
+            space = " ";
         }
         blob = this._join([given, second], (name["comma-dropping-particle"] + space));
     }
@@ -13959,7 +13973,9 @@ CSL.NameOutput.prototype._givenName = function (name, pos, i) {
             name.given = CSL.Util.Names.unInitialize(this.state, name.given);
         }
     } else if (useLevel === 0) {
-        return false;
+        return {
+            blob: false
+        }
     } else if (useLevel === 2) {
         name.given = CSL.Util.Names.unInitialize(this.state, name.given);
     }
@@ -13968,9 +13984,14 @@ CSL.NameOutput.prototype._givenName = function (name, pos, i) {
     var rendered = this.state.output.append(str, this.given_decor, true);
     if (rendered) {
         ret = this.state.output.pop();
-	    return ret;
+	    return {
+            blob: ret,
+            initializationLevel: useLevel
+        };
     }
-    return false;
+    return {
+        blob: false
+    };
 };
 
 CSL.NameOutput.prototype._nameSuffix = function (name) {
