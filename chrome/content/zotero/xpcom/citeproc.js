@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.27",
+    PROCESSOR_VERSION: "1.4.28",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -12589,7 +12589,7 @@ CSL.NameOutput.prototype.joinPersons = function (blobs, pos, j, tokenname) {
         } else if (!this.state.tmp.sort_key_flag) {
             ret = this._joinAnd(blobs);
         } else {
-            ret = this._join(blobs, " ");
+            ret = this._join(blobs, this.state.inheritOpt(this.name, "delimiter", "name-delimiter", ", "));
         }
     } else {
         if (this.etal_spec[pos].persons[j] === 1) {
@@ -12599,7 +12599,7 @@ CSL.NameOutput.prototype.joinPersons = function (blobs, pos, j, tokenname) {
         } else if (!this.state.tmp.sort_key_flag) {
             ret = this._joinAnd(blobs);
         } else {
-            ret = this._join(blobs, " ");
+            ret = this._join(blobs, this.state.inheritOpt(this.name, "delimiter", "name-delimiter", ", "));
         }
     }
     return ret;
@@ -12670,8 +12670,8 @@ CSL.NameOutput.prototype._getAndJoin = function (blobs, delimiter) {
 };
 
 CSL.NameOutput.prototype._joinEtAl = function (blobs) {
-    //
-    var blob = this._join(blobs, this.state.tmp.name_delimiter);
+    var delimiter = this.state.inheritOpt(this.name, "delimiter", "name-delimiter", ", ");
+    var blob = this._join(blobs, delimiter);
     
     // notSerious
     this.state.output.openLevel(this._getToken("name"));
@@ -12690,10 +12690,7 @@ CSL.NameOutput.prototype._joinEtAl = function (blobs) {
 
 
 CSL.NameOutput.prototype._joinEllipsis = function (blobs) {
-    var delimiter = this.state.tmp.name_delimiter;
-    if ("undefined" === typeof delimiter) {
-        delimiter = ", ";
-    }
+    var delimiter = this.state.inheritOpt(this.name, "delimiter", "name-delimiter", ", ");
     var finalJoin = false;
     if (blobs.length > 1) {
         var singleOrMultiple = "single";
@@ -12708,10 +12705,7 @@ CSL.NameOutput.prototype._joinEllipsis = function (blobs) {
 };
 
 CSL.NameOutput.prototype._joinAnd = function (blobs) {
-    var delimiter = this.state.inheritOpt(this.name, "delimiter");
-    if ("undefined" === typeof delimiter) {
-        delimiter = ", ";
-    }
+    var delimiter = this.state.inheritOpt(this.name, "delimiter", "name-delimiter", ", ");
     var finalJoin = this._getAndJoin(blobs, delimiter);
     return this._join(blobs, delimiter, finalJoin);
 };
@@ -12719,9 +12713,6 @@ CSL.NameOutput.prototype._joinAnd = function (blobs) {
 
 CSL.NameOutput.prototype._join = function (blobs, delimiter, finalJoin) {
     var i, ilen;
-    if ("undefined" === typeof delimiter) {
-        delimiter = ", ";
-    }
     if (!blobs) {
         return false;
     }
