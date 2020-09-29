@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.25",
+    PROCESSOR_VERSION: "1.4.27",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -96,10 +96,10 @@ var CSL = {
         return str;
     },
 
-    LOCATOR_LABELS_REGEXP: new RegExp("^((vrs|sv|subpara|op|subch|add|amend|annot|app|art|bibliog|bk|ch|cl|col|cmt|dec|dept|div|ex|fig|fld|fol|n|hypo|illus|intro|l|no|p|pp|para|pt|pmbl|princ|pub|r|sched|sec|ser|subdiv|subsec|supp|tbl|tit|vol)\\.)\\s+(.*)"),
+    LOCATOR_LABELS_REGEXP: new RegExp("^((vrs|sv|subpara|op|subch|add|amend|annot|app|art|bibliog|bk|ch|cl|col|cmt|dec|dept|div|ex|fig|fld|fol|n|hypo|illus|intro|l|no|p|pp|para|pt|pmbl|princ|pub|r|rn|sched|sec|ser|subdiv|subsec|supp|tbl|tit|vol)\\.)\\s+(.*)"),
 
-    STATUTE_SUBDIV_PLAIN_REGEX: /(?:(?:^| )(?:vrs|sv|subpara|op|subch|add|amend|annot|app|art|bibliog|bk|ch|cl|col|cmt|dec|dept|div|ex|fig|fld|fol|n|hypo|illus|intro|l|no|p|pp|para|pt|pmbl|princ|pub|r|sched|sec|ser|subdiv|subsec|supp|tbl|tit|vol)\. *)/,
-    STATUTE_SUBDIV_PLAIN_REGEX_FRONT: /(?:^\s*[.,;]*\s*(?:vrs|sv|subpara|op|subch|add|amend|annot|app|art|bibliog|bk|ch|cl|col|cmt|dec|dept|div|ex|fig|fld|fol|n|hypo|illus|intro|l|no|p|pp|para|pt|pmbl|princ|pub|r|sched|sec|ser|subdiv|subsec|supp|tbl|tit|vol)\. *)/,
+    STATUTE_SUBDIV_PLAIN_REGEX: /(?:(?:^| )(?:vrs|sv|subpara|op|subch|add|amend|annot|app|art|bibliog|bk|ch|cl|col|cmt|dec|dept|div|ex|fig|fld|fol|n|hypo|illus|intro|l|no|p|pp|para|pt|pmbl|princ|pub|r|rn|sched|sec|ser|subdiv|subsec|supp|tbl|tit|vol)\. *)/,
+    STATUTE_SUBDIV_PLAIN_REGEX_FRONT: /(?:^\s*[.,;]*\s*(?:vrs|sv|subpara|op|subch|add|amend|annot|app|art|bibliog|bk|ch|cl|col|cmt|dec|dept|div|ex|fig|fld|fol|n|hypo|illus|intro|l|no|p|pp|para|pt|pmbl|princ|pub|r|rn|sched|sec|ser|subdiv|subsec|supp|tbl|tit|vol)\. *)/,
  
     STATUTE_SUBDIV_STRINGS: {
         "vrs.": "verse",
@@ -139,6 +139,7 @@ var CSL = {
         "princ.": "principle",
         "pub.": "publication",
         "r.": "rule",
+        "rn.": "randnummer",
         "sched.": "schedule",
         "sec.": "section",
         "ser.": "series,",
@@ -187,6 +188,7 @@ var CSL = {
         "principle": "princ.",
         "publication": "pub.",
         "rule": "r.",
+        "randnummer": "rn.",
         "schedule": "sched.",
         "section": "sec.",
         "series,": "ser.",
@@ -236,6 +238,7 @@ var CSL = {
         "princ": "principle",
         "pub": "publication",
         "r": "rule",
+        "rn": "randnummer",
         "sched": "schedule",
         "sec": "section",
         "ser": "series,",
@@ -1246,58 +1249,68 @@ var CSL = {
     },
     SUPERSCRIPTS_REGEXP: new RegExp("[\u00AA\u00B2\u00B3\u00B9\u00BA\u02B0\u02B1\u02B2\u02B3\u02B4\u02B5\u02B6\u02B7\u02B8\u02E0\u02E1\u02E2\u02E3\u02E4\u1D2C\u1D2D\u1D2E\u1D30\u1D31\u1D32\u1D33\u1D34\u1D35\u1D36\u1D37\u1D38\u1D39\u1D3A\u1D3C\u1D3D\u1D3E\u1D3F\u1D40\u1D41\u1D42\u1D43\u1D44\u1D45\u1D46\u1D47\u1D48\u1D49\u1D4A\u1D4B\u1D4C\u1D4D\u1D4F\u1D50\u1D51\u1D52\u1D53\u1D54\u1D55\u1D56\u1D57\u1D58\u1D59\u1D5A\u1D5B\u1D5C\u1D5D\u1D5E\u1D5F\u1D60\u1D61\u2070\u2071\u2074\u2075\u2076\u2077\u2078\u2079\u207A\u207B\u207C\u207D\u207E\u207F\u2120\u2122\u3192\u3193\u3194\u3195\u3196\u3197\u3198\u3199\u319A\u319B\u319C\u319D\u319E\u319F\u02C0\u02C1\u06E5\u06E6]", "g"),
 
-    UPDATE_GROUP_CONTEXT_CONDITION: function (state, termtxt, valueTerm) {
+    UPDATE_GROUP_CONTEXT_CONDITION: function (state, str, valueTerm, token, value) {
+        if (!state.opt.use_context_condition) return;
         if (state.tmp.group_context.tip.condition) {
             if (!state.tmp.group_context.tip.condition.termtxt) {
-                state.tmp.group_context.tip.condition.termtxt = termtxt;
+                state.tmp.group_context.tip.condition.termtxt = str;
                 state.tmp.group_context.tip.condition.valueTerm = valueTerm;
+            }
+            if (state.tmp.group_context.tip.condition.test === "comma-safe-numbers-only") {
+                if (value && !value.match(/^[0-9]/)) {
+                    state.tmp.just_did_number = false;
+                }
             }
         } else {
             // If not inside a conditional group, raise numeric flag
             // if and only if the current term string ends in a number.
-            if (termtxt.slice(-1).match(/[0-9]/)) {
-                state.tmp.just_did_number = true;
-            } else {
+            if (token.decorations.filter(o => o[0] === "@vertical-align").length > 0) {
                 state.tmp.just_did_number = false;
+            } else if (token.strings.suffix) {
+                state.tmp.just_did_number = false;
+            } else if (str) {
+                if (str.slice(-1).match(/[0-9]/)) {
+                    state.tmp.just_did_number = true;
+                } else {
+                    state.tmp.just_did_number = false;
+                }
             }
         }
     },
 
     EVALUATE_GROUP_CONDITION: function(state, flags) {
+        if (!state.opt.use_context_condition) return;
         var testres;
         if (flags.condition.test === "empty-label") {
             testres = !flags.condition.termtxt;
         } else if (flags.condition.test === "empty-label-no-decor") {
             testres = !flags.condition.termtxt || flags.condition.termtxt.indexOf("%s") > -1;
-        } else if (flags.condition.test === "comma-safe") {
+        } else if (["comma-safe", "comma-safe-numbers-only"].indexOf(flags.condition.test) > -1) {
             var empty = !flags.condition.termtxt;
             var termStartAlpha = false;
             if (flags.condition.termtxt) {
                 termStartAlpha = flags.condition.termtxt.slice(0,1).match(CSL.ALL_ROMANESQUE_REGEXP);
             }
             var num = state.tmp.just_did_number;
-            if (empty || flags.condition.valueTerm) {
-                // i.e. Big L. Rev. 100, 102
-                //      Little L. Rev. 102
-                //      L. Rev. for Plan 9, 102
-                if (num) {
+            if (num) {
+                if (empty || flags.condition.valueTerm) {
+                    testres = true;
+                } else if (termStartAlpha) {
+                    testres = true;
+                } else if (["always", "after-number"].indexOf(state.opt.require_comma_on_symbol) > -1) {
                     testres = true;
                 } else {
                     testres = false;
                 }
             } else {
-                if (num) {
-                    if (termStartAlpha || ["always", "after-number"].indexOf(state.opt.require_comma_on_symbol) > -1) {
-                        testres = true;
-                    } else {
-                        testres = false;
-                    }
+                if (empty || flags.condition.valueTerm) {
+                    testres = false;
+                } else if (termStartAlpha) {
+                    testres = true;
+                } else if (state.opt.require_comma_on_symbol === "always") {
+                    testres = true;
                 } else {
-                    if (termStartAlpha || state.opt.require_comma_on_symbol === "always") {
-                        testres = true;
-                    } else {
-                        testres = false;
-                    }
+                    testres = false;
                 }
             }
         }
@@ -6434,6 +6447,7 @@ CSL.Engine.Opt = function () {
 
     this.has_layout_locale = false;
     this.disable_duplicate_year_suppression = [];
+    this.use_context_condition = false;
 
     this.development_extensions = {};
     this.development_extensions.field_hack = true;
@@ -7322,21 +7336,21 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     item[1]["near-note"] = false;
                     if (this.registry.citationreg.citationsByItemId[item_id]) {
                         if (this.opt.xclass === 'note' && this.opt.has_disambiguate) {
-                            var oldCount = this.registry.registry[last_id]["citation-count"];
+                            var oldCount = this.registry.registry[first_id]["citation-count"];
                             var newCount = this.registry.citationreg.citationsByItemId[item_id].length;
-                            this.registry.registry[last_id]["citation-count"] = this.registry.citationreg.citationsByItemId[item_id].length;
+                            this.registry.registry[first_id]["citation-count"] = this.registry.citationreg.citationsByItemId[item_id].length;
                             if ("number" === typeof oldCount) {
                                 var oldCountCheck = (oldCount < 2);
                                 var newCountCheck = (newCount < 2);
                                 if (oldCountCheck !== newCountCheck) {
                                     for (var l=0,llen=this.registry.citationreg.citationsByItemId[item_id].length;l<llen;l++) {
-                                        rerunAkeys[this.registry.registry[last_id].ambig] = true;
+                                        rerunAkeys[this.registry.registry[first_id].ambig] = true;
                                         this.tmp.taintedCitationIDs[this.registry.citationreg.citationsByItemId[item_id][l].citationID] = true;
                                     }
                                 }
                             } else {
                                 for (var l=0,llen=this.registry.citationreg.citationsByItemId[item_id].length;l<llen;l++) {
-                                    rerunAkeys[this.registry.registry[last_id].ambig] = true;
+                                    rerunAkeys[this.registry.registry[first_id].ambig] = true;
                                     this.tmp.taintedCitationIDs[this.registry.citationreg.citationsByItemId[item_id][l].citationID] = true;
                                 }
                             }
@@ -10344,7 +10358,7 @@ CSL.Node.group = {
                 if (this.realGroup) {
                     
                     if (state.tmp.group_context.tip.condition) {
-                        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, this.strings.prefix);
+                        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, this.strings.prefix, null, this);
                     }
                     
                     var condition = false;
@@ -11215,7 +11229,7 @@ CSL.Node.label = {
                 if (termtxt) {
                     state.tmp.group_context.tip.term_intended = true;
                 }
-                CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, termtxt);
+                CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, termtxt, null, this);
                 if (termtxt.indexOf("%s") === -1) {
                     // ^ Suppress output here if we have an embedded term
                     if (this.strings.capitalize_if_first) {
@@ -15084,12 +15098,12 @@ CSL.Node.number = {
 
             if (["locator", "locator-extra"].indexOf(varname) > -1) {
                 // amazing that we reach this. should abort sooner if no content?
-                CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, node.strings.prefix);
                 state.processNumber.call(state, node, item, varname, Item.type);
             } else {
                 if (!state.tmp.group_context.tip.condition) {
                     state.tmp.just_did_number = true;
                 }
+                // UPDATE_GROUP_CONTEXT_CONDITION is run by processNumber
                 state.processNumber.call(state, node, Item, varname, Item.type);
             }
 
@@ -15417,7 +15431,7 @@ CSL.Node.text = {
                         if (term !== "") {
                             state.tmp.group_context.tip.term_intended = true;
                         }
-                        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, term);
+                        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, term, null, this);
                         
                         // capitalize the first letter of a term, if it is the
                         // first thing rendered in a citation (or if it is
@@ -15649,7 +15663,7 @@ CSL.Node.text = {
                     func = function (state) {
                         state.tmp.group_context.tip.term_intended = true;
                         // true flags that this is a literal-value term
-                        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, this.strings.value, true);
+                        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, this.strings.value, true, this);
                         state.output.append(this.strings.value, this);
                     };
                     this.execs.push(func);
@@ -16657,6 +16671,7 @@ CSL.Attributes["@no-repeat"] = function (state, arg) {
 };
 
 CSL.Attributes["@require"] = function (state, arg) {
+    state.opt.use_context_condition = true;
     this.strings.require = arg;
 
     // Introduced to constrain rendering of the group with a
@@ -16670,6 +16685,7 @@ CSL.Attributes["@require"] = function (state, arg) {
 };
 
 CSL.Attributes["@reject"] = function (state, arg) {
+    state.opt.use_context_condition = true;
     this.strings.reject = arg;
 
     // Introduced to constrain rendering of the group with a
@@ -18249,6 +18265,7 @@ CSL.Transform = function (state) {
                 if (primary_locale) {
                     state.tmp.lang_array = [primary_locale].concat(oldLangArray);
                 }
+                CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, null, null, primary_tok);
                 state.output.append(primary, primary_tok);
                 state.tmp.probably_rendered_something = true;
             }
@@ -20614,6 +20631,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
 CSL.Util.outputNumericField = function(state, varname, itemID) {
 
     state.output.openLevel(state.tmp.shadow_numbers[varname].masterStyling);
+    var masterStyling = state.tmp.shadow_numbers[varname].masterStyling;
     var nums = state.tmp.shadow_numbers[varname].values;
     var masterLabel = nums.length ? nums[0].label : null;
     var labelForm = state.tmp.shadow_numbers[varname].labelForm;
@@ -20676,6 +20694,7 @@ CSL.Util.outputNumericField = function(state, varname, itemID) {
         numStyling.type = num.styling.type;
         numStyling.num = num.styling.num;
         numStyling.gender = num.styling.gender;
+        
         if (labelPlaceholderPos > 0 && labelPlaceholderPos < (label.length-2)) {
             numStyling.strings.prefix += label.slice(0,labelPlaceholderPos);
             numStyling.strings.suffix = label.slice(labelPlaceholderPos+2) + numStyling.strings.suffix;
@@ -20693,6 +20712,7 @@ CSL.Util.outputNumericField = function(state, varname, itemID) {
                 state.output.append(label+num.labelSuffix, "empty");
             }
         }
+        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, masterStyling.strings.prefix, null, masterStyling, num.value);
         if (num.collapsible) {
             var blob;
             if (num.value.match(/^[1-9][0-9]*$/)) {
