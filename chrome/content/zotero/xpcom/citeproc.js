@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.30",
+    PROCESSOR_VERSION: "1.4.31",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -1273,9 +1273,9 @@ var CSL = {
         } else {
             // If not inside a conditional group, raise numeric flag
             // if and only if the current term string ends in a number.
-            if (token.decorations.filter(o => o[0] === "@vertical-align").length > 0) {
+            if (token && token.decorations.filter(o => o[0] === "@vertical-align").length > 0) {
                 state.tmp.just_did_number = false;
-            } else if (token.strings.suffix) {
+            } else if (token && token.strings.suffix) {
                 state.tmp.just_did_number = false;
             } else if (str) {
                 if (str.match(/[0-9]$/)) {
@@ -10275,7 +10275,7 @@ CSL.Node["date-part"] = {
             if (Item[date_variable] && (value || state.tmp.have_collapsed) && !state.opt.has_year_suffix && "year" === this.strings.name && !state.tmp.just_looking) {
                 if (state.registry.registry[Item.id] && state.registry.registry[Item.id].disambig.year_suffix !== false && !state.tmp.has_done_year_suffix) {
                     state.tmp.has_done_year_suffix = true;
-                    last_string_output = "a";
+                    last_string_output = "x";
                     num = parseInt(state.registry.registry[Item.id].disambig.year_suffix, 10);
                     // first argument is for number particle [a-zA-Z], never present on dates
                     number = new CSL.NumericBlob(false, num, this, Item.id);
@@ -10299,6 +10299,7 @@ CSL.Node["date-part"] = {
             }
             if (last_string_output && !state.tmp.group_context.tip.condition) {
                 state.tmp.just_did_number = last_string_output.match(/[0-9]$/);
+                state.tmp.just_did_number = !state.output.current.tip.strings.suffix;
             }
         };
         this.execs.push(func);
@@ -20732,7 +20733,7 @@ CSL.Util.outputNumericField = function(state, varname, itemID) {
                 state.output.append(label+num.labelSuffix, "empty");
             }
         }
-        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, masterStyling.strings.prefix, null, masterStyling, num.value);
+        CSL.UPDATE_GROUP_CONTEXT_CONDITION(state, masterStyling.strings.prefix, null, masterStyling, `${num.particle}${num.value}`);
         if (num.collapsible) {
             var blob;
             if (num.value.match(/^[1-9][0-9]*$/)) {
