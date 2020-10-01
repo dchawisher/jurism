@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.32",
+    PROCESSOR_VERSION: "1.4.33",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -10624,14 +10624,12 @@ CSL.Node.group = {
             
             // quashnonfields
             func = function (state, Item, item) {
-                state.output.endTag();
-                if (!this.realGroup) {
-                    if (!state.tmp.group_context.tip.condition) {
-                        if (this.strings.suffix) {
-                            state.tmp.just_did_number = false;
-                        }
+                if (!state.tmp.group_context.tip.condition) {
+                    if (state.output.current.tip.strings.suffix) {
+                        state.tmp.just_did_number = false;
                     }
                 }
+                state.output.endTag();
                 if (this.realGroup) {
                     var flags = state.tmp.group_context.pop();
                     if (flags.parallel_delimiter_override) {
@@ -10744,7 +10742,6 @@ CSL.Node.group = {
         }
     }
 };
-
 
 /*global CSL: true */
 
