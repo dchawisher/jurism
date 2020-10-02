@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.33",
+    PROCESSOR_VERSION: "1.4.34",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -1551,7 +1551,6 @@ CSL.XmlJSON = function (dataObj) {
         name:"institution",
         attrs:{
             "institution-parts":"long",
-            "delimiter":", ",
             "substitute-use-first":"1",
             "use-last":"1"
         },
