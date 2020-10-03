@@ -60,7 +60,8 @@ Zotero.Jurism.PATCH = {
 			"volume-title": ["volumeTitle"],
 			jurisdiction: ["jurisdiction"],
 			"publication-number": ["publicationNumber"],
-			supplement: ["supplementName"]
+			supplement: ["supplementName"],
+			division: ["division"]
 		},
 		extend: {
 			"container-title": ["album", "websiteTitle", "bookTitle"],
