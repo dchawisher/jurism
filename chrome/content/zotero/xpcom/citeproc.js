@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.34",
+    PROCESSOR_VERSION: "1.4.35",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -16240,6 +16240,28 @@ CSL.Attributes["@jurisdiction"] = function (state, arg) {
         };
     };
     this.tests.push(maketests(tryjurisdictions));
+};
+
+CSL.Attributes["@country"] = function (state, arg) {
+    if (!this.tests) {this.tests = []; };
+    var trycountries = arg.split(/\s+/);
+    
+    // This forces a match=any method, similar to @type
+    var maketests = function (trycountries) {
+        return function(Item) {
+            if (!Item.country) {
+                return false;
+            }
+            var country = Item.country;
+            for (var i=0,ilen=trycountries.length;i<ilen;i++) {
+                if (country === trycountries[i]) {
+                    return true;
+                }
+            }
+            return false;
+        };
+    };
+    this.tests.push(maketests(trycountries));
 };
 
 CSL.Attributes["@context"] = function (state, arg) {
