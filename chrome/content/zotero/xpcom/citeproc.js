@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.35",
+    PROCESSOR_VERSION: "1.4.36",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -1296,17 +1296,17 @@ var CSL = {
         } else if (flags.condition.test === "empty-label-no-decor") {
             testres = !flags.condition.termtxt || flags.condition.termtxt.indexOf("%s") > -1;
         } else if (["comma-safe", "comma-safe-numbers-only"].indexOf(flags.condition.test) > -1) {
-            var empty = !flags.condition.termtxt;
+            var locale_term = flags.condition.termtxt;
             var termStartAlpha = false;
             if (flags.condition.termtxt) {
                 termStartAlpha = flags.condition.termtxt.slice(0,1).match(CSL.ALL_ROMANESQUE_REGEXP);
             }
             var num = state.tmp.just_did_number;
             if (num) {
-                if (empty) {
-                    testres = true;
-                } else if (flags.condition.valueTerm) {
+                if (flags.condition.valueTerm) {
                     testres = numbersOnly ? false : true;
+                } else if (!locale_term) {
+                    testres = true;
                 } else if (termStartAlpha) {
                     testres = numbersOnly ? false : true;
                 } else if (["always", "after-number"].indexOf(state.opt.require_comma_on_symbol) > -1) {
@@ -1315,7 +1315,9 @@ var CSL = {
                     testres = false;
                 }
             } else {
-                if (empty || flags.condition.valueTerm) {
+                if (flags.condition.valueTerm) {
+                    testres = false;
+                } else if (!locale_term) {
                     testres = false;
                 } else if (termStartAlpha) {
                     testres = numbersOnly ? false : true;
@@ -7349,19 +7351,19 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                         if (this.opt.xclass === 'note' && this.opt.has_disambiguate) {
                             var oldCount = this.registry.registry[first_id]["citation-count"];
                             var newCount = this.registry.citationreg.citationsByItemId[item_id].length;
-                            this.registry.registry[first_id]["citation-count"] = this.registry.citationreg.citationsByItemId[item_id].length;
+                            this.registry.registry[item[0].id]["citation-count"] = this.registry.citationreg.citationsByItemId[item_id].length;
                             if ("number" === typeof oldCount) {
                                 var oldCountCheck = (oldCount < 2);
                                 var newCountCheck = (newCount < 2);
                                 if (oldCountCheck !== newCountCheck) {
                                     for (var l=0,llen=this.registry.citationreg.citationsByItemId[item_id].length;l<llen;l++) {
-                                        rerunAkeys[this.registry.registry[first_id].ambig] = true;
+                                        rerunAkeys[this.registry.registry[item[0].id].ambig] = true;
                                         this.tmp.taintedCitationIDs[this.registry.citationreg.citationsByItemId[item_id][l].citationID] = true;
                                     }
                                 }
                             } else {
                                 for (var l=0,llen=this.registry.citationreg.citationsByItemId[item_id].length;l<llen;l++) {
-                                    rerunAkeys[this.registry.registry[first_id].ambig] = true;
+                                    rerunAkeys[this.registry.registry[item[0].id].ambig] = true;
                                     this.tmp.taintedCitationIDs[this.registry.citationreg.citationsByItemId[item_id][l].citationID] = true;
                                 }
                             }
@@ -7545,21 +7547,21 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                             }
                             if (first_container_ref[last_id] != onecitation.properties.noteIndex) {
                                 item[1]['first-container-reference-note-number'] = first_container_ref[last_id];
-                                if (this.registry.registry[first_id]) {
-                                    this.registry.registry[first_id]['first-container-reference-note-number'] = first_container_ref[last_id];
+                                if (this.registry.registry[item[0].id]) {
+                                    this.registry.registry[item[0].id]['first-container-reference-note-number'] = first_container_ref[last_id];
                                 }
                             }
                             if (first_ref[first_id] != onecitation.properties.noteIndex) {
                                 item[1]["first-reference-note-number"] = first_ref[first_id];
-                                if (this.registry.registry[first_id]) {
+                                if (this.registry.registry[item[0].id]) {
                                     // This is either the earliest recorded number, or the number of the current citation, whichever is smaller.
                                     /*
                                     var oldFirst = this.registry.citationreg.citationsByItemId[item_id][0].properties.noteIndex;
                                     var newFirst = onecitation.properties.noteIndex;
-                                    this.registry.registry[first_id]['first-reference-note-number'] = newFirst < oldFirst ? newFirst: oldFirst;
+                                    this.registry.registry[item[0].id]['first-reference-note-number'] = newFirst < oldFirst ? newFirst: oldFirst;
                                      */
                                     // Try this instead?
-                                    this.registry.registry[first_id]['first-reference-note-number'] = first_ref[first_id];
+                                    this.registry.registry[item[0].id]['first-reference-note-number'] = first_ref[first_id];
                                 }
                             }
                         }
@@ -7576,10 +7578,10 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                         for (n = 0, nlen = CSL.POSITION_TEST_VARS.length; n < nlen; n += 1) {
                             var param = CSL.POSITION_TEST_VARS[n];
                             if (item[1][param] !== oldvalue[param]) {
-                                if (this.registry.registry[first_id]) {
+                                if (this.registry.registry[item[0].id]) {
                                     if (param === 'first-reference-note-number') {
-                                        rerunAkeys[this.registry.registry[first_id].ambig] = true;
-                                        this.tmp.taintedItemIDs[first_id] = true;
+                                        rerunAkeys[this.registry.registry[item[0].id].ambig] = true;
+                                        this.tmp.taintedItemIDs[item[0].id] = true;
                                     }
                                 }
                                 this.tmp.taintedCitationIDs[onecitation.citationID] = true;
@@ -16688,14 +16690,6 @@ CSL.Attributes["@parallel-last-to-first"] = function (state, arg) {
     this.parallel_last_to_first = {};
     for (var i=0,ilen=vars.length;i<ilen;i++) {
         this.parallel_last_to_first[vars[i]] = true;
-    }
-};
-CSL.Attributes["@parallel-last-override"] = function (state, arg) {
-    var vars = arg.split(/\s+/);
-    this.parallel_last_override = {};
-    for (var i in vars) {
-        var v = vars[i];
-        this.parallel_last_override[v] = true;
     }
 };
 CSL.Attributes["@parallel-delimiter-override"] = function (state, arg) {
