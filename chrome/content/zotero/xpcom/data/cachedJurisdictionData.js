@@ -132,7 +132,7 @@ Zotero.CachedJurisdictionData = new function() {
 			_courtNameToId[jurisdictionID] = {};
 		}
 		var locale = Zotero.locale ? Zotero.locale.split("-")[0] : "en";
-		let sql = "SELECT courtID,courtName FROM (SELECT * FROM (SELECT * FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) GROUP BY jurisdictionID) WHERE lang=? OR lang IS NULL ORDER BY lang) JU "
+		let sql = "SELECT courtID,courtName FROM (SELECT * FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) WHERE lang=? OR lang IS NULL ORDER BY lang) JU "
 			+ "JOIN jurisdictionCourts JC USING(jurisdictionIdx) "
 			+ "JOIN courts USING(courtIdx) "
 			+ "WHERE jurisdictionID=? ";
