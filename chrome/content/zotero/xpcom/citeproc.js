@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.38",
+    PROCESSOR_VERSION: "1.4.39",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -7349,7 +7349,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
                     item[1]["near-note"] = false;
                     if (this.registry.citationreg.citationsByItemId[item_id]) {
                         if (this.opt.xclass === 'note' && this.opt.has_disambiguate) {
-                            var oldCount = this.registry.registry[first_id]["citation-count"];
+                            var oldCount = this.registry.registry[item[0].id]["citation-count"];
                             var newCount = this.registry.citationreg.citationsByItemId[item_id].length;
                             this.registry.registry[item[0].id]["citation-count"] = this.registry.citationreg.citationsByItemId[item_id].length;
                             if ("number" === typeof oldCount) {
@@ -12067,6 +12067,9 @@ CSL.NameOutput.prototype.outputNames = function () {
     // set on element_trace.
     // Need to rescue the value for collapse comparison.
     var namesToken = CSL.Util.cloneToken(this.names);
+    if (this.state.tmp.group_context.tip.condition) {
+        CSL.UPDATE_GROUP_CONTEXT_CONDITION(this.state, this.names.strings.prefix, null, this.names);
+    }
     this.state.output.append(blob, namesToken);
     if (this.state.tmp.term_predecessor_name) {
         this.state.tmp.term_predecessor = true;
