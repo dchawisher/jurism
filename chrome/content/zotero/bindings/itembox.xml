@@ -3631,14 +3631,14 @@
 					}
 
 					var nonMatchHighlight = false;
-					if (!result) {
-						// In this case, revert to existing content for all types.
-						result = {val: node.getAttribute("oldValue"), comment: node.getAttribute("oldComment")};
-					} else if (!result.val) {
-						// In this case, revert only if pure legal type, not article, report, or standard
+					if (!result || !result.val) {
 						var itemType = Zotero.ItemTypes.getName(this.item.itemTypeID);
 						if (["report","newspaperArticle","journalArticle", "standard"].indexOf(itemType) > -1) {
-							result = {val: "", result: ""}
+							if (this.saveOnEdit) {
+								this.item.setField("jurisdiction", "");
+								await this.item.saveTx();
+								return;
+							}
 						} else {
 							result = {val: node.getAttribute("oldValue"), comment: node.getAttribute("oldComment")};
 						}
