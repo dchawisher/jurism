@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.39",
+    PROCESSOR_VERSION: "1.4.40",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -342,6 +342,34 @@ var CSL = {
         this["title-phrase"] = {};
     },
 
+    getAbbrevsDomain: function (state, lang) {
+        if (state.opt.availableAbbrevDomains) {
+		    var domain = null;
+	        var globalDomainPreference = state.locale[state.opt.lang].opts["jurisdiction-preference"];
+		    var itemDomainPreference = null;
+		    if (state.locale[lang]) {
+			    itemDomainPreference = state.locale[lang].opts["jurisdiction-preference"];
+		    }
+		    if (itemDomainPreference) {
+			    for (var j=itemDomainPreference.length-1; j > -1; j--) {
+				    if (state.opt.availableAbbrevDomains.indexOf(itemDomainPreference[j]) > -1) {
+					    domain = itemDomainPreference[j];
+					    break;
+				    }
+			    }
+		    }
+		    if (!domain && globalDomainPreference) {
+			    for (var j=globalDomainPreference.length-1; j > -1; j--) {
+				    if (state.opt.availableAbbrevDomains.indexOf(globalDomainPreference[j]) > -1) {
+					    domain = globalDomainPreference[j];
+					    break;
+				    }
+			    }
+		    }
+        }
+        return domain;
+    },
+    
     FIELD_CATEGORY_REMAP: {
         "title": "title",
         "container-title": "container-title",
@@ -4394,7 +4422,7 @@ CSL.Engine.prototype.retrieveItem = function (id) {
         } else {
             normalizedKey = Item.title;
         }
-        var jurisdiction = this.transform.loadAbbreviation(Item.jurisdiction, "title", normalizedKey, Item.type);
+        var jurisdiction = this.transform.loadAbbreviation(Item.jurisdiction, "title", normalizedKey, Item.language);
         if (this.transform.abbrevs[jurisdiction].title) {
             if (this.transform.abbrevs[jurisdiction].title[normalizedKey]) {
                 Item["title-short"] = this.transform.abbrevs[jurisdiction].title[normalizedKey];
@@ -4410,7 +4438,7 @@ CSL.Engine.prototype.retrieveItem = function (id) {
         } else {
             normalizedKey = Item["container-title"];
         }
-        var jurisdiction = this.transform.loadAbbreviation(Item.jurisdiction, "container-title", normalizedKey);
+        var jurisdiction = this.transform.loadAbbreviation(Item.jurisdiction, "container-title", normalizedKey, Item.language);
         if (this.transform.abbrevs[jurisdiction]["container-title"]) {
             if (this.transform.abbrevs[jurisdiction]["container-title"][normalizedKey]) {
                 Item["container-title-short"] = this.transform.abbrevs[jurisdiction]["container-title"][normalizedKey];
@@ -7034,7 +7062,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
         }
         Item = this.retrieveItem("" + item.id);
         if (Item.id) {
-            this.transform.loadAbbreviation("default", "hereinafter", Item.id);
+            this.transform.loadAbbreviation("default", "hereinafter", Item.id, Item.language);
         }
         item = CSL.parseLocator.call(this, item);
         if (this.opt.development_extensions.consolidate_legal_items) {
@@ -9392,14 +9420,33 @@ CSL.Engine.prototype.localeSet = function (myxml, lang_in, lang_out) {
         // Xml: get a list of all "locale" nodes
         //
         nodes = myxml.getNodesByName(myxml.dataObj, "locale");
+        var foundLocale = false;
         for (pos = 0, len = myxml.numberofnodes(nodes); pos < len; pos += 1) {
             blob = nodes[pos];
             //
             // Xml: get locale xml:lang
             //
-            if (myxml.getAttributeValue(blob, 'lang', 'xml') === lang_in) {
+            // Iterate over all locales, but for non-matching nodes,
+            // we set jurisdiction_preference only (processing of the
+            // chosen one will process the attribute there,
+            // separately.
+            if (!foundLocale && myxml.getAttributeValue(blob, 'lang', 'xml') === lang_in) {
                 locale = blob;
-                break;
+                foundLocale = true;
+            } else {
+                var lang = myxml.getAttributeValue(blob, 'lang', 'xml');
+                var style_options = myxml.getNodesByName(blob, 'style-options');
+                if (lang && style_options && style_options.length) {
+                    var jurispref = myxml.getAttributeValue(style_options[0], 'jurisdiction-preference');
+                    if (jurispref) {
+                        if (!this.locale[lang]) {
+                            this.locale[lang] = {
+                                opts: {}
+                            };
+                        }
+                        this.locale[lang].opts["jurisdiction-preference"] = jurispref.split(/\s+/);
+                    }
+                }
             }
         }
     }
@@ -12122,7 +12169,7 @@ CSL.NameOutput.prototype.outputNames = function () {
             }
             author_title = author_title.join(", ");
             if (author_title && this.state.sys.getAbbreviation) {
-                this.state.transform.loadAbbreviation("default", "classic", author_title);
+                this.state.transform.loadAbbreviation("default", "classic", author_title, this.Item.language);
                 if (this.state.transform.abbrevs["default"].classic[author_title]) {
                     this.state.tmp.done_vars.push("title");
                     this.state.output.append(this.state.transform.abbrevs["default"].classic[author_title], "empty", true);
@@ -12589,7 +12636,7 @@ CSL.NameOutput.prototype._checkNickname = function (name) {
                 // The first argument does not have to be the exact variable name.
                 normalizedKey = this.state.sys.normalizeAbbrevsKey("author", author);
             }
-            this.state.transform.loadAbbreviation("default", "nickname", normalizedKey);
+            this.state.transform.loadAbbreviation("default", "nickname", normalizedKey, this.Item.language);
             // XXX Why does this have to happen here?
             var myLocalName = this.state.transform.abbrevs["default"].nickname[normalizedKey];
             if (myLocalName) {
@@ -14293,7 +14340,7 @@ CSL.NameOutput.prototype.fixupInstitution = function (name, varname, listpos) {
         var jurisdiction = itemJurisdiction;
         for (var j = 0, jlen = long_form.length; j < jlen; j += 1) {
             var abbrevKey = long_form[j];
-            jurisdiction = this.state.transform.loadAbbreviation(jurisdiction, "institution-part", abbrevKey);
+            jurisdiction = this.state.transform.loadAbbreviation(jurisdiction, "institution-part", abbrevKey, this.Item.language);
             if (this.state.transform.abbrevs[jurisdiction]["institution-part"][abbrevKey]) {
                 short_form[j] = this.state.transform.abbrevs[jurisdiction]["institution-part"][abbrevKey];
                 use_short_form = true;
@@ -14373,7 +14420,7 @@ CSL.NameOutput.prototype._splitInstitution = function (value, v, i) {
             var jurisdiction = itemJurisdiction;
             var str = splitInstitution.slice(0, j).join("|");
             var abbrevKey = str;
-            jurisdiction = this.state.transform.loadAbbreviation(jurisdiction, "institution-entire", abbrevKey);
+            jurisdiction = this.state.transform.loadAbbreviation(jurisdiction, "institution-entire", abbrevKey, this.Item.language);
             if (this.state.transform.abbrevs[jurisdiction]["institution-entire"][abbrevKey]) {
                 var splitLst = this.state.transform.abbrevs[jurisdiction]["institution-entire"][abbrevKey];
 
@@ -17744,7 +17791,7 @@ CSL.Transform = function (state) {
             } else {
                 preferredJurisdiction = "default";
             }
-            var jurisdiction = state.transform.loadAbbreviation(preferredJurisdiction, myabbrev_family, normalizedKey, Item.type);
+            var jurisdiction = state.transform.loadAbbreviation(preferredJurisdiction, myabbrev_family, normalizedKey, Item.language);
 
             // Some rules:
             // # variable === "country"
@@ -17962,9 +18009,13 @@ CSL.Transform = function (state) {
     // Setter for abbreviation lists
     // This initializes a single abbreviation based on known
     // data.
-    function loadAbbreviation(jurisdiction, category, orig, itemType) {
+    function loadAbbreviation(jurisdiction, category, orig, lang) {
         if (!jurisdiction) {
             jurisdiction = "default";
+        }
+        var domain = CSL.getAbbrevsDomain(state, lang);
+        if (domain) {
+            jurisdiction += ("@" + domain);
         }
         if (!orig) {
             if (!state.transform.abbrevs[jurisdiction]) {
@@ -17983,9 +18034,12 @@ CSL.Transform = function (state) {
         //
         // See testrunner_stdrhino.js for an example.
         if (state.sys.getAbbreviation) {
-            jurisdiction = state.sys.getAbbreviation(state.opt.styleID, state.transform.abbrevs, jurisdiction, category, orig, itemType, true);
+            jurisdiction = state.sys.getAbbreviation(state.opt.styleID, state.transform.abbrevs, jurisdiction, category, orig);
             if (!jurisdiction) {
                 jurisdiction = "default";
+                if (domain) {
+                    jurisdiction += ("@" + domain);
+                }
             }
         }
         return jurisdiction;
@@ -19198,6 +19252,8 @@ CSL.Util.Dates.year.imperial = function (state, num, end) {
         label = '\u5e73\u6210';
         offset = 1988;
     }
+    // This entire "imperial" code block should be cut. Scraped input
+    // for this will be too ratty to be useful anyway.
     if (label && offset) {
         var normalizedKey = label;
         if (state.sys.normalizeAbbrevsKey) {
@@ -19206,7 +19262,9 @@ CSL.Util.Dates.year.imperial = function (state, num, end) {
             normalizedKey = state.sys.normalizeAbbrevsKey("number", label);
         }
         if (!state.transform.abbrevs['default']['number'][normalizedKey]) {
-            state.transform.loadAbbreviation('default', "number", normalizedKey);
+            // loadAbbreviation normally takes an item as fourth argument.
+            // It is not available here, 
+            state.transform.loadAbbreviation('default', "number", normalizedKey, null);
         }
         if (state.transform.abbrevs['default']['number'][normalizedKey]) {
             label = state.transform.abbrevs['default']['number'][normalizedKey];
@@ -20584,7 +20642,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
         // No need for this.
         //val = ("" + val).replace(/^\"/, "").replace(/\"$/, "");
 
-        var jurisdiction = this.transform.loadAbbreviation(ItemObject.jurisdiction, "number", val);
+        var jurisdiction = this.transform.loadAbbreviation(ItemObject.jurisdiction, "number", val, ItemObject.language);
         if (this.transform.abbrevs[jurisdiction].number) {
             if (this.transform.abbrevs[jurisdiction].number[val]) {
                 val = this.transform.abbrevs[jurisdiction].number[val];
