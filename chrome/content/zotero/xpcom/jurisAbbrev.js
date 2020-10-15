@@ -8,7 +8,7 @@ Zotero.JurisAbbrevs = new function() {
 	Components.utils.import("resource://gre/modules/FileUtils.jsm");
 	
 	this.init = Zotero.Promise.coroutine(function* (options = {}) {
-		Zotero.debug("[Jurism] Running JurisAbbrevs init", 1);
+		Zotero.debug("[Jurism] Running JurisAbbrevs init to load abbrev file metadata", 1);
 		// Wait until bundled files have been updated, except when this is called by the schema update
 		// code itself
 		if (!options.fromSchemaUpdate) {

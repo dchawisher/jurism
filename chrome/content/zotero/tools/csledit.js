@@ -203,7 +203,10 @@ var Zotero_CSL_Editor = new function() {
 		var citations = '<h3>' + Zotero.getString('styles.editor.output.individualCitations') + '</h3>';
 
 		if (Zotero.CiteProc.CSL.preloadAbbreviations) {
+			Zotero.debug(`XXXZ BOOM got preloadAbbreviations. YAY!`);
 			yield Zotero.CiteProc.CSL.preloadAbbreviations(styleEngine, citation);
+		} else {
+			Zotero.debug(`XXXZ BANG no preloadAbbreviations available. DAMN!`);
 		}
 		if (Zotero.CiteProc.CSL.setSuppressedJurisdictions) {
 			yield Zotero.CiteProc.CSL.setSuppressedJurisdictions(styleEngine.opt.styleID, styleEngine.opt.suppressedJurisdictions);
