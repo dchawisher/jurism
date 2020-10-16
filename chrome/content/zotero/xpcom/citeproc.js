@@ -14420,6 +14420,7 @@ CSL.NameOutput.prototype._splitInstitution = function (value, v, i) {
             var jurisdiction = itemJurisdiction;
             var str = splitInstitution.slice(0, j).join("|");
             var abbrevKey = str;
+            dump(`XXXZ jurisdiction fed with institution-entire is: ${jurisdiction}`);
             jurisdiction = this.state.transform.loadAbbreviation(jurisdiction, "institution-entire", abbrevKey, this.Item.language);
             if (this.state.transform.abbrevs[jurisdiction]["institution-entire"][abbrevKey]) {
                 var splitLst = this.state.transform.abbrevs[jurisdiction]["institution-entire"][abbrevKey];
