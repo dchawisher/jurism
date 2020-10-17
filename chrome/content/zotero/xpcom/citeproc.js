@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.40",
+    PROCESSOR_VERSION: "1.4.41",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -342,9 +342,9 @@ var CSL = {
         this["title-phrase"] = {};
     },
 
-    getAbbrevsDomain: function (state, lang) {
-        if (state.opt.availableAbbrevDomains) {
-		    var domain = null;
+    getAbbrevsDomain: function (state, country, lang) {
+		var domain = null;
+        if (state.opt.availableAbbrevDomains && country && country !== "default") {
 	        var globalDomainPreference = state.locale[state.opt.lang].opts["jurisdiction-preference"];
 		    var itemDomainPreference = null;
 		    if (state.locale[lang]) {
@@ -352,7 +352,7 @@ var CSL = {
 		    }
 		    if (itemDomainPreference) {
 			    for (var j=itemDomainPreference.length-1; j > -1; j--) {
-				    if (state.opt.availableAbbrevDomains.indexOf(itemDomainPreference[j]) > -1) {
+				    if (state.opt.availableAbbrevDomains[country].indexOf(itemDomainPreference[j]) > -1) {
 					    domain = itemDomainPreference[j];
 					    break;
 				    }
@@ -360,7 +360,7 @@ var CSL = {
 		    }
 		    if (!domain && globalDomainPreference) {
 			    for (var j=globalDomainPreference.length-1; j > -1; j--) {
-				    if (state.opt.availableAbbrevDomains.indexOf(globalDomainPreference[j]) > -1) {
+				    if (state.opt.availableAbbrevDomains[country].indexOf(globalDomainPreference[j]) > -1) {
 					    domain = globalDomainPreference[j];
 					    break;
 				    }
@@ -4418,7 +4418,7 @@ CSL.Engine.prototype.retrieveItem = function (id) {
             noHints = true;
         }
         if (this.sys.normalizeAbbrevsKey) {
-            normalizedKey = this.sys.normalizeAbbrevsKey(Item.title);
+             normalizedKey = this.sys.normalizeAbbrevsKey("title", Item.title);
         } else {
             normalizedKey = Item.title;
         }
@@ -12169,6 +12169,9 @@ CSL.NameOutput.prototype.outputNames = function () {
             }
             author_title = author_title.join(", ");
             if (author_title && this.state.sys.getAbbreviation) {
+                if (this.state.sys.normalizeAbbrevsKey) {
+                    author_title = this.state.sys.normalizeAbbrevsKey("classic", author_title);
+                }
                 this.state.transform.loadAbbreviation("default", "classic", author_title, this.Item.language);
                 if (this.state.transform.abbrevs["default"].classic[author_title]) {
                     this.state.tmp.done_vars.push("title");
@@ -14420,7 +14423,6 @@ CSL.NameOutput.prototype._splitInstitution = function (value, v, i) {
             var jurisdiction = itemJurisdiction;
             var str = splitInstitution.slice(0, j).join("|");
             var abbrevKey = str;
-            dump(`XXXZ jurisdiction fed with institution-entire is: ${jurisdiction}`);
             jurisdiction = this.state.transform.loadAbbreviation(jurisdiction, "institution-entire", abbrevKey, this.Item.language);
             if (this.state.transform.abbrevs[jurisdiction]["institution-entire"][abbrevKey]) {
                 var splitLst = this.state.transform.abbrevs[jurisdiction]["institution-entire"][abbrevKey];
@@ -18014,7 +18016,8 @@ CSL.Transform = function (state) {
         if (!jurisdiction) {
             jurisdiction = "default";
         }
-        var domain = CSL.getAbbrevsDomain(state, lang);
+        var country = jurisdiction.split(":")[0];
+        var domain = CSL.getAbbrevsDomain(state, country, lang);
         if (domain) {
             jurisdiction += ("@" + domain);
         }
@@ -20642,16 +20645,23 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
 
         // No need for this.
         //val = ("" + val).replace(/^\"/, "").replace(/\"$/, "");
-
-        var jurisdiction = this.transform.loadAbbreviation(ItemObject.jurisdiction, "number", val, ItemObject.language);
+        if (this.sys.normalizeAbbrevsKey) {
+            var normval = this.sys.normalizeAbbrevsKey(realVariable, val);
+        } else {
+            var normval = val;
+        }
+        var jurisdiction = this.transform.loadAbbreviation(ItemObject.jurisdiction, "number", normval, ItemObject.language);
         if (this.transform.abbrevs[jurisdiction].number) {
-            if (this.transform.abbrevs[jurisdiction].number[val]) {
-                val = this.transform.abbrevs[jurisdiction].number[val];
+            if (this.transform.abbrevs[jurisdiction].number[normval]) {
+                val = this.transform.abbrevs[jurisdiction].number[normval];
             } else {
+                
+                // *** This is terrible ***
+                
                 // Strings rendered via cs:number should not be added to the abbreviations
                 // UI unless they test non-numeric. The test happens below.
-                if ("undefined" !== typeof this.transform.abbrevs[jurisdiction].number[val]) {
-                    delete this.transform.abbrevs[jurisdiction].number[val];
+                if ("undefined" !== typeof this.transform.abbrevs[jurisdiction].number[normval]) {
+                    delete this.transform.abbrevs[jurisdiction].number[normval];
                 }
             }
         }
