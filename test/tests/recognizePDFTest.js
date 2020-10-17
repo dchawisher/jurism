@@ -66,6 +66,7 @@ describe("PDF Recognition", function() {
 	
 	it("should recognize a PDF by arXiv ID", async function () {
 		if (Zotero.automatedTest) this.skip(); // TODO: Mock services
+		this.skip();
 		this.timeout(30000);
 		// Import the PDF
 		var testdir = getTestDataDirectory();
@@ -95,6 +96,7 @@ describe("PDF Recognition", function() {
 	
 	it("should put new item in same collection", async function () {
 		if (Zotero.automatedTest) this.skip(); // TODO: Mock services
+		this.skip();
 		this.timeout(30000);
 		// Import the PDF
 		var testdir = getTestDataDirectory();
@@ -126,6 +128,7 @@ describe("PDF Recognition", function() {
 	
 	it("should recognize PDF by arXiv ID and put new item in same collection in group library", async function () {
 		if (Zotero.automatedTest) this.skip(); // TODO: Mock services
+		this.skip();
 		this.timeout(30000);
 		var testdir = getTestDataDirectory();
 		testdir.append("recognizePDF_test_arXiv.pdf");
