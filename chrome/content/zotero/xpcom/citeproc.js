@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.42",
+    PROCESSOR_VERSION: "1.4.43",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -1486,48 +1486,13 @@ var CSL = {
             // Okay. We have code for each of the novel modules in the
             // hierarchy. Load them all into the processor.
             for (var jurisdiction in res) {
-                var macroCount = 0;
-                state.juris[jurisdiction] = {};
-                var myXml = CSL.setupXml(res[jurisdiction]);
-                myXml.addMissingNameNodes(myXml.dataObj);
-                myXml.addInstitutionNodes(myXml.dataObj);
-                myXml.insertPublisherAndPlace(myXml.dataObj);
-                myXml.flagDateMacros(myXml.dataObj);
-                var myNodes = myXml.getNodesByName(myXml.dataObj, "law-module");
-                for (var i=0,ilen=myNodes.length;i<ilen;i++) {
-                    var myTypes = myXml.getAttributeValue(myNodes[i],"types");
-                    if (myTypes) {
-                        state.juris[jurisdiction].types = {};
-                        myTypes =  myTypes.split(/\s+/);
-                        for (var j=0,jlen=myTypes.length;j<jlen;j++) {
-                            state.juris[jurisdiction].types[myTypes[j]] = true;
-                        }
+                var fallback = state.loadStyleModule(jurisdiction, res[jurisdiction]);
+                if (fallback) {
+                    if (!res[fallback]) {
+                        Object.assign(res, state.retrieveAllStyleModules([fallback]));
+                        state.loadStyleModule(fallback, res[fallback], true);
                     }
                 }
-                
-                var lang = state.opt.lang ? state.opt.lang : state.opt["default-locale"][0];
-                CSL.SET_COURT_CLASSES(state, lang, myXml, myXml.dataObj);
-                
-                if (!state.juris[jurisdiction].types) {
-                    state.juris[jurisdiction].types = CSL.MODULE_TYPES;
-                }
-                var myNodes = myXml.getNodesByName(myXml.dataObj, "macro");
-                for (var i=0,ilen=myNodes.length;i<ilen;i++) {
-                    var myName = myXml.getAttributeValue(myNodes[i], "name");
-                    if (!CSL.MODULE_MACROS[myName]) {
-                        CSL.debug("CSL: skipping non-modular macro name \"" + myName + "\" in module context");
-                        continue;
-                    }
-                    macroCount++;
-                    state.juris[jurisdiction][myName] = [];
-                    // Must use the same XML parser for style and modules.
-                    state.buildTokenLists(myNodes[i], state.juris[jurisdiction][myName]);
-                    state.configureTokenList(state.juris[jurisdiction][myName]);
-                }
-                //if (macroCount < Object.keys(CSL.MODULE_MACROS).length) {
-                //    var missing = [];
-                //    throw "CSL ERROR: Incomplete jurisdiction style module for: " + jurisdiction;
-                //}
             }
         }
         if (state.opt.parallel.enable) {
@@ -6489,6 +6454,8 @@ CSL.Engine.Opt = function () {
     this.has_layout_locale = false;
     this.disable_duplicate_year_suppression = [];
     this.use_context_condition = false;
+
+    this.jurisdiction_fallbacks = {};
 
     this.development_extensions = {};
     this.development_extensions.field_hack = true;
@@ -24394,12 +24361,71 @@ CSL.Engine.prototype.getJurisdictionList = function (jurisdiction) {
     var jurisdictionList = [];
     var jurisdictionElems = jurisdiction.split(":");
     for (var j=jurisdictionElems.length;j>0;j--) {
-        jurisdictionList.push(jurisdictionElems.slice(0,j).join(":"));
+        var composedID = jurisdictionElems.slice(0,j).join(":");
+        jurisdictionList.push(composedID);
+        if (this.opt.jurisdiction_fallbacks[composedID]) {
+            var fallback = this.opt.jurisdiction_fallbacks[composedID];
+            jurisdictionList.push(fallback);
+        }
     }
     if (jurisdictionList.indexOf("us") === -1) {
         jurisdictionList.push("us");
     }
     return jurisdictionList;
+};
+
+CSL.Engine.prototype.loadStyleModule = function (jurisdiction, xmlSource, skipFallback) {
+    var myFallback = null;
+    var macroCount = 0;
+    this.juris[jurisdiction] = {};
+    var myXml = CSL.setupXml(xmlSource);
+    myXml.addMissingNameNodes(myXml.dataObj);
+    myXml.addInstitutionNodes(myXml.dataObj);
+    myXml.insertPublisherAndPlace(myXml.dataObj);
+    myXml.flagDateMacros(myXml.dataObj);
+    var myNodes = myXml.getNodesByName(myXml.dataObj, "law-module");
+    for (var i=0,ilen=myNodes.length;i<ilen;i++) {
+        var myTypes = myXml.getAttributeValue(myNodes[i],"types");
+        if (myTypes) {
+            this.juris[jurisdiction].types = {};
+            myTypes =  myTypes.split(/\s+/);
+            for (var j=0,jlen=myTypes.length;j<jlen;j++) {
+                this.juris[jurisdiction].types[myTypes[j]] = true;
+            }
+        }
+        if (!skipFallback) {
+            myFallback = myXml.getAttributeValue(myNodes[i],"fallback");
+            if (myFallback) {
+                if (jurisdiction !== "us") {
+                    this.opt.jurisdiction_fallbacks[jurisdiction] = myFallback;
+                }
+            }
+        }
+    }
+    var lang = this.opt.lang ? this.opt.lang : this.opt["default-locale"][0];
+    CSL.SET_COURT_CLASSES(this, lang, myXml, myXml.dataObj);
+    
+    if (!this.juris[jurisdiction].types) {
+        this.juris[jurisdiction].types = CSL.MODULE_TYPES;
+    }
+    var myNodes = myXml.getNodesByName(myXml.dataObj, "macro");
+    for (var i=0,ilen=myNodes.length;i<ilen;i++) {
+        var myName = myXml.getAttributeValue(myNodes[i], "name");
+        if (!CSL.MODULE_MACROS[myName]) {
+            CSL.debug("CSL: skipping non-modular macro name \"" + myName + "\" in module context");
+            continue;
+        }
+        macroCount++;
+        this.juris[jurisdiction][myName] = [];
+        // Must use the same XML parser for style and modules.
+        this.buildTokenLists(myNodes[i], this.juris[jurisdiction][myName]);
+        this.configureTokenList(this.juris[jurisdiction][myName]);
+    }
+    //if (macroCount < Object.keys(CSL.MODULE_MACROS).length) {
+    //    var missing = [];
+    //    throw "CSL ERROR: Incomplete jurisdiction style module for: " + jurisdiction;
+    //}
+    return myFallback;
 };
 
 CSL.Engine.prototype.retrieveAllStyleModules = function (jurisdictionList) {
