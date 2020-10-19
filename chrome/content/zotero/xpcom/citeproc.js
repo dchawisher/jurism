@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.43",
+    PROCESSOR_VERSION: "1.4.44",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -14394,6 +14394,7 @@ CSL.NameOutput.prototype._splitInstitution = function (value, v, i) {
             var segment = "institution-entire";
             jurisdiction = this.state.transform.loadAbbreviation(jurisdiction, segment, abbrevKey, this.Item.language);
             if (!this.state.transform.abbrevs[jurisdiction][segment][abbrevKey]) {
+                jurisdiction = itemJurisdiction;
                 segment = "institution-part";
                 jurisdiction = this.state.transform.loadAbbreviation(jurisdiction, segment, abbrevKey, this.Item.language);
             }
