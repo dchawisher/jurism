@@ -2415,7 +2415,7 @@ Zotero.Utilities = {
 				for (var i=0,ilen=fields.length;i<ilen;i++) {
 					var field=fields[i];
 					fieldID = Zotero.ItemFields.getID(field);
-					if (Zotero.Utilities.ENCODE.FIELDS[zoteroType] && Zotero.Utilities.ENCODE.FIELDS[zoteroType][field]) {
+					if (this.ENCODE.FIELDS[zoteroType] && this.ENCODE.FIELDS[zoteroType][field]) {
 						fieldID = Zotero.ItemFields.getID(field);
 					}
 					if(Zotero.ItemFields.isBaseField(fieldID)) {
