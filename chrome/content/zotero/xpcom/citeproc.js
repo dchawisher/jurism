@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.44",
+    PROCESSOR_VERSION: "1.4.45",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -17457,7 +17457,7 @@ CSL.Parallel.prototype.StartCitation = function (sortedItems, out) {
         var nextItem = sortedItems[i+1][0];
         var freshMatchList = false;
         var info = {};
-        if (sortedItems[i][0].seeAlso && !parallelMatchList) {
+        if (sortedItems[i][0].seeAlso && sortedItems[i][0].seeAlso.length > 0 && !parallelMatchList) {
             freshMatchList = true;
             parallelMatchList = [sortedItems[i][0].id].concat(sortedItems[i][0].seeAlso);
             var tempMatchList = parallelMatchList.slice();
