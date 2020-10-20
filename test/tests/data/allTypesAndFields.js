@@ -609,6 +609,7 @@
 		"title": "Title",
 		"reign": "Reign",
 		"url": "http://www.example.com",
+		"DOI": "10.1234/example.doi",
 		"volume": 6,
 		"yearAsVolume": "Year as volume",
 		"multi": {

@@ -580,6 +580,7 @@
       "_keys": {}
     },
     "url": "http://www.example.com",
+    "DOI": "10.1234/example.doi",
     "rights": "Rights",
     "issue": "5",
     "place": "Place",

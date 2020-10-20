@@ -105,7 +105,7 @@ describe("Support Functions for Unit Testing", function() {
 			for (var key in generatedData) {
 				for (var field in generatedData[key]) {
 					if ("string" === typeof generatedData[key][field] || "number" === typeof generatedData[key][field]) {
-						assert.equal(generatedData[key][field], fileData[key][field], "text/number field " + field +" in generated data matches the sample");
+						assert.equal(generatedData[key][field], fileData[key][field], "text/number field " + field +" of "+key+" in generated data matches the sample");
 					}
 				}
 			}

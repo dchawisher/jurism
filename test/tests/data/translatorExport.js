@@ -55,7 +55,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/Q9H4L4XG",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "audioRecording": {
     "version": 0,
@@ -138,7 +138,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/LQTK2N8W",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "bill": {
     "version": 0,
@@ -219,7 +219,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/PCMPTQYD",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "blogPost": {
     "version": 0,
@@ -280,7 +280,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/F2RWHQBM",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "book": {
     "version": 0,
@@ -378,7 +378,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/CT4FEJRW",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "bookSection": {
     "version": 0,
@@ -484,7 +484,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/A5VZ4SU3",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "legalCommentary": {
     "version": 0,
@@ -590,7 +590,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/A5VZ4SU3",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "case": {
     "version": 0,
@@ -600,6 +600,7 @@
       "_keys": {}
     },
     "url": "http://www.example.com",
+    "DOI": "10.1234/example.doi",
     "rights": "Rights",
     "issue": "5",
     "place": "Place",
@@ -686,7 +687,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/E3XX5BNA",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "computerProgram": {
     "version": 0,
@@ -747,7 +748,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/3DCFXAT7",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "conferencePaper": {
     "version": 0,
@@ -838,7 +839,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/IQH2CZB7",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "dictionaryEntry": {
     "version": 0,
@@ -927,7 +928,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/Z97HSR9V",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "document": {
     "version": 0,
@@ -1008,7 +1009,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/QML6CL9U",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "email": {
     "version": 0,
@@ -1067,7 +1068,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/A7Z2TH6L",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "encyclopediaArticle": {
     "version": 0,
@@ -1156,7 +1157,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/RFA3JWH6",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "film": {
     "version": 0,
@@ -1231,7 +1232,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/GRQIQAY3",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "forumPost": {
     "version": 0,
@@ -1284,7 +1285,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/LZCA6EAV",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "hearing": {
     "version": 0,
@@ -1361,7 +1362,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/2FKF3KNL",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "instantMessage": {
     "version": 0,
@@ -1420,7 +1421,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/6V7U2WZR",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "interview": {
     "version": 0,
@@ -1493,7 +1494,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/GJQX34GQ",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "journalArticle": {
     "version": 0,
@@ -1584,7 +1585,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/QRCNYW5L",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "letter": {
     "version": 0,
@@ -1648,7 +1649,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/ZRRMUJXJ",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "magazineArticle": {
     "version": 0,
@@ -1726,7 +1727,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/37PJHRKF",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "manuscript": {
     "version": 0,
@@ -1792,7 +1793,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/E58QTF83",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "map": {
     "version": 0,
@@ -1862,7 +1863,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/JT5BZKPY",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "newspaperArticle": {
     "version": 0,
@@ -1942,7 +1943,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/NR4UL4ZQ",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "patent": {
     "version": 0,
@@ -2025,7 +2026,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/F2HHN7GV",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "podcast": {
     "version": 0,
@@ -2089,7 +2090,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/FQZ86ZI4",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "presentation": {
     "version": 0,
@@ -2143,7 +2144,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/B8V2QYVD",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "radioBroadcast": {
     "version": 0,
@@ -2236,7 +2237,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/4XC5WAT3",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "report": {
     "version": 0,
@@ -2320,7 +2321,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/QWVNYSYA",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "statute": {
     "version": 0,
@@ -2394,7 +2395,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/BLHV6PXT",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "thesis": {
     "version": 0,
@@ -2453,7 +2454,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/HMR43N6U",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "tvBroadcast": {
     "version": 0,
@@ -2546,7 +2547,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/I5RWAEJQ",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "videoRecording": {
     "version": 0,
@@ -2634,7 +2635,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/Y8TZ3Z37",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "webpage": {
     "version": 0,
@@ -2695,7 +2696,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/AT56Y6SE",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "gazette": {
     "version": 0,
@@ -2766,7 +2767,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/XUYQJ2SK",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "regulation": {
     "version": 0,
@@ -2838,7 +2839,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/RPI75SK2",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "classic": {
     "version": 0,
@@ -2905,7 +2906,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/JERK8VHD",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "treaty": {
     "version": 0,
@@ -2928,7 +2929,7 @@
     "reporter": "Publication title",
     "libraryCatalog": "Library catalog",
     "language": "en-US",
-	"treatyNumber": "3",  
+    "treatyNumber": "3",  
     "abstractNote": "Abstract note",
     "title": "Title",
     "shortTitle": "Short title",
@@ -2996,7 +2997,7 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/7ZEDBLJ4",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   },
   "standard": {
     "version": 0,
@@ -3079,6 +3080,6 @@
     "uri": "http://zotero.org/users/local/StiOy3UW/items/X56F6APL",
     "attachments": [],
       "notes": [],
-	  "seeAlso": []
+      "seeAlso": []
   }
 }

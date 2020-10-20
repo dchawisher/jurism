@@ -353,6 +353,7 @@
 	},
 	"case": {
 		"URL": "http://www.example.com",
+		"DOI": "10.1234/example.doi",
 		"abstract": "Abstract note",
 		"accessed": {
 			"raw": "1997-06-13"

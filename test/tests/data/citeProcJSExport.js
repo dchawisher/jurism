@@ -430,6 +430,7 @@
 		"volume": "6",
 		"abstract": "Abstract note",
 		"URL": "http://www.example.com",
+		"DOI": "10.1234/example.doi",
 		"note": "Extra",
 		"number": "3",
 		"references": "History",

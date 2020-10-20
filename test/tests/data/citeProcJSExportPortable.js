@@ -328,7 +328,7 @@
 		"volume": "6",
 		"abstract": "Abstract note",
 		"URL": "http://www.example.com",
-		"note": "mlzsync1:0073{\"extrafields\":{\"reporter\":\"Reporter\",\"jurisdiction\":\"002zzAtlantis|ZZ\"}}Extra",
+		"note": "mlzsync1:0101{\"extrafields\":{\"reporter\":\"Reporter\",\"jurisdiction\":\"002zzAtlantis|ZZ\",\"DOI\":\"10.1234/example.doi\"}}Extra",
 		"number": "3",
 		"references": "History",
 		"title-short": "Short title",
