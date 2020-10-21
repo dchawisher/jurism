@@ -123,7 +123,7 @@ var Zotero_Preferences = {
 		var url = "http://www.zotero.org/support/preferences/";
 		var helpTopic = document.getElementsByTagName("prefwindow")[0].currentPane.helpTopic;
 		if (helpTopic == 'lang') {
-			url = 'https://our.law.nagoya-u.ac.jp/howto/';
+			url = 'https://juris-m.github.io/posts';
 		} else {
 			url += helpTopic;	
 		}
