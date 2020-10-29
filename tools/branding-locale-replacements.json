@@ -1,191 +1,965 @@
 {
-	"about.dtd": {},
-    "csledit.dtd": {},
-    "cslpreview.dtd": {},
-    "standalone.dtd": {},
-    "timeline.properties": {},
-    "preferences.dtd": {
-        "zotero.preferences.sync.fileSyncing.groups": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ],
-        "zotero.preferences.sync.fileSyncing.tos1": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ]
-    },
-    "zotero.dtd": {
-        "zotero.errorReport.postToForums": [
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            },
-            {
-                "orig": "forums.zotero.org",
-                "repl": "juris-m.github.io/support"
-            }
-        ]
-    },
-    "zotero.properties": {
-        "about.createdBy": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero (on which Juris-M is based)"
-            }
-        ],
-        "db.integrityCheck.reportInForums": [
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M (juris-m.github.io/support)"
-            }
-        ],
-        "zotero.preferences.sync.purgeStorage.title": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ],
-        "zotero.preferences.sync.purgeStorage.desc": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ],
-        "zotero.preferences.sync.reset.restoreFromServer": [
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ],
-        "integration.error.incompatibleVersion": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            }
-        ],
-        "sync.error.usernameNotSet.text": [
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ],
-        "sync.error.invalidLogin.text": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            }
-        ],
-        "sync.error.corruptedLoginManager": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            }
-        ],
-        "sync.error.loginManagerCorrupted2": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            }
-        ],
-        "sync.error.invalidClock": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ],
-        "sync.storage.error.default": [
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M (juris-m.github.io/support)"
-            }
-        ],
-        "sync.storage.error.defaultRestart": [
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M (juris-m.github.io/support)"
-            }
-        ],
-        "sync.storage.error.webdav.fileMissingAfterUpload": [
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M (juris-m.github.io/support)"
-            }
-        ],
-        "sync.storage.error.zfs.personalQuotaReached1": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ],
-        "sync.storage.error.zfs.groupQuotaReached1": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            }
-        ],
-        "sync.storage.error.zfs.fileWouldExceedQuota": [
-            {
-                "orig": "Zoter",
-                "repl": "Zotero"
-            }
-        ],
-        "standalone.corruptInstallation": [
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            },
-            {
-                "orig": "Zoter",
-                "repl": "Juris-M"
-            },
-            {
-                "orig": "https://www.zotero.org/download",
-                "repl": "https://juris-m.github.io/downloads"
-            }
-        ]
+  "about.dtd": {},
+  "csledit.dtd": {
+    "styles.editor": {
+      "words": [
+        "Jurism"
+      ]
     }
+  },
+  "cslpreview.dtd": {
+    "styles.preview": {
+      "words": [
+        "Jurism"
+      ]
+    }
+  },
+  "preferences.dtd": {
+    "zotero.preferences.attachmentBaseDir.message": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.debugOutputLogging.message": {
+      "words": [
+        "Jurism",
+        "Jurism",
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.debugOutputLogging.submitToServer": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.export.citePaperJournalArticleURL.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.keys.saveToZotero": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.locate.addDescription": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.parseRISRefer": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.proxies.desc_before_link": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.quickCopy.linkOption": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.showIn": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.sync.fileSyncing.groups": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "zotero.preferences.sync.fileSyncing.tos1": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "zotero.preferences.sync.reset.restoreFromServer.desc": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.sync.reset.restoreToServer.desc": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.sync.syncFullTextContent.desc": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.title": {
+      "words": [
+        "Jurism"
+      ]
+    }
+  },
+  "publications.dtd": {},
+  "searchbox.dtd": {},
+  "standalone.dtd": {
+    "quitApplicationCmdMac.label": {
+      "words": [
+        "Jurism"
+      ]
+    }
+  },
+  "timeline.properties": {
+    "general.title": {
+      "words": [
+        "Jurism"
+      ]
+    }
+  },
+  "zotero.dtd": {
+    "zotero.errorReport.postToForums": {
+      "text": "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.",
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.upgrade.ifZoteroInfo": {
+      "text": "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.",
+      "words": [
+        "Zotero",
+        "Jurism",
+        "Zotero",
+        "Zotero",
+        "Zotero"
+      ]
+    },
+    "zotero.contextMenu.addTextToCurrentNote": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.contextMenu.addTextToNewNote": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.contextMenu.saveImageAsItem": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.contextMenu.saveLinkAsItem": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.downloadManager.label": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.downloadManager.noPDFTools.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.errorReport.title": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.errorReport.unrelatedMessages": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.import.source.file": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "zotero.integration.prefs.storeReferences.caption": {
+      "words": [
+        "Zotero",
+        "Zotero",
+        "Jurism"
+      ]
+    },
+    "zotero.rtfScan.citationsPage.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.rtfScan.formatPage.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.rtfScan.introPage.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.rtfScan.scanPage.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.sync.button": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "zotero.sync.longTagFixer.followingTagTooLong": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.toolbar.about.label": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.upgrade.newVersionInstalled": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.upgrade.title": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.upgrade.upgradeRequired": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.upgrade.upgradeSucceeded": {
+      "words": [
+        "Jurism"
+      ]
+    }
+  },
+  "zotero.properties": {
+    "db.integrityCheck.reportInForums": {
+      "text": "You can report this problem to the Jurism support list (juris-m.github.io/mail).",
+      "words": [
+        "Jurism"
+      ]
+    },
+    "about.createdBy": {
+      "text": "Jurism is based on Zotero, which is a project of the [Roy Rosenzweig Center for History and New Media] and is developed by a [global community].",
+      "words": [
+        "Jurism",
+        "Zotero"
+      ]
+    },
+    "integration.error.incompatibleVersion2": {
+      "text": "Jurism %1$S requires %2$S %3$S or later. Please download the latest version of %2$S from juris-m.github.io.",
+      "words": [
+        "Jurism"
+      ]
+    },
+    "standalone.corruptInstallation": {
+      "text": "Your Jurism installation appears to be corrupted due to a failed auto-update. While Jurism may continue to function, to avoid potential bugs, please download the latest version of Jurism from https://juris-m.github.io/release as soon as possible.",
+      "words": [
+        "Jurism",
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.default": {
+      "text": "A file sync error occurred. Please try syncing again.\\n\\nIf you receive this message repeatedly, restart %S and/or your computer and try again. If you continue to receive the message, submit an error report and post the Report ID to the Jurism support list (juris-m.github.io/mail).",
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.defaultRestart": {
+      "text": "A file sync error occurred. Please restart %S and/or your computer and try syncing again.\\n\\nIf you receive this message repeatedly, submit an error report and post the Report ID to the Jurism support list (juris-m.github.io/mail).",
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.webdav.fileMissingAfterUpload": {
+      "text": "A potential problem was found with your WebDAV server.\\n\\nAn uploaded file was not immediately available for download. There may be a short delay between when you upload files and when they become available, particularly if you are using a cloud storage service.\\n\\nIf Zotero file syncing appears to work normally, you can ignore this message. If you have trouble, please post to the Jurism support list (juris-m.github.io/mail).",
+      "words": [
+        "Zotero",
+        "Jurism"
+      ]
+    },
+    "app.firefox": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "app.standalone": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "connector.error.title": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "connector.loadInProgress": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "connector.standaloneOpen": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "dataDir.incompatibleDbVersion.text": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "dataDir.migration.failure.full.firefoxOpen": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "dataDir.moveFilesToNewLocation": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "dataDir.selectDir": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "dataDir.selectedDirEmpty.text": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "dataDir.selectedDirNonEmpty.text": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "dataDir.standaloneMigration.title": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "dataDir.unsafeLocation.existing.dropbox": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "db.integrityCheck.errorsFixed": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "db.integrityCheck.errorsNotFixed": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "db.integrityCheck.failed": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "db.integrityCheck.repairAttempt": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "errorReport.advanceMessage": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "firstRunGuidance.authorMenu": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "firstRunGuidance.saveButton": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "firstRunGuidance.saveIcon": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "firstRunGuidance.toolbarButton.new": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "firstRunGuidance.toolbarButton.upgrade": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "general.operationInProgress": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "ingester.importReferRISDialog.text": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "ingester.importReferRISDialog.title": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "ingester.saveToZotero": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "ingester.saveToZoteroAsWebPageWithSnapshot": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "ingester.saveToZoteroAsWebPageWithoutSnapshot": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "ingester.saveToZoteroUsing": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "ingester.scrapeErrorDescription.previousError": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "install.quickStartGuide": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "install.quickStartGuide.message.thanks": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "install.quickStartGuide.message.welcome": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.citationChanged": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.citationChanged.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.citationChanged.edit": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.corruptBibliography": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.corruptField": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.delayCitationUpdates.alert.text2": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.delayCitationUpdates.alert.text2.tab": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.delayCitationUpdates.alert.text2.toolbar": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.delayCitationUpdates.bibliography": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.delayCitationUpdates.bibliography.tab": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.delayCitationUpdates.bibliography.toolbar": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.error.cannotInsertHere": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.error.deletePipe": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.error.fieldTypeMismatch": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.error.generic": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.error.incompatibleVersion": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.error.macWordSBPermissionsMissing": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.error.newerDocumentVersion": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.error.notInCitation": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.error.notInstalled": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.error.title": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.exportDocument.description1": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.importInstructions": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "integration.missingItem.multiple": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.missingItem.single": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.removeCodesWarning": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "integration.replace": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "lookup.failure.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "lookup.failureToID.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "pane.item.attachments.PDF.installTools.text": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "pane.item.attachments.fileNotFound.text": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "pane.items.attach.link.uri.unrecognized": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "proxies.notification.associated.label": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "proxies.notification.recognized.label": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "proxies.notification.redirected.label": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "proxies.recognized.message": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "recognizePDF.captcha.description": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "report.title.default": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "standalone.addonInstallationFailed.body": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "standalone.rootWarning": {
+      "words": [
+        "Jurism",
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "standalone.updateMessage": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "startupError": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "startupError.checkPermissions": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "startupError.closeFirefox": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "startupError.closeStandalone": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "startupError.databaseCannotBeOpened": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "startupError.databaseInUse": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "startupError.startedFromDiskImage2": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "startupError.zoteroVersionIsOlder": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "styles.editor.warning.noItems": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "styles.preview.instructions": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "styles.validationWarning": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.avoidCombiningData": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.conflict.autoChange.alert": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.conflict.autoChange.log": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.conflict.collectionItemMerge.alert": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.conflict.collectionItemMerge.log": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.conflict.tagItemMerge.alert": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.conflict.tagItemMerge.log": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.error.corruptedLoginManager": {
+      "words": [
+        "Zotero",
+        "Jurism"
+      ]
+    },
+    "sync.error.invalidCharsFilename": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.error.invalidClock": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "sync.error.invalidLogin.text": {
+      "words": [
+        "Zotero",
+        "Jurism"
+      ]
+    },
+    "sync.error.loginManagerCorrupted1": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.error.loginManagerCorrupted2": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "sync.error.loginManagerInaccessible": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.error.usernameNotSet.text": {
+      "words": [
+        "Jurism",
+        "Zotero"
+      ]
+    },
+    "sync.error.writeAccessLost": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "sync.fulltext.upgradePrompt.changeLater": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.fulltext.upgradePrompt.text": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "sync.lastSyncWithDifferentAccount": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.localDataWillBeCombined": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.fileEditingAccessLost": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "sync.storage.error.fileNotCreated": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.permissionDeniedAtAddress": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.verificationFailed": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.webdav.default": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.webdav.defaultRestart": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.zfs.fileWouldExceedQuota": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "sync.storage.error.zfs.groupQuotaReached1": {
+      "words": [
+        "Zotero",
+        "Jurism"
+      ]
+    },
+    "sync.storage.error.zfs.personalQuotaReached1": {
+      "words": [
+        "Zotero",
+        "Jurism"
+      ]
+    },
+    "upgrade.couldNotMigrate": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "upgrade.dbUpdateRequired": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "upgrade.failed": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "upgrade.integrityCheckFailed": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "upgrade.nonupgradeableDB1": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "upgrade.nonupgradeableDB2": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.advanced.debug.sent": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.search.pdf.automaticInstall": {
+      "words": [
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.search.pdf.zoteroCanInstallVersion": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.search.pdf.zoteroCanInstallVersions": {
+      "words": [
+        "Jurism",
+        "Jurism"
+      ]
+    },
+    "zotero.preferences.sync.purgeStorage.desc": {
+      "words": [
+        "Zotero",
+        "Zotero"
+      ]
+    },
+    "zotero.preferences.sync.purgeStorage.title": {
+      "words": [
+        "Zotero"
+      ]
+    },
+    "zotero.preferences.sync.reset.restoreFromServer": {
+      "words": [
+        "Jurism",
+        "Zotero"
+      ]
+    }
+  }
 }

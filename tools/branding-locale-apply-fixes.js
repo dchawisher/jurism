@@ -1,24 +1,61 @@
 var fs = require("fs");
 var path = require("path");
-var query = require("prompt-confirm");
 
-const mapper = JSON.parse(fs.readFileSync(path.join(__dirname, "branding-locale-replacements.json")));
-
-
-function processLocales() {
-    var pth = path.join(__dirname, "..", "chrome", "locale");
-	var locales = fs.readdirSync(pth);
-	for (var locale of locales) {
-		processLocale(locale);
+const getScriptDir = (fn) => {
+	var pth = path.join(__dirname);
+	if (fn) {
+		return path.join(pth, fn);
+	} else {
+		return pth;
 	}
-
 }
 
-function processLocale(locale) {
+const getLocaleDir = (fn) => {
+	var pth = path.join(__dirname, "..", "chrome", "locale");
+	if (fn) {
+		return path.join(pth, fn);
+	} else {
+		return pth;
+	}
+}
+
+const getLocaleFile = (locale, fn) => {
 	var pth = path.join(__dirname, "..", "chrome", "locale", locale, "zotero");
-	var fns = fs.readdirSync(pth);
-	for (var fn of fns) {
-		if (fn.slice(0, 4) === "new-") continue;
+	if (fn) {
+		return path.join(pth, fn);
+	} else {
+		return pth;
+	}
+}
+
+/*
+ * Load replacements object
+ */
+
+const getReplacements = () => {
+	return JSON.parse(fs.readFileSync(getScriptDir("branding-locale-replacements.json")));
+}
+
+const patchConnectorJSON = () => {
+	for (var locale of fs.readdirSync(getLocaleDir())) {
+		var obj = JSON.parse(fs.readFileSync(getLocaleFile(locale, "connector.json")).toString());
+		for (var key in obj) {
+			for (var subkey in obj[key]) {
+				if ("string" === typeof obj[key][subkey]) {
+					obj[key][subkey] = obj[key][subkey].replace(/Zotero/g, "Jurism");
+				}
+			}
+		}
+		fs.writeFileSync(getLocaleFile(locale, "connector.json"), JSON.stringify(obj, null, 2));
+	}
+};
+
+/*
+ * Force replacements
+ */
+
+const setStringsInLocaleFiles = (repl) => {
+	for (var fn in repl) {
 		var mode = null;
 		if (fn.slice(-4) === ".dtd") {
 			mode = "dtd";
@@ -27,99 +64,65 @@ function processLocale(locale) {
 		} else {
 			continue;
 		}
-		//console.log("FILE: " + fn)
-		var txt = fs.readFileSync(path.join(pth, fn)).toString();
-		txt = processFile(locale, mode, fn, txt);
-		fs.writeFileSync(path.join(pth, fn), txt);
-	}
-}
+		var fileRepl = repl[fn];
+		
+		for (var locale of fs.readdirSync(getLocaleDir())) {
+			var txt = fs.readFileSync(getLocaleFile(locale, fn)).toString();
+			var lines = txt.split("\n");
 
-function scanReplace(count, str, replacements, key, fn, locale) {
-	if (replacements.length === 0) return {
-		replacements: replacements,
-		str: str
-	};
-	var buf = "";
-	var deletes = [];
-	for (var i=0,ilen=replacements.length;i<ilen;i++) {
-		var info = replacements[i];
-		// Find start pos of each repl, incrementing offset each time
-		offset = str.indexOf(info.orig);
-		if (offset === -1) {
-			if (count === 2) {
-				console.log("WARNING[1]: string \"" + info.orig + "\" not found on key " + key + " in file " + fn + " of " + locale);
-			}
-			continue;
-		}
-		deletes.push(i);
-		buf += str.slice(0, offset);
-		buf += info.repl;
-		str = str.slice(offset);
-		var rex = new RegExp("^(" + info.orig + "(?:|[a-z]|[a-z][a-z]|[a-z][a-z][a-z]))(?:[^a-z].*|$)")
-		var m = str.match(rex);
-		if (m) {
-			str = str.slice(m[1].length)
-		}
-	}
-	if (str.length) {
-		buf += str;
-	}
-	for (var pos=deletes.length-1;pos>-1;pos--) {
-	    var i = deletes[pos];
-		replacements = replacements.slice(0, i).concat(replacements.slice(i+1));
-	}
-	// Aha! On last run, replacements may well have length 0.
-	return {
-		replacements: replacements,
-		str: buf
-	}
-}
-
-function replaceThings(locale, fn, key, str, replacements) {
-	var str = str.replace("forums.zotero.hu", "forums.zotero.org").replace("forums.zoter.org", "forums.zotero.org");
-	for (var count=0, countlen= 2; count<countlen; count++) {
-		var {replacements, str} = scanReplace(count, str, replacements, key, fn, locale);
-	}
-	return str;
-}
-
-function processFile(locale, mode, fn, txt) {
-	var lines = txt.split("\n");
-	for (var i=0,ilen=lines.length; i<ilen; i++) {
-		var line = lines[i];
-		if (mode === "dtd") {
-			var m = line.match(/<\!ENTITY\s+(.*?)\s+\"(.*)\"\s*>/);
-			if (m) {
-				var key = m[1];
-				var str = m[2];
-				if (str.indexOf("Zotero") === -1) continue;
-				if (mapper[fn][key]) {
-					// Apply replacements
-					str = replaceThings(locale, fn, key, str, mapper[fn][key]);
-				} else {
-					// Replace Zotero with Juris-M everywhere
-					str = str.replace(/Zotero/g, "Juris-M");
+			for (var key in repl[fn]) {
+				var mKey = key.replace(/\./g, "\\.");
+				var rex = null;
+				if (mode === "dtd") {
+					rex = new RegExp(`\\s${mKey}\\s+"([^"]+)"`);
+				} else if (mode === "properties") {
+					rex = new RegExp(`^${mKey}\\s+=\\s+(.*)`);
 				}
-				lines[i] = "<!ENTITY " + key + " \"" + str + "\">"
-			}
-		} else if (mode === "properties") {
-			var m = line.match(/^(.*?)\s+=\s+(.*)/);
-			if (m) {
-				var key = m[1];
-				var str = m[2];
-				if (str.indexOf("Zotero") === -1) continue;
-				if (mapper[fn][key]) {
-					// Apply replacements
-					str = replaceThings(locale, fn, key, str, mapper[fn][key]);
-				} else {
-					str = str.replace(/Zotero/g, "Juris-M");
+
+				for (var i=0,ilen=lines.length;i<ilen;i++) {
+					var line = lines[i];
+					var m = line.match(rex);
+					if (!m) continue;
+
+					var str = m[1];
+					if (repl[fn][key].text) {
+						str = repl[fn][key].text;
+					} else if (repl[fn][key].words) {
+						var lst = str.split(/(?:Jurism|Juris-M|Zotero)/);
+						var mWords = str.match(/(?:Jurism|Juris-M|Zotero)/g);
+						if (!mWords) continue;
+						var replWords = repl[fn][key].words;
+						replWords = replWords.slice(0, mWords.length);
+						while (mWords.length > replWords.length) {
+							replWords.push("Jurism");
+						}
+						var str = "";
+						for (var j=0,jlen=lst.length; j<jlen-1; j++) {
+							str += lst[j];
+							str += replWords[j];
+						}
+						str += lst[lst.length-1];
+					} else {
+						continue;
+					}
+						
+					if (mode === "dtd") {
+						lines[i] = line.replace(rex, ` ${key} "${str}"`);
+					} else if (mode === "properties") {
+						lines[i] = line.replace(rex, `${key} = ${str}`);
+					}
 				}
-				lines[i] = key + " = " + str;
 			}
+			txt = lines.join("\n");
+			fs.writeFileSync(getLocaleFile(locale, fn), txt);
 		}
 	}
-	return lines.join("\n");
+	patchConnectorJSON();
 }
 
+const run = () => {
+	var repl = getReplacements();
+	setStringsInLocaleFiles(repl);
+}
 
-processLocales();
+run();
