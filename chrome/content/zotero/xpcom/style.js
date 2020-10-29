@@ -92,8 +92,16 @@ Zotero.Styles = new function() {
 		
 		// Sort visible styles by title
 		_visibleStyles.sort(function(a, b) {
-			return a.title.localeCompare(b.title);
-		})
+			var aIsJM = a.fileName.slice(0, 3) === "jm-";
+			var bIsJM = b.fileName.slice(0, 3) === "jm-";
+			if (aIsJM && !bIsJM) {
+				return -1;
+			} else if (!aIsJM && bIsJM) {
+				return 1;
+			} else {
+				return a.title.localeCompare(b.title);
+			}
+		});
 		// .. and freeze, so they can be returned directly
 		_visibleStyles = Object.freeze(_visibleStyles);
 		
