@@ -21,9 +21,9 @@ var ZOTERO_CONFIG = {
 	START_URL: "https://juris-m.github.io/downloads/#start",
 	QUICK_START_URL: "https://www.zotero.org/support/quick_start_guide",
 	PDF_TOOLS_URL: "https://www.zotero.org/download/xpdf/",
-	SUPPORT_URL: "https://juris-m.github.io/support/",
-	TROUBLESHOOTING_URL: "https://juris-m.github.io/support/",
-	FEEDBACK_URL: "https://juris-m.github.io/support/",
+	SUPPORT_URL: "https://juris-m.github.io/",
+	TROUBLESHOOTING_URL: "https://juris-m.github.io/",
+	FEEDBACK_URL: "https://juris-m.github.io/",
 	CONNECTORS_URL: "https://juris-m.github.io/downloads/"
 };
 
