@@ -63,10 +63,10 @@
     "message": "Die $1 war nicht in der Lage mit der $2 Desktop Applikation zu kommunizieren. $2 muss geöffnet sein zum web-basierten Zitieren."
   },
   "integration_googleDocs_unlinkBeforeSaving_warning": {
-    "message": "Dieses Dokument enthält aktive Zitate aus Zotero, die als zotero.org-Links in einer heruntergeladenen Kopie erscheinen."
+    "message": "Dieses Dokument enthält aktive Zitate aus Jurism, die als zotero.org-Links in einer heruntergeladenen Kopie erscheinen."
   },
   "integration_googleDocs_unlinkBeforeSaving_instructions": {
-    "message": "Um eine zum Teilen geeignete Version zu erzeugen, wählen Sie im Menü Datei den Befehl <b>Kopie erstellen…</b>, wählen Sie <b>Unlink Citations</b> aus dem Menü Zotero und laden Sie dann die unverknüpfte Version herunter. Bewahren Sie dieses Originaldokument mit den Verknüpfungen auf, falls Sie weitere Änderungen vornehmen müssen."
+    "message": "Um eine zum Teilen geeignete Version zu erzeugen, wählen Sie im Menü Datei den Befehl <b>Kopie erstellen…</b>, wählen Sie <b>Unlink Citations</b> aus dem Menü Jurism und laden Sie dann die unverknüpfte Version herunter. Bewahren Sie dieses Originaldokument mit den Verknüpfungen auf, falls Sie weitere Änderungen vornehmen müssen."
   },
   "integration_googleDocs_unlinkBeforeSaving_downloadAnyway": {
     "message": "Verlinkte Version trotzdem herunterladen"

@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Ayrıl">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Zotero'dan Ayrıl">
+<!ENTITY quitApplicationCmdMac.label "Jurism'dan Ayrıl">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Çık">
 <!ENTITY recursiveCollections.label "Alt Dermelerdeki Eserleri Göster">

@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "종료">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Zotero 종료">
+<!ENTITY quitApplicationCmdMac.label "Jurism 종료">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "종료">
 <!ENTITY recursiveCollections.label "하위 컬렉션 항목 표시">

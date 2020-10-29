@@ -34,22 +34,22 @@
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
 <!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "Vis ukategoriserede elementer">
-<!ENTITY zotero.contextMenu.addTextToCurrentNote "Overfør den markerede tekst til din note i Zotero">
-<!ENTITY zotero.contextMenu.addTextToNewNote "Opret Zotero-element og note ud fra markering">
-<!ENTITY zotero.contextMenu.saveImageAsItem "Gem billede som Zotero-element.">
-<!ENTITY zotero.contextMenu.saveLinkAsItem "Gem link som Zotero-element.">
-<!ENTITY zotero.downloadManager.label "Gem til Zotero">
-<!ENTITY zotero.downloadManager.noPDFTools.description "For at bruge denne funktion skal du først installere PDF-værktøjerne i Juris-Ms indstillinger.">
+<!ENTITY zotero.contextMenu.addTextToCurrentNote "Overfør den markerede tekst til din note i Jurism">
+<!ENTITY zotero.contextMenu.addTextToNewNote "Opret Jurism-element og note ud fra markering">
+<!ENTITY zotero.contextMenu.saveImageAsItem "Gem billede som Jurism-element.">
+<!ENTITY zotero.contextMenu.saveLinkAsItem "Gem link som Jurism-element.">
+<!ENTITY zotero.downloadManager.label "Gem til Jurism">
+<!ENTITY zotero.downloadManager.noPDFTools.description "For at bruge denne funktion skal du først installere PDF-værktøjerne i Jurisms indstillinger.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Vedhæftede filer kan ikke gemmes i det aktuelle bibliotek. I stedet gemmes hele elementet  i dit bibliotek.">
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Vælg felter som skal bevares fra andre versioner af elementet">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Vælg den version af elementet som du vil bruge som hovedelement:">
 <!ENTITY zotero.errorReport.notReviewed "Fejlrapporter bliver ikke læst medmindre der henvises til dem i Zoteros fora.">
-<!ENTITY zotero.errorReport.postToForums "Læg venligst en besked på Zoteros fora (forums.zotero.org) med dette Rapport-ID, en beskrivelse af problemet og det der får problemet til at opstå.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "Rapport-ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "Vent venligst mens fejlrapporten registreres.">
 <!ENTITY zotero.errorReport.submitted "Din fejlrapport er registreret.">
-<!ENTITY zotero.errorReport.title "Zotero fejlrapport">
-<!ENTITY zotero.errorReport.unrelatedMessages "Dette kan inkludere beskeder, som ikke har noget med Juris-M at gøre.">
+<!ENTITY zotero.errorReport.title "Jurism fejlrapport">
+<!ENTITY zotero.errorReport.unrelatedMessages "Dette kan inkludere beskeder, som ikke har noget med Jurism at gøre.">
 <!ENTITY zotero.exportOptions.format.label "Format:">
 <!ENTITY zotero.exportOptions.title "Eksportér...">
 <!ENTITY zotero.exportOptions.translatorOptions.label "Oversættelsesmuligheder">
@@ -133,7 +133,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "At gemme referencer i dit dokument gør filen en anelse større, men det gør det også muligt at dele dokumentet med andre ved hjælp af en Juris-M-gruppe. At opdatere dokumenter oprettet med denne funktion kræver Juris-M 3.0 eller højere.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "At gemme referencer i dit dokument gør filen en anelse større, men det gør det også muligt at dele dokumentet med andre ved hjælp af en Zotero-gruppe. At opdatere dokumenter oprettet med denne funktion kræver Zotero 3.0 eller højere.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "Gem referencer i dokument">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Flertydige teksthenvisnnger">
 <!ENTITY zotero.rtfScan.cancel.label "Fortryd">
 <!ENTITY zotero.rtfScan.citation.label "Reference">
-<!ENTITY zotero.rtfScan.citationsPage.description "Kontroller listen med de fundne referencer for at sikre at Zotero har identificeret værkerne korrekt. Alle referencer uden korrespondence og alle flertydige referencer skal afklares før du går videre til næste fase.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Kontroller listen med de fundne referencer for at sikre at Jurism har identificeret værkerne korrekt. Alle referencer uden korrespondence og alle flertydige referencer skal afklares før du går videre til næste fase.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Kontroller referencerne">
 <!ENTITY zotero.rtfScan.completePage.description "Dit dokument er blevet scannet og behandlet. Kontrollerer at det er blevet formateret korrekt.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF-scanning fuldført">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero behandler og formaterer din RTF-fil. Vent tålmodigt.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism behandler og formaterer din RTF-fil. Vent tålmodigt.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formatering af referencer">
 <!ENTITY zotero.rtfScan.inputFile.label "Input-fil">
-<!ENTITY zotero.rtfScan.introPage.description "Zotero kan automatisk uddrage og reformatere teksthenvisninger og indsætte en referenceliste i en RTF-fil. RTF-scanningsfunktionen understøtter referencer i følgende formater:">
+<!ENTITY zotero.rtfScan.introPage.description "Jurism kan automatisk uddrage og reformatere teksthenvisninger og indsætte en referenceliste i en RTF-fil. RTF-scanningsfunktionen understøtter referencer i følgende formater:">
 <!ENTITY zotero.rtfScan.introPage.description2 "Vælg en RTF-fil som input og en output-fil nedenfor:">
 <!ENTITY zotero.rtfScan.introPage.label "Introduktion">
 <!ENTITY zotero.rtfScan.itemName.label "Navn på element">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Teksthenvisninger med poster i dit bibliotek">
 <!ENTITY zotero.rtfScan.outputFile.label "Output-fil">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero scanner dit dokument for teksthenvisninger. Vent venligst.">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism scanner dit dokument for teksthenvisninger. Vent venligst.">
 <!ENTITY zotero.rtfScan.scanPage.label "Scanner efter teksthenvisninger i dokumentet">
 <!ENTITY zotero.rtfScan.stylePage.label "Formatering af dokument">
 <!ENTITY zotero.rtfScan.title "RTF-scanning">
@@ -251,11 +251,11 @@
 <!ENTITY zotero.selectitems.intro.label "Vælg de elementer, du ønsker at tilføje til dit bibliotek">
 <!ENTITY zotero.selectitems.select.label "OK">
 <!ENTITY zotero.selectitems.title "Vælg elementer">
-<!ENTITY zotero.sync.button "Synkroniser med Juris-M Server">
+<!ENTITY zotero.sync.button "Synkroniser med Zotero Server">
 <!ENTITY zotero.sync.error "Synkroniseringsfejl">
 <!ENTITY zotero.sync.longTagFixer.character "tegn">
 <!ENTITY zotero.sync.longTagFixer.characters "tegn">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "De følgende mærkater i dit Zoterobibliotek er for lange til at synkronisere med serveren:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "De følgende mærkater i dit Jurismbibliotek er for lange til at synkronisere med serveren:">
 <!ENTITY zotero.sync.longTagFixer.split "Opdel">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Opdel ved">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Du kan enten opdele mærkatet i flere mærkater, redigere mærkatet manuelt for at forkorte det eller slette det.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Omdøb mærket ...">
 <!ENTITY zotero.tagSelector.selectVisible "Vælg de synlige">
 <!ENTITY zotero.tagSelector.showAutomatic "Vis automatisk">
-<!ENTITY zotero.toolbar.about.label "Om Zotero">
+<!ENTITY zotero.toolbar.about.label "Om Jurism">
 <!ENTITY zotero.toolbar.actions.label "Handlinger">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -340,14 +340,14 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "for at se nyhederne.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "Se venligst">
 <!ENTITY zotero.upgrade.changeLogLink "listen med ændringer">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "Dette er en større opgradering.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "inden du fortsætter">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Sørg for at gennemse">
 <!ENTITY zotero.upgrade.majorUpgradeLink "instruktioner for opgradering">
-<!ENTITY zotero.upgrade.newVersionInstalled "Du har installeret en ny version af Zotero.">
-<!ENTITY zotero.upgrade.title "Zotero opgraderingsguide">
+<!ENTITY zotero.upgrade.newVersionInstalled "Du har installeret en ny version af Jurism.">
+<!ENTITY zotero.upgrade.title "Jurism opgraderingsguide">
 <!ENTITY zotero.upgrade.upgradeInProgress "Vent venligst til opgraderingsprocessen er slut. Det kan tage nogle minutter.">
-<!ENTITY zotero.upgrade.upgradeRequired "Din Zotero-database skal opgraderes for at virke med den seneste version.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Din Zotero-database er blevet opgraderet korrekt.">
+<!ENTITY zotero.upgrade.upgradeRequired "Din Jurism-database skal opgraderes for at virke med den seneste version.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Din Jurism-database er blevet opgraderet korrekt.">

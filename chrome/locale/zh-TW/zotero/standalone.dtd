@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "結束 (Q)">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "結束 Zotero">
+<!ENTITY quitApplicationCmdMac.label "結束 Jurism">
 <!ENTITY quitApplicationCmdWin.accesskey "X">
 <!ENTITY quitApplicationCmdWin.label "退出 (X)">
 <!ENTITY recursiveCollections.label "顯示子文獻庫的項目">

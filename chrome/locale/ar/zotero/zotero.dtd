@@ -44,7 +44,7 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "اختار الحقول المراد الابقاء عليها من الاصدارات الاخرى للعنصر:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "اختار اصدارة العنصر المناسبة لاستخدامه كعنصر رئيسي:">
 <!ENTITY zotero.errorReport.notReviewed "لن يتم مراجعة تقارير الخطأ ما لم يكن مشار إليها في المنتديات.">
-<!ENTITY zotero.errorReport.postToForums "برجاء كتابة رسالة في منتديات زوتيرو (forums.zotero.org) تتضمن رقم التقرير، ووصف للمشكلة، والخطوات التي تؤدي لظهورها.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "رقم التقرير:">
 <!ENTITY zotero.errorReport.submissionInProgress "برجاء الانتظار لحين الانتهاء من ارسال التقرير عن الخطأ.">
 <!ENTITY zotero.errorReport.submitted "تم ارسال التقرير عن الخطأ.">
@@ -133,7 +133,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "Storing references in your document slightly increases file size, but will allow you to share your document with others without using a Juris-M group. Juris-M 3.0 or later is required to update documents created with this option.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "Storing references in your document slightly increases file size, but will allow you to share your document with others without using a Zotero group. Zotero 3.0 or later is required to update documents created with this option.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "تخزين المراجع في الوثيقة">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -340,7 +340,7 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "لمعرفة الجديد.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "برجاء مراجعة">
 <!ENTITY zotero.upgrade.changeLogLink "سجل التغييرات">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "هذه عملية تحديث كلي للبرنامج.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "قبل المتابعة.">

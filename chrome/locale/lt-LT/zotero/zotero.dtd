@@ -34,22 +34,22 @@
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
 <!ENTITY zotero.collections.showRetractedItems "Rodyti atšauktus įrašus">
 <!ENTITY zotero.collections.showUnfiledItems "Rodyti neužpildytus">
-<!ENTITY zotero.contextMenu.addTextToCurrentNote "Iš pažymėto teksto sukurti Zotero pastabą">
-<!ENTITY zotero.contextMenu.addTextToNewNote "Sukurti Zotero įrašą ir pastabą jam iš pažymėto teksto">
-<!ENTITY zotero.contextMenu.saveImageAsItem "Paveikslėlį įrašyti kaip Zotero elementą">
-<!ENTITY zotero.contextMenu.saveLinkAsItem "Nuorodą išsaugoti kaip Zotero įrašą">
-<!ENTITY zotero.downloadManager.label "Įrašyti į Zotero">
-<!ENTITY zotero.downloadManager.noPDFTools.description "Norėdami naudotis šia funkcija, turite įdiegti PDF įrankius per Juris-M nuostatų paieškos skydelį.">
+<!ENTITY zotero.contextMenu.addTextToCurrentNote "Iš pažymėto teksto sukurti Jurism pastabą">
+<!ENTITY zotero.contextMenu.addTextToNewNote "Sukurti Jurism įrašą ir pastabą jam iš pažymėto teksto">
+<!ENTITY zotero.contextMenu.saveImageAsItem "Paveikslėlį įrašyti kaip Jurism elementą">
+<!ENTITY zotero.contextMenu.saveLinkAsItem "Nuorodą išsaugoti kaip Jurism įrašą">
+<!ENTITY zotero.downloadManager.label "Įrašyti į Jurism">
+<!ENTITY zotero.downloadManager.noPDFTools.description "Norėdami naudotis šia funkcija, turite įdiegti PDF įrankius per Jurism nuostatų paieškos skydelį.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Priedų negalima įrašyti pasirinktoje bibliotekoje. Šį įrašą įrašysime jūsų bibliotekoje.">
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Pasirinkite senesnių įrašo versijų laukus:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Pasirinkite pagrindinę įrašo versiją:">
 <!ENTITY zotero.errorReport.notReviewed "Pranešimai apie klaidas peržiūrimi tik tuomet, kai jie yra forume.">
-<!ENTITY zotero.errorReport.postToForums "Parašykite žinutę Zotero forume (forums.zotero.org), nurodydami ataskaitos identifikatorių, aprašydami nesklandumus ir žingsnius, kurie ją sukelia.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "Pranešimo ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "Prašome palaukti kol siunčiamas klaidų sąrašas.">
 <!ENTITY zotero.errorReport.submitted "Jūsų klaidų sąrašas buvo nusiųstas.">
-<!ENTITY zotero.errorReport.title "Pranešimas apie klaidą Zotero programoje">
-<!ENTITY zotero.errorReport.unrelatedMessages "Čia gali būti pranešimų, visai nesusijusių su Juris-M.">
+<!ENTITY zotero.errorReport.title "Pranešimas apie klaidą Jurism programoje">
+<!ENTITY zotero.errorReport.unrelatedMessages "Čia gali būti pranešimų, visai nesusijusių su Jurism.">
 <!ENTITY zotero.exportOptions.format.label "Formatas:">
 <!ENTITY zotero.exportOptions.title "Eksportuoti...">
 <!ENTITY zotero.exportOptions.translatorOptions.label "Vertimo parinktys">
@@ -133,7 +133,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "Patalpinus nuorodas dokumente, šiek tiek padidėja jo dydis, tačiau tai leis jums dalintis dokumentu su kitais naudotojais, nenaudodami Juris-M grupės. Norint atnaujinti dokumentus, reikės Juris-M 3.0 arba vėlesnės versijos.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "Patalpinus nuorodas dokumente, šiek tiek padidėja jo dydis, tačiau tai leis jums dalintis dokumentu su kitais naudotojais, nenaudodami Zotero grupės. Norint atnaujinti dokumentus, reikės Zotero 3.0 arba vėlesnės versijos.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "Nuorodas talpinti dokumente">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -229,11 +229,11 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Neaiškūs citavimai">
 <!ENTITY zotero.rtfScan.cancel.label "Atšaukti">
 <!ENTITY zotero.rtfScan.citation.label "Citavimas">
-<!ENTITY zotero.rtfScan.citationsPage.description "Peržiūrėkite aptiktų citavimų sąrašą, kad būtumėte tikri, jog Zotero tinkamai parinko atitinkamus elementus. Prieš tęsdami turite savarankiškai susieti nesusietus ir neaiškius citavimus.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Peržiūrėkite aptiktų citavimų sąrašą, kad būtumėte tikri, jog Jurism tinkamai parinko atitinkamus elementus. Prieš tęsdami turite savarankiškai susieti nesusietus ir neaiškius citavimus.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Tikrinti cituotus įrašus">
 <!ENTITY zotero.rtfScan.completePage.description "Jūsiškis dokumentas peržvelgtas ir apdorotas. Pažiūrėkite, ar jis tinkamai suformatuotas.">
 <!ENTITY zotero.rtfScan.completePage.label "Raiškiojo teksto formato dokumentų peržvelgimas baigtas">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero apdoroja ir formatuoja RTF dokumentą. Palaukite.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism apdoroja ir formatuoja RTF dokumentą. Palaukite.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formatuojame citavimus">
 <!ENTITY zotero.rtfScan.inputFile.label "Įvedimo failas">
 <!ENTITY zotero.rtfScan.introPage.description "Zotaro gali automatiškai aptikti citavimus, pakeisti jų formatą ir įterpti bibliografiją į raiškiojo teksto formato dokumentus. Dabartinė RTF peržvelgimo funkcija palaiko įvairiausius citavimo formatus:">
@@ -242,7 +242,7 @@
 <!ENTITY zotero.rtfScan.itemName.label "Įrašo pavadinimas">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Susieti citavimai">
 <!ENTITY zotero.rtfScan.outputFile.label "Išvedimo failas">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero dabar ieško dokumente esančių citavimų. Palaukite.">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism dabar ieško dokumente esančių citavimų. Palaukite.">
 <!ENTITY zotero.rtfScan.scanPage.label "Peržvlgiame citavimus">
 <!ENTITY zotero.rtfScan.stylePage.label "Dokumento formatavimas">
 <!ENTITY zotero.rtfScan.title "RTF peržvelgimas">
@@ -251,7 +251,7 @@
 <!ENTITY zotero.selectitems.intro.label "Pasirinkite norimus įtraukti į bilioteką įrašus">
 <!ENTITY zotero.selectitems.select.label "Gerai">
 <!ENTITY zotero.selectitems.title "Pasirinkti įrašus">
-<!ENTITY zotero.sync.button "Sinchronizavimas su Juris-M serveriu">
+<!ENTITY zotero.sync.button "Sinchronizavimas su Zotero serveriu">
 <!ENTITY zotero.sync.error "Sinchronizavimo klaida">
 <!ENTITY zotero.sync.longTagFixer.character "rašmeniu">
 <!ENTITY zotero.sync.longTagFixer.characters "rašmenimis">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Pervadinti gairę...">
 <!ENTITY zotero.tagSelector.selectVisible "Pasirinkti matomas">
 <!ENTITY zotero.tagSelector.showAutomatic "Rodyti automatiškai">
-<!ENTITY zotero.toolbar.about.label "Apie Zotero">
+<!ENTITY zotero.toolbar.about.label "Apie Jurism">
 <!ENTITY zotero.toolbar.actions.label "Veiksmai">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -340,14 +340,14 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "apie naujoves.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "Ieškokite">
 <!ENTITY zotero.upgrade.changeLogLink "pakeitimų žurnale">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "Tai reikšmingas atnaujinimas.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink ".">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Prieš tęsdami būtinai perskaitykite">
 <!ENTITY zotero.upgrade.majorUpgradeLink "atnaujinimo instrukcijas">
-<!ENTITY zotero.upgrade.newVersionInstalled "Jūs įdiegėte naują Zotero versiją.">
-<!ENTITY zotero.upgrade.title "Zotero atnaujinimo vediklis">
+<!ENTITY zotero.upgrade.newVersionInstalled "Jūs įdiegėte naują Jurism versiją.">
+<!ENTITY zotero.upgrade.title "Jurism atnaujinimo vediklis">
 <!ENTITY zotero.upgrade.upgradeInProgress "Palaukite, kol baigsime atnaujinti. Tai gali užtrukti kelias minutes.">
-<!ENTITY zotero.upgrade.upgradeRequired "Prieš dirbant su naujają Zotero versija, reikia atnaujinti Zotero duomenų bazę.">
+<!ENTITY zotero.upgrade.upgradeRequired "Prieš dirbant su naujają Jurism versija, reikia atnaujinti Jurism duomenų bazę.">
 <!ENTITY zotero.upgrade.upgradeSucceeded "Jūsiškė duomenų bazė sėkmingai atnaujinta.">

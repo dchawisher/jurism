@@ -38,18 +38,18 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Създава запис и бележка в Зотеро от избраното.">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Съхранява образа като запис в Зотеро">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Съхранява връзката като запис в Зотеро">
-<!ENTITY zotero.downloadManager.label "Save to Zotero">
-<!ENTITY zotero.downloadManager.noPDFTools.description "To use this feature, you must first install the PDF tools in the Search pane of the Juris-M preferences.">
+<!ENTITY zotero.downloadManager.label "Save to Jurism">
+<!ENTITY zotero.downloadManager.noPDFTools.description "To use this feature, you must first install the PDF tools in the Search pane of the Jurism preferences.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Attachments cannot be saved to the currently selected library. This item will be saved to your library instead.">
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Изберете полета за запазване от другите версии на записа">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Изберете версията на записа, която да използвате като главен запис">
 <!ENTITY zotero.errorReport.notReviewed "В общия случай, отчетите с грешки няма да бъдат разглеждани, освен ако не са оповестени във форумите.">
-<!ENTITY zotero.errorReport.postToForums "Моля оставете съобщение във форумите на Zotero (forums.zotero.org) с идентификационият номер на отчета, описание на проблема и стъпките необходими, за да бъде възпроизведен.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "Идентификационен номер на отчета:">
 <!ENTITY zotero.errorReport.submissionInProgress "Моля изчакайте докато бъде подаден отчета с грешките.">
 <!ENTITY zotero.errorReport.submitted "Отчета с грешките беше подаден.">
 <!ENTITY zotero.errorReport.title "Зотеро доклад за проблем">
-<!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
+<!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Jurism.">
 <!ENTITY zotero.exportOptions.format.label "Формат:">
 <!ENTITY zotero.exportOptions.title "Изнасяне...">
 <!ENTITY zotero.exportOptions.translatorOptions.label "Параметри на извличащите данни програми">
@@ -133,7 +133,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "Storing references in your document slightly increases file size, but will allow you to share your document with others without using a Juris-M group. Juris-M 3.0 or later is required to update documents created with this option.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "Storing references in your document slightly increases file size, but will allow you to share your document with others without using a Zotero group. Zotero 3.0 or later is required to update documents created with this option.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "Store references in document">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -340,7 +340,7 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "за да видите какво беше актуализирано и какво е новото.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "Моля прегледайте">
 <!ENTITY zotero.upgrade.changeLogLink "дневника на промените">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "Това е голяма актуализация.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "преди да продължите.">

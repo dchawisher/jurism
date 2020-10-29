@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-<!ENTITY styles.editor "Εμφάνιση Συντάκτη  Juris-M">
+<!ENTITY styles.editor "Εμφάνιση Συντάκτη  Jurism">
 =======
-<!ENTITY styles.editor "Επεξεργαστής στυλ Zotero">
+<!ENTITY styles.editor "Επεξεργαστής στυλ Jurism">
 >>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 
 <!ENTITY styles.editor.citePosition "Θέση παραπομπής:">

@@ -181,7 +181,7 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "Изходящ формат по подразбиране:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "Изключване на бързото копиране при влачене на повече от">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "Внимание: Богатото форматиране на текста ще бъде загубен при Mac OS X.">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "Домейн/Пътека">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(напр. wikipedia.org)">
@@ -198,7 +198,7 @@
 <!ENTITY zotero.preferences.search.indexStats.words "Думи:">
 <!ENTITY zotero.preferences.search.pdfIndexing "Индексира на PDF">
 <!ENTITY zotero.preferences.settings "Настройки">
-<!ENTITY zotero.preferences.showIn "Load Juris-M in:">
+<!ENTITY zotero.preferences.showIn "Load Jurism in:">
 <!ENTITY zotero.preferences.showIn.appTab "App tab">
 <!ENTITY zotero.preferences.showIn.browserPane "Browser pane">
 <!ENTITY zotero.preferences.showIn.separateTab "Separate tab">

@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Abbandona">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Esci da Zotero">
+<!ENTITY quitApplicationCmdMac.label "Esci da Jurism">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Esci">
 <!ENTITY recursiveCollections.label "Mostra oggetti dalle collezioni secondarie">

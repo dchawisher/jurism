@@ -63,10 +63,10 @@
     "message": "$1 var ikke i stand til å kommunisere med $2 skrivebordsprogrammet. $2 må være åpen for å benytte web-basert henvisning."
   },
   "integration_googleDocs_unlinkBeforeSaving_warning": {
-    "message": "Dette dokumentet inneholder aktive Zotero henvisninger som vil vises som zotero.org koblinger i en nedlastet kopi."
+    "message": "Dette dokumentet inneholder aktive Jurism henvisninger som vil vises som zotero.org koblinger i en nedlastet kopi."
   },
   "integration_googleDocs_unlinkBeforeSaving_instructions": {
-    "message": "For å generere en versjon som kan deles, velg <b>Lag en kopi…</b>fra Fil menyen, velg deretter<b>Fjern kobling fra henvisninger</b> fra Zotero menyen i det nye dokumentet, og last deretter ned versjon med koblinger fjernet. Behold det opprinnelige dokumentet med koblinger i tilfelle du trenger å gjøre flere endringer."
+    "message": "For å generere en versjon som kan deles, velg <b>Lag en kopi…</b>fra Fil menyen, velg deretter<b>Fjern kobling fra henvisninger</b> fra Jurism menyen i det nye dokumentet, og last deretter ned versjon med koblinger fjernet. Behold det opprinnelige dokumentet med koblinger i tilfelle du trenger å gjøre flere endringer."
   },
   "integration_googleDocs_unlinkBeforeSaving_downloadAnyway": {
     "message": "Last uansett ned versjon med koblinger"

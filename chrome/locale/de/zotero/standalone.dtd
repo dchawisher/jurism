@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Beenden">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Zotero beenden">
+<!ENTITY quitApplicationCmdMac.label "Jurism beenden">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Beenden">
 <!ENTITY recursiveCollections.label "Einträge aus Untersammlung anzeigen">

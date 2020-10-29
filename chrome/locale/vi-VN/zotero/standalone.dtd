@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Quit">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Thoát Zotero">
+<!ENTITY quitApplicationCmdMac.label "Thoát Jurism">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Thoát">
 <!ENTITY recursiveCollections.label "Show Items from Subcollections">

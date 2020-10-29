@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-<!ENTITY styles.preview "Προεπισκόπιση Μορφής Juris-M">
+<!ENTITY styles.preview "Προεπισκόπιση Μορφής Jurism">
 =======
-<!ENTITY styles.preview "Προεπισκόπηση στυλ του Zotero">
+<!ENTITY styles.preview "Προεπισκόπηση στυλ του Jurism">
 >>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
 
 <!ENTITY styles.preview.citationFormat "Μορφή παραπομπής:">

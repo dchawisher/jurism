@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "Scurtături">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Dosar de bază:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Dosarul de bază pentru anexe atașate">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero va folosi căi relative pentru fișierele anexate în directorul de bază, permițând accesarea fișierelor pe diferite calculatoare atâta timp cât structura fișierelor în dosarul de bază rămâne aceeași.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism va folosi căi relative pentru fișierele anexate în directorul de bază, permițând accesarea fișierelor pe diferite calculatoare atâta timp cât structura fișierelor în dosarul de bază rămâne aceeași.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Revino la căi absolute...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Alege…">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Extrage automat metadatele pentru PDF-uri">
@@ -45,13 +45,13 @@
 <!ENTITY zotero.preferences.debugOutputLogging.clearOutput "Ștergere ieșire">
 <!ENTITY zotero.preferences.debugOutputLogging.enableAfterRestart "Activare după restart">
 <!ENTITY zotero.preferences.debugOutputLogging.linesLogged "linii înregistrate">
-<!ENTITY zotero.preferences.debugOutputLogging.message "Datele de ieșire de la depanare pot ajuta dezvoltatorii Juris-M să diagnosticheze problemele din Juris-M. Jurnalul de depanare va încetini Juris-M, așa încât va trebui să-l păstrați dezactivat până când un dezvoltator Juris-M cere datele de ieșire de la depanare.">
-<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Trimitere către serverul Juris-M">
+<!ENTITY zotero.preferences.debugOutputLogging.message "Datele de ieșire de la depanare pot ajuta dezvoltatorii Jurism să diagnosticheze problemele din Jurism. Jurnalul de depanare va încetini Jurism, așa încât va trebui să-l păstrați dezactivat până când un dezvoltator Jurism cere datele de ieșire de la depanare.">
+<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Trimitere către serverul Jurism">
 <!ENTITY zotero.preferences.debugOutputLogging.viewOutput "Vizualizare ieșire">
 <!ENTITY zotero.preferences.default "Implicite:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Anexează automat fișierele PDF asociate, precum și alte fișiere, atunci când sunt salvate înregistrările">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Include URL-urile articolelor în referințe">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Când această opțiune nu este funcțională, Zotero include URL-urile în timp ce citează articole de jurnale, reviste și ziare doar dacă pentru articol nu a s-a specificat un interval de pagini.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Când această opțiune nu este funcțională, Jurism include URL-urile în timp ce citează articole de jurnale, reviste și ziare doar dacă pentru articol nu a s-a specificat un interval de pagini.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Obține stiluri adiționale...">
@@ -89,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Deschide/Închide panoul Zotero">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Încearcă să suprascrii scurtăturile care sunt în conflict">
 <!ENTITY zotero.preferences.keys.quicksearch "Căutare rapidă">
-<!ENTITY zotero.preferences.keys.saveToZotero "Salvează în Zotero (iconița din bara de adrese)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Salvează în Jurism (iconița din bara de adrese)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Marchează toate fluxurile de înregistrări ca citite/necitite">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Extinde pe tot ecranul">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Afișează/ascunde selectorul de etichete">
@@ -126,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Machetă:">
 <!ENTITY zotero.preferences.layout.stacked "Stivuite">
 <!ENTITY zotero.preferences.layout.standard "Standard">
-<!ENTITY zotero.preferences.locate.addDescription "Pentru a adăuga un motor de căutare care nu este în listă, vizitați în browser motorul de căutare dorit și selectați „Adaugă” din meniul Localizare din Zotero.">
+<!ENTITY zotero.preferences.locate.addDescription "Pentru a adăuga un motor de căutare care nu este în listă, vizitați în browser motorul de căutare dorit și selectați „Adaugă” din meniul Localizare din Jurism.">
 <!ENTITY zotero.preferences.locate.description "Descriere">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Manager pentru motorul de căutare a articolelor">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Un motor de căutare extinde capacitatea de localizare în lista derulantă din panoul Informații. Activând motoarele de căutare din lista de mai jos, ele vor fi adăugate în lista derulantă și vor putea fi folosite pentru localizarea resurselor din biblioteca ta de pe web.">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Caută rezolvatori">
 <!ENTITY zotero.preferences.openurl.server "Rezolvator:">
 <!ENTITY zotero.preferences.openurl.version "Versiune:">
-<!ENTITY zotero.preferences.parseRISRefer "Folosește Zotero pentru fișierele descărcate de tip BibTeX/RIS/Refer">
+<!ENTITY zotero.preferences.parseRISRefer "Folosește Jurism pentru fișierele descărcate de tip BibTeX/RIS/Refer">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Avansate">
 <!ENTITY zotero.preferences.prefpane.cite "Citează">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Servere proxy configurate">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Calea dosarului (de ex., despre/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "pentru mai multe informații.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero va redirecționa cererile prin serverele proxy salvate. Vezi">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism va redirecționa cererile prin serverele proxy salvate. Vezi">
 <!ENTITY zotero.preferences.proxies.desc_link "documentația pentru serverele proxy">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Dezactivează redirectarea proxy când numele meu de domeniu conține ">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Numele fișierului (de ex., index.html)">
@@ -181,7 +181,7 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "Stil implicit de formatare:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "Dezactivează Copierea rapidă în timpul tragerii a mai mult de">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "Notă: Formatarea RTF se va pierde pe Mac OS X.">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "Domeniu/Cale">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(de ex., wikipedia.org)">
@@ -198,7 +198,7 @@
 <!ENTITY zotero.preferences.search.indexStats.words "Cuvinte:">
 <!ENTITY zotero.preferences.search.pdfIndexing "Indexare PDF">
 <!ENTITY zotero.preferences.settings "Setări">
-<!ENTITY zotero.preferences.showIn "Încarcă Juris-M în:">
+<!ENTITY zotero.preferences.showIn "Încarcă Jurism în:">
 <!ENTITY zotero.preferences.showIn.appTab "Filă aplicație">
 <!ENTITY zotero.preferences.showIn.browserPane "Panou browser">
 <!ENTITY zotero.preferences.showIn.separateTab "Filă separată">
@@ -234,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Resetează istoria sincronizării fișierelor">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compară toate fișierele anexate cu serviciul de stocare">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restaurează din biblioteca online">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Suprascrie datele locale din Zotero cu datele din biblioteca online.">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Suprascrie datele locale din Jurism cu datele din biblioteca online.">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Înlocuiește biblioteca online">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Suprascrie datele din biblioteca online cu datele locale din Zotero">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Suprascrie datele din biblioteca online cu datele locale din Jurism">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Următoarele operații sunt pentru a fi folosite în situații rare și specifice și nu ar trebui folosite pentru probleme generale. În multe cazuri, resetarea va cauza probleme în plus. Vezi ">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Opțiuni de resetare sincronizare">
 <!ENTITY zotero.preferences.sync.reset.warning3 "pentru mai multe informații.">
 <!ENTITY zotero.preferences.sync.setUpSync "Configurare sincronizare">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Sincronizare automată">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sincronizează conținutul textului complet">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero poate sincroniza, cu zotero.org și alte dispozitive legate, conținutul textului complet al fișierelor din bibliotecile tale Zotero, permițându-ți să cauți cu ușurință în fișierele tale oriunde ai fi. Conținutul textului complet al fișierelor tale nu va fi partajat public.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism poate sincroniza, cu zotero.org și alte dispozitive legate, conținutul textului complet al fișierelor din bibliotecile tale Jurism, permițându-ți să cauți cu ușurință în fișierele tale oriunde ai fi. Conținutul textului complet al fișierelor tale nu va fi partajat public.">
 <!ENTITY zotero.preferences.sync.syncServer "Sincronizare date">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Dezleagă cont...">
 <!ENTITY zotero.preferences.sync.username "Nume de utilizator:">
-<!ENTITY zotero.preferences.title "Preferințe Zotero">
+<!ENTITY zotero.preferences.title "Preferințe Jurism">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "zile în urmă">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Șterge automat din coșul de gunoi înregistrările mai vechi de">
 <!ENTITY zotero.preferences.updateNow "Actualizează acum">

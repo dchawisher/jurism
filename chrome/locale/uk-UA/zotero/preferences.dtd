@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "Гарячі клавіши">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Базовий каталог:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Базовий каталог пов'язаних вкладень">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero буде використовувати відносні шляхи для пов'язаних вкладених файлів всередині каталогу даних, що дозволяє отримати доступ до файлів на різних комп'ютерах, поки файлова структура базового каталогу залишається без змін.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism буде використовувати відносні шляхи для пов'язаних вкладених файлів всередині каталогу даних, що дозволяє отримати доступ до файлів на різних комп'ютерах, поки файлова структура базового каталогу залишається без змін.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Повернути значення абсолютних шляхів...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Вибрати...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Automatically retrieve metadata for PDFs">
@@ -45,13 +45,13 @@
 <!ENTITY zotero.preferences.debugOutputLogging.clearOutput "Очистити запис">
 <!ENTITY zotero.preferences.debugOutputLogging.enableAfterRestart "Включити після перезапуску">
 <!ENTITY zotero.preferences.debugOutputLogging.linesLogged "рядків записано">
-<!ENTITY zotero.preferences.debugOutputLogging.message "Інформація відладки може допомогти розробникам Juris-M діагностувати помилки, що виникли. Записк інфрмації відладки сповільнить роботу Juris-M, тому зазвичай її варто включати, тільки якщо про це просить розробник.">
-<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Відправити на сервер Juris-M">
+<!ENTITY zotero.preferences.debugOutputLogging.message "Інформація відладки може допомогти розробникам Jurism діагностувати помилки, що виникли. Записк інфрмації відладки сповільнить роботу Jurism, тому зазвичай її варто включати, тільки якщо про це просить розробник.">
+<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Відправити на сервер Jurism">
 <!ENTITY zotero.preferences.debugOutputLogging.viewOutput "Подивитись запис">
 <!ENTITY zotero.preferences.default "За замовчуванням:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Автоматично прикріпляти пов'язані PDF та інші файли при зберіганні">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Включати URL паперових статей в посилання">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Коли ця опція відключена, при цитуванні журнальних або газетних статей Zotero додає URL тільки при відсутності у сторінки діапазону сторінок.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Коли ця опція відключена, при цитуванні журнальних або газетних статей Jurism додає URL тільки при відсутності у сторінки діапазону сторінок.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Отримати додаткові стилі...">
@@ -89,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Відкрити/закрити панель Zotero">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Try to override conflicting shortcuts">
 <!ENTITY zotero.preferences.keys.quicksearch "Швидкий пошук">
-<!ENTITY zotero.preferences.keys.saveToZotero "Зберегти в Zotero (значок в адресному рядку браузера)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Зберегти в Jurism (значок в адресному рядку браузера)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Позначити всі записи стрічки, як прочитані/непрочитані">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Перключенні повноекранного режиму">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Переключити панель вибору тегів">
@@ -126,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Компонування">
 <!ENTITY zotero.preferences.layout.stacked "Stacked">
 <!ENTITY zotero.preferences.layout.standard "Стандарт">
-<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Zotero’s Locate menu.">
+<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Jurism’s Locate menu.">
 <!ENTITY zotero.preferences.locate.description "Опис">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Диспетчер систем пошуку статей">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Пошукова система розширює можливості меню, що випадає, 'Виявити' в панелі 'Інформація'. Включенні Пошукової системи в наведеному списку додасть її і це меню, що випадає, і її можна буде використовувати для пошуку ресурсів в вашій бібліотеці через Інтернет.">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Пошук ресолверів">
 <!ENTITY zotero.preferences.openurl.server "Сервер">
 <!ENTITY zotero.preferences.openurl.version "Версія">
-<!ENTITY zotero.preferences.parseRISRefer "Використовувати Zotero для завантаження файлів BibTeX/RIS/Refer">
+<!ENTITY zotero.preferences.parseRISRefer "Використовувати Jurism для завантаження файлів BibTeX/RIS/Refer">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Розширені">
 <!ENTITY zotero.preferences.prefpane.cite "Цитування">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Налаштовані проксі">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - шлях каталогу (наприклад, about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "для додаткової інформації.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero  автоматично перенаправить всі запити через збережені проксі. Дивіться">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism  автоматично перенаправить всі запити через збережені проксі. Дивіться">
 <!ENTITY zotero.preferences.proxies.desc_link "документацію про проксі">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Відключити перенаправлення, коли моє доменне ім'я містить">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - ім'я файлу (наприклад, index.html)">
@@ -181,7 +181,7 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "Формат виводу за замовчуванням:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "Включити швидке копіювання при перетаскуванні більш ніж">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "Примітка: форматування RTF буде втрачене в Mac OS X.">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "Домен/шлях">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(наприклад, wikipedia.org)">
@@ -198,7 +198,7 @@
 <!ENTITY zotero.preferences.search.indexStats.words "Слів:">
 <!ENTITY zotero.preferences.search.pdfIndexing "Індексація PDF">
 <!ENTITY zotero.preferences.settings "Налаштування">
-<!ENTITY zotero.preferences.showIn "Відкривати в Juris-M:">
+<!ENTITY zotero.preferences.showIn "Відкривати в Jurism:">
 <!ENTITY zotero.preferences.showIn.appTab "Вкладці додатку">
 <!ENTITY zotero.preferences.showIn.browserPane "Поточній панелі">
 <!ENTITY zotero.preferences.showIn.separateTab "Окремій вкладці">
@@ -234,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Скинути історію синхронізації файлів">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compare all attachment files with the storage service">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restore from Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Zotero data with data from the online library.">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Jurism data with data from the online library.">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Replace Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Zotero data">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Jurism data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Наступні операції призначені для використання тільки в рідкісних, специфічних ситуаціях і не повинні використовуватися для загального пошуку та усунення несправностей. У багатьох випадках скидання буде викликати додаткові проблеми. Подивитися">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Параметри скидання налаштувань синхронізаії">
 <!ENTITY zotero.preferences.sync.reset.warning3 "для додаткової інформації.">
 <!ENTITY zotero.preferences.sync.setUpSync "Налаштувати синхронізацію">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Синхронізувати автоматично">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Синхронізувати повнотекстовий вміст">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero можете синхронізувати повнотекстовий вміст файлів у ваших бібліотеках Zotero з zotero.org та інших пов'язаних пристроїв, що дозволяє легко знайти ваші файли, де б ви не були. Повнотекстовий вміст ваших файлів не передаватиметься публічно.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism можете синхронізувати повнотекстовий вміст файлів у ваших бібліотеках Jurism з zotero.org та інших пов'язаних пристроїв, що дозволяє легко знайти ваші файли, де б ви не були. Повнотекстовий вміст ваших файлів не передаватиметься публічно.">
 <!ENTITY zotero.preferences.sync.syncServer "Синхронізація даних">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Від'єднати обліковий запис...">
 <!ENTITY zotero.preferences.sync.username "Ім'я користувача:">
-<!ENTITY zotero.preferences.title "Налаштування Zotero">
+<!ENTITY zotero.preferences.title "Налаштування Jurism">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "днів назад">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Автоматично прибирати документи з кошику, видалені наріше ніж">
 <!ENTITY zotero.preferences.updateNow "Оновити зараз">

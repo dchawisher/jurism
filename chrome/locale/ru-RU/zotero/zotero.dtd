@@ -34,22 +34,22 @@
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
 <!ENTITY zotero.collections.showRetractedItems "Показать отозванные записи">
 <!ENTITY zotero.collections.showUnfiledItems "Показать неподшитые записи">
-<!ENTITY zotero.contextMenu.addTextToCurrentNote "Добавить выделенное к заметкам Zotero">
-<!ENTITY zotero.contextMenu.addTextToNewNote "Создать документ и заметку Zotero из выделенного">
-<!ENTITY zotero.contextMenu.saveImageAsItem "Сохранить изображение как документ Zotero">
-<!ENTITY zotero.contextMenu.saveLinkAsItem "Сохранить ссылку как документ Zotero">
-<!ENTITY zotero.downloadManager.label "Сохранить в Zotero">
-<!ENTITY zotero.downloadManager.noPDFTools.description "Чтобы воспользоваться данной функцией, необходимо установить PDF утилиту, указанную в настройках Juris-M.">
+<!ENTITY zotero.contextMenu.addTextToCurrentNote "Добавить выделенное к заметкам Jurism">
+<!ENTITY zotero.contextMenu.addTextToNewNote "Создать документ и заметку Jurism из выделенного">
+<!ENTITY zotero.contextMenu.saveImageAsItem "Сохранить изображение как документ Jurism">
+<!ENTITY zotero.contextMenu.saveLinkAsItem "Сохранить ссылку как документ Jurism">
+<!ENTITY zotero.downloadManager.label "Сохранить в Jurism">
+<!ENTITY zotero.downloadManager.noPDFTools.description "Чтобы воспользоваться данной функцией, необходимо установить PDF утилиту, указанную в настройках Jurism.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Вложения не могут быть сохранены в текущую выбранную библиотеку. Вместо этого данный элемент будет сохранен в вашей библиотеке.">
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Выберите поля для сохранения из других версий записи:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Выберите версию записи для использования в качестве главной:">
 <!ENTITY zotero.errorReport.notReviewed "Отчеты об ошибках не рассматриваются, пока на них не сослались в форуме.">
-<!ENTITY zotero.errorReport.postToForums "Пожалуйста, оставьте сообщение на форуме Zotero (forums.zotero.org), указав этот номер отчета, описание проблемы, и какие шаги нужно предпринять чтобы воспроизвести её.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "Номер отчета:">
 <!ENTITY zotero.errorReport.submissionInProgress "Подождите, пока отчет об ошибке будет отправлен.">
 <!ENTITY zotero.errorReport.submitted "Отчет об ошибке отправлен.">
-<!ENTITY zotero.errorReport.title "Отчет об ошибке Zotero">
-<!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
+<!ENTITY zotero.errorReport.title "Отчет об ошибке Jurism">
+<!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Jurism.">
 <!ENTITY zotero.exportOptions.format.label "Формат:">
 <!ENTITY zotero.exportOptions.title "Экспорт…">
 <!ENTITY zotero.exportOptions.translatorOptions.label "Настройки преобразователя:">
@@ -133,7 +133,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "Хранение ссылок в вашем документе немного увеличивает размер файла, но позволяет обмениваться им с другими без использования группы Juris-M. Для обновления таких документов требуется Juris-M не ниже версии 3.0.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "Хранение ссылок в вашем документе немного увеличивает размер файла, но позволяет обмениваться им с другими без использования группы Zotero. Для обновления таких документов требуется Zotero не ниже версии 3.0.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "Сохранить ссылки в документе">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Неоднозначные цитаты">
 <!ENTITY zotero.rtfScan.cancel.label "Отмена">
 <!ENTITY zotero.rtfScan.citation.label "Цитата">
-<!ENTITY zotero.rtfScan.citationsPage.description "Пожалуйста, проверьте список распознанных цитат, чтобы убедиться, что Zotero правильно выбрал соответствующие записи. Необходимо принять решение по всем неопределенным или неоднозначным цитатам, прежде чем перейти к следующему шагу.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Пожалуйста, проверьте список распознанных цитат, чтобы убедиться, что Jurism правильно выбрал соответствующие записи. Необходимо принять решение по всем неопределенным или неоднозначным цитатам, прежде чем перейти к следующему шагу.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Проверить цитированные записи">
 <!ENTITY zotero.rtfScan.completePage.description "Ваш документ был сканирован и обработан. Пожалуйста, проверьте, что он отформатирован правильно.">
 <!ENTITY zotero.rtfScan.completePage.label "Сканирование RTF завершено">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero обрабатывает и форматирует ваш файл RTF. Пожалуйста, подождите.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism обрабатывает и форматирует ваш файл RTF. Пожалуйста, подождите.">
 <!ENTITY zotero.rtfScan.formatPage.label "Форматирование цитат">
 <!ENTITY zotero.rtfScan.inputFile.label "Входной файл">
-<!ENTITY zotero.rtfScan.introPage.description "Zotero может автоматически извлекать и переформатировать цитаты, а также вставить библиографию в файл RTF. В настоящее время функция сканирования RTF распознает цитаты в следующих форматах:">
+<!ENTITY zotero.rtfScan.introPage.description "Jurism может автоматически извлекать и переформатировать цитаты, а также вставить библиографию в файл RTF. В настоящее время функция сканирования RTF распознает цитаты в следующих форматах:">
 <!ENTITY zotero.rtfScan.introPage.description2 "Чтобы начать, выберите ниже входной файл RTF и выходной файл:">
 <!ENTITY zotero.rtfScan.introPage.label "Введение">
 <!ENTITY zotero.rtfScan.itemName.label "Имя записи">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Определенные цитаты">
 <!ENTITY zotero.rtfScan.outputFile.label "Выходной файл">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero сканирует ваш документ на наличие цитат. Пожалуйста, подождите.">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism сканирует ваш документ на наличие цитат. Пожалуйста, подождите.">
 <!ENTITY zotero.rtfScan.scanPage.label "Сканирование на наличие цитат">
 <!ENTITY zotero.rtfScan.stylePage.label "Форматирование документа">
 <!ENTITY zotero.rtfScan.title "Сканирование RTF">
@@ -251,11 +251,11 @@
 <!ENTITY zotero.selectitems.intro.label "Выбрать, какие записи вы хотите добавить в свою библиотеку">
 <!ENTITY zotero.selectitems.select.label "ОК">
 <!ENTITY zotero.selectitems.title "Выбрать записи">
-<!ENTITY zotero.sync.button "Синхронизировать с сервером Juris-M">
+<!ENTITY zotero.sync.button "Синхронизировать с сервером Zotero">
 <!ENTITY zotero.sync.error "Ошибка синхронизации">
 <!ENTITY zotero.sync.longTagFixer.character "символу">
 <!ENTITY zotero.sync.longTagFixer.characters "символам">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Данный тег в вашей библиотеке Zotero слишком длинный для синхронизации с сервером:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Данный тег в вашей библиотеке Jurism слишком длинный для синхронизации с сервером:">
 <!ENTITY zotero.sync.longTagFixer.split "Разделить">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Разделить по">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Вы можете разделить этот тег на несколько, укоротить его вручную или удалить его.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Переименовать тег…">
 <!ENTITY zotero.tagSelector.selectVisible "Выбрать видимые">
 <!ENTITY zotero.tagSelector.showAutomatic "Показывать автоматически">
-<!ENTITY zotero.toolbar.about.label "О Zotero">
+<!ENTITY zotero.toolbar.about.label "О Jurism">
 <!ENTITY zotero.toolbar.actions.label "Действия">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -340,14 +340,14 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "чтобы узнать что нового.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "Пожалуйста, посмотрите">
 <!ENTITY zotero.upgrade.changeLogLink "журнал изменений">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "Это крупное обновление.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "прежде чем продолжить.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Пожалуйста, посмотрите">
 <!ENTITY zotero.upgrade.majorUpgradeLink "инструкцию к обновлению">
-<!ENTITY zotero.upgrade.newVersionInstalled "Вы установили новую версию Zotero.">
-<!ENTITY zotero.upgrade.title "Мастер обновления Zotero">
+<!ENTITY zotero.upgrade.newVersionInstalled "Вы установили новую версию Jurism.">
+<!ENTITY zotero.upgrade.title "Мастер обновления Jurism">
 <!ENTITY zotero.upgrade.upgradeInProgress "Дождитесь окончания процесса обновления, это может занять какое-то время.">
-<!ENTITY zotero.upgrade.upgradeRequired "Ваша база данных Zotero должна быть обновлена для работы с новой версией.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Ваша база данных Zotero была успешно обновлена.">
+<!ENTITY zotero.upgrade.upgradeRequired "Ваша база данных Jurism должна быть обновлена для работы с новой версией.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Ваша база данных Jurism была успешно обновлена.">

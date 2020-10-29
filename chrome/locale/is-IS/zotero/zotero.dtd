@@ -34,22 +34,22 @@
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
 <!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "Sýna sameinaðar færslur">
-<!ENTITY zotero.contextMenu.addTextToCurrentNote "Bæta vali á Zotero minnisblað">
-<!ENTITY zotero.contextMenu.addTextToNewNote "Útbúa Zotero færslu og minnisblað út frá vali">
-<!ENTITY zotero.contextMenu.saveImageAsItem "Vista mynd sem Zotero færslu">
-<!ENTITY zotero.contextMenu.saveLinkAsItem "Vista slóð sem Zotero færslu">
-<!ENTITY zotero.downloadManager.label "Vista í Zotero">
-<!ENTITY zotero.downloadManager.noPDFTools.description "Til að nota þessa aðgerð verður þú fyrst að setja upp PDF verkfærin á leitarspjaldinu í Juris-M kjörstillingum.">
+<!ENTITY zotero.contextMenu.addTextToCurrentNote "Bæta vali á Jurism minnisblað">
+<!ENTITY zotero.contextMenu.addTextToNewNote "Útbúa Jurism færslu og minnisblað út frá vali">
+<!ENTITY zotero.contextMenu.saveImageAsItem "Vista mynd sem Jurism færslu">
+<!ENTITY zotero.contextMenu.saveLinkAsItem "Vista slóð sem Jurism færslu">
+<!ENTITY zotero.downloadManager.label "Vista í Jurism">
+<!ENTITY zotero.downloadManager.noPDFTools.description "Til að nota þessa aðgerð verður þú fyrst að setja upp PDF verkfærin á leitarspjaldinu í Jurism kjörstillingum.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Ekki er hægt að vista viðhengi í því safni sem nú er valið. Þessi færsla verður í staðinn vistuð í færslusafninu þínu.">
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Veldu svæði sem nota skal frá öðrum útgáfum af færslunni:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Veldu útgáfuna af þeirri færslu sem nota skal sem móðurfærslu:">
 <!ENTITY zotero.errorReport.notReviewed "Villuskýrslur eru ekki yfirfarnar nema vísað sé í þær á samskiptasvæðum.">
-<!ENTITY zotero.errorReport.postToForums "Sendu skilaboð á Zotero samskiptasvæðið (forums.zotero.org) með þessu auðkenni (Report ID), með lýsingu á vandamálinu og hvað þarf að gera til að kalla aftur fram villuna. ">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "Auðkennisnúmer (ID) skýrslu:">
 <!ENTITY zotero.errorReport.submissionInProgress "Bíddu aðeins á meðan villuskýrsla er send.">
 <!ENTITY zotero.errorReport.submitted "Villuskýrsla þín hefur verið send.">
-<!ENTITY zotero.errorReport.title "Zotero villutilkynning">
-<!ENTITY zotero.errorReport.unrelatedMessages "Hér gætu einnig verið skilaboð ótengd Juris-M.">
+<!ENTITY zotero.errorReport.title "Jurism villutilkynning">
+<!ENTITY zotero.errorReport.unrelatedMessages "Hér gætu einnig verið skilaboð ótengd Jurism.">
 <!ENTITY zotero.exportOptions.format.label "Snið:">
 <!ENTITY zotero.exportOptions.title "Flytja út…">
 <!ENTITY zotero.exportOptions.translatorOptions.label "Þýðingarstillingar">
@@ -133,7 +133,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "Vistun tilvísana í skjali veldur lítilsháttar stækkun skjalanna, en leyfir þér að deila þínum skjölum með öðrum án þess að notar Juris-M tól. Til að uppfæra skjöl sem voru búin til með þessari tilvísunaraðferð þarf að nota Juris-M útgáfu 3.0 eða síðari útgáfur.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "Vistun tilvísana í skjali veldur lítilsháttar stækkun skjalanna, en leyfir þér að deila þínum skjölum með öðrum án þess að notar Zotero tól. Til að uppfæra skjöl sem voru búin til með þessari tilvísunaraðferð þarf að nota Zotero útgáfu 3.0 eða síðari útgáfur.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "Vista tilvísanir í skjali">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Óræðar tilvitnanir">
 <!ENTITY zotero.rtfScan.cancel.label "Hætta við">
 <!ENTITY zotero.rtfScan.citation.label "Tilvitnun">
-<!ENTITY zotero.rtfScan.citationsPage.description "Yfirfarðu listann yfir þær tilvitnanir sem kannast var við til að tryggja að Zotero hafi valið tilsvarandi færslur með réttum hætti. Allar ókortlagðar eða vafasamar tilvitnanir verður að auðkenna áður en haldið er áfram.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Yfirfarðu listann yfir þær tilvitnanir sem kannast var við til að tryggja að Jurism hafi valið tilsvarandi færslur með réttum hætti. Allar ókortlagðar eða vafasamar tilvitnanir verður að auðkenna áður en haldið er áfram.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Yfirfara tilvitnaðar færslur">
 <!ENTITY zotero.rtfScan.completePage.description "Skjalið þitt hefur nú verið skannað og unnið. Gakktu úr skugga um að það sé með rétt snið.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF skönnun lokið">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero er að vinna úr og sníða RTF skrána þína. Þetta gæti tekið dálitla stund.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism er að vinna úr og sníða RTF skrána þína. Þetta gæti tekið dálitla stund.">
 <!ENTITY zotero.rtfScan.formatPage.label "Snið tilvitnana">
 <!ENTITY zotero.rtfScan.inputFile.label "Innlestrarskrá">
-<!ENTITY zotero.rtfScan.introPage.description "Zotero can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
+<!ENTITY zotero.rtfScan.introPage.description "Jurism can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
 <!ENTITY zotero.rtfScan.introPage.description2 "Til að byrja, veldu RTF skrá til lestrar og útskrá hér fyrir neðan:">
 <!ENTITY zotero.rtfScan.introPage.label "Inngangur">
 <!ENTITY zotero.rtfScan.itemName.label "Nafn færslu">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Kortlagðar tilvitnanir">
 <!ENTITY zotero.rtfScan.outputFile.label "Útskriftarskrá">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero er að leita að tilvitnunum í skjalinu þínu. Þetta gæti tekið dálitla stund.">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism er að leita að tilvitnunum í skjalinu þínu. Þetta gæti tekið dálitla stund.">
 <!ENTITY zotero.rtfScan.scanPage.label "Leita að tilvitnunum">
 <!ENTITY zotero.rtfScan.stylePage.label "Snið skjals">
 <!ENTITY zotero.rtfScan.title "RTF skönnun">
@@ -251,11 +251,11 @@
 <!ENTITY zotero.selectitems.intro.label "Veldu þær færslur sem þú vilt að bætist í færslusafnið þitt">
 <!ENTITY zotero.selectitems.select.label "Í lagi">
 <!ENTITY zotero.selectitems.title "Veldu færslur">
-<!ENTITY zotero.sync.button "Samhæfa Juris-M netþjóni">
+<!ENTITY zotero.sync.button "Samhæfa Zotero netþjóni">
 <!ENTITY zotero.sync.error "Sæmhæfingarvilla">
 <!ENTITY zotero.sync.longTagFixer.character "bókstaf">
 <!ENTITY zotero.sync.longTagFixer.characters "bókstafi">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Efitrfarandi merki í Zotero færslusafninu þínu er of langt til þess að það verði samhæft þjóni:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Efitrfarandi merki í Jurism færslusafninu þínu er of langt til þess að það verði samhæft þjóni:">
 <!ENTITY zotero.sync.longTagFixer.split "Skipta">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Skipta við">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Þú getur ýmist skipt upp merkinu í fleiri merki, stytt merkið handvirkt eða eytt því.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Endurnefna merki…">
 <!ENTITY zotero.tagSelector.selectVisible "Select visible">
 <!ENTITY zotero.tagSelector.showAutomatic "Birta sjálfvirkt">
-<!ENTITY zotero.toolbar.about.label "Um Zotero">
+<!ENTITY zotero.toolbar.about.label "Um Jurism">
 <!ENTITY zotero.toolbar.actions.label "Aðgerðir">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -340,14 +340,14 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "til að sjá hvað er nýtt.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "Hægt er að skoða">
 <!ENTITY zotero.upgrade.changeLogLink "breytingafærsluskrána">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "Þetta er alhliða uppfærsla.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "áður en haldið er áfram.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Vertu viss um að hafa farið yfir">
 <!ENTITY zotero.upgrade.majorUpgradeLink "leiðbeiningar um uppfærslu">
-<!ENTITY zotero.upgrade.newVersionInstalled "Þú hefur sett inn nýja útgáfu af Zotero.">
-<!ENTITY zotero.upgrade.title "Zotero uppfærslutól">
+<!ENTITY zotero.upgrade.newVersionInstalled "Þú hefur sett inn nýja útgáfu af Jurism.">
+<!ENTITY zotero.upgrade.title "Jurism uppfærslutól">
 <!ENTITY zotero.upgrade.upgradeInProgress "Hinkraðu þar til uppfærsluferlinu lýkur. Það gæti tekið nokkrar mínútur.">
-<!ENTITY zotero.upgrade.upgradeRequired "Það þarf að uppfæra Zotero gagnagrunninn þinn svo hann virki með nýju útgáfunni.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Vel tókst að uppfæra Zotero gagnagrunninn þinn.">
+<!ENTITY zotero.upgrade.upgradeRequired "Það þarf að uppfæra Jurism gagnagrunninn þinn svo hann virki með nýju útgáfunni.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Vel tókst að uppfæra Jurism gagnagrunninn þinn.">

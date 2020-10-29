@@ -181,7 +181,7 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "Подразумевани излазни формат:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "Онемогући Брзо копирање када се превуче више од">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "Белешка: Rich-text формат ће бити изгубљен на Mac OS X.">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "Домен/путања">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(нпр. wikipedia.rs)">
