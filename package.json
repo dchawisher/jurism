@@ -17,6 +17,9 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "classnames": "^2.2.6",
+    "cross-clear": "^1.0.0",
+    "prompt-confirm": "^2.0.4",
+    "prompt-radio": "^1.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-autosuggest": "^9.4.3",
