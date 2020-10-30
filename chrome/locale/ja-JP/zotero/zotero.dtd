@@ -32,6 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "接尾辞:">
 <!ENTITY zotero.citation.suppressAuthor.label "著者名の非表示">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
+<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "未整理のアイテムを表示">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "選択範囲を Juris-M メモに追加">
 <!ENTITY zotero.contextMenu.addTextToNewNote "選択範囲から Juris-M アイテムとメモを作成">
@@ -43,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "このアイテムの重複するヴァージョンから維持したいフィールドを選択してください:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "土台として用いるアイテムのヴァージョンを選んでください:">
 <!ENTITY zotero.errorReport.notReviewed "エラーレポートはフォーラムで言及されない限り、調査されることはありません。">
-<!ENTITY zotero.errorReport.postToForums "このレポート ID、問題の説明、および問題を再現するために必要なあらゆる手順について、Juris-M フォーラム (juris-m.github.io/support)に投稿して下さい。">
+<!ENTITY zotero.errorReport.postToForums "このレポート ID、問題の説明、および問題を再現するために必要なあらゆる手順について、Zotero フォーラム (forums.zotero.org)に投稿して下さい。">
 <!ENTITY zotero.errorReport.reportID "レポート ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "エラーレポートが送信されるまでお待ちください。">
 <!ENTITY zotero.errorReport.submitted "エラーレポートが送信されました。">
-<!ENTITY zotero.errorReport.title "Juris-M エラーレポート">
+<!ENTITY zotero.errorReport.title "Zotero エラーレポート">
 <!ENTITY zotero.errorReport.unrelatedMessages "エラーの記録にはJuris-M に無関係のメッセージが含まれている恐れがあります。">
 <!ENTITY zotero.exportOptions.format.label "フォーマット:">
 <!ENTITY zotero.exportOptions.title "エクスポート...">
@@ -67,30 +68,44 @@
 <!ENTITY zotero.file.choose.label "ファイルを選択...">
 <!ENTITY zotero.file.noneSelected.label "ファイルが選択されていません">
 <!ENTITY zotero.general.advancedOptions.label "高度なオプション">
+<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "キャンセル">
-<!ENTITY zotero.general.close "Close">
+<!ENTITY zotero.general.close "閉じる">
 <!ENTITY zotero.general.delete "削除">
 <!ENTITY zotero.general.deselectAll "選択をすべて解除">
 <!ENTITY zotero.general.edit "編集">
 <!ENTITY zotero.general.loading "読み込み中...">
-<!ENTITY zotero.general.minimize "Minimize">
+<!ENTITY zotero.general.minimize "最小化する">
 <!ENTITY zotero.general.more "その他">
 <!ENTITY zotero.general.no "いいえ">
 <!ENTITY zotero.general.note "メモ:">
 <!ENTITY zotero.general.ok "OK">
 <!ENTITY zotero.general.optional "（任意）">
+<!ENTITY zotero.general.options "オプション">
+<!ENTITY zotero.general.other "その他...">
 <!ENTITY zotero.general.refresh "再読み込み">
+<!ENTITY zotero.general.reset "リセット">
 <!ENTITY zotero.general.saveAs "名前をつけて保存...">
 <!ENTITY zotero.general.selectAll "すべて選択">
+<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "ツール">
 <!ENTITY zotero.general.yes "はい">
+<!ENTITY zotero.import "インポート">
+<!ENTITY zotero.import.createCollection "インポートされたコレクションやアイテムを新しいコレクションに格納する">
+<!ENTITY zotero.import.database "データベース">
+<!ENTITY zotero.import.fileHandling "ファイルの取り扱い">
+<!ENTITY zotero.import.importing "インポート中...">
+<!ENTITY zotero.import.lastModified "最後の更新">
+<!ENTITY zotero.import.size "サイズ">
+<!ENTITY zotero.import.source.file "単一ファイル (BibTeX, RIS, Zotero RDF, など.)">
+<!ENTITY zotero.import.whereToImportFrom "どこからインポートしますか？">
 <!ENTITY zotero.integration.addEditCitation.title "出典表記を追加・編集">
 <!ENTITY zotero.integration.classicView.label "クラシック表示">
 <!ENTITY zotero.integration.docPrefs.title "ドキュメントの設定">
 <!ENTITY zotero.integration.editBibliography.title "参考文献目録を編集">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "Disabling updates can speed up citation insertion in large documents. Click Refresh to update citations manually.">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "Automatically update citations">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "Citations with pending updates will be highlighted in the document">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "更新を無効化すれば大きな書類への出典表記の挿入が高速化できます。出典表記を手動で更新するためにはリフレッシュボタンをクリックしてください。">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "出典表記を自動的に更新する">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "更新待ちの出典表記は書類中でハイライト表示されます。">
 <!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.caption "「雑誌略誌名」のフィールドは無視されます。">
 <!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.label "MEDLINEの略誌名を使用する">
 <!ENTITY zotero.integration.prefs.bookmarks.caption "ブックマークはWordとLibreOfficeの間で共有できますが、意図せずに変更された場合にエラーを生じる場合があり、また脚注に挿入することが出来ません。">
@@ -99,6 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "出典表記の出力形式:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "文末注">
+<!ENTITY zotero.integration.prefs.exportDocument "別のワード・プロセッサに切り替える...">
 <!ENTITY zotero.integration.prefs.footnotes.label "脚注">
 <!ENTITY zotero.integration.prefs.formatUsing.label "出典表記の保存形式:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -167,10 +183,10 @@
 <!ENTITY zotero.items.menu.mergeItems "アイテムを統合する...">
 <!ENTITY zotero.items.menu.moveDown "Move Down">
 <!ENTITY zotero.items.menu.moveUp "Move Up">
-<!ENTITY zotero.items.menu.reportMetadata "Report Incorrect Metadata">
+<!ENTITY zotero.items.menu.reportMetadata "不正確なメタデータを報告する">
 <!ENTITY zotero.items.menu.restoreToLibrary "ライブラリへ復帰させる">
 <!ENTITY zotero.items.menu.showInLibrary "ライブラリの中に表示">
-<!ENTITY zotero.items.menu.unrecognize "Undo Retrieve Metadata">
+<!ENTITY zotero.items.menu.unrecognize "メタデータの回収を取り消す">
 <!ENTITY zotero.items.moreColumns.label "列を追加する">
 <!ENTITY zotero.items.numChildren_column "+">
 <!ENTITY zotero.items.pages_column "ページ">
@@ -188,7 +204,7 @@
 <!ENTITY zotero.items.volume_column "巻">
 <!ENTITY zotero.items.year_column "年">
 <!ENTITY zotero.lookup.button.search "検索">
-<!ENTITY zotero.lookup.description "下のボックスから検索するには、 ISBN、DOI、または PMID （複数可）を入力してください。">
+<!ENTITY zotero.lookup.description "ライブラリに追加するためには ISBN, DOI, PMID, または arXiv ID (複数可) を入力してください。">
 <!ENTITY zotero.merge.deleted "削除済み">
 <!ENTITY zotero.merge.of "の">
 <!ENTITY zotero.merge.title "衝突の解決">
@@ -213,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Ambiguous Citations">
 <!ENTITY zotero.rtfScan.cancel.label "取り消す">
 <!ENTITY zotero.rtfScan.citation.label "出典表記">
-<!ENTITY zotero.rtfScan.citationsPage.description "以下に表示される、 Juris-M が認識した出典表記の一覧をご覧頂き、対応する文献を正しく見つけたかどうかご確認ください。次の手順に進む前に、文献不明の出典表記やあいまいな出典表記はすべて解消される必要があります。">
+<!ENTITY zotero.rtfScan.citationsPage.description "以下に表示される、 Zotero が認識した出典表記の一覧をご覧頂き、対応する文献を正しく見つけたかどうかご確認ください。次の手順に進む前に、文献不明の出典表記やあいまいな出典表記はすべて解消される必要があります。">
 <!ENTITY zotero.rtfScan.citationsPage.label "引用されたアイテムを検証する">
 <!ENTITY zotero.rtfScan.completePage.description "あなたの文書はスキャンされ処理が完了しました。正しく整形されていることを確認してください。">
 <!ENTITY zotero.rtfScan.completePage.label "RTF スキャンが完了しました">
-<!ENTITY zotero.rtfScan.formatPage.description "Juris-M はあなたの RTF ファイルを処理中、整形中です。しばらくお待ちください。">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero はあなたの RTF ファイルを処理中、整形中です。しばらくお待ちください。">
 <!ENTITY zotero.rtfScan.formatPage.label "出典表記の書式設定">
 <!ENTITY zotero.rtfScan.inputFile.label "入力元ファイル">
-<!ENTITY zotero.rtfScan.introPage.description "Juris-M は RTF ファイルから自動的に出典表記を抽出し、出典表記を再整形して、参考文献目録を挿入することができます。この RTF スキャン機能は現在、以下に挙げる形式の出典表記をサポートしています:">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero は RTF ファイルから自動的に出典表記を抽出し、出典表記を再整形して、参考文献目録を挿入することができます。この RTF スキャン機能は現在、以下に挙げる形式の出典表記をサポートしています:">
 <!ENTITY zotero.rtfScan.introPage.description2 "まず最初に、RTF 入力元ファイルと出力先ファイルを下記から選んでください。">
 <!ENTITY zotero.rtfScan.introPage.label "案内">
 <!ENTITY zotero.rtfScan.itemName.label "アイテム名">
 <!ENTITY zotero.rtfScan.mappedCitations.label "文献同定済みの出典表記">
 <!ENTITY zotero.rtfScan.outputFile.label "出力先ファイル">
-<!ENTITY zotero.rtfScan.scanPage.description "Juris-M はあなたの文書の出典表記をスキャンしています。しばらくお待ちください。">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero はあなたの文書の出典表記をスキャンしています。しばらくお待ちください。">
 <!ENTITY zotero.rtfScan.scanPage.label "出典表記をスキャンしています">
 <!ENTITY zotero.rtfScan.stylePage.label "文書の書式設定">
 <!ENTITY zotero.rtfScan.title "RTF スキャン">
@@ -239,7 +255,7 @@
 <!ENTITY zotero.sync.error "同期エラー">
 <!ENTITY zotero.sync.longTagFixer.character "文字目">
 <!ENTITY zotero.sync.longTagFixer.characters "文字目">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "あなたの Juris-M ライブラリにある以下のタグは、サーバと同期させるには長過ぎます。">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "あなたの Zotero ライブラリにある以下のタグは、サーバと同期させるには長過ぎます。">
 <!ENTITY zotero.sync.longTagFixer.split "分割する">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "次の場所で分割:">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "問題のタグを複数のタグに分割するか、手動でタグを編集して短くするか、あるいは削除してください。">
@@ -272,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "タグ名の変更...">
 <!ENTITY zotero.tagSelector.selectVisible "可視タグを選択">
 <!ENTITY zotero.tagSelector.showAutomatic "自動生成タグも表示">
-<!ENTITY zotero.toolbar.about.label "Juris-M について">
+<!ENTITY zotero.toolbar.about.label "Zotero について">
 <!ENTITY zotero.toolbar.actions.label "アクション">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -315,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "環境設定...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "アイテムを削除...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF スキャン...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF スキャン">
 <!ENTITY zotero.toolbar.supportAndDocumentation "サポートとヘルプ">
 <!ENTITY zotero.toolbar.tab.tooltip "タブのモードを切り替える">
 <!ENTITY zotero.toolbar.tagSelector.label "タグ選択ボックスを表示する／隠す">
@@ -330,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "まずご確認ください。">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "続ける前に">
 <!ENTITY zotero.upgrade.majorUpgradeLink "更新の手引きを">
-<!ENTITY zotero.upgrade.newVersionInstalled "Juris-M の新しいバージョンがインストールされました。">
-<!ENTITY zotero.upgrade.title "Juris-M 更新ガイド">
+<!ENTITY zotero.upgrade.newVersionInstalled "Zotero の新しいバージョンがインストールされました。">
+<!ENTITY zotero.upgrade.title "Zotero 更新ガイド">
 <!ENTITY zotero.upgrade.upgradeInProgress "この更新が終了するまでお待ちください。数分間かかる場合もあります。">
-<!ENTITY zotero.upgrade.upgradeRequired "新しいバージョンを使用する前にあなたの Juris-M データベースを更新する必要があります。">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Juris-M データベースは問題なく更新されました。">
+<!ENTITY zotero.upgrade.upgradeRequired "新しいバージョンを使用する前にあなたの Zotero データベースを更新する必要があります。">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Zotero データベースは問題なく更新されました。">

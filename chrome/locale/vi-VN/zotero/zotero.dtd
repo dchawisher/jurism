@@ -32,6 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "Hậu tố">
 <!ENTITY zotero.citation.suppressAuthor.label "Bỏ tên Tác giả">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
+<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "Liệt kê các mục chưa phân loại">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "Thêm phần vừa chọn vào một ghi chép Juris-M">
 <!ENTITY zotero.contextMenu.addTextToNewNote "Tạo một biểu ghi và một ghi chép Juris-M cho phần vừa chọn">
@@ -43,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Chọn các trường muốn giữ lại từ các bản khác của mục này:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Chọn phiên bản của mục đề dùng như mục mẫu:">
 <!ENTITY zotero.errorReport.notReviewed "Các báo cáo lỗi không được xem xét trừ khi được tham chiếu tới trên diễn đàn.">
-<!ENTITY zotero.errorReport.postToForums "Xin gửi một thông báo tới diễn đàn Juris-M (juris-m.github.io/support) với mã báo cáo này cùng mô tả vấn đề và tình huống sinh ra lỗi.">
+<!ENTITY zotero.errorReport.postToForums "Xin gửi một thông báo tới diễn đàn Zotero (forums.zotero.org) với mã báo cáo này cùng mô tả vấn đề và tình huống sinh ra lỗi.">
 <!ENTITY zotero.errorReport.reportID "ID của Báo cáo:">
 <!ENTITY zotero.errorReport.submissionInProgress "Xin vui lòng chờ trong khi báo cáo lỗi được gửi đi.">
 <!ENTITY zotero.errorReport.submitted "Báo cáo lỗi đã được gửi đi">
-<!ENTITY zotero.errorReport.title "Báo cáo lỗi Juris-M">
+<!ENTITY zotero.errorReport.title "Báo cáo lỗi Zotero">
 <!ENTITY zotero.errorReport.unrelatedMessages "Có thể gồm các thông báo không liên quan tới Juris-M">
 <!ENTITY zotero.exportOptions.format.label "Định dạng:">
 <!ENTITY zotero.exportOptions.title "Xuất khẩu...">
@@ -67,30 +68,44 @@
 <!ENTITY zotero.file.choose.label "Choose File...">
 <!ENTITY zotero.file.noneSelected.label "No file selected">
 <!ENTITY zotero.general.advancedOptions.label "Các tùy chỉnh nâng cao">
+<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "Hủy">
-<!ENTITY zotero.general.close "Close">
+<!ENTITY zotero.general.close "Đóng">
 <!ENTITY zotero.general.delete "Xóa">
 <!ENTITY zotero.general.deselectAll "Bỏ chọn tất cả">
 <!ENTITY zotero.general.edit "Chỉnh sửa">
 <!ENTITY zotero.general.loading "Đang nạp...">
-<!ENTITY zotero.general.minimize "Minimize">
+<!ENTITY zotero.general.minimize "Thu nhỏ">
 <!ENTITY zotero.general.more "More">
 <!ENTITY zotero.general.no "Bỏ qua">
 <!ENTITY zotero.general.note "Chú ý:">
 <!ENTITY zotero.general.ok "Đồng ý">
 <!ENTITY zotero.general.optional "(Không bắt buộc)">
+<!ENTITY zotero.general.options "Options">
+<!ENTITY zotero.general.other "Other…">
 <!ENTITY zotero.general.refresh "Cập nhật">
+<!ENTITY zotero.general.reset "Reset">
 <!ENTITY zotero.general.saveAs "Lưu là...">
 <!ENTITY zotero.general.selectAll "Chạn tất cả">
+<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Đồng ý">
+<!ENTITY zotero.import "Import">
+<!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
+<!ENTITY zotero.import.database "Database">
+<!ENTITY zotero.import.fileHandling "File Handling">
+<!ENTITY zotero.import.importing "Importing…">
+<!ENTITY zotero.import.lastModified "Last Modified">
+<!ENTITY zotero.import.size "Size">
+<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
+<!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "Thêm/Soạn thảo Trích dẫn">
 <!ENTITY zotero.integration.classicView.label "Classic View">
 <!ENTITY zotero.integration.docPrefs.title "Các tùy chọn về Tài liệu">
 <!ENTITY zotero.integration.editBibliography.title "Soạn thảo Thư tịch">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "Disabling updates can speed up citation insertion in large documents. Click Refresh to update citations manually.">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "Automatically update citations">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "Citations with pending updates will be highlighted in the document">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "Không cho phép cập nhật có thể tăng tốc độ chèn trích dẫn trong các tài liệu lớn. Kích Cập nhật để cập nhật trích dẫn thủ công.">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "Tự động cập nhật các trích dẫn">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "Các trích dẫn đang chờ cập nhật sẽ được đổi màu sáng trong tài liệu">
 <!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.caption "The “Journal Abbr” field will be ignored.">
 <!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.label "Use MEDLINE journal abbreviations">
 <!ENTITY zotero.integration.prefs.bookmarks.caption "Bookmarks can be shared between Word and LibreOffice, but may cause errors if accidentally modified and cannot be inserted into footnotes.">
@@ -99,6 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "Hiển thị các trích dẫn dưới dạng:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "Chú thích cuối bài">
+<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
 <!ENTITY zotero.integration.prefs.footnotes.label "Chú thích cuối trang">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -167,10 +183,10 @@
 <!ENTITY zotero.items.menu.mergeItems "Ghộp các mục...">
 <!ENTITY zotero.items.menu.moveDown "Move Down">
 <!ENTITY zotero.items.menu.moveUp "Move Up">
-<!ENTITY zotero.items.menu.reportMetadata "Report Incorrect Metadata">
+<!ENTITY zotero.items.menu.reportMetadata "Báo thông tin meta sai">
 <!ENTITY zotero.items.menu.restoreToLibrary "Phục hồi vào thư viện">
 <!ENTITY zotero.items.menu.showInLibrary "Hiển thị trong Thư viện">
-<!ENTITY zotero.items.menu.unrecognize "Undo Retrieve Metadata">
+<!ENTITY zotero.items.menu.unrecognize "Bỏ thông tin meta đã lấy">
 <!ENTITY zotero.items.moreColumns.label "Thêm cột">
 <!ENTITY zotero.items.numChildren_column "+">
 <!ENTITY zotero.items.pages_column "Trang">
@@ -188,7 +204,7 @@
 <!ENTITY zotero.items.volume_column "Tập">
 <!ENTITY zotero.items.year_column "Năm">
 <!ENTITY zotero.lookup.button.search "Tìm">
-<!ENTITY zotero.lookup.description "Nhập một hoặc nhiều ISBN, DOI hay PMID muốn tìm trong hộp dưới đây.">
+<!ENTITY zotero.lookup.description "Nhập ISBN, DOI, PMID hoặc arXiv ID để thêm vào thư viện của bạn:">
 <!ENTITY zotero.merge.deleted "Deleted">
 <!ENTITY zotero.merge.of "of">
 <!ENTITY zotero.merge.title "Conflict Resolution">
@@ -213,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Ambiguous Citations">
 <!ENTITY zotero.rtfScan.cancel.label "Hủy">
 <!ENTITY zotero.rtfScan.citation.label "Citation">
-<!ENTITY zotero.rtfScan.citationsPage.description "Please review the list of recognized citations below to ensure that Juris-M has selected the corresponding items correctly. Any unmapped or ambiguous citations must be resolved before proceeding to the next step.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Please review the list of recognized citations below to ensure that Zotero has selected the corresponding items correctly. Any unmapped or ambiguous citations must be resolved before proceeding to the next step.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Verify Cited Items">
 <!ENTITY zotero.rtfScan.completePage.description "Your document has now been scanned and processed. Please ensure that it is formatted correctly.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF Scan Complete">
-<!ENTITY zotero.rtfScan.formatPage.description "Juris-M is processing and formatting your RTF file. Please be patient.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero is processing and formatting your RTF file. Please be patient.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formatting Citations">
 <!ENTITY zotero.rtfScan.inputFile.label "Input File">
-<!ENTITY zotero.rtfScan.introPage.description "Juris-M can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
 <!ENTITY zotero.rtfScan.introPage.description2 "To get started, select an RTF input file and an output file below:">
 <!ENTITY zotero.rtfScan.introPage.label "Introduction">
 <!ENTITY zotero.rtfScan.itemName.label "Item Name">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Mapped Citations">
 <!ENTITY zotero.rtfScan.outputFile.label "Output File">
-<!ENTITY zotero.rtfScan.scanPage.description "Juris-M is scanning your document for citations. Please be patient.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero is scanning your document for citations. Please be patient.">
 <!ENTITY zotero.rtfScan.scanPage.label "Scanning for Citations">
 <!ENTITY zotero.rtfScan.stylePage.label "Document Formatting">
 <!ENTITY zotero.rtfScan.title "RTF Scan">
@@ -239,7 +255,7 @@
 <!ENTITY zotero.sync.error "Sync Error">
 <!ENTITY zotero.sync.longTagFixer.character "character">
 <!ENTITY zotero.sync.longTagFixer.characters "characters">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "The following tag in your Juris-M library is too long to sync to the server:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "The following tag in your Zotero library is too long to sync to the server:">
 <!ENTITY zotero.sync.longTagFixer.split "Split">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Split at the">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "You can either split the tag into multiple tags, edit the tag manually to shorten it, or delete it.">
@@ -272,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Đổi tên Thẻ...">
 <!ENTITY zotero.tagSelector.selectVisible "Chọn các thẻ nhìn thấy được">
 <!ENTITY zotero.tagSelector.showAutomatic "Hiển thị tự động">
-<!ENTITY zotero.toolbar.about.label "Giới thiệu về Juris-M">
+<!ENTITY zotero.toolbar.about.label "Giới thiệu về Zotero">
 <!ENTITY zotero.toolbar.actions.label "Hành động">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -315,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Tùy chọn...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Xóa mục...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Hộ trợ và Tài liệu">
 <!ENTITY zotero.toolbar.tab.tooltip "Chế độ tab lật">
 <!ENTITY zotero.toolbar.tagSelector.label "Hiện/Dấu bộ lọc tag">
@@ -330,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "trước khi tiếp tục.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Hãy chắc chắn bạn đã xem kỹ">
 <!ENTITY zotero.upgrade.majorUpgradeLink "các hướng dẫn nâng cấp">
-<!ENTITY zotero.upgrade.newVersionInstalled "Bạn đã cài đặt một phiên bản mới của Juris-M.">
-<!ENTITY zotero.upgrade.title "Bộ hướng dẫn nâng cấp Juris-M">
+<!ENTITY zotero.upgrade.newVersionInstalled "Bạn đã cài đặt một phiên bản mới của Zotero.">
+<!ENTITY zotero.upgrade.title "Bộ hướng dẫn nâng cấp Zotero">
 <!ENTITY zotero.upgrade.upgradeInProgress "Xin vui lòng chờ đến khi tiến trình cập nhật kết thúc. Tiến trình có thể sẽ kéo dài trong vài phút.">
-<!ENTITY zotero.upgrade.upgradeRequired "Cơ sở dữ liệu Juris-M của bạn phải được nâng cấp để có thể làm việc với phiên bản mới.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Cơ sở dữ liệu Juris-M của bạn đã được cập nhật thành công.">
+<!ENTITY zotero.upgrade.upgradeRequired "Cơ sở dữ liệu Zotero của bạn phải được nâng cấp để có thể làm việc với phiên bản mới.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Cơ sở dữ liệu Zotero của bạn đã được cập nhật thành công.">

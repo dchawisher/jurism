@@ -32,6 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "เติมท้าย:">
 <!ENTITY zotero.citation.suppressAuthor.label "ละผู้แต่ง">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
+<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "แสดงรายการที่ไม่ได้จัดกลุ่ม">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "เพิ่มสิ่งที่เลือกไว้เข้าในหมายเหตุของ Juris-M">
 <!ENTITY zotero.contextMenu.addTextToNewNote "สร้างรายการและหมายเหตุใหม่จากสิ่งที่เลือก">
@@ -43,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Select fields to keep from other versions of the item:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Choose the version of the item to use as the master item:">
 <!ENTITY zotero.errorReport.notReviewed "รายงานข้อผิดพลาดจะไม่ได้รับการตรวจสอบหากไม่มีการอ้างถึงในฟอรั่ม">
-<!ENTITY zotero.errorReport.postToForums "กรุณาส่งข้อความในฟอรั่มของ Juris-M (juris-m.github.io/support) และแจ้งรหัสรายงานนี้ รายละเอียดของปัญหาและขั้นตอนที่ทำให้เกิดปัญหานั้นอีก">
+<!ENTITY zotero.errorReport.postToForums "กรุณาส่งข้อความในฟอรั่มของ Zotero (forums.zotero.org) และแจ้งรหัสรายงานนี้ รายละเอียดของปัญหาและขั้นตอนที่ทำให้เกิดปัญหานั้นอีก">
 <!ENTITY zotero.errorReport.reportID "รหัสรายงาน:">
 <!ENTITY zotero.errorReport.submissionInProgress "โปรดรอในระหว่างที่รายงานข้อผิดพลาดกำลังส่งอยู่">
 <!ENTITY zotero.errorReport.submitted "รายงานข้อผิดพลาดถูกส่งเรียบร้อยแล้ว">
-<!ENTITY zotero.errorReport.title "Juris-M Error Report">
+<!ENTITY zotero.errorReport.title "Zotero Error Report">
 <!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "รูปแบบ:">
 <!ENTITY zotero.exportOptions.title "ส่งออก...">
@@ -67,6 +68,7 @@
 <!ENTITY zotero.file.choose.label "เลือกแฟ้ม...">
 <!ENTITY zotero.file.noneSelected.label "ไม่มีการเลือกแฟ้ม">
 <!ENTITY zotero.general.advancedOptions.label "Advanced Options">
+<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "Cancel">
 <!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "ลบ">
@@ -79,11 +81,24 @@
 <!ENTITY zotero.general.note "หมายเหตุ:">
 <!ENTITY zotero.general.ok "OK">
 <!ENTITY zotero.general.optional "(ทางเลือก)">
+<!ENTITY zotero.general.options "Options">
+<!ENTITY zotero.general.other "Other…">
 <!ENTITY zotero.general.refresh "Refresh">
+<!ENTITY zotero.general.reset "Reset">
 <!ENTITY zotero.general.saveAs "Save As…">
 <!ENTITY zotero.general.selectAll "เลือกทั้งหมด">
+<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Yes">
+<!ENTITY zotero.import "Import">
+<!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
+<!ENTITY zotero.import.database "Database">
+<!ENTITY zotero.import.fileHandling "File Handling">
+<!ENTITY zotero.import.importing "Importing…">
+<!ENTITY zotero.import.lastModified "Last Modified">
+<!ENTITY zotero.import.size "Size">
+<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
+<!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "เพิ่ม/แก้ไขการอ้างอิง">
 <!ENTITY zotero.integration.classicView.label "มุมมองแบบคลาสสิก">
 <!ENTITY zotero.integration.docPrefs.title "ค่าตั้งพึงใจเกี่ยวกับแฟ้มเอกสาร">
@@ -99,6 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "แสดงการอ้างอิงเป็น">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "อ้างอิงท้ายเรื่อง">
+<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
 <!ENTITY zotero.integration.prefs.footnotes.label "เชิงอรรถ">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -188,7 +204,7 @@
 <!ENTITY zotero.items.volume_column "Volume">
 <!ENTITY zotero.items.year_column "ปี">
 <!ENTITY zotero.lookup.button.search "Search">
-<!ENTITY zotero.lookup.description "ป้อน ISBN, DOI หรือ PMID ในกล่องด้านล่างนี้เพื่อค้นหา">
+<!ENTITY zotero.lookup.description "Enter ISBNs, DOIs, PMIDs, or arXiv IDs to add to your library:">
 <!ENTITY zotero.merge.deleted "Deleted">
 <!ENTITY zotero.merge.of "of">
 <!ENTITY zotero.merge.title "Conflict Resolution">
@@ -213,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "การอ้างอิงที่คลุมเครือ">
 <!ENTITY zotero.rtfScan.cancel.label "ยกเลิก">
 <!ENTITY zotero.rtfScan.citation.label "การอ้างอิง">
-<!ENTITY zotero.rtfScan.citationsPage.description "โปรดตรวจทานรายการการอ้างอิงข้างล่างนี้ เพื่อให้แน่ใจว่า Juris-M เลือกรายการได้อย่างถูกต้อง การอ้างอิงที่ไม่ถูกต้องหรือคลุมเครือต้องแก้ไขก่อนที่จะดำเนินการขั้นต่อไป">
+<!ENTITY zotero.rtfScan.citationsPage.description "โปรดตรวจทานรายการการอ้างอิงข้างล่างนี้ เพื่อให้แน่ใจว่า Zotero เลือกรายการได้อย่างถูกต้อง การอ้างอิงที่ไม่ถูกต้องหรือคลุมเครือต้องแก้ไขก่อนที่จะดำเนินการขั้นต่อไป">
 <!ENTITY zotero.rtfScan.citationsPage.label "ตรวจสอบรายการที่อ้างถึง">
 <!ENTITY zotero.rtfScan.completePage.description "แฟ้มเอกสารของคุณได้กราดตรวจและดำเนินการแล้ว กรุณาตรวจสอบให้แน่ใจว่ารูปแบบที่ได้นั้นถูกต้อง">
 <!ENTITY zotero.rtfScan.completePage.label "กราดตรวจ RTF เรียบร้อยแล้ว">
-<!ENTITY zotero.rtfScan.formatPage.description "Juris-M กำลังดำเนินการและจัดรูปแบบแฟ้ม RTF ของคุณ กรุณารอสักครู่">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero กำลังดำเนินการและจัดรูปแบบแฟ้ม RTF ของคุณ กรุณารอสักครู่">
 <!ENTITY zotero.rtfScan.formatPage.label "จัดรูปแบบการอ้างอิง">
 <!ENTITY zotero.rtfScan.inputFile.label "แฟ้มนำเข้า">
-<!ENTITY zotero.rtfScan.introPage.description "Juris-M สามารถคัดลอกและปรับรูปแบบการอ้างอิง และแทรกบรรณานุกรมในแฟ้ม RTF ได้ คุณสมบัติกราดตรวจ RTF รองรับการอ้างอิงอย่างหลากหลายตามรูปแบบดังต่อไปนี้">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero สามารถคัดลอกและปรับรูปแบบการอ้างอิง และแทรกบรรณานุกรมในแฟ้ม RTF ได้ คุณสมบัติกราดตรวจ RTF รองรับการอ้างอิงอย่างหลากหลายตามรูปแบบดังต่อไปนี้">
 <!ENTITY zotero.rtfScan.introPage.description2 "เริ่มโดยเลือกแฟ้มข้อมูล RTF เพื่อนำเข้าและแฟ้มข้อมูลสำหรับส่งออก:">
 <!ENTITY zotero.rtfScan.introPage.label "คำแนะนำ">
 <!ENTITY zotero.rtfScan.itemName.label "ชื่อรายการ">
 <!ENTITY zotero.rtfScan.mappedCitations.label "ทำผังการอ้างอิง">
 <!ENTITY zotero.rtfScan.outputFile.label "แฟ้มส่งออก">
-<!ENTITY zotero.rtfScan.scanPage.description "Juris-M กำลังกราดตรวจแฟ้มเอกสารของคุณเพื่อการอ้างอิง กรุณารอสักครู่">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero กำลังกราดตรวจแฟ้มเอกสารของคุณเพื่อการอ้างอิง กรุณารอสักครู่">
 <!ENTITY zotero.rtfScan.scanPage.label "กราดตรวจเพื่อการอ้างอิง">
 <!ENTITY zotero.rtfScan.stylePage.label "จัดรูปแบบแฟ้มเอกสาร">
 <!ENTITY zotero.rtfScan.title "กราดตรวจ RTF">
@@ -239,7 +255,7 @@
 <!ENTITY zotero.sync.error "การประสานมีความผิดพลาด">
 <!ENTITY zotero.sync.longTagFixer.character "ตัวอักษร">
 <!ENTITY zotero.sync.longTagFixer.characters "ตัวอักษร">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "แท็กต่อไปนี้ในไลบรารี่ของคุณยาวเกินไปที่จะประสานกับเครื่องบริการ Juris-M">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "แท็กต่อไปนี้ในไลบรารี่ของคุณยาวเกินไปที่จะประสานกับเครื่องบริการ Zotero">
 <!ENTITY zotero.sync.longTagFixer.split "แยก">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "แยก ณ ">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "คุณสามารถแยกแท็กไปยังหลายแท็ก แก้ไขแท็กให้สั้นด้วยตัวเองหรือลบแท็ก">
@@ -272,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "เปลี่ยนชื่อแท็ก...">
 <!ENTITY zotero.tagSelector.selectVisible "เลือกตามที่เห็น">
 <!ENTITY zotero.tagSelector.showAutomatic "แสดงอัตโนมัติ">
-<!ENTITY zotero.toolbar.about.label "เกี่ยวกับ Juris-M">
+<!ENTITY zotero.toolbar.about.label "เกี่ยวกับ Zotero">
 <!ENTITY zotero.toolbar.actions.label "ปฏิบัติการ">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -315,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "ค่าตั้งพึงใจ...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "ลบรายการ...">
-<!ENTITY zotero.toolbar.rtfScan.label "กราดตรวจ RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "การสนับสนุนและเอกสาร">
 <!ENTITY zotero.toolbar.tab.tooltip "ปรับสู่แบบแท็บ">
 <!ENTITY zotero.toolbar.tagSelector.label "แสดง/ซ่อนตัวเลือกแท็ก">
@@ -330,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "ก่อนที่จะทำต่อ">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "ต้องมั่นใจว่าคุณได้ทบทวน">
 <!ENTITY zotero.upgrade.majorUpgradeLink "คำแนะนำการอัพเกรด">
-<!ENTITY zotero.upgrade.newVersionInstalled "ท่านได้ติดตั้ง Juris-M รุ่นใหม่แล้ว">
-<!ENTITY zotero.upgrade.title "Juris-M Upgrade Wizard">
+<!ENTITY zotero.upgrade.newVersionInstalled "ท่านได้ติดตั้ง Zotero รุ่นใหม่แล้ว">
+<!ENTITY zotero.upgrade.title "Zotero Upgrade Wizard">
 <!ENTITY zotero.upgrade.upgradeInProgress "โปรดรอจนกว่าจะบวนการอัพเกรดจะเสร็จสิ้น ซึ่งอาจใช้เวลาหลายนาที">
-<!ENTITY zotero.upgrade.upgradeRequired "ฐานข้อมูล Juris-M ของท่าน ต้องปรับเป็นรุ่นปัจจุบันก่อนเพื่อให้ทำงานได้กับรุ่นใหม่">
-<!ENTITY zotero.upgrade.upgradeSucceeded "ฐานข้อมูล Juris-M ของท่านได้รับการปรับให้เป็นรุ่นปัจจุบันแล้ว">
+<!ENTITY zotero.upgrade.upgradeRequired "ฐานข้อมูล Zotero ของท่าน ต้องปรับเป็นรุ่นปัจจุบันก่อนเพื่อให้ทำงานได้กับรุ่นใหม่">
+<!ENTITY zotero.upgrade.upgradeSucceeded "ฐานข้อมูล Zotero ของท่านได้รับการปรับให้เป็นรุ่นปัจจุบันแล้ว">

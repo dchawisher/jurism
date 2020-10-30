@@ -10,6 +10,8 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "关闭">
+<!ENTITY collectionsPane.label "集合面板">
+<!ENTITY convertToStored.label "转换已链接文件为已存储文件...">
 <!ENTITY copyBibliographyCmd.label "复制引文目录">
 <!ENTITY copyCitationCmd.label "复制引文">
 <!ENTITY copyCmd.accesskey "C">
@@ -27,6 +29,7 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "删除">
+<!ENTITY developer.label "开发者">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "编辑">
 <!ENTITY fileMenu.accesskey "F">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "字体大小">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -80,8 +84,12 @@
 <!ENTITY importFromClipboardCmd.label "从剪贴板导入">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "安装浏览器插件">
+<!ENTITY itemPane.label "条目面板">
+<!ENTITY layout.label "布局">
+<!ENTITY manageAttachments.label "管理附件">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "最小化">
+<!ENTITY noteFontSize.label "笔记字体大小">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "页面设置…">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,9 +109,10 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "退出">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "退出 Juris-M">
+<!ENTITY quitApplicationCmdMac.label "退出 Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "退出">
+<!ENTITY recursiveCollections.label "从子集合中显示条目">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "恢复">
@@ -115,10 +124,14 @@
 <!ENTITY selectAllCmd.label "全选">
 <!ENTITY servicesMenuMac.label "服务">
 <!ENTITY showAllAppsCmdMac.label "显示所有">
+<!ENTITY stackedView.label "堆栈视图">
+<!ENTITY standardView.label "标准视图">
+<!ENTITY tagSelector.label "标签选择器">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "工具">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "撤销">
+<!ENTITY viewMenu.label "查看">
 <!ENTITY windowMenu.label "窗口">
 <!ENTITY zoomWindow.label "缩放">

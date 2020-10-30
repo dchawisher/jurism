@@ -13,7 +13,7 @@
 <!ENTITY zotero.bibliography.linkTitles.label "Include DOI or URL as a link on the entry title (instead of printing)">
 <!ENTITY zotero.bibliography.links.label "Links">
 <!ENTITY zotero.bibliography.locale.label "Llengua:">
-<!ENTITY zotero.bibliography.manageStyles "Manage Styles…">
+<!ENTITY zotero.bibliography.manageStyles "Gestiona els estils…">
 <!ENTITY zotero.bibliography.output.label "Format de sortida">
 <!ENTITY zotero.bibliography.outputMethod "Mètode de sortida:">
 <!ENTITY zotero.bibliography.outputMode "Mode de sortida:">
@@ -32,6 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "Sufix:">
 <!ENTITY zotero.citation.suppressAuthor.label "Suprimeix l'autor">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
+<!ENTITY zotero.collections.showRetractedItems "Mostra els elements retractats">
 <!ENTITY zotero.collections.showUnfiledItems "Mostra els elements no arxivats">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "Afegeix la selecció a una nota del Juris-M">
 <!ENTITY zotero.contextMenu.addTextToNewNote "Crea un element del Juris-M i una nota amb la selecció">
@@ -43,64 +44,79 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Seleccioneu els camps que voleu mantenir de les altres versions de l'element:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Triaeu la versió de l'element com a element prinicpal:">
 <!ENTITY zotero.errorReport.notReviewed "Els informes d&apos;error generalment no es revisen ni no es notifiquen al fòrum.">
-<!ENTITY zotero.errorReport.postToForums "Escriu un missatge al fòrum del Juris-M (juris-m.github.io/support) amb aquest número de referència de l&apos;informe, una descripció del problema i qualsevol pas necessari per a reproduir-lo.">
+<!ENTITY zotero.errorReport.postToForums "Escriu un missatge al fòrum del Zotero (forums.zotero.org) amb aquest número de referència de l&apos;informe, una descripció del problema i qualsevol pas necessari per a reproduir-lo.">
 <!ENTITY zotero.errorReport.reportID "Número de referència de l&apos;informe:">
 <!ENTITY zotero.errorReport.submissionInProgress "Espereu mentre s&apos;envia l&apos;informe d&apos;error.">
 <!ENTITY zotero.errorReport.submitted "L&apos;informe d&apos;error ha estat enviat correctament.">
-<!ENTITY zotero.errorReport.title "Informe d'error de Juris-M">
+<!ENTITY zotero.errorReport.title "Informe d'error de Zotero">
 <!ENTITY zotero.errorReport.unrelatedMessages "Això pot incloure missatges no relacionats amb el Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Format:">
 <!ENTITY zotero.exportOptions.title "Exporta...">
 <!ENTITY zotero.exportOptions.translatorOptions.label "Opcions del traductor">
 <!ENTITY zotero.feedSettings.cleanupAfter.label1 "Remove read articles after ">
 <!ENTITY zotero.feedSettings.cleanupAfter.label2 "day(s)">
-<!ENTITY zotero.feedSettings.cleanupReadAfter.label1 "Remove read feed items after">
-<!ENTITY zotero.feedSettings.cleanupReadAfter.label2 "day(s)">
-<!ENTITY zotero.feedSettings.cleanupUnreadAfter.label1 "Remove unread feed items after">
-<!ENTITY zotero.feedSettings.cleanupUnreadAfter.label2 "day(s)">
-<!ENTITY zotero.feedSettings.refresh.label1 "Update feed every">
-<!ENTITY zotero.feedSettings.refresh.label2 "hour(s)">
-<!ENTITY zotero.feedSettings.saveButton.label "Save">
-<!ENTITY zotero.feedSettings.title "Feed Settings">
-<!ENTITY zotero.feedSettings.title.label "Title:">
+<!ENTITY zotero.feedSettings.cleanupReadAfter.label1 "Suprimeix els elements de canal llegits després de">
+<!ENTITY zotero.feedSettings.cleanupReadAfter.label2 "dia/es">
+<!ENTITY zotero.feedSettings.cleanupUnreadAfter.label1 "Suprimeix els elements de canal no llegits després de">
+<!ENTITY zotero.feedSettings.cleanupUnreadAfter.label2 "dia/es">
+<!ENTITY zotero.feedSettings.refresh.label1 "Actualitza el canal cada">
+<!ENTITY zotero.feedSettings.refresh.label2 "hora/es">
+<!ENTITY zotero.feedSettings.saveButton.label "Desa">
+<!ENTITY zotero.feedSettings.title "Paràmetres dels canals">
+<!ENTITY zotero.feedSettings.title.label "Títol:">
 <!ENTITY zotero.feedSettings.url.label "URL:">
 <!ENTITY zotero.file.choose.label "Trieu un fitxer...">
 <!ENTITY zotero.file.noneSelected.label "No heu seleccionat cap fitxer">
-<!ENTITY zotero.general.advancedOptions.label "Advanced Options">
+<!ENTITY zotero.general.advancedOptions.label "Opcions avançades">
+<!ENTITY zotero.general.bigger "Més gran">
 <!ENTITY zotero.general.cancel "Cancel·la">
-<!ENTITY zotero.general.close "Close">
+<!ENTITY zotero.general.close "Tanca">
 <!ENTITY zotero.general.delete "Suprimeix">
 <!ENTITY zotero.general.deselectAll "Anul·la la selecció">
 <!ENTITY zotero.general.edit "Edita">
-<!ENTITY zotero.general.loading "Loading…">
-<!ENTITY zotero.general.minimize "Minimize">
-<!ENTITY zotero.general.more "More">
+<!ENTITY zotero.general.loading "S'està carregant…">
+<!ENTITY zotero.general.minimize "Minimitza">
+<!ENTITY zotero.general.more "Més">
 <!ENTITY zotero.general.no "No">
 <!ENTITY zotero.general.note "Nota:">
 <!ENTITY zotero.general.ok "D'acord">
 <!ENTITY zotero.general.optional "(Opcional)">
+<!ENTITY zotero.general.options "Opcions">
+<!ENTITY zotero.general.other "Altres…">
 <!ENTITY zotero.general.refresh "Refresca">
+<!ENTITY zotero.general.reset "Reinicia">
 <!ENTITY zotero.general.saveAs "Desa com...">
 <!ENTITY zotero.general.selectAll "Selecciona-ho tot">
-<!ENTITY zotero.general.tools "Tools">
-<!ENTITY zotero.general.yes "Yes">
+<!ENTITY zotero.general.smaller "Més petit">
+<!ENTITY zotero.general.tools "Eines">
+<!ENTITY zotero.general.yes "Sí">
+<!ENTITY zotero.import "Importa">
+<!ENTITY zotero.import.createCollection "Col·loca les col·leccions importades i elements en una col·lecció nova">
+<!ENTITY zotero.import.database "Base de dades">
+<!ENTITY zotero.import.fileHandling "Gestió de fitxers">
+<!ENTITY zotero.import.importing "S'està important…">
+<!ENTITY zotero.import.lastModified "Darrera modificació">
+<!ENTITY zotero.import.size "Mida">
+<!ENTITY zotero.import.source.file "Un fitxer (BibTex, RIS, Zotero RDF, etc.)">
+<!ENTITY zotero.import.whereToImportFrom "D'on voldríeu importar?">
 <!ENTITY zotero.integration.addEditCitation.title "Afegeix / Edita la cita">
 <!ENTITY zotero.integration.classicView.label "Vista clàssica">
 <!ENTITY zotero.integration.docPrefs.title "Preferències del document">
 <!ENTITY zotero.integration.editBibliography.title "Edita la bibliografia">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "Disabling updates can speed up citation insertion in large documents. Click Refresh to update citations manually.">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "Automatically update citations">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "Citations with pending updates will be highlighted in the document">
-<!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.caption "The “Journal Abbr” field will be ignored.">
-<!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.label "Use MEDLINE journal abbreviations">
-<!ENTITY zotero.integration.prefs.bookmarks.caption "Bookmarks can be shared between Word and LibreOffice, but may cause errors if accidentally modified and cannot be inserted into footnotes.">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "Inhabilitar les actualitzacions pot accelerar la inserció de cites en els documents més grans. Feu clic a Refresca per a actualitzar les cites manualment.">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "Actualitza automàticament les cites">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "Les cites amb actualitzacions pendents es ressaltaran en el document">
+<!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.caption "S'ignorarà el camp «Journal Abbr».">
+<!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.label "Utilitza les abreviacions de revista de MEDLINE">
+<!ENTITY zotero.integration.prefs.bookmarks.caption "Les adreces d'interès poden compartir-se entre Word i LibreOffice, però poden causar errors si es modifiquen accidentalment i no poden inserir-se en les notes de peu de pàgina.">
 <!ENTITY zotero.integration.prefs.bookmarks.label "Adreces d&apos;interès">
 <!ENTITY zotero.integration.prefs.citationAppearance.label "Appearance:">
 <!ENTITY zotero.integration.prefs.displayAs.label "Mostra les cites com a:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "Notes al final">
+<!ENTITY zotero.integration.prefs.exportDocument "Canvia a un processador de textos diferent…">
 <!ENTITY zotero.integration.prefs.footnotes.label "Notes al peu">
-<!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
+<!ENTITY zotero.integration.prefs.formatUsing.label "Emmagatzema les cites com:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
 <!ENTITY zotero.integration.prefs.lang.institutions "Institutions:">
 <!ENTITY zotero.integration.prefs.lang.journals "Journals:">
@@ -130,8 +146,8 @@
 <!ENTITY zotero.item.creatorTransform "Transform Name Form">
 <!ENTITY zotero.item.creatorTransform.nameParticles "Adjust Name Particles">
 <!ENTITY zotero.item.creatorTransform.nameSwap "Intercanvia nom i cognoms">
-<!ENTITY zotero.item.deletePermanently "Delete Permanently…">
-<!ENTITY zotero.item.tags.removeAll "Remove All Tags…">
+<!ENTITY zotero.item.deletePermanently "Elimina permanentment…">
+<!ENTITY zotero.item.tags.removeAll "Suprimeix totes les etiquetes…">
 <!ENTITY zotero.item.textTransform "Transforma el text">
 <!ENTITY zotero.item.textTransform.sentencecase "Majúscules o minúscules de la frase">
 <!ENTITY zotero.item.textTransform.titlecase "Majúscules o minúscules del títol">
@@ -159,7 +175,7 @@
 <!ENTITY zotero.items.menu.attach.file "Adjunta la còpia emmagatzemada del fitxer...">
 <!ENTITY zotero.items.menu.attach.fileLink "Adjunta un enllaç al fitxer...">
 <!ENTITY zotero.items.menu.attach.link "Adjunta un enllaç a la pàgina actual">
-<!ENTITY zotero.items.menu.attach.link.uri "Adjunta un enllaç a l'identificador uniforme de recursos...">
+<!ENTITY zotero.items.menu.attach.link.uri "Adjunta un enllaç a l'URI...">
 <!ENTITY zotero.items.menu.attach.note "Afegeix una nota">
 <!ENTITY zotero.items.menu.attach.snapshot "Adjunta la captura de la pàgina actual">
 <!ENTITY zotero.items.menu.changeTag "Change Tag">
@@ -167,10 +183,10 @@
 <!ENTITY zotero.items.menu.mergeItems "Combina els elements...">
 <!ENTITY zotero.items.menu.moveDown "Move Down">
 <!ENTITY zotero.items.menu.moveUp "Move Up">
-<!ENTITY zotero.items.menu.reportMetadata "Report Incorrect Metadata">
+<!ENTITY zotero.items.menu.reportMetadata "Informa de metadades incorrectes">
 <!ENTITY zotero.items.menu.restoreToLibrary "Restaura a la biblioteca">
 <!ENTITY zotero.items.menu.showInLibrary "Mostra a la biblioteca">
-<!ENTITY zotero.items.menu.unrecognize "Undo Retrieve Metadata">
+<!ENTITY zotero.items.menu.unrecognize "Desfés les metadades recuperades">
 <!ENTITY zotero.items.moreColumns.label "Més columnes">
 <!ENTITY zotero.items.numChildren_column "+">
 <!ENTITY zotero.items.pages_column "Nre. de pàgines">
@@ -188,7 +204,7 @@
 <!ENTITY zotero.items.volume_column "Volum">
 <!ENTITY zotero.items.year_column "Any">
 <!ENTITY zotero.lookup.button.search "Cerca">
-<!ENTITY zotero.lookup.description "Introduïu l'ISBN, DOI, o PMID per cercar en el quadre inferior.">
+<!ENTITY zotero.lookup.description "Introduïu un ISBN, DOI, PMID o ID d'arXiv per afegir a la vostra biblioteca:">
 <!ENTITY zotero.merge.deleted "Esborrat">
 <!ENTITY zotero.merge.of "de">
 <!ENTITY zotero.merge.title "Resolució de conflictes">
@@ -213,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Cites  ambigües">
 <!ENTITY zotero.rtfScan.cancel.label "Cancel·la">
 <!ENTITY zotero.rtfScan.citation.label "Cita">
-<!ENTITY zotero.rtfScan.citationsPage.description "Reviseu la llista de cites reconegudes següent per assegurar-vos que el Juris-M ha seleccionat correctament els elements corresponents. Totes les cites desassociades o ambigües s'han de resoldre abans d'anar al següent pas.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Reviseu la llista de cites reconegudes següent per assegurar-vos que el Zotero ha seleccionat correctament els elements corresponents. Totes les cites desassociades o ambigües s'han de resoldre abans d'anar al següent pas.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Verifica els elements citats">
 <!ENTITY zotero.rtfScan.completePage.description "El document ja s'ha analitzat i processat. Comproveu que s'ha formatat correctament.">
 <!ENTITY zotero.rtfScan.completePage.label "Escaneig de l'RFT completat">
-<!ENTITY zotero.rtfScan.formatPage.description "El Juris-M està processant i formatant el fitxer RTF. Tingueu paciència.">
+<!ENTITY zotero.rtfScan.formatPage.description "El Zotero està processant i formatant el fitxer RTF. Tingueu paciència.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formatant les cites">
 <!ENTITY zotero.rtfScan.inputFile.label "Fitxer d'entrada">
-<!ENTITY zotero.rtfScan.introPage.description "El Juris-M pot recuperar i reformatar les cites i inserir una bibliografia als fitxers RTF. La funció d'escaneig dels fitxers RTF actualment permet les cites amb les variacions de format següents: ">
+<!ENTITY zotero.rtfScan.introPage.description "El Zotero pot recuperar i reformatar les cites i inserir una bibliografia als fitxers RTF. La funció d'escaneig dels fitxers RTF actualment permet les cites amb les variacions de format següents: ">
 <!ENTITY zotero.rtfScan.introPage.description2 "Per començar, seleccioneu un fitxer d'entrada RTF i un fitxer de sortida:">
 <!ENTITY zotero.rtfScan.introPage.label "Introducció">
 <!ENTITY zotero.rtfScan.itemName.label "Nom de l'element">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Cites associades">
 <!ENTITY zotero.rtfScan.outputFile.label "Fitxer de sortida">
-<!ENTITY zotero.rtfScan.scanPage.description "El Juris-M està escanejant el document cercant-hi cites. Tingueu pacipència.">
+<!ENTITY zotero.rtfScan.scanPage.description "El Zotero està escanejant el document cercant-hi cites. Tingueu pacipència.">
 <!ENTITY zotero.rtfScan.scanPage.label "Escanejant en cerca de cites">
 <!ENTITY zotero.rtfScan.stylePage.label "Formatació del document">
 <!ENTITY zotero.rtfScan.title "Escaneig de l'RTF">
@@ -239,14 +255,14 @@
 <!ENTITY zotero.sync.error "Error de sincronització">
 <!ENTITY zotero.sync.longTagFixer.character "caràcter">
 <!ENTITY zotero.sync.longTagFixer.characters "caràcters">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "L'etiqueta següent de la biblioteca Juris-M és massa llarga perquè se sincronitzi amb el servidor:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "L'etiqueta següent de la biblioteca Zotero és massa llarga perquè se sincronitzi amb el servidor:">
 <!ENTITY zotero.sync.longTagFixer.split "Divideix">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Divideix en el">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Podeu dividir l'etiqueta en diverses etiquetes, editar-la manualment per reduir-ne la longitud, o suprimir-la.">
 <!ENTITY zotero.sync.longTagFixer.syncedTagSizeLimit "Les etiquetes sincronitzades ha de tenir menys de 256 caràcters.">
 <!ENTITY zotero.sync.longTagFixer.tagWillBeDeleted "L'etiqueta se suprimirà de tots els elements.">
 <!ENTITY zotero.sync.longTagFixer.uncheckedTagsNotSaved "Les etiquetes desactivades no es desaran.">
-<!ENTITY zotero.sync.stop "Stop Sync">
+<!ENTITY zotero.sync.stop "Atura la sincronització">
 <!ENTITY zotero.sync.storage.downloads "Descàrregues:">
 <!ENTITY zotero.sync.storage.progress "Progrés:">
 <!ENTITY zotero.sync.storage.uploads "Càrregues">
@@ -263,16 +279,16 @@
 <!ENTITY zotero.tagSelector.assignColor "Assigna color...">
 <!ENTITY zotero.tagSelector.clearAll "Desselecciona-ho tot">
 <!ENTITY zotero.tagSelector.clearVisible "Desselecciona les visibles">
-<!ENTITY zotero.tagSelector.deleteAutomaticInLibrary "Delete Automatic Tags in This Library…">
+<!ENTITY zotero.tagSelector.deleteAutomaticInLibrary "Elimina automàticament les etiquetes en aquesta biblioteca…">
 <!ENTITY zotero.tagSelector.deleteTag "Esborra l'etiqueta...">
 <!ENTITY zotero.tagSelector.displayAllInLibrary "Mostra totes les etiquetes a la biblioteca">
 <!ENTITY zotero.tagSelector.filter "Filtre:">
-<!ENTITY zotero.tagSelector.loadingTags "Loading tags…">
+<!ENTITY zotero.tagSelector.loadingTags "S'estan carregant les etiquetes…">
 <!ENTITY zotero.tagSelector.noTagsToDisplay "No hi ha etiquetes per mostrar">
 <!ENTITY zotero.tagSelector.renameTag "Reanomena l'etiqueta...">
 <!ENTITY zotero.tagSelector.selectVisible "Selecciona les visibles">
 <!ENTITY zotero.tagSelector.showAutomatic "Mostra automàtic">
-<!ENTITY zotero.toolbar.about.label "Quant al Juris-M">
+<!ENTITY zotero.toolbar.about.label "Quant al Zotero">
 <!ENTITY zotero.toolbar.actions.label "Accions">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -287,23 +303,23 @@
 <!ENTITY zotero.toolbar.duplicatesView.label "Duplicates view">
 <!ENTITY zotero.toolbar.emptyTrash.label "Buida la paperera">
 <!ENTITY zotero.toolbar.export.label "Exporta la biblioteca...">
-<!ENTITY zotero.toolbar.feeds.edit "Edit Feed…">
-<!ENTITY zotero.toolbar.feeds.new "New Feed">
-<!ENTITY zotero.toolbar.feeds.new.fromOPML "From OPML…">
+<!ENTITY zotero.toolbar.feeds.edit "Edita el canal…">
+<!ENTITY zotero.toolbar.feeds.new "Canal nou">
+<!ENTITY zotero.toolbar.feeds.new.fromOPML "De l'OPML…">
 <!ENTITY zotero.toolbar.feeds.new.fromPage "From Page…">
-<!ENTITY zotero.toolbar.feeds.new.fromURL "From URL…">
-<!ENTITY zotero.toolbar.feeds.refresh "Refresh Feed">
+<!ENTITY zotero.toolbar.feeds.new.fromURL "De l'URL…">
+<!ENTITY zotero.toolbar.feeds.refresh "Refresca el canal">
 <!ENTITY zotero.toolbar.import.label "Importa...">
 <!ENTITY zotero.toolbar.importFromClipboard "Importa del porta-retalls">
 <!ENTITY zotero.toolbar.lookup "Cerca per l'identificador...">
 <!ENTITY zotero.toolbar.lookup.label "Afegeix un element segons l'identificador">
-<!ENTITY zotero.toolbar.markFeedRead.label "Mark Feed as Read">
+<!ENTITY zotero.toolbar.markFeedRead.label "Marca el canal com a llegit">
 <!ENTITY zotero.toolbar.moreItemTypes.label "Més">
 <!ENTITY zotero.toolbar.newCollection.label "Col·lecció nova...">
 <!ENTITY zotero.toolbar.newGroup "Grup nou...">
 <!ENTITY zotero.toolbar.newItem.label "Element nou">
 <!ENTITY zotero.toolbar.newItemFromPage.label "Crea un element nou a partir de la pàgina actual">
-<!ENTITY zotero.toolbar.newLibrary.label "New Library">
+<!ENTITY zotero.toolbar.newLibrary.label "Biblioteca nova">
 <!ENTITY zotero.toolbar.newNote "Nota nova">
 <!ENTITY zotero.toolbar.newSavedSearch.label "Nova cerca desada...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Subcol·lecció nova...">
@@ -315,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Preferències...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Esborra l'element...">
-<!ENTITY zotero.toolbar.rtfScan.label "Escaneig de l'RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "Escaneig de l'RTF">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Assistència i documentació">
 <!ENTITY zotero.toolbar.tab.tooltip "Commuta el mode tabulació">
 <!ENTITY zotero.toolbar.tagSelector.label "Mostra/Oculta el selector d&apos;etiquetes">
@@ -330,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "abans de continuar.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Assegureu-vos de revisar">
 <!ENTITY zotero.upgrade.majorUpgradeLink "instruccions d'actualització">
-<!ENTITY zotero.upgrade.newVersionInstalled "Has instal·lat una nova versió del Juris-M.">
-<!ENTITY zotero.upgrade.title "Auxiliar d'actualització de Juris-M">
+<!ENTITY zotero.upgrade.newVersionInstalled "Has instal·lat una nova versió del Zotero.">
+<!ENTITY zotero.upgrade.title "Auxiliar d'actualització de Zotero">
 <!ENTITY zotero.upgrade.upgradeInProgress "Espereu que s&apos;acabi el procés d&apos;actualització. Pot trigar uns minuts.">
 <!ENTITY zotero.upgrade.upgradeRequired "La vostra base de dades s&apos;ha d&apos;actualitzar per a funcionar amb la nova versió.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "La vostra base de dades del Juris-M s&apos;ha actualitzat correctament">
+<!ENTITY zotero.upgrade.upgradeSucceeded "La vostra base de dades del Zotero s&apos;ha actualitzat correctament">

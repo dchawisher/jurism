@@ -12,8 +12,8 @@
 <!ENTITY zotero.search.recursive.label "Buscar en subcartafoles">
 <!ENTITY zotero.search.saveSearch "Gardar a busca">
 <!ENTITY zotero.search.search "Buscar">
-<!ENTITY zotero.search.searchInLibrary "Buscar na librería:">
+<!ENTITY zotero.search.searchInLibrary "Buscar na biblioteca:">
 <!ENTITY zotero.search.textModes.phrase "Frase">
 <!ENTITY zotero.search.textModes.phraseBinary "Frase (incl. ficheiros binarios)">
 <!ENTITY zotero.search.textModes.regexp "Expr. regular">
-<!ENTITY zotero.search.textModes.regexpCS "Expr. regular (Sensible a maiúsculas e minúsculas)">
+<!ENTITY zotero.search.textModes.regexpCS "Expr. regular (sensible a maiúsculas e minúsculas)">

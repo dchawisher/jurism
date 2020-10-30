@@ -3,11 +3,12 @@
 <!ENTITY zotero.preferences.advanced.keys "Flýtivísanir">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Grunnmappa:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Grunnmappa fyrir tengd viðhengi">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Juris-M mun nota afstæðar slóðir fyrir tengd viðhengi innan grunnmöppu, sem leyfir þér að nálgast skrár á mismunandi tölvum svo framarlega sem skráauppbygging í grunnmöppu er ávallt hin sama.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero mun nota afstæðar slóðir fyrir tengd viðhengi innan grunnmöppu, sem leyfir þér að nálgast skrár á mismunandi tölvum svo framarlega sem skráauppbygging í grunnmöppu er ávallt hin sama.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Umbreyta í algildar slóðir…">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Veldu…">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Automatically retrieve metadata for PDFs">
 <!ENTITY zotero.preferences.autoRenameFiles "Automatically rename attachment files using parent metadata">
+<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Rename linked files">
 <!ENTITY zotero.preferences.autoUpdate "Sjálfvirkt fylgjast með uppfærslum á þýðendum og leturstílum">
 <!ENTITY zotero.preferences.automaticSnapshots "Taka sjálfkrafa mynd af skjá þegar vefsíðufærslur eru búnar til">
 <!ENTITY zotero.preferences.automaticTags "Sjálfvirkt bæta við merkjum í færslur í samræmi við stikkorð og fyrirsagnir þeirra">
@@ -50,7 +51,7 @@
 <!ENTITY zotero.preferences.default "Sjálfgefið:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Hengja sjálfkrafa PDF skjöl og önnur gögn við færslur þegar þær eru vistaðar">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Sýna vefslóð til ritverka í heimildaskrá">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Þegar þetta val er ekki virkjað, þá mun Juris-M einungis birta vefslóð í fræðigreinar, tímaritsgreinar og dagblaðagreinar ef ekkert síðubil er tiltekið.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Þegar þetta val er ekki virkjað, þá mun Zotero einungis birta vefslóð í fræðigreinar, tímaritsgreinar og dagblaðagreinar ef ekkert síðubil er tiltekið.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Ná í viðbótarstíla…">
@@ -88,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Opna/Loka Juris-M svæði">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Try to override conflicting shortcuts">
 <!ENTITY zotero.preferences.keys.quicksearch "Flýtileit">
-<!ENTITY zotero.preferences.keys.saveToZotero "Vista í Juris-M (tákn birt í vefslóðareit)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Vista í Zotero (tákn birt í vefslóðareit)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Merkja öll atriði í streymi sem lesin/ólesin">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Víxla úr og í heilskjásham">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Víxla merkjaveljara af/á">
@@ -125,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Framsetning:">
 <!ENTITY zotero.preferences.layout.stacked "Stöfluð">
 <!ENTITY zotero.preferences.layout.standard "Stöðluð">
-<!ENTITY zotero.preferences.locate.addDescription "Til að bæta við leitarvél sem er ekki á listanum, þá er fyrst vafrað á vefsíðu leitarvélarinnar og svo valið &quot;Bæta við&quot; úr staðsetningar vallista Juris-M.">
+<!ENTITY zotero.preferences.locate.addDescription "Til að bæta við leitarvél sem er ekki á listanum, þá er fyrst vafrað á vefsíðu leitarvélarinnar og svo valið &quot;Bæta við&quot; úr staðsetningar vallista Zotero.">
 <!ENTITY zotero.preferences.locate.description "Lýsing">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Stýring á uppflettikerfi greina">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Uppflettikerfi fjölgar mögulegum leitarleiðum í upplýsingaflipanum. Ef leitarvélar eru virkjaðar í listanum hér fyrir neðan bætast þær við í flettilistanum og hægt verður að nota þær til að leita á vefnum að gögnum sem tengjast þínu færslusafni.">
@@ -141,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Leita að auðkennum netþjóna">
 <!ENTITY zotero.preferences.openurl.server "Auðkennir:">
 <!ENTITY zotero.preferences.openurl.version "Útgáfa:">
-<!ENTITY zotero.preferences.parseRISRefer "Nota Juris-M fyrir BibTex/RIS/Refer skrár sem hlaðið er niður">
+<!ENTITY zotero.preferences.parseRISRefer "Nota Zotero fyrir BibTex/RIS/Refer skrár sem hlaðið er niður">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Ítarlegt">
 <!ENTITY zotero.preferences.prefpane.cite "Tilvísun">
@@ -161,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Stilltir milliþjónar">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Slóðin í möppuna (t.d. about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "til frekari upplýsinga.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Juris-M mun gagnsætt framvísa beiðnum til vistaðra milliþjóna. Sjá">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero mun gagnsætt framvísa beiðnum til vistaðra milliþjóna. Sjá">
 <!ENTITY zotero.preferences.proxies.desc_link "fylgigögn um milliþjóna">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Afvirkja framvísun á milliþjóna þegar mitt nafn á léni inniheldur">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Skráarheitið (t.d. index.html)">
@@ -229,24 +230,24 @@
 <!ENTITY zotero.preferences.sync.reset.fullSync "Full Sync">
 <!ENTITY zotero.preferences.sync.reset.fullSync.desc "Merge local data with data from server, ignoring sync history.">
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory "Endurstilla forsögu gagnasamhæfingar">
-<!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory.desc "Sameina staðbundin Juris-M gögn með gögnum á samhæfingarþjóni, án tillits til fyrri samhæfingaraðgerða.">
+<!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory.desc "Sameina staðbundin Zotero gögn með gögnum á samhæfingarþjóni, án tillits til fyrri samhæfingaraðgerða.">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Endurræsa forsögu skráasamhæfingar">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compare all attachment files with the storage service">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restore from Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Juris-M data with data from the online library.">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "Restore to Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Juris-M data">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Zotero data with data from the online library.">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Replace Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Zotero data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Aðgerðir hér fyrir neðan eru einungis notaðar í sjaldgæfum og sérhæfðum tilvikum og ætti ekki að beita almennt. Í mörgum tilvikum mun endurræsing valda viðbótar vandræðum. Sjá ">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Stillingar vegna endurræsingar á samhæfingu">
 <!ENTITY zotero.preferences.sync.reset.warning3 "til frekari upplýsinga">
 <!ENTITY zotero.preferences.sync.setUpSync "Setja upp samstillingu">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Samhæfa sjálfkrafa">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Samhæfa innihald skjala">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Juris-M getur samhæft innihald skjala í Juris-M safninu þínu við zotero.org og önnur nettengd tæki sem gerir þér kleift að leita að þínum skjölum hvar sem þú ert. Innihaldi skjalanna er ekki deilt með öðrum.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero getur samhæft innihald skjala í Zotero safninu þínu við zotero.org og önnur nettengd tæki sem gerir þér kleift að leita að þínum skjölum hvar sem þú ert. Innihaldi skjalanna er ekki deilt með öðrum.">
 <!ENTITY zotero.preferences.sync.syncServer "Samstilling gagna">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Aftengja aðgang…">
 <!ENTITY zotero.preferences.sync.username "Notandanafn:">
-<!ENTITY zotero.preferences.title "Juris-M stillingar">
+<!ENTITY zotero.preferences.title "Zotero stillingar">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "dögum síðan">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Sjálfvirkt fjarlæja færslur í ruslakörfu sem voru settar þar fyrir meira en">
 <!ENTITY zotero.preferences.updateNow "Uppfæra núna">

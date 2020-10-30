@@ -2,7 +2,7 @@
 <!ENTITY zotero.about.close "Закрыть">
 <!ENTITY zotero.about.localizations "Локализация:">
 <!ENTITY zotero.alumni "Бывшие разработчики:">
-<!ENTITY zotero.citationProcessing "Обработка цитат &amp; библиографии">
+<!ENTITY zotero.citationProcessing "Обработка цитат и библиографии">
 <!ENTITY zotero.createdby "Авторы:">
 <!ENTITY zotero.developers "Разработчики:">
 <!ENTITY zotero.director "Директор:">
@@ -11,4 +11,4 @@
 <!ENTITY zotero.moreCreditsAndAcknowledgements "Дополнительные сведения об участниках и источниках">
 <!ENTITY zotero.thanks "Особая благодарность:">
 <!ENTITY zotero.version "версия">
-<!ENTITY zotero.whatsNew "Новое">
+<!ENTITY zotero.whatsNew "Что нового">

@@ -32,6 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "پسوند:">
 <!ENTITY zotero.citation.suppressAuthor.label "حذف نام نویسنده">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
+<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "نمایش آیتم‌های دسته‌بندی نشده">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "افزودن قسمت انتخاب شده به یادداشت زوترو">
 <!ENTITY zotero.contextMenu.addTextToNewNote " ساخت آیتم‌ و یادداشت از قسمت انتخاب شده">
@@ -67,6 +68,7 @@
 <!ENTITY zotero.file.choose.label "انتخاب پرونده...">
 <!ENTITY zotero.file.noneSelected.label "هیچ پرونده‌ای انتخاب نشده است">
 <!ENTITY zotero.general.advancedOptions.label "Advanced Options">
+<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "انصراف">
 <!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "حذف">
@@ -79,11 +81,24 @@
 <!ENTITY zotero.general.note "یادداشت:">
 <!ENTITY zotero.general.ok "تایید">
 <!ENTITY zotero.general.optional "(اختیاری)">
+<!ENTITY zotero.general.options "Options">
+<!ENTITY zotero.general.other "Other…">
 <!ENTITY zotero.general.refresh "Refresh">
+<!ENTITY zotero.general.reset "Reset">
 <!ENTITY zotero.general.saveAs "Save As…">
 <!ENTITY zotero.general.selectAll "انتخاب همه">
+<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Yes">
+<!ENTITY zotero.import "Import">
+<!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
+<!ENTITY zotero.import.database "Database">
+<!ENTITY zotero.import.fileHandling "File Handling">
+<!ENTITY zotero.import.importing "Importing…">
+<!ENTITY zotero.import.lastModified "Last Modified">
+<!ENTITY zotero.import.size "Size">
+<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
+<!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "افزودن/ویرایش یادکرد">
 <!ENTITY zotero.integration.classicView.label "نمایش کلاسیک">
 <!ENTITY zotero.integration.docPrefs.title "تنظیمات سند">
@@ -99,6 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "نمایش یاکردها در:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "انتهای متن">
+<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
 <!ENTITY zotero.integration.prefs.footnotes.label "پاورقی">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -188,7 +204,7 @@
 <!ENTITY zotero.items.volume_column "جلد">
 <!ENTITY zotero.items.year_column "سال">
 <!ENTITY zotero.lookup.button.search "جستجو">
-<!ENTITY zotero.lookup.description "شابک،‏ DOI یا PMID را برای جستجو در کادر زیر وارد کنید.">
+<!ENTITY zotero.lookup.description "Enter ISBNs, DOIs, PMIDs, or arXiv IDs to add to your library:">
 <!ENTITY zotero.merge.deleted "حذف‌شده">
 <!ENTITY zotero.merge.of "of">
 <!ENTITY zotero.merge.title "Conflict Resolution">
@@ -315,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "تنظیمات...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "حذف آیتم‌...">
-<!ENTITY zotero.toolbar.rtfScan.label "پیمایش RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "پشتیبانی و راهنما">
 <!ENTITY zotero.toolbar.tab.tooltip "تغییر حالت برگه‌ای">
 <!ENTITY zotero.toolbar.tagSelector.label "نمایش/نهفتن انتخاب‌گر برچسب">

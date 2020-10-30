@@ -10,8 +10,10 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Kapat">
+<!ENTITY collectionsPane.label "Dermeler Bölmesi">
+<!ENTITY convertToStored.label "Bağlantılanmış Dosyaları Depolanmış Dosyalara Dönüştür">
 <!ENTITY copyBibliographyCmd.label "Kaynakça Kopyala">
-<!ENTITY copyCitationCmd.label "Gönderme Kopyala">
+<!ENTITY copyCitationCmd.label "Alıntı Kopyala">
 <!ENTITY copyCmd.accesskey "C">
 <!ENTITY copyCmd.key "C">
 <!ENTITY copyCmd.label "Kopyala">
@@ -27,6 +29,7 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Sil">
+<!ENTITY developer.label "Geliştirici">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Düzen">
 <!ENTITY fileMenu.accesskey "F">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "Yazı Tipi Boyutu">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -80,8 +84,12 @@
 <!ENTITY importFromClipboardCmd.label "Panodan İçeri Aktar">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Tarayıcı Bağlayıcılarını Kur...">
+<!ENTITY itemPane.label "Eser Bölmesi">
+<!ENTITY layout.label "Yerleşim">
+<!ENTITY manageAttachments.label "Ekleri Yönet">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Küçült">
+<!ENTITY noteFontSize.label "Not Yazı Tipi Boyutu">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Sayfa Ayarları..">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,9 +109,10 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Ayrıl">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Juris-M'dan Ayrıl">
+<!ENTITY quitApplicationCmdMac.label "Zotero'dan Ayrıl">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Çık">
+<!ENTITY recursiveCollections.label "Alt Dermelerdeki Eserleri Göster">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Yinele">
@@ -115,10 +124,14 @@
 <!ENTITY selectAllCmd.label "Tümünü Seç">
 <!ENTITY servicesMenuMac.label "Hizmetler">
 <!ENTITY showAllAppsCmdMac.label "Hepsini Göster">
+<!ENTITY stackedView.label "Yığılmış Görünüm">
+<!ENTITY standardView.label "Normal Görünüm">
+<!ENTITY tagSelector.label "Etiket Seçici">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Araçlar">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Geri Al">
+<!ENTITY viewMenu.label "Görünüm">
 <!ENTITY windowMenu.label "Pencere">
 <!ENTITY zoomWindow.label "Yakınlaştır">

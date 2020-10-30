@@ -4,9 +4,9 @@
 <!ENTITY zotero.search.date.units.years "vuotta">
 <!ENTITY zotero.search.includeParentsAndChildren "Ota mukaan vertailua vastaavien kohteiden isäntä- ja lapsikohteet">
 <!ENTITY zotero.search.joinMode.all "kaikki">
-<!ENTITY zotero.search.joinMode.any "joku">
+<!ENTITY zotero.search.joinMode.any "mikä tahansa">
 <!ENTITY zotero.search.joinMode.prefix "Vertaa">
-<!ENTITY zotero.search.joinMode.suffix "seuraavista">
+<!ENTITY zotero.search.joinMode.suffix "seuraavista:">
 <!ENTITY zotero.search.name "Nimi:">
 <!ENTITY zotero.search.noChildren "Näytä vain ylätason kohteet">
 <!ENTITY zotero.search.recursive.label "Etsi alikansioista">

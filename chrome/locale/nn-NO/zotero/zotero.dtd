@@ -32,6 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "Suffiks:">
 <!ENTITY zotero.citation.suppressAuthor.label "Utelat forfattar">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
+<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "Vis uplasserte objekt">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "Legg utval til Juris-M-notat">
 <!ENTITY zotero.contextMenu.addTextToNewNote "Lag notat og element i Juris-M frå utvalet">
@@ -43,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Velj felt som skal behaldast frå andre versjonar av elementet:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Velj kva versjon som skal vere utgangspunkt:">
 <!ENTITY zotero.errorReport.notReviewed "Feilrapportar vert vanlegvis ikkje kommentert, dersom problemet ikkje vert teke opp i foruma.">
-<!ENTITY zotero.errorReport.postToForums "Ver god og skriv ei melding i Juris-M-foruma (juris-m.github.io/support) med denne rapport-IDen, ei skildring av problemet og naudsynte steg for å reprodusera problemet.">
+<!ENTITY zotero.errorReport.postToForums "Ver god og skriv ei melding i Zotero-foruma (forums.zotero.org) med denne rapport-IDen, ei skildring av problemet og naudsynte steg for å reprodusera problemet.">
 <!ENTITY zotero.errorReport.reportID "Rapport-ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "Vennligst vent medan feilrapporten vert levert.">
 <!ENTITY zotero.errorReport.submitted "Feilrapporten er levert.">
-<!ENTITY zotero.errorReport.title "Juris-M Error Report">
+<!ENTITY zotero.errorReport.title "Zotero Error Report">
 <!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Format:">
 <!ENTITY zotero.exportOptions.title "Eksporter …">
@@ -67,6 +68,7 @@
 <!ENTITY zotero.file.choose.label "Velg fil …">
 <!ENTITY zotero.file.noneSelected.label "Inga fil vald">
 <!ENTITY zotero.general.advancedOptions.label "Avansert">
+<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "Avbryt">
 <!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "Slett">
@@ -79,11 +81,24 @@
 <!ENTITY zotero.general.note "Notat:">
 <!ENTITY zotero.general.ok "OK">
 <!ENTITY zotero.general.optional "(Valfri)">
+<!ENTITY zotero.general.options "Options">
+<!ENTITY zotero.general.other "Other…">
 <!ENTITY zotero.general.refresh "Frisk opp">
+<!ENTITY zotero.general.reset "Reset">
 <!ENTITY zotero.general.saveAs "Lagra som …">
 <!ENTITY zotero.general.selectAll "Merk alt">
+<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "Verktøy">
 <!ENTITY zotero.general.yes "Ja">
+<!ENTITY zotero.import "Import">
+<!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
+<!ENTITY zotero.import.database "Database">
+<!ENTITY zotero.import.fileHandling "File Handling">
+<!ENTITY zotero.import.importing "Importing…">
+<!ENTITY zotero.import.lastModified "Last Modified">
+<!ENTITY zotero.import.size "Size">
+<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
+<!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "Legg til/endra henvisning">
 <!ENTITY zotero.integration.classicView.label "Klassisk framsyning">
 <!ENTITY zotero.integration.docPrefs.title "Dokumenteigenskapar">
@@ -99,6 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "Vis siteringar som:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "Sluttnotar">
+<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
 <!ENTITY zotero.integration.prefs.footnotes.label "Fotnotar">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Lagra siteringar som:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -188,7 +204,7 @@
 <!ENTITY zotero.items.volume_column "Volume">
 <!ENTITY zotero.items.year_column "År">
 <!ENTITY zotero.lookup.button.search "Søk">
-<!ENTITY zotero.lookup.description "Skriv inn ISBN, DOI eller PMID i feltet for å slå opp.">
+<!ENTITY zotero.lookup.description "Enter ISBNs, DOIs, PMIDs, or arXiv IDs to add to your library:">
 <!ENTITY zotero.merge.deleted "Sletta">
 <!ENTITY zotero.merge.of "av">
 <!ENTITY zotero.merge.title "Konflikthandsaming">
@@ -213,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Tvetydige siteringar">
 <!ENTITY zotero.rtfScan.cancel.label "Avbryt">
 <!ENTITY zotero.rtfScan.citation.label "Sitering">
-<!ENTITY zotero.rtfScan.citationsPage.description "Sjå over lista over attkjende siteringar under for å stadfesta at Juris-M har kopla siteringane rett. Ukopla eller tvetydige siteringar må rettast før du kan gå vidare.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Sjå over lista over attkjende siteringar under for å stadfesta at Zotero har kopla siteringane rett. Ukopla eller tvetydige siteringar må rettast før du kan gå vidare.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Stadfest siteringar">
 <!ENTITY zotero.rtfScan.completePage.description "Dokumentet er gjennomlest og prosessert. Kontroller at det er formatert rett.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF-skann fullført">
-<!ENTITY zotero.rtfScan.formatPage.description "Juris-M les og formaterer RTF-fila. Ha tolmod.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero les og formaterer RTF-fila. Ha tolmod.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formaterer siteringar">
 <!ENTITY zotero.rtfScan.inputFile.label "Fil å lesa">
-<!ENTITY zotero.rtfScan.introPage.description "Juris-M can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
 <!ENTITY zotero.rtfScan.introPage.description2 "Vel ei RTF-fil og ei utfil under for å starta:">
 <!ENTITY zotero.rtfScan.introPage.label "Introduksjon">
 <!ENTITY zotero.rtfScan.itemName.label "Elementnamn">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Kopla siteringar">
 <!ENTITY zotero.rtfScan.outputFile.label "Fil å skriva">
-<!ENTITY zotero.rtfScan.scanPage.description "Juris-M ser gjennom dokumentet etter siteringar. Ha tålmod.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero ser gjennom dokumentet etter siteringar. Ha tålmod.">
 <!ENTITY zotero.rtfScan.scanPage.label "Ser etter siteringar">
 <!ENTITY zotero.rtfScan.stylePage.label "Dokumentformatering">
 <!ENTITY zotero.rtfScan.title "RTF-skann">
@@ -239,7 +255,7 @@
 <!ENTITY zotero.sync.error "Synkroniseringsfeil">
 <!ENTITY zotero.sync.longTagFixer.character "teikn">
 <!ENTITY zotero.sync.longTagFixer.characters "teikn">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Dette merket i Juris-M-biblioteket ditt er for langt til å synkronisera med tenaren:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Dette merket i Zotero-biblioteket ditt er for langt til å synkronisera med tenaren:">
 <!ENTITY zotero.sync.longTagFixer.split "Kløyv">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Kløyv på">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Du kan anten kløyva merket til fleire merke, gjera det kortare manuelt, eller sletta det.">
@@ -272,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Gje tagg nytt namn …">
 <!ENTITY zotero.tagSelector.selectVisible "Vel synleg">
 <!ENTITY zotero.tagSelector.showAutomatic "Viser automatisk">
-<!ENTITY zotero.toolbar.about.label "Om Juris-M">
+<!ENTITY zotero.toolbar.about.label "Om Zotero">
 <!ENTITY zotero.toolbar.actions.label "Handlingar">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -315,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Innstillingar …">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Fjern element …">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF-skann …">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Støtte og dokumentasjon">
 <!ENTITY zotero.toolbar.tab.tooltip "Veksla fanemodus">
 <!ENTITY zotero.toolbar.tagSelector.label "Vis/skjul taggsamling">
@@ -330,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "før du held fram.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Ver sikker på at du har lest gjennom">
 <!ENTITY zotero.upgrade.majorUpgradeLink "oppgraderingsinstruksjonane">
-<!ENTITY zotero.upgrade.newVersionInstalled "Du har installert ein ny versjon av Juris-M.">
-<!ENTITY zotero.upgrade.title "Juris-M Upgrade Wizard">
+<!ENTITY zotero.upgrade.newVersionInstalled "Du har installert ein ny versjon av Zotero.">
+<!ENTITY zotero.upgrade.title "Zotero Upgrade Wizard">
 <!ENTITY zotero.upgrade.upgradeInProgress "Vent medan oppgraderinga vert utførd. Det kan ta nokre minutt.">
-<!ENTITY zotero.upgrade.upgradeRequired "Juris-M-databasen din må oppgraderast for å fungera med den nye versjonen.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Oppgraderinga av Juris-M-databasen var vellukka.">
+<!ENTITY zotero.upgrade.upgradeRequired "Zotero-databasen din må oppgraderast for å fungera med den nye versjonen.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Oppgraderinga av Zotero-databasen var vellukka.">

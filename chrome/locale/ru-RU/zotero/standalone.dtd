@@ -6,10 +6,12 @@
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">
 <!ENTITY bidiSwitchTextDirectionItem.commandkey "X">
 <!ENTITY bidiSwitchTextDirectionItem.label "Сменить направление текста">
-<!ENTITY bringAllToFront.label "Переместить все вперед">
+<!ENTITY bringAllToFront.label "Переместить всё вперед">
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Закрыть">
+<!ENTITY collectionsPane.label "Панель коллекций">
+<!ENTITY convertToStored.label "Преобразовать связанные файлы в сохраненные файлы…">
 <!ENTITY copyBibliographyCmd.label "Копировать библиографию">
 <!ENTITY copyCitationCmd.label "Копировать цитату">
 <!ENTITY copyCmd.accesskey "C">
@@ -21,12 +23,13 @@
 <!ENTITY debugOutputLogging.accesskey "L">
 <!ENTITY debugOutputLogging.clear "Очистить вывод">
 <!ENTITY debugOutputLogging.label "Вывод отладочных сообщений">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Перезапустить с включенной записью журнала…">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Перезапустить с включенным журналом отладки…">
 <!ENTITY debugOutputLogging.submit "Отправить вывод">
 <!ENTITY debugOutputLogging.view "Просмотреть вывод">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Удалить">
+<!ENTITY developer.label "Разработчик">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Правка">
 <!ENTITY fileMenu.accesskey "F">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "Размер шрифта">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -79,9 +83,13 @@
 <!ENTITY importCmd.label "Импорт…">
 <!ENTITY importFromClipboardCmd.label "Импортировать из буфера обмена">
 <!ENTITY installConnector.accesskey "C">
-<!ENTITY installConnector.label "Установить адаптер в браузер">
+<!ENTITY installConnector.label "Установить плагин для браузера">
+<!ENTITY itemPane.label "Панель записей">
+<!ENTITY layout.label "Расположение">
+<!ENTITY manageAttachments.label "Управление вложениями">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Свернуть">
+<!ENTITY noteFontSize.label "Размер шрифта заметок">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Параметры печати...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,9 +109,10 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Выйти">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Выход из Juris-M">
+<!ENTITY quitApplicationCmdMac.label "Выход из Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Выход">
+<!ENTITY recursiveCollections.label "Показывать записи из вложенных коллекций">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Повторить">
@@ -114,11 +123,15 @@
 <!ENTITY selectAllCmd.key "А">
 <!ENTITY selectAllCmd.label "Выбрать все">
 <!ENTITY servicesMenuMac.label "Сервисы">
-<!ENTITY showAllAppsCmdMac.label "Показать все">
+<!ENTITY showAllAppsCmdMac.label "Показать всё">
+<!ENTITY stackedView.label "Стопками">
+<!ENTITY standardView.label "Стандартный вид">
+<!ENTITY tagSelector.label "Панель выбора тегов">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Инструменты">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Отменить">
+<!ENTITY viewMenu.label "Вид">
 <!ENTITY windowMenu.label "Окно">
 <!ENTITY zoomWindow.label "Масштаб">

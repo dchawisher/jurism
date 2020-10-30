@@ -10,6 +10,8 @@
 <!ENTITY closeCmd.accesskey "B">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Bezárás">
+<!ENTITY collectionsPane.label "Collections Pane">
+<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
 <!ENTITY copyBibliographyCmd.label "Bibliográfia másolása">
 <!ENTITY copyCitationCmd.label "Hivatkozás másolása">
 <!ENTITY copyCmd.accesskey "C">
@@ -21,12 +23,13 @@
 <!ENTITY debugOutputLogging.accesskey "L">
 <!ENTITY debugOutputLogging.clear " Output törlése">
 <!ENTITY debugOutputLogging.label " Hibakeresés a naplófájlban">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Restart with Logging Enabled…">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Indítsa újra a naplózást engedélyezve…">
 <!ENTITY debugOutputLogging.submit "Kimenet elküldése">
 <!ENTITY debugOutputLogging.view " Kimenet megtekintése">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Törlés">
+<!ENTITY developer.label "Fejlesztő eszközök">
 <!ENTITY editMenu.accesskey "S">
 <!ENTITY editMenu.label "Szerkesztés">
 <!ENTITY fileMenu.accesskey "F">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "Betűméret">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -80,8 +84,12 @@
 <!ENTITY importFromClipboardCmd.label "Importálás Vágólapról">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Böngészőmodul telepítése">
+<!ENTITY itemPane.label "Item Pane">
+<!ENTITY layout.label "Layout">
+<!ENTITY manageAttachments.label "Csatolmányok kezelése">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Kis méret">
+<!ENTITY noteFontSize.label "Jegyzet betűmérete">
 <!ENTITY pageSetupCmd.accesskey "F">
 <!ENTITY pageSetupCmd.label "Oldalbeállítások…">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,9 +109,10 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Bezárás">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Juris-M bezárása">
+<!ENTITY quitApplicationCmdMac.label "Zotero bezárása">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Kilépés">
+<!ENTITY recursiveCollections.label "Show Items from Subcollections">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Mégis">
@@ -115,10 +124,14 @@
 <!ENTITY selectAllCmd.label "Mindet kijelöli">
 <!ENTITY servicesMenuMac.label "Szolgáltatások">
 <!ENTITY showAllAppsCmdMac.label "Összes megjelenítése">
+<!ENTITY stackedView.label "Stacked View">
+<!ENTITY standardView.label "Alapértelmezett nézet">
+<!ENTITY tagSelector.label "Tag Selector">
 <!ENTITY toolsMenu.accesskey "E">
 <!ENTITY toolsMenu.label "Eszközök">
 <!ENTITY undoCmd.accesskey "F">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Visszavonás">
+<!ENTITY viewMenu.label "Nézet">
 <!ENTITY windowMenu.label "Ablak">
 <!ENTITY zoomWindow.label "Nagyítás">

@@ -3,11 +3,12 @@
 <!ENTITY zotero.preferences.advanced.keys "Billentyűparancsok">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Alap könyvtár:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Linked Attachment Base Directory">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "A Juris-M relatív útvonalakat használ a csatolt fájlokhoz az alap könyvtáron belül , ezzel elérhetővé teszi a fájlokat különböző számítógépeken, amennyiben a fájlszerkezet az alap könyvtárban változatlan.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "A Zotero relatív útvonalakat használ a csatolt fájlokhoz az alap könyvtáron belül , ezzel elérhetővé teszi a fájlokat különböző számítógépeken, amennyiben a fájlszerkezet az alap könyvtárban változatlan.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Visszavonás…">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Tallózás…">
-<!ENTITY zotero.preferences.autoRecognizeFiles "Automatically retrieve metadata for PDFs">
-<!ENTITY zotero.preferences.autoRenameFiles "Automatically rename attachment files using parent metadata">
+<!ENTITY zotero.preferences.autoRecognizeFiles "A metaadat automatikus visszaállítása a PDF-ek számára">
+<!ENTITY zotero.preferences.autoRenameFiles "A mellékletek automatikus átnevezése az eredeti metaadataival">
+<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Csatolt fájlok átnevezése">
 <!ENTITY zotero.preferences.autoUpdate "Fordítók- és stílusfrissítések automatikus ellenőrzése">
 <!ENTITY zotero.preferences.automaticSnapshots "Weboldalon alapuló elem létrehozásakor automatikus pillanatfelvétel készítése">
 <!ENTITY zotero.preferences.automaticTags "Kulcsszavak és tárgyszavak automatikus hozzárendelése címkeként">
@@ -26,12 +27,12 @@
 <!ENTITY zotero.preferences.cite.wordProcessors.getPlugins.url "http://www.zotero.org/support/word_processor_plugin_installation_for_zotero_2.1">
 <!ENTITY zotero.preferences.cite.wordProcessors.noWordProcessorPluginsInstalled "Nincs szövegszerkesztő plug-in telepítve">
 <!ENTITY zotero.preferences.cite.wordProcessors.useClassicAddCitationDialog "A klasszikus Add Citation ablak használata">
-<!ENTITY zotero.preferences.configEditor "Config Editor">
-<!ENTITY zotero.preferences.custom "Custom…">
+<!ENTITY zotero.preferences.configEditor "Konfiguráció szerkesztése">
+<!ENTITY zotero.preferences.custom "Egyedi...">
 <!ENTITY zotero.preferences.dataDir "Adatok mentése ide:">
 <!ENTITY zotero.preferences.dataDir.choose "T   History  1  allózás...">
 <!ENTITY zotero.preferences.dataDir.custom "Egyéni:">
-<!ENTITY zotero.preferences.dataDir.migrate "Migrate To New Default Location…">
+<!ENTITY zotero.preferences.dataDir.migrate "Áttérés az új alapértelmezett helyre…">
 <!ENTITY zotero.preferences.dataDir.reveal "Az adatkönyvtár mutatása">
 <!ENTITY zotero.preferences.dataDir.useProfile "Firefox profilkönyvtár">
 <!ENTITY zotero.preferences.dataDir.viaCommandLine "(specified via command line)">
@@ -50,7 +51,7 @@
 <!ENTITY zotero.preferences.default "Alapértelmezett">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "A kapcsolódó PDF és más fájlok automatikus csatolása">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "URL megjelenítése a nyomtatásban megjelent cikkeknél">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Ha ez a lehetőség nincs bekapcsolva, a Juris-M csak akkor jeleníti meg az URL-t folyóirat-, újság- vagy magazincikkeknél, ha nincs megadva oldalszám.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Ha ez a lehetőség nincs bekapcsolva, a Zotero csak akkor jeleníti meg az URL-t folyóirat-, újság- vagy magazincikkeknél, ha nincs megadva oldalszám.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles " További stílusok telepítése...">
@@ -59,9 +60,9 @@
 <!ENTITY zotero.preferences.feeds.sorting.label "Rendezés:">
 <!ENTITY zotero.preferences.feeds.sorting.newest "A legújabb elem felül">
 <!ENTITY zotero.preferences.feeds.sorting.oldest "A legrégebbi elem felül">
-<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "Open PDFs using">
-<!ENTITY zotero.preferences.fileHandler.systemDefault "System Default">
-<!ENTITY zotero.preferences.fileHandling "File Handling">
+<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "A PDF-fájlok megnyitása">
+<!ENTITY zotero.preferences.fileHandler.systemDefault "Alapértelmezett rendszerbeállítás">
+<!ENTITY zotero.preferences.fileHandling "Fájlkezelés">
 <!ENTITY zotero.preferences.fontSize "Betűméret">
 <!ENTITY zotero.preferences.fontSize.large "Nagy">
 <!ENTITY zotero.preferences.fontSize.medium "Közepes">
@@ -88,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Juris-M megnyitása/bezárása">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Ellentmondó billentyűparancsok felülírása">
 <!ENTITY zotero.preferences.keys.quicksearch "Gyorskeresés">
-<!ENTITY zotero.preferences.keys.saveToZotero "Mentés Juris-M-ba (adress bar icon)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Mentés Zotero-ba (adress bar icon)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Az összes elem megjelölése olvasottként/olvasatlanként">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Teljesképernyős üzemmód">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Címkeválasztó mutatása/elrejtése">
@@ -125,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Layout:">
 <!ENTITY zotero.preferences.layout.stacked "Stacked">
 <!ENTITY zotero.preferences.layout.standard "Standard">
-<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Juris-M’s Locate menu.">
+<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Zotero’s Locate menu.">
 <!ENTITY zotero.preferences.locate.description "Leírás">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Article Lookup Engine Manager">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "A Lookup Engine extends the capability of the Locate drop down in the Info pane. By enabling Lookup Engines in the list below they will be added to the drop down and can be used to locate resources from your library on the web.">
@@ -141,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Linkfeloldók keresése">
 <!ENTITY zotero.preferences.openurl.server "Linkfeloldó:">
 <!ENTITY zotero.preferences.openurl.version "Verzió:">
-<!ENTITY zotero.preferences.parseRISRefer "A Juris-M használata BibTeX/RIS/Refer fájlok letöltésére">
+<!ENTITY zotero.preferences.parseRISRefer "A Zotero használata BibTeX/RIS/Refer fájlok letöltésére">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Haladó">
 <!ENTITY zotero.preferences.prefpane.cite "Hivatkozás">
@@ -161,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Proxyk">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Az útvonal (pl.: about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "további információkért.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "A Juris-M a kéréseket az elmentett proxykon keresztül szolgálja ki. Olvassa el a">
+<!ENTITY zotero.preferences.proxies.desc_before_link "A Zotero a kéréseket az elmentett proxykon keresztül szolgálja ki. Olvassa el a">
 <!ENTITY zotero.preferences.proxies.desc_link "proxy leírást">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Proxy átirányítás tiltása, ha a domén nevem tartalmaz">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - A fájl neve (pl.: index.html)">
@@ -217,8 +218,8 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.tos1 "A Zotero tárhely használata esetén elfogadom a">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "felhasználási feltételeket">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
-<!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
-<!ENTITY zotero.preferences.sync.librariesToSync "Libraries to Sync">
+<!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Szerver ellenőrzése">
+<!ENTITY zotero.preferences.sync.librariesToSync "Könyvtárak szinkronizálása">
 <!ENTITY zotero.preferences.sync.librariesToSync.button "Könyvtárak kiválasztása...">
 <!ENTITY zotero.preferences.sync.librariesToSync.library "Könyvtár">
 <!ENTITY zotero.preferences.sync.librariesToSync.sync "Szinkronizálás">
@@ -228,25 +229,25 @@
 <!ENTITY zotero.preferences.sync.reset.button "Visszaállítás">
 <!ENTITY zotero.preferences.sync.reset.fullSync "Teljes szinkronizálás">
 <!ENTITY zotero.preferences.sync.reset.fullSync.desc "Merge local data with data from server, ignoring sync history.">
-<!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory "Reset Data Sync History">
-<!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory.desc "Merge local data with remote data, ignoring sync history">
+<!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory "Az adatszinkronizációs előzmények törlése">
+<!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory.desc "A helyi adatok összefésülése a távoli adatokkal, a szinkronizációs előzmények figyelmen kívül hagyása.">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "A szinkronizációs előzmények törlése">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compare all attachment files with the storage service">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Helyreállítás az online könyvtáramból">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Juris-M data with data from the online library.">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "Helyreállítás az online könyvtáramba">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Juris-M data">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "A helyi adatok felülírása az online könyvtárban található adatokkal.">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Az Online Könyvtár cseréje">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Az online könyvtár felülírása a helyi Zotero adatokkal">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Az alábbi műveletek kizárólag ritka, egyedi esetekre valók, alkalmazásuk nem javasolt általános hibaelhárításra. A visszaállítás sok esetben további problémákat okoz. Lásd ">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Sync Reset Options">
 <!ENTITY zotero.preferences.sync.reset.warning3 " további információért.">
 <!ENTITY zotero.preferences.sync.setUpSync "Szinkronizálás beállítása">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Automatikus szinkronizálás">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Teljes szöveg szinkronizálása">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "A Juris-M szinkronizálhatja a Juris-M könyvtáraiban található fájlok teljes szövegét a zotero.org-gal és egyéb csatolt eszközökkel, lehetővé téve, hogy bárhol könnyedén keressen a fájljaira. A fájlok teljes szövege nem válik nyilvánossá.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "A Zotero szinkronizálhatja a Zotero könyvtáraiban található fájlok teljes szövegét a zotero.org-gal és egyéb csatolt eszközökkel, lehetővé téve, hogy bárhol könnyedén keressen a fájljaira. A fájlok teljes szövege nem válik nyilvánossá.">
 <!ENTITY zotero.preferences.sync.syncServer "Adatok szinkronizálása">
-<!ENTITY zotero.preferences.sync.unlinkAccount "Unlink Account…">
+<!ENTITY zotero.preferences.sync.unlinkAccount "Fiók leválasztása…">
 <!ENTITY zotero.preferences.sync.username "Felhasználónév:">
-<!ENTITY zotero.preferences.title "Juris-M beállítások">
+<!ENTITY zotero.preferences.title "Zotero beállítások">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "napnál régebbiek">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Automatikusan törölje a kukából azokat az elemeket, amelyek">
 <!ENTITY zotero.preferences.updateNow "Frissítés indítása">

@@ -10,6 +10,8 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Затвори">
+<!ENTITY collectionsPane.label "Површ са збиркама">
+<!ENTITY convertToStored.label "Претвори везе до датотека у сачуване датотеке…">
 <!ENTITY copyBibliographyCmd.label "Копирај библиографију">
 <!ENTITY copyCitationCmd.label "Копирај цитат">
 <!ENTITY copyCmd.accesskey "C">
@@ -19,14 +21,15 @@
 <!ENTITY cutCmd.key "X">
 <!ENTITY cutCmd.label "Исеци">
 <!ENTITY debugOutputLogging.accesskey "L">
-<!ENTITY debugOutputLogging.clear "Clear Output">
-<!ENTITY debugOutputLogging.label "Debug Output Logging">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Restart with Logging Enabled…">
-<!ENTITY debugOutputLogging.submit "Submit Output">
-<!ENTITY debugOutputLogging.view "View Output">
+<!ENTITY debugOutputLogging.clear "Очисти излаз">
+<!ENTITY debugOutputLogging.label "Дневник излаза са грешкама">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Поново покрени са дневником…">
+<!ENTITY debugOutputLogging.submit "Пошаљи излаз">
+<!ENTITY debugOutputLogging.view "Прикажи излаз">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Обриши">
+<!ENTITY developer.label "Програмер">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Уређивање">
 <!ENTITY fileMenu.accesskey "F">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "Величина фонта">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -61,14 +65,14 @@
 <!ENTITY helpCheckForUpdates.accesskey "U">
 <!ENTITY helpCheckForUpdates.label "Потражи ажурирања…">
 <!ENTITY helpFeedbackPage.accesskey "F">
-<!ENTITY helpFeedbackPage.label "Discussion Forums">
+<!ENTITY helpFeedbackPage.label "Форуми за дискусију">
 <!ENTITY helpMac.commandkey "?">
 <!ENTITY helpMenu.accesskey "H">
 <!ENTITY helpMenu.label "Помоћ">
 <!ENTITY helpMenuWin.accesskey "H">
 <!ENTITY helpMenuWin.label "Помоћ">
 <!ENTITY helpReportErrors.accesskey "R">
-<!ENTITY helpReportErrors.label "Report Errors…">
+<!ENTITY helpReportErrors.label "Пријави грешке…">
 <!ENTITY helpTroubleshootingInfo.accesskey "T">
 <!ENTITY helpTroubleshootingInfo.label "Подаци о проблемима">
 <!ENTITY hideOtherAppsCmdMac.commandkey "H">
@@ -80,8 +84,12 @@
 <!ENTITY importFromClipboardCmd.label "Увези из оставе">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Инсталирај програм за повезивање са разгледачем">
+<!ENTITY itemPane.label "Површ са ставкама">
+<!ENTITY layout.label "Распоред">
+<!ENTITY manageAttachments.label "Уреди прилоге">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Умањи">
+<!ENTITY noteFontSize.label "Величина фонта за белешке">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Подешавање странице…">
 <!ENTITY pasteCmd.accesskey "P">
@@ -104,6 +112,7 @@
 <!ENTITY quitApplicationCmdMac.label "Напусти Зотеро">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Изађи">
+<!ENTITY recursiveCollections.label "Прикажи ставке из подзбирки">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Понови">
@@ -115,10 +124,14 @@
 <!ENTITY selectAllCmd.label "Изабери све">
 <!ENTITY servicesMenuMac.label "Сервиси">
 <!ENTITY showAllAppsCmdMac.label "Прикажи све">
+<!ENTITY stackedView.label "Приказ на гомили">
+<!ENTITY standardView.label "Уобичајени приказ">
+<!ENTITY tagSelector.label "Избор ознака">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Алати">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Врати">
+<!ENTITY viewMenu.label "Преглед">
 <!ENTITY windowMenu.label "Прозор">
 <!ENTITY zoomWindow.label "Увећај">

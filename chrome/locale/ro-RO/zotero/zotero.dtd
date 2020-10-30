@@ -32,6 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "Sufix:">
 <!ENTITY zotero.citation.suppressAuthor.label "Suprimă autor">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
+<!ENTITY zotero.collections.showRetractedItems "Afișează itemii retrași">
 <!ENTITY zotero.collections.showUnfiledItems "Arată înregistrările neîndosariate">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "Adaugă selecția la nota Juris-M">
 <!ENTITY zotero.contextMenu.addTextToNewNote "Creează pe baza selecției o înregistrare și o notă Juris-M">
@@ -43,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Selectează câmpurile pentru a le păstra față de alte versiuni ale înregistrării:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Alege versiunea înregistrării pe care o folosești ca înregistrare master:">
 <!ENTITY zotero.errorReport.notReviewed "Raporturile de erori nu sunt luate în considerare atâta timp cât nu se află pe forum.">
-<!ENTITY zotero.errorReport.postToForums "Te rog trimite un mesaj către forumul Juris-M (juris-m.github.io/support) cu acest Raport ID, o descriere a problemei şi orice alt pas necesar pentru a o reproduce.">
+<!ENTITY zotero.errorReport.postToForums "Te rog trimite un mesaj către forumul Zotero (forums.zotero.org) cu acest Raport ID, o descriere a problemei şi orice alt pas necesar pentru a o reproduce.">
 <!ENTITY zotero.errorReport.reportID "ID raport:">
 <!ENTITY zotero.errorReport.submissionInProgress "Așteaptă, te rog, ca raportul de eroare să fie trimis.">
 <!ENTITY zotero.errorReport.submitted "Raportul de eroare a fost trimis.">
-<!ENTITY zotero.errorReport.title "Raportul de erori Juris-M">
+<!ENTITY zotero.errorReport.title "Raportul de erori Zotero">
 <!ENTITY zotero.errorReport.unrelatedMessages "Aceasta ar putea include mesaje fără legătură cu Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Formatare:">
 <!ENTITY zotero.exportOptions.title "Export...">
@@ -67,6 +68,7 @@
 <!ENTITY zotero.file.choose.label "Alege fișier...">
 <!ENTITY zotero.file.noneSelected.label "Niciun fișier selectat">
 <!ENTITY zotero.general.advancedOptions.label "Opțiuni avansate">
+<!ENTITY zotero.general.bigger "Mai mare">
 <!ENTITY zotero.general.cancel "Anulare">
 <!ENTITY zotero.general.close "Închide">
 <!ENTITY zotero.general.delete "Ștergere">
@@ -79,11 +81,24 @@
 <!ENTITY zotero.general.note "Notă:">
 <!ENTITY zotero.general.ok "OK">
 <!ENTITY zotero.general.optional "(Opțional)">
+<!ENTITY zotero.general.options "Opțiuni">
+<!ENTITY zotero.general.other "Altele...">
 <!ENTITY zotero.general.refresh "Reîmprospătare">
+<!ENTITY zotero.general.reset "Resetare">
 <!ENTITY zotero.general.saveAs "Salvare ca...">
 <!ENTITY zotero.general.selectAll "Selectează tot">
+<!ENTITY zotero.general.smaller "Mai mic">
 <!ENTITY zotero.general.tools "Instrumente">
 <!ENTITY zotero.general.yes "Da">
+<!ENTITY zotero.import "Import">
+<!ENTITY zotero.import.createCollection "Pune colecțiile importate și itemii într-o colecție nouă">
+<!ENTITY zotero.import.database "Baza de date">
+<!ENTITY zotero.import.fileHandling "Manipulare fișier">
+<!ENTITY zotero.import.importing "Se importă...">
+<!ENTITY zotero.import.lastModified "Ultima modificare">
+<!ENTITY zotero.import.size "Mărime">
+<!ENTITY zotero.import.source.file "Un fișier (BibTeX, RIS, Zotero RDF etc.)">
+<!ENTITY zotero.import.whereToImportFrom "De unde vrei să imporți?">
 <!ENTITY zotero.integration.addEditCitation.title "Adaugă/Editează citarea">
 <!ENTITY zotero.integration.classicView.label "Vizualizare clasică">
 <!ENTITY zotero.integration.docPrefs.title "Preferințe document">
@@ -99,6 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "Afișează citatele ca:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "Note de final">
+<!ENTITY zotero.integration.prefs.exportDocument "Schimbă procesorul de texte…">
 <!ENTITY zotero.integration.prefs.footnotes.label "Note de subsol">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Păstrează citările ca:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -188,7 +204,7 @@
 <!ENTITY zotero.items.volume_column "Volume">
 <!ENTITY zotero.items.year_column "An">
 <!ENTITY zotero.lookup.button.search "Caută">
-<!ENTITY zotero.lookup.description "Introdu ISBN, DOI sau PMID pentru a căuta în caseta de mai jos.">
+<!ENTITY zotero.lookup.description "Introdu ISBN-urile, DOI-urile, PMID-urile sau ID-urile arXiv pentru a adăuga în biblioteca ta:">
 <!ENTITY zotero.merge.deleted "Șters">
 <!ENTITY zotero.merge.of "din">
 <!ENTITY zotero.merge.title "Conflict rezoluție">
@@ -213,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Citări ambigue">
 <!ENTITY zotero.rtfScan.cancel.label "Anulare">
 <!ENTITY zotero.rtfScan.citation.label "Citare">
-<!ENTITY zotero.rtfScan.citationsPage.description "Te rog să controlezi lista de mai jos a citărilor recunoscute pentru a te asigura că Juris-M a selectat înregistrările corespunzătoare în mod corect. Eventualele citări nepotrivite sau ambigue trebuie rezolvate înainte de a proceda la următorul pas.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Te rog să controlezi lista de mai jos a citărilor recunoscute pentru a te asigura că Zotero a selectat înregistrările corespunzătoare în mod corect. Eventualele citări nepotrivite sau ambigue trebuie rezolvate înainte de a proceda la următorul pas.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Verifică înregistrările citate">
 <!ENTITY zotero.rtfScan.completePage.description "Documentul tău a fost acum scanat și procesat. Te rog să te asiguri că e formatat corect.">
 <!ENTITY zotero.rtfScan.completePage.label "Scanare RTF completă">
-<!ENTITY zotero.rtfScan.formatPage.description "Juris-M procesează și formatează fișierul tău RTF. Te rog să aștepți.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero procesează și formatează fișierul tău RTF. Te rog să aștepți.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formatare citări">
 <!ENTITY zotero.rtfScan.inputFile.label "Fișier de intrare">
-<!ENTITY zotero.rtfScan.introPage.description "Juris-M poate extrage și reformata automat citările și poate introduce o bibliografie în fișierele RTF. Facilitatea scanării RTF suportă în mod curent variații ale următoarelor formate:">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero poate extrage și reformata automat citările și poate introduce o bibliografie în fișierele RTF. Facilitatea scanării RTF suportă în mod curent variații ale următoarelor formate:">
 <!ENTITY zotero.rtfScan.introPage.description2 "Pentru a porni, selectează mai jos un fișier RTF de intrare și un fișier de ieșire:">
 <!ENTITY zotero.rtfScan.introPage.label "Introducere">
 <!ENTITY zotero.rtfScan.itemName.label "Nume înregistrare">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Citări rezolvate">
 <!ENTITY zotero.rtfScan.outputFile.label "Fișier de ieșire">
-<!ENTITY zotero.rtfScan.scanPage.description "Juris-M scanează documentul pentru a găsi citări. Te rog să aștepți.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero scanează documentul pentru a găsi citări. Te rog să aștepți.">
 <!ENTITY zotero.rtfScan.scanPage.label "Scanează după citări">
 <!ENTITY zotero.rtfScan.stylePage.label "Formatare document">
 <!ENTITY zotero.rtfScan.title "Scanare RTF">
@@ -239,7 +255,7 @@
 <!ENTITY zotero.sync.error "Eroare la sincronizare">
 <!ENTITY zotero.sync.longTagFixer.character "caracter">
 <!ENTITY zotero.sync.longTagFixer.characters "caractere">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Următoarele etichete în biblioteca ta Juris-M sunt prea lungi pentru a le sincroniza cu serverul:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Următoarele etichete în biblioteca ta Zotero sunt prea lungi pentru a le sincroniza cu serverul:">
 <!ENTITY zotero.sync.longTagFixer.split "Împarte">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Împarte până la">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Poți fie să-ți împarți eticheta în mai multe etichete, fie să o editezi manual, fie să o ștergi.">
@@ -272,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Redenumește eticheta...">
 <!ENTITY zotero.tagSelector.selectVisible "Selectează vedere">
 <!ENTITY zotero.tagSelector.showAutomatic "Arată automat">
-<!ENTITY zotero.toolbar.about.label "Despre Juris-M">
+<!ENTITY zotero.toolbar.about.label "Despre Zotero">
 <!ENTITY zotero.toolbar.actions.label "Acțiuni">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -315,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Preferințe...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Șterge înregistrare...">
-<!ENTITY zotero.toolbar.rtfScan.label "Scanare RTF...">
+<!ENTITY zotero.toolbar.rtfScan.label "Scanare RTF">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Suport și documentație">
 <!ENTITY zotero.toolbar.tab.tooltip "Comută în modul filă">
 <!ENTITY zotero.toolbar.tagSelector.label "Arată/Ascunde selectorul de etichete">
@@ -330,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "înainte de a continua.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Asigură-te că ai revăzut">
 <!ENTITY zotero.upgrade.majorUpgradeLink "instrucțiunile de actualizare">
-<!ENTITY zotero.upgrade.newVersionInstalled "Ai instalat o nouă versiune de Juris-M.">
-<!ENTITY zotero.upgrade.title "Expertul de upgrade Juris-M">
+<!ENTITY zotero.upgrade.newVersionInstalled "Ai instalat o nouă versiune de Zotero.">
+<!ENTITY zotero.upgrade.title "Expertul de upgrade Zotero">
 <!ENTITY zotero.upgrade.upgradeInProgress "Așteaptă, te rog, ca procesul de actualizare să se încheie. Poate dura câteva minute.">
-<!ENTITY zotero.upgrade.upgradeRequired "Baza de date Juris-M trebui actualizată în aşa fel încât să meargă cu noua versiune.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Baza de date Juris-M a fost actualizată cu succes.">
+<!ENTITY zotero.upgrade.upgradeRequired "Baza de date Zotero trebui actualizată în aşa fel încât să meargă cu noua versiune.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Baza de date Zotero a fost actualizată cu succes.">

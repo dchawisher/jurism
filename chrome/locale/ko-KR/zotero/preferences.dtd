@@ -3,11 +3,12 @@
 <!ENTITY zotero.preferences.advanced.keys "바로가기">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "기본 경로:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "연결된 첨부 파일 기본 디렉토리">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Juris-M는 링크된 첨부 파일을 기본 디렉토리를 기준으로 하는 상대 경로로 참조합니다. 이를 통해 기본 디렉토리 하위의 파일 구조가 같게 유지되는 한 다른 컴퓨터에서도 파일에 접근할 수 있게 합니다.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero는 링크된 첨부 파일을 기본 디렉토리를 기준으로 하는 상대 경로로 참조합니다. 이를 통해 기본 디렉토리 하위의 파일 구조가 같게 유지되는 한 다른 컴퓨터에서도 파일에 접근할 수 있게 합니다.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "절대 경로로 되돌리기...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "선택...">
-<!ENTITY zotero.preferences.autoRecognizeFiles "Automatically retrieve metadata for PDFs">
-<!ENTITY zotero.preferences.autoRenameFiles "Automatically rename attachment files using parent metadata">
+<!ENTITY zotero.preferences.autoRecognizeFiles "PDF 파일 메타데이터 자동 검색">
+<!ENTITY zotero.preferences.autoRenameFiles "부모 메타데이터를 이용하여 첨부 파일 이름 자동 변경">
+<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "링크한 파일 이름 바꾸기">
 <!ENTITY zotero.preferences.autoUpdate "중계기 및 스타일 업데이트를 자동으로 확인">
 <!ENTITY zotero.preferences.automaticSnapshots "웹 페이지  항목을 생성할 때 자동으로 스냅샷 저장">
 <!ENTITY zotero.preferences.automaticTags "핵심어와 주제어가 첨부된 항목 저장시 자동으로 태그 생성">
@@ -25,9 +26,9 @@
 <!ENTITY zotero.preferences.cite.wordProcessors.getPlugins "워드 프로세서 플러그인 받기...">
 <!ENTITY zotero.preferences.cite.wordProcessors.getPlugins.url "http://www.zotero.org/support/word_processor_plugin_installation_for_zotero_2.1">
 <!ENTITY zotero.preferences.cite.wordProcessors.noWordProcessorPluginsInstalled "설치된 워드 프로세서 플러그인 없음">
-<!ENTITY zotero.preferences.cite.wordProcessors.useClassicAddCitationDialog "클래식 인용추가 대화창 사용">
+<!ENTITY zotero.preferences.cite.wordProcessors.useClassicAddCitationDialog "클래식 인용 대화창 사용">
 <!ENTITY zotero.preferences.configEditor "설정 편집기">
-<!ENTITY zotero.preferences.custom "Custom…">
+<!ENTITY zotero.preferences.custom "사용자 지정...">
 <!ENTITY zotero.preferences.dataDir "저장 위치">
 <!ENTITY zotero.preferences.dataDir.choose "선택...">
 <!ENTITY zotero.preferences.dataDir.custom "사용자 지정:">
@@ -50,7 +51,7 @@
 <!ENTITY zotero.preferences.default "기본값:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "항목 저장시 연관된 PDF 및 다른 파일을 자동으로 첨부">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "참조 내 신문 기사의 URL포함">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "이 기능을 선택하지 않으면, 페이지 범위가 지정되어 있지 않은 경우에만 저널, 잡지, 신문 기사 인용문에 URL을 넣습니다.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "이 기능을 선택하지 않으면, 페이지 범위가 지정되지 않은 저널, 잡지, 신문 기사 인용문에 대해서만 URL을 넣습니다.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "추가 스타일 받기...">
@@ -59,9 +60,9 @@
 <!ENTITY zotero.preferences.feeds.sorting.label "정렬:">
 <!ENTITY zotero.preferences.feeds.sorting.newest "새로운 항목 먼저">
 <!ENTITY zotero.preferences.feeds.sorting.oldest "오래된 항목 먼저">
-<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "Open PDFs using">
-<!ENTITY zotero.preferences.fileHandler.systemDefault "System Default">
-<!ENTITY zotero.preferences.fileHandling "File Handling">
+<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "PDF 파일을 열 앱">
+<!ENTITY zotero.preferences.fileHandler.systemDefault "시스템 기본값">
+<!ENTITY zotero.preferences.fileHandling "파일 관리">
 <!ENTITY zotero.preferences.fontSize "글꼴 크기:">
 <!ENTITY zotero.preferences.fontSize.large "크게">
 <!ENTITY zotero.preferences.fontSize.medium "중간">
@@ -88,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Juris-M 패널 열기/닫기">
 <!ENTITY zotero.preferences.keys.overrideGlobal "충돌하는 단축키는 무시합니다.">
 <!ENTITY zotero.preferences.keys.quicksearch "빠른 검색">
-<!ENTITY zotero.preferences.keys.saveToZotero "Juris-M에 저장 (주소 표시줄 아이콘)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Zotero에 저장 (주소 표시줄 아이콘)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "모든 피드 항목을 읽음/읽지 않음으로 표시">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "전체화면 끄기/켜기">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "태그 선택기 끄기/켜기">
@@ -125,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "레이아웃:">
 <!ENTITY zotero.preferences.layout.stacked "스택">
 <!ENTITY zotero.preferences.layout.standard "표준">
-<!ENTITY zotero.preferences.locate.addDescription "목록에 없는 검색 엔진을 추가하려면, 브라우저에서 원하는 검색 엔진에 접속한 뒤 Juris-M의 Locate 메뉴에서 추가를 선택하세요.*">
+<!ENTITY zotero.preferences.locate.addDescription "목록에 없는 검색 엔진을 추가하려면, 브라우저에서 원하는 검색 엔진에 접속한 뒤 Zotero의 Locate 메뉴에서 추가를 선택하세요.*">
 <!ENTITY zotero.preferences.locate.description "설명">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Article 검색 엔진 메니저">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "A Lookup Engine extends the capability of the Locate drop down in the Info pane. By enabling Lookup Engines in the list below they will be added to the drop down and can be used to locate resources from your library on the web.">
@@ -141,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "해독기로 검색">
 <!ENTITY zotero.preferences.openurl.server "해독기:">
 <!ENTITY zotero.preferences.openurl.version "버전:">
-<!ENTITY zotero.preferences.parseRISRefer "다운로드한 BibTeX/RIS/Refer 파일에 Juris-M 사용">
+<!ENTITY zotero.preferences.parseRISRefer "다운로드한 BibTeX/RIS/Refer 파일에 Zotero 사용">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "고급">
 <!ENTITY zotero.preferences.prefpane.cite "인용">
@@ -160,8 +161,8 @@
 <!ENTITY zotero.preferences.proxies.autoRecognize "자동으로 프록시 자원을 인식">
 <!ENTITY zotero.preferences.proxies.configured "지정된 프록시">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - 디렉토리 경로 (예 : about/)">
-<!ENTITY zotero.preferences.proxies.desc_after_link "를 참고하세요.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Juris-M가 요청사항을 저장된 프록시를 통해 재전송합니다. 참조 :">
+<!ENTITY zotero.preferences.proxies.desc_after_link "추가 정보.">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero가 요청사항을 저장된 프록시를 통해 재전송합니다. 참조 :">
 <!ENTITY zotero.preferences.proxies.desc_link "프록시 문서">
 <!ENTITY zotero.preferences.proxies.disableByDomain "도메인 이름이 다음을 포함할 때 프록시를 사용하지 않음: ">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - 파일명 (예 : index.html)">
@@ -209,7 +210,7 @@
 <!ENTITY zotero.preferences.sync.createAccount "계정 생성">
 <!ENTITY zotero.preferences.sync.fileSyncing "파일 동기화">
 <!ENTITY zotero.preferences.sync.fileSyncing.about "파일 동기화란">
-<!ENTITY zotero.preferences.sync.fileSyncing.download "파일 다운로드 시점: ">
+<!ENTITY zotero.preferences.sync.fileSyncing.download "파일 다운로드: ">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "동기화할 때">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "필요할 때">
 <!ENTITY zotero.preferences.sync.fileSyncing.groups "Zotero 저장소를 사용해 그룹 라이브러리내 첨부 파일을 동기화">
@@ -233,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "파일 동기화 기록 재설정">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "모든 첨부 파일을 저장소 서비스의 파일과 비교합니다">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "온라인 라이브러리에서 복원">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "로컬 Juris-M 데이터를 온라인 라이브러리 데이터로 덮어씁니다">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "온라인 라이브러리로 복원">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "온라인 라이브러리 데이터를 로컬 Juris-M 데이터로 덮어씁니다">
-<!ENTITY zotero.preferences.sync.reset.warning1 "다음 작업은 희귀하고 특수한 상황에만 적용해야 하며, 일반적인 문제 해결에는 적용하지 말아야 합니다. 많은 경우, 재설정이 또 다른 문제를 일으킬 수 있습니다. ">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "로컬 Zotero 데이터를 온라인 라이브러리 데이터로 덮어씁니다">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "온라인 라이브러리 교체">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "온라인 라이브러리 데이터를 로컬 Zotero 데이터로 덮어씁니다">
+<!ENTITY zotero.preferences.sync.reset.warning1 "다음 작업은 특이하고 특수한 상황에만 제한적으로 적용되어야 합니다. 일반적인 문제 해결에는 사용하지 마십시오. 많은 경우, 재설정이 또 다른 문제를 일으킬 수 있습니다. ">
 <!ENTITY zotero.preferences.sync.reset.warning2 "동기화 초기화 옵션">
-<!ENTITY zotero.preferences.sync.reset.warning3 "을 참고하세요.">
+<!ENTITY zotero.preferences.sync.reset.warning3 "추가정보.">
 <!ENTITY zotero.preferences.sync.setUpSync "동기화 설정">
 <!ENTITY zotero.preferences.sync.syncAutomatically "자동 동기화">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "전문(全文) 동기화">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Juris-M가 라이브러리의 전문(全文) 파일을 zotero.org 또는 다른 연결된 기기와 동기화하여, 여러분이 어디에 계시든 파일을 손쉽게 찾을 수 있도록 할 수 있습니다. 전문 파일은 전체 공유되지 않습니다.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero가 라이브러리의 파일 내용을 zotero.org 및 그외 연결된 기기와 동기화하여, 여러분이 어디에 있든 파일을 손쉽게 검색할 수 있게 합니다. 파일 내용이 일반에 공개되는 것은 아닙니다.">
 <!ENTITY zotero.preferences.sync.syncServer "데이터 동기화">
 <!ENTITY zotero.preferences.sync.unlinkAccount "계정 연결 해제...">
 <!ENTITY zotero.preferences.sync.username "사용자명:">
-<!ENTITY zotero.preferences.title "Juris-M 환경설정">
+<!ENTITY zotero.preferences.title "Zotero 환경설정">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "일 경과">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "휴지통에서 자동 삭제되는 시점 : 휴지통으로 이동 후">
 <!ENTITY zotero.preferences.updateNow "지금 업데이트">

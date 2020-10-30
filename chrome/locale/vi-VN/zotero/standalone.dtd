@@ -10,6 +10,8 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Đóng">
+<!ENTITY collectionsPane.label "Collections Pane">
+<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
 <!ENTITY copyBibliographyCmd.label "Sao chép danh mục tài liệu tham khảo">
 <!ENTITY copyCitationCmd.label "Sao chép trích dẫn">
 <!ENTITY copyCmd.accesskey "C">
@@ -18,15 +20,16 @@
 <!ENTITY cutCmd.accesskey "t">
 <!ENTITY cutCmd.key "X">
 <!ENTITY cutCmd.label "Cut">
-<!ENTITY debugOutputLogging.accesskey "L">
-<!ENTITY debugOutputLogging.clear "Clear Output">
-<!ENTITY debugOutputLogging.label "Debug Output Logging">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Restart with Logging Enabled…">
-<!ENTITY debugOutputLogging.submit "Submit Output">
-<!ENTITY debugOutputLogging.view "View Output">
+<!ENTITY debugOutputLogging.accesskey "R">
+<!ENTITY debugOutputLogging.clear "Xóa output">
+<!ENTITY debugOutputLogging.label "Thông tin output khi chạy gỡ rối">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Khởi động lại cho phép logging...">
+<!ENTITY debugOutputLogging.submit "Gửi output">
+<!ENTITY debugOutputLogging.view "Xem output">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Xóa">
+<!ENTITY developer.label "Developer">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Chỉnh sửa">
 <!ENTITY fileMenu.accesskey "F">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "Font Size">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -60,15 +64,15 @@
 <!ENTITY fullZoomToggleCmd.label "Zoom Text Only">
 <!ENTITY helpCheckForUpdates.accesskey "U">
 <!ENTITY helpCheckForUpdates.label "Kiểm tra cập nhật...">
-<!ENTITY helpFeedbackPage.accesskey "F">
-<!ENTITY helpFeedbackPage.label "Discussion Forums">
+<!ENTITY helpFeedbackPage.accesskey "D">
+<!ENTITY helpFeedbackPage.label "Diễn đàn trao đổi">
 <!ENTITY helpMac.commandkey "?">
 <!ENTITY helpMenu.accesskey "H">
 <!ENTITY helpMenu.label "Giúp đỡ">
 <!ENTITY helpMenuWin.accesskey "H">
 <!ENTITY helpMenuWin.label "Giúp đỡ">
 <!ENTITY helpReportErrors.accesskey "R">
-<!ENTITY helpReportErrors.label "Report Errors…">
+<!ENTITY helpReportErrors.label "Báo lỗi...">
 <!ENTITY helpTroubleshootingInfo.accesskey "T">
 <!ENTITY helpTroubleshootingInfo.label "Thông tin sửa lỗi">
 <!ENTITY hideOtherAppsCmdMac.commandkey "H">
@@ -78,10 +82,14 @@
 <!ENTITY importCmd.key "I">
 <!ENTITY importCmd.label "Nhập khẩu...">
 <!ENTITY importFromClipboardCmd.label "Nhập khẩu từ clipboard">
-<!ENTITY installConnector.accesskey "C">
-<!ENTITY installConnector.label "Install Browser Connector">
+<!ENTITY installConnector.accesskey "K">
+<!ENTITY installConnector.label "Cài bộ kết nối trình duyệt">
+<!ENTITY itemPane.label "Item Pane">
+<!ENTITY layout.label "Layout">
+<!ENTITY manageAttachments.label "Manage Attachments">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Thu nhỏ">
+<!ENTITY noteFontSize.label "Note Font Size">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Thiết lập trang in...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,9 +109,10 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Quit">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Thoát Juris-M">
+<!ENTITY quitApplicationCmdMac.label "Thoát Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Thoát">
+<!ENTITY recursiveCollections.label "Show Items from Subcollections">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Redo">
@@ -115,10 +124,14 @@
 <!ENTITY selectAllCmd.label "Chạn tất cả">
 <!ENTITY servicesMenuMac.label "Các dịch vụ">
 <!ENTITY showAllAppsCmdMac.label "Hiện tất cả">
+<!ENTITY stackedView.label "Stacked View">
+<!ENTITY standardView.label "Standard View">
+<!ENTITY tagSelector.label "Tag Selector">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Các công cụ">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Undo">
+<!ENTITY viewMenu.label "View">
 <!ENTITY windowMenu.label "Cửa sổ">
 <!ENTITY zoomWindow.label "Zoom">

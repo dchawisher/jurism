@@ -32,6 +32,7 @@
 <!ENTITY zotero.citation.suffix.label "Viðskeyti:">
 <!ENTITY zotero.citation.suppressAuthor.label "Fela höfund">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
+<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "Sýna sameinaðar færslur">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "Bæta vali á Juris-M minnisblað">
 <!ENTITY zotero.contextMenu.addTextToNewNote "Útbúa Juris-M færslu og minnisblað út frá vali">
@@ -43,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Veldu svæði sem nota skal frá öðrum útgáfum af færslunni:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Veldu útgáfuna af þeirri færslu sem nota skal sem móðurfærslu:">
 <!ENTITY zotero.errorReport.notReviewed "Villuskýrslur eru ekki yfirfarnar nema vísað sé í þær á samskiptasvæðum.">
-<!ENTITY zotero.errorReport.postToForums "Sendu skilaboð á Juris-M samskiptasvæðið (juris-m.github.io/support) með þessu auðkenni (Report ID), með lýsingu á vandamálinu og hvað þarf að gera til að kalla aftur fram villuna. ">
+<!ENTITY zotero.errorReport.postToForums "Sendu skilaboð á Zotero samskiptasvæðið (forums.zotero.org) með þessu auðkenni (Report ID), með lýsingu á vandamálinu og hvað þarf að gera til að kalla aftur fram villuna. ">
 <!ENTITY zotero.errorReport.reportID "Auðkennisnúmer (ID) skýrslu:">
 <!ENTITY zotero.errorReport.submissionInProgress "Bíddu aðeins á meðan villuskýrsla er send.">
 <!ENTITY zotero.errorReport.submitted "Villuskýrsla þín hefur verið send.">
-<!ENTITY zotero.errorReport.title "Juris-M villutilkynning">
+<!ENTITY zotero.errorReport.title "Zotero villutilkynning">
 <!ENTITY zotero.errorReport.unrelatedMessages "Hér gætu einnig verið skilaboð ótengd Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Snið:">
 <!ENTITY zotero.exportOptions.title "Flytja út…">
@@ -67,6 +68,7 @@
 <!ENTITY zotero.file.choose.label "Veldu skrá…">
 <!ENTITY zotero.file.noneSelected.label "Engin skrá valin">
 <!ENTITY zotero.general.advancedOptions.label "Ítarlegir valkostir">
+<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "Hætta við">
 <!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "Eyða">
@@ -79,11 +81,24 @@
 <!ENTITY zotero.general.note "Athugasemd:">
 <!ENTITY zotero.general.ok "Í lagi">
 <!ENTITY zotero.general.optional "(Valfrjálst)">
+<!ENTITY zotero.general.options "Options">
+<!ENTITY zotero.general.other "Other…">
 <!ENTITY zotero.general.refresh "Endurnýja">
+<!ENTITY zotero.general.reset "Reset">
 <!ENTITY zotero.general.saveAs "Vista sem…">
 <!ENTITY zotero.general.selectAll "Velja allt">
+<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Já">
+<!ENTITY zotero.import "Import">
+<!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
+<!ENTITY zotero.import.database "Database">
+<!ENTITY zotero.import.fileHandling "File Handling">
+<!ENTITY zotero.import.importing "Importing…">
+<!ENTITY zotero.import.lastModified "Last Modified">
+<!ENTITY zotero.import.size "Size">
+<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
+<!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "Bæta við/breyta tilvitnun">
 <!ENTITY zotero.integration.classicView.label "Hefðbundin framsetning">
 <!ENTITY zotero.integration.docPrefs.title "Kjörstillingar skjals">
@@ -99,6 +114,7 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "Birta tilvísnair sem:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "Aftanmálsgreinar">
+<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
 <!ENTITY zotero.integration.prefs.footnotes.label "Neðanmálsgreinar">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Geyma tilvísnair sem:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -188,7 +204,7 @@
 <!ENTITY zotero.items.volume_column "Bindi">
 <!ENTITY zotero.items.year_column "Ár">
 <!ENTITY zotero.lookup.button.search "Leita">
-<!ENTITY zotero.lookup.description "Sláðu inn eitt eða fleiri ISBN, DOI, eða PMID til að leita að í reitinn fyrir neðan.">
+<!ENTITY zotero.lookup.description "Enter ISBNs, DOIs, PMIDs, or arXiv IDs to add to your library:">
 <!ENTITY zotero.merge.deleted "Eytt">
 <!ENTITY zotero.merge.of "af">
 <!ENTITY zotero.merge.title "Leysa árekstra">
@@ -213,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Óræðar tilvitnanir">
 <!ENTITY zotero.rtfScan.cancel.label "Hætta við">
 <!ENTITY zotero.rtfScan.citation.label "Tilvitnun">
-<!ENTITY zotero.rtfScan.citationsPage.description "Yfirfarðu listann yfir þær tilvitnanir sem kannast var við til að tryggja að Juris-M hafi valið tilsvarandi færslur með réttum hætti. Allar ókortlagðar eða vafasamar tilvitnanir verður að auðkenna áður en haldið er áfram.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Yfirfarðu listann yfir þær tilvitnanir sem kannast var við til að tryggja að Zotero hafi valið tilsvarandi færslur með réttum hætti. Allar ókortlagðar eða vafasamar tilvitnanir verður að auðkenna áður en haldið er áfram.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Yfirfara tilvitnaðar færslur">
 <!ENTITY zotero.rtfScan.completePage.description "Skjalið þitt hefur nú verið skannað og unnið. Gakktu úr skugga um að það sé með rétt snið.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF skönnun lokið">
-<!ENTITY zotero.rtfScan.formatPage.description "Juris-M er að vinna úr og sníða RTF skrána þína. Þetta gæti tekið dálitla stund.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero er að vinna úr og sníða RTF skrána þína. Þetta gæti tekið dálitla stund.">
 <!ENTITY zotero.rtfScan.formatPage.label "Snið tilvitnana">
 <!ENTITY zotero.rtfScan.inputFile.label "Innlestrarskrá">
-<!ENTITY zotero.rtfScan.introPage.description "Juris-M can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
 <!ENTITY zotero.rtfScan.introPage.description2 "Til að byrja, veldu RTF skrá til lestrar og útskrá hér fyrir neðan:">
 <!ENTITY zotero.rtfScan.introPage.label "Inngangur">
 <!ENTITY zotero.rtfScan.itemName.label "Nafn færslu">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Kortlagðar tilvitnanir">
 <!ENTITY zotero.rtfScan.outputFile.label "Útskriftarskrá">
-<!ENTITY zotero.rtfScan.scanPage.description "Juris-M er að leita að tilvitnunum í skjalinu þínu. Þetta gæti tekið dálitla stund.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero er að leita að tilvitnunum í skjalinu þínu. Þetta gæti tekið dálitla stund.">
 <!ENTITY zotero.rtfScan.scanPage.label "Leita að tilvitnunum">
 <!ENTITY zotero.rtfScan.stylePage.label "Snið skjals">
 <!ENTITY zotero.rtfScan.title "RTF skönnun">
@@ -239,7 +255,7 @@
 <!ENTITY zotero.sync.error "Sæmhæfingarvilla">
 <!ENTITY zotero.sync.longTagFixer.character "bókstaf">
 <!ENTITY zotero.sync.longTagFixer.characters "bókstafi">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Efitrfarandi merki í Juris-M færslusafninu þínu er of langt til þess að það verði samhæft þjóni:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Efitrfarandi merki í Zotero færslusafninu þínu er of langt til þess að það verði samhæft þjóni:">
 <!ENTITY zotero.sync.longTagFixer.split "Skipta">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Skipta við">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Þú getur ýmist skipt upp merkinu í fleiri merki, stytt merkið handvirkt eða eytt því.">
@@ -272,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Endurnefna merki…">
 <!ENTITY zotero.tagSelector.selectVisible "Select visible">
 <!ENTITY zotero.tagSelector.showAutomatic "Birta sjálfvirkt">
-<!ENTITY zotero.toolbar.about.label "Um Juris-M">
+<!ENTITY zotero.toolbar.about.label "Um Zotero">
 <!ENTITY zotero.toolbar.actions.label "Aðgerðir">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -315,7 +331,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Kjörstillingar…">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Fjarlægja færslu…">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF skönnun…">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Stuðningur og leiðbeiningar">
 <!ENTITY zotero.toolbar.tab.tooltip "Víxla Tab ham">
 <!ENTITY zotero.toolbar.tagSelector.label "Birta/fela merkjaveljara">
@@ -330,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "áður en haldið er áfram.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Vertu viss um að hafa farið yfir">
 <!ENTITY zotero.upgrade.majorUpgradeLink "leiðbeiningar um uppfærslu">
-<!ENTITY zotero.upgrade.newVersionInstalled "Þú hefur sett inn nýja útgáfu af Juris-M.">
-<!ENTITY zotero.upgrade.title "Juris-M uppfærslutól">
+<!ENTITY zotero.upgrade.newVersionInstalled "Þú hefur sett inn nýja útgáfu af Zotero.">
+<!ENTITY zotero.upgrade.title "Zotero uppfærslutól">
 <!ENTITY zotero.upgrade.upgradeInProgress "Hinkraðu þar til uppfærsluferlinu lýkur. Það gæti tekið nokkrar mínútur.">
-<!ENTITY zotero.upgrade.upgradeRequired "Það þarf að uppfæra Juris-M gagnagrunninn þinn svo hann virki með nýju útgáfunni.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Vel tókst að uppfæra Juris-M gagnagrunninn þinn.">
+<!ENTITY zotero.upgrade.upgradeRequired "Það þarf að uppfæra Zotero gagnagrunninn þinn svo hann virki með nýju útgáfunni.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Vel tókst að uppfæra Zotero gagnagrunninn þinn.">

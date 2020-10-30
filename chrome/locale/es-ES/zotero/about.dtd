@@ -1,9 +1,9 @@
-<!ENTITY zotero.about.additionalSoftware "Programas y normativas externos:">
+<!ENTITY zotero.about.additionalSoftware "Software y estándares de terceros:">
 <!ENTITY zotero.about.close "Cerrar">
 <!ENTITY zotero.about.localizations "Traducciones:">
 <!ENTITY zotero.alumni "Eméritos:">
 <!ENTITY zotero.citationProcessing "Procesamiento de citas y bibliografía">
-<!ENTITY zotero.createdby "Una creación de:">
+<!ENTITY zotero.createdby "Creado por:">
 <!ENTITY zotero.developers "Desarrolladores:">
 <!ENTITY zotero.director "Director:">
 <!ENTITY zotero.directors "Directores:">

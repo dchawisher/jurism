@@ -10,6 +10,8 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Loka">
+<!ENTITY collectionsPane.label "Collections Pane">
+<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
 <!ENTITY copyBibliographyCmd.label "Afrita heimildaskrá">
 <!ENTITY copyCitationCmd.label "Afrita tilvísun">
 <!ENTITY copyCmd.accesskey "C">
@@ -27,6 +29,7 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Eyða">
+<!ENTITY developer.label "Developer">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Breyta">
 <!ENTITY fileMenu.accesskey "F">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "Font Size">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -80,8 +84,12 @@
 <!ENTITY importFromClipboardCmd.label "Flytja inn af klippispjaldi">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Setja upp vafratengingu">
+<!ENTITY itemPane.label "Item Pane">
+<!ENTITY layout.label "Layout">
+<!ENTITY manageAttachments.label "Manage Attachments">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minnka">
+<!ENTITY noteFontSize.label "Note Font Size">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Uppsetning síðu…">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,9 +109,10 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Hætta">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Hætta í Juris-M">
+<!ENTITY quitApplicationCmdMac.label "Hætta í Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Fara út">
+<!ENTITY recursiveCollections.label "Show Items from Subcollections">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Endurgera">
@@ -115,10 +124,14 @@
 <!ENTITY selectAllCmd.label "Velja allt">
 <!ENTITY servicesMenuMac.label "Þjónusta">
 <!ENTITY showAllAppsCmdMac.label "Sýna allt">
+<!ENTITY stackedView.label "Stacked View">
+<!ENTITY standardView.label "Standard View">
+<!ENTITY tagSelector.label "Tag Selector">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Verkfæri">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Afturkalla">
+<!ENTITY viewMenu.label "View">
 <!ENTITY windowMenu.label "Gluggi">
 <!ENTITY zoomWindow.label "Þysja inn">

@@ -10,6 +10,8 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Chiudi">
+<!ENTITY collectionsPane.label "Pannello delle collezioni">
+<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
 <!ENTITY copyBibliographyCmd.label "Copia la bibliografia">
 <!ENTITY copyCitationCmd.label "Copia la citazione">
 <!ENTITY copyCmd.accesskey "C">
@@ -19,14 +21,15 @@
 <!ENTITY cutCmd.key "X">
 <!ENTITY cutCmd.label "Taglia">
 <!ENTITY debugOutputLogging.accesskey "L">
-<!ENTITY debugOutputLogging.clear "Clear Output">
-<!ENTITY debugOutputLogging.label "Debug Output Logging">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Restart with Logging Enabled…">
-<!ENTITY debugOutputLogging.submit "Submit Output">
-<!ENTITY debugOutputLogging.view "View Output">
+<!ENTITY debugOutputLogging.clear "Cancella l'output">
+<!ENTITY debugOutputLogging.label "Debug dell'output di logging">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Riavvia con il logging abilitato...">
+<!ENTITY debugOutputLogging.submit "Invia l'output">
+<!ENTITY debugOutputLogging.view "Vedi l'output">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Cancella">
+<!ENTITY developer.label "Sviluppatore">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Modifica">
 <!ENTITY fileMenu.accesskey "F">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "Dimensione caratteri">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -61,14 +65,14 @@
 <!ENTITY helpCheckForUpdates.accesskey "U">
 <!ENTITY helpCheckForUpdates.label "Controlla gli aggiornamenti...">
 <!ENTITY helpFeedbackPage.accesskey "F">
-<!ENTITY helpFeedbackPage.label "Discussion Forums">
+<!ENTITY helpFeedbackPage.label "Forum di discussione">
 <!ENTITY helpMac.commandkey "?">
 <!ENTITY helpMenu.accesskey "H">
 <!ENTITY helpMenu.label "Aiuto">
 <!ENTITY helpMenuWin.accesskey "H">
 <!ENTITY helpMenuWin.label "Aiuto">
 <!ENTITY helpReportErrors.accesskey "R">
-<!ENTITY helpReportErrors.label "Report Errors…">
+<!ENTITY helpReportErrors.label "Segnala errori...">
 <!ENTITY helpTroubleshootingInfo.accesskey "T">
 <!ENTITY helpTroubleshootingInfo.label "Informazioni di risoluzione dei problemi">
 <!ENTITY hideOtherAppsCmdMac.commandkey "H">
@@ -76,12 +80,16 @@
 <!ENTITY hideThisAppCmdMac.commandkey "H">
 <!ENTITY hideThisAppCmdMac.label "Nascondi &brandShortName;">
 <!ENTITY importCmd.key "I">
-<!ENTITY importCmd.label "Import…">
-<!ENTITY importFromClipboardCmd.label "Import from Clipboard">
+<!ENTITY importCmd.label "Importa...">
+<!ENTITY importFromClipboardCmd.label "Importa dalla Clipboard">
 <!ENTITY installConnector.accesskey "C">
-<!ENTITY installConnector.label "Install Browser Connector">
+<!ENTITY installConnector.label "Installa il Connettore per il browser">
+<!ENTITY itemPane.label "Pannello dell'oggetto">
+<!ENTITY layout.label "Disposizione">
+<!ENTITY manageAttachments.label "Gestisci allegati">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Riduci a icona">
+<!ENTITY noteFontSize.label "Dimensione caratteri delle note">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Impostazione pagina...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,9 +109,10 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Abbandona">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Esci da Juris-M">
+<!ENTITY quitApplicationCmdMac.label "Esci da Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Esci">
+<!ENTITY recursiveCollections.label "Mostra oggetti dalle collezioni secondarie">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Ripeti">
@@ -115,10 +124,14 @@
 <!ENTITY selectAllCmd.label "Seleziona tutto">
 <!ENTITY servicesMenuMac.label "Servizi">
 <!ENTITY showAllAppsCmdMac.label "Mostra tutti">
+<!ENTITY stackedView.label "Aspetto a catasta">
+<!ENTITY standardView.label "Aspetto standard">
+<!ENTITY tagSelector.label "Selettore dei tag">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Strumenti">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Annulla">
+<!ENTITY viewMenu.label "Aspetto">
 <!ENTITY windowMenu.label "Finestra">
 <!ENTITY zoomWindow.label "Zoom">

@@ -1,5 +1,5 @@
 <!ENTITY aboutProduct.accesskey "O">
-<!ENTITY aboutProduct.label "Over Juris-M">
+<!ENTITY aboutProduct.label "Over Zotero">
 <!ENTITY addons.label "Add-ons">
 <!ENTITY bidiSwitchPageDirectionItem.accesskey "g">
 <!ENTITY bidiSwitchPageDirectionItem.label "Paginarichting wijzigen">
@@ -10,6 +10,8 @@
 <!ENTITY closeCmd.accesskey "S">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Sluiten">
+<!ENTITY collectionsPane.label "Verzamelingvenster">
+<!ENTITY convertToStored.label "Gekoppelde bijlagen opslaan">
 <!ENTITY copyBibliographyCmd.label "Bibliografie kopiëren">
 <!ENTITY copyCitationCmd.label "Verwijzing kopiëren">
 <!ENTITY copyCmd.accesskey "K">
@@ -19,14 +21,15 @@
 <!ENTITY cutCmd.key "X">
 <!ENTITY cutCmd.label "Knippen">
 <!ENTITY debugOutputLogging.accesskey "L">
-<!ENTITY debugOutputLogging.clear "Clear Output">
-<!ENTITY debugOutputLogging.label "Debug Output Logging">
+<!ENTITY debugOutputLogging.clear "Uitvoer wissen">
+<!ENTITY debugOutputLogging.label "Foutopsporingsberichten bewaren">
 <!ENTITY debugOutputLogging.restartWithLoggingEnabled "Restart with Logging Enabled…">
-<!ENTITY debugOutputLogging.submit "Submit Output">
-<!ENTITY debugOutputLogging.view "View Output">
+<!ENTITY debugOutputLogging.submit "Uitvoer versturen">
+<!ENTITY debugOutputLogging.view "Uitvoer bekijken">
 <!ENTITY deleteCmd.accesskey "W">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Wissen">
+<!ENTITY developer.label "Ontwikkelaar">
 <!ENTITY editMenu.accesskey "e">
 <!ENTITY editMenu.label "Bewerken">
 <!ENTITY fileMenu.accesskey "B">
@@ -41,6 +44,7 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+<!ENTITY fontSize.label "Lettergrootte">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -61,14 +65,14 @@
 <!ENTITY helpCheckForUpdates.accesskey "u">
 <!ENTITY helpCheckForUpdates.label "Controleren op updates…">
 <!ENTITY helpFeedbackPage.accesskey "F">
-<!ENTITY helpFeedbackPage.label "Discussion Forums">
+<!ENTITY helpFeedbackPage.label "Discussieforums">
 <!ENTITY helpMac.commandkey "?">
 <!ENTITY helpMenu.accesskey "H">
 <!ENTITY helpMenu.label "Help">
 <!ENTITY helpMenuWin.accesskey "H">
 <!ENTITY helpMenuWin.label "Help">
 <!ENTITY helpReportErrors.accesskey "F">
-<!ENTITY helpReportErrors.label "Report Errors…">
+<!ENTITY helpReportErrors.label "Fouten rapporteren…">
 <!ENTITY helpTroubleshootingInfo.accesskey "P">
 <!ENTITY helpTroubleshootingInfo.label "Probleemoplossingsinformatie">
 <!ENTITY hideOtherAppsCmdMac.commandkey "H">
@@ -76,12 +80,16 @@
 <!ENTITY hideThisAppCmdMac.commandkey "H">
 <!ENTITY hideThisAppCmdMac.label "&brandShortName; verbergen">
 <!ENTITY importCmd.key "I">
-<!ENTITY importCmd.label "Import…">
-<!ENTITY importFromClipboardCmd.label "Import from Clipboard">
+<!ENTITY importCmd.label "Importeren...">
+<!ENTITY importFromClipboardCmd.label "Importeren van klembord">
 <!ENTITY installConnector.accesskey "C">
-<!ENTITY installConnector.label "Install Browser Connector">
+<!ENTITY installConnector.label "Browser Connector installeren">
+<!ENTITY itemPane.label "Itemvenster">
+<!ENTITY layout.label "Lay-out">
+<!ENTITY manageAttachments.label "Bijlagen beheren">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimaliseren">
+<!ENTITY noteFontSize.label "Lettergrootte notities">
 <!ENTITY pageSetupCmd.accesskey "i">
 <!ENTITY pageSetupCmd.label "Pagina instellingen...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,9 +109,10 @@
 <!ENTITY quitApplicationCmd.accesskey "A">
 <!ENTITY quitApplicationCmd.label "Afsluiten">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Juris-M afsluiten">
+<!ENTITY quitApplicationCmdMac.label "Zotero afsluiten">
 <!ENTITY quitApplicationCmdWin.accesskey "A">
 <!ENTITY quitApplicationCmdWin.label "Afsluiten">
+<!ENTITY recursiveCollections.label "Items uit deelverzamelingen tonen">
 <!ENTITY redoCmd.accesskey "u">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Opnieuw uitvoeren">
@@ -115,10 +124,14 @@
 <!ENTITY selectAllCmd.label "Alles selecteren">
 <!ENTITY servicesMenuMac.label "Voorzieningen">
 <!ENTITY showAllAppsCmdMac.label "Alles tonen">
+<!ENTITY stackedView.label "Gestapeld">
+<!ENTITY standardView.label "Standaard">
+<!ENTITY tagSelector.label "Labelkiezer">
 <!ENTITY toolsMenu.accesskey "O">
 <!ENTITY toolsMenu.label "Opties">
 <!ENTITY undoCmd.accesskey "O">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Ongedaan maken">
+<!ENTITY viewMenu.label "Beeld">
 <!ENTITY windowMenu.label "Venster">
 <!ENTITY zoomWindow.label "Zoom">
