@@ -9,7 +9,7 @@
 <!ENTITY zotero.attachLink.label.title "Наслов:">
 <!ENTITY zotero.attachLink.title "Додај везу до УРИ адресе">
 <!ENTITY zotero.bibliography.bibliography "Библиографију">
-<!ENTITY zotero.bibliography.copyToClipboard.label "Копирај">
+<!ENTITY zotero.bibliography.copyToClipboard.label "Умножи">
 <!ENTITY zotero.bibliography.linkTitles.label "Include DOI or URL as a link on the entry title (instead of printing)">
 <!ENTITY zotero.bibliography.links.label "Links">
 <!ENTITY zotero.bibliography.locale.label "Језик:">
@@ -32,7 +32,6 @@
 <!ENTITY zotero.citation.suffix.label "Суфикс:">
 <!ENTITY zotero.citation.suppressAuthor.label "Потисни аутора">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
-<!ENTITY zotero.collections.showRetractedItems "Прикажи повучене ставке">
 <!ENTITY zotero.collections.showUnfiledItems "Прикажи неразврстане">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "Додајте означено у Зотерову белешку">
 <!ENTITY zotero.contextMenu.addTextToNewNote "Направите Зотерову ставку и белешку из изабраног">
@@ -44,7 +43,7 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Изаберите поља која желите да преузмете из друге верзије ставке:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Изаберите верзију ставке која ће постати главна ставка:">
 <!ENTITY zotero.errorReport.notReviewed "Извештаји о грешкама се обично не прегледају, осим ако се не помињу на форумима.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "Оставите поруку на Зотеровом форуму (forums.zotero.org) са овим бројем извештаја, описом проблема и свим корацима потребним да се понови грешка.">
 <!ENTITY zotero.errorReport.reportID "Број извештаја:">
 <!ENTITY zotero.errorReport.submissionInProgress "Сачекајте док пошаљемо извештај о грешци.">
 <!ENTITY zotero.errorReport.submitted "Извештај о грешци је послат.">
@@ -68,44 +67,30 @@
 <!ENTITY zotero.file.choose.label "Изабери датотеку…">
 <!ENTITY zotero.file.noneSelected.label "Није изабрана датотека">
 <!ENTITY zotero.general.advancedOptions.label "Напредне опције">
-<!ENTITY zotero.general.bigger "Веће">
 <!ENTITY zotero.general.cancel "Откажи">
-<!ENTITY zotero.general.close "Затвори">
+<!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "Обриши">
 <!ENTITY zotero.general.deselectAll "Поништи изабрано">
 <!ENTITY zotero.general.edit "Уреди">
 <!ENTITY zotero.general.loading "Учитавам…">
-<!ENTITY zotero.general.minimize "Умањи">
+<!ENTITY zotero.general.minimize "Minimize">
 <!ENTITY zotero.general.more "Више">
 <!ENTITY zotero.general.no "Не">
 <!ENTITY zotero.general.note "Белешка:">
 <!ENTITY zotero.general.ok "У реду">
 <!ENTITY zotero.general.optional "(необавезно)">
-<!ENTITY zotero.general.options "Опције">
-<!ENTITY zotero.general.other "Остало…">
 <!ENTITY zotero.general.refresh "Освежи">
-<!ENTITY zotero.general.reset "Врати">
 <!ENTITY zotero.general.saveAs "Сачувај као…">
 <!ENTITY zotero.general.selectAll "Изабери све">
-<!ENTITY zotero.general.smaller "Мање">
-<!ENTITY zotero.general.tools "Алати">
+<!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Да">
-<!ENTITY zotero.import "Увези">
-<!ENTITY zotero.import.createCollection "Постави увезене збирке и ставке у нову збирку">
-<!ENTITY zotero.import.database "База података">
-<!ENTITY zotero.import.fileHandling "Рад са датотекама">
-<!ENTITY zotero.import.importing "Увозим…">
-<!ENTITY zotero.import.lastModified "Последња измена">
-<!ENTITY zotero.import.size "Величина">
-<!ENTITY zotero.import.source.file "Из датотеке (BibTeX, RIS, Зотеров RDF…)">
-<!ENTITY zotero.import.whereToImportFrom "Одакле желите да увезете?">
 <!ENTITY zotero.integration.addEditCitation.title "Додај/уреди цитат">
 <!ENTITY zotero.integration.classicView.label "Класични приказ">
 <!ENTITY zotero.integration.docPrefs.title "Поставке документа">
 <!ENTITY zotero.integration.editBibliography.title "Уреди библиографију">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "Онемогућавање ажурирања може убрзати уметање цитата када радите са великим документима. Увек можете кликните на „Освежи“ како би ручно ажурурати цитате.">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "Аутоматски ажурирај цитате">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "Цитати који чекају на ажурирање ће бити истакнути унутар документа">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "Disabling updates can speed up citation insertion in large documents. Click Refresh to update citations manually.">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "Automatically update citations">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "Citations with pending updates will be highlighted in the document">
 <!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.caption "Поље „Скраћеница часописа“ ће бити занемарено.">
 <!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.label "Користи скраћенице часописа из MEDLINE-а">
 <!ENTITY zotero.integration.prefs.bookmarks.caption "Обележивачи се могу делити између програма Word и LibreOffice, али могу направити проблеме уколико их случајно промените и не могу бити уметнути као фусноте.">
@@ -114,7 +99,6 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "Прикажи цитате као:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "Енднота">
-<!ENTITY zotero.integration.prefs.exportDocument "Пребаците се на други програм за обраду текста…">
 <!ENTITY zotero.integration.prefs.footnotes.label "Фуснота">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Сачувај цитате као:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -147,7 +131,7 @@
 <!ENTITY zotero.item.creatorTransform.nameParticles "Adjust Name Particles">
 <!ENTITY zotero.item.creatorTransform.nameSwap "Замени прва/последња имена">
 <!ENTITY zotero.item.deletePermanently "Трајно изриши…">
-<!ENTITY zotero.item.tags.removeAll "Уклони све ознаке…">
+<!ENTITY zotero.item.tags.removeAll "Remove All Tags…">
 <!ENTITY zotero.item.textTransform "Преобликуј текст">
 <!ENTITY zotero.item.textTransform.sentencecase "Величина слова у реченици">
 <!ENTITY zotero.item.textTransform.titlecase "Величина слова у наслову">
@@ -183,10 +167,10 @@
 <!ENTITY zotero.items.menu.mergeItems "Споји ставке…">
 <!ENTITY zotero.items.menu.moveDown "Move Down">
 <!ENTITY zotero.items.menu.moveUp "Move Up">
-<!ENTITY zotero.items.menu.reportMetadata "Пријави неисправне метаподатке">
+<!ENTITY zotero.items.menu.reportMetadata "Report Incorrect Metadata">
 <!ENTITY zotero.items.menu.restoreToLibrary "Врати у библиотеку">
 <!ENTITY zotero.items.menu.showInLibrary "Прикажи у библиотеци">
-<!ENTITY zotero.items.menu.unrecognize "Опозиви преузимање метаподатака">
+<!ENTITY zotero.items.menu.unrecognize "Undo Retrieve Metadata">
 <!ENTITY zotero.items.moreColumns.label "Још колона">
 <!ENTITY zotero.items.numChildren_column "+">
 <!ENTITY zotero.items.pages_column "Странице">
@@ -204,7 +188,7 @@
 <!ENTITY zotero.items.volume_column "Том">
 <!ENTITY zotero.items.year_column "Година">
 <!ENTITY zotero.lookup.button.search "Претрага">
-<!ENTITY zotero.lookup.description "Унесите ИСБН, ДОИ, ПМИД или арХив идентификације за додавање у вашу библиотеку:">
+<!ENTITY zotero.lookup.description "Унесите ИСБН, ДОИ или ПМИД за тражење у приложеним пољима.">
 <!ENTITY zotero.merge.deleted "Обрисано">
 <!ENTITY zotero.merge.of "од">
 <!ENTITY zotero.merge.title "Решавање конфликта">
@@ -331,7 +315,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Поставке…">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Уклони ставку…">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
+<!ENTITY zotero.toolbar.rtfScan.label "РТФ скенирање…">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Подршка и документација">
 <!ENTITY zotero.toolbar.tab.tooltip "Пређи у режим језичка">
 <!ENTITY zotero.toolbar.tagSelector.label "Покажи/сакриј изборника ознаке">
@@ -340,7 +324,7 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "да би видели шта је ново.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "Погледајте">
 <!ENTITY zotero.upgrade.changeLogLink "записник промена">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "Ово је веће ажурирање.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "пре него што наставите.">

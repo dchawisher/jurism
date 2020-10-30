@@ -3,12 +3,11 @@
 <!ENTITY zotero.preferences.advanced.keys "Tipke za bližnjice">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Osnovna mapa:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Osnovna mapa za povezane priponke">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism bo uporabil relativne poti za povezane datotečne priponke v osnovni mapi, kar omogoča dostop do datotek na različnih računalnikih, vse dokler ostaja datotečna struktura v osnovni mapi enaka.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Juris-M bo uporabil relativne poti za povezane datotečne priponke v osnovni mapi, kar omogoča dostop do datotek na različnih računalnikih, vse dokler ostaja datotečna struktura v osnovni mapi enaka.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Povrni na absolutne poti ...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Izberite ...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Samodejno pridobi metapodatke za PDF-je">
 <!ENTITY zotero.preferences.autoRenameFiles "Samodejno preimenuj datoteke priponk z uporabo metapodatkov nadrejenih">
-<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Preimenuj povezane datoteke">
 <!ENTITY zotero.preferences.autoUpdate "Samodejno preveri posodobitve prevajalnikov in slogov">
 <!ENTITY zotero.preferences.automaticSnapshots "Samodejno naredi posnetek pri ustvarjanju vnosov s spletnih strani">
 <!ENTITY zotero.preferences.automaticTags "Samodejno označi vnose s ključnimi besedami in predmetnimi naslovi">
@@ -45,13 +44,13 @@
 <!ENTITY zotero.preferences.debugOutputLogging.clearOutput "Počisti izhod">
 <!ENTITY zotero.preferences.debugOutputLogging.enableAfterRestart "Omogoči po ponovnem zagonu">
 <!ENTITY zotero.preferences.debugOutputLogging.linesLogged "zabeleženih vrstic">
-<!ENTITY zotero.preferences.debugOutputLogging.message "Izhod razhroščevanja lahko pomaga razvijalcem Zotera pri diagnostiki težav v Zoteru. Beleženje razhroščevanja upočasni Jurism, zato ga v splošnem pustite onemogočenega, razen če razvijalec Zotera zaprosi za izhod razhroščevanja.">
-<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Objavi na strežniku Jurism">
+<!ENTITY zotero.preferences.debugOutputLogging.message "Izhod razhroščevanja lahko pomaga razvijalcem Zotera pri diagnostiki težav v Zoteru. Beleženje razhroščevanja upočasni Juris-M, zato ga v splošnem pustite onemogočenega, razen če razvijalec Zotera zaprosi za izhod razhroščevanja.">
+<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Objavi na strežniku Juris-M">
 <!ENTITY zotero.preferences.debugOutputLogging.viewOutput "Pokaži izhod">
 <!ENTITY zotero.preferences.default "Privzeto:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Samodejno pripni pridružene PDF-je in druge datoteke pri shranjevanju vnosov">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Vključi URL-je časopisnih člankov v sklice">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Če ta možnost ni vključena, Jurism vključi URL-je pri citiranju revij in časopisnih člankov le, če članek nima določenega obsega strani.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Če ta možnost ni vključena, Juris-M vključi URL-je pri citiranju revij in časopisnih člankov le, če članek nima določenega obsega strani.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Dobi dodatne sloge ...">
@@ -86,10 +85,10 @@
 <!ENTITY zotero.preferences.keys.library "Knjižnica">
 <!ENTITY zotero.preferences.keys.newItem "Ustvari nov vnos">
 <!ENTITY zotero.preferences.keys.newNote "Ustvari novo opombo">
-<!ENTITY zotero.preferences.keys.openZotero "Odpri/zapri podokno Zotero">
+<!ENTITY zotero.preferences.keys.openZotero "Odpri/zapri podokno Juris-M">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Poskusi preglasiti sporne tipke za bližnjice">
 <!ENTITY zotero.preferences.keys.quicksearch "Hitro iskanje">
-<!ENTITY zotero.preferences.keys.saveToZotero "Shrani v Jurism (ikona v naslovni vrstici)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Shrani v Juris-M (ikona v naslovni vrstici)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Označi vse elemente vira kot prebrane/neprebrane">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Vključi/izključi celozaslonski način">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Vključi/izključi izbirnik značk">
@@ -126,7 +125,7 @@
 <!ENTITY zotero.preferences.layout "Postavitev:">
 <!ENTITY zotero.preferences.layout.stacked "Naloženo">
 <!ENTITY zotero.preferences.layout.standard "Standardno">
-<!ENTITY zotero.preferences.locate.addDescription "Če želite dodati iskalnik, ki ni na seznamu, obiščite želeni iskalnik v svojem brskalniku in izberite »Dodaj« v Jurismvem meniju Lociraj.">
+<!ENTITY zotero.preferences.locate.addDescription "Če želite dodati iskalnik, ki ni na seznamu, obiščite želeni iskalnik v svojem brskalniku in izberite »Dodaj« v Juris-Mvem meniju Lociraj.">
 <!ENTITY zotero.preferences.locate.description "Opis">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Upravitelj pogona iskanja člankov">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Iskalnik razširi zmogljivost spustnega polja Lociraj v podoknu Podatki. Če omogočite iskalnike na spodnjem seznamu, bodo dodani v spustno polje in boste z njimi lahko na spletu našli vire iz svoje knjižnice.">
@@ -142,7 +141,7 @@
 <!ENTITY zotero.preferences.openurl.search "Išči razločitelje">
 <!ENTITY zotero.preferences.openurl.server "Razločitelj:">
 <!ENTITY zotero.preferences.openurl.version "Različica:">
-<!ENTITY zotero.preferences.parseRISRefer "Uporabi Jurism za prenesene datoteke BibTeX/RIS/Refer">
+<!ENTITY zotero.preferences.parseRISRefer "Uporabi Juris-M za prenesene datoteke BibTeX/RIS/Refer">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Napredno">
 <!ENTITY zotero.preferences.prefpane.cite "Citiraj">
@@ -162,7 +161,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Nastavljeni posredovalni strežniki">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Pot po mapah (npr. about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "kjer najdete več informacij.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism transparentno preusmeri zahteve prek shranjenih posredovalnih strežnikov. Oglejte si">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Juris-M transparentno preusmeri zahteve prek shranjenih posredovalnih strežnikov. Oglejte si">
 <!ENTITY zotero.preferences.proxies.desc_link "dokumentacijo o posredovalnih strežnikih,">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Onemogoči preusmerjanje s posredovanjem, če ime moje domene vsebuje">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Ime datoteke (npr. index.html)">
@@ -181,7 +180,7 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "Privzeta izhodna oblika:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "Onemogoči Hitro kopiranje ob vleki več kot">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "Opomba: Oblikovanje besedila bo na Mac OS X izgubljeno.">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "Domena/pot">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(npr. wikipedia.org)">
@@ -198,7 +197,7 @@
 <!ENTITY zotero.preferences.search.indexStats.words "Besed:">
 <!ENTITY zotero.preferences.search.pdfIndexing "Indeksiranje PDF">
 <!ENTITY zotero.preferences.settings "Nastavitve">
-<!ENTITY zotero.preferences.showIn "Naloži Jurism v:">
+<!ENTITY zotero.preferences.showIn "Naloži Juris-M v:">
 <!ENTITY zotero.preferences.showIn.appTab "zavihku programa">
 <!ENTITY zotero.preferences.showIn.browserPane "podoknu brskalnika">
 <!ENTITY zotero.preferences.showIn.separateTab "ločenem zavihku">
@@ -234,20 +233,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Ponastavi zgodovino usklajevanja datotek">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Primerjaj vse pripete datoteke s storitvijo hrambe">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Obnovi iz spletne knjižnice">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Spoji krajevne podatke Jurism s podatki iz spletne knjižnice.">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "Zamenjaj spletno knjižnico">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Prepiši spletno knjižnico s krajevnimi podatki Jurism">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Spoji krajevne podatke Juris-M s podatki iz spletne knjižnice.">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Obnovi v spletno knjižnico">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Prepiši spletno knjižnico s krajevnimi podatki Juris-M">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Naslednje operacije so uporabne samo v redkih, posebnih primerih in jih ni pametno uporabiti za splošno reševanje težav. V mnogih primerih bo ponastavljanje porodilo nove težave. Za dodatne informacije si oglejte">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Možnosti ponastavitve uskladitve">
 <!ENTITY zotero.preferences.sync.reset.warning3 ".">
 <!ENTITY zotero.preferences.sync.setUpSync "Nastavi usklajevanje">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Uskladi samodejno">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Uskladi vsebino celega besedila">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism lahko odslej usklajuje vsebino celega besedila datotek iz vaših knjižnic Jurism z zotero.org in drugimi povezanimi napravami, s čimer lahko enostavno iščete po svojih datotekah, kjerkoli že ste. Vsebina celega besedila vaših datotek ne bo v skupni javni rabi.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Juris-M lahko odslej usklajuje vsebino celega besedila datotek iz vaših knjižnic Juris-M z zotero.org in drugimi povezanimi napravami, s čimer lahko enostavno iščete po svojih datotekah, kjerkoli že ste. Vsebina celega besedila vaših datotek ne bo v skupni javni rabi.">
 <!ENTITY zotero.preferences.sync.syncServer "Usklajevanje podatkov">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Odveži račun ...">
 <!ENTITY zotero.preferences.sync.username "Uporabniško ime:">
-<!ENTITY zotero.preferences.title "Nastavitve Jurism">
+<!ENTITY zotero.preferences.title "Nastavitve Juris-M">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "dnevi">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Samodejno odstrani iz koša vse izbrisano pred več kot">
 <!ENTITY zotero.preferences.updateNow "Posodobi zdaj">

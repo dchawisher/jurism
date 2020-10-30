@@ -3,12 +3,11 @@
 <!ENTITY zotero.preferences.advanced.keys "Kiirvaliku klahvid">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Baaskataloog:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Lingitud manuse baaskataloog">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism kasutab lingitud manuste puhul suhtelisi radasid baaskataloogis. Selliseilt on võimalik failidele ligipääs erinevates arvutites, tingimusel, et failistruktuur baaskataloogis on sama.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Juris-M kasutab lingitud manuste puhul suhtelisi radasid baaskataloogis. Selliseilt on võimalik failidele ligipääs erinevates arvutites, tingimusel, et failistruktuur baaskataloogis on sama.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Absoluutsetele radadele üleminek...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Valida...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Automatically retrieve metadata for PDFs">
 <!ENTITY zotero.preferences.autoRenameFiles "Automatically rename attachment files using parent metadata">
-<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Rename linked files">
 <!ENTITY zotero.preferences.autoUpdate "Otsida automaatsed stiile ja tõlkijaid">
 <!ENTITY zotero.preferences.automaticSnapshots "Teha momentülesvõtted kui luuakse kirjeid lehekülgedest">
 <!ENTITY zotero.preferences.automaticTags "Lisada automaatselt märksõnad ja teemapealkirjad lipikutesse">
@@ -45,13 +44,13 @@
 <!ENTITY zotero.preferences.debugOutputLogging.clearOutput "Logi tühjendamine">
 <!ENTITY zotero.preferences.debugOutputLogging.enableAfterRestart "Lülitada pärast taaskäivitamist sisse">
 <!ENTITY zotero.preferences.debugOutputLogging.linesLogged "ridu logitud">
-<!ENTITY zotero.preferences.debugOutputLogging.message "Veateadete logimine aitab Jurism arendajatel diagnoosida Jurismga esinevaid probleeme. Veateadete logimine aeglustab Jurism tegevust, niisiis ei ole seda üldjuhul tarvis sisse lülitada.">
-<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Saata Jurism serverisse">
+<!ENTITY zotero.preferences.debugOutputLogging.message "Veateadete logimine aitab Juris-M arendajatel diagnoosida Juris-Mga esinevaid probleeme. Veateadete logimine aeglustab Juris-M tegevust, niisiis ei ole seda üldjuhul tarvis sisse lülitada.">
+<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Saata Juris-M serverisse">
 <!ENTITY zotero.preferences.debugOutputLogging.viewOutput "Logi vaatamine">
 <!ENTITY zotero.preferences.default "Vaikimisi:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Kirje lisamisel salvestada automaatselt seotud PDF-id ja teised elemendid">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Lisada viidetes paberartiklitele URL">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Kui see ei ole valitud, siis Jurism lisab URL vaid siis kui tsiteeritaval artiklil ei ole määratud lehekülgede vahemikku.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Kui see ei ole valitud, siis Juris-M lisab URL vaid siis kui tsiteeritaval artiklil ei ole määratud lehekülgede vahemikku.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Get additional styles…">
@@ -86,10 +85,10 @@
 <!ENTITY zotero.preferences.keys.library "Raamatukogu">
 <!ENTITY zotero.preferences.keys.newItem "Uue kirje loomine">
 <!ENTITY zotero.preferences.keys.newNote "Uue märkuse loomine">
-<!ENTITY zotero.preferences.keys.openZotero "Avada/Sulgeda Zotero aken">
+<!ENTITY zotero.preferences.keys.openZotero "Avada/Sulgeda Juris-M aken">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Võistlevate kiirvaliku klahvide korraldamine">
 <!ENTITY zotero.preferences.keys.quicksearch "Kiirotsing">
-<!ENTITY zotero.preferences.keys.saveToZotero "Salvestada Jurismsse (aadressiriba ikoon)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Salvestada Juris-Msse (aadressiriba ikoon)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Mark All Feed Items As Read/Unread">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Täisekraan režiim">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Lipikuvalija olek">
@@ -126,7 +125,7 @@
 <!ENTITY zotero.preferences.layout "Layout:">
 <!ENTITY zotero.preferences.layout.stacked "Stacked">
 <!ENTITY zotero.preferences.layout.standard "Standard">
-<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Jurism’s Locate menu.">
+<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Juris-M’s Locate menu.">
 <!ENTITY zotero.preferences.locate.description "Kirjeldus">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Artikli otsingumootori haldaja">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Otsingumootor laiendab Otsingu rippmenüü võimalusi infopaneelil. Otsingumootorite rakendamine lisab võimaluse teie raamatukogus leiduvate kirjete otsimiseks webist.">
@@ -142,7 +141,7 @@
 <!ENTITY zotero.preferences.openurl.search "Otsida lahendajaid">
 <!ENTITY zotero.preferences.openurl.server "Lahendaja:">
 <!ENTITY zotero.preferences.openurl.version "Versioon:">
-<!ENTITY zotero.preferences.parseRISRefer "Kasutada Jurismt BibTeX/RIS/Refer failide avamisel">
+<!ENTITY zotero.preferences.parseRISRefer "Kasutada Juris-Mt BibTeX/RIS/Refer failide avamisel">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Täpsemalt">
 <!ENTITY zotero.preferences.prefpane.cite "Viitamine">
@@ -162,7 +161,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Konfigureeritud proksid">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Kataloogi rada (nt about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link ".">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism suunab transparentselt päringuid läbi salvestatud prokside. Palun vaadata">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Juris-M suunab transparentselt päringuid läbi salvestatud prokside. Palun vaadata">
 <!ENTITY zotero.preferences.proxies.desc_link "prokside dokumentatsiooni">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Proksile ümbersuunamine peatada, kui domeeninimi sisaldab ">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Failinimi (e.g., index.html)">
@@ -181,7 +180,7 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "Vaikimisi formaat:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "Peatada kiirkopeerimine juhul kui lohistatakse rohkem kui">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "Märkus: Mac OS X-l läheb RTF formateering kaotsi.">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "Domeen/aadress">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(e.g., wikipedia.org)">
@@ -198,7 +197,7 @@
 <!ENTITY zotero.preferences.search.indexStats.words "Sõnu:">
 <!ENTITY zotero.preferences.search.pdfIndexing "PDF indekseerimine">
 <!ENTITY zotero.preferences.settings "Seaded">
-<!ENTITY zotero.preferences.showIn "Laadida Jurism:">
+<!ENTITY zotero.preferences.showIn "Laadida Juris-M:">
 <!ENTITY zotero.preferences.showIn.appTab "Rakenduse tab">
 <!ENTITY zotero.preferences.showIn.browserPane "Brauseri paanil">
 <!ENTITY zotero.preferences.showIn.separateTab "Eraldi">
@@ -234,23 +233,23 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Algseadistada failide sünkroonimise ajalugu">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compare all attachment files with the storage service">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restore from Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Jurism data with data from the online library.">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "Replace Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Jurism data">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Juris-M data with data from the online library.">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Restore to Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Juris-M data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Järgnevad toimingud on mõeldud vaid erakordseteks ja spetsiifilisteks olukordadeks ja neid ei tohiks kasutada üldiseks probleemide lahendamiseks. Paljudel juhtudel võib algseadistamine lisaprobleeme põhjustada. Vt ">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Sünkroniseerimise alglaadimise seaded">
 <!ENTITY zotero.preferences.sync.reset.warning3 "edasine info.">
 <!ENTITY zotero.preferences.sync.setUpSync "Set Up Syncing">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Sünkroonida automaatselt">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sünkroniseerida täistekst sisu">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism on võimeline sünkroniseerima teie failide täistekst sisu zotero.org kaudu teiste ühendatud seadmetega, võimaldades lihtsat ligipääsu failidele. Teie failide täistekst sisu ei jagata avalikult. ">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Juris-M on võimeline sünkroniseerima teie failide täistekst sisu zotero.org kaudu teiste ühendatud seadmetega, võimaldades lihtsat ligipääsu failidele. Teie failide täistekst sisu ei jagata avalikult. ">
 <!ENTITY zotero.preferences.sync.syncServer "Data Syncing">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Unlink Account…">
 <!ENTITY zotero.preferences.sync.username "Kasutajanimi:">
-<!ENTITY zotero.preferences.title "Jurism eelistused">
+<!ENTITY zotero.preferences.title "Juris-M eelistused">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "päeva tagasi">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Automaatselt eemaldada kirjed prügikastist, mis on kustutatud rohkem kui">
 <!ENTITY zotero.preferences.updateNow "Uuendada nüüd">
 <!ENTITY zotero.preferences.userInterface "Kasutajaliides">
-<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader "Lubada zotero.org modifitseerida sisu vastavalt Zotero versioonile">
-<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader.tooltip "Kui valitud, siis praegune Zotero versioon lisatakse HTTP päringutele zotero.org-ist.">
+<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader "Lubada zotero.org modifitseerida sisu vastavalt Juris-M versioonile">
+<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader.tooltip "Kui valitud, siis praegune Juris-M versioon lisatakse HTTP päringutele zotero.org-ist.">

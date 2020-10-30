@@ -5,14 +5,11 @@
 <!ENTITY bidiSwitchPageDirectionItem.label "Cambiar a dirección de páxina">
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">
 <!ENTITY bidiSwitchTextDirectionItem.commandkey "X">
-<<<<<<< HEAD
 <!ENTITY bidiSwitchTextDirectionItem.label "Cambiar a dirección do texto">
 <!ENTITY bringAllToFront.label "Traer todo a diante">
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Pechar">
-<!ENTITY collectionsPane.label "Panel de colecións">
-<!ENTITY convertToStored.label "Converter as ligazóns a ficheiros a ficheiros almacenados....">
 <!ENTITY copyBibliographyCmd.label "Copiar a bibliografía">
 <!ENTITY copyCitationCmd.label "Copiar a cita">
 <!ENTITY copyCmd.accesskey "C">
@@ -30,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Eliminar">
-<!ENTITY developer.label "Desenvolvedor">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Editar">
 <!ENTITY fileMenu.accesskey "F">
@@ -45,19 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-=======
-
-
-<!ENTITY viewMenu.label "Ver">
-<!ENTITY layout.label "Interface">
-<!ENTITY standardView.label "Interface estándar">
-<!ENTITY stackedView.label "Interface agrupada">
-<!ENTITY collectionsPane.label "Panel de coleccións">
-<!ENTITY itemPane.label "Panel de elementos">
-<!ENTITY tagSelector.label "Selector de etiquetas">
-<!ENTITY recursiveCollections.label "Amosar os elementos das subcolecións">
->>>>>>> d16512c84f8a9948362890f1242324e3d4005da6
-<!ENTITY fontSize.label "Tamaño da tipografía:">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -75,18 +58,18 @@
 <!ENTITY fullZoomResetCmd.label "Reset">
 <!ENTITY fullZoomToggleCmd.accesskey "T">
 <!ENTITY fullZoomToggleCmd.label "Zoom Text Only">
-<!ENTITY helpCheckForUpdates.accesskey "Z">
+<!ENTITY helpCheckForUpdates.accesskey "U">
 <!ENTITY helpCheckForUpdates.label "Comprobar se hai actualizacións...">
 <!ENTITY helpFeedbackPage.accesskey "F">
 <!ENTITY helpFeedbackPage.label "Foro de debate">
 <!ENTITY helpMac.commandkey "?">
-<!ENTITY helpMenu.accesskey "A">
+<!ENTITY helpMenu.accesskey "H">
 <!ENTITY helpMenu.label "Axuda">
 <!ENTITY helpMenuWin.accesskey "H">
 <!ENTITY helpMenuWin.label "Axuda">
-<!ENTITY helpReportErrors.accesskey "E">
+<!ENTITY helpReportErrors.accesskey "R">
 <!ENTITY helpReportErrors.label "Informar de erros...">
-<!ENTITY helpTroubleshootingInfo.accesskey "P">
+<!ENTITY helpTroubleshootingInfo.accesskey "T">
 <!ENTITY helpTroubleshootingInfo.label "Información de solución de problemas">
 <!ENTITY hideOtherAppsCmdMac.commandkey "H">
 <!ENTITY hideOtherAppsCmdMac.label "Agochar os outros">
@@ -96,13 +79,9 @@
 <!ENTITY importCmd.label "Importar...">
 <!ENTITY importFromClipboardCmd.label "Importar do portaretallos">
 <!ENTITY installConnector.accesskey "C">
-<!ENTITY installConnector.label "Instalar conector para o navegador">
-<!ENTITY itemPane.label "Panel de elementos">
-<!ENTITY layout.label "Interface">
-<!ENTITY manageAttachments.label "Xestionar anexos">
-<!ENTITY minimizeWindow.key "e">
+<!ENTITY installConnector.label "Instalar engadido para o navegador">
+<!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimizar">
-<!ENTITY noteFontSize.label "Tamaño tipográfico das notas">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Configurar a páxina...">
 <!ENTITY pasteCmd.accesskey "p">
@@ -117,16 +96,14 @@
 <!ENTITY printCmd.accesskey "U">
 <!ENTITY printCmd.key "P">
 <!ENTITY printCmd.label "Imprimir...">
-<!ENTITY productHelp.accesskey "D">
-<<<<<<< HEAD
-<!ENTITY productHelp.label "Axuda e documentación">
+<!ENTITY productHelp.accesskey "H">
+<!ENTITY productHelp.label "Soporte e documentación">
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Saír">
 <!ENTITY quitApplicationCmdMac.key "S">
-<!ENTITY quitApplicationCmdMac.label "Pechar Jurism">
+<!ENTITY quitApplicationCmdMac.label "Pechar Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Saír">
-<!ENTITY recursiveCollections.label "Amosar os elementos das subcolecións">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Refacer">
@@ -138,33 +115,10 @@
 <!ENTITY selectAllCmd.label "Escoller todo">
 <!ENTITY servicesMenuMac.label "Servizos">
 <!ENTITY showAllAppsCmdMac.label "Mostrar todos">
-<!ENTITY stackedView.label "Interface agrupada">
-<!ENTITY standardView.label "Interface estándar">
-<!ENTITY tagSelector.label "Selector de etiquetas">
-<!ENTITY toolsMenu.accesskey "F">
+<!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Ferramentas">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Desfacer">
-<!ENTITY viewMenu.label "Ver">
 <!ENTITY windowMenu.label "Xanela">
 <!ENTITY zoomWindow.label "Ampliar">
-=======
-<!ENTITY helpTroubleshootingInfo.label "Información de solución de problemas">
-<!ENTITY helpTroubleshootingInfo.accesskey "P">
-<!ENTITY helpFeedbackPage.label "Foro de debate">
-<!ENTITY helpFeedbackPage.accesskey "F">
-
-<!ENTITY helpReportErrors.label "Informar de erros...">
-<!ENTITY helpReportErrors.accesskey "E">
-
-<!ENTITY debugOutputLogging.label "Saída de depuración do rexistro de saída">
-<!ENTITY debugOutputLogging.accesskey "L">
-<!ENTITY debugOutputLogging.submit "Enviar a saída">
-<!ENTITY debugOutputLogging.view "Ver a saída">
-<!ENTITY debugOutputLogging.clear "Borrar a saída">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Reiniciar co acceso activado">
-
-<!ENTITY helpCheckForUpdates.label "Comprobar se hai actualizacións...">
-<!ENTITY helpCheckForUpdates.accesskey "Z">
->>>>>>> d16512c84f8a9948362890f1242324e3d4005da6

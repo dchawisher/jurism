@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "닫기">
-<!ENTITY collectionsPane.label "컬렉션 창">
-<!ENTITY convertToStored.label "링크한 파일을 보관한 파일로 변환...">
 <!ENTITY copyBibliographyCmd.label "서지 복사">
 <!ENTITY copyCitationCmd.label "인용 복사">
 <!ENTITY copyCmd.accesskey "C">
@@ -29,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "지우기">
-<!ENTITY developer.label "개발자">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "편집">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "글꼴 크기">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -83,13 +79,9 @@
 <!ENTITY importCmd.label "불러오기...">
 <!ENTITY importFromClipboardCmd.label "클립보드에서 불러오기">
 <!ENTITY installConnector.accesskey "C">
-<!ENTITY installConnector.label "브라우저 중계기 설치">
-<!ENTITY itemPane.label "항목 창">
-<!ENTITY layout.label "레이아웃">
-<!ENTITY manageAttachments.label "첨부 관리">
+<!ENTITY installConnector.label "브라우저 확장 기능 설치">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "최소화">
-<!ENTITY noteFontSize.label "노트 글꼴 크기">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "페이지 …">
 <!ENTITY pasteCmd.accesskey "P">
@@ -103,35 +95,30 @@
 <!ENTITY preferencesCmdUnix.label "설정">
 <!ENTITY printCmd.accesskey "P">
 <!ENTITY printCmd.key "P">
-<!ENTITY printCmd.label "인쇄…">
+<!ENTITY printCmd.label "Print…">
 <!ENTITY productHelp.accesskey "H">
 <!ENTITY productHelp.label "매뉴얼">
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "종료">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Jurism 종료">
+<!ENTITY quitApplicationCmdMac.label "Juris-M 종료">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "종료">
-<!ENTITY recursiveCollections.label "하위 컬렉션 항목 표시">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "다시 실행">
 <!ENTITY saveCmd.accesskey "A">
 <!ENTITY saveCmd.key "S">
-<!ENTITY saveCmd.label "저장…">
+<!ENTITY saveCmd.label "Save…">
 <!ENTITY selectAllCmd.accesskey "A">
 <!ENTITY selectAllCmd.key "A">
 <!ENTITY selectAllCmd.label "모두 선택">
 <!ENTITY servicesMenuMac.label "서비스">
 <!ENTITY showAllAppsCmdMac.label "모두 보이기">
-<!ENTITY stackedView.label "포개어 보기">
-<!ENTITY standardView.label "표준 보기">
-<!ENTITY tagSelector.label "태그 선택기">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "도구">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "되돌리기">
-<!ENTITY viewMenu.label "보기">
 <!ENTITY windowMenu.label "창">
 <!ENTITY zoomWindow.label "크기 조정">

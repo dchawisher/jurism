@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Fechar">
-<!ENTITY collectionsPane.label "Painel de Colecções">
-<!ENTITY convertToStored.label "Converter Arquivos Ligados para Arquivos Armazenados…">
 <!ENTITY copyBibliographyCmd.label "Copiar Bibliografia">
 <!ENTITY copyCitationCmd.label "Copiar Citação">
 <!ENTITY copyCmd.accesskey "C">
@@ -29,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Remover">
-<!ENTITY developer.label "Desenvolvedor">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Editar">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Tamanho da Fonte Tipográfica">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -84,12 +80,8 @@
 <!ENTITY importFromClipboardCmd.label "Importar dos Recortes">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Instalar Conector de Navegador">
-<!ENTITY itemPane.label "Painel de Item">
-<!ENTITY layout.label "Disposição">
-<!ENTITY manageAttachments.label "Gerir Anexos">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimizar">
-<!ENTITY noteFontSize.label "Tamanho da Fonte Tipográfica das Notas">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Configuração das Páginas...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -109,10 +101,9 @@
 <!ENTITY quitApplicationCmd.accesskey "x">
 <!ENTITY quitApplicationCmd.label "Sair">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Sair do Jurism">
+<!ENTITY quitApplicationCmdMac.label "Sair do Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Sair">
-<!ENTITY recursiveCollections.label "Mostrar Itens de Subcolecções">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Refazer">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "Seleccionar Tudo">
 <!ENTITY servicesMenuMac.label "Serviços">
 <!ENTITY showAllAppsCmdMac.label "Mostrar Todas">
-<!ENTITY stackedView.label "Vista em Pilha">
-<!ENTITY standardView.label "Vista Padrão">
-<!ENTITY tagSelector.label "Selector de Etiquetas">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Ferramentas">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Desfazer">
-<!ENTITY viewMenu.label "Vista">
 <!ENTITY windowMenu.label "Janela">
 <!ENTITY zoomWindow.label "Zoom">

@@ -6,9 +6,8 @@
 <!ENTITY zotero.preferences.attachmentBaseDir.message "زوتيرو سيستخدم مسارات نسبية لمرفقات الملف المرتبطة داخل المجلد الأساسي، مما يسمح لك بالوصول إلى الملفات على أجهزة حاسبات مختلفة طالما ظلت بنية الملف داخل المجلد الأساسي نفسها.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "حول الى مسارات مطلقة">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "اختار...">
-<!ENTITY zotero.preferences.autoRecognizeFiles "استرداد البيانات الوصفية تلقائياً لملفات بي دي إف">
-<!ENTITY zotero.preferences.autoRenameFiles "إعادة تسمية الملفات المرفقة تلقائيًا مستخدماً بيانات الأصل الوصفية">
-<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "إعادة تسمية الملفات المرتبطة">
+<!ENTITY zotero.preferences.autoRecognizeFiles "Automatically retrieve metadata for PDFs">
+<!ENTITY zotero.preferences.autoRenameFiles "Automatically rename attachment files using parent metadata">
 <!ENTITY zotero.preferences.autoUpdate "التأكد التلقائي من وجود مترجمات مواقع محدثة">
 <!ENTITY zotero.preferences.automaticSnapshots "أخذ لقطات تلقائية عند إنشاء العناصر من صفحات الويب">
 <!ENTITY zotero.preferences.automaticTags "اضف اوسمة  تلقائية للعناصر بالكلمات المفتاحية ورؤوس الموضوعات">
@@ -28,14 +27,14 @@
 <!ENTITY zotero.preferences.cite.wordProcessors.noWordProcessorPluginsInstalled "الوظائف الاضافية لمعالجات النصوص غير مثبته حالياً">
 <!ENTITY zotero.preferences.cite.wordProcessors.useClassicAddCitationDialog "استخدم المربع الحواري التقليدي لاضافة استشهاد">
 <!ENTITY zotero.preferences.configEditor "تهيئة المحرر">
-<!ENTITY zotero.preferences.custom "مخصص...">
+<!ENTITY zotero.preferences.custom "Custom…">
 <!ENTITY zotero.preferences.dataDir "مكان تخزين البيانات">
 <!ENTITY zotero.preferences.dataDir.choose "اختر...">
 <!ENTITY zotero.preferences.dataDir.custom "تخصيص:">
 <!ENTITY zotero.preferences.dataDir.migrate "الترحيل إلى الموقع الافتراضي الجديد...">
 <!ENTITY zotero.preferences.dataDir.reveal "عرض مجلد البيانات">
 <!ENTITY zotero.preferences.dataDir.useProfile "استخدم مجلد الملف الشخصي لفايرفوكس">
-<!ENTITY zotero.preferences.dataDir.viaCommandLine "(محدد عبر سطر الأوامر)">
+<!ENTITY zotero.preferences.dataDir.viaCommandLine "(specified via command line)">
 <!ENTITY zotero.preferences.dbMaintenance "صيانة قاعدة البيانات">
 <!ENTITY zotero.preferences.dbMaintenance.integrityCheck "التأكد من سلامة قاعدة البيانات">
 <!ENTITY zotero.preferences.dbMaintenance.resetStyles "اعادة تعيين الانماط">
@@ -60,9 +59,9 @@
 <!ENTITY zotero.preferences.feeds.sorting.label "الفرز">
 <!ENTITY zotero.preferences.feeds.sorting.newest "العناصر الأحدث أولاً">
 <!ENTITY zotero.preferences.feeds.sorting.oldest "العناصر الأقدم أولاً">
-<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "افتح ملفات بي دي إف مستخدماً">
-<!ENTITY zotero.preferences.fileHandler.systemDefault "افتراضي النظام">
-<!ENTITY zotero.preferences.fileHandling "معاملة الملف">
+<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "Open PDFs using">
+<!ENTITY zotero.preferences.fileHandler.systemDefault "System Default">
+<!ENTITY zotero.preferences.fileHandling "File Handling">
 <!ENTITY zotero.preferences.fontSize "حجم الخط:">
 <!ENTITY zotero.preferences.fontSize.large "كبير">
 <!ENTITY zotero.preferences.fontSize.medium "متوسط">
@@ -181,7 +180,7 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "الصياغة الافتراضية للمخرجات:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "تعطيل النسخ السريع عند السحب بالماوس لأكثر من">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "ملاحظة: التنسيق الغني للنصوص سيفقد عند استخدام نظام ماكنتوش.">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "نطاق الانترنت/المسار">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(مثلاً: wikipedia.org)">
@@ -218,7 +217,7 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.tos1 "باستخدامك مساحة تخزين زوتيرو، فإنك توافق على الالتزام بكافة">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "الشروط والأحكام">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "الرابط:">
-<!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "تحقق من الخادم">
+<!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
 <!ENTITY zotero.preferences.sync.librariesToSync "المكتبات المراد تزامنها">
 <!ENTITY zotero.preferences.sync.librariesToSync.button "اختر المكتبات...">
 <!ENTITY zotero.preferences.sync.librariesToSync.library "مكتبة">
@@ -232,11 +231,11 @@
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory "إعادة تعيين سجل مزامنة البيانات">
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory.desc "دمج البيانات المحلية مع البيانات البعيدة، متجاهلاً سجل المزامنة">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "إعادة تعيين ملف سجل المزامنة">
-<!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "مقارنة جميع الملفات المرفقة مع خدمة التخزين">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer "الاستعاد من مكتبة الشبكة">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "استبدل بيانات زوتيرو المحلية ببيانات مكتبة الشبكة.">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "استبدال مكتبة الشبكة">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "استبدل مكتبة الشبكة ببيانات زوتيرو المحلية">
+<!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compare all attachment files with the storage service">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restore from Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Juris-M data with data from the online library.">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Restore to Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Juris-M data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "العمليات التالية تستخدم في حالات نادة و  محددة و لا يجب أن تستخدم في لاستصلاح المشاكل العامة . في حالات عديدة، إعادة الضبط ستنتج مشاكل إضافية. انظر">
 <!ENTITY zotero.preferences.sync.reset.warning2 "خيارات اعادة ضبط التزامن">
 <!ENTITY zotero.preferences.sync.reset.warning3 "لمزيد من المعلومات.">

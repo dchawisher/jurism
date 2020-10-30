@@ -32,19 +32,18 @@
 <!ENTITY zotero.citation.suffix.label "پسوند:">
 <!ENTITY zotero.citation.suppressAuthor.label "حذف نام نویسنده">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
-<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "نمایش آیتم‌های دسته‌بندی نشده">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "افزودن قسمت انتخاب شده به یادداشت زوترو">
 <!ENTITY zotero.contextMenu.addTextToNewNote " ساخت آیتم‌ و یادداشت از قسمت انتخاب شده">
 <!ENTITY zotero.contextMenu.saveImageAsItem "ذخیره تصویر به صورت یک آیتم‌ زوترو">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "ذخیره پیوند به صورت یک آیتم‌ زوترو">
 <!ENTITY zotero.downloadManager.label "ذخیره در زوترو">
-<!ENTITY zotero.downloadManager.noPDFTools.description "To use this feature, you must first install the PDF tools in the Search pane of the Jurism preferences.">
+<!ENTITY zotero.downloadManager.noPDFTools.description "To use this feature, you must first install the PDF tools in the Search pane of the Juris-M preferences.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Attachments cannot be saved to the currently selected library. This item will be saved to your library instead.">
 <!ENTITY zotero.duplicatesMerge.fieldSelect "مواردی را که می‌خواهید از سایر نسخه‌ها نگه داشته شوند، انتخاب کنید.">
 <!ENTITY zotero.duplicatesMerge.versionSelect "آن نسخه از آیتمی را که می‌خواهید به عنوان آیتم اصلی استفاده شود، انتخاب کنید.">
 <!ENTITY zotero.errorReport.notReviewed "برای بررسی گزارش خطا، حتما باید آن را به انجمن گفتگو ارجاع دهید. در غیر این صورت گزارش بررسی نخواهد شد.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "لطفا یک پیام به انجمن گفتگوی زوترو به آدرس forums.zotero.org بفرستید که شامل شناسه گزارش، شرحی از مشکل و مراحل لازم برای تولید مجدد آن باشد.">
 <!ENTITY zotero.errorReport.reportID "شناسه گزارش:">
 <!ENTITY zotero.errorReport.submissionInProgress "لطفا تا پایان ارسال گزارش خطا، صبر کنید.">
 <!ENTITY zotero.errorReport.submitted "گزارش خطا ارسال شد.">
@@ -68,7 +67,6 @@
 <!ENTITY zotero.file.choose.label "انتخاب پرونده...">
 <!ENTITY zotero.file.noneSelected.label "هیچ پرونده‌ای انتخاب نشده است">
 <!ENTITY zotero.general.advancedOptions.label "Advanced Options">
-<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "انصراف">
 <!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "حذف">
@@ -81,24 +79,11 @@
 <!ENTITY zotero.general.note "یادداشت:">
 <!ENTITY zotero.general.ok "تایید">
 <!ENTITY zotero.general.optional "(اختیاری)">
-<!ENTITY zotero.general.options "Options">
-<!ENTITY zotero.general.other "Other…">
 <!ENTITY zotero.general.refresh "Refresh">
-<!ENTITY zotero.general.reset "Reset">
 <!ENTITY zotero.general.saveAs "Save As…">
 <!ENTITY zotero.general.selectAll "انتخاب همه">
-<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Yes">
-<!ENTITY zotero.import "Import">
-<!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
-<!ENTITY zotero.import.database "Database">
-<!ENTITY zotero.import.fileHandling "File Handling">
-<!ENTITY zotero.import.importing "Importing…">
-<!ENTITY zotero.import.lastModified "Last Modified">
-<!ENTITY zotero.import.size "Size">
-<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
-<!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "افزودن/ویرایش یادکرد">
 <!ENTITY zotero.integration.classicView.label "نمایش کلاسیک">
 <!ENTITY zotero.integration.docPrefs.title "تنظیمات سند">
@@ -114,7 +99,6 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "نمایش یاکردها در:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "انتهای متن">
-<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
 <!ENTITY zotero.integration.prefs.footnotes.label "پاورقی">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -133,7 +117,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "Storing references in your document slightly increases file size, but will allow you to share your document with others without using a Zotero group. Zotero 3.0 or later is required to update documents created with this option.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "Storing references in your document slightly increases file size, but will allow you to share your document with others without using a Juris-M group. Juris-M 3.0 or later is required to update documents created with this option.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "Store references in document">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -204,7 +188,7 @@
 <!ENTITY zotero.items.volume_column "جلد">
 <!ENTITY zotero.items.year_column "سال">
 <!ENTITY zotero.lookup.button.search "جستجو">
-<!ENTITY zotero.lookup.description "Enter ISBNs, DOIs, PMIDs, or arXiv IDs to add to your library:">
+<!ENTITY zotero.lookup.description "شابک،‏ DOI یا PMID را برای جستجو در کادر زیر وارد کنید.">
 <!ENTITY zotero.merge.deleted "حذف‌شده">
 <!ENTITY zotero.merge.of "of">
 <!ENTITY zotero.merge.title "Conflict Resolution">
@@ -331,7 +315,7 @@
 <!ENTITY zotero.toolbar.preferences.label "تنظیمات...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "حذف آیتم‌...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
+<!ENTITY zotero.toolbar.rtfScan.label "پیمایش RTF...">
 <!ENTITY zotero.toolbar.supportAndDocumentation "پشتیبانی و راهنما">
 <!ENTITY zotero.toolbar.tab.tooltip "تغییر حالت برگه‌ای">
 <!ENTITY zotero.toolbar.tagSelector.label "نمایش/نهفتن انتخاب‌گر برچسب">
@@ -340,7 +324,7 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "را ببینید.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "لطفا برای یافتن نکات جدید">
 <!ENTITY zotero.upgrade.changeLogLink "گزارش تغییرات">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "این یک ارتقای عمده است.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "مرور کنید.">

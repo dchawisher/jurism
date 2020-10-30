@@ -1,14 +1,14 @@
-<!ENTITY zotero.about.additionalSoftware "Tredjepartsprogramvare og standarder:">
+<!ENTITY zotero.about.additionalSoftware "Tredjeparts programvare og standarder:">
 <!ENTITY zotero.about.close "Lukk">
 <!ENTITY zotero.about.localizations "Lokaliseringer:">
-<!ENTITY zotero.alumni "Alumner:">
-<!ENTITY zotero.citationProcessing "Behandling av henvisninger og bibliografier">
+<!ENTITY zotero.alumni "Alumnuser:">
+<!ENTITY zotero.citationProcessing "Sitater og bibliografibehandling">
 <!ENTITY zotero.createdby "Utviklet av:">
 <!ENTITY zotero.developers "Utviklere:">
 <!ENTITY zotero.director "Direktør">
 <!ENTITY zotero.directors "Direksjonsmedlemmer:">
-<!ENTITY zotero.executiveProducer "Produksjonsleder:">
+<!ENTITY zotero.executiveProducer "Ledende produsent:">
 <!ENTITY zotero.moreCreditsAndAcknowledgements "Flere anerkjennelser">
 <!ENTITY zotero.thanks "Spesiell takk til:">
 <!ENTITY zotero.version "versjon">
-<!ENTITY zotero.whatsNew "Nyheter">
+<!ENTITY zotero.whatsNew "What’s new">

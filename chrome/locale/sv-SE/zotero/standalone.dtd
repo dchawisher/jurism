@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Stäng">
-<!ENTITY collectionsPane.label "Samlingspanel">
-<!ENTITY convertToStored.label "Konvertera Länkade filer till Lagrade filer…">
 <!ENTITY copyBibliographyCmd.label "Kopiera källförteckning">
 <!ENTITY copyCitationCmd.label "Kopiera referens">
 <!ENTITY copyCmd.accesskey "C">
@@ -29,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Radera">
-<!ENTITY developer.label "Utvecklare">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Redigera">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Sök på denna sida…">
-<!ENTITY fontSize.label "Teckenstorlek">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -84,12 +80,8 @@
 <!ENTITY importFromClipboardCmd.label "Importera från urklipp">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Installera webbläsaranslutning">
-<!ENTITY itemPane.label "Källpanel">
-<!ENTITY layout.label "Utseende">
-<!ENTITY manageAttachments.label "Hantera bilagor">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimera">
-<!ENTITY noteFontSize.label "Teckenstorlek för anteckning">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Utskriftsformat…">
 <!ENTITY pasteCmd.accesskey "P">
@@ -109,10 +101,9 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Avsluta">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Avsluta Jurism">
+<!ENTITY quitApplicationCmdMac.label "Avsluta Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Avsluta">
-<!ENTITY recursiveCollections.label "Visa källor från undersamling">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Gör om">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "Markera allt">
 <!ENTITY servicesMenuMac.label "Tjänster">
 <!ENTITY showAllAppsCmdMac.label "Visa alla">
-<!ENTITY stackedView.label "Staplad vy">
-<!ENTITY standardView.label "Standardvy">
-<!ENTITY tagSelector.label "Etikett-väljare">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Verktyg">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Ångra">
-<!ENTITY viewMenu.label "Visa">
 <!ENTITY windowMenu.label "Fönster">
 <!ENTITY zoomWindow.label "Zoom">

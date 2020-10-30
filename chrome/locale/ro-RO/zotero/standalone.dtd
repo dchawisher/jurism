@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Închide">
-<!ENTITY collectionsPane.label "Panou pentru colecții">
-<!ENTITY convertToStored.label "Convertește fișierele legate la fișiere depozitate...">
 <!ENTITY copyBibliographyCmd.label "Copiază bibliografie">
 <!ENTITY copyCitationCmd.label "Copiază citare">
 <!ENTITY copyCmd.accesskey "C">
@@ -29,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Ștergere">
-<!ENTITY developer.label "Dezvoltator">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Editare">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Dimensiune font">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -84,12 +80,8 @@
 <!ENTITY importFromClipboardCmd.label "Importă din memoria clipboard">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Instalează conectorul pentru browser">
-<!ENTITY itemPane.label "Panou item">
-<!ENTITY layout.label "Machetă">
-<!ENTITY manageAttachments.label "Gestionare anexe">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimizare">
-<!ENTITY noteFontSize.label "Notă dimensiune font">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Setări pagină...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -109,10 +101,9 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Părăsire">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Părăsește Jurism">
+<!ENTITY quitApplicationCmdMac.label "Părăsește Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Ieșire">
-<!ENTITY recursiveCollections.label "Afișează itemii din subcolecții">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Refacere">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "Selectează tot">
 <!ENTITY servicesMenuMac.label "Servicii">
 <!ENTITY showAllAppsCmdMac.label "Afișează tot">
-<!ENTITY stackedView.label "Vizualizare în stivă">
-<!ENTITY standardView.label "Vizualizare standard">
-<!ENTITY tagSelector.label "Selector etichetă">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Instrumente">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Anulare">
-<!ENTITY viewMenu.label "Vizualizare">
 <!ENTITY windowMenu.label "Fereastră">
 <!ENTITY zoomWindow.label "Panoramare">

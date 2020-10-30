@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "ปิด">
-<!ENTITY collectionsPane.label "Collections Pane">
-<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
 <!ENTITY copyBibliographyCmd.label "สำเนาบรรณานุกรม">
 <!ENTITY copyCitationCmd.label "สำเนาการอ้างอิง">
 <!ENTITY copyCmd.accesskey "C">
@@ -29,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "ลบ">
-<!ENTITY developer.label "Developer">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "แก้ไข">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Font Size">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -84,12 +80,8 @@
 <!ENTITY importFromClipboardCmd.label "Import from Clipboard">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Install Browser Connector">
-<!ENTITY itemPane.label "Item Pane">
-<!ENTITY layout.label "Layout">
-<!ENTITY manageAttachments.label "Manage Attachments">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "ย่อ">
-<!ENTITY noteFontSize.label "Note Font Size">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "ตั้งค่าหน้ากระดาษ...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -109,10 +101,9 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "เลิกใช้">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "ออกจาก Jurism">
+<!ENTITY quitApplicationCmdMac.label "ออกจาก Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "ออกจากโปรแกรม">
-<!ENTITY recursiveCollections.label "Show Items from Subcollections">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "ทำซ้ำ">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "เลือกทั้งหมด">
 <!ENTITY servicesMenuMac.label "บริการ">
 <!ENTITY showAllAppsCmdMac.label "แสดงทั้งหมด">
-<!ENTITY stackedView.label "Stacked View">
-<!ENTITY standardView.label "Standard View">
-<!ENTITY tagSelector.label "Tag Selector">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "เครื่องมือ">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "เลิกทำ">
-<!ENTITY viewMenu.label "View">
 <!ENTITY windowMenu.label "หน้าต่าง">
 <!ENTITY zoomWindow.label "ซูม">

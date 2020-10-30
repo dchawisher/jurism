@@ -1,19 +1,17 @@
 <!ENTITY aboutProduct.accesskey "A">
-<!ENTITY aboutProduct.label "Относно &brandShortName;">
-<!ENTITY addons.label "Добавки">
+<!ENTITY aboutProduct.label "About &brandShortName;">
+<!ENTITY addons.label "Add-ons">
 <!ENTITY bidiSwitchPageDirectionItem.accesskey "g">
-<!ENTITY bidiSwitchPageDirectionItem.label "Обърни формата на страницата">
+<!ENTITY bidiSwitchPageDirectionItem.label "Switch Page Direction">
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">
 <!ENTITY bidiSwitchTextDirectionItem.commandkey "X">
-<!ENTITY bidiSwitchTextDirectionItem.label "Промени посоката на текста">
-<!ENTITY bringAllToFront.label "Премести всички на преден план">
+<!ENTITY bidiSwitchTextDirectionItem.label "Switch Text Direction">
+<!ENTITY bringAllToFront.label "Bring All to Front">
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
-<!ENTITY closeCmd.label "Затвори">
-<!ENTITY collectionsPane.label "Collections Pane">
-<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
-<!ENTITY copyBibliographyCmd.label "Копирай библиографията">
-<!ENTITY copyCitationCmd.label "Копирай цитата">
+<!ENTITY closeCmd.label "Close">
+<!ENTITY copyBibliographyCmd.label "Copy Bibliography">
+<!ENTITY copyCitationCmd.label "Copy Citation">
 <!ENTITY copyCmd.accesskey "C">
 <!ENTITY copyCmd.key "C">
 <!ENTITY copyCmd.label "Copy">
@@ -21,19 +19,18 @@
 <!ENTITY cutCmd.key "X">
 <!ENTITY cutCmd.label "Cut">
 <!ENTITY debugOutputLogging.accesskey "L">
-<!ENTITY debugOutputLogging.clear "Изчисти изведените дани">
-<!ENTITY debugOutputLogging.label "Запис на грешките в журнал">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Рестартирай програмата с включено записване на дани в журнал...">
-<!ENTITY debugOutputLogging.submit "Изпрати изведените данни">
-<!ENTITY debugOutputLogging.view "Виж изведените данни">
+<!ENTITY debugOutputLogging.clear "Clear Output">
+<!ENTITY debugOutputLogging.label "Debug Output Logging">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Restart with Logging Enabled…">
+<!ENTITY debugOutputLogging.submit "Submit Output">
+<!ENTITY debugOutputLogging.view "View Output">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Delete">
-<!ENTITY developer.label "Developer">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Edit">
 <!ENTITY fileMenu.accesskey "F">
-<!ENTITY fileMenu.label "Файл">
+<!ENTITY fileMenu.label "File">
 <!ENTITY findAgainCmd.accesskey "g">
 <!ENTITY findAgainCmd.commandkey "g">
 <!ENTITY findAgainCmd.commandkey2 "VK_F3">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Font Size">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -63,75 +59,66 @@
 <!ENTITY fullZoomToggleCmd.accesskey "T">
 <!ENTITY fullZoomToggleCmd.label "Zoom Text Only">
 <!ENTITY helpCheckForUpdates.accesskey "U">
-<!ENTITY helpCheckForUpdates.label "Провери за актуализации...">
+<!ENTITY helpCheckForUpdates.label "Check for Updates…">
 <!ENTITY helpFeedbackPage.accesskey "F">
-<!ENTITY helpFeedbackPage.label "Дискусионен форум">
+<!ENTITY helpFeedbackPage.label "Discussion Forums">
 <!ENTITY helpMac.commandkey "?">
 <!ENTITY helpMenu.accesskey "H">
-<!ENTITY helpMenu.label "Помощ">
+<!ENTITY helpMenu.label "Help">
 <!ENTITY helpMenuWin.accesskey "H">
-<!ENTITY helpMenuWin.label "Помощ">
+<!ENTITY helpMenuWin.label "Help">
 <!ENTITY helpReportErrors.accesskey "R">
-<!ENTITY helpReportErrors.label "Докладване на проблеми...">
+<!ENTITY helpReportErrors.label "Report Errors…">
 <!ENTITY helpTroubleshootingInfo.accesskey "T">
-<!ENTITY helpTroubleshootingInfo.label "Информация за отстраняване на проблеми">
+<!ENTITY helpTroubleshootingInfo.label "Troubleshooting Information">
 <!ENTITY hideOtherAppsCmdMac.commandkey "H">
-<!ENTITY hideOtherAppsCmdMac.label "Скрий &quot;Другите&quot;">
+<!ENTITY hideOtherAppsCmdMac.label "Hide Others">
 <!ENTITY hideThisAppCmdMac.commandkey "H">
-<!ENTITY hideThisAppCmdMac.label "Скрий &brandShortName;">
+<!ENTITY hideThisAppCmdMac.label "Hide &brandShortName;">
 <!ENTITY importCmd.key "I">
-<!ENTITY importCmd.label "Внасяне...">
-<!ENTITY importFromClipboardCmd.label "Внасяне от клипборда">
+<!ENTITY importCmd.label "Import…">
+<!ENTITY importFromClipboardCmd.label "Import from Clipboard">
 <!ENTITY installConnector.accesskey "C">
-<!ENTITY installConnector.label "Инсталирай браузър добавката Зотеро">
-<!ENTITY itemPane.label "Item Pane">
-<!ENTITY layout.label "Layout">
-<!ENTITY manageAttachments.label "Manage Attachments">
+<!ENTITY installConnector.label "Install Browser Connector">
 <!ENTITY minimizeWindow.key "m">
-<!ENTITY minimizeWindow.label "Минимизирай">
-<!ENTITY noteFontSize.label "Note Font Size">
+<!ENTITY minimizeWindow.label "Minimize">
 <!ENTITY pageSetupCmd.accesskey "U">
-<!ENTITY pageSetupCmd.label "Настройки на страницата">
+<!ENTITY pageSetupCmd.label "Page Setup…">
 <!ENTITY pasteCmd.accesskey "P">
 <!ENTITY pasteCmd.key "V">
 <!ENTITY pasteCmd.label "Paste">
 <!ENTITY preferencesCmd.accesskey "O">
 <!ENTITY preferencesCmd.label "Preferences">
 <!ENTITY preferencesCmdMac.commandkey ",">
-<!ENTITY preferencesCmdMac.label "Настройки...">
+<!ENTITY preferencesCmdMac.label "Preferences…">
 <!ENTITY preferencesCmdUnix.accesskey "n">
 <!ENTITY preferencesCmdUnix.label "Preferences">
 <!ENTITY printCmd.accesskey "P">
 <!ENTITY printCmd.key "P">
-<!ENTITY printCmd.label "Печат...">
+<!ENTITY printCmd.label "Print…">
 <!ENTITY productHelp.accesskey "D">
-<!ENTITY productHelp.label "Подръжка и документация">
+<!ENTITY productHelp.label "Support and Documentation">
 <!ENTITY quitApplicationCmd.accesskey "Q">
-<!ENTITY quitApplicationCmd.label "Изход">
+<!ENTITY quitApplicationCmd.label "Quit">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Изход от Зотеро">
+<!ENTITY quitApplicationCmdMac.label "Quit Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
-<!ENTITY quitApplicationCmdWin.label "Изход">
-<!ENTITY recursiveCollections.label "Show Items from Subcollections">
+<!ENTITY quitApplicationCmdWin.label "Exit">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Redo">
 <!ENTITY saveCmd.accesskey "A">
 <!ENTITY saveCmd.key "S">
-<!ENTITY saveCmd.label "Запиши...">
+<!ENTITY saveCmd.label "Save…">
 <!ENTITY selectAllCmd.accesskey "A">
 <!ENTITY selectAllCmd.key "A">
 <!ENTITY selectAllCmd.label "Select All">
-<!ENTITY servicesMenuMac.label "Програмно обслужване">
-<!ENTITY showAllAppsCmdMac.label "Покажи всички">
-<!ENTITY stackedView.label "Stacked View">
-<!ENTITY standardView.label "Standard View">
-<!ENTITY tagSelector.label "Tag Selector">
+<!ENTITY servicesMenuMac.label "Services">
+<!ENTITY showAllAppsCmdMac.label "Show All">
 <!ENTITY toolsMenu.accesskey "T">
-<!ENTITY toolsMenu.label "Инструменти">
+<!ENTITY toolsMenu.label "Tools">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Undo">
-<!ENTITY viewMenu.label "View">
-<!ENTITY windowMenu.label "Прозорец">
-<!ENTITY zoomWindow.label "Уголемяване">
+<!ENTITY windowMenu.label "Window">
+<!ENTITY zoomWindow.label "Zoom">

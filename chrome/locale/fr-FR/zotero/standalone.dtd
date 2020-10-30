@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "r">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Fermer">
-<!ENTITY collectionsPane.label "Panneau des collections">
-<!ENTITY convertToStored.label "Convertir les fichiers liés en fichiers joints">
 <!ENTITY copyBibliographyCmd.label "Copier la bibliographie">
 <!ENTITY copyCitationCmd.label "Copier la citation">
 <!ENTITY copyCmd.accesskey "p">
@@ -29,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "S">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Supprimer">
-<!ENTITY developer.label "Développeur">
 <!ENTITY editMenu.accesskey "n">
 <!ENTITY editMenu.label "Édition">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Taille des caractères">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -65,7 +61,7 @@
 <!ENTITY helpCheckForUpdates.accesskey "V">
 <!ENTITY helpCheckForUpdates.label "Vérifier les mises à jour…">
 <!ENTITY helpFeedbackPage.accesskey "F">
-<!ENTITY helpFeedbackPage.label "Forum Zotero">
+<!ENTITY helpFeedbackPage.label "Forum Juris-M">
 <!ENTITY helpMac.commandkey "?">
 <!ENTITY helpMenu.accesskey "A">
 <!ENTITY helpMenu.label "Aide">
@@ -83,13 +79,9 @@
 <!ENTITY importCmd.label "Importer…">
 <!ENTITY importFromClipboardCmd.label "Importer depuis le presse-papiers">
 <!ENTITY installConnector.accesskey "I">
-<!ENTITY installConnector.label "Installer le Connecteur Zotero dans le navigateur">
-<!ENTITY itemPane.label "Panneau du document">
-<!ENTITY layout.label "Mise en page">
-<!ENTITY manageAttachments.label "Gérer les pièces jointes">
+<!ENTITY installConnector.label "Installer le Connecteur Juris-M dans le navigateur">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimiser">
-<!ENTITY noteFontSize.label "Taille des caractères des notes">
 <!ENTITY pageSetupCmd.accesskey "M">
 <!ENTITY pageSetupCmd.label "Mise en page…">
 <!ENTITY pasteCmd.accesskey "o">
@@ -109,10 +101,9 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Quitter">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Quitter Jurism">
+<!ENTITY quitApplicationCmdMac.label "Quitter Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "Q">
 <!ENTITY quitApplicationCmdWin.label "Quitter">
-<!ENTITY recursiveCollections.label "Afficher les documents des sous-collections">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Rétablir">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "Tout sélectionner">
 <!ENTITY servicesMenuMac.label "Services">
 <!ENTITY showAllAppsCmdMac.label "Tout afficher">
-<!ENTITY stackedView.label "Affichage emplié">
-<!ENTITY standardView.label "Affichage standard">
-<!ENTITY tagSelector.label "Sélecteur de marqueurs">
 <!ENTITY toolsMenu.accesskey "O">
 <!ENTITY toolsMenu.label "Outils">
 <!ENTITY undoCmd.accesskey "u">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Annuler">
-<!ENTITY viewMenu.label "Affichage">
 <!ENTITY windowMenu.label "Fenêtre">
 <!ENTITY zoomWindow.label "Zoom">

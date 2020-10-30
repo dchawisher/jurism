@@ -3,12 +3,11 @@
 <!ENTITY zotero.preferences.advanced.keys "Atallos">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Cartafol principal:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Cartafol principal de anexos ligados">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism usará rutas relativas para os ficheiros anexos que foran ligados ao cartafol principal. Con isto faise que sexa posible acceder a ficheiros en diferentes computadores sempre e cando a estrutura de ficheiros dentro do cartafol principal se manteña igual.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Juris-M usará rutas relativas para os ficheiros anexos que foran ligados ao cartafol principal. Con isto faise que sexa posible acceder a ficheiros en diferentes computadores sempre e cando a estrutura de ficheiros dentro do cartafol principal se manteña igual.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Volver ás rutas absolutas...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Escoller...">
-<!ENTITY zotero.preferences.autoRecognizeFiles "Obter os metadados dos PDFs de xeito automático">
-<!ENTITY zotero.preferences.autoRenameFiles "Mudarlle o nome aos ficheiros anexos de xeito automático empregando os metadatos dos elementos ligados.">
-<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "Renomear os ficheiros ligados">
+<!ENTITY zotero.preferences.autoRecognizeFiles "Automatically retrieve metadata for PDFs">
+<!ENTITY zotero.preferences.autoRenameFiles "Automatically rename attachment files using parent metadata">
 <!ENTITY zotero.preferences.autoUpdate "Comprobar de xeito automático a actualización de tradutores e estilos">
 <!ENTITY zotero.preferences.automaticSnapshots "Cando se crean elementos a partir de páxinas web facer capturas automaticamente">
 <!ENTITY zotero.preferences.automaticTags "Etiquetar automaticamente os elementos con palabras clave e epígrafes temáticos">
@@ -28,7 +27,7 @@
 <!ENTITY zotero.preferences.cite.wordProcessors.noWordProcessorPluginsInstalled "Non hai engadidos de edición de texto instalados agora mesmo">
 <!ENTITY zotero.preferences.cite.wordProcessors.useClassicAddCitationDialog "Empregar a caixa de diálogo clásica para engadir citas">
 <!ENTITY zotero.preferences.configEditor "Editor de configuración">
-<!ENTITY zotero.preferences.custom "Personalizado...">
+<!ENTITY zotero.preferences.custom "Custom…">
 <!ENTITY zotero.preferences.dataDir "Localización do cartafol de almacenamento">
 <!ENTITY zotero.preferences.dataDir.choose "Escoller...">
 <!ENTITY zotero.preferences.dataDir.custom "Personalizado:">
@@ -45,13 +44,13 @@
 <!ENTITY zotero.preferences.debugOutputLogging.clearOutput "Borrar a saída">
 <!ENTITY zotero.preferences.debugOutputLogging.enableAfterRestart "Activar despois de reiniciar">
 <!ENTITY zotero.preferences.debugOutputLogging.linesLogged "liñas rexistradas">
-<!ENTITY zotero.preferences.debugOutputLogging.message "A saída de depuración pode axudar aos desenvolvedores de Jurism a identificar erros. A proceso de depuración desacelera Jurism de xeito que, en xeral, sóese deixar desactivada agás que un desenvolvedor lle solicite a saída de depuración.">
-<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Enviar ao servidor de Jurism">
+<!ENTITY zotero.preferences.debugOutputLogging.message "A saída de depuración pode axudar aos desenvolvedores de Juris-M a identificar erros. A proceso de depuración desacelera Juris-M de xeito que, en xeral, sóese deixar desactivada agás que un desenvolvedor lle solicite a saída de depuración.">
+<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Enviar ao servidor de Juris-M">
 <!ENTITY zotero.preferences.debugOutputLogging.viewOutput "Ver a saída">
 <!ENTITY zotero.preferences.default "Por defecto:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Anexar automaticamente os PDFs e outros ficheiros asociados ao gardar os elementos">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Incluír as URL dos artigos nas referencias">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Cando esta opción está desactivada, Jurism só inclúe os URL cando se citan publicacións, revistas ou artigos de prensa que non teñen especificado un rango de páxinas.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Cando esta opción está desactivada, Juris-M só inclúe os URL cando se citan publicacións, revistas ou artigos de prensa que non teñen especificado un rango de páxinas.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Obter máis estilos...">
@@ -60,9 +59,9 @@
 <!ENTITY zotero.preferences.feeds.sorting.label "Ordenar por:">
 <!ENTITY zotero.preferences.feeds.sorting.newest "as máis novas primeiro">
 <!ENTITY zotero.preferences.feeds.sorting.oldest "as máis antigas primeiro">
-<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "Abrir os PDFs con">
-<!ENTITY zotero.preferences.fileHandler.systemDefault "Predefinido no sistema">
-<!ENTITY zotero.preferences.fileHandling "Xestión de ficheiros">
+<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "Open PDFs using">
+<!ENTITY zotero.preferences.fileHandler.systemDefault "System Default">
+<!ENTITY zotero.preferences.fileHandling "File Handling">
 <!ENTITY zotero.preferences.fontSize "Tamaño da tipografía:">
 <!ENTITY zotero.preferences.fontSize.large "Grande">
 <!ENTITY zotero.preferences.fontSize.medium "Mediana">
@@ -86,10 +85,10 @@
 <!ENTITY zotero.preferences.keys.library "Biblioteca">
 <!ENTITY zotero.preferences.keys.newItem "Crear un novo elemento">
 <!ENTITY zotero.preferences.keys.newNote "Crear unha nova nota">
-<!ENTITY zotero.preferences.keys.openZotero "Abrir/Pechar o panel de Zotero">
+<!ENTITY zotero.preferences.keys.openZotero "Abrir/Pechar o panel de Juris-M">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Tratar de anular os accesos directos en conflito">
 <!ENTITY zotero.preferences.keys.quicksearch "Busca rápida">
-<!ENTITY zotero.preferences.keys.saveToZotero "Gardar en Jurism (icona na barra de direccións)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Gardar en Juris-M (icona na barra de direccións)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Marcar todas as novas como lidas/sen ler">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Cambiar ao modo de pantalla completa">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Alternar o selector de etiquetas">
@@ -126,7 +125,7 @@
 <!ENTITY zotero.preferences.layout "Interface:">
 <!ENTITY zotero.preferences.layout.stacked "Acumulada">
 <!ENTITY zotero.preferences.layout.standard "Estándar">
-<!ENTITY zotero.preferences.locate.addDescription "Para engadir un motor de busca que non estea na lista, visita a páxina do motor de busca no navegador e prémelle a &quot;engadir&quot; no menú local de Jurism.">
+<!ENTITY zotero.preferences.locate.addDescription "Para engadir un motor de busca que non estea na lista, visita a páxina do motor de busca no navegador e prémelle a &quot;engadir&quot; no menú local de Juris-M.">
 <!ENTITY zotero.preferences.locate.description "Descrición">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Xestor do motor de busca de artigos">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Un motor de busca que aporta a capacidade de localizar no panel de información. Activando o motor de busca na lista de abaixo engádense á lista desagregable e pódense empregar para localizar recursos da súa biblioteca na web.">
@@ -142,7 +141,7 @@
 <!ENTITY zotero.preferences.openurl.search "Busca de solucións">
 <!ENTITY zotero.preferences.openurl.server "Buscador de solucións:">
 <!ENTITY zotero.preferences.openurl.version "Versión:">
-<!ENTITY zotero.preferences.parseRISRefer "Usar Jurism para os ficheiros BibTeX/RIS/Refer descargados">
+<!ENTITY zotero.preferences.parseRISRefer "Usar Juris-M para os ficheiros BibTeX/RIS/Refer descargados">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Avanzado">
 <!ENTITY zotero.preferences.prefpane.cite "Cita">
@@ -162,7 +161,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Proxies configurados">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - A ruta do cartafol (por exemplo, about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "para máis información.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism redirixe con transparencia as solicitudes a través dos proxies gardados. Vexa a">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Juris-M redirixe con transparencia as solicitudes a través dos proxies gardados. Vexa a">
 <!ENTITY zotero.preferences.proxies.desc_link "documentación de proxy">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Desactivar as redireccións proxy cando o meu dominio conteña">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - O nome do ficheiro (por exemplo, index.html)">
@@ -181,7 +180,7 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "Formato de saída por defecto:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "Desactivar a copia rápida cando se arrastran máis de">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "Nota: o formato de texto enriquecido perderase en Mac OS X.">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "Dominio/Ruta">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(p.ex. trasno.gal)">
@@ -198,7 +197,7 @@
 <!ENTITY zotero.preferences.search.indexStats.words "Palabras:">
 <!ENTITY zotero.preferences.search.pdfIndexing "Indexación de PDF">
 <!ENTITY zotero.preferences.settings "Configuracións">
-<!ENTITY zotero.preferences.showIn "Cargar Jurism en:">
+<!ENTITY zotero.preferences.showIn "Cargar Juris-M en:">
 <!ENTITY zotero.preferences.showIn.appTab "Lapela de aplicativos">
 <!ENTITY zotero.preferences.showIn.browserPane "Panel do navegador">
 <!ENTITY zotero.preferences.showIn.separateTab "Lapela propia">
@@ -218,7 +217,7 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Ao usar o almacenamento de Zotero estas a aceptar as obrigas establecidas nos seus">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "Termos e Condicións">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
-<!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verificar o servidor">
+<!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
 <!ENTITY zotero.preferences.sync.librariesToSync "Bibliotecas sincronizadas">
 <!ENTITY zotero.preferences.sync.librariesToSync.button "Escoller as librarías...">
 <!ENTITY zotero.preferences.sync.librariesToSync.library "Biblioteca">
@@ -231,155 +230,26 @@
 <!ENTITY zotero.preferences.sync.reset.fullSync.desc "Xunguir os datos locais cos datos do servidor, esquecéndose do historial de sincronización.">
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory "Reiniciar o historial de sincronización de datos">
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory.desc "Xunguir os datos locais cos datos do servidor, esquecéndose do historial de sincronización.">
-<<<<<<< HEAD
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Reiniciar o historial de sincronización de ficheiros">
-<!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Comparar todos os ficheiros anexos co servizo de almacenamento">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restaurar a partir da librería en liña">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Sobreescribir a librería local de Jurism cos datos da libraría en liña.">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "Replace Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Sobreescribir a librería en liña cos datos locais de Jurism">
+<!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compare all attachment files with the storage service">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restore from Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Juris-M data with data from the online library.">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Restore to Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Juris-M data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "As seguintes operacións só son útiles en casos especiais ou específicos e non deberían ser usadas para arranxar problemas habituais. En moitos dos casos o reinicio da configuración causa problemas a maiores. Vexa">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Opcións de reinicio de sincronización">
 <!ENTITY zotero.preferences.sync.reset.warning3 "para máis información.">
 <!ENTITY zotero.preferences.sync.setUpSync "Configurar a sincronización">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Sincronización automática">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sincronizar o contido completo">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism pode sincronizar todo o contido dos ficheiros das librerías de Jurism empregando zotero.org e outros dispositivos ligados. Con iso, permítelle o acceso aos ficheiros estea onde estea. Os contidos completos non se han compartir de xeito público.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Juris-M pode sincronizar todo o contido dos ficheiros das librerías de Juris-M empregando zotero.org e outros dispositivos ligados. Con iso, permítelle o acceso aos ficheiros estea onde estea. Os contidos completos non se han compartir de xeito público.">
 <!ENTITY zotero.preferences.sync.syncServer "Sincronización de datos">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Desvencellar a conta...">
 <!ENTITY zotero.preferences.sync.username "Usuario:">
-<!ENTITY zotero.preferences.title "Preferencias de Jurism">
+<!ENTITY zotero.preferences.title "Preferencias de Juris-M">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "días">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Eliminar automaticamente os elementos que leven no lixo máis de">
 <!ENTITY zotero.preferences.updateNow "Actualizar agora">
 <!ENTITY zotero.preferences.userInterface "Interface de usuario">
 <!ENTITY zotero.preferences.zoteroDotOrgVersionHeader "Permitir que zotero.org personalice o contido baseándose na versión actual">
-<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader.tooltip "Se está activado, a versión actual de Zotero será engadida ás solicitudes HTTP feitas a zotero.org.">
-=======
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restaurar a partir da librería en liña">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Sobrescribir a librería local de Zotero cos datos da libraría en liña.">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "Substituír a librería en liña">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Sobrescribir a librería en liña cos datos locais de Zotero">
-<!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Reiniciar o historial de sincronización de ficheiros">
-<!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Comparar todos os ficheiros anexos co servizo de almacenamento">
-<!ENTITY zotero.preferences.sync.reset "Reiniciar">
-<!ENTITY zotero.preferences.sync.reset.button "Reiniciar">
-
-
-<!ENTITY zotero.preferences.prefpane.search "Busca">
-<!ENTITY zotero.preferences.search.fulltextCache "Caché de texto completo">
-<!ENTITY zotero.preferences.search.indexStats "Estadísticas do índice">
-
-<!ENTITY zotero.preferences.search.indexStats.indexed "Indexado:">
-<!ENTITY zotero.preferences.search.indexStats.partial "Parcial:">
-<!ENTITY zotero.preferences.search.indexStats.unindexed "Non indexado:">
-<!ENTITY zotero.preferences.search.indexStats.words "Palabras:">
-
-<!ENTITY zotero.preferences.fulltext.textMaxLength "Número máximo de caracteres a indexar por ficheiro:">
-<!ENTITY zotero.preferences.fulltext.pdfMaxPages "Número máximo de páxinas a indexar por ficheiro:">
-
-<!ENTITY zotero.preferences.prefpane.export "Exportar">
-
-<!ENTITY zotero.preferences.citationOptions.caption "Opcións de cita">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Incluír as URL dos artigos nas referencias">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Cando esta opción está desactivada, Zotero só inclúe os URL cando se citan publicacións, revistas ou artigos de prensa que non teñen especificado un rango de páxinas.">
-
-<!ENTITY zotero.preferences.quickCopy.caption "Copia rápida">
-<!ENTITY zotero.preferences.quickCopy.defaultFormat "Formato predefinido:">
-<!ENTITY zotero.preferences.quickCopy.copyAsHTML "Copiar como HTML">
-<!ENTITY zotero.preferences.quickCopy.siteEditor.setings "Axustes específicos do sitio:">
-<!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "Dominio/Ruta">
-<!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(p.ex. trasno.gal)">
-<!ENTITY zotero.preferences.quickCopy.siteEditor.format "Formato">
-<!ENTITY zotero.preferences.quickCopy.siteEditor.locale "Lingua">
-<!ENTITY zotero.preferences.quickCopy.dragLimit "Desactivar a copia rápida cando se arrastran máis de">
-
-<!ENTITY zotero.preferences.prefpane.cite "Cita">
-<!ENTITY zotero.preferences.cite.styles "Estilo">
-<!ENTITY zotero.preferences.cite.wordProcessors "Procesadores de texto">
-<!ENTITY zotero.preferences.cite.wordProcessors.useClassicAddCitationDialog "Empregar a caixa de diálogo clásica para engadir citas">
-<!ENTITY zotero.preferences.styleEditor "Editor de estilos">
-<!ENTITY zotero.preferences.stylePreview "Visor de estilos">
-
-<!ENTITY zotero.preferences.cite.styles.styleManager "Xestor de estilos">
-<!ENTITY zotero.preferences.cite.styles.styleManager.title "Título">
-<!ENTITY zotero.preferences.cite.styles.styleManager.updated "Actualizado">
-<!ENTITY zotero.preferences.cite.styles.styleManager.csl "CSL">
-<!ENTITY zotero.preferences.export.getAdditionalStyles "Obter máis estilos...">
-
-<!ENTITY zotero.preferences.keys.saveToZotero "Gardar en Zotero (icona na barra de direccións)">
-<!ENTITY zotero.preferences.keys.toggleFullscreen "Cambiar ao modo de pantalla completa">
-<!ENTITY zotero.preferences.keys.focusLibrariesPane "Foco no panel de bibliotecas">
-<!ENTITY zotero.preferences.keys.quicksearch "Busca rápida">
-<!ENTITY zotero.preferences.keys.newItem "Crear un novo elemento">
-<!ENTITY zotero.preferences.keys.newNote "Crear unha nova nota">
-<!ENTITY zotero.preferences.keys.toggleAllRead "Marcar todas as novas como lidas/sen ler">
-<!ENTITY zotero.preferences.keys.toggleTagSelector "Alternar o selector de etiquetas">
-<!ENTITY zotero.preferences.keys.copySelectedItemCitationsToClipboard "Copiar as citas do elemento seleccionado ao portaretallos">
-<!ENTITY zotero.preferences.keys.copySelectedItemsToClipboard "Copiar os elementos seleccionados ao portaretallos">
-<!ENTITY zotero.preferences.keys.importFromClipboard "Importar do portaretallos">
-<!ENTITY zotero.preferences.keys.changesTakeEffect "Os cambios veranse despois de reiniciar">
-
-<!ENTITY zotero.preferences.prefpane.proxies "Proxies">
-
-<!ENTITY zotero.preferences.proxies.proxyOptions "Opcións de Proxy">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero redirixe con transparencia as solicitudes a través dos proxies gardados. Vexa a">
-<!ENTITY zotero.preferences.proxies.desc_link "documentación de proxy">
-<!ENTITY zotero.preferences.proxies.desc_after_link "para máis información.">
-<!ENTITY zotero.preferences.proxies.transparent "Activar a redirección por proxy">
-<!ENTITY zotero.preferences.proxies.autoRecognize "Recoñecer automaticamente os recursos en proxy">
-<!ENTITY zotero.preferences.proxies.showRedirectNotification "Mostrar unha notificación cando se redirixa cara a unha proxy">
-<!ENTITY zotero.preferences.proxies.disableByDomain "Desactivar as redireccións proxy cando o meu dominio conteña">
-<!ENTITY zotero.preferences.proxies.configured "Proxies configurados">
-<!ENTITY zotero.preferences.proxies.hostname "Hostname">
-<!ENTITY zotero.preferences.proxies.scheme "Esquema">
-
-<!ENTITY zotero.preferences.proxies.multiSite "Multi-sitio">
-<!ENTITY zotero.preferences.proxies.autoAssociate "Asociar automaticamente novos hosts">
-<!ENTITY zotero.preferences.proxies.variables "Pode usar as seguintes variables no seu esquema de proxy:">
-<!ENTITY zotero.preferences.proxies.h_variable "&#37;h - O nome do host do sitio a través do proxy (por exemplo, www.zotero.org)">
-<!ENTITY zotero.preferences.proxies.p_variable "&#37;p - A ruta da páxina a través do proxy excluíndo a barra á esquerda (slash) (por exemplo, about/index.html)">
-<!ENTITY zotero.preferences.proxies.d_variable "&#37;d - A ruta do cartafol (por exemplo, about/)">
-<!ENTITY zotero.preferences.proxies.f_variable "&#37;f - O nome do ficheiro (por exemplo, index.html)">
-<!ENTITY zotero.preferences.proxies.a_variable "&#37;a - Calquera cadea">
-
-<!ENTITY zotero.preferences.prefpane.advanced "Avanzado">
-<!ENTITY zotero.preferences.advanced.filesAndFolders "Ficheiros e cartafoles">
-<!ENTITY zotero.preferences.advanced.keys "Atallos">
-
-<!ENTITY zotero.preferences.advanced.advancedConfiguration "Configuración avanzada">
-
-<!ENTITY zotero.preferences.prefpane.locate "Localizador">
-<!ENTITY zotero.preferences.locate.locateEngineManager "Xestor do motor de busca de artigos">
-<!ENTITY zotero.preferences.locate.description "Descrición">
-<!ENTITY zotero.preferences.locate.name "Nome">
-<!ENTITY zotero.preferences.locate.locateEnginedescription "Un motor de busca que aporta a capacidade de localizar no panel de información. Activando o motor de busca na lista de abaixo engádense á lista desagregable e pódense empregar para localizar recursos da súa biblioteca na web.">
-<!ENTITY zotero.preferences.locate.addDescription "Para engadir un motor de busca que non estea na lista, visita a páxina do motor de busca no navegador e prémelle a &quot;engadir&quot; no menú local de Zotero.">
-<!ENTITY zotero.preferences.locate.restoreDefaults "Restablecer os valores por defecto">
-
-<!ENTITY zotero.preferences.charset "Codificación de caracteres">
-<!ENTITY zotero.preferences.charset.importCharset "Importación a codificación de caracteres">
-<!ENTITY zotero.preferences.charset.displayExportOption "Mostrar a opción de codificación de caracteres na exportación">
-
-<!ENTITY zotero.preferences.dataDir "Localización do cartafol de almacenamento">
-<!ENTITY zotero.preferences.dataDir.useProfile "Usar o cartafol de perfís">
-<!ENTITY zotero.preferences.dataDir.custom "Personalizado:">
-<!ENTITY zotero.preferences.dataDir.choose "Escoller...">
-<!ENTITY zotero.preferences.dataDir.viaCommandLine "(especificado coa liña de comandos)">
-<!ENTITY zotero.preferences.dataDir.reveal "Mostrar o cartafol de datos">
-<!ENTITY zotero.preferences.dataDir.migrate "Migrar ao novo aloxamento....">
-
-<!ENTITY zotero.preferences.attachmentBaseDir.caption "Cartafol principal de anexos ligados">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero usará rutas relativas para os ficheiros anexos que foran ligados ao cartafol principal. Con isto faise que sexa posible acceder a ficheiros en diferentes computadores sempre e cando a estrutura de ficheiros dentro do cartafol principal se manteña igual.">
-<!ENTITY zotero.preferences.attachmentBaseDir.basePath "Cartafol principal:">
-<!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Escoller...">
-<!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Volver ás rutas absolutas...">
-
-<!ENTITY zotero.preferences.dbMaintenance "Mantemento da base de datos">
-<!ENTITY zotero.preferences.dbMaintenance.integrityCheck "Comprobar a integridade da base de datos">
-<!ENTITY zotero.preferences.dbMaintenance.resetTranslatorsAndStyles "Recuperar tradutores e estilos">
-<!ENTITY zotero.preferences.dbMaintenance.resetTranslators "Recuperar tradutores...">
-<!ENTITY zotero.preferences.dbMaintenance.resetStyles "Recuperar os estilos">
-
-<!ENTITY zotero.preferences.configEditor "Editor de configuración">
->>>>>>> d16512c84f8a9948362890f1242324e3d4005da6
+<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader.tooltip "Se está activado, a versión actual de Juris-M será engadida ás solicitudes HTTP feitas a zotero.org.">

@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "Z">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Zapri">
-<!ENTITY collectionsPane.label "Podokno zbirk">
-<!ENTITY convertToStored.label "Pretvori povezane datoteke v shranjene datoteke ...">
 <!ENTITY copyBibliographyCmd.label "Kopiraj bibliografijo">
 <!ENTITY copyCitationCmd.label "Kopiraj citat">
 <!ENTITY copyCmd.accesskey "K">
@@ -29,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "b">
 <!ENTITY deleteCmd.key "b">
 <!ENTITY deleteCmd.label "Izbriši">
-<!ENTITY developer.label "Razvijalec">
 <!ENTITY editMenu.accesskey "R">
 <!ENTITY editMenu.label "Uredi">
 <!ENTITY fileMenu.accesskey "D">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Velikost pisave">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -84,12 +80,8 @@
 <!ENTITY importFromClipboardCmd.label "Uvozi z odložišča">
 <!ENTITY installConnector.accesskey "K">
 <!ENTITY installConnector.label "Namesti konektor za brskalnik">
-<!ENTITY itemPane.label "Podokno vnosa">
-<!ENTITY layout.label "Postavitev">
-<!ENTITY manageAttachments.label "Upravljaj priponke">
 <!ENTITY minimizeWindow.key "k">
 <!ENTITY minimizeWindow.label "Skrči">
-<!ENTITY noteFontSize.label "Velikost pisave opomb">
 <!ENTITY pageSetupCmd.accesskey "r">
 <!ENTITY pageSetupCmd.label "Priprava strani ...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -112,7 +104,6 @@
 <!ENTITY quitApplicationCmdMac.label "Izhod iz Zotera">
 <!ENTITY quitApplicationCmdWin.accesskey "h">
 <!ENTITY quitApplicationCmdWin.label "Izhod">
-<!ENTITY recursiveCollections.label "Pokaži vnose v podzbirkah">
 <!ENTITY redoCmd.accesskey "P">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Ponovi">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "Izberi vse">
 <!ENTITY servicesMenuMac.label "Storitve">
 <!ENTITY showAllAppsCmdMac.label "Pokaži vse">
-<!ENTITY stackedView.label "Naloženi pogled">
-<!ENTITY standardView.label "Navadni pogled">
-<!ENTITY tagSelector.label "Izbirnik značk">
 <!ENTITY toolsMenu.accesskey "d">
 <!ENTITY toolsMenu.label "Orodja">
 <!ENTITY undoCmd.accesskey "R">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Razveljavi">
-<!ENTITY viewMenu.label "Pogled">
 <!ENTITY windowMenu.label "Okno">
 <!ENTITY zoomWindow.label "Povečava">

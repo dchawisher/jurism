@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Cerrar">
-<!ENTITY collectionsPane.label "Panel de colecciones">
-<!ENTITY convertToStored.label "Convertir archivos enlazados a archivos guardados...">
 <!ENTITY copyBibliographyCmd.label "Copiar bibliografía">
 <!ENTITY copyCitationCmd.label "Copiar cita">
 <!ENTITY copyCmd.accesskey "C">
@@ -22,14 +20,13 @@
 <!ENTITY cutCmd.label "Cortar">
 <!ENTITY debugOutputLogging.accesskey "L">
 <!ENTITY debugOutputLogging.clear "Limpiar resultados">
-<!ENTITY debugOutputLogging.label "Registro de salida de depuración">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Reiniciar con registro habilitado...">
+<!ENTITY debugOutputLogging.label "Registro de resultados de depuración">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Reiniciar con Registro Deshabilitado...">
 <!ENTITY debugOutputLogging.submit "Enviar resultados">
 <!ENTITY debugOutputLogging.view "Ver resultados">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Borrar">
-<!ENTITY developer.label "Desarrollador">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Editar">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Tamaño de fuente">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -74,7 +70,7 @@
 <!ENTITY helpReportErrors.accesskey "R">
 <!ENTITY helpReportErrors.label "Informa de errores...">
 <!ENTITY helpTroubleshootingInfo.accesskey "T">
-<!ENTITY helpTroubleshootingInfo.label "Información sobre resolución de problemas">
+<!ENTITY helpTroubleshootingInfo.label "Información de resolución de problemas">
 <!ENTITY hideOtherAppsCmdMac.commandkey "H">
 <!ENTITY hideOtherAppsCmdMac.label "Ocultar otros">
 <!ENTITY hideThisAppCmdMac.commandkey "H">
@@ -84,12 +80,8 @@
 <!ENTITY importFromClipboardCmd.label "Importar desde el portapapeles">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Instalar conector de navegador">
-<!ENTITY itemPane.label "Panel de elementos">
-<!ENTITY layout.label "Composición">
-<!ENTITY manageAttachments.label "Gestionar adjuntos">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimizar">
-<!ENTITY noteFontSize.label "Tamaño de fuente de notas">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Configuración de página…">
 <!ENTITY pasteCmd.accesskey "P">
@@ -101,7 +93,7 @@
 <!ENTITY preferencesCmdMac.label "Preferencias...">
 <!ENTITY preferencesCmdUnix.accesskey "n">
 <!ENTITY preferencesCmdUnix.label "Preferencias">
-<!ENTITY printCmd.accesskey "P">
+<!ENTITY printCmd.accesskey "U">
 <!ENTITY printCmd.key "P">
 <!ENTITY printCmd.label "Imprimir…">
 <!ENTITY productHelp.accesskey "H">
@@ -109,10 +101,9 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Salir">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Salir de Jurism">
+<!ENTITY quitApplicationCmdMac.label "Salir de Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Salida">
-<!ENTITY recursiveCollections.label "Mostrar elementos de subcolecciones">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Rehacer">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "Seleccionar todo">
 <!ENTITY servicesMenuMac.label "Servicios">
 <!ENTITY showAllAppsCmdMac.label "Mostrar todo">
-<!ENTITY stackedView.label "Vista apilada">
-<!ENTITY standardView.label "Vista estándar">
-<!ENTITY tagSelector.label "Selector de etiquetas">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Herramientas">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Deshacer">
-<!ENTITY viewMenu.label "Ver">
 <!ENTITY windowMenu.label "Ventana">
 <!ENTITY zoomWindow.label "Acercar">

@@ -32,7 +32,6 @@
 <!ENTITY zotero.citation.suffix.label "បច្ច័យ:">
 <!ENTITY zotero.citation.suppressAuthor.label "អ្នកនិពន្ធ">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
-<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "បង្ហាញឯកសារមិនទាន់បានតម្កល់ទុក">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "បន្ថែមជម្រើសទៅកាន់កំណត់ចំណាំហ្ស៊ូតេរ៉ូ">
 <!ENTITY zotero.contextMenu.addTextToNewNote "បង្កើតបញ្ជីឯកសារហ្ស៊ូតេរ៉ូ និង កំណត់ចំណាំចេញពីជម្រើស">
@@ -44,12 +43,12 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Select fields to keep from other versions of the item:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Choose the version of the item to use as the master item:">
 <!ENTITY zotero.errorReport.notReviewed "របាយការណ៍អំពីកំហុសមិនត្រូវបានពិនិត្យ លុះត្រាតែឆ្លងកាត់វេទិកានេះ។">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "សូមផ្ញើសារទៅកាន់វេទិកាហ្ស៊ូតេរ៉ូ (forums.zotero.org) ជាមួយនិងអត្ត​លេខរ​បាយការណ៍នេះ ការពណ៌នាបញ្ហា និង ជំហានចាំបាច់នានា ដើម្បី​ផលិត​ឡើងវិញ។">
 <!ENTITY zotero.errorReport.reportID "អត្តលេខរបាយការណ៍:">
 <!ENTITY zotero.errorReport.submissionInProgress "សូមរង់ចាំ ខណៈពេលកំពុងធ្វើរបាយការណ៍អំពីកំហុស។">
 <!ENTITY zotero.errorReport.submitted "កំហុសបានធ្វើរបាយការណ៍រួចហើយ។">
-<!ENTITY zotero.errorReport.title "Jurism Error Report">
-<!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Jurism.">
+<!ENTITY zotero.errorReport.title "Juris-M Error Report">
+<!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "ទ្រង់ទ្រាយ:">
 <!ENTITY zotero.exportOptions.title "នាំចេញ...">
 <!ENTITY zotero.exportOptions.translatorOptions.label "ជម្រើសកូដចម្លង">
@@ -68,7 +67,6 @@
 <!ENTITY zotero.file.choose.label "ជម្រើសឯកសារ...">
 <!ENTITY zotero.file.noneSelected.label "សូមធ្វើការជ្រើសរើសឯកសារណាមួយដែលអ្នកចង់បាន">
 <!ENTITY zotero.general.advancedOptions.label "Advanced Options">
-<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "Cancel">
 <!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "លុបចោល">
@@ -81,24 +79,11 @@
 <!ENTITY zotero.general.note "កំណត់ចំណាំ:">
 <!ENTITY zotero.general.ok "OK">
 <!ENTITY zotero.general.optional "(ជម្រើស)">
-<!ENTITY zotero.general.options "Options">
-<!ENTITY zotero.general.other "Other…">
 <!ENTITY zotero.general.refresh "Refresh">
-<!ENTITY zotero.general.reset "Reset">
 <!ENTITY zotero.general.saveAs "Save As…">
 <!ENTITY zotero.general.selectAll "ជ្រើសរើសទាំងអស់">
-<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Yes">
-<!ENTITY zotero.import "Import">
-<!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
-<!ENTITY zotero.import.database "Database">
-<!ENTITY zotero.import.fileHandling "File Handling">
-<!ENTITY zotero.import.importing "Importing…">
-<!ENTITY zotero.import.lastModified "Last Modified">
-<!ENTITY zotero.import.size "Size">
-<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
-<!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "បន្ថែម ឬ កែតម្រូវអាគតដ្ឋាន">
 <!ENTITY zotero.integration.classicView.label "មើលតាមទម្រង់បុរាណ">
 <!ENTITY zotero.integration.docPrefs.title "ជម្រើសរចនាបថសម្រាប់យោងឯកសារ">
@@ -114,7 +99,6 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "បង្ហាញអាគតដ្ឋានក្នុងទម្រង់ជា:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "លេខយោងចុងអត្ថបទ">
-<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
 <!ENTITY zotero.integration.prefs.footnotes.label "លេខយោងក្រោមអត្ថបទ">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -204,7 +188,7 @@
 <!ENTITY zotero.items.volume_column "Volume">
 <!ENTITY zotero.items.year_column "ឆ្នាំ">
 <!ENTITY zotero.lookup.button.search "Search">
-<!ENTITY zotero.lookup.description "Enter ISBNs, DOIs, PMIDs, or arXiv IDs to add to your library:">
+<!ENTITY zotero.lookup.description "សូមបញ្ចូលអាយអេសប៊ីអិន ឌីអូអាយ ឬ ភីអេមអាយឌី ដើម្បីរកមើលនៅក្នុង​ប្រអប់ខាងក្រោមៈ">
 <!ENTITY zotero.merge.deleted "Deleted">
 <!ENTITY zotero.merge.of "of">
 <!ENTITY zotero.merge.title "Conflict Resolution">
@@ -331,7 +315,7 @@
 <!ENTITY zotero.toolbar.preferences.label "ជម្រើសអាទិភាពផ្សេងៗ...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "លុបឯកសារ...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
+<!ENTITY zotero.toolbar.rtfScan.label "វិភាគអ៊ែរធីអែហ្វ...">
 <!ENTITY zotero.toolbar.supportAndDocumentation "គាំទ្រ និង ឯកសារ">
 <!ENTITY zotero.toolbar.tab.tooltip "បើកពេញអេក្រង់">
 <!ENTITY zotero.toolbar.tagSelector.label "បង្ហាញ/លាក់ជម្រើសស្លាក">
@@ -340,14 +324,14 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "ដើម្បីរកមើលអ្វីដែលថ្មី។">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "សូមមើល">
 <!ENTITY zotero.upgrade.changeLogLink "កំណត់ហេតុផ្លាស់ប្តូរ">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "នេះគឺជាការធ្វើទំនើបកម្មចម្បង។">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "មុនពេលបន្ត">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "ធ្វើឲប្រាកដថា អ្នកបានអាននូវ">
 <!ENTITY zotero.upgrade.majorUpgradeLink "ការណែនាំអំពីទំនើបកម្ម">
 <!ENTITY zotero.upgrade.newVersionInstalled "អ្នកបានដំឡើងហ្ស៊ូតេរ៉ូកំណែថ្មី។">
-<!ENTITY zotero.upgrade.title "Jurism Upgrade Wizard">
+<!ENTITY zotero.upgrade.title "Juris-M Upgrade Wizard">
 <!ENTITY zotero.upgrade.upgradeInProgress "សូមរង់ចាំ ដើម្បីឲដំណើរការទំនើបកម្មបញ្ចប់។​ ដំណើរការនេះអាចចំណាយ​ពេលមួយរយៈខ្លី។">
 <!ENTITY zotero.upgrade.upgradeRequired "អ្នកត្រូវធ្វើទំនើបកម្មទិន្នន័យហ្ស៊ូតេរ៉ូរបស់អ្នកដើម្បីដំណើរការជាមួយកំណែថ្មីនេះ។">
 <!ENTITY zotero.upgrade.upgradeSucceeded "ទិន្នន័យហ្ស៊ូតេរ៉ូរបស់អ្នកបានធ្វើទំនើបកម្មដោយជោគជ័យ។">

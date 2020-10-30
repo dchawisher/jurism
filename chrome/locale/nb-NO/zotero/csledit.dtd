@@ -1,7 +1,3 @@
-<!ENTITY styles.editor "Jurism stilredigerer">
+<!ENTITY styles.editor "Juris-M stilredigerer">
 
-<<<<<<< HEAD
 <!ENTITY styles.editor.citePosition "Sitatposisjon">
-=======
-<!ENTITY styles.editor.citePosition "Plassering av henvisning:">
->>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b

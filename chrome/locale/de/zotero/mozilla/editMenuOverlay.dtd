@@ -1,7 +1,3 @@
-<!-- This Source Code Form is subject to the terms of the Mozilla Public
-   - License, v. 2.0. If a copy of the MPL was not distributed with this
-   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-
 <!ENTITY editMenu.label            "Bearbeiten">
 <!ENTITY editMenu.accesskey        "B">
 <!ENTITY undoCmd.label             "Rückgängig">
@@ -21,9 +17,9 @@
 <!ENTITY pasteCmd.accesskey        "E">
 <!ENTITY deleteCmd.label           "Löschen">
 <!ENTITY deleteCmd.accesskey       "L">
-<!ENTITY selectAllCmd.label        "Alles auswählen">
+<!ENTITY selectAllCmd.label        "Alles markieren">
 <!ENTITY selectAllCmd.key          "A">
-<!ENTITY selectAllCmd.accesskey    "u">
+<!ENTITY selectAllCmd.accesskey    "m">
 <!ENTITY findCmd.label             "Suchen">
 <!ENTITY findCmd.key               "F">
 <!ENTITY findCmd.accesskey         "S">

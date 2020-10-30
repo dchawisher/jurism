@@ -2,7 +2,7 @@
 <!ENTITY zotero.search.date.units.days "dias">
 <!ENTITY zotero.search.date.units.months "meses">
 <!ENTITY zotero.search.date.units.years "anos">
-<!ENTITY zotero.search.includeParentsAndChildren "Incluir itens pais e filhos dos itens correspondentes">
+<!ENTITY zotero.search.includeParentsAndChildren "Incluir itens dos níveis acima e abaixo aos itens correspondentes">
 <!ENTITY zotero.search.joinMode.all "todos os">
 <!ENTITY zotero.search.joinMode.any "qualquer um dos">
 <!ENTITY zotero.search.joinMode.prefix "Corresponder a">

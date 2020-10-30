@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Sulgeda">
-<!ENTITY collectionsPane.label "Collections Pane">
-<!ENTITY convertToStored.label "Convert Linked Files to Stored Files…">
 <!ENTITY copyBibliographyCmd.label "Bibliograafia kopeerimine">
 <!ENTITY copyCitationCmd.label "Viite kopeerimine">
 <!ENTITY copyCmd.accesskey "C">
@@ -29,7 +27,6 @@
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Kustutada">
-<!ENTITY developer.label "Developer">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Toimeta">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Otsida siit…">
-<!ENTITY fontSize.label "Font Size">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Suurendada">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -84,12 +80,8 @@
 <!ENTITY importFromClipboardCmd.label "Import from Clipboard">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Install Browser Connector">
-<!ENTITY itemPane.label "Item Pane">
-<!ENTITY layout.label "Layout">
-<!ENTITY manageAttachments.label "Manage Attachments">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimeerida">
-<!ENTITY noteFontSize.label "Note Font Size">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Lehekülje seaded...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -109,10 +101,9 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Väljuda">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Väljuda Jurismst">
+<!ENTITY quitApplicationCmdMac.label "Väljuda Juris-Mst">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Väljuda">
-<!ENTITY recursiveCollections.label "Show Items from Subcollections">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Teha uuesti">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "Valida kõik">
 <!ENTITY servicesMenuMac.label "Teenused">
 <!ENTITY showAllAppsCmdMac.label "Näidata kõiki">
-<!ENTITY stackedView.label "Stacked View">
-<!ENTITY standardView.label "Standard View">
-<!ENTITY tagSelector.label "Tag Selector">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Tööriistad">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Taastada">
-<!ENTITY viewMenu.label "View">
 <!ENTITY windowMenu.label "Aken">
 <!ENTITY zoomWindow.label "Suurenda">

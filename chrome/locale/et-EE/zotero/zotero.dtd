@@ -32,24 +32,23 @@
 <!ENTITY zotero.citation.suffix.label "Sufiks:">
 <!ENTITY zotero.citation.suppressAuthor.label "Peida autor">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
-<!ENTITY zotero.collections.showRetractedItems "Show Retracted Items">
 <!ENTITY zotero.collections.showUnfiledItems "Teemata kirjed">
-<!ENTITY zotero.contextMenu.addTextToCurrentNote "Lisada valitud tekst Jurism märkusele">
-<!ENTITY zotero.contextMenu.addTextToNewNote "Luua valikust Jurism kirje ja märkus">
-<!ENTITY zotero.contextMenu.saveImageAsItem "Salvestada pilt Jurism kirjena">
-<!ENTITY zotero.contextMenu.saveLinkAsItem "Salvestada link Jurism kirjena">
-<!ENTITY zotero.downloadManager.label "Jurismsse salvestamine">
-<!ENTITY zotero.downloadManager.noPDFTools.description "Selle funktsiooni kasutamiseks on kõigepealt tarvis paigaldada PDF tööriistad Jurism seadetes.">
+<!ENTITY zotero.contextMenu.addTextToCurrentNote "Lisada valitud tekst Juris-M märkusele">
+<!ENTITY zotero.contextMenu.addTextToNewNote "Luua valikust Juris-M kirje ja märkus">
+<!ENTITY zotero.contextMenu.saveImageAsItem "Salvestada pilt Juris-M kirjena">
+<!ENTITY zotero.contextMenu.saveLinkAsItem "Salvestada link Juris-M kirjena">
+<!ENTITY zotero.downloadManager.label "Juris-Msse salvestamine">
+<!ENTITY zotero.downloadManager.noPDFTools.description "Selle funktsiooni kasutamiseks on kõigepealt tarvis paigaldada PDF tööriistad Juris-M seadetes.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Valitud raamatukokku ei ole võimalik manuseid salvestada. See kirje salvestatakse teie isiklikku raamatukokku.">
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Valida väljad, mida säilitada teistest versioonidest:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Palun valida aluskirje, millele liidetakse teise kirje andmed:">
 <!ENTITY zotero.errorReport.notReviewed "Veateadetega, millest ei ole foorumites teada antud, üldjuhul ei tegeleta.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "Palun postitage teade foorumisse (forums.zotero.org) koos veateate ID-ga ja kirjeldusega, millistel asjaoludel probleem esineb ning mis seda iseloomustab.">
 <!ENTITY zotero.errorReport.reportID "Veateate ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "Palun oodake kuni veateadet saadetakse.">
 <!ENTITY zotero.errorReport.submitted "Teie veateade on saadetud.">
-<!ENTITY zotero.errorReport.title "Jurism vearaport">
-<!ENTITY zotero.errorReport.unrelatedMessages "Vealogi võib sisaldada teateid, mis ei puutu Jurismsse.">
+<!ENTITY zotero.errorReport.title "Juris-M vearaport">
+<!ENTITY zotero.errorReport.unrelatedMessages "Vealogi võib sisaldada teateid, mis ei puutu Juris-Msse.">
 <!ENTITY zotero.exportOptions.format.label "Formaat:">
 <!ENTITY zotero.exportOptions.title "Eksport...">
 <!ENTITY zotero.exportOptions.translatorOptions.label "Tõlkija seaded">
@@ -68,7 +67,6 @@
 <!ENTITY zotero.file.choose.label "Faili valimine...">
 <!ENTITY zotero.file.noneSelected.label "Faili ei ole valitud">
 <!ENTITY zotero.general.advancedOptions.label "Advanced Options">
-<!ENTITY zotero.general.bigger "Bigger">
 <!ENTITY zotero.general.cancel "Tühistada">
 <!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "Kustutada">
@@ -81,24 +79,11 @@
 <!ENTITY zotero.general.note "Märkus:">
 <!ENTITY zotero.general.ok "OK">
 <!ENTITY zotero.general.optional "(Valikuline)">
-<!ENTITY zotero.general.options "Options">
-<!ENTITY zotero.general.other "Other…">
 <!ENTITY zotero.general.refresh "Värskenda">
-<!ENTITY zotero.general.reset "Reset">
 <!ENTITY zotero.general.saveAs "Salvestada kui...">
 <!ENTITY zotero.general.selectAll "Valida kõik">
-<!ENTITY zotero.general.smaller "Smaller">
 <!ENTITY zotero.general.tools "Tools">
 <!ENTITY zotero.general.yes "Yes">
-<!ENTITY zotero.import "Import">
-<!ENTITY zotero.import.createCollection "Place imported collections and items into new collection">
-<!ENTITY zotero.import.database "Database">
-<!ENTITY zotero.import.fileHandling "File Handling">
-<!ENTITY zotero.import.importing "Importing…">
-<!ENTITY zotero.import.lastModified "Last Modified">
-<!ENTITY zotero.import.size "Size">
-<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
-<!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "Lisa/toimeta viidet">
 <!ENTITY zotero.integration.classicView.label "Tavaline vaade">
 <!ENTITY zotero.integration.docPrefs.title "Dokumendi sätted">
@@ -114,7 +99,6 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "Näidata viiteid:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "Lõppmärkustena">
-<!ENTITY zotero.integration.prefs.exportDocument "Switch to a Different Word Processor…">
 <!ENTITY zotero.integration.prefs.footnotes.label "Joonealustena">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -133,7 +117,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "Viidete salvestamine dokumendi sisse suurendab veidi failisuurust, kuid võimaldab teil seda dokumenti teiste Zotero kasutajatega jagada ilma Zotero gruppi kasutamata. Et sellist dokumenti redigeerida on vajalik Jurism 3.0 või hilisem verisoon.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "Viidete salvestamine dokumendi sisse suurendab veidi failisuurust, kuid võimaldab teil seda dokumenti teiste Juris-M kasutajatega jagada ilma Juris-M gruppi kasutamata. Et sellist dokumenti redigeerida on vajalik Juris-M 3.0 või hilisem verisoon.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "Säilita viited dokumendiga koos">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -204,7 +188,7 @@
 <!ENTITY zotero.items.volume_column "Köide">
 <!ENTITY zotero.items.year_column "Aasta">
 <!ENTITY zotero.lookup.button.search "Otsing">
-<!ENTITY zotero.lookup.description "Enter ISBNs, DOIs, PMIDs, or arXiv IDs to add to your library:">
+<!ENTITY zotero.lookup.description "Sisestada otsitava ISBN, DOI või PMID allolevasse lahtrisse.">
 <!ENTITY zotero.merge.deleted "Kustututatud">
 <!ENTITY zotero.merge.of " ">
 <!ENTITY zotero.merge.title "Konflikti lahendamine">
@@ -229,20 +213,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Ebamäärased viited">
 <!ENTITY zotero.rtfScan.cancel.label "Tühistada">
 <!ENTITY zotero.rtfScan.citation.label "Viide">
-<!ENTITY zotero.rtfScan.citationsPage.description "Et kindlaks teha, kas Jurism sorteeris kirjed õigesti, palun kontrollida tuvastatud viidete nimekirja. Kõik paigutamata või ebamäärastest viidetest tulenevad probleemid peaks enne järgmist sammu lahendama.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Et kindlaks teha, kas Juris-M sorteeris kirjed õigesti, palun kontrollida tuvastatud viidete nimekirja. Kõik paigutamata või ebamäärastest viidetest tulenevad probleemid peaks enne järgmist sammu lahendama.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Viitekirjete kontroll">
 <!ENTITY zotero.rtfScan.completePage.description "Dokument on töödeldud. Palun kontrollida formateeringut.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF otsing lõppenud">
-<!ENTITY zotero.rtfScan.formatPage.description "Jurism töötleb RTF dokumenti. Palun kannatust.">
+<!ENTITY zotero.rtfScan.formatPage.description "Juris-M töötleb RTF dokumenti. Palun kannatust.">
 <!ENTITY zotero.rtfScan.formatPage.label "Viidete formateering">
 <!ENTITY zotero.rtfScan.inputFile.label "Sisendfail">
-<!ENTITY zotero.rtfScan.introPage.description "Jurism suudab automaatselt RTF failidest viiteid lugeda ja ümber formateerida ja ka neisse bibliograafiat salvestada. Alustamiseks valige allpool RTF fail.">
+<!ENTITY zotero.rtfScan.introPage.description "Juris-M suudab automaatselt RTF failidest viiteid lugeda ja ümber formateerida ja ka neisse bibliograafiat salvestada. Alustamiseks valige allpool RTF fail.">
 <!ENTITY zotero.rtfScan.introPage.description2 "Alustamiseks valige allpool RTF sisend ja väljundfail:">
 <!ENTITY zotero.rtfScan.introPage.label "Sissejuhatus">
 <!ENTITY zotero.rtfScan.itemName.label "Kirje nimi">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Paigutatud viited">
 <!ENTITY zotero.rtfScan.outputFile.label "Väljundfail">
-<!ENTITY zotero.rtfScan.scanPage.description "Jurism otsib dokumendist viiteid. Palun kannatust.">
+<!ENTITY zotero.rtfScan.scanPage.description "Juris-M otsib dokumendist viiteid. Palun kannatust.">
 <!ENTITY zotero.rtfScan.scanPage.label "Viidete otsimine">
 <!ENTITY zotero.rtfScan.stylePage.label "Dokumendi formateering">
 <!ENTITY zotero.rtfScan.title "RTF Skänn">
@@ -251,11 +235,11 @@
 <!ENTITY zotero.selectitems.intro.label "Valida millised kirjeid soovite lisada raamatukokku">
 <!ENTITY zotero.selectitems.select.label "OK">
 <!ENTITY zotero.selectitems.title "Kirjete valimine">
-<!ENTITY zotero.sync.button "Zotero serveriga sünkroniseerimine">
+<!ENTITY zotero.sync.button "Juris-M serveriga sünkroniseerimine">
 <!ENTITY zotero.sync.error "Sünkroniseerimisviga">
 <!ENTITY zotero.sync.longTagFixer.character "märgi juurest">
 <!ENTITY zotero.sync.longTagFixer.characters "märkide juurest">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Järgnev lipik Jurism raamatukogus on liiga pikk selleks, et seda sünkroniseerida:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Järgnev lipik Juris-M raamatukogus on liiga pikk selleks, et seda sünkroniseerida:">
 <!ENTITY zotero.sync.longTagFixer.split "Jagada">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Jagada">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Võite selle lipiku jagada mitmeks lipikuks, lühendada seda käsitsi või selle hoopis kustutada.">
@@ -288,7 +272,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Lipiku ümbernimetamine...">
 <!ENTITY zotero.tagSelector.selectVisible "Valida nähtav">
 <!ENTITY zotero.tagSelector.showAutomatic "Automaatselt näidata">
-<!ENTITY zotero.toolbar.about.label "Jurism kohta">
+<!ENTITY zotero.toolbar.about.label "Juris-M kohta">
 <!ENTITY zotero.toolbar.actions.label "Tegevused">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -331,7 +315,7 @@
 <!ENTITY zotero.toolbar.preferences.label "Eelistused...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "Kirje eemaldamine...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF Scan">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF otsing...">
 <!ENTITY zotero.toolbar.supportAndDocumentation "Abi ja dokumentatsioon">
 <!ENTITY zotero.toolbar.tab.tooltip "Juris-M brauseri kaardil">
 <!ENTITY zotero.toolbar.tagSelector.label "Lipikusirvija olek">
@@ -340,14 +324,14 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "nimekirjas.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "Programmis tehtud uuendused on">
 <!ENTITY zotero.upgrade.changeLogLink "muudatuste">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "Tegemist on olulise uuendusega.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "kirjeldusega.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Enne jätkamist palun tutvuge kindlasti">
 <!ENTITY zotero.upgrade.majorUpgradeLink "uuenduste">
-<!ENTITY zotero.upgrade.newVersionInstalled "Paigaldasite uue Jurism versiooni.">
-<!ENTITY zotero.upgrade.title "Jurism uuendamishaldur">
+<!ENTITY zotero.upgrade.newVersionInstalled "Paigaldasite uue Juris-M versiooni.">
+<!ENTITY zotero.upgrade.title "Juris-M uuendamishaldur">
 <!ENTITY zotero.upgrade.upgradeInProgress "Palun oodake kuni uuendusi paigaldatakse. See võib võtta mõned minutid aega.">
-<!ENTITY zotero.upgrade.upgradeRequired "Et Jurism andmebaas töötaks uue versiooniga on seda tarvis uuendada.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Teie Jurism andmebaas on edukalt uuendatud.">
+<!ENTITY zotero.upgrade.upgradeRequired "Et Juris-M andmebaas töötaks uue versiooniga on seda tarvis uuendada.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Teie Juris-M andmebaas on edukalt uuendatud.">

@@ -3,12 +3,11 @@
 <!ENTITY zotero.preferences.advanced.keys "ショートカット">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "基本ディレクトリ">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "リンク付き添付ファイルの基本ディレクトリ">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism は、基本ディレクトリの中のリンク付き添付ファイルについて相対パスを使用します。これにより、基本ディレクトリのファイル構造が同じである限り、異なるコンピューター上のファイルへのアクセスが可能になります。">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Juris-M は、基本ディレクトリの中のリンク付き添付ファイルについて相対パスを使用します。これにより、基本ディレクトリのファイル構造が同じである限り、異なるコンピューター上のファイルへのアクセスが可能になります。">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "絶対パスに戻す...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "選択...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "自動的にPDFのメタデータを取得する">
-<!ENTITY zotero.preferences.autoRenameFiles "親アイテムのメタデータを使って自動的に添付ファイルを改名する">
-<!ENTITY zotero.preferences.autoRenameFiles.renameLinked "リンクされたファイルの名前を変更">
+<!ENTITY zotero.preferences.autoRenameFiles "Automatically rename attachment files using parent metadata">
 <!ENTITY zotero.preferences.autoUpdate "トランスレータとスタイルの更新を自動的に確認する。">
 <!ENTITY zotero.preferences.automaticSnapshots "ウェブページからアイテムを作成するときに自動的にスナップショットを作成する">
 <!ENTITY zotero.preferences.automaticTags "キーワードと件名標目を含むアイテムに自動的にタグを付ける">
@@ -45,13 +44,13 @@
 <!ENTITY zotero.preferences.debugOutputLogging.clearOutput "デバッグ出力を消去する">
 <!ENTITY zotero.preferences.debugOutputLogging.enableAfterRestart "再起動の後で有効化">
 <!ENTITY zotero.preferences.debugOutputLogging.linesLogged "行が記録されました。">
-<!ENTITY zotero.preferences.debugOutputLogging.message "デバッグ出力は Jurism 開発者が Jurism 内部の問題を診断する際に役立ちます。デバッグ出力の記録は Jurism の動作を重くするので、Jurism 開発者からデバッグ出力の要求があった場合を除き、通常はこの機能を無効のままにしてください。">
-<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Jurism サーバに報告する">
+<!ENTITY zotero.preferences.debugOutputLogging.message "デバッグ出力は Juris-M 開発者が Juris-M 内部の問題を診断する際に役立ちます。デバッグ出力の記録は Juris-M の動作を重くするので、Juris-M 開発者からデバッグ出力の要求があった場合を除き、通常はこの機能を無効のままにしてください。">
+<!ENTITY zotero.preferences.debugOutputLogging.submitToServer "Juris-M サーバに報告する">
 <!ENTITY zotero.preferences.debugOutputLogging.viewOutput "デバッグ出力を閲覧する">
 <!ENTITY zotero.preferences.default "既定値:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "アイテムを作成するときに自動的に関連 PDF や他のファイルを添付する">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "論文の URL アドレスを参考文献目録に含む">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "この機能が無効化されていると、Jurism はページ範囲が指定されていない文献に限り、学術雑誌、雑誌論文、新聞記事を引用する際に、URL アドレスを含みます。">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "この機能が無効化されていると、Juris-M はページ範囲が指定されていない文献に限り、学術雑誌、雑誌論文、新聞記事を引用する際に、URL アドレスを含みます。">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "他の引用スタイルを入手する...">
@@ -60,9 +59,9 @@
 <!ENTITY zotero.preferences.feeds.sorting.label "並べ替え:">
 <!ENTITY zotero.preferences.feeds.sorting.newest "最新のアイテムを最初に表示">
 <!ENTITY zotero.preferences.feeds.sorting.oldest "最古のアイテムを最初に表示">
-<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "PDF書類を開く">
+<!ENTITY zotero.preferences.fileHandler.openPDFsUsing "Open PDFs using">
 <!ENTITY zotero.preferences.fileHandler.systemDefault "システムデフォルト">
-<!ENTITY zotero.preferences.fileHandling "ファイルの取り扱い">
+<!ENTITY zotero.preferences.fileHandling "File Handling">
 <!ENTITY zotero.preferences.fontSize "文字サイズ:">
 <!ENTITY zotero.preferences.fontSize.large "大">
 <!ENTITY zotero.preferences.fontSize.medium "中">
@@ -86,10 +85,10 @@
 <!ENTITY zotero.preferences.keys.library "ライブラリー">
 <!ENTITY zotero.preferences.keys.newItem "新しいアイテムを作成する">
 <!ENTITY zotero.preferences.keys.newNote "新しいメモを作成する">
-<!ENTITY zotero.preferences.keys.openZotero "Zotero 画面を開く／閉じる">
+<!ENTITY zotero.preferences.keys.openZotero "Juris-M 画面を開く／閉じる">
 <!ENTITY zotero.preferences.keys.overrideGlobal "衝突するショートカットを上書きする">
 <!ENTITY zotero.preferences.keys.quicksearch "簡易検索">
-<!ENTITY zotero.preferences.keys.saveToZotero "Jurism に保存する (アドレスバーのアイコン)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Juris-M に保存する (アドレスバーのアイコン)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "すべてのフィードのアイテムを既読/未読にする">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "全画面表示の切り替え">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "タグ選択ボックスを表示する／隠す">
@@ -126,7 +125,7 @@
 <!ENTITY zotero.preferences.layout "レイアウト:">
 <!ENTITY zotero.preferences.layout.stacked "積み上げレイアウト">
 <!ENTITY zotero.preferences.layout.standard "標準">
-<!ENTITY zotero.preferences.locate.addDescription "リストにないルックアップ・エンジンを追加するには、ブラウザで希望のサーチエンジンを訪れて、Jurism の場所メニューから「追加」を選んでください">
+<!ENTITY zotero.preferences.locate.addDescription "リストにないルックアップ・エンジンを追加するには、ブラウザで希望のサーチエンジンを訪れて、Juris-M の場所メニューから「追加」を選んでください">
 <!ENTITY zotero.preferences.locate.description "詳細">
 <!ENTITY zotero.preferences.locate.locateEngineManager "所在確認エンジンの管理">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "所在確認エンジンは、所在確認ドロップダウンメニューの機能を拡張するものです。所在確認エンジンを有効化すると、それがドロップダウンメニューに追加され、ウェブ上での資料の所在確認に利用することができます。">
@@ -142,7 +141,7 @@
 <!ENTITY zotero.preferences.openurl.search "リンク・リゾルバを検索">
 <!ENTITY zotero.preferences.openurl.server "リンク・リゾルバ:">
 <!ENTITY zotero.preferences.openurl.version "バージョン:">
-<!ENTITY zotero.preferences.parseRISRefer "ダウンロード済みの BibTeX/RIS/Refer ファイルに対して Jurism を使用する">
+<!ENTITY zotero.preferences.parseRISRefer "ダウンロード済みの BibTeX/RIS/Refer ファイルに対して Juris-M を使用する">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "詳細">
 <!ENTITY zotero.preferences.prefpane.cite "引用">
@@ -162,7 +161,7 @@
 <!ENTITY zotero.preferences.proxies.configured "設定済みのプロキシ">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - ディレクトリパス (例, about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "をご覧ください。">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism は保存されたプロキシを通じて透過的に要求を転送します。さらに詳しくは">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Juris-M は保存されたプロキシを通じて透過的に要求を転送します。さらに詳しくは">
 <!ENTITY zotero.preferences.proxies.desc_link "プロキシ・ヘルプ">
 <!ENTITY zotero.preferences.proxies.disableByDomain "私のドメイン名が次を含むときは、プロキシ転送を無効化する: ">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - ファイル名 (例, index.html)">
@@ -181,10 +180,10 @@
 <!ENTITY zotero.preferences.quickCopy.defaultOutputFormat "標準出力形式:">
 <!ENTITY zotero.preferences.quickCopy.dragLimit "アイテム数が右の値より大きい時はドラッグ時のクイックコピーを無効化する:">
 <!ENTITY zotero.preferences.quickCopy.linkCitationFormReverse "Use citation form as default">
-<!ENTITY zotero.preferences.quickCopy.linkOption "Include Jurism link wrappers in QuickCopy citations">
+<!ENTITY zotero.preferences.quickCopy.linkOption "Include Juris-M link wrappers in QuickCopy citations">
 <!ENTITY zotero.preferences.quickCopy.macWarning "注意: Mac OS X 上ではリッチテキスト形式の書式設定は失われます。">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath "ドメイン／パス">
-<!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(例: wikipedia.org)">
+<!ENTITY zotero.preferences.quickCopy.siteEditor.domainPath.example "(例, wikipedia.org)">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.format "フォーマット">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.locale "言語">
 <!ENTITY zotero.preferences.quickCopy.siteEditor.outputFormat "出力形式">
@@ -198,7 +197,7 @@
 <!ENTITY zotero.preferences.search.indexStats.words "単語:">
 <!ENTITY zotero.preferences.search.pdfIndexing "PDF 索引作成">
 <!ENTITY zotero.preferences.settings "設定">
-<!ENTITY zotero.preferences.showIn "Jurismを表示するのは:">
+<!ENTITY zotero.preferences.showIn "Juris-Mを表示するのは:">
 <!ENTITY zotero.preferences.showIn.appTab "アプリタブ">
 <!ENTITY zotero.preferences.showIn.browserPane "ブラウザ画面下">
 <!ENTITY zotero.preferences.showIn.separateTab "新しいタブ">
@@ -218,7 +217,7 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Zotero ストレジをお使いになると、次の使用許諾条件に同意したことになります。">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "使用許諾条件">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
-<!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "サーバーを検証する">
+<!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
 <!ENTITY zotero.preferences.sync.librariesToSync "同期するライブラリ">
 <!ENTITY zotero.preferences.sync.librariesToSync.button "ライブラリを選択する...">
 <!ENTITY zotero.preferences.sync.librariesToSync.library "ライブラリ">
@@ -232,25 +231,25 @@
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory "データ同期の履歴をリセットする">
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory.desc "ローカルのデータをリモートのデータと統合し、同期の履歴は無視する">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "ファイル同期の履歴を削除する">
-<!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "すべての添付ファイルをストレージ・サービスと比較する">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer "オンライン・ライブラリから復元する">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "オンライン・ライブラリを使ってローカルのJurismデータを上書きする">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer "オンライン・ライブラリを置き換える">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "ローカルの Jurism データを使ってオンライン・ライブラリを上書きする">
+<!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compare all attachment files with the storage service">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restore from Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Juris-M data with data from the online library.">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Restore to Online Library">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Juris-M data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "次の操作は、稀に起こる特別な状況のためだけのもので、一般的な問題解決に用いられるべきではありません。多くの場合、リセットすることで更なる問題を引き起こします。以下をご参照ください。">
 <!ENTITY zotero.preferences.sync.reset.warning2 "同期リセットの設定">
 <!ENTITY zotero.preferences.sync.reset.warning3 "により詳しい情報があります。">
 <!ENTITY zotero.preferences.sync.setUpSync "同期の設定">
 <!ENTITY zotero.preferences.sync.syncAutomatically "自動的に同期">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "全文を同期する">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism はあなたの Jurism ライブラリに含まれるファイルの全文をを zotero.org や他のリンクした機器と同期させることができます。これにより、どこでも簡単にあなたのファイルを探すことができるようになります。あなたのファイルの全文が公開されることはありません。">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Juris-M はあなたの Juris-M ライブラリに含まれるファイルの全文をを zotero.org や他のリンクした機器と同期させることができます。これにより、どこでも簡単にあなたのファイルを探すことができるようになります。あなたのファイルの全文が公開されることはありません。">
 <!ENTITY zotero.preferences.sync.syncServer "データの同期">
 <!ENTITY zotero.preferences.sync.unlinkAccount "アカウントを同期から切り離す...">
 <!ENTITY zotero.preferences.sync.username "ユーザー名:">
-<!ENTITY zotero.preferences.title "Jurism 環境設定">
+<!ENTITY zotero.preferences.title "Juris-M 環境設定">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "日を経過したら自動的に削除する">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "ゴミ箱の中のアイテムが">
 <!ENTITY zotero.preferences.updateNow "今すぐ更新">
 <!ENTITY zotero.preferences.userInterface "ユーザーインターフェース">
-<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader "現行の Zotero のバージョンに基づいて zotero.org が内容をカスタマイズすることを許可する">
-<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader.tooltip "有効化されると、現在の Zotero バージョン情報が zotero.org への HTTP リクエストへ含まれます。">
+<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader "現行の Juris-M のバージョンに基づいて zotero.org が内容をカスタマイズすることを許可する">
+<!ENTITY zotero.preferences.zoteroDotOrgVersionHeader.tooltip "有効化されると、現在の Juris-M バージョン情報が zotero.org への HTTP リクエストへ含まれます。">

@@ -32,24 +32,23 @@
 <!ENTITY zotero.citation.suffix.label "后缀:">
 <!ENTITY zotero.citation.suppressAuthor.label "略去作者">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
-<!ENTITY zotero.collections.showRetractedItems "显示已撤稿的条目">
 <!ENTITY zotero.collections.showUnfiledItems "显示未分类条目">
-<!ENTITY zotero.contextMenu.addTextToCurrentNote "将所选内容添加到 Jurism 笔记">
-<!ENTITY zotero.contextMenu.addTextToNewNote "由所选内容创建 Jurism 条目及笔记">
-<!ENTITY zotero.contextMenu.saveImageAsItem "将图片保存为 Jurism 条目">
-<!ENTITY zotero.contextMenu.saveLinkAsItem "将链接保存为 Jurism 条目">
-<!ENTITY zotero.downloadManager.label "保存到 Jurism">
-<!ENTITY zotero.downloadManager.noPDFTools.description "要使用该功能, 您必须在 Jurism 首选项中的搜索选项卡里安装 PDF 工具.">
+<!ENTITY zotero.contextMenu.addTextToCurrentNote "将所选内容添加到 Juris-M 笔记">
+<!ENTITY zotero.contextMenu.addTextToNewNote "由所选内容创建 Juris-M 条目及笔记">
+<!ENTITY zotero.contextMenu.saveImageAsItem "将图片保存为 Juris-M 条目">
+<!ENTITY zotero.contextMenu.saveLinkAsItem "将链接保存为 Juris-M 条目">
+<!ENTITY zotero.downloadManager.label "保存到 Juris-M">
+<!ENTITY zotero.downloadManager.noPDFTools.description "要使用该功能, 您必须在 Juris-M 首选项中的搜索选项卡里安装 PDF 工具.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "附件无法保存到当前选中的文献库. 不过, 该条目将被保存到您的文献库中.">
 <!ENTITY zotero.duplicatesMerge.fieldSelect "选择需要保留的域, 防止被其它版本的域覆盖.">
 <!ENTITY zotero.duplicatesMerge.versionSelect "选择作为主条目的条目版本.">
 <!ENTITY zotero.errorReport.notReviewed "除非在此论坛中提交，错误报告一般不会被看到.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "请到Juris-M论坛(juris-m.github.io/support)发布新帖, 内容包括: 报告ID, 问题描述以任何必要的步骤以重现该问题.">
 <!ENTITY zotero.errorReport.reportID "报告ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "正在提交错误报告, 请稍候.">
 <!ENTITY zotero.errorReport.submitted "错误报告已经提交.">
-<!ENTITY zotero.errorReport.title "Jurism 错误报告">
-<!ENTITY zotero.errorReport.unrelatedMessages "这里可能包括和Jurism无关的消息。">
+<!ENTITY zotero.errorReport.title "Juris-M 错误报告">
+<!ENTITY zotero.errorReport.unrelatedMessages "这里可能包括和Juris-M无关的消息。">
 <!ENTITY zotero.exportOptions.format.label "格式:">
 <!ENTITY zotero.exportOptions.title "导出...">
 <!ENTITY zotero.exportOptions.translatorOptions.label "转换器选项">
@@ -68,37 +67,23 @@
 <!ENTITY zotero.file.choose.label "选择文件...">
 <!ENTITY zotero.file.noneSelected.label "未选定文件">
 <!ENTITY zotero.general.advancedOptions.label "高级选项">
-<!ENTITY zotero.general.bigger "更大">
 <!ENTITY zotero.general.cancel "取消">
-<!ENTITY zotero.general.close "关闭">
+<!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "删除">
 <!ENTITY zotero.general.deselectAll "取消全选">
 <!ENTITY zotero.general.edit "编辑">
 <!ENTITY zotero.general.loading "加载…">
-<!ENTITY zotero.general.minimize "最小化">
+<!ENTITY zotero.general.minimize "Minimize">
 <!ENTITY zotero.general.more "更多">
 <!ENTITY zotero.general.no "否">
 <!ENTITY zotero.general.note "笔记:">
 <!ENTITY zotero.general.ok "确定">
 <!ENTITY zotero.general.optional "(可选)">
-<!ENTITY zotero.general.options "选项">
-<!ENTITY zotero.general.other "其他…">
 <!ENTITY zotero.general.refresh "刷新">
-<!ENTITY zotero.general.reset "重置">
 <!ENTITY zotero.general.saveAs "另存为...">
 <!ENTITY zotero.general.selectAll "全选">
-<!ENTITY zotero.general.smaller "更小">
 <!ENTITY zotero.general.tools "工具">
 <!ENTITY zotero.general.yes "是">
-<!ENTITY zotero.import "导入">
-<!ENTITY zotero.import.createCollection "将导入的集合和项目放入新集合中">
-<!ENTITY zotero.import.database "数据库">
-<!ENTITY zotero.import.fileHandling "处理文件">
-<!ENTITY zotero.import.importing "导入…">
-<!ENTITY zotero.import.lastModified "上一次更改">
-<!ENTITY zotero.import.size "大小">
-<!ENTITY zotero.import.source.file "文件（BibTeX，RIS，Zotero RDF等）">
-<!ENTITY zotero.import.whereToImportFrom "您想从哪里导入？">
 <!ENTITY zotero.integration.addEditCitation.title "添加/编辑引文">
 <!ENTITY zotero.integration.classicView.label "经典视图">
 <!ENTITY zotero.integration.docPrefs.title "文档首选项">
@@ -114,7 +99,6 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "引文显示为:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "尾注">
-<!ENTITY zotero.integration.prefs.exportDocument "切换到另外一个文稿处理器...">
 <!ENTITY zotero.integration.prefs.footnotes.label "脚注">
 <!ENTITY zotero.integration.prefs.formatUsing.label "引文存储为:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -133,7 +117,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "在文档中储存参考文献会稍微增加文档的大小, 但这样可以和没有使用 Zotero v群组的其它用户共享您的文档. 要使用该功能, Zotero 必须升级到3.0或更高版本.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "在文档中储存参考文献会稍微增加文档的大小, 但这样可以和没有使用 Juris-M v群组的其它用户共享您的文档. 要使用该功能, Juris-M 必须升级到3.0或更高版本.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "在文档中保存参考文献">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -183,10 +167,10 @@
 <!ENTITY zotero.items.menu.mergeItems "合并条目…">
 <!ENTITY zotero.items.menu.moveDown "Move Down">
 <!ENTITY zotero.items.menu.moveUp "Move Up">
-<!ENTITY zotero.items.menu.reportMetadata "报告不正确的元数据">
+<!ENTITY zotero.items.menu.reportMetadata "Report Incorrect Metadata">
 <!ENTITY zotero.items.menu.restoreToLibrary "还原到文献库中">
 <!ENTITY zotero.items.menu.showInLibrary "在文献库中显示">
-<!ENTITY zotero.items.menu.unrecognize "撤消检索元数据">
+<!ENTITY zotero.items.menu.unrecognize "Undo Retrieve Metadata">
 <!ENTITY zotero.items.moreColumns.label "更多列">
 <!ENTITY zotero.items.numChildren_column "+">
 <!ENTITY zotero.items.pages_column "页">
@@ -204,7 +188,7 @@
 <!ENTITY zotero.items.volume_column "卷">
 <!ENTITY zotero.items.year_column "年">
 <!ENTITY zotero.lookup.button.search "搜索">
-<!ENTITY zotero.lookup.description "输入 ISBN，DOI，PMID 或 arXiv ID 以 添加到您的文献库：">
+<!ENTITY zotero.lookup.description "在下面方框中输入ISBN, DOI或PMID来检索文献.">
 <!ENTITY zotero.merge.deleted "已删除">
 <!ENTITY zotero.merge.of "从">
 <!ENTITY zotero.merge.title "冲突解决">
@@ -229,20 +213,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "含糊的引文">
 <!ENTITY zotero.rtfScan.cancel.label "取消">
 <!ENTITY zotero.rtfScan.citation.label "引文">
-<!ENTITY zotero.rtfScan.citationsPage.description "请检查下列引文以确保 Jurism 已经正确地选择了相关条目.在进行下一步之前, 请更正任何未映射的或不明确的引文.">
+<!ENTITY zotero.rtfScan.citationsPage.description "请检查下列引文以确保 Juris-M 已经正确地选择了相关条目.在进行下一步之前, 请更正任何未映射的或不明确的引文.">
 <!ENTITY zotero.rtfScan.citationsPage.label "校验已引用的条目">
 <!ENTITY zotero.rtfScan.completePage.description "文档处理完成, 请确保格式正确.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF 扫描完成">
-<!ENTITY zotero.rtfScan.formatPage.description "Jurism正在处理并格式化您的 RTF 文件, 请耐心等待.">
+<!ENTITY zotero.rtfScan.formatPage.description "Juris-M正在处理并格式化您的 RTF 文件, 请耐心等待.">
 <!ENTITY zotero.rtfScan.formatPage.label "正在格式化引文">
 <!ENTITY zotero.rtfScan.inputFile.label "输入文件">
-<!ENTITY zotero.rtfScan.introPage.description "Jurism 可以自动提取, 格式化引文并将引文目录插入到 RTF 文件中. RTF 扫描功能目前支持下列格式的引文变量:">
+<!ENTITY zotero.rtfScan.introPage.description "Juris-M 可以自动提取, 格式化引文并将引文目录插入到 RTF 文件中. RTF 扫描功能目前支持下列格式的引文变量:">
 <!ENTITY zotero.rtfScan.introPage.description2 "要启动, 请选择 RTF 输入文件和输出文件:">
 <!ENTITY zotero.rtfScan.introPage.label "介绍">
 <!ENTITY zotero.rtfScan.itemName.label "条目名称">
 <!ENTITY zotero.rtfScan.mappedCitations.label "已映射的引文">
 <!ENTITY zotero.rtfScan.outputFile.label "输出文件">
-<!ENTITY zotero.rtfScan.scanPage.description "Jurism 正在扫描引文, 请耐心等待.">
+<!ENTITY zotero.rtfScan.scanPage.description "Juris-M 正在扫描引文, 请耐心等待.">
 <!ENTITY zotero.rtfScan.scanPage.label "扫描引文">
 <!ENTITY zotero.rtfScan.stylePage.label "文档格式化中">
 <!ENTITY zotero.rtfScan.title "RTF 扫描">
@@ -251,7 +235,7 @@
 <!ENTITY zotero.selectitems.intro.label "选择您要添加到文献库的条目">
 <!ENTITY zotero.selectitems.select.label "确定">
 <!ENTITY zotero.selectitems.title "选择条目">
-<!ENTITY zotero.sync.button "与 Zotero 服务器同步">
+<!ENTITY zotero.sync.button "与 Juris-M 服务器同步">
 <!ENTITY zotero.sync.error "同步错误">
 <!ENTITY zotero.sync.longTagFixer.character "字符">
 <!ENTITY zotero.sync.longTagFixer.characters "字符串">
@@ -288,7 +272,7 @@
 <!ENTITY zotero.tagSelector.renameTag "重命名标签...">
 <!ENTITY zotero.tagSelector.selectVisible "选择可见">
 <!ENTITY zotero.tagSelector.showAutomatic "自动显示">
-<!ENTITY zotero.toolbar.about.label "关于 Jurism">
+<!ENTITY zotero.toolbar.about.label "关于 Juris-M">
 <!ENTITY zotero.toolbar.actions.label "操作">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -331,7 +315,7 @@
 <!ENTITY zotero.toolbar.preferences.label "首选项...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "移除条目...">
-<!ENTITY zotero.toolbar.rtfScan.label "RTF 扫描">
+<!ENTITY zotero.toolbar.rtfScan.label "RTF 扫描...">
 <!ENTITY zotero.toolbar.supportAndDocumentation "支持与文档">
 <!ENTITY zotero.toolbar.tab.tooltip "切换标签模式">
 <!ENTITY zotero.toolbar.tagSelector.label "显示/隐藏标签选择器">
@@ -340,14 +324,14 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "以了解有哪些新的改动.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "请查阅">
 <!ENTITY zotero.upgrade.changeLogLink "变更日志">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "这是主版本更新.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "在继续之前.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "请确保您已经查阅了">
 <!ENTITY zotero.upgrade.majorUpgradeLink "升级说明">
-<!ENTITY zotero.upgrade.newVersionInstalled "您已经安装了一套新版的Jurism.">
-<!ENTITY zotero.upgrade.title "Jurism 升级向导">
+<!ENTITY zotero.upgrade.newVersionInstalled "您已经安装了一套新版的Juris-M.">
+<!ENTITY zotero.upgrade.title "Juris-M 升级向导">
 <!ENTITY zotero.upgrade.upgradeInProgress "请耐心等待升级过程结束. 这可能要花上几分钟.">
-<!ENTITY zotero.upgrade.upgradeRequired "为了使用这个新版本您必须升级您的 Jurism 数据库.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "您的 Jurism 数据库已成功升级.">
+<!ENTITY zotero.upgrade.upgradeRequired "为了使用这个新版本您必须升级您的 Juris-M 数据库.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "您的 Juris-M 数据库已成功升级.">

@@ -7,7 +7,7 @@
 <!ENTITY zotero.search.joinMode.any "أيّاً من">
 <!ENTITY zotero.search.joinMode.prefix "طابق">
 <!ENTITY zotero.search.joinMode.suffix "التالي:">
-<!ENTITY zotero.search.name "الاسم">
+<!ENTITY zotero.search.name "الإسم:">
 <!ENTITY zotero.search.noChildren "اعرض العناصر الرئيسية فقط">
 <!ENTITY zotero.search.recursive.label "ابحث في المجلدات الفرعية">
 <!ENTITY zotero.search.saveSearch "حفظ البحث">

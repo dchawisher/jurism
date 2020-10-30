@@ -32,7 +32,6 @@
 <!ENTITY zotero.citation.suffix.label "لاحقة:">
 <!ENTITY zotero.citation.suppressAuthor.label "عدم اضافة المؤلف">
 <!ENTITY zotero.citation.suppressTrailingPunctuation.label "Suppress Trailing Punctuation">
-<!ENTITY zotero.collections.showRetractedItems "إظهار العناصر المستردة">
 <!ENTITY zotero.collections.showUnfiledItems "عرض العناصر غير المصنفة">
 <!ENTITY zotero.contextMenu.addTextToCurrentNote "اضافة التحديد لملاحظة زوتيرو">
 <!ENTITY zotero.contextMenu.addTextToNewNote "إنشاء عنصر وملاحظة زوتيرو من التحديد">
@@ -44,7 +43,7 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "اختار الحقول المراد الابقاء عليها من الاصدارات الاخرى للعنصر:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "اختار اصدارة العنصر المناسبة لاستخدامه كعنصر رئيسي:">
 <!ENTITY zotero.errorReport.notReviewed "لن يتم مراجعة تقارير الخطأ ما لم يكن مشار إليها في المنتديات.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (see juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "برجاء كتابة رسالة في منتديات زوتيرو (forums.zotero.org) تتضمن رقم التقرير، ووصف للمشكلة، والخطوات التي تؤدي لظهورها.">
 <!ENTITY zotero.errorReport.reportID "رقم التقرير:">
 <!ENTITY zotero.errorReport.submissionInProgress "برجاء الانتظار لحين الانتهاء من ارسال التقرير عن الخطأ.">
 <!ENTITY zotero.errorReport.submitted "تم ارسال التقرير عن الخطأ.">
@@ -68,44 +67,30 @@
 <!ENTITY zotero.file.choose.label "اختر الملف...">
 <!ENTITY zotero.file.noneSelected.label "لم يتم تحديد ملف">
 <!ENTITY zotero.general.advancedOptions.label "خيارات متقدمة">
-<!ENTITY zotero.general.bigger "أكبر">
 <!ENTITY zotero.general.cancel "الغاء">
-<!ENTITY zotero.general.close "أغلق">
+<!ENTITY zotero.general.close "Close">
 <!ENTITY zotero.general.delete "حذف">
 <!ENTITY zotero.general.deselectAll "إلغاء تحديد الكل">
 <!ENTITY zotero.general.edit "تحرير">
 <!ENTITY zotero.general.loading "التحميل">
-<!ENTITY zotero.general.minimize "تصغير">
+<!ENTITY zotero.general.minimize "Minimize">
 <!ENTITY zotero.general.more "المزيد">
 <!ENTITY zotero.general.no "لا">
 <!ENTITY zotero.general.note "ملاحظة:">
 <!ENTITY zotero.general.ok "موافق">
 <!ENTITY zotero.general.optional "(اختياري)">
-<!ENTITY zotero.general.options "خيارات">
-<!ENTITY zotero.general.other "غير ذلك...">
 <!ENTITY zotero.general.refresh "اعادة تحميل">
-<!ENTITY zotero.general.reset "اعادة ضبط">
 <!ENTITY zotero.general.saveAs "حفظ باسم...">
 <!ENTITY zotero.general.selectAll "تحديد الكل">
-<!ENTITY zotero.general.smaller "أصغر">
 <!ENTITY zotero.general.tools "أدوات">
 <!ENTITY zotero.general.yes "نعم">
-<!ENTITY zotero.import "استيراد">
-<!ENTITY zotero.import.createCollection "ضع المجموعات المستوردة والمواد في مجموعة جديدة">
-<!ENTITY zotero.import.database "قاعدة البيانات">
-<!ENTITY zotero.import.fileHandling "معاملة الملف">
-<!ENTITY zotero.import.importing "استيراد...">
-<!ENTITY zotero.import.lastModified "آخر تعديل">
-<!ENTITY zotero.import.size "حجم">
-<!ENTITY zotero.import.source.file " ملف (BibTeX, RIS, Zotero RDF, etc.)">
-<!ENTITY zotero.import.whereToImportFrom "من أين تريد الاستيراد؟">
 <!ENTITY zotero.integration.addEditCitation.title "اضافة/تحرير استشهاد مرجعي">
 <!ENTITY zotero.integration.classicView.label "عرض تقليدي">
 <!ENTITY zotero.integration.docPrefs.title "تفضيلات المستند">
 <!ENTITY zotero.integration.editBibliography.title "تحرير ببليوجرافية">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "يمكن أن يؤدي تعطيل التحديثات إلى تسريع إدراج الاستشهادات في المستندات الكبيرة. انقر على تحديث لتحديث الاستشهادات يدويًا.">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "حدث الاستشهادات آلياً">
-<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "سيتم تمييز الاستشهادات ذات التحديثات المعلقة في المستند">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.description "Disabling updates can speed up citation insertion in large documents. Click Refresh to update citations manually.">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.label "Automatically update citations">
+<!ENTITY zotero.integration.prefs.automaticCitationUpdates.tooltip "Citations with pending updates will be highlighted in the document">
 <!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.caption "سيتم تجاهل حقل &quot;اختصار المجلة&quot;.">
 <!ENTITY zotero.integration.prefs.automaticJournalAbbeviations.label "استخدام اختصارات دورية ميدلين">
 <!ENTITY zotero.integration.prefs.bookmarks.caption "Bookmarks can be shared between Word and LibreOffice, but may cause errors if accidentally modified and cannot be inserted into footnotes.">
@@ -114,7 +99,6 @@
 <!ENTITY zotero.integration.prefs.displayAs.label "عرض الاستشهادات المرجعية كـ:">
 <!ENTITY zotero.integration.prefs.embeddedMetadata.label "Embedding:">
 <!ENTITY zotero.integration.prefs.endnotes.label "تعليقات ختامية">
-<!ENTITY zotero.integration.prefs.exportDocument "التبديل إلى معالج نصوص آخر ...">
 <!ENTITY zotero.integration.prefs.footnotes.label "حواشي سفلية">
 <!ENTITY zotero.integration.prefs.formatUsing.label "Store Citations as:">
 <!ENTITY zotero.integration.prefs.lang.documentInternals "Internal">
@@ -133,7 +117,7 @@
 <!ENTITY zotero.integration.prefs.lang.titles "Titles:">
 <!ENTITY zotero.integration.prefs.lang.translation "Translation">
 <!ENTITY zotero.integration.prefs.lang.transliteration "Transliteration">
-<!ENTITY zotero.integration.prefs.storeReferences.caption "Storing references in your document slightly increases file size, but will allow you to share your document with others without using a Zotero group. Zotero 3.0 or later is required to update documents created with this option.">
+<!ENTITY zotero.integration.prefs.storeReferences.caption "Storing references in your document slightly increases file size, but will allow you to share your document with others without using a Juris-M group. Juris-M 3.0 or later is required to update documents created with this option.">
 <!ENTITY zotero.integration.prefs.storeReferences.label "تخزين المراجع في الوثيقة">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.caption "When this option is enabled, all trailing punctuation will be dropped in note styles. To selectively drop trailing punctuation on individual citations, disable this option, and set suppression on each citation directly.">
 <!ENTITY zotero.integration.prefs.suppressTrailingPunctuation.label "Suppress all trailing punctuation">
@@ -183,10 +167,10 @@
 <!ENTITY zotero.items.menu.mergeItems "دمج العناصر...">
 <!ENTITY zotero.items.menu.moveDown "Move Down">
 <!ENTITY zotero.items.menu.moveUp "Move Up">
-<!ENTITY zotero.items.menu.reportMetadata "بلغ عن بيانات وصفية غير صحيحة">
+<!ENTITY zotero.items.menu.reportMetadata "Report Incorrect Metadata">
 <!ENTITY zotero.items.menu.restoreToLibrary "استعادة المكتبة">
 <!ENTITY zotero.items.menu.showInLibrary "عرض في المكتبة">
-<!ENTITY zotero.items.menu.unrecognize "تراجع عن استيراد البيانات الوصفية">
+<!ENTITY zotero.items.menu.unrecognize "Undo Retrieve Metadata">
 <!ENTITY zotero.items.moreColumns.label "المزيد من الاعمدة">
 <!ENTITY zotero.items.numChildren_column "+">
 <!ENTITY zotero.items.pages_column "صفحات">
@@ -204,7 +188,7 @@
 <!ENTITY zotero.items.volume_column "صوت">
 <!ENTITY zotero.items.year_column "السنة">
 <!ENTITY zotero.lookup.button.search "بحث">
-<!ENTITY zotero.lookup.description "أدخل ردمك أو معرف الوثيقة الرقمي أو  بميد أو معرف الأرشيف للإضافة لممكتبتك">
+<!ENTITY zotero.lookup.description "ادخل الترقيم الدولي الموحد للكتاب او معرف مقالات الميدلاين او معرف الوثيقة الرقمية.">
 <!ENTITY zotero.merge.deleted "محذوف">
 <!ENTITY zotero.merge.of "من">
 <!ENTITY zotero.merge.title "حل التضارب">
@@ -331,7 +315,7 @@
 <!ENTITY zotero.toolbar.preferences.label "التفضيلات...">
 <!ENTITY zotero.toolbar.refresh.label "Refresh">
 <!ENTITY zotero.toolbar.removeItem.label "ازالة العنصر...">
-<!ENTITY zotero.toolbar.rtfScan.label "فحص ملف RTF">
+<!ENTITY zotero.toolbar.rtfScan.label "فحص ملف RTF...">
 <!ENTITY zotero.toolbar.supportAndDocumentation "الدعم و الوثائق">
 <!ENTITY zotero.toolbar.tab.tooltip "تبديل وضع التبويب">
 <!ENTITY zotero.toolbar.tagSelector.label "عرض/اخفاء محدد الأوسمة">
@@ -340,7 +324,7 @@
 <!ENTITY zotero.upgrade.changeLogAfterLink "لمعرفة الجديد.">
 <!ENTITY zotero.upgrade.changeLogBeforeLink "برجاء مراجعة">
 <!ENTITY zotero.upgrade.changeLogLink "سجل التغييرات">
-<!ENTITY zotero.upgrade.ifZoteroInfo "If this is a first-time install on a computer with an existing Zotero database, you can sync Jurism to your original Zotero account, and return to official Zotero at any time by reinstalling or reenabling the official Zotero client.">
+<!ENTITY zotero.upgrade.ifZoteroInfo "If you are migrating from official Juris-M/Juris-M to MLZ, the next step of the upgrade process will convert your database for use with MLZ.">
 <!ENTITY zotero.upgrade.ifZoteroInfoLabel "Note:">
 <!ENTITY zotero.upgrade.majorUpgrade "هذه عملية تحديث كلي للبرنامج.">
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "قبل المتابعة.">

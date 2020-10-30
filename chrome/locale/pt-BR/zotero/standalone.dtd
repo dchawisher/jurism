@@ -10,8 +10,6 @@
 <!ENTITY closeCmd.accesskey "C">
 <!ENTITY closeCmd.key "W">
 <!ENTITY closeCmd.label "Fechar">
-<!ENTITY collectionsPane.label "Painel de coleção">
-<!ENTITY convertToStored.label "Converter arquivos linkados para arquivos armazenados...">
 <!ENTITY copyBibliographyCmd.label "Copiar bibliografia">
 <!ENTITY copyCitationCmd.label "Copiar citação">
 <!ENTITY copyCmd.accesskey "C">
@@ -23,13 +21,12 @@
 <!ENTITY debugOutputLogging.accesskey "D">
 <!ENTITY debugOutputLogging.clear "Limpar a saída">
 <!ENTITY debugOutputLogging.label "Registro da saída de depuração">
-<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Reiniciar com o registro habilitado...">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Reiniciar com o Registro Habilitado">
 <!ENTITY debugOutputLogging.submit "Enviar a saída">
 <!ENTITY debugOutputLogging.view "Ver a saída">
 <!ENTITY deleteCmd.accesskey "D">
 <!ENTITY deleteCmd.key "D">
 <!ENTITY deleteCmd.label "Remover">
-<!ENTITY developer.label "Desenvolvedor">
 <!ENTITY editMenu.accesskey "E">
 <!ENTITY editMenu.label "Editar">
 <!ENTITY fileMenu.accesskey "F">
@@ -44,7 +41,6 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
-<!ENTITY fontSize.label "Tamanho da fonte">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
 <!ENTITY fullZoomEnlargeCmd.accesskey "I">
@@ -84,12 +80,8 @@
 <!ENTITY importFromClipboardCmd.label "Importar da área de transferência">
 <!ENTITY installConnector.accesskey "C">
 <!ENTITY installConnector.label "Instalar o conector com o navegador">
-<!ENTITY itemPane.label "Painel de item">
-<!ENTITY layout.label "Layout">
-<!ENTITY manageAttachments.label "Gerenciar anexos">
 <!ENTITY minimizeWindow.key "m">
 <!ENTITY minimizeWindow.label "Minimizar">
-<!ENTITY noteFontSize.label "Tamanho da fonte das notas">
 <!ENTITY pageSetupCmd.accesskey "U">
 <!ENTITY pageSetupCmd.label "Configuração da página...">
 <!ENTITY pasteCmd.accesskey "P">
@@ -109,10 +101,9 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Sair">
 <!ENTITY quitApplicationCmdMac.key "S">
-<!ENTITY quitApplicationCmdMac.label "Sair do Jurism">
+<!ENTITY quitApplicationCmdMac.label "Sair do Juris-M">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Sair">
-<!ENTITY recursiveCollections.label "Exibir itens de subcoleções">
 <!ENTITY redoCmd.accesskey "R">
 <!ENTITY redoCmd.key "Y">
 <!ENTITY redoCmd.label "Refazer">
@@ -124,14 +115,10 @@
 <!ENTITY selectAllCmd.label "Selecionar tudo">
 <!ENTITY servicesMenuMac.label "Serviços">
 <!ENTITY showAllAppsCmdMac.label "Exibir tudo">
-<!ENTITY stackedView.label "Exibição empilhada">
-<!ENTITY standardView.label "Exibição padrão">
-<!ENTITY tagSelector.label "Seletor de etiquetas">
 <!ENTITY toolsMenu.accesskey "T">
 <!ENTITY toolsMenu.label "Ferramentas">
 <!ENTITY undoCmd.accesskey "U">
 <!ENTITY undoCmd.key "Z">
 <!ENTITY undoCmd.label "Desfazer">
-<!ENTITY viewMenu.label "Exibir">
 <!ENTITY windowMenu.label "Janela">
 <!ENTITY zoomWindow.label "Zoom">

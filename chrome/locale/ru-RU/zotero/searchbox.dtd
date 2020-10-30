@@ -2,13 +2,13 @@
 <!ENTITY zotero.search.date.units.days "дни">
 <!ENTITY zotero.search.date.units.months "месяцы">
 <!ENTITY zotero.search.date.units.years "года">
-<!ENTITY zotero.search.includeParentsAndChildren "Включать родительские и дочерние записи совпадений">
+<!ENTITY zotero.search.includeParentsAndChildren "Включать родительские и дочерние документы совпадающие с искомым">
 <!ENTITY zotero.search.joinMode.all "всеми">
 <!ENTITY zotero.search.joinMode.any "любым">
 <!ENTITY zotero.search.joinMode.prefix "Совпадающее с">
 <!ENTITY zotero.search.joinMode.suffix "из нижеследующего:">
 <!ENTITY zotero.search.name "Название:">
-<!ENTITY zotero.search.noChildren "Показывать записи только верхнего уровня">
+<!ENTITY zotero.search.noChildren "Показывать документы только верхнего уровня">
 <!ENTITY zotero.search.recursive.label "Искать в подпапках">
 <!ENTITY zotero.search.saveSearch "Сохранить поиск">
 <!ENTITY zotero.search.search "Искать">

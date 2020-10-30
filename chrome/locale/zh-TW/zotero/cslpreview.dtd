@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<!ENTITY styles.preview "預覽Jurism文獻格式">
-=======
-<!ENTITY styles.preview "預覽 Jurism 文獻格式">
->>>>>>> eab9252550ba8361894497c27d0f63c51fca7e8b
+<!ENTITY styles.preview "預覽Juris-M文獻格式">
 
 <!ENTITY styles.preview.citationFormat "引用文獻格式：">
 <!ENTITY styles.preview.citationFormat.all "全部">
