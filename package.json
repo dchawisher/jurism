@@ -15,6 +15,7 @@
   },
   "license": "",
   "dependencies": {
+    "acorn": "^6.0.0",
     "bluebird": "^3.5.1",
     "classnames": "^2.2.6",
     "cross-clear": "^1.0.0",
