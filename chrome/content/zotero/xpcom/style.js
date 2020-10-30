@@ -712,7 +712,7 @@ Zotero.Style.prototype.getCiteProc = function(locale, automaticJournalAbbreviati
 	// APA and some similar styles capitalize the first word of subtitles
 	var uppercaseSubtitlesRE = /^apa($|-)|^academy-of-management($|-)|^(freshwater-science)/;
 	var shortIDMatches = this.styleID.match(/\/?([^/]+)$/);
-	var uppercaseSubtitles = !!shortIDMatches && uppercaseSubtitlesRE.test(shortIDMatches[1]);
+	this._uppercaseSubtitles = !!shortIDMatches && uppercaseSubtitlesRE.test(shortIDMatches[1]);
 	
 	// determine version of parent style
 	var overrideLocale = false; // to force dependent style locale
@@ -737,7 +737,7 @@ Zotero.Style.prototype.getCiteProc = function(locale, automaticJournalAbbreviati
 		// Turn on uppercase subtitles if parent style matches
 		if (!uppercaseSubtitles) {
 			let shortIDMatches = parentStyle.styleID.match(/\/?([^/]+)$/);
-			uppercaseSubtitles = !!shortIDMatches && uppercaseSubtitlesRE.test(shortIDMatches[1]);
+			this._uppercaseSubtitles = !!shortIDMatches && uppercaseSubtitlesRE.test(shortIDMatches[1]);
 		}
 	}
 	else {
