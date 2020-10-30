@@ -25,11 +25,12 @@ var choices = new query({
 
 const pth = path.join(__dirname, "..", "chrome", "locale", "en-US", "zotero");
 
-const outpth = "./BRANDO.txt";
+const brando = "./BRANDO.txt";
 
 var fns = fs.readdirSync(pth);
 
-var ret = "";
+var brandoRet = "";
+var brandoForceRet = "";
 
 var doneOnes = {};
 
@@ -50,7 +51,7 @@ const editLine = async (str) => {
 		console.log(displaystr);
 		var res = await choices.run();
 		if (res === " Save and quit") {
-			fs.writeFileSync(outpth, ret);
+			fs.writeFileSync(brando, brandoRet);
 			process.exit();
 		} else if (res === " Save to BRANDO-FORCE") {
 			clear();
@@ -72,14 +73,14 @@ const editLine = async (str) => {
 }
 
 const saveToBrandoForce = (key, fn, str) => {
-	var ret = "";
-	ret += `${key}@${fn}\n`;
-	ret += `    ${str}\n`;
+	brandoForceRet = "";
+	brandoForceRet += `${key}@${fn}\n`;
+	brandoForceRet += `    ${str}\n`;
 	var txt = "";
 	if (fs.existsSync("BRANDO-FORCE.txt")) {
 		txt = fs.readFileSync("BRANDO-FORCE.txt").toString();
 	}
-	txt += ret;
+	txt += brandoForceRet;
 	fs.writeFileSync("BRANDO-FORCE.txt", txt);
 };
 
@@ -101,8 +102,8 @@ async function showLines(mode, fn, txt) {
 				if (fixedLine === "SAVE-TO-BRANDO-FORCE") {
 					saveToBrandoForce(key, fn, str);
 				} else {
-					ret += `${key}@${fn}\n`;
-					ret += `    ${fixedLine}\n`;
+					brandoRet += `${key}@${fn}\n`;
+					brandoRet += `    ${fixedLine}\n`;
 				}
 			}
 		} else if (mode === "properties") {
@@ -118,8 +119,8 @@ async function showLines(mode, fn, txt) {
 				if (fixedLine === "SAVE-TO-BRANDO-FORCE") {
 					saveToBrandoForce(key, fn, str);
 				} else {
-					ret += `${key}@${fn}\n`;
-					ret += `    ${fixedLine}\n`;
+					brandoRet += `${key}@${fn}\n`;
+					brandoRet += `    ${fixedLine}\n`;
 				}
 			}
 		}
@@ -128,17 +129,17 @@ async function showLines(mode, fn, txt) {
 
 run = async () => {
 	clear();
-	if (fs.existsSync(outpth)) {
-		ret = fs.readFileSync(outpth).toString();
-		var lines = ret.split("\n");
+	if (fs.existsSync(brando)) {
+		brandoRet = fs.readFileSync(brando).toString();
+		var lines = brandoRet.split("\n");
 		for (var line of lines) {
 			if (line.match(/^\s+/)) continue;
 			doneOnes[line.trim()] = true;
 		}
 	}
 	if (fs.existsSync("BRANDO-FORCE.txt")) {
-		ret = fs.readFileSync("BRANDO-FORCE.txt").toString();
-		var lines = ret.split("\n");
+		brandoForceRet = fs.readFileSync("BRANDO-FORCE.txt").toString();
+		var lines = brandoForceRet.split("\n");
 		for (var line of lines) {
 			if (line.match(/^\s+/)) continue;
 			doneOnes[line.trim()] = true;
@@ -158,7 +159,7 @@ run = async () => {
 		//console.log(`${fn}: ${count}`);
 		//count = 0;
 	}
-	fs.writeFileSync(outpth, ret);	
+	fs.writeFileSync(brando, brandoRet);	
 	//console.log(count)
 }
 
