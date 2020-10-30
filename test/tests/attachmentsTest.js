@@ -357,11 +357,14 @@ describe("Zotero.Attachments", function() {
 			var storageDir = Zotero.Attachments.getStorageDirectory(attachment).path;
 			var file = await attachment.getFilePathAsync();
 			assert.equal(OS.Path.basename(file), 'index.html');
+
 			
 			// Check attachment html file contents
 			let path = OS.Path.join(storageDir, 'index.html');
-			assert.isTrue(await OS.File.exists(path));
+			assert.isTrue(await OS.File.exists(file));
+			//assert.isTrue(await OS.File.exists(path));
 			let contents = await Zotero.File.getContentsAsync(path);
+			contents = contents.replace(/<html[^>]*>/, "<html>");
 			assert.isTrue(contents.startsWith("<html><!--\n Page saved with SingleFile"));
 			
 			// Check attachment base64 contents
