@@ -504,7 +504,7 @@ Zotero.HTTP = new function() {
 				deferred.resolve(xmlhttp);
 			} else {
 				let msg = "HTTP " + method + " " + dispURL + " failed with status code " + status;
-				if (!xmlhttp.responseType && xmlhttp.responseText) {
+				if ((!xmlhttp.responseType || xmlhttp.responseType == 'text') && xmlhttp.responseText) {
 					msg += ":\n\n" + xmlhttp.responseText;
 				}
 				Zotero.debug(msg, 1);
@@ -1208,9 +1208,33 @@ Zotero.HTTP = new function() {
 				return;
 			}
 			
-			Zotero.debug("Zotero.HTTP.loadDocuments: " + url + " loaded");
 			hiddenBrowser.removeEventListener("load", onLoad, true);
 			hiddenBrowser.zotero_loaded = true;
+
+			let channel = hiddenBrowser.docShell.currentDocumentChannel;
+			if (channel && (channel instanceof Components.interfaces.nsIHttpChannel)) {
+				if (channel.responseStatus < 200 || channel.responseStatus >= 400) {
+					let response = `${channel.responseStatus} ${channel.responseStatusText}`;
+					Zotero.debug(`Zotero.HTTP.loadDocuments: ${url} failed with ${response}`, 2);
+					let e = new Zotero.HTTP.UnexpectedStatusException(
+						{
+							status: channel.responseStatus,
+							channel
+						},
+						url,
+						`Invalid response ${response} for ${url}`
+					);
+					if (onError) {
+						onError(e);
+					}
+					else {
+						throw e;
+					}
+					return;
+				}
+			}
+			
+			Zotero.debug("Zotero.HTTP.loadDocuments: " + url + " loaded");
 			
 			var maybePromise;
 			var error;

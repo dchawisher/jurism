@@ -666,12 +666,6 @@ Zotero.Style = function (style, path) {
 	this.locale = Zotero.Utilities.xpathText(doc, '/csl:style/@default-locale',
 		Zotero.Styles.ns) || null;
 	
-	// APA and some similar styles capitalize the first word of subtitles
-	this._uppercaseSubtitles = false;
-	var uppercaseSubtitlesRE = /^apa($|-)|^(academy-of-management|freshwater-science)/;
-	var shortIDMatches = this.styleID.match(/\/?([^/]+)$/);
-	this._uppercaseSubtitles = !!shortIDMatches && uppercaseSubtitlesRE.test(shortIDMatches[1]);
-	
 	this._class = doc.documentElement.getAttribute("class");
 	this._usesAbbreviation = !!Zotero.Utilities.xpath(doc,
 		'//csl:text[(@variable="container-title" and @form="short") or (@variable="container-title-short")][1]',
@@ -715,6 +709,11 @@ Zotero.Style.prototype.getCiteProc = function(locale, automaticJournalAbbreviati
 		}
 	}
 	
+	// APA and some similar styles capitalize the first word of subtitles
+	var uppercaseSubtitlesRE = /^apa($|-)|^academy-of-management($|-)|^(freshwater-science)/;
+	var shortIDMatches = this.styleID.match(/\/?([^/]+)$/);
+	var uppercaseSubtitles = !!shortIDMatches && uppercaseSubtitlesRE.test(shortIDMatches[1]);
+	
 	// determine version of parent style
 	var overrideLocale = false; // to force dependent style locale
 	if(this.source) {
@@ -734,7 +733,14 @@ Zotero.Style.prototype.getCiteProc = function(locale, automaticJournalAbbreviati
 			overrideLocale = true;
 			locale = this.locale;
 		}
-	} else {
+		
+		// Turn on uppercase subtitles if parent style matches
+		if (!uppercaseSubtitles) {
+			let shortIDMatches = parentStyle.styleID.match(/\/?([^/]+)$/);
+			uppercaseSubtitles = !!shortIDMatches && uppercaseSubtitlesRE.test(shortIDMatches[1]);
+		}
+	}
+	else {
 		var version = this._version;
 	}
 	

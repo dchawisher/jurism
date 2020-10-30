@@ -35,3 +35,6 @@
 	path = juris-abbrevs
 	url = https://github.com/Juris-M/jurism-abbreviations.git
 	branch = master
+[submodule "resource/SingleFile"]
+	path = resource/SingleFile
+	url = https://github.com/gildas-lormeau/SingleFile.git

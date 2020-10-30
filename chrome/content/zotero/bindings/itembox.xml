@@ -2211,6 +2211,7 @@
 						}
 					}
 					await this.blurOpenField();
+					this.item.removeCreator(index);
 					await this.item.saveTx();
 				}.bind(this))();
 				]]></body>
@@ -3399,6 +3400,8 @@
 					var [field, creatorIndex, creatorField] = fieldName.split('-');
 
 					var newVal;
+
+					creatorIndex = parseInt(creatorIndex);
 					
 					var row = Zotero.getAncestorByTagName(textbox, 'row');
 					var isMulti = false;

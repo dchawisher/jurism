@@ -5,6 +5,7 @@
 <!ENTITY bidiSwitchPageDirectionItem.label "Cambiar a dirección de páxina">
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">
 <!ENTITY bidiSwitchTextDirectionItem.commandkey "X">
+<<<<<<< HEAD
 <!ENTITY bidiSwitchTextDirectionItem.label "Cambiar a dirección do texto">
 <!ENTITY bringAllToFront.label "Traer todo a diante">
 <!ENTITY closeCmd.accesskey "C">
@@ -44,6 +45,18 @@
 <!ENTITY findOnCmd.accesskey "F">
 <!ENTITY findOnCmd.commandkey "f">
 <!ENTITY findOnCmd.label "Find in This Page…">
+=======
+
+
+<!ENTITY viewMenu.label "Ver">
+<!ENTITY layout.label "Interface">
+<!ENTITY standardView.label "Interface estándar">
+<!ENTITY stackedView.label "Interface agrupada">
+<!ENTITY collectionsPane.label "Panel de coleccións">
+<!ENTITY itemPane.label "Panel de elementos">
+<!ENTITY tagSelector.label "Selector de etiquetas">
+<!ENTITY recursiveCollections.label "Amosar os elementos das subcolecións">
+>>>>>>> d16512c84f8a9948362890f1242324e3d4005da6
 <!ENTITY fontSize.label "Tamaño da tipografía:">
 <!ENTITY fullZoom.accesskey "Z">
 <!ENTITY fullZoom.label "Zoom">
@@ -105,6 +118,7 @@
 <!ENTITY printCmd.key "P">
 <!ENTITY printCmd.label "Imprimir...">
 <!ENTITY productHelp.accesskey "D">
+<<<<<<< HEAD
 <!ENTITY productHelp.label "Axuda e documentación">
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Saír">
@@ -135,3 +149,22 @@
 <!ENTITY viewMenu.label "Ver">
 <!ENTITY windowMenu.label "Xanela">
 <!ENTITY zoomWindow.label "Ampliar">
+=======
+<!ENTITY helpTroubleshootingInfo.label "Información de solución de problemas">
+<!ENTITY helpTroubleshootingInfo.accesskey "P">
+<!ENTITY helpFeedbackPage.label "Foro de debate">
+<!ENTITY helpFeedbackPage.accesskey "F">
+
+<!ENTITY helpReportErrors.label "Informar de erros...">
+<!ENTITY helpReportErrors.accesskey "E">
+
+<!ENTITY debugOutputLogging.label "Saída de depuración do rexistro de saída">
+<!ENTITY debugOutputLogging.accesskey "L">
+<!ENTITY debugOutputLogging.submit "Enviar a saída">
+<!ENTITY debugOutputLogging.view "Ver a saída">
+<!ENTITY debugOutputLogging.clear "Borrar a saída">
+<!ENTITY debugOutputLogging.restartWithLoggingEnabled "Reiniciar co acceso activado">
+
+<!ENTITY helpCheckForUpdates.label "Comprobar se hai actualizacións...">
+<!ENTITY helpCheckForUpdates.accesskey "Z">
+>>>>>>> d16512c84f8a9948362890f1242324e3d4005da6

@@ -1,6 +1,49 @@
+<<<<<<< HEAD
 <!ENTITY aboutProduct.accesskey "A">
 <!ENTITY aboutProduct.label "&brandShortName; Hakkında">
 <!ENTITY addons.label "Eklentiler">
+=======
+<!ENTITY preferencesCmdMac.label "Tercihler...">
+<!ENTITY preferencesCmdMac.commandkey ",">
+<!ENTITY servicesMenuMac.label "Hizmetler">
+<!ENTITY hideThisAppCmdMac.label "&brandShortName;'yu Sakla">
+<!ENTITY hideThisAppCmdMac.commandkey "H">
+<!ENTITY hideOtherAppsCmdMac.label "Diğerlerini Sakla">
+<!ENTITY hideOtherAppsCmdMac.commandkey "H">
+<!ENTITY showAllAppsCmdMac.label "Hepsini Göster">
+<!ENTITY quitApplicationCmdMac.label "Zotero'dan Ayrıl">
+<!ENTITY quitApplicationCmdMac.key "Q">
+
+
+<!ENTITY fileMenu.label "Dosya">
+<!ENTITY fileMenu.accesskey "F">
+<!ENTITY saveCmd.label "Kaydet...">
+<!ENTITY saveCmd.key "S">
+<!ENTITY saveCmd.accesskey "A">
+<!ENTITY pageSetupCmd.label "Sayfa Ayarları..">
+<!ENTITY pageSetupCmd.accesskey "U">
+<!ENTITY printCmd.label "Yazdır...">
+<!ENTITY printCmd.key "P">
+<!ENTITY printCmd.accesskey "P">
+<!ENTITY closeCmd.label "Kapat">
+<!ENTITY closeCmd.key "W">
+<!ENTITY closeCmd.accesskey "C">
+<!ENTITY manageAttachments.label "Ekleri Yönet">
+<!ENTITY convertToStored.label "Bağlantılanmış Dosyaları Depolanmış Dosyalara Dönüştür">
+<!ENTITY importCmd.label "İçeri Aktar...">
+<!ENTITY importCmd.key "I">
+<!ENTITY importFromClipboardCmd.label "Panodan İçeri Aktar">
+<!ENTITY quitApplicationCmdWin.label "Çık">
+<!ENTITY quitApplicationCmdWin.accesskey "x">
+<!ENTITY quitApplicationCmd.label "Ayrıl">
+<!ENTITY quitApplicationCmd.accesskey "Q">
+
+
+<!ENTITY copyCitationCmd.label "Alıntı Kopyala">
+<!ENTITY copyBibliographyCmd.label "Kaynakça Kopyala">
+
+<!ENTITY bidiSwitchPageDirectionItem.label "Sayfa Yönünü Değiştir">
+>>>>>>> d16512c84f8a9948362890f1242324e3d4005da6
 <!ENTITY bidiSwitchPageDirectionItem.accesskey "g">
 <!ENTITY bidiSwitchPageDirectionItem.label "Sayfa Yönünü Değiştir">
 <!ENTITY bidiSwitchTextDirectionItem.accesskey "w">

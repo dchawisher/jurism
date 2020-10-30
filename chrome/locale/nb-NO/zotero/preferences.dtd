@@ -231,6 +231,13 @@
 <!ENTITY zotero.preferences.sync.reset.fullSync.desc "Merge local data with data from server, ignoring sync history.">
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory "Tilbakestill synkroniseringshistorikk for data">
 <!ENTITY zotero.preferences.sync.reset.resetDataSyncHistory.desc "Slå sammen lokale data med eksterne data og ignorer synkroniseringshistorikk">
+<<<<<<< HEAD
+=======
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer "Gjenopprett fra nettbiblioteket">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Skriv over lokale Zotero data med data fra nettbiblioteket">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer "Erstatt nettbiblioteket">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overskriv nettbiblioteket med lokale Zotero data">
+>>>>>>> d16512c84f8a9948362890f1242324e3d4005da6
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Tilbakestill filsynkroniseringshistorikk">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Sammenlign alle vedlegg med lagringstjeneste">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Gjenopprett fra nettbibliotek">

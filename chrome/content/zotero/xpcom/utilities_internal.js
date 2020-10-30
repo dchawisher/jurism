@@ -361,6 +361,35 @@ Zotero.Utilities.Internal = {
 	
 	
 	/**
+	 * Decode a binary string into a typed Uint8Array
+	 *
+	 * @param {String} data - Binary string to decode
+	 * @return {Uint8Array} Typed array holding data
+	 */
+	_decodeToUint8Array: function (data) {
+		var buf = new ArrayBuffer(data.length);
+		var bufView = new Uint8Array(buf);
+		for (let i = 0; i < data.length; i++) {
+			bufView[i] = data.charCodeAt(i);
+		}
+		return bufView;
+	},
+	
+	
+	/**
+	 * Decode a binary string to UTF-8 string
+	 *
+	 * @param {String} data - Binary string to decode
+	 * @return {String} UTF-8 encoded string
+	 */
+	decodeUTF8: function (data) {
+		var bufView = Zotero.Utilities.Internal._decodeToUint8Array(data);
+		var decoder = new TextDecoder();
+		return decoder.decode(bufView);
+	},
+	
+	
+	/**
 	 * Return the byte length of a UTF-8 string
 	 *
 	 * http://stackoverflow.com/a/23329386
@@ -518,6 +547,162 @@ Zotero.Utilities.Internal = {
 		deferred.promise.then(() => clearTimeout(timeoutID));
 		
 		return deferred.promise;
+	},
+
+
+	/**
+	 * Takes in a document, creates a JS Sandbox and executes the SingleFile
+	 * extension to save the page as one single file without JavaScript.
+	 *
+	 * @param {Object} document
+	 * @return {String} Snapshot of the page as a single file
+	 */
+	snapshotDocument: async function (document) {
+		// Create sandbox for SingleFile
+		var view = document.defaultView;
+		var sandbox = new Components.utils.Sandbox(view, { wantGlobalProperties: ["XMLHttpRequest", "fetch"] });
+		sandbox.window = view.window;
+		sandbox.document = sandbox.window.document;
+		sandbox.browser = false;
+		sandbox.__proto__ = sandbox.window;
+
+		sandbox.Zotero = Components.utils.cloneInto({ HTTP: {} }, sandbox);
+		sandbox.Zotero.debug = Components.utils.exportFunction(Zotero.debug, sandbox);
+		// Mostly copied from:
+		// resources/SingleFile/extension/lib/single-file/fetch/bg/fetch.js::fetchResource
+		sandbox.coFetch = Components.utils.exportFunction(
+			function (url, onDone) {
+				const xhrRequest = new XMLHttpRequest();
+				xhrRequest.withCredentials = true;
+				xhrRequest.responseType = "arraybuffer";
+				xhrRequest.onerror = () => {
+					let error = { error: `Request failed for ${url}` };
+					onDone(Components.utils.cloneInto(error, sandbox));
+				};
+				xhrRequest.onreadystatechange = () => {
+					if (xhrRequest.readyState == XMLHttpRequest.DONE) {
+						if (xhrRequest.status || xhrRequest.response.byteLength) {
+							let res = {
+								array: new Uint8Array(xhrRequest.response),
+								headers: { "content-type": xhrRequest.getResponseHeader("Content-Type") },
+								status: xhrRequest.status
+							};
+							// Ensure sandbox will have access to response by cloning
+							onDone(Components.utils.cloneInto(res, sandbox));
+						}
+						else {
+							let error = { error: 'Bad Status or Length' };
+							onDone(Components.utils.cloneInto(error, sandbox));
+						}
+					}
+				};
+				xhrRequest.open("GET", url, true);
+				xhrRequest.send();
+			},
+			sandbox
+		);
+
+		// First we try regular fetch, then proceed with fetch outside sandbox to evade CORS
+		// restrictions, partly from:
+		// resources/SingleFile/extension/lib/single-file/fetch/content/content-fetch.js::fetch
+		Components.utils.evalInSandbox(
+			`
+			ZoteroFetch = async function (url) {
+				try {
+					let response = await fetch(url, { cache: "force-cache" });
+					return response;
+				}
+				catch (error) {
+					let response = await new Promise((resolve, reject) => {
+						coFetch(url, (response) => {
+							if (response.error) {
+								Zotero.debug("Error retrieving url: " + url);
+								Zotero.debug(response);
+								reject(new Error(response.error));
+							}
+							else {
+								resolve(response);
+							}
+						});
+					});
+
+					return {
+						status: response.status,
+						headers: { get: headerName => response.headers[headerName] },
+						arrayBuffer: async () => response.array.buffer
+					};
+				}
+			};`,
+			sandbox
+		);
+		
+		const SCRIPTS = [
+			// This first script replace in the INDEX_SCRIPTS from the single file cli loader
+			"lib/single-file/index.js",
+
+			// Rest of the scripts (does not include WEB_SCRIPTS, those are handled in build process)
+			"lib/single-file/processors/hooks/content/content-hooks.js",
+			"lib/single-file/processors/hooks/content/content-hooks-frames.js",
+			"lib/single-file/processors/frame-tree/content/content-frame-tree.js",
+			"lib/single-file/processors/lazy/content/content-lazy-loader.js",
+			"lib/single-file/single-file-util.js",
+			"lib/single-file/single-file-helper.js",
+			"lib/single-file/vendor/css-tree.js",
+			"lib/single-file/vendor/html-srcset-parser.js",
+			"lib/single-file/vendor/css-minifier.js",
+			"lib/single-file/vendor/css-font-property-parser.js",
+			"lib/single-file/vendor/css-unescape.js",
+			"lib/single-file/vendor/css-media-query-parser.js",
+			"lib/single-file/modules/html-minifier.js",
+			"lib/single-file/modules/css-fonts-minifier.js",
+			"lib/single-file/modules/css-fonts-alt-minifier.js",
+			"lib/single-file/modules/css-matched-rules.js",
+			"lib/single-file/modules/css-medias-alt-minifier.js",
+			"lib/single-file/modules/css-rules-minifier.js",
+			"lib/single-file/modules/html-images-alt-minifier.js",
+			"lib/single-file/modules/html-serializer.js",
+			"lib/single-file/single-file-core.js",
+			"lib/single-file/single-file.js",
+
+			// Web SCRIPTS
+			"lib/single-file/processors/hooks/content/content-hooks-frames-web.js",
+			"lib/single-file/processors/hooks/content/content-hooks-web.js",
+		];
+
+		const { loadSubScript } = Components.classes['@mozilla.org/moz/jssubscript-loader;1']
+			.getService(Ci.mozIJSSubScriptLoader);
+
+		Zotero.debug('Injecting single file scripts');
+		// Run all the scripts of SingleFile scripts in Sandbox
+		SCRIPTS.forEach(
+			script => loadSubScript('resource://zotero/SingleFile/' + script, sandbox)
+		);
+		// Import config
+		loadSubScript('chrome://zotero/content/xpcom/singlefile.js', sandbox);
+
+		// In the client we turn off this auto-zooming feature because it does not work
+		// since the hidden browser does not have a clientHeight.
+		Components.utils.evalInSandbox(
+			'Zotero.SingleFile.CONFIG.loadDeferredImagesKeepZoomLevel = true;',
+			sandbox
+		);
+		
+		await Zotero.Promise.delay(1500);
+		
+		// Use SingleFile to retrieve the html
+		const pageData = await Components.utils.evalInSandbox(
+			`this.singlefile.lib.getPageData(
+				Zotero.SingleFile.CONFIG,
+				{ fetch: ZoteroFetch }
+			);`,
+			sandbox
+		);
+		
+		// Clone so we can nuke the sandbox
+		let content = pageData.content;
+		Components.utils.nukeSandbox(sandbox);
+
+		return content;
 	},
 	
 	

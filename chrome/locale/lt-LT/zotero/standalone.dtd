@@ -83,10 +83,17 @@
 <!ENTITY importCmd.label "Importuoti...">
 <!ENTITY importFromClipboardCmd.label "Importuoti iškarpinės turinį">
 <!ENTITY installConnector.accesskey "C">
+<<<<<<< HEAD
 <!ENTITY installConnector.label "Įdiegti papildinį naršyklei">
 <!ENTITY itemPane.label "Įrašo skydelis">
 <!ENTITY layout.label "Išdėstymas">
 <!ENTITY manageAttachments.label "Tvarkyti pridėtas rinkmenas">
+=======
+<!ENTITY addons.label "Priedai">
+<!ENTITY developer.label "Programuotojams">
+
+
+>>>>>>> d16512c84f8a9948362890f1242324e3d4005da6
 <!ENTITY minimizeWindow.key "r">
 <!ENTITY minimizeWindow.label "Suskleisti">
 <!ENTITY noteFontSize.label "Pastabos šrifto dydis">
