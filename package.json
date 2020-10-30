@@ -27,7 +27,9 @@
     "react-intl": "^3.4.0",
     "react-select": "^3.0.8",
     "sqlite3": "^4.1.0",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "xmldom2": "^0.1.19",
+    "xpath": "0.0.32"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
