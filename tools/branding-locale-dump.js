@@ -18,6 +18,7 @@ var choices = new query({
 	choices: [
 		" Jurism",
 		" Zotero",
+		" Save to BRANDO-FORCE",
 		" Save and quit"
 	]
 });
@@ -34,8 +35,9 @@ var doneOnes = {};
 
 const editLine = async (str) => {
 	var retstr = "";
-	var lst = str.split(/(?:Zotero|Juris-M)/);
-	var mm = str.match(/(Zotero|Juris-M)/g);
+	// REGEXP
+	var lst = str.split(/(?:Zotero)/);
+	var mm = str.match(/(Zotero)/g);
 	var fakemm = mm.slice();
 	for (var j=0,jlen=lst.length;j<jlen-1;j++) {
 		fakemm[j] = bold(red(underline(mm[j])));
@@ -50,6 +52,9 @@ const editLine = async (str) => {
 		if (res === " Save and quit") {
 			fs.writeFileSync(outpth, ret);
 			process.exit();
+		} else if (res === " Save to BRANDO-FORCE") {
+			clear();
+			return "SAVE-TO-BRANDO-FORCE";
 		} else {
 			if (res) {
 				mm[j] = res.trim();
@@ -66,6 +71,18 @@ const editLine = async (str) => {
 	return retstr;
 }
 
+const saveToBrandoForce = (key, fn, str) => {
+	var ret = "";
+	ret += `${key}@${fn}\n`;
+	ret += `    ${str}\n`;
+	var txt = "";
+	if (fs.existsSync("BRANDO-FORCE.txt")) {
+		txt = fs.readFileSync("BRANDO-FORCE.txt").toString();
+	}
+	txt += ret;
+	fs.writeFileSync("BRANDO-FORCE.txt", txt);
+};
+
 async function showLines(mode, fn, txt) {
 	var lines = txt.split("\n");
 	for (var i=0,ilen=lines.length; i<ilen; i++) {
@@ -76,13 +93,17 @@ async function showLines(mode, fn, txt) {
 				var key = m[1];
 				var str = m[2];
 				if (doneOnes[`${key}@${fn}`]) continue;
-				if (str.indexOf("Zotero") === -1 && str.indexOf("Juris-M") === -1) continue;
+				if (str.indexOf("Zotero") === -1) continue;
 				//count++;
 				//continue;
 				var fixedLine = await editLine(str);
-				doneOnes[`${key}@${fn}`] = true;
-				ret += `${key}@${fn}\n`;
-				ret += `    ${fixedLine}\n`;
+				// doneOnes[`${key}@${fn}`] = true;
+				if (fixedLine === "SAVE-TO-BRANDO-FORCE") {
+					saveToBrandoForce(key, fn, str);
+				} else {
+					ret += `${key}@${fn}\n`;
+					ret += `    ${fixedLine}\n`;
+				}
 			}
 		} else if (mode === "properties") {
 			var m = line.match(/^(.*?)\s+=\s+(.*)/);
@@ -90,13 +111,16 @@ async function showLines(mode, fn, txt) {
 				var key = m[1];
 				var str = m[2];
 				if (doneOnes[`${key}@${fn}`]) continue;
-				if (str.indexOf("Zotero") === -1 && str.indexOf("Juris-M") === -1) continue;
+				if (str.indexOf("Zotero") === -1) continue;
 				//count++;
 				//continue;
 				var fixedLine = await editLine(str);
-				doneOnes[`${key}@${fn}`] = true;
-				ret += `${key}@${fn}\n`;
-				ret += `    ${fixedLine}\n`;
+				if (fixedLine === "SAVE-TO-BRANDO-FORCE") {
+					saveToBrandoForce(key, fn, str);
+				} else {
+					ret += `${key}@${fn}\n`;
+					ret += `    ${fixedLine}\n`;
+				}
 			}
 		}
 	}
@@ -106,6 +130,14 @@ run = async () => {
 	clear();
 	if (fs.existsSync(outpth)) {
 		ret = fs.readFileSync(outpth).toString();
+		var lines = ret.split("\n");
+		for (var line of lines) {
+			if (line.match(/^\s+/)) continue;
+			doneOnes[line.trim()] = true;
+		}
+	}
+	if (fs.existsSync("BRANDO-FORCE.txt")) {
+		ret = fs.readFileSync("BRANDO-FORCE.txt").toString();
 		var lines = ret.split("\n");
 		for (var line of lines) {
 			if (line.match(/^\s+/)) continue;

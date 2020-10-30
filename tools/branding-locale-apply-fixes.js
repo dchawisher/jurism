@@ -88,8 +88,8 @@ const setStringsInLocaleFiles = (repl) => {
 					if (repl[fn][key].text) {
 						str = repl[fn][key].text;
 					} else if (repl[fn][key].words) {
-						var lst = str.split(/(?:Jurism|Juris-M|Zotero)/);
-						var mWords = str.match(/(?:Jurism|Juris-M|Zotero)/g);
+						var lst = str.split(/(?:Zotero)/);
+						var mWords = str.match(/(?:Zotero)/g);
 						if (!mWords) continue;
 						var replWords = repl[fn][key].words;
 						replWords = replWords.slice(0, mWords.length);
