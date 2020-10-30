@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "Kısayollar">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Temel dizin:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Bağlantılanmış Ek Taban Dizini">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero, bağlantılanmış dosya ekleri için göreceli yollar kullanacaktır. Bu, temel dizininizdeki dosya yapınız aynı kaldığı sürece, dosyalarınıza değişik bilgisayarlarda ulaşımınızı sağlamaktadır.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism, bağlantılanmış dosya ekleri için göreceli yollar kullanacaktır. Bu, temel dizininizdeki dosya yapınız aynı kaldığı sürece, dosyalarınıza değişik bilgisayarlarda ulaşımınızı sağlamaktadır.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Mutlak Yollara Geri Döndür...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Seç...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "PDF'ler için otomatik olarak üstveri al ">
@@ -51,7 +51,7 @@
 <!ENTITY zotero.preferences.default "Varsayılan:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Eserleri kaydederken ilişkilendirilen PDF ve diğer dosyaları da otomatik olarak ekle">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Kaynakçalara makale URL'leri dahil edilsin">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Bu seçenek devre dışı bırakıldığında, Zotero, bilimsel dergi, magazin ve gazete makalelerine olan alıntılara URL'leri, yalnızca bir sayfa aralığı belirtilmediği halde ekleyecektir.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Bu seçenek devre dışı bırakıldığında, Jurism, bilimsel dergi, magazin ve gazete makalelerine olan alıntılara URL'leri, yalnızca bir sayfa aralığı belirtilmediği halde ekleyecektir.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Ek stiller indir...">
@@ -89,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Juris-M Bölmesini Aç/Kapa">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Çelişen kısayolların üzerine yazdırmayı dene">
 <!ENTITY zotero.preferences.keys.quicksearch "Çabuk Arama">
-<!ENTITY zotero.preferences.keys.saveToZotero "Zotero'ya Kaydet (adres çubuğu ikonu)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Jurism'ya Kaydet (adres çubuğu ikonu)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Tüm Besleme Eserlerini Okunmuş/Okunmamış İşaretle">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Tam Ekran Moduna Geç">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Etiket Seçiciyi Aç">
@@ -126,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Düzen:">
 <!ENTITY zotero.preferences.layout.stacked "Üst üste yığılmış">
 <!ENTITY zotero.preferences.layout.standard "Standart">
-<!ENTITY zotero.preferences.locate.addDescription "Listede olmayan bir Bakma Motoru eklemek için, tarayıcınızda istediğiniz arama moturunu ziyaret edip Zotero'nun Yerini Bul menüsünden &quot;Ekle&quot;yi seçiniz.">
+<!ENTITY zotero.preferences.locate.addDescription "Listede olmayan bir Bakma Motoru eklemek için, tarayıcınızda istediğiniz arama moturunu ziyaret edip Jurism'nun Yerini Bul menüsünden &quot;Ekle&quot;yi seçiniz.">
 <!ENTITY zotero.preferences.locate.description "Tanım">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Makale Bakma Motoru Yöneticisi">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Bir Bakma Motoru, Bilgi bölmesindeki Yerini Bul açılırının yeteneklerini genişletir. Bakma Motorlarını aşağıdaki listede etkinleştirerek bu açılıra ekleyebilir ve onları kitaplığınızdaki kaynakların yerlerini bulmak amacıyla webde kullanabilirsiniz.">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Çözücü ara">
 <!ENTITY zotero.preferences.openurl.server "Çözücü:">
 <!ENTITY zotero.preferences.openurl.version "Sürüm:">
-<!ENTITY zotero.preferences.parseRISRefer "İndirilmiş BibTeX/RIS/Refer dosyaları için, Zotero'yu kullan">
+<!ENTITY zotero.preferences.parseRISRefer "İndirilmiş BibTeX/RIS/Refer dosyaları için, Jurism'yu kullan">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Gelişmiş">
 <!ENTITY zotero.preferences.prefpane.cite "Alıntı Yap">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Ayarlanmış Vekil Sunucular">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Dizin yolu (ör., about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "bakınız.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero, istekleri kayıtlı vekil sunucular aracılığı ile açık bir şekilde yönlendirecektir. Daha fazla bilgi için">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism, istekleri kayıtlı vekil sunucular aracılığı ile açık bir şekilde yönlendirecektir. Daha fazla bilgi için">
 <!ENTITY zotero.preferences.proxies.desc_link "vekil sunucu belgelerine">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Etki alanı adı bunları içeriyorsa vekil sunucuya yönlendirmeyi devre dışı bırak: ">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Dosyaadı (ör., index.html)">
@@ -234,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Dosya Eşitleme Geçmişini Sıfırla">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Tüm ek dosyaları depolama hizmetindekilerle karşılaştır">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Çevrimiçi Kitaplıktan Geri Yükle">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Yerel Zotero verilerinin üzerine çevrimiçi kitaplıktaki verileri yaz.">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Yerel Jurism verilerinin üzerine çevrimiçi kitaplıktaki verileri yaz.">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Çevrimiçi Kitaplığı Değiştir">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Çevrimiçi kitaplıktaki verilerin üzerine yerel Zotero verilerini yaz.">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Çevrimiçi kitaplıktaki verilerin üzerine yerel Jurism verilerini yaz.">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Aşağıdaki işlemler, yalnızca ender ve özel durumlar altında kullanılmalı, ve genel sorun giderme amaçlı kullanılmamalıdırlar. Birçok durumda, sıfırlama ek sorunlara neden olacaktır. Daha fazla bilgi için ">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Eşitlemeyi Sıfırlama Seçenekleri'ne">
 <!ENTITY zotero.preferences.sync.reset.warning3 " bakınız.">
 <!ENTITY zotero.preferences.sync.setUpSync "Eşitlemeyi Kur">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Kendiliğinden eşitle">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Tüm-metin içeriği eşitle">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero, Zotero kitaplıklarınızdaki dosyaların tüm-metin içeriklerini zotero.org ve diğer bağlantılı cihazlarla eşitliyebilir. Bu sayede her yerden kolayca dosyalarınızı arayabilirsiniz. Dosyalarınızın tüm-metin içerikleri herkese açık olarak paylaşılmayacaktır.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism, Zotero kitaplıklarınızdaki dosyaların tüm-metin içeriklerini zotero.org ve diğer bağlantılı cihazlarla eşitliyebilir. Bu sayede her yerden kolayca dosyalarınızı arayabilirsiniz. Dosyalarınızın tüm-metin içerikleri herkese açık olarak paylaşılmayacaktır.">
 <!ENTITY zotero.preferences.sync.syncServer "Veri Eşitleme">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Hesabı İlişkisizlendir...">
 <!ENTITY zotero.preferences.sync.username "Kullanıcı:">
-<!ENTITY zotero.preferences.title "Zotero Tercihleri">
+<!ENTITY zotero.preferences.title "Jurism Tercihleri">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "gün">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Bu kadar zaman önce Çöp Sepetine gönderilmiş eserleri otomatik olarak sil:">
 <!ENTITY zotero.preferences.updateNow "Şimdi Güncelle">

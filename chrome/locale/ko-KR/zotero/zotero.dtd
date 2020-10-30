@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "항목의 다른 버전과 무관하게 유지할 필드 선택:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "원본 항목으로 사용할 항목의 버전 선택:">
 <!ENTITY zotero.errorReport.notReviewed "오류 보고서는 일반적으로 포럼내에서 언급하지 않는 한 재검토하지 않습니다.">
-<!ENTITY zotero.errorReport.postToForums "Zotero 포럼(forums.zotero.org)에 보고서 ID, 문제 설명, 및 그것을 재연하는데 필요한 순서와 함께 메시지를 게시해주시기 바랍니다.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "보고서 ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "오류 보고가 제출되는 동안 기다려 주세요.">
 <!ENTITY zotero.errorReport.submitted "오류 보고가 제출되었습니다.">
-<!ENTITY zotero.errorReport.title "Zotero 오류 보고">
+<!ENTITY zotero.errorReport.title "Jurism 오류 보고">
 <!ENTITY zotero.errorReport.unrelatedMessages "Juris-M와 관련 없는 메시지가 포함될 수 있습니다.">
 <!ENTITY zotero.exportOptions.format.label "형식:">
 <!ENTITY zotero.exportOptions.title "내보내기...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "불러오는 중...">
 <!ENTITY zotero.import.lastModified "마지막 수정 시간">
 <!ENTITY zotero.import.size "크기">
-<!ENTITY zotero.import.source.file "파일 (BiBTeX, RIS, Zotero RDF 등)">
+<!ENTITY zotero.import.source.file "파일 (BiBTeX, RIS, Jurism RDF 등)">
 <!ENTITY zotero.import.whereToImportFrom "어디서 불러올까요?">
 <!ENTITY zotero.integration.addEditCitation.title "인용 추가/편집">
 <!ENTITY zotero.integration.classicView.label "클래식 뷰">
@@ -229,14 +229,14 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "모호한 인용">
 <!ENTITY zotero.rtfScan.cancel.label "취소">
 <!ENTITY zotero.rtfScan.citation.label "인용">
-<!ENTITY zotero.rtfScan.citationsPage.description "다음의 인식된 인용 목록을 검토하여 Zotero가 상응하는 항목을 정확하게 선택했는지 확인하세요. 애매하거나 올바르지 않은 인용이 있으면 다음 단계로 넘어가기 전에 반드시 바르게 수정해야 합니다.">
+<!ENTITY zotero.rtfScan.citationsPage.description "다음의 인식된 인용 목록을 검토하여 Jurism가 상응하는 항목을 정확하게 선택했는지 확인하세요. 애매하거나 올바르지 않은 인용이 있으면 다음 단계로 넘어가기 전에 반드시 바르게 수정해야 합니다.">
 <!ENTITY zotero.rtfScan.citationsPage.label "인용된 항목 확인">
 <!ENTITY zotero.rtfScan.completePage.description "이제 문서가 스캔되어 처리되었습니다. 문서 형식이 올바른지 확인하여 주십시오.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF 스캔 완료">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero가 RTF 파일을 처리하고 형식화하는 중입니다. 잠시 기다려 주십시오.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism가 RTF 파일을 처리하고 형식화하는 중입니다. 잠시 기다려 주십시오.">
 <!ENTITY zotero.rtfScan.formatPage.label "인용 형식 정하는 중">
 <!ENTITY zotero.rtfScan.inputFile.label "입력 파일">
-<!ENTITY zotero.rtfScan.introPage.description "Zotero가 자동적으로 인용을 인식하여 참고문헌 목록을 작성하고 이를 RTF 파일에 삽입합니다. RTF 스캔 기능은 현재 다음 형식으로 된 인용을 인식할 수 있습니다 : ">
+<!ENTITY zotero.rtfScan.introPage.description "Jurism가 자동적으로 인용을 인식하여 참고문헌 목록을 작성하고 이를 RTF 파일에 삽입합니다. RTF 스캔 기능은 현재 다음 형식으로 된 인용을 인식할 수 있습니다 : ">
 <!ENTITY zotero.rtfScan.introPage.description2 "시작하려면, 입력할 RTF 파일과 출력할 RTF 파일을 선택하세요 : ">
 <!ENTITY zotero.rtfScan.introPage.label "소개">
 <!ENTITY zotero.rtfScan.itemName.label "항목 명">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "태그 이름 변경...">
 <!ENTITY zotero.tagSelector.selectVisible "보이는 것들 선택">
 <!ENTITY zotero.tagSelector.showAutomatic "자동 표시">
-<!ENTITY zotero.toolbar.about.label "Zotero 정보">
+<!ENTITY zotero.toolbar.about.label "Jurism 정보">
 <!ENTITY zotero.toolbar.actions.label "동작">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "을 참조하시기 바랍니다.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "업그레이드를 진행하기 전에">
 <!ENTITY zotero.upgrade.majorUpgradeLink "업그레이드 지침">
-<!ENTITY zotero.upgrade.newVersionInstalled "새 버전의 Zotero를 설치했습니다.">
-<!ENTITY zotero.upgrade.title "Zotero 업그레이드 마법사">
+<!ENTITY zotero.upgrade.newVersionInstalled "새 버전의 Jurism를 설치했습니다.">
+<!ENTITY zotero.upgrade.title "Jurism 업그레이드 마법사">
 <!ENTITY zotero.upgrade.upgradeInProgress "업그레이드 과정이 끝나기까지 기다려 주십시오. 몇 분정도 걸릴 예정입니다.">
-<!ENTITY zotero.upgrade.upgradeRequired "Zotero 데이터베이스는 반드시 새 버전으로 작업하기 위해 업그레이드 해야 합니다.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Zotero 데이타베이스는 성공적으로 업그레이드 되었습니다.">
+<!ENTITY zotero.upgrade.upgradeRequired "Jurism 데이터베이스는 반드시 새 버전으로 작업하기 위해 업그레이드 해야 합니다.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Jurism 데이타베이스는 성공적으로 업그레이드 되었습니다.">

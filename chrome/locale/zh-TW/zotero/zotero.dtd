@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "選取欄位，以防止項目之其他版本：">
 <!ENTITY zotero.duplicatesMerge.versionSelect "選擇項目之版本，以用作主項目(master item)：">
 <!ENTITY zotero.errorReport.notReviewed "除非論壇上有提到，否則不會有人檢閱錯誤報告。">
-<!ENTITY zotero.errorReport.postToForums "請在 Zotero 論壇 (forums.zotero.org) 上張貼一個訊息，內含這個報告識別號、問題的描述、及產生問題的必要步驟。">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "報告識別號：">
 <!ENTITY zotero.errorReport.submissionInProgress "正送出錯誤報告，請稍等。">
 <!ENTITY zotero.errorReport.submitted "錯誤報告已送出。">
-<!ENTITY zotero.errorReport.title "Zotero 錯誤報告">
+<!ENTITY zotero.errorReport.title "Jurism 錯誤報告">
 <!ENTITY zotero.errorReport.unrelatedMessages "這可能包括無關於 Juris-M 的訊息。">
 <!ENTITY zotero.exportOptions.format.label "格式：">
 <!ENTITY zotero.exportOptions.title "匯出…">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "匯入中...">
 <!ENTITY zotero.import.lastModified "Last Modified">
 <!ENTITY zotero.import.size "大小">
-<!ENTITY zotero.import.source.file "一檔案 (BibTeX, RIS, Zotero RDF, 等)">
+<!ENTITY zotero.import.source.file "一檔案 (BibTeX, RIS, Jurism RDF, 等)">
 <!ENTITY zotero.import.whereToImportFrom "想從哪匯入？">
 <!ENTITY zotero.integration.addEditCitation.title "新增/編輯引用文獻">
 <!ENTITY zotero.integration.classicView.label "傳統的外觀">
@@ -229,11 +229,11 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "不明的引用文獻">
 <!ENTITY zotero.rtfScan.cancel.label "取消">
 <!ENTITY zotero.rtfScan.citation.label "引用文獻">
-<!ENTITY zotero.rtfScan.citationsPage.description "請檢閱下列辨識出的引用文獻來確定 Zotero 正確的選出了相關的項目。在進到下一步前所有無對映或是不明的引用文獻都須被解決。">
+<!ENTITY zotero.rtfScan.citationsPage.description "請檢閱下列辨識出的引用文獻來確定 Jurism 正確的選出了相關的項目。在進到下一步前所有無對映或是不明的引用文獻都須被解決。">
 <!ENTITY zotero.rtfScan.citationsPage.label "查證引用的項目">
 <!ENTITY zotero.rtfScan.completePage.description "文件已掃描及處理完畢。請確認其格式正確。">
 <!ENTITY zotero.rtfScan.completePage.label "RTF 掃描完畢">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero 正在處理並格式化 RTF 檔。請耐心等候。">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism 正在處理並格式化 RTF 檔。請耐心等候。">
 <!ENTITY zotero.rtfScan.formatPage.label "格式化引用文獻">
 <!ENTITY zotero.rtfScan.inputFile.label "輸入檔案">
 <!ENTITY zotero.rtfScan.introPage.description "otero 能自動取出及重格式化引用文獻，並將參考書目插入 RTF 檔中。RTF 檔掃描功能目前支援以下引用文獻格式的一些變化：">
@@ -242,7 +242,7 @@
 <!ENTITY zotero.rtfScan.itemName.label "項目名稱">
 <!ENTITY zotero.rtfScan.mappedCitations.label "有對映的引用文獻">
 <!ENTITY zotero.rtfScan.outputFile.label "輸出檔案">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero 在掃描文件中的引用文獻。請耐心等候。">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism 在掃描文件中的引用文獻。請耐心等候。">
 <!ENTITY zotero.rtfScan.scanPage.label "掃描引用文獻">
 <!ENTITY zotero.rtfScan.stylePage.label "文件格式化">
 <!ENTITY zotero.rtfScan.title "RTF 掃描">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "同步錯誤">
 <!ENTITY zotero.sync.longTagFixer.character "個字元">
 <!ENTITY zotero.sync.longTagFixer.characters "個字元">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "您的 Zotero 文獻庫中以下的標籤太長而無法與伺服器同步：">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "您的 Jurism 文獻庫中以下的標籤太長而無法與伺服器同步：">
 <!ENTITY zotero.sync.longTagFixer.split "分割">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "分割的位置在第">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "您可以將過長的標籤切割成多個標籤，或手工編輯來讓它變短，或刪除它。">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "重新命名標籤…">
 <!ENTITY zotero.tagSelector.selectVisible "選取可見的">
 <!ENTITY zotero.tagSelector.showAutomatic "顯示自動的">
-<!ENTITY zotero.toolbar.about.label "關於 Zotero">
+<!ENTITY zotero.toolbar.about.label "關於 Jurism">
 <!ENTITY zotero.toolbar.actions.label "行動">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "。">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "繼續之前，請確認您已詳閱過">
 <!ENTITY zotero.upgrade.majorUpgradeLink "升級指示">
-<!ENTITY zotero.upgrade.newVersionInstalled "已安裝了新版 Zotero。">
-<!ENTITY zotero.upgrade.title "Zotero 更新精靈">
+<!ENTITY zotero.upgrade.newVersionInstalled "已安裝了新版 Jurism。">
+<!ENTITY zotero.upgrade.title "Jurism 更新精靈">
 <!ENTITY zotero.upgrade.upgradeInProgress "請等候升級完成。這可能會花幾分鐘的時間。">
-<!ENTITY zotero.upgrade.upgradeRequired "目前的 Zotero 資料庫一定得升級，才能與新版搭配使用。">
-<!ENTITY zotero.upgrade.upgradeSucceeded "已成功升級 Zotero 資料庫。">
+<!ENTITY zotero.upgrade.upgradeRequired "目前的 Jurism 資料庫一定得升級，才能與新版搭配使用。">
+<!ENTITY zotero.upgrade.upgradeSucceeded "已成功升級 Jurism 資料庫。">

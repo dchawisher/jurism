@@ -63,10 +63,10 @@
     "message": "O $1 não foi capaz de comunicar com a aplicação de secretária $2. O $2 tem de estar aberto para usar a citação baseada na Web."
   },
   "integration_googleDocs_unlinkBeforeSaving_warning": {
-    "message": "Este documento contém citações ativas do Zotero que irão aparecer como hiperligações zotero.org numa cópia descarregada."
+    "message": "Este documento contém citações ativas do Jurism que irão aparecer como hiperligações zotero.org numa cópia descarregada."
   },
   "integration_googleDocs_unlinkBeforeSaving_instructions": {
-    "message": "Para gerar uma versão apropriada para partilha, selecione <b>Criar uma cópia…</b> no menu Ficheiro, selecione, no novo documento, <b>Desligar Citações</b> no menu Zotero e descarregue então a versão desligada. Mantenha este documento ligado para o caso de necessitar de fazer mais alterações."
+    "message": "Para gerar uma versão apropriada para partilha, selecione <b>Criar uma cópia…</b> no menu Ficheiro, selecione, no novo documento, <b>Desligar Citações</b> no menu Jurism e descarregue então a versão desligada. Mantenha este documento ligado para o caso de necessitar de fazer mais alterações."
   },
   "integration_googleDocs_unlinkBeforeSaving_downloadAnyway": {
     "message": "Descarregar Versão Ligada de Qualquer Modo"

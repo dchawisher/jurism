@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "x">
 <!ENTITY quitApplicationCmd.label "Sair">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Sair do Zotero">
+<!ENTITY quitApplicationCmdMac.label "Sair do Jurism">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Sair">
 <!ENTITY recursiveCollections.label "Mostrar Itens de Subcolecções">

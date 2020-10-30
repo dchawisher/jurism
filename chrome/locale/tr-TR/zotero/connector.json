@@ -63,7 +63,7 @@
     "message": "$1, $2 masaüstü uygulamasıyla iletişim kuramamaktadır. Web bazlı alıntı yapabilmek için $2 açık olmalıdır."
   },
   "integration_googleDocs_unlinkBeforeSaving_warning": {
-    "message": "Bu belge aktif Zotero alıntıları içermektedir ve bu alıntılar belgenin indirilmiş kopyalarında zotero.org bağlantıları olarak görüneceklerdir."
+    "message": "Bu belge aktif Jurism alıntıları içermektedir ve bu alıntılar belgenin indirilmiş kopyalarında zotero.org bağlantıları olarak görüneceklerdir."
   },
   "integration_googleDocs_unlinkBeforeSaving_instructions": {
     "message": "Paylaşılmaya uygun bir versiyon üretmek için, önce <b>Kopya yarat...</b>seçeneğini, sonra da <b>Alıntıları Bağlantısızlaştır</b> seçeneğini seçiniz ve sonra bağlantısızlaştırılmış versiyonu indiriniz. Belgenizin bağlantıları içeren asıl versiyonunu, gelecekte değişiklikler yapabilmek için tutunuz."

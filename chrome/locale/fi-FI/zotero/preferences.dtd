@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "Pikanäppäimet">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Juurikansio:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Linkattujen liitteiden juurikansio">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero käyttää suhteellisia polkuja viitatakseen tiedostoliitteisiin juurikansiossa, joten voit käyttää tiedostoja eri tietokoneilla, kunhan tiedostorakenne juurikansion sisällä pysyy samana.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism käyttää suhteellisia polkuja viitatakseen tiedostoliitteisiin juurikansiossa, joten voit käyttää tiedostoja eri tietokoneilla, kunhan tiedostorakenne juurikansion sisällä pysyy samana.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Palauta absoluuttiset polut...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Valitse...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Nouda metadata PDF-tiedostoille automaattisesti">
@@ -51,7 +51,7 @@
 <!ENTITY zotero.preferences.default "Oletus:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Liitä automaattisesti asiaankuuluvat PDF:t ja muut tiedostot">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Liitä painettujen artikkeleiden internet-osoitteet viitteisiin">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Kun tämä valinta on pois päältä, Zotero lisää internet-osoitteet tieteellisten lehtien, aikakauslehtien ja sanomalehtien artikkeleihin vain silloin kun niiden sivunumeroja ei ole määritelty.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Kun tämä valinta on pois päältä, Jurism lisää internet-osoitteet tieteellisten lehtien, aikakauslehtien ja sanomalehtien artikkeleihin vain silloin kun niiden sivunumeroja ei ole määritelty.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Hanki lisää tyylejä...">
@@ -89,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Avaa/sulje Juris-M-ikkuna">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Yritä ohittaa keskenään ristiriitaiset pikanäppäimet">
 <!ENTITY zotero.preferences.keys.quicksearch "Pikahaku">
-<!ENTITY zotero.preferences.keys.saveToZotero "Tallenna Zoteroon (osoitepalkin kuvake)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Tallenna Jurismon (osoitepalkin kuvake)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Merkitse kaikki syötteen kohteet luetuiksi/lukemattomiksi">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Koko ruudun tila">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Aiheenvalitsin päälle/pois">
@@ -126,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Asettelu">
 <!ENTITY zotero.preferences.layout.stacked "Pinottu">
 <!ENTITY zotero.preferences.layout.standard "Vakio">
-<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Zotero’s Locate menu.">
+<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Jurism’s Locate menu.">
 <!ENTITY zotero.preferences.locate.description "Kuvaus">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Artikkelihakumoottorin hallinta">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Artikkelihakumoottori laajentaa Info-sivulla olevan Paikanna-valikon toimintaa. Laittamalla päälle alla luetellut artikkelihakumoottorit ne lisätään pudotusvalikkoon ja niitä voi käyttää kirjastossasi olevien resurssien etsimiseen webistä.">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Etsi linkkipalvelimia">
 <!ENTITY zotero.preferences.openurl.server "Palvelin:">
 <!ENTITY zotero.preferences.openurl.version "Versio:">
-<!ENTITY zotero.preferences.parseRISRefer "Käytä Zoteroa ladattujen BibTeX/Refer-tiedostojen avaamiseen">
+<!ENTITY zotero.preferences.parseRISRefer "Käytä Jurisma ladattujen BibTeX/Refer-tiedostojen avaamiseen">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Lisäasetukset">
 <!ENTITY zotero.preferences.prefpane.cite "Viitteet">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Konfiguroidut välityspalvelimet">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Hakemistopolku (esim. about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "lisätietoja.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero välittää huomaamattomasti pyyntöjä tallennettujen välityspalvelinten kautta. Katso">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism välittää huomaamattomasti pyyntöjä tallennettujen välityspalvelinten kautta. Katso">
 <!ENTITY zotero.preferences.proxies.desc_link "välityspalvelinten ohjeesta">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Poista käytöstä välitetty uudelleenohjaus, kun palvelinnimessä on">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Tiedostonimi (esim. index.html)">
@@ -234,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Poista tiedostojen synkronointihistoria">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Vertaa kaikkia liitetiedostoja tallennuspalvelun kanssa">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restore from Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Zotero data with data from the online library.">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Overwrite local Jurism data with data from the online library.">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Replace Online Library">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Zotero data">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Overwrite online library with local Jurism data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Seuraavat toiminnot ovat tarpeen vain äärimmäisen harvinaisissa tilanteissa, eikä niitä tulisi käyttää tavalliseen virheenetsintään. Monissa tapauksissa asetusten nollaus voi aiheuttaa lisää ongelmia. Katso ">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Synkroinnin nollauksen asetukset">
 <!ENTITY zotero.preferences.sync.reset.warning3 "saadaksesi lisätietoja.">
 <!ENTITY zotero.preferences.sync.setUpSync "Määritä synkronointi">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Synkronoi automaattisesti">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synkronisoi kokotekstit">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero voi synkronisoida kirjastossasi olevien tiedostojen kokotekstisisällön zotero.orgiin ja linkattuihin laitteisiin, joten voi helposti hakea tietoja missä vain. Tiedostojen kokotekstisisältöä ei jaeta julkisesti.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism voi synkronisoida kirjastossasi olevien tiedostojen kokotekstisisällön zotero.orgiin ja linkattuihin laitteisiin, joten voi helposti hakea tietoja missä vain. Tiedostojen kokotekstisisältöä ei jaeta julkisesti.">
 <!ENTITY zotero.preferences.sync.syncServer "Data Syncing">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Unlink Account…">
 <!ENTITY zotero.preferences.sync.username "Käyttäjätunnus:">
-<!ENTITY zotero.preferences.title "Zoteron asetukset">
+<!ENTITY zotero.preferences.title "Jurismn asetukset">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "päivää sitten">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Poista roskakorista automaattisesti nimikkeet, jotka poistettiin yli">
 <!ENTITY zotero.preferences.updateNow "Päivitä nyt">

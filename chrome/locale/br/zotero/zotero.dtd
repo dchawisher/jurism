@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Diuzañ ar maeziennoù da virout diwar stummoù all an elfenn:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Dibabit stumm an elfenn da implijout evel elfenn mestr:">
 <!ENTITY zotero.errorReport.notReviewed "An danevelloù fazioù na vezont ket lennet keit ha ma ne vezont ket daveennet e-barzh ar foromoù.">
-<!ENTITY zotero.errorReport.postToForums "Skrivit ur gemennadenn e-barzh foromoù Zotero (forums.zotero.org) gant an ID danevell-mañ, gant un deskrivadur eus ar gudenn hag ar pazennoù ret heuliañ evit adkaout ar gudenn-se.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "ID danevell:">
 <!ENTITY zotero.errorReport.submissionInProgress "Gortozit e-pad ma vez kaset an danevell fazi mar plij.">
 <!ENTITY zotero.errorReport.submitted "An danevell fazi a zo bet kaset.">
-<!ENTITY zotero.errorReport.title "Fazi danevell Zotero">
+<!ENTITY zotero.errorReport.title "Fazi danevell Jurism">
 <!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Stumm:">
 <!ENTITY zotero.exportOptions.title "Ezporzhiañ...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Oc'h emporzhiañ...">
 <!ENTITY zotero.import.lastModified "Kemm diwezhañ">
 <!ENTITY zotero.import.size "Ment">
-<!ENTITY zotero.import.source.file "Ur restr (BibTeX, RIS, Zotero RDF, hag all hag all...)">
+<!ENTITY zotero.import.source.file "Ur restr (BibTeX, RIS, Jurism RDF, hag all hag all...)">
 <!ENTITY zotero.import.whereToImportFrom "Deus pelec'h ho peus c'hoant emporzhiañ?">
 <!ENTITY zotero.integration.addEditCitation.title "Ouzhpennañ/aozañ an arroudenn">
 <!ENTITY zotero.integration.classicView.label "Gwel klasel">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Arroudennoù amduek">
 <!ENTITY zotero.rtfScan.cancel.label "Nullañ">
 <!ENTITY zotero.rtfScan.citation.label "Arroudenn">
-<!ENTITY zotero.rtfScan.citationsPage.description "Grit un tamm sell ouzh al listenn a arroudennoù anavezet amañ dindan evit bezañ sur ez eus bet diuzet gant Zotero en un doare reizh an elfennoù a genglot. Kemenet arroudenn chomet amdreuzskrivet pe amduek a rank bezañ dirouestlet a-raok tremen d'ar bazenn da-heul.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Grit un tamm sell ouzh al listenn a arroudennoù anavezet amañ dindan evit bezañ sur ez eus bet diuzet gant Jurism en un doare reizh an elfennoù a genglot. Kemenet arroudenn chomet amdreuzskrivet pe amduek a rank bezañ dirouestlet a-raok tremen d'ar bazenn da-heul.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Gwiriañ an elfennoù arroudennet">
 <!ENTITY zotero.rtfScan.completePage.description "Ho teuliad a zo bet skanet ha tretet bremañ. Grit e-seurt da vezañ asur eo bet stummet ez-reizh.">
 <!ENTITY zotero.rtfScan.completePage.label "Skan RTF klokaet">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero a dret hag a bajennaoz ho restr RTF. Bezit pasiant mar plij.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism a dret hag a bajennaoz ho restr RTF. Bezit pasiant mar plij.">
 <!ENTITY zotero.rtfScan.formatPage.label "Arroudenn-aozañ">
 <!ENTITY zotero.rtfScan.inputFile.label "Restr enmont">
-<!ENTITY zotero.rtfScan.introPage.description "Gellout a ra Zotero em-dennañ hag em-adstummañ arroudennoù hag enlakaat ul levrlennadur er restroù RTF. An arc'hweladur skan RTF a c'hall kemer e-kont an arroudennoù e-barzh kemmoù ar stummoù da-heul:">
+<!ENTITY zotero.rtfScan.introPage.description "Gellout a ra Jurism em-dennañ hag em-adstummañ arroudennoù hag enlakaat ul levrlennadur er restroù RTF. An arc'hweladur skan RTF a c'hall kemer e-kont an arroudennoù e-barzh kemmoù ar stummoù da-heul:">
 <!ENTITY zotero.rtfScan.introPage.description2 "Evit stagañ ganti, diuzit ur restr RTF enmont hag ur restr ezvont dindan:">
 <!ENTITY zotero.rtfScan.introPage.label "Digoradur">
 <!ENTITY zotero.rtfScan.itemName.label "Anv an elfenn">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Arroudennoù treuzskrivet">
 <!ENTITY zotero.rtfScan.outputFile.label "Restr ezvont">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero a zo o skaniñ ho teuliad evit klask war-lerc'h arroudennoù. Bezit pasiant mar plij.">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism a zo o skaniñ ho teuliad evit klask war-lerc'h arroudennoù. Bezit pasiant mar plij.">
 <!ENTITY zotero.rtfScan.scanPage.label "Skanañ evit kavout arroudennoù">
 <!ENTITY zotero.rtfScan.stylePage.label "Teuliad-aozañ">
 <!ENTITY zotero.rtfScan.title "Skan RTF">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "Fazi sinkro">
 <!ENTITY zotero.sync.longTagFixer.character "arouezenn">
 <!ENTITY zotero.sync.longTagFixer.characters "arouezioù">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Ar baliz da-heul en ho levraoueg Zotero a zo re hir anezhañ da sinkro d'ar servijer:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Ar baliz da-heul en ho levraoueg Jurism a zo re hir anezhañ da sinkro d'ar servijer:">
 <!ENTITY zotero.sync.longTagFixer.split "Skarat">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Skarat d'an/ar/al">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Gellout a rit skarat ar baliz e meur a valiz, pe aozañ ar baliz gant an dorn evit berraat anezhañ, pe dilemel anezhañ.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Adenvel ar baliz...">
 <!ENTITY zotero.tagSelector.selectVisible "Select Visible">
 <!ENTITY zotero.tagSelector.showAutomatic "Diskouez emgefreek">
-<!ENTITY zotero.toolbar.about.label "Diwar-benn Zotero">
+<!ENTITY zotero.toolbar.about.label "Diwar-benn Jurism">
 <!ENTITY zotero.toolbar.actions.label "Oberioù">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "a-raok kenderc'hel.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Bezit sur da vezañ taolet ur sell ouzh">
 <!ENTITY zotero.upgrade.majorUpgradeLink "kelennadurioù diwar-benn an hizivadurioù">
-<!ENTITY zotero.upgrade.newVersionInstalled "Staliet ho peus ur stumm nevez eus Zotero.">
-<!ENTITY zotero.upgrade.title "Skoazeller hizivadur Zotero">
+<!ENTITY zotero.upgrade.newVersionInstalled "Staliet ho peus ur stumm nevez eus Jurism.">
+<!ENTITY zotero.upgrade.title "Skoazeller hizivadur Jurism">
 <!ENTITY zotero.upgrade.upgradeInProgress "Gortozit betek fin an argerzh hizivadur mar plij. An dra-se a c'hall kemer meur a vunutenn.">
-<!ENTITY zotero.upgrade.upgradeRequired "Ho tiaz-roadennoù Zotero a rank bezañ hizivaet evit mont en-dro gant ar stumm nevez.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Ho tiaz-roadennoù Zotero a zo bet hizivaet gant berzh.">
+<!ENTITY zotero.upgrade.upgradeRequired "Ho tiaz-roadennoù Jurism a rank bezañ hizivaet evit mont en-dro gant ar stumm nevez.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Ho tiaz-roadennoù Jurism a zo bet hizivaet gant berzh.">

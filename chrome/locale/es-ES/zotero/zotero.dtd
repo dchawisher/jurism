@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Selecciona los campos a conservar de otras versiones del elemento:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Elija la versión del elemento a usar como  elemento maestro:">
 <!ENTITY zotero.errorReport.notReviewed "Los informes de errores no se revisan a menos que se mencionen en los foros.">
-<!ENTITY zotero.errorReport.postToForums "Por favor, publique un mensaje en los foros de Zotero (forums.zotero.org) con este ID del informe, una descripción del problema y los pasos necesarios para reproducirlo.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "ID del informe:">
 <!ENTITY zotero.errorReport.submissionInProgress "Por favor, espera mientras se envía el informe de error.">
 <!ENTITY zotero.errorReport.submitted "Su informe de errores ha sido enviado.">
-<!ENTITY zotero.errorReport.title "Informe de errores de Zotero">
+<!ENTITY zotero.errorReport.title "Informe de errores de Jurism">
 <!ENTITY zotero.errorReport.unrelatedMessages "Esto puede incluir mensajes no relacionados con Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Formato:">
 <!ENTITY zotero.exportOptions.title "Exportar...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Importando...">
 <!ENTITY zotero.import.lastModified "Última modificación">
 <!ENTITY zotero.import.size "Tamaño">
-<!ENTITY zotero.import.source.file "Un archivo (BibTex, RIS, Zotero RDF, etc.)">
+<!ENTITY zotero.import.source.file "Un archivo (BibTex, RIS, Jurism RDF, etc.)">
 <!ENTITY zotero.import.whereToImportFrom "¿Desde dónde quieres importar?">
 <!ENTITY zotero.integration.addEditCitation.title "Añadir/Editar cita">
 <!ENTITY zotero.integration.classicView.label "Vista clásica">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Citas ambiguas">
 <!ENTITY zotero.rtfScan.cancel.label "Cancelar">
 <!ENTITY zotero.rtfScan.citation.label "Cita">
-<!ENTITY zotero.rtfScan.citationsPage.description "Por favor, revise la siguiente lista de citas reconocidas para asegurarse de que Zotero ha seleccionado los elementos correspondientes de forma correcta. Cualquier cita ambigua o no referenciada debe ser corregida antes de proceder con el siguiente paso.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Por favor, revise la siguiente lista de citas reconocidas para asegurarse de que Jurism ha seleccionado los elementos correspondientes de forma correcta. Cualquier cita ambigua o no referenciada debe ser corregida antes de proceder con el siguiente paso.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Verificar elementos citados">
 <!ENTITY zotero.rtfScan.completePage.description "Su documento ha sido escaneado y procesado. Por favor, asegúrese de que esté formateado correctamente.">
 <!ENTITY zotero.rtfScan.completePage.label "Escaneado RTF completado">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero está procesando y dando formato a su archivo RTF. Por favor, sea paciente.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism está procesando y dando formato a su archivo RTF. Por favor, sea paciente.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formato de citas">
 <!ENTITY zotero.rtfScan.inputFile.label "Archivo de entrada">
-<!ENTITY zotero.rtfScan.introPage.description "Zotero puede extraer y reformatear citas e insertar una bibliografía en ficheros RTF. La función de escaneado RTF actualmente soporta citas en los siguientes tipos de formato:">
+<!ENTITY zotero.rtfScan.introPage.description "Jurism puede extraer y reformatear citas e insertar una bibliografía en ficheros RTF. La función de escaneado RTF actualmente soporta citas en los siguientes tipos de formato:">
 <!ENTITY zotero.rtfScan.introPage.description2 "Para comenzar, seleccione a continuación un archivo de entrada RTF y un archivo de salida:">
 <!ENTITY zotero.rtfScan.introPage.label "Introducción">
 <!ENTITY zotero.rtfScan.itemName.label "Nombre del elemento">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Citas mapeadas">
 <!ENTITY zotero.rtfScan.outputFile.label "Archivo de salida">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero está escaneando su documento por citas. Por favor, sea paciente.">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism está escaneando su documento por citas. Por favor, sea paciente.">
 <!ENTITY zotero.rtfScan.scanPage.label "Escaneando por citas">
 <!ENTITY zotero.rtfScan.stylePage.label "Formato de documento">
 <!ENTITY zotero.rtfScan.title "Escaneado RTF">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "Error de sincronización">
 <!ENTITY zotero.sync.longTagFixer.character "carácter">
 <!ENTITY zotero.sync.longTagFixer.characters "caracteres">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "La siguiente etiqueta en su biblioteca Zotero es demasiado larga para sincronizarse con el servidor:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "La siguiente etiqueta en su biblioteca Jurism es demasiado larga para sincronizarse con el servidor:">
 <!ENTITY zotero.sync.longTagFixer.split "Dividir">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Dividir a ">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Puede dividir la etiqueta en varias etiquetas, editarla manualmente para acortarla o borrarla.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Renombrar etiqueta...">
 <!ENTITY zotero.tagSelector.selectVisible "Seleccionar las visibles">
 <!ENTITY zotero.tagSelector.showAutomatic "Mostrar las automáticas">
-<!ENTITY zotero.toolbar.about.label "Acerca de Zotero">
+<!ENTITY zotero.toolbar.about.label "Acerca de Jurism">
 <!ENTITY zotero.toolbar.actions.label "Acciones">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "antes de continuar.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Asegúrese de haber revisado las">
 <!ENTITY zotero.upgrade.majorUpgradeLink "instrucciones de actualización">
-<!ENTITY zotero.upgrade.newVersionInstalled "Has instalado una nueva versión de Zotero.">
-<!ENTITY zotero.upgrade.title "Asistente de actualización de Zotero">
+<!ENTITY zotero.upgrade.newVersionInstalled "Has instalado una nueva versión de Jurism.">
+<!ENTITY zotero.upgrade.title "Asistente de actualización de Jurism">
 <!ENTITY zotero.upgrade.upgradeInProgress "Por favor, espere a que finalice el proceso de actualización. Puede tardar algunos minutos.">
-<!ENTITY zotero.upgrade.upgradeRequired "Su base de datos de Zotero debe actualizarse para funcionar con la nueva versión.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Su base de datos de Zotero se ha actualizado con éxito.">
+<!ENTITY zotero.upgrade.upgradeRequired "Su base de datos de Jurism debe actualizarse para funcionar con la nueva versión.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Su base de datos de Jurism se ha actualizado con éxito.">

@@ -27,7 +27,7 @@
     "message": "Onko $1 käynnissä?"
   },
   "integration_googleDocs_unlinkBeforeSaving_warning": {
-    "message": "Tämä asiakirja sisältää aktiivisia Zotero-viitteitä jotka näkyvät zotero.org-linkkeinä ladatussa kopiossa."
+    "message": "Tämä asiakirja sisältää aktiivisia Jurism-viitteitä jotka näkyvät zotero.org-linkkeinä ladatussa kopiossa."
   },
   "integration_googleDocs_unlinkBeforeSaving_downloadAnyway": {
     "message": "Lataa silti linkitetty versio"

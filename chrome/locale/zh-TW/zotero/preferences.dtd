@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "快捷鍵">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "庫目錄：">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "連到的附件檔的庫目錄">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero 會使用連到的附件檔的庫目錄內的相對路徑，讓你可在不同電腦存取檔案，只要庫目錄內的檔案結構保持不變即可。">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism 會使用連到的附件檔的庫目錄內的相對路徑，讓你可在不同電腦存取檔案，只要庫目錄內的檔案結構保持不變即可。">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "復原成絕對路徑…">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "選擇…">
 <!ENTITY zotero.preferences.autoRecognizeFiles "自動為 PDF 檔取得屬性資料">
@@ -51,7 +51,7 @@
 <!ENTITY zotero.preferences.default "預設：">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "儲存項目時自動附加相關的 PDF 檔與其他檔">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "包括參考文獻中論文文章的 URL">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "停用此選項，則引用期刊、雜誌、報紙文章時，只在沒有指定文章的頁數範圍時，Zotero 才包含 URL。">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "停用此選項，則引用期刊、雜誌、報紙文章時，只在沒有指定文章的頁數範圍時，Jurism 才包含 URL。">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "獲取額外的樣式…">
@@ -89,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "開/關 Juris-M 窗格">
 <!ENTITY zotero.preferences.keys.overrideGlobal "嘗試蓋過相衝突的快速鍵">
 <!ENTITY zotero.preferences.keys.quicksearch "快速搜尋">
-<!ENTITY zotero.preferences.keys.saveToZotero "儲存到 Zotero (網址列圖示)">
+<!ENTITY zotero.preferences.keys.saveToZotero "儲存到 Jurism (網址列圖示)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "標示所有 Feed 的項目為已讀或未讀">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "切換全螢幕模式">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "切換標籤選擇器">
@@ -126,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "樣式：">
 <!ENTITY zotero.preferences.layout.stacked "堆疊">
 <!ENTITY zotero.preferences.layout.standard "標準">
-<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Zotero’s Locate menu.">
+<!ENTITY zotero.preferences.locate.addDescription "To add a Lookup Engine that is not on the list, visit the desired search engine in your browser and select “Add” from Jurism’s Locate menu.">
 <!ENTITY zotero.preferences.locate.description "描述">
 <!ENTITY zotero.preferences.locate.locateEngineManager "論文查詢引擎管理器">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "每一資訊窗格中的下拉選單中的查詢引擎擴充查詢能力。下面清單中的查詢引擎啟用後，會被加到下拉選單中，且能被用來查詢來自網站文獻庫的資源。">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "搜尋解析器">
 <!ENTITY zotero.preferences.openurl.server "解析器：">
 <!ENTITY zotero.preferences.openurl.version "版本：">
-<!ENTITY zotero.preferences.parseRISRefer "用 Zotero 處理下載的 BibTeX/RIS/Refer 檔">
+<!ENTITY zotero.preferences.parseRISRefer "用 Jurism 處理下載的 BibTeX/RIS/Refer 檔">
 <!ENTITY zotero.preferences.period "。">
 <!ENTITY zotero.preferences.prefpane.advanced "進階">
 <!ENTITY zotero.preferences.prefpane.cite "引用">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "已設定的代理伺服器">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - 資料夾路徑 (例如：about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "以得更多資訊。">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero 會透明地透過已儲存的代理伺服器轉導請求。請參見">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism 會透明地透過已儲存的代理伺服器轉導請求。請參見">
 <!ENTITY zotero.preferences.proxies.desc_link "代理伺服器文件">
 <!ENTITY zotero.preferences.proxies.disableByDomain "停用代理伺服器轉導向，若我的網域名稱含 ">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - 檔名 (例如：index.html)">
@@ -234,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "重設檔案同步歷史">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Compare all attachment files with the storage service">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "從線上文獻庫還原">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "以線上文獻庫的資料覆蓋本地端 Zotero 資料。">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "以線上文獻庫的資料覆蓋本地端 Jurism 資料。">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "取代線上文獻庫">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "以本地端 Zotero 資料覆蓋線上文獻庫的資料。">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "以本地端 Jurism 資料覆蓋線上文獻庫的資料。">
 <!ENTITY zotero.preferences.sync.reset.warning1 "後面操作只在極少與特定情況可用，不該作為解決問題的一般方法。於許多情況，回復預設值會導致更多問題。請參見 ">
 <!ENTITY zotero.preferences.sync.reset.warning2 "同步回復預設值選項">
 <!ENTITY zotero.preferences.sync.reset.warning3 " 以得更多資訊。">
 <!ENTITY zotero.preferences.sync.setUpSync "設定同步">
 <!ENTITY zotero.preferences.sync.syncAutomatically "自動同步">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "同步全文內容">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero 能以 zotero.org 和其他連結的裝置同步文獻庫中的檔案之全文內容，讓您無論身處何處，都能容易搜尋檔案。檔案之全文內容不會公開分享給他人。">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism 能以 zotero.org 和其他連結的裝置同步文獻庫中的檔案之全文內容，讓您無論身處何處，都能容易搜尋檔案。檔案之全文內容不會公開分享給他人。">
 <!ENTITY zotero.preferences.sync.syncServer "資料同步中">
 <!ENTITY zotero.preferences.sync.unlinkAccount "登出帳號...">
 <!ENTITY zotero.preferences.sync.username "使用者名稱：">
-<!ENTITY zotero.preferences.title "Zotero 偏好設定">
+<!ENTITY zotero.preferences.title "Jurism 偏好設定">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "天的項目">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "自動移除刪入垃圾筒且超過">
 <!ENTITY zotero.preferences.updateNow "立刻更新">
