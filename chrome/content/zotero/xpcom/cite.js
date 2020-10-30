@@ -611,7 +611,6 @@ Zotero.Cite.System = function ({ automaticJournalAbbreviations, uppercaseSubtitl
 		this.uppercase_subtitles = true; // eslint-disable-line camelcase
 	}
 	this.main_title_from_short_title = true;
-	this.implicit_short_title = true;
 	this.prioritize_disambiguate_condition = true;
 };
 
