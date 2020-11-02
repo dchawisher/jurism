@@ -35,12 +35,12 @@
     },
     "zotero.preferences.sync.fileSyncing.groups": {
       "words": [
-        "Zotero"
+        "Jurism"
       ]
     },
     "zotero.preferences.sync.fileSyncing.tos1": {
       "words": [
-        "Zotero"
+        "Jurism"
       ]
     },
     "zotero.preferences.sync.reset.restoreFromServer.desc": {
@@ -56,7 +56,7 @@
     "zotero.preferences.sync.syncFullTextContent.desc": {
       "words": [
         "Jurism",
-        "Zotero"
+        "Jurism"
       ]
     },
     "zotero.preferences.title": {
@@ -95,13 +95,6 @@
         "Jurism"
       ]
     },
-    "zotero.integration.prefs.storeReferences.caption": {
-      "words": [
-        "Zotero",
-        "Zotero",
-        "Jurism"
-      ]
-    },
     "zotero.rtfScan.citationsPage.description": {
       "words": [
         "Jurism"
@@ -122,11 +115,6 @@
         "Jurism"
       ]
     },
-    "zotero.sync.button": {
-      "words": [
-        "Zotero"
-      ]
-    },
     "zotero.sync.longTagFixer.followingTagTooLong": {
       "words": [
         "Jurism"
@@ -135,15 +123,6 @@
     "zotero.toolbar.about.label": {
       "words": [
         "Jurism"
-      ]
-    },
-    "zotero.upgrade.ifZoteroInfo": {
-      "words": [
-        "Zotero",
-        "Jurism",
-        "Zotero",
-        "Zotero",
-        "Zotero"
       ]
     },
     "zotero.upgrade.newVersionInstalled": {
@@ -171,8 +150,8 @@
     "about.createdBy": {
       "text": "Jurism is based on Zotero, a project of the [Roy Rosenzweig Center for History and New Media] and is developed by a [global community]."
     },
-    "sync.storage.error.webdav.fileMissingAfterUpload": {
-      "text": "A potential problem was found with your WebDAV server.\\n\\nAn uploaded file was not immediately available for download. There may be a short delay between when you upload files and when they become available, particularly if you are using a cloud storage service.\\n\\nIf Zotero file syncing appears to work normally, you can ignore this message. If you have trouble, please post to the Jurism support list (juris-m.github.io/mail)."
+    "db.integrityCheck.reportInForums": {
+      "text": "You can report this problem to the Jurism support list (juris-m.github.io/mail)."
     },
     "standalone.corruptInstallation": {
       "text": "Your Jurism installation appears to be corrupted due to a failed auto-update. While Jurism may continue to function, to avoid potential bugs, please download the latest version of Jurism from https://juris-m.github.io/release as soon as possible."
@@ -182,6 +161,12 @@
     },
     "sync.storage.error.defaultRestart": {
       "text": "A file sync error occurred. Please restart %S and/or your computer and try syncing again.\\n\\nIf you receive this message repeatedly, submit an error report and post the Report ID to the Jurism support list (juris-m.github.io/mail)."
+    },
+    "sync.storage.error.webdav.fileMissingAfterUpload": {
+      "text": "A potential problem was found with your WebDAV server.\\n\\nAn uploaded file was not immediately available for download. There may be a short delay between when you upload files and when they become available, particularly if you are using a cloud storage service.\\n\\nIf Zotero file syncing appears to work normally, you can ignore this message. If you have trouble, please post to the Jurism support list (juris-m.github.io/mail)."
+    },
+    "zotero.preferences.sync.purgeStorage.desc": {
+      "text": "If you plan to use WebDAV for file syncing and you previously synced attachment files in My Library to the Zotero servers, you can purge those files from the Zotero servers to give you more storage space for groups.\\n\\nYou can purge files at any time from your account settings on zotero.org."
     },
     "app.firefox": {
       "words": [
@@ -246,11 +231,6 @@
       ]
     },
     "db.integrityCheck.repairAttempt": {
-      "words": [
-        "Jurism"
-      ]
-    },
-    "db.integrityCheck.reportInForums": {
       "words": [
         "Jurism"
       ]
@@ -587,8 +567,7 @@
     },
     "sync.error.corruptedLoginManager": {
       "words": [
-        "Zotero",
-        "Jurism"
+        "Zotero"
       ]
     },
     "sync.error.invalidCharsFilename": {
@@ -620,11 +599,6 @@
     "sync.error.usernameNotSet.text": {
       "words": [
         "Jurism",
-        "Zotero"
-      ]
-    },
-    "sync.error.writeAccessLost": {
-      "words": [
         "Zotero"
       ]
     },
@@ -705,12 +679,6 @@
       "words": [
         "Jurism",
         "Jurism"
-      ]
-    },
-    "zotero.preferences.sync.purgeStorage.desc": {
-      "words": [
-        "Zotero",
-        "Zotero"
       ]
     },
     "zotero.preferences.sync.purgeStorage.title": {
