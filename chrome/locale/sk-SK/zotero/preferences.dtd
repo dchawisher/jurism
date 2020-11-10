@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Stiahnuť súbory">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "počas synchronizácie">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "podľa potreby">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Prílohy v skupinových knižniciach synchronizovať prostredníctvom Úložiska Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Prílohy v skupinových knižniciach synchronizovať prostredníctvom Úložiska Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Na synchronizáciu príloh v Mojej knižnici použiť">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Používaním Úložiska Zotero súhlasíte s uvedenými">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Používaním Úložiska Jurism súhlasíte s uvedenými">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "pravidlami a podmienkami">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Overiť server">

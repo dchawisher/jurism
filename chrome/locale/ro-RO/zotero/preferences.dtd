@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Descarcă fișiere">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "în timpul sincronizării">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "când e nevoie">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sincronizare fișiere anexate într-un grup de biblioteci folosind depozitul Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sincronizare fișiere anexate într-un grup de biblioteci folosind depozitul Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Sincronizare fișiere anexate în Biblioteca mea folosind">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Dacă folosești depozitul Zotero, ești de acord să fii conectat la">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Dacă folosești depozitul Jurism, ești de acord să fii conectat la">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "termeni și condiții">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verifică server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Configurare sincronizare">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Sincronizare automată">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sincronizează conținutul textului complet">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism poate sincroniza, cu zotero.org și alte dispozitive legate, conținutul textului complet al fișierelor din bibliotecile tale Zotero, permițându-ți să cauți cu ușurință în fișierele tale oriunde ai fi. Conținutul textului complet al fișierelor tale nu va fi partajat public.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism poate sincroniza, cu zotero.org și alte dispozitive legate, conținutul textului complet al fișierelor din bibliotecile tale Jurism, permițându-ți să cauți cu ușurință în fișierele tale oriunde ai fi. Conținutul textului complet al fișierelor tale nu va fi partajat public.">
 <!ENTITY zotero.preferences.sync.syncServer "Sincronizare date">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Dezleagă cont...">
 <!ENTITY zotero.preferences.sync.username "Nume de utilizator:">

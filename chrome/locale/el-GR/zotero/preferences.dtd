@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Λήψη αρχείων">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "την ώρα συγχρονισμού">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "εφόσον χρειάζεται">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Συγχρονισμός προσαρτημένων αρχείων των ομαδικών βιβλιοθηκών χρησιμοποιώντας την αποθήκευση Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Συγχρονισμός προσαρτημένων αρχείων των ομαδικών βιβλιοθηκών χρησιμοποιώντας την αποθήκευση Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Συγχρονισμός προσαρτημένων αρχείων στην Βιβλιοθήκη μου, χρησιμοποιώντας">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Χρησιμοποιώντας την αποθήκευση Zotero συμφωνείτε ότι δεσμεύεστε από τους">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Χρησιμοποιώντας την αποθήκευση Jurism συμφωνείτε ότι δεσμεύεστε από τους">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "όρους και τις προϋποθέσεις της">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Επαλήθευση Διακομιστή">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Ρύθμιση Συγχρονισμού">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Αυτόματος συγχρονισμός">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Συγχρονισμός περιεχομένου πλήρους κειμένου">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Το Jurism μπορεί να συγχρονίσει με το zotero.org και με άλλες συνδεδεμένες συσκευές το πλήρους κειμένου περιεχόμενο των αρχείων σας μέσα στην βιβλιοθήκη σας Zotero, επιτρέποντας την εύκολη αναζήτηση των αρχείων σας οπουδήποτε κι αν είστε. Το περιεχόμενο πλήρους κειμένου των αρχείων σας δεν διαμοιρασθεί δημοσίως.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Το Jurism μπορεί να συγχρονίσει με το zotero.org και με άλλες συνδεδεμένες συσκευές το πλήρους κειμένου περιεχόμενο των αρχείων σας μέσα στην βιβλιοθήκη σας Jurism, επιτρέποντας την εύκολη αναζήτηση των αρχείων σας οπουδήποτε κι αν είστε. Το περιεχόμενο πλήρους κειμένου των αρχείων σας δεν διαμοιρασθεί δημοσίως.">
 <!ENTITY zotero.preferences.sync.syncServer "Συγχρονισμός Δεδομένων">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Αποσύνδεση Λογαριασμού...">
 <!ENTITY zotero.preferences.sync.username "Όνομα χρήστη:">

@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Завантажити файли">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "під час синхронізації">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "за необхідності">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Синхронізувати файли вкладень в групових бібліотеках, використовуючи сховище Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Синхронізувати файли вкладень в групових бібліотеках, використовуючи сховище Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Синхронізувати файли вкладень в Моїй бібілотеці, використовуючи:">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Використовуючи сховище Zotero, ви погоджуєтесь бути пов'язаним його">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Використовуючи сховище Jurism, ви погоджуєтесь бути пов'язаним його">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "умвами використання">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL-адреса:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Налаштувати синхронізацію">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Синхронізувати автоматично">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Синхронізувати повнотекстовий вміст">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism можете синхронізувати повнотекстовий вміст файлів у ваших бібліотеках Zotero з zotero.org та інших пов'язаних пристроїв, що дозволяє легко знайти ваші файли, де б ви не були. Повнотекстовий вміст ваших файлів не передаватиметься публічно.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism можете синхронізувати повнотекстовий вміст файлів у ваших бібліотеках Jurism з zotero.org та інших пов'язаних пристроїв, що дозволяє легко знайти ваші файли, де б ви не були. Повнотекстовий вміст ваших файлів не передаватиметься публічно.">
 <!ENTITY zotero.preferences.sync.syncServer "Синхронізація даних">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Від'єднати обліковий запис...">
 <!ENTITY zotero.preferences.sync.username "Ім'я користувача:">

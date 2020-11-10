@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Descargar archivos">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "en el momento de sincronizar">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "según sea necesario">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sincronizar archivos adjuntos en bibliotecas de grupo usando el almacenamiento de Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sincronizar archivos adjuntos en bibliotecas de grupo usando el almacenamiento de Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Sincronizar los archivos adjuntos en Mi biblioteca usando">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Al utilizar el almacenamiento de Zotero, acepta estar obligado por sus">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Al utilizar el almacenamiento de Jurism, acepta estar obligado por sus">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "términos y condiciones">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verificar servidor">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Configurar sincronización">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Sincronizar automáticamente">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sincronizar contenido de texto completo">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism puede sincronizar el contenido de texto completo de archivos en sus bibliotecas de Zotero con zotero.org y otros dispositivos vinculados, lo que le permite buscar fácilmente sus archivos dondequiera que esté. El contenido de texto completo de sus archivos no se compartirá públicamente.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism puede sincronizar el contenido de texto completo de archivos en sus bibliotecas de Jurism con zotero.org y otros dispositivos vinculados, lo que le permite buscar fácilmente sus archivos dondequiera que esté. El contenido de texto completo de sus archivos no se compartirá públicamente.">
 <!ENTITY zotero.preferences.sync.syncServer "Sincronizando datos">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Desvincular cuenta...">
 <!ENTITY zotero.preferences.sync.username "Nombre de usuario:">

@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "ดาวน์โหลดแฟ้ม">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "ที่ช่วงการประสานข้อมูล">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "ตามที่ต้องการ">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "ประสานข้อมูลในแฟ้มแนบในกลุ่มไลบรารีโดยใช้ที่เก็บของ Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "ประสานข้อมูลในแฟ้มแนบในกลุ่มไลบรารีโดยใช้ที่เก็บของ Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "ประสานข้อมูลในแฟ้มแนบในไลบรารีโดยใช้ ">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "คุณยอมรับเงื่อนไขการใช้ที่เก็บของ Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "คุณยอมรับเงื่อนไขการใช้ที่เก็บของ Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "เงื่อนไขและข้อกำหนด">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Set Up Syncing">
 <!ENTITY zotero.preferences.sync.syncAutomatically "ประสานข้อมูลโดยอัตโนมัติ">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sync full-text content">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism can sync the full-text content of files in your Zotero libraries with zotero.org and other linked devices, allowing you to easily search for your files wherever you are. The full-text content of your files will not be shared publicly.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism can sync the full-text content of files in your Jurism libraries with zotero.org and other linked devices, allowing you to easily search for your files wherever you are. The full-text content of your files will not be shared publicly.">
 <!ENTITY zotero.preferences.sync.syncServer "Data Syncing">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Unlink Account…">
 <!ENTITY zotero.preferences.sync.username "ชื่อผู้ใช้: ">

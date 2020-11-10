@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Last ned filer">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "ved synkronisering">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "når dei trengst">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkroniser filer i gruppebibliotek med Zotero-lagring">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkroniser filer i gruppebibliotek med Jurism-lagring">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Synkroniser vedlegg i biblioteket med">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Ved å bruka Zotero-lagring godtek du ">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Ved å bruka Jurism-lagring godtek du ">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "vilkåra for bruk">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Set Up Syncing">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Synkroniser automatisk">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synkroniser fulltekst-innhald">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisera all teksten i filene i Zotero-biblioteka dine med zotero.org og andre tilknytta einingar, slik at du lett kan søka etter filene kor du enn er. Tekst og anna innhald i filene dine vert ikkje delt offentleg.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisera all teksten i filene i Jurism-biblioteka dine med zotero.org og andre tilknytta einingar, slik at du lett kan søka etter filene kor du enn er. Tekst og anna innhald i filene dine vert ikkje delt offentleg.">
 <!ENTITY zotero.preferences.sync.syncServer "Data Syncing">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Unlink Account…">
 <!ENTITY zotero.preferences.sync.username "Brukarnamn:">

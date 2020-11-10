@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Hent filer">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "under synkronisering">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "efter behov">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkroniser Vedhæftninger i gruppe-biblioteker ved hjælp af Zoteros online-lager">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkroniser Vedhæftninger i gruppe-biblioteker ved hjælp af Jurisms online-lager">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Synkroniser Vedhæftninger i Mit Bibliotek ved hjælp af">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Når du anvender Zoteros online-lager, er du forpligtet på dets">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Når du anvender Jurisms online-lager, er du forpligtet på dets">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "betingelser">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Bekræft server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Indstil synkronisering">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Synkroniser automatisk">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synkronisér fuldtekst-indhold">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisere full-text indholdet af filer i dit Zoterobibliotek med zotero.org og andre tilknyttede enheder, hvilket tillader dig enkel søgning i dine foler uanset hvor du er. Full-text indholdet af dine filer vil ikke blive delt offentligt.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisere full-text indholdet af filer i dit Jurismbibliotek med zotero.org og andre tilknyttede enheder, hvilket tillader dig enkel søgning i dine foler uanset hvor du er. Full-text indholdet af dine filer vil ikke blive delt offentligt.">
 <!ENTITY zotero.preferences.sync.syncServer "Datasynkronisering">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Afkobl konto...">
 <!ENTITY zotero.preferences.sync.username "Brugernavn:">

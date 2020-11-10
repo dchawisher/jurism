@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Télécharger les fichiers">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "lors de la synchronisation">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "à la demande">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synchroniser les fichiers joints dans les bibliothèques de groupe en utilisant le stockage de Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synchroniser les fichiers joints dans les bibliothèques de groupe en utilisant le stockage de Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Synchroniser les fichiers joints de Ma bibliothèque en utilisant">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "En utilisant le stockage de Zotero, vous acceptez d'être lié par ses">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "En utilisant le stockage de Jurism, vous acceptez d'être lié par ses">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "modalités et conditions">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "Adresse (URL) :">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Tester la connexion au serveur">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Régler la synchronisation">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Synchroniser automatiquement">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synchroniser le texte intégral des pièces jointes indexées">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism peut synchroniser l'intégralité du texte des pièces jointes indexées (PDF et HTML) de vos bibliothèques Zotero avec zotero.org et, ainsi, avec vos autres appareils connectés. Cela vous permet de rechercher facilement dans le contenu de vos fichiers où que vous soyez. Le texte intégral de vos fichiers ne sera pas partagé publiquement.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism peut synchroniser l'intégralité du texte des pièces jointes indexées (PDF et HTML) de vos bibliothèques Jurism avec zotero.org et, ainsi, avec vos autres appareils connectés. Cela vous permet de rechercher facilement dans le contenu de vos fichiers où que vous soyez. Le texte intégral de vos fichiers ne sera pas partagé publiquement.">
 <!ENTITY zotero.preferences.sync.syncServer "Synchronisation des données">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Dissocier le compte…">
 <!ENTITY zotero.preferences.sync.username "Nom d'utilisateur :">

@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "必要に応じて">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "同期する際に">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "ファイルをダウンロードする">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Zotero ストレジを利用してグループ・ライブラリの添付ファイルを同期する">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Jurism ストレジを利用してグループ・ライブラリの添付ファイルを同期する">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "マイ・ライブラリ内の添付ファイルの同期に右のプログラムを使う:">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Zotero ストレジをお使いになると、次の使用許諾条件に同意したことになります。">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Jurism ストレジをお使いになると、次の使用許諾条件に同意したことになります。">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "使用許諾条件">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "サーバーを検証する">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "同期の設定">
 <!ENTITY zotero.preferences.sync.syncAutomatically "自動的に同期">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "全文を同期する">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism はあなたの Zotero ライブラリに含まれるファイルの全文をを zotero.org や他のリンクした機器と同期させることができます。これにより、どこでも簡単にあなたのファイルを探すことができるようになります。あなたのファイルの全文が公開されることはありません。">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism はあなたの Jurism ライブラリに含まれるファイルの全文をを zotero.org や他のリンクした機器と同期させることができます。これにより、どこでも簡単にあなたのファイルを探すことができるようになります。あなたのファイルの全文が公開されることはありません。">
 <!ENTITY zotero.preferences.sync.syncServer "データの同期">
 <!ENTITY zotero.preferences.sync.unlinkAccount "アカウントを同期から切り離す...">
 <!ENTITY zotero.preferences.sync.username "ユーザー名:">

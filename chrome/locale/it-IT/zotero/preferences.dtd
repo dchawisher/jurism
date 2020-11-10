@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Scarica i file">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "durante la sincronizzazione">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "se necessario">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sincronizza gli allegati nelle librerie di gruppo con Zotero storage">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sincronizza gli allegati nelle librerie di gruppo con Jurism storage">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Sincronizza gli allegati nella mia libreria con">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Utilizzando Zotero storage, ne accetti implicitamente le">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Utilizzando Jurism storage, ne accetti implicitamente le">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "condizioni d'uso">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Impostare la sincronizzazione">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Sincronizza automaticamente">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sincronizza tutto il contenuto full-text">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism può sincronizzare il contenuto full-text dei file nelle tue raccolte Zotero con zotero.org e altri servizi collegati. Questo ti permette di cercare facilmente i propri file ovunque tu ti trovi. Il contenuto full-text dei tuoi file non verrà condiviso pubblicamente.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism può sincronizzare il contenuto full-text dei file nelle tue raccolte Jurism con zotero.org e altri servizi collegati. Questo ti permette di cercare facilmente i propri file ovunque tu ti trovi. Il contenuto full-text dei tuoi file non verrà condiviso pubblicamente.">
 <!ENTITY zotero.preferences.sync.syncServer "Sincronizzazione dei dati">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Disconnetti account">
 <!ENTITY zotero.preferences.sync.username "Nome utente:">

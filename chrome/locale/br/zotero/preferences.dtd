@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Pellgargañ ar restroù">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "da vare ar sinkro">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "pa vez ezhomm">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sinkro ar restroù stagadenn e-barzh al levraouegoù strollad en ur implijout stokadur Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sinkro ar restroù stagadenn e-barzh al levraouegoù strollad en ur implijout stokadur Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Sinkro ar restroù stagadenn e-barzh Ma Levraoueg en ur implijout">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "En ur implijout stokadur Zotero, ec'h asantit bezañ liammet gant e">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "En ur implijout stokadur Jurism, ec'h asantit bezañ liammet gant e">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "termoù ha koñdisionoù">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Gwiriañ ar servijer">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Termeniñ ar sinkro">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Em-sinkroaat">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sinkro testenn a-bezh ar stagadennoù">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism a c'hall sinkroaat testenn a-bezh ar pezhioù-stag indekset e-barzh ho levraouegoù Zotero gant zotero.org hag, e-giz-se, gant ho trevnadoù kevreet. An dra-se a ro an aotre da glask en un doare aeset e-barzh endalc'had ho restroù ne vern e pelec'h e vefec'h. Ne vo ket rannet en un doare foran testenn a-bezh ho restroù.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism a c'hall sinkroaat testenn a-bezh ar pezhioù-stag indekset e-barzh ho levraouegoù Jurism gant zotero.org hag, e-giz-se, gant ho trevnadoù kevreet. An dra-se a ro an aotre da glask en un doare aeset e-barzh endalc'had ho restroù ne vern e pelec'h e vefec'h. Ne vo ket rannet en un doare foran testenn a-bezh ho restroù.">
 <!ENTITY zotero.preferences.sync.syncServer "Sinkro ar roadennoù">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Diliammañ ar gont">
 <!ENTITY zotero.preferences.sync.username "Anv-implijer:">

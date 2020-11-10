@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Hlaða niður skrám">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "um leið og gagnasamhæfing verður">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "eftir þörfum">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Samhæfa viðhengi í hópsöfnum með Zotero-gagnageymslu">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Samhæfa viðhengi í hópsöfnum með Jurism-gagnageymslu">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Samhæfa viðhengi í Mínu færslusafni með">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Með notkun Zotero-gagnageymslu samþykkir þú">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Með notkun Jurism-gagnageymslu samþykkir þú">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "skilmála">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "slóð:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Setja upp samstillingu">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Samhæfa sjálfkrafa">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Samhæfa innihald skjala">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism getur samhæft innihald skjala í Zotero safninu þínu við zotero.org og önnur nettengd tæki sem gerir þér kleift að leita að þínum skjölum hvar sem þú ert. Innihaldi skjalanna er ekki deilt með öðrum.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism getur samhæft innihald skjala í Jurism safninu þínu við zotero.org og önnur nettengd tæki sem gerir þér kleift að leita að þínum skjölum hvar sem þú ert. Innihaldi skjalanna er ekki deilt með öðrum.">
 <!ENTITY zotero.preferences.sync.syncServer "Samstilling gagna">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Aftengja aðgang…">
 <!ENTITY zotero.preferences.sync.username "Notandanafn:">

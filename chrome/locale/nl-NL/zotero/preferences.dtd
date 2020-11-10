@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Gedownloade bestanden">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "op het synchronisatietijdstip">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "wanneer nodig">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synchroniseer bestanden in groepsbibliotheken met Zotero-opslag">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synchroniseer bestanden in groepsbibliotheken met Jurism-opslag">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Synchroniseer bestanden in Mijn Bibliotheek met">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Door het gebruiken van Zotero-opslag gaat u akkoord met de bijbehorende">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Door het gebruiken van Jurism-opslag gaat u akkoord met de bijbehorende">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "voorwaarden">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Server verifiëren">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Synchronisatie instellen">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Automatisch synchroniseren">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synchroniseer alle Volledige Tekst inhoud">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan de Volledige Tekst inhoud van bestanden in uw Zotero bibliotheek synchroniseren met zotero.org en andere gekoppelde apparaten, zodat u eenvoudig door al uw bestanden kunt zoeken waar u ook bent. De Volledige Tekst-inhoud van uw bestanden zal niet publiekelijk gedeeld worden.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan de Volledige Tekst inhoud van bestanden in uw Jurism bibliotheek synchroniseren met zotero.org en andere gekoppelde apparaten, zodat u eenvoudig door al uw bestanden kunt zoeken waar u ook bent. De Volledige Tekst-inhoud van uw bestanden zal niet publiekelijk gedeeld worden.">
 <!ENTITY zotero.preferences.sync.syncServer "Data-synchronisatie">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Account ontkoppelen...">
 <!ENTITY zotero.preferences.sync.username "Gebruikersnaam:">

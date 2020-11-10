@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Download files">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "at sync time">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "as needed">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sync attachment files in group libraries using Zotero storage">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sync attachment files in group libraries using Jurism storage">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Sync attachment files in My Library using">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "By using Zotero storage, you agree to become bound by its">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "By using Jurism storage, you agree to become bound by its">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "terms and conditions">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Set Up Syncing">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Sinkronizatu automatikoki">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sync full-text content">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism can sync the full-text content of files in your Zotero libraries with zotero.org and other linked devices, allowing you to easily search for your files wherever you are. The full-text content of your files will not be shared publicly.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism can sync the full-text content of files in your Jurism libraries with zotero.org and other linked devices, allowing you to easily search for your files wherever you are. The full-text content of your files will not be shared publicly.">
 <!ENTITY zotero.preferences.sync.syncServer "Data Syncing">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Unlink Account…">
 <!ENTITY zotero.preferences.sync.username "Erabiltzailea:">

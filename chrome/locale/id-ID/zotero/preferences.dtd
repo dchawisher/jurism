@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Download files">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "at sync time">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "as needed">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "SInkronisasikan berkas-berkas lampiran di dalam perpustakaan Zotero menggunaan penyimpanan Jurism">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "SInkronisasikan berkas-berkas lampiran di dalam perpustakaan Jurism menggunaan penyimpanan Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Sinkronisasikan berkas-berkas lampiran di dalam Perpustakaanku menggunakan">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Dengan menggunakan penyimpanan Zotero, Anda sepakat untuk terikat dengan ">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Dengan menggunakan penyimpanan Jurism, Anda sepakat untuk terikat dengan ">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "syarat dan ketentuan di dalamnya">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Set Up Syncing">
 <!ENTITY zotero.preferences.sync.syncAutomatically "SInkronisasikan secara automatis">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sync full-text content">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism can sync the full-text content of files in your Zotero libraries with zotero.org and other linked devices, allowing you to easily search for your files wherever you are. The full-text content of your files will not be shared publicly.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism can sync the full-text content of files in your Jurism libraries with zotero.org and other linked devices, allowing you to easily search for your files wherever you are. The full-text content of your files will not be shared publicly.">
 <!ENTITY zotero.preferences.sync.syncServer "Data Syncing">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Unlink Account…">
 <!ENTITY zotero.preferences.sync.username "Nama pengguna:">

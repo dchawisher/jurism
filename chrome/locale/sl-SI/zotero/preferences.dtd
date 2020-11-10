@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Datoteke prenesi">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "ob usklajevanju">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "po potrebi">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Uskladi datoteke priponk v skupinskih knjižnicah s shrambo Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Uskladi datoteke priponk v skupinskih knjižnicah s shrambo Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Uskladi datoteke priponk v Moji knjižnici s/z">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Če uporabljate shrambo Zotero, se strinjate z njenimi">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Če uporabljate shrambo Jurism, se strinjate z njenimi">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "pravili, omejitvami in pogoji">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Preveri strežnik">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Nastavi usklajevanje">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Uskladi samodejno">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Uskladi vsebino celega besedila">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism lahko odslej usklajuje vsebino celega besedila datotek iz vaših knjižnic Zotero z zotero.org in drugimi povezanimi napravami, s čimer lahko enostavno iščete po svojih datotekah, kjerkoli že ste. Vsebina celega besedila vaših datotek ne bo v skupni javni rabi.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism lahko odslej usklajuje vsebino celega besedila datotek iz vaših knjižnic Jurism z zotero.org in drugimi povezanimi napravami, s čimer lahko enostavno iščete po svojih datotekah, kjerkoli že ste. Vsebina celega besedila vaših datotek ne bo v skupni javni rabi.">
 <!ENTITY zotero.preferences.sync.syncServer "Usklajevanje podatkov">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Odveži račun ...">
 <!ENTITY zotero.preferences.sync.username "Uporabniško ime:">

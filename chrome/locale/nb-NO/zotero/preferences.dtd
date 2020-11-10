@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Nedlastede filer">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "under synkronisering">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "ved behov">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkroniser vedlegg i gruppebibliotek ved å bruke Zotero lagring på nett">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkroniser vedlegg i gruppebibliotek ved å bruke Jurism lagring på nett">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Synkroniser vedlegg i Mitt bibliotek ved å bruke">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Ved å bruke Zotero forplikter du deg på programmets">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Ved å bruke Jurism forplikter du deg på programmets">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "vilkår og betingelser">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Bekreft server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Sett opp synkronisering">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Synkroniser automatisk">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synkroniser fulltekst innhold">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisere fulltekstinnhold i filer i ditt Zotero bibliotek med zotero.org og andre tilknyttede enheter, noe som gjør det mulig for deg å søke etter tekst i dine filer hvor enn du måtte være. Fulltekstinnhold i filene dine vil ikke bli delt offentlig.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisere fulltekstinnhold i filer i ditt Jurism bibliotek med zotero.org og andre tilknyttede enheter, noe som gjør det mulig for deg å søke etter tekst i dine filer hvor enn du måtte være. Fulltekstinnhold i filene dine vil ikke bli delt offentlig.">
 <!ENTITY zotero.preferences.sync.syncServer "Datasynkronisering">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Koble fra konto…">
 <!ENTITY zotero.preferences.sync.username "Brukernavn:">

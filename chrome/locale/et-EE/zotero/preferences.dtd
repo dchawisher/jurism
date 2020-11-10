@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Failide allalaadimine">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "sünkroonimise ajal">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "vajadusel">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Minu grupi raamatukogus olevate lisade sünkroonimine kasutades Zotero hoidlat">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Minu grupi raamatukogus olevate lisade sünkroonimine kasutades Jurism hoidlat">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Minu raamatukogus olevate lisade sünkroonimine kasutades">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Kasutades Zotero hoidlat, nõustute järgmiste">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Kasutades Jurism hoidlat, nõustute järgmiste">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "tingimuste ja piirangutega">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verify Server">

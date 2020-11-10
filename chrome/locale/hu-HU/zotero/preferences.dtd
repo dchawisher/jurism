@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Fájlok letöltése">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "szinkronizáláskor">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "szükség szerint">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "A csoport könyvtárához tartozó fájlok szinkronizálása a Zotero tárhely használatával">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "A csoport könyvtárához tartozó fájlok szinkronizálása a Jurism tárhely használatával">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "A könyvtáramban található fájlok szinkronizálása">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "A Zotero tárhely használata esetén elfogadom a">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "A Jurism tárhely használata esetén elfogadom a">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "felhasználási feltételeket">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Szerver ellenőrzése">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Szinkronizálás beállítása">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Automatikus szinkronizálás">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Teljes szöveg szinkronizálása">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "A Jurism szinkronizálhatja a Zotero könyvtáraiban található fájlok teljes szövegét a zotero.org-gal és egyéb csatolt eszközökkel, lehetővé téve, hogy bárhol könnyedén keressen a fájljaira. A fájlok teljes szövege nem válik nyilvánossá.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "A Jurism szinkronizálhatja a Jurism könyvtáraiban található fájlok teljes szövegét a zotero.org-gal és egyéb csatolt eszközökkel, lehetővé téve, hogy bárhol könnyedén keressen a fájljaira. A fájlok teljes szövege nem válik nyilvánossá.">
 <!ENTITY zotero.preferences.sync.syncServer "Adatok szinkronizálása">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Fiók leválasztása…">
 <!ENTITY zotero.preferences.sync.username "Felhasználónév:">

@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Ladda ner filer">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "vid synkronisering">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "efter behov">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkronisera bifogade filer i gruppens bibliotek med Zotero Storage">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkronisera bifogade filer i gruppens bibliotek med Jurism Storage">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Synkronisera bifogade filer i mitt bibliotek med:">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Genom att använda Zotero Storage godtar du tjänstens">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Genom att använda Jurism Storage godtar du tjänstens">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "avtalsvillkor">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verifiera Server">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Ställ in synkronisering">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Synkronisera automatiskt">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synkronisera innehållet i fulltext">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisera fulltextinnehållet i dina filer i Zotero-biblioteket till zotero.org och andra anslutna enheter, så att du enkelt söka efter dina filer var du än är. Innehållet i dina filer kommer inte att delas offentligt.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisera fulltextinnehållet i dina filer i Jurism-biblioteket till zotero.org och andra anslutna enheter, så att du enkelt söka efter dina filer var du än är. Innehållet i dina filer kommer inte att delas offentligt.">
 <!ENTITY zotero.preferences.sync.syncServer "Datasynkronisering">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Koppla från konto...">
 <!ENTITY zotero.preferences.sync.username "Användarnamn:">

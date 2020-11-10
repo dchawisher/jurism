@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Failus parsiųsti">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "sinchronizuojant">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "pagal poreikį">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Prie grupės biliotekos įrašų prisegtus failus sinchronizuoti per Zotero saugyklą">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Prie grupės biliotekos įrašų prisegtus failus sinchronizuoti per Jurism saugyklą">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Prie mano biliotekos įrašų prisegtus failus sinchronizuoti per">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Naudodamiesi Zotero saugykla Jūs savaime sutinkate su jos">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Naudodamiesi Jurism saugykla Jūs savaime sutinkate su jos">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "naudojimosi taisyklėmis ir sąlygomis">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Tikrinti serverį">

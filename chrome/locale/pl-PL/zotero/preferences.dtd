@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Pobierz pliki">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "podczas synchronizacji">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "w razie potrzeby">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synchronizuj załączniki w bibliotekach grupowych za pomocą usługi przechowywania Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synchronizuj załączniki w bibliotekach grupowych za pomocą usługi przechowywania Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Synchronizuj załączniki w Mojej bibliotece za pomocą">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Używając usługi przechowywania w Zotero, zgadzasz się na jej">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Używając usługi przechowywania w Jurism, zgadzasz się na jej">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "warunki i postanowienia">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Zweryfikuj serwer">

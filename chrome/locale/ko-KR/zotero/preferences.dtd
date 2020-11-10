@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "파일 다운로드: ">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "동기화할 때">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "필요할 때">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Zotero 저장소를 사용해 그룹 라이브러리내 첨부 파일을 동기화">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Jurism 저장소를 사용해 그룹 라이브러리내 첨부 파일을 동기화">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "내 라이브러리 첨부파일 동기화 도구 : ">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Zotero 스토리지 이용시 다음 약관에 동의하는 것으로 간주합니다: ">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Jurism 스토리지 이용시 다음 약관에 동의하는 것으로 간주합니다: ">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "이용 약관">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "서버 검증">

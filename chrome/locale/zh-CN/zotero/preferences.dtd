@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "下载文件">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "在同步时">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "在需要时">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "使用 Zotero 云存储同步群组文献库中的附件">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "使用 Jurism 云存储同步群组文献库中的附件">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "同步文献库中的附件, 使用:">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "若使用Zotero云存储, 你接受它的">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "若使用Jurism云存储, 你接受它的">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "条款和条件">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "验证服务器">
@@ -243,7 +243,7 @@
 <!ENTITY zotero.preferences.sync.setUpSync "设置同步">
 <!ENTITY zotero.preferences.sync.syncAutomatically "自动同步">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "同步全文内容">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism能够将Zotero文献库里文件的全文内容同步到zotero.org及其它连接的设备. 启用这一功能后, 无论您在什么地方, 都可以方便地搜索您的文件. 您的文件的全文内容不会共享给公众。">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism能够将Jurism文献库里文件的全文内容同步到zotero.org及其它连接的设备. 启用这一功能后, 无论您在什么地方, 都可以方便地搜索您的文件. 您的文件的全文内容不会共享给公众。">
 <!ENTITY zotero.preferences.sync.syncServer "数据同步">
 <!ENTITY zotero.preferences.sync.unlinkAccount "取消账户关联">
 <!ENTITY zotero.preferences.sync.username "用户名:">
