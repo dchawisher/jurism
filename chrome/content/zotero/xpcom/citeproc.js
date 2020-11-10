@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.47",
+    PROCESSOR_VERSION: "1.4.48",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -23673,6 +23673,12 @@ CSL.Registry.NameReg = function (state) {
             && pos !== 0) {
                 return;
         }
+        
+        // A hack. Safe if the name object is used only here, for disambiguation purposes.
+        if (state.opt["demote-non-dropping-particle"] === "never" && nameobj["non-dropping-particle"] && nameobj["family"]) {
+            nameobj["family"] = nameobj["non-dropping-particle"] + " " + nameobj["family"];
+        }
+        
         //CSL.debug("INS");
         set_keys(this.state, "" + item_id, nameobj);
         // pkey, ikey and skey should be stored in separate cascading objects.
