@@ -145,7 +145,7 @@ Zotero.JurisMaps = new function() {
 			var newVersionInfo = versions[jurisID];
 			var oldVersion = yield Zotero.DB.valueQueryAsync("SELECT version FROM jurisVersion WHERE schema = ?", [jurisID]);
 			// Check if database maps version exists and is greater than or equal to the new file date
-			if (!oldVersion || newVersionInfo.timestamp > oldVersion) {
+			if (!oldVersion || newVersionInfo.timestamp !== oldVersion) {
 				this.totalCount = (this.totalCount + newVersionInfo.rowcount);
 				mapsToUpdate[jurisID] = newVersionInfo;
 			}
