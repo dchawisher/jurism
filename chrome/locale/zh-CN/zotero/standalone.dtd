@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "退出">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "退出 Zotero">
+<!ENTITY quitApplicationCmdMac.label "退出 Jurism">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "退出">
 <!ENTITY recursiveCollections.label "从子集合中显示条目">

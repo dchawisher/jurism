@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Izberite polja, ki jih želite izvzeti iz drugih različic vnosa:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Izberite različico vnosa, ki naj bo osrednja:">
 <!ENTITY zotero.errorReport.notReviewed "Poročila o napaki ponavadi niso vsa pregledana, razen če o njih poročate na forumu.">
-<!ENTITY zotero.errorReport.postToForums "Opišite težavo z ID-jem tega poročila na forumih Zotero (forums.zotero.org), skupaj s potrebnimi koraki za priklic takšne napake.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "ID poročila:">
 <!ENTITY zotero.errorReport.submissionInProgress "Počakajte, da je poročilo o napaki oddano.">
 <!ENTITY zotero.errorReport.submitted "Poročilo o napaki je bilo oddano.">
-<!ENTITY zotero.errorReport.title "Poročilo o napaki Zotero">
+<!ENTITY zotero.errorReport.title "Poročilo o napaki Jurism">
 <!ENTITY zotero.errorReport.unrelatedMessages "Vključuje lahko sporočila, ki se ne nanašajo na Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Vrsta datoteke:">
 <!ENTITY zotero.exportOptions.title "Izvozi ...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Uvažanje ...">
 <!ENTITY zotero.import.lastModified "Nazadnje spremenjeno">
 <!ENTITY zotero.import.size "Velikost">
-<!ENTITY zotero.import.source.file "Datoteka (BibTeX, RIS, Zotero RDF itn.)">
+<!ENTITY zotero.import.source.file "Datoteka (BibTeX, RIS, Jurism RDF itn.)">
 <!ENTITY zotero.import.whereToImportFrom "Od kod želite uvoziti?">
 <!ENTITY zotero.integration.addEditCitation.title "Dodaj/uredi citat">
 <!ENTITY zotero.integration.classicView.label "Klasični pogled">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Dvoumni citati">
 <!ENTITY zotero.rtfScan.cancel.label "Prekliči">
 <!ENTITY zotero.rtfScan.citation.label "Citat">
-<!ENTITY zotero.rtfScan.citationsPage.description "Preglejte spodnji seznam prepoznanih citatov, da se prepričate, da je Zotero pravilno izbral ustrezne vnose. Vse nepovezane ali dvoumne citate je potrebno razločiti, preden nadaljujete na naslednji korak.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Preglejte spodnji seznam prepoznanih citatov, da se prepričate, da je Jurism pravilno izbral ustrezne vnose. Vse nepovezane ali dvoumne citate je potrebno razločiti, preden nadaljujete na naslednji korak.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Preveri citirane vnose">
 <!ENTITY zotero.rtfScan.completePage.description "Vaš dokument je bil pregledan in obdelan. Zagotovite, da je oblikovan pravilno.">
 <!ENTITY zotero.rtfScan.completePage.label "Pregled dokumenta RTF dokončan">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero obdeluje in oblikuje vašo datoteko RTF. Ostanite potrpežljivi.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism obdeluje in oblikuje vašo datoteko RTF. Ostanite potrpežljivi.">
 <!ENTITY zotero.rtfScan.formatPage.label "Oblikovanje citatov">
 <!ENTITY zotero.rtfScan.inputFile.label "Vhodna datoteka">
-<!ENTITY zotero.rtfScan.introPage.description "Zotero lahko samodejno izlušči in preoblikuje citate ter vstavi bibliografijo v datoteke RTF. Za začetek spodaj izberite datoteko RTF.">
+<!ENTITY zotero.rtfScan.introPage.description "Jurism lahko samodejno izlušči in preoblikuje citate ter vstavi bibliografijo v datoteke RTF. Za začetek spodaj izberite datoteko RTF.">
 <!ENTITY zotero.rtfScan.introPage.description2 "Za začetek spodaj izberite vhodno datoteko RTF in izhodno datoteko:">
 <!ENTITY zotero.rtfScan.introPage.label "Uvod">
 <!ENTITY zotero.rtfScan.itemName.label "Ime vnosa">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Povezani citati">
 <!ENTITY zotero.rtfScan.outputFile.label "Izhodna datoteka">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero pregleduje citate v vašem dokumentu. Ostanite potrpežljivi.">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism pregleduje citate v vašem dokumentu. Ostanite potrpežljivi.">
 <!ENTITY zotero.rtfScan.scanPage.label "Pregledovanje citatov">
 <!ENTITY zotero.rtfScan.stylePage.label "Oblikovanje dokumenta">
 <!ENTITY zotero.rtfScan.title "Pregled RTF">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "Napaka usklajevanja">
 <!ENTITY zotero.sync.longTagFixer.character "znaku">
 <!ENTITY zotero.sync.longTagFixer.characters "znakih">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Naslednja značka v vaši knjižnici Zotero ni več usklajena s strežnikom:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Naslednja značka v vaši knjižnici Jurism ni več usklajena s strežnikom:">
 <!ENTITY zotero.sync.longTagFixer.split "Razdeli">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Razdeli pri">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Značko lahko razdelite na več znak, jo ročno uredite in s tem skrajšate ali pa izbrišete.">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "preden nadaljujete.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Prepričajte se, da ste pregledali">
 <!ENTITY zotero.upgrade.majorUpgradeLink "navodila za posodabljanje,">
-<!ENTITY zotero.upgrade.newVersionInstalled "Namestili ste novejšo različico razširitve Zotero.">
-<!ENTITY zotero.upgrade.title "Čarovnik za nadgradnjo Zotero">
+<!ENTITY zotero.upgrade.newVersionInstalled "Namestili ste novejšo različico razširitve Jurism.">
+<!ENTITY zotero.upgrade.title "Čarovnik za nadgradnjo Jurism">
 <!ENTITY zotero.upgrade.upgradeInProgress "Počakajte, da se postopek nadgradnje dokonča. To lahko znese nekaj minut.">
-<!ENTITY zotero.upgrade.upgradeRequired "Vašo zbirko podatkov Zotero je potrebno nadgraditi, da bo delovala z novejšo različico.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Vaša zbirka podatkov Zotero je bila uspešno nadgrajena.">
+<!ENTITY zotero.upgrade.upgradeRequired "Vašo zbirko podatkov Jurism je potrebno nadgraditi, da bo delovala z novejšo različico.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Vaša zbirka podatkov Jurism je bila uspešno nadgrajena.">

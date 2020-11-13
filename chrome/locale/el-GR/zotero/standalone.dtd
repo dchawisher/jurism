@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Κλείσιμο">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Κλείσιμο Zotero">
+<!ENTITY quitApplicationCmdMac.label "Κλείσιμο Jurism">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Έξοδος">
 <!ENTITY recursiveCollections.label "Εμφάνιση Στοιχείων από τις Υποσυλλογές">

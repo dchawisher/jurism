@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Părăsire">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Părăsește Zotero">
+<!ENTITY quitApplicationCmdMac.label "Părăsește Jurism">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Ieșire">
 <!ENTITY recursiveCollections.label "Afișează itemii din subcolecții">

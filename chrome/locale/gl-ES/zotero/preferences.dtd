@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "Atallos">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Cartafol principal:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Cartafol principal de anexos ligados">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero usará rutas relativas para os ficheiros anexos que foran ligados ao cartafol principal. Con isto faise que sexa posible acceder a ficheiros en diferentes computadores sempre e cando a estrutura de ficheiros dentro do cartafol principal se manteña igual.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism usará rutas relativas para os ficheiros anexos que foran ligados ao cartafol principal. Con isto faise que sexa posible acceder a ficheiros en diferentes computadores sempre e cando a estrutura de ficheiros dentro do cartafol principal se manteña igual.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Volver ás rutas absolutas...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Escoller...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Obter os metadados dos PDFs de xeito automático">
@@ -51,7 +51,7 @@
 <!ENTITY zotero.preferences.default "Por defecto:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Anexar automaticamente os PDFs e outros ficheiros asociados ao gardar os elementos">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Incluír as URL dos artigos nas referencias">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Cando esta opción está desactivada, Zotero só inclúe os URL cando se citan publicacións, revistas ou artigos de prensa que non teñen especificado un rango de páxinas.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Cando esta opción está desactivada, Jurism só inclúe os URL cando se citan publicacións, revistas ou artigos de prensa que non teñen especificado un rango de páxinas.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Obter máis estilos...">
@@ -89,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Abrir/Pechar o panel de Juris-M">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Tratar de anular os accesos directos en conflito">
 <!ENTITY zotero.preferences.keys.quicksearch "Busca rápida">
-<!ENTITY zotero.preferences.keys.saveToZotero "Gardar en Zotero (icona na barra de direccións)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Gardar en Jurism (icona na barra de direccións)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Marcar todas as novas como lidas/sen ler">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Cambiar ao modo de pantalla completa">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Alternar o selector de etiquetas">
@@ -126,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Interface:">
 <!ENTITY zotero.preferences.layout.stacked "Acumulada">
 <!ENTITY zotero.preferences.layout.standard "Estándar">
-<!ENTITY zotero.preferences.locate.addDescription "Para engadir un motor de busca que non estea na lista, visita a páxina do motor de busca no navegador e prémelle a &quot;engadir&quot; no menú local de Zotero.">
+<!ENTITY zotero.preferences.locate.addDescription "Para engadir un motor de busca que non estea na lista, visita a páxina do motor de busca no navegador e prémelle a &quot;engadir&quot; no menú local de Jurism.">
 <!ENTITY zotero.preferences.locate.description "Descrición">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Xestor do motor de busca de artigos">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "Un motor de busca que aporta a capacidade de localizar no panel de información. Activando o motor de busca na lista de abaixo engádense á lista desagregable e pódense empregar para localizar recursos da súa biblioteca na web.">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Busca de solucións">
 <!ENTITY zotero.preferences.openurl.server "Buscador de solucións:">
 <!ENTITY zotero.preferences.openurl.version "Versión:">
-<!ENTITY zotero.preferences.parseRISRefer "Usar Zotero para os ficheiros BibTeX/RIS/Refer descargados">
+<!ENTITY zotero.preferences.parseRISRefer "Usar Jurism para os ficheiros BibTeX/RIS/Refer descargados">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Avanzado">
 <!ENTITY zotero.preferences.prefpane.cite "Cita">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Proxies configurados">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - A ruta do cartafol (por exemplo, about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "para máis información.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero redirixe con transparencia as solicitudes a través dos proxies gardados. Vexa a">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism redirixe con transparencia as solicitudes a través dos proxies gardados. Vexa a">
 <!ENTITY zotero.preferences.proxies.desc_link "documentación de proxy">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Desactivar as redireccións proxy cando o meu dominio conteña">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - O nome do ficheiro (por exemplo, index.html)">
@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Descargar os ficheiros">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "no momento de sincronización">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "cando se precisen">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sincronizar os ficheiros adxuntos das bibliotecas de grupo utilizando o almacenamento de Zotero">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sincronizar os ficheiros adxuntos das bibliotecas de grupo utilizando o almacenamento de Jurism">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Sincronizar os ficheiros adxuntos da Miña Biblioteca usando">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Ao usar o almacenamento de Zotero estas a aceptar as obrigas establecidas nos seus">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Ao usar o almacenamento de Jurism estas a aceptar as obrigas establecidas nos seus">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "Termos e Condicións">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verificar o servidor">
@@ -234,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Reiniciar o historial de sincronización de ficheiros">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Comparar todos os ficheiros anexos co servizo de almacenamento">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Restaurar a partir da librería en liña">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Sobrescribir a librería local de Zotero cos datos da libraría en liña.">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Sobrescribir a librería local de Jurism cos datos da libraría en liña.">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Substituír a librería en liña">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Sobrescribir a librería en liña cos datos locais de Zotero">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Sobrescribir a librería en liña cos datos locais de Jurism">
 <!ENTITY zotero.preferences.sync.reset.warning1 "As seguintes operacións só son útiles en casos especiais ou específicos e non deberían ser usadas para arranxar problemas habituais. En moitos dos casos o reinicio da configuración causa problemas a maiores. Vexa">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Opcións de reinicio de sincronización">
 <!ENTITY zotero.preferences.sync.reset.warning3 "para máis información.">
 <!ENTITY zotero.preferences.sync.setUpSync "Configurar a sincronización">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Sincronización automática">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sincronizar o contido completo">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero pode sincronizar todo o contido dos ficheiros das librerías de Zotero empregando zotero.org e outros dispositivos ligados. Con iso, permítelle o acceso aos ficheiros estea onde estea. Os contidos completos non se han compartir de xeito público.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism pode sincronizar todo o contido dos ficheiros das librerías de Jurism empregando zotero.org e outros dispositivos ligados. Con iso, permítelle o acceso aos ficheiros estea onde estea. Os contidos completos non se han compartir de xeito público.">
 <!ENTITY zotero.preferences.sync.syncServer "Sincronización de datos">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Desvencellar a conta...">
 <!ENTITY zotero.preferences.sync.username "Usuario:">
-<!ENTITY zotero.preferences.title "Preferencias de Zotero">
+<!ENTITY zotero.preferences.title "Preferencias de Jurism">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "días">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Eliminar automaticamente os elementos que leven no lixo máis de">
 <!ENTITY zotero.preferences.updateNow "Actualizar agora">

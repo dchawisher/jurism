@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Scegli i campi da mantenere dalle altre versioni dell'elemento:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Scegli la versione dell'elemento da usare come master:">
 <!ENTITY zotero.errorReport.notReviewed "In genere, i rapporti di errore non vengono esaminati se non sono stati inviati ai forum.">
-<!ENTITY zotero.errorReport.postToForums "Inviare un messaggio ai forum di Zotero (forums.zotero.org) riportando il numero ID del rapporto di errore, una descrizione del problema ed esponendo i passaggi che hanno condotto all&apos;errore.">
+<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
 <!ENTITY zotero.errorReport.reportID "ID rapporto:">
 <!ENTITY zotero.errorReport.submissionInProgress "Attendere, rapporto di errore in fase di invio.">
 <!ENTITY zotero.errorReport.submitted "Il rapporto di errore è stato inviato.">
-<!ENTITY zotero.errorReport.title "Resoconto di errore Zotero">
+<!ENTITY zotero.errorReport.title "Resoconto di errore Jurism">
 <!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Formato:">
 <!ENTITY zotero.exportOptions.title "Esporta">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Importazione...">
 <!ENTITY zotero.import.lastModified "Ultimo File Modificato">
 <!ENTITY zotero.import.size "Dimensione">
-<!ENTITY zotero.import.source.file "File (BibTeX, RIS, Zotero RDF, etc.)">
+<!ENTITY zotero.import.source.file "File (BibTeX, RIS, Jurism RDF, etc.)">
 <!ENTITY zotero.import.whereToImportFrom "Importa da">
 <!ENTITY zotero.integration.addEditCitation.title "Aggiungi o modifica citazione">
 <!ENTITY zotero.integration.classicView.label "Vista classica">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Citazioni ambigue">
 <!ENTITY zotero.rtfScan.cancel.label "Annulla">
 <!ENTITY zotero.rtfScan.citation.label "Citazione">
-<!ENTITY zotero.rtfScan.citationsPage.description "Per favore controlla la lista delle citazioni riconosciute qui sotto e assicurati che Zotero abbia selezionato correttamente i relativi riferimenti. Le citazioni non corrispondenti o ambigue devono essere perfezionate prima di procedere al passaggio successivo.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Per favore controlla la lista delle citazioni riconosciute qui sotto e assicurati che Jurism abbia selezionato correttamente i relativi riferimenti. Le citazioni non corrispondenti o ambigue devono essere perfezionate prima di procedere al passaggio successivo.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Verifica gli oggetti citati.">
 <!ENTITY zotero.rtfScan.completePage.description "Il tuo documento è stato elaborato. Per favore assicurati che sia stato formattato correttamente.">
 <!ENTITY zotero.rtfScan.completePage.label "Elaborazione RTF completata.">
-<!ENTITY zotero.rtfScan.formatPage.description "Zotero sta elaborando e formattando il tuo documento. Un attimo di pazienza, per favore.">
+<!ENTITY zotero.rtfScan.formatPage.description "Jurism sta elaborando e formattando il tuo documento. Un attimo di pazienza, per favore.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formattazione delle citazioni">
 <!ENTITY zotero.rtfScan.inputFile.label "File da elaborare">
-<!ENTITY zotero.rtfScan.introPage.description "Zotero can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
+<!ENTITY zotero.rtfScan.introPage.description "Jurism can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
 <!ENTITY zotero.rtfScan.introPage.description2 "Per iniziare, seleziona un file RTF e un file di destinazione qui sotto:">
 <!ENTITY zotero.rtfScan.introPage.label "Introduzione">
 <!ENTITY zotero.rtfScan.itemName.label "Nome oggetto">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Citazioni corripondenti">
 <!ENTITY zotero.rtfScan.outputFile.label "File di destinazione">
-<!ENTITY zotero.rtfScan.scanPage.description "Zotero sta cercando citazioni nel tuo documento. Un attimo di pazienza, per favore.">
+<!ENTITY zotero.rtfScan.scanPage.description "Jurism sta cercando citazioni nel tuo documento. Un attimo di pazienza, per favore.">
 <!ENTITY zotero.rtfScan.scanPage.label "Sto cercando citazioni">
 <!ENTITY zotero.rtfScan.stylePage.label "Formattazione del documento">
 <!ENTITY zotero.rtfScan.title "Scansione RTF">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Rinomina tag...">
 <!ENTITY zotero.tagSelector.selectVisible "Seleziona visibili">
 <!ENTITY zotero.tagSelector.showAutomatic "Visualizza automaticamente">
-<!ENTITY zotero.toolbar.about.label "Informazioni su Zotero...">
+<!ENTITY zotero.toolbar.about.label "Informazioni su Jurism...">
 <!ENTITY zotero.toolbar.actions.label "Azioni">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "prima di continuare">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Accertati di avere consultato le">
 <!ENTITY zotero.upgrade.majorUpgradeLink "istruzioni di aggiornamento">
-<!ENTITY zotero.upgrade.newVersionInstalled "Nuova versione di Zotero installata correttamente.">
-<!ENTITY zotero.upgrade.title "Assistente all'aggiornamento di Zotero">
+<!ENTITY zotero.upgrade.newVersionInstalled "Nuova versione di Jurism installata correttamente.">
+<!ENTITY zotero.upgrade.title "Assistente all'aggiornamento di Jurism">
 <!ENTITY zotero.upgrade.upgradeInProgress "Attendere il completamento del processo di aggiornamento. L&apos;operazione potrebbe richiedere alcuni minuti.">
-<!ENTITY zotero.upgrade.upgradeRequired "Il database deve essere aggiornato alla nuova versione di Zotero.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Il database di Zotero è stato aggiornato correttamente.">
+<!ENTITY zotero.upgrade.upgradeRequired "Il database deve essere aggiornato alla nuova versione di Jurism.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Il database di Jurism è stato aggiornato correttamente.">

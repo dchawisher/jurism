@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Kuitaat">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Kuitaat Zotero">
+<!ENTITY quitApplicationCmdMac.label "Kuitaat Jurism">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Kuitaat">
 <!ENTITY recursiveCollections.label "Diskouez an elfennoù diwar an is-dastumadeg">
