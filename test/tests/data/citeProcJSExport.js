@@ -1758,6 +1758,9 @@
 		"note": "Extra",
 		"title-short": "Short title",
 		"language": "en-US",
+		"archive": "Archive",
+		"archive_location": "Archive location",
+		"archive_collection": "Archive collection",
 		"author": [
 			{
 				"family": "presenterLast",

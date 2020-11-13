@@ -1854,6 +1854,9 @@
 	"presentation": {
 		"abstractNote": "Abstract note",
 		"accessDate": "1997-06-13T23:59:58Z",
+		"archive": "Archive",
+		"archiveLocation": "Archive location",
+		"archiveCollection": "Archive collection",
 		"creators": [
 			{
 				"creatorType": "presenter",

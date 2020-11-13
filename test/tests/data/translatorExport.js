@@ -2112,7 +2112,10 @@
     "language": "en-US",
     "abstractNote": "Abstract note",
     "title": "Title",
-    "shortTitle": "Short title",
+      "shortTitle": "Short title",
+    "archive": "Archive",
+    "archiveLocation": "Archive location",
+    "archiveCollection": "Archive collection",
     "creators": [
       {
         "firstName": "presenterFirst",

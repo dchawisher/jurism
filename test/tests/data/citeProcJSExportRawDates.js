@@ -1460,6 +1460,9 @@
 	"presentation": {
 		"URL": "http://www.example.com",
 		"abstract": "Abstract note",
+		"archive": "Archive",
+		"archive_location": "Archive location",
+		"archive_collection": "Archive collection",
 		"accessed": {
 			"raw": "1997-06-13"
 		},
