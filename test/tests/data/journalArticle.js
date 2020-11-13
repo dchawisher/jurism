@@ -58,6 +58,8 @@
 		"libraryCatalog": "Library catalog",
 		"pages": "1-10",
 		"publicationTitle": "Publication title",
+		"place": "Place",
+		"publisher": "Publisher",
 		"rights": "Rights",
 		"series": "Series",
 		"seriesText": "Series text",

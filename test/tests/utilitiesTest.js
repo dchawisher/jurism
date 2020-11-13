@@ -466,6 +466,7 @@ describe("Zotero.Utilities", function() {
 				
 				delete newJSON.id;
 				delete json.id;
+				
 				for (var key in canonicalJSON) {
 					assert.isTrue(!!newJSON[key], "newJSON has key " + key);
 					var cVal = canonicalJSON[key];

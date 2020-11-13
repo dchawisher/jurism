@@ -1454,6 +1454,8 @@
     "issue": "5",
     "pages": "1-10",
     "publicationTitle": "Publication title",
+    "place": "Place",
+    "publisher": "Publisher",
     "ISSN": "1234-5679",
     "date": "1999-12-31",
     "callNumber": "Call number",

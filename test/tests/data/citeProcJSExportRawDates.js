@@ -246,6 +246,7 @@
 		"number-of-volumes": "7",
 		"publisher": "Publisher",
 		"publisher-place": "Place",
+		"event-place": "Place",
 		"title-short": "Short title",
 		"source": "Library catalog",
 		"title": "Title",
@@ -1057,6 +1058,8 @@
 		"language": "en-US",
 		"note": "Extra",
 		"page": "1-10",
+		"publisher-place": "Place",
+		"publisher": "Publisher",
 		"reviewed-author": [
 			{
 				"family": "reviewedAuthorLast",
