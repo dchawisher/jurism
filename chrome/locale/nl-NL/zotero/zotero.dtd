@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Selecteer velden om te behouden ten opzichte van andere versie van het item:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Kies de versie van het item om te gebruiken als het meest voornaamste item:">
 <!ENTITY zotero.errorReport.notReviewed "Foutenrapporten worden niet bekeken tenzij u ernaar verwijst in het forum.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "Plaats een bericht op het (Engelstalige) Zotero-forum (forums.zotero.org) onder vermelding van het Rapport ID, een omschrijving van het probleem, en de stappen die nodig zijn om het probleem te reproduceren.">
 <!ENTITY zotero.errorReport.reportID "Rapport ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "Even geduld a.u.b. totdat het foutenrapport is verstuurd.">
 <!ENTITY zotero.errorReport.submitted "Het foutenrapport is verstuurd.">
-<!ENTITY zotero.errorReport.title "Jurism-foutrapportage">
+<!ENTITY zotero.errorReport.title "Zotero-foutrapportage">
 <!ENTITY zotero.errorReport.unrelatedMessages "Dit bevat mogelijk berichten die niet gerelateerd zijn aan Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Formaat:">
 <!ENTITY zotero.exportOptions.title "Exporteren…">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Importeren...">
 <!ENTITY zotero.import.lastModified "Laatst gewijzigd">
 <!ENTITY zotero.import.size "Grootte">
-<!ENTITY zotero.import.source.file "Een bestand (BibTeX, RIS, Jurism RDF, etc.)">
+<!ENTITY zotero.import.source.file "Een bestand (BibTeX, RIS, Zotero RDF, etc.)">
 <!ENTITY zotero.import.whereToImportFrom "Waaruit wilt u importeren?">
 <!ENTITY zotero.integration.addEditCitation.title "Verwijzing toevoegen/aanpassen">
 <!ENTITY zotero.integration.classicView.label "Klassieke weergave">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Meerduidige verwijzingen">
 <!ENTITY zotero.rtfScan.cancel.label "Annuleren">
 <!ENTITY zotero.rtfScan.citation.label "Verwijzing">
-<!ENTITY zotero.rtfScan.citationsPage.description "Bekijk de lijst met herkende verwijzingen om er zeker van te zijn dat Jurism de juiste corresponderende items heeft gevonden. Niet-herkende of meerduidige verwijzingen moeten worden nagekeken voordat naar de volgende stap kan worden gegaan.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Bekijk de lijst met herkende verwijzingen om er zeker van te zijn dat Zotero de juiste corresponderende items heeft gevonden. Niet-herkende of meerduidige verwijzingen moeten worden nagekeken voordat naar de volgende stap kan worden gegaan.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Controleer geciteerde items">
 <!ENTITY zotero.rtfScan.completePage.description "Uw document is gescand en verwerkt. Controleer of de tekst goed is opgemaakt.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF-scan voltooid">
-<!ENTITY zotero.rtfScan.formatPage.description "Jurism is het RTF-bestand aan het verwerken en opmaken. Even geduld a.u.b.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero is het RTF-bestand aan het verwerken en opmaken. Even geduld a.u.b.">
 <!ENTITY zotero.rtfScan.formatPage.label "Verwijzingen opmaken">
 <!ENTITY zotero.rtfScan.inputFile.label "Invoerbestand">
-<!ENTITY zotero.rtfScan.introPage.description "Jurism kan automatisch verwijzingen in RTF-bestanden herkennen, opnieuw opmaken en een bibliografie toevoegen. De RTF-scan-functie ondersteunt momenteel alleen verwijzingen die opgemaakt zijn volgens de onderstaande formaten:">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero kan automatisch verwijzingen in RTF-bestanden herkennen, opnieuw opmaken en een bibliografie toevoegen. De RTF-scan-functie ondersteunt momenteel alleen verwijzingen die opgemaakt zijn volgens de onderstaande formaten:">
 <!ENTITY zotero.rtfScan.introPage.description2 "Selecteer een RTF-invoerbestand en een uitvoerbestand om te beginnen:">
 <!ENTITY zotero.rtfScan.introPage.label "Introductie">
 <!ENTITY zotero.rtfScan.itemName.label "Naam item">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Herkende verwijzingen">
 <!ENTITY zotero.rtfScan.outputFile.label "Uitvoerbestand">
-<!ENTITY zotero.rtfScan.scanPage.description "Jurism is uw document aan het doorzoeken naar verwijzingen. Even geduld a.u.b.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero is uw document aan het doorzoeken naar verwijzingen. Even geduld a.u.b.">
 <!ENTITY zotero.rtfScan.scanPage.label "Bezig met zoeken naar verwijzingen">
 <!ENTITY zotero.rtfScan.stylePage.label "Opmaken van het document">
 <!ENTITY zotero.rtfScan.title "RTF-scan">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "Synchroniseerfout">
 <!ENTITY zotero.sync.longTagFixer.character "teken">
 <!ENTITY zotero.sync.longTagFixer.characters "tekens">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Het volgende label in uw Jurism-bibliotheek is te lang om met de server te kunnen synchroniseren:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Het volgende label in uw Zotero-bibliotheek is te lang om met de server te kunnen synchroniseren:">
 <!ENTITY zotero.sync.longTagFixer.split "Opdelen">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Opdelen bij het/de">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "U kunt het label opdelen in meerdere labels, het label handmatig inkorten, of het label verwijderen.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Label hernoemen…">
 <!ENTITY zotero.tagSelector.selectVisible "Selecteer zichtbare labels">
 <!ENTITY zotero.tagSelector.showAutomatic "Automatisch labels tonen">
-<!ENTITY zotero.toolbar.about.label "Over Jurism">
+<!ENTITY zotero.toolbar.about.label "Over Zotero">
 <!ENTITY zotero.toolbar.actions.label "Acties">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "voordat u verder gaat.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Lees daarom eerst de">
 <!ENTITY zotero.upgrade.majorUpgradeLink "upgrade-instructies">
-<!ENTITY zotero.upgrade.newVersionInstalled "U heeft een nieuwe versie van Jurism geïnstalleerd.">
-<!ENTITY zotero.upgrade.title "Jurism-Upgrade Wizard">
+<!ENTITY zotero.upgrade.newVersionInstalled "U heeft een nieuwe versie van Zotero geïnstalleerd.">
+<!ENTITY zotero.upgrade.title "Zotero-Upgrade Wizard">
 <!ENTITY zotero.upgrade.upgradeInProgress "Wacht totdat het upgradeproces is voltooid. Dit kan enige minuten duren.">
-<!ENTITY zotero.upgrade.upgradeRequired "Uw Jurism-database moet bijgewerkt worden om te kunnen werken met de nieuwe versie.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Uw Jurism-database is met succes bijgewerkt.">
+<!ENTITY zotero.upgrade.upgradeRequired "Uw Zotero-database moet bijgewerkt worden om te kunnen werken met de nieuwe versie.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Uw Zotero-database is met succes bijgewerkt.">

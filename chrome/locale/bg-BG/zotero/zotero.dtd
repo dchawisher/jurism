@@ -44,7 +44,7 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Изберете полета за запазване от другите версии на записа">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Изберете версията на записа, която да използвате като главен запис">
 <!ENTITY zotero.errorReport.notReviewed "В общия случай, отчетите с грешки няма да бъдат разглеждани, освен ако не са оповестени във форумите.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "Моля оставете съобщение във форумите на Zotero (forums.zotero.org) с идентификационият номер на отчета, описание на проблема и стъпките необходими, за да бъде възпроизведен.">
 <!ENTITY zotero.errorReport.reportID "Идентификационен номер на отчета:">
 <!ENTITY zotero.errorReport.submissionInProgress "Моля изчакайте докато бъде подаден отчета с грешките.">
 <!ENTITY zotero.errorReport.submitted "Отчета с грешките беше подаден.">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Внасяне...">
 <!ENTITY zotero.import.lastModified "Променено за последно">
 <!ENTITY zotero.import.size "Размер">
-<!ENTITY zotero.import.source.file "Файл (BibTeX, RIS, Jurism RDF, и др.)">
+<!ENTITY zotero.import.source.file "Файл (BibTeX, RIS, Zotero RDF, и др.)">
 <!ENTITY zotero.import.whereToImportFrom "Откъде желаете да извършите внасянето?">
 <!ENTITY zotero.integration.addEditCitation.title "Добавяне/редактиране на цитат">
 <!ENTITY zotero.integration.classicView.label "Класически изглед">

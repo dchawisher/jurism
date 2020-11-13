@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "Klávesové zkratky">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Základní adresář">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Připojený základní adresář pro přílohy">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism použije relativní cesty pro propojené souborové přílohy v základním adresáři, což umožňuje přístup k souborům na různých počítačích, pokud bude zachována stejná struktura souborů v základním adresáři.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero použije relativní cesty pro propojené souborové přílohy v základním adresáři, což umožňuje přístup k souborům na různých počítačích, pokud bude zachována stejná struktura souborů v základním adresáři.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Změnit na absolutní cesty...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Vybrat...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Atuomaticky získat metadata pro PDF">
@@ -51,7 +51,7 @@
 <!ENTITY zotero.preferences.default "Výchozí:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Automaticky připojit propojené PDF a ostatní soubory při ukládání položek">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Zahrnout URL článků v referencích">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Pokud je tato volba neaktivní, Jurism zahrne URL v případě citování článku (z časopisu, magazínu nebo novin) pouze když článek nemá specifikovaný rozsah stran.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Pokud je tato volba neaktivní, Zotero zahrne URL v případě citování článku (z časopisu, magazínu nebo novin) pouze když článek nemá specifikovaný rozsah stran.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Získat další styly...">
@@ -126,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Rozvržení:">
 <!ENTITY zotero.preferences.layout.stacked "Zaplněný">
 <!ENTITY zotero.preferences.layout.standard "Standardní">
-<!ENTITY zotero.preferences.locate.addDescription "Pro přidání vyhledávače, který není v seznamu, přejděte na požadovaný vyhledávač v prohlížeči a vyberte položku „Přidat“ v Jurism menu Najít.">
+<!ENTITY zotero.preferences.locate.addDescription "Pro přidání vyhledávače, který není v seznamu, přejděte na požadovaný vyhledávač v prohlížeči a vyberte položku „Přidat“ v Zotero menu Najít.">
 <!ENTITY zotero.preferences.locate.description "Popis">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Správce mechanismu pro vyhledávání článků">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "&quot;Mechanismus pro vyhledávání&quot; rozšiřuje možnosti funkce Najít v info panelu. Položky přidané do seznamu níže se přidají do kontextového menu a mohou být použity k nalezení zdrojů z vaší knihovny na webu.">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Hledat resolvery">
 <!ENTITY zotero.preferences.openurl.server "Resolver:">
 <!ENTITY zotero.preferences.openurl.version "Verze">
-<!ENTITY zotero.preferences.parseRISRefer "Použít Jurism pro stažené soubory BibTeX/RIS/Refer">
+<!ENTITY zotero.preferences.parseRISRefer "Použít Zotero pro stažené soubory BibTeX/RIS/Refer">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Pokročilé">
 <!ENTITY zotero.preferences.prefpane.cite "Citování">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Nastavené proxy servery">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Cesta k adresáři (např. about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link ".">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism bude transparentně přesměrovávat požadavky skrz uložené proxy servery. Více informací najdete v">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero bude transparentně přesměrovávat požadavky skrz uložené proxy servery. Více informací najdete v">
 <!ENTITY zotero.preferences.proxies.desc_link "dokumentaci k proxy">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Vypnout proxy přesměrování, pokud má doména obsahuje ">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Jméno (např. index.html)">
@@ -234,7 +234,7 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Resetovat historii synchronizace souborů">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Porovnat všechny připojené soubory se vzdáleným úložištěm">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Obnovit z Online knihovny">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Přepsat lokální data Jurism daty z online knihovny.">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Přepsat lokální data Zotero daty z online knihovny.">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Nahradit online knihovnu">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Přepsat online knihovnu daty z lokálního Zotera">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Následující operace jsou určeny k použití pouze za neobvyklých konkrétních situacích a neměly by být používány pro běžné řešení problémů. V mnoha případech může resetování způsobit další problémy. Podívejte se na">
@@ -243,11 +243,11 @@
 <!ENTITY zotero.preferences.sync.setUpSync "Nastavení synchronizace">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Synchronizovat automaticky">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synchronizovat plnotextový obsah">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism může synchronizovat plnotextový obsah souborů ve vašich knihovnách Zotera se serverem zotero.org a dalšími propojenými zařízeními. To vám umožní snadno hledat vaše soubory kdekoli se nacházíte. Plnotextový obsah vašich souborů nebude sdílen veřejně.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero může synchronizovat plnotextový obsah souborů ve vašich knihovnách Zotera se serverem zotero.org a dalšími propojenými zařízeními. To vám umožní snadno hledat vaše soubory kdekoli se nacházíte. Plnotextový obsah vašich souborů nebude sdílen veřejně.">
 <!ENTITY zotero.preferences.sync.syncServer "Synchronizace dat">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Odpojit účet...">
 <!ENTITY zotero.preferences.sync.username "Uživatelské jméno:">
-<!ENTITY zotero.preferences.title "Nastavení aplikace Jurism">
+<!ENTITY zotero.preferences.title "Nastavení aplikace Zotero">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "dní">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Automaticky odstranit položky v koši smazané déle než">
 <!ENTITY zotero.preferences.updateNow "Aktualizovat nyní">

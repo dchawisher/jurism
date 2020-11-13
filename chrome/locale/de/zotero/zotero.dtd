@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Wählen Sie die beizubehaltenden Felder aus anderen Versionen des Eintrags:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Wählen Sie die Version des Eintrags, die als Master-Eintrag verwendet werden soll:">
 <!ENTITY zotero.errorReport.notReviewed "Fehlerberichte werden im Allgemeinen nicht beachtet, wenn kein entsprechender Thread im Forum erstellt wird.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "Bitte erstellen Sie einen Beitrag in den Zotero-Foren (forums.zotero.org) mit dieser Berichts-ID, einer Beschreibung des Fehlers und den Schritten, die notwendig sind, um ihn zu reproduzieren.">
 <!ENTITY zotero.errorReport.reportID "Bericht-ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "Bitte warten Sie, während der Fehlerbericht übermittelt wird.">
 <!ENTITY zotero.errorReport.submitted "Der Fehlerbericht wurde übermittelt.">
-<!ENTITY zotero.errorReport.title "Jurism Fehlerbericht">
+<!ENTITY zotero.errorReport.title "Zotero Fehlerbericht">
 <!ENTITY zotero.errorReport.unrelatedMessages "Unter Umständen sind Nachrichten enthalten, die nicht mit Juris-M in Verbindung stehen.">
 <!ENTITY zotero.exportOptions.format.label "Format:">
 <!ENTITY zotero.exportOptions.title "Exportieren...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Importieren...">
 <!ENTITY zotero.import.lastModified "Zuletzt geändert">
 <!ENTITY zotero.import.size "Größe">
-<!ENTITY zotero.import.source.file "Einer Datei (BibTeX, RIS, Jurism RDF, etc.)">
+<!ENTITY zotero.import.source.file "Einer Datei (BibTeX, RIS, Zotero RDF, etc.)">
 <!ENTITY zotero.import.whereToImportFrom "Von wo aus möchten Sie importieren?">
 <!ENTITY zotero.integration.addEditCitation.title "Zitation hinzufügen/ändern">
 <!ENTITY zotero.integration.classicView.label "Klassische Ansicht">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Mehrdeutige Zitationen">
 <!ENTITY zotero.rtfScan.cancel.label "Abbrechen">
 <!ENTITY zotero.rtfScan.citation.label "Zitation">
-<!ENTITY zotero.rtfScan.citationsPage.description "Bitte überprüfen Sie die Liste der erkannten Zitationen, um sicher zu stellen, dass Jurism die zusammengehörigen Einträge korrekt erkannt hat. Alle nicht zugeordneten oder uneindeutigen Zitationen müssen korrigiert werden, bevor Sie fortfahren.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Bitte überprüfen Sie die Liste der erkannten Zitationen, um sicher zu stellen, dass Zotero die zusammengehörigen Einträge korrekt erkannt hat. Alle nicht zugeordneten oder uneindeutigen Zitationen müssen korrigiert werden, bevor Sie fortfahren.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Zitierte Einträge überprüfen">
 <!ENTITY zotero.rtfScan.completePage.description "Ihr Dokument wurde gescannt und bearbeitet. Bitte überprüfen Sie, ob es korrekt formatiert wurde.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF-Scan abgeschlossen">
-<!ENTITY zotero.rtfScan.formatPage.description "Jurism bearbeitet und formatiert Ihre RTF-Datei. Bitte warten Sie.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero bearbeitet und formatiert Ihre RTF-Datei. Bitte warten Sie.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formatiere Zitationen">
 <!ENTITY zotero.rtfScan.inputFile.label "Input-Datei">
-<!ENTITY zotero.rtfScan.introPage.description "Jurism kann Zitationen automatisch extrahieren und neu formatieren und ein Literaturverzeichnis in RTF-Dateien einfügen. Das RTF-Scan-Modul unterstützt im Moment Zitationen in Variationen der folgenden Formate:">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero kann Zitationen automatisch extrahieren und neu formatieren und ein Literaturverzeichnis in RTF-Dateien einfügen. Das RTF-Scan-Modul unterstützt im Moment Zitationen in Variationen der folgenden Formate:">
 <!ENTITY zotero.rtfScan.introPage.description2 "Als ersten Schritt wählen Sie eine RTF-Datei als Input und eine Output-Datei aus:">
 <!ENTITY zotero.rtfScan.introPage.label "Einführung">
 <!ENTITY zotero.rtfScan.itemName.label "Eintragsname">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Zugeordnete Zitationen">
 <!ENTITY zotero.rtfScan.outputFile.label "Output-Datei">
-<!ENTITY zotero.rtfScan.scanPage.description "Jurism scannt Ihr Dokument nach Zitationen. Bitte haben Sie Geduld.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero scannt Ihr Dokument nach Zitationen. Bitte haben Sie Geduld.">
 <!ENTITY zotero.rtfScan.scanPage.label "Scanne Zitationen">
 <!ENTITY zotero.rtfScan.stylePage.label "Dokumenten-Formatierung">
 <!ENTITY zotero.rtfScan.title "RTF-Scan">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "Sync-Fehler">
 <!ENTITY zotero.sync.longTagFixer.character "Zeichen">
 <!ENTITY zotero.sync.longTagFixer.characters "Zeichen">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Das folgende Tag in Ihrer Jurism-Bibliothek ist zu lang für die Synchronisierung mit dem Server:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Das folgende Tag in Ihrer Zotero-Bibliothek ist zu lang für die Synchronisierung mit dem Server:">
 <!ENTITY zotero.sync.longTagFixer.split "Aufteilen">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Aufteilen am">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Sie können das Tag entweder in mehrere Tags aufteilen, es manuell kürzen oder es löschen.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Tag umbenennen...">
 <!ENTITY zotero.tagSelector.selectVisible "Sichtbare auswählen">
 <!ENTITY zotero.tagSelector.showAutomatic "Automatische Tags anzeigen">
-<!ENTITY zotero.toolbar.about.label "Über Jurism">
+<!ENTITY zotero.toolbar.about.label "Über Zotero">
 <!ENTITY zotero.toolbar.actions.label "Aktionen">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "gelesen haben, bevor Sie fortfahren.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Stellen Sie sicher, dass Sie die">
 <!ENTITY zotero.upgrade.majorUpgradeLink "Upgrade-Anweisungen">
-<!ENTITY zotero.upgrade.newVersionInstalled "Sie haben eine neue Version von Jurism installiert.">
-<!ENTITY zotero.upgrade.title "Jurism Upgrade Wizard">
+<!ENTITY zotero.upgrade.newVersionInstalled "Sie haben eine neue Version von Zotero installiert.">
+<!ENTITY zotero.upgrade.title "Zotero Upgrade Wizard">
 <!ENTITY zotero.upgrade.upgradeInProgress "Bitte warten Sie, bis die Aktualisierung abgeschlossen ist. Dies kann einige Minuten dauern.">
-<!ENTITY zotero.upgrade.upgradeRequired "Ihre Jurism-Datenbank muss aktualisiert werden, damit sie mit der neuen Version funktioniert.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Ihre Jurism-Datenbank wurde erfolgreich aktualisiert.">
+<!ENTITY zotero.upgrade.upgradeRequired "Ihre Zotero-Datenbank muss aktualisiert werden, damit sie mit der neuen Version funktioniert.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Ihre Zotero-Datenbank wurde erfolgreich aktualisiert.">

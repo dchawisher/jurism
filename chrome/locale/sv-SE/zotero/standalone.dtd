@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Avsluta">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Avsluta Jurism">
+<!ENTITY quitApplicationCmdMac.label "Avsluta Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Avsluta">
 <!ENTITY recursiveCollections.label "Visa källor från undersamling">

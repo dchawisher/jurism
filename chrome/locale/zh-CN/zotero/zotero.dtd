@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "选择需要保留的域, 防止被其它版本的域覆盖.">
 <!ENTITY zotero.duplicatesMerge.versionSelect "选择作为主条目的条目版本.">
 <!ENTITY zotero.errorReport.notReviewed "除非在此论坛中提交，错误报告一般不会被看到.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "请到Zotero论坛(forums.zotero.org)发布新帖, 内容包括: 报告ID, 问题描述以任何必要的步骤以重现该问题.">
 <!ENTITY zotero.errorReport.reportID "报告ID:">
 <!ENTITY zotero.errorReport.submissionInProgress "正在提交错误报告, 请稍候.">
 <!ENTITY zotero.errorReport.submitted "错误报告已经提交.">
-<!ENTITY zotero.errorReport.title "Jurism 错误报告">
+<!ENTITY zotero.errorReport.title "Zotero 错误报告">
 <!ENTITY zotero.errorReport.unrelatedMessages "这里可能包括和Juris-M无关的消息。">
 <!ENTITY zotero.exportOptions.format.label "格式:">
 <!ENTITY zotero.exportOptions.title "导出...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "导入…">
 <!ENTITY zotero.import.lastModified "上一次更改">
 <!ENTITY zotero.import.size "大小">
-<!ENTITY zotero.import.source.file "文件（BibTeX，RIS，Jurism RDF等）">
+<!ENTITY zotero.import.source.file "文件（BibTeX，RIS，Zotero RDF等）">
 <!ENTITY zotero.import.whereToImportFrom "您想从哪里导入？">
 <!ENTITY zotero.integration.addEditCitation.title "添加/编辑引文">
 <!ENTITY zotero.integration.classicView.label "经典视图">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "含糊的引文">
 <!ENTITY zotero.rtfScan.cancel.label "取消">
 <!ENTITY zotero.rtfScan.citation.label "引文">
-<!ENTITY zotero.rtfScan.citationsPage.description "请检查下列引文以确保 Jurism 已经正确地选择了相关条目.在进行下一步之前, 请更正任何未映射的或不明确的引文.">
+<!ENTITY zotero.rtfScan.citationsPage.description "请检查下列引文以确保 Zotero 已经正确地选择了相关条目.在进行下一步之前, 请更正任何未映射的或不明确的引文.">
 <!ENTITY zotero.rtfScan.citationsPage.label "校验已引用的条目">
 <!ENTITY zotero.rtfScan.completePage.description "文档处理完成, 请确保格式正确.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF 扫描完成">
-<!ENTITY zotero.rtfScan.formatPage.description "Jurism正在处理并格式化您的 RTF 文件, 请耐心等待.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero正在处理并格式化您的 RTF 文件, 请耐心等待.">
 <!ENTITY zotero.rtfScan.formatPage.label "正在格式化引文">
 <!ENTITY zotero.rtfScan.inputFile.label "输入文件">
-<!ENTITY zotero.rtfScan.introPage.description "Jurism 可以自动提取, 格式化引文并将引文目录插入到 RTF 文件中. RTF 扫描功能目前支持下列格式的引文变量:">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero 可以自动提取, 格式化引文并将引文目录插入到 RTF 文件中. RTF 扫描功能目前支持下列格式的引文变量:">
 <!ENTITY zotero.rtfScan.introPage.description2 "要启动, 请选择 RTF 输入文件和输出文件:">
 <!ENTITY zotero.rtfScan.introPage.label "介绍">
 <!ENTITY zotero.rtfScan.itemName.label "条目名称">
 <!ENTITY zotero.rtfScan.mappedCitations.label "已映射的引文">
 <!ENTITY zotero.rtfScan.outputFile.label "输出文件">
-<!ENTITY zotero.rtfScan.scanPage.description "Jurism 正在扫描引文, 请耐心等待.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero 正在扫描引文, 请耐心等待.">
 <!ENTITY zotero.rtfScan.scanPage.label "扫描引文">
 <!ENTITY zotero.rtfScan.stylePage.label "文档格式化中">
 <!ENTITY zotero.rtfScan.title "RTF 扫描">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "重命名标签...">
 <!ENTITY zotero.tagSelector.selectVisible "选择可见">
 <!ENTITY zotero.tagSelector.showAutomatic "自动显示">
-<!ENTITY zotero.toolbar.about.label "关于 Jurism">
+<!ENTITY zotero.toolbar.about.label "关于 Zotero">
 <!ENTITY zotero.toolbar.actions.label "操作">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "在继续之前.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "请确保您已经查阅了">
 <!ENTITY zotero.upgrade.majorUpgradeLink "升级说明">
-<!ENTITY zotero.upgrade.newVersionInstalled "您已经安装了一套新版的Jurism.">
-<!ENTITY zotero.upgrade.title "Jurism 升级向导">
+<!ENTITY zotero.upgrade.newVersionInstalled "您已经安装了一套新版的Zotero.">
+<!ENTITY zotero.upgrade.title "Zotero 升级向导">
 <!ENTITY zotero.upgrade.upgradeInProgress "请耐心等待升级过程结束. 这可能要花上几分钟.">
-<!ENTITY zotero.upgrade.upgradeRequired "为了使用这个新版本您必须升级您的 Jurism 数据库.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "您的 Jurism 数据库已成功升级.">
+<!ENTITY zotero.upgrade.upgradeRequired "为了使用这个新版本您必须升级您的 Zotero 数据库.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "您的 Zotero 数据库已成功升级.">

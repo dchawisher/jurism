@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Surt">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Surt del Jurism">
+<!ENTITY quitApplicationCmdMac.label "Surt del Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Surt">
 <!ENTITY recursiveCollections.label "Mostra elements de les subcol·leccions">

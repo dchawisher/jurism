@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Вийти">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Вийти з Jurism">
+<!ENTITY quitApplicationCmdMac.label "Вийти з Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Вихід">
 <!ENTITY recursiveCollections.label "Show Items from Subcollections">

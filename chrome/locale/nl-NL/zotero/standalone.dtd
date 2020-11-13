@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "A">
 <!ENTITY quitApplicationCmd.label "Afsluiten">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Jurism afsluiten">
+<!ENTITY quitApplicationCmdMac.label "Zotero afsluiten">
 <!ENTITY quitApplicationCmdWin.accesskey "A">
 <!ENTITY quitApplicationCmdWin.label "Afsluiten">
 <!ENTITY recursiveCollections.label "Items uit deelverzamelingen tonen">

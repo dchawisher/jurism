@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "終了">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Jurism を終了">
+<!ENTITY quitApplicationCmdMac.label "Zotero を終了">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "終了">
 <!ENTITY recursiveCollections.label "サブコレクションからアイテムを表示">
