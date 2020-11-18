@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Zavrieť">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Zavrieť Jurism">
+<!ENTITY quitApplicationCmdMac.label "Zavrieť Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Zavrieť">
 <!ENTITY recursiveCollections.label "Zobraziť exempláre v podadresároch">

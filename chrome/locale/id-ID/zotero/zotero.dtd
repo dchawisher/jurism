@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Pilih kolom untuk dipertahankan dari versi lain item ini:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Pilih versi item untuk digunakan sebagai item utama:">
 <!ENTITY zotero.errorReport.notReviewed "Laporan kesalahan tidak akan ditinjau ulang kecuali dirujuk di dalam forum.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "Mohon poskan pesan ke forum Zotero (forums.zotero.org) dengan ID Laporan ini, deskripsi masalah, dan langkah-langkah yang diperlukan untuk mereproduksinya.">
 <!ENTITY zotero.errorReport.reportID "ID Laporan:">
 <!ENTITY zotero.errorReport.submissionInProgress "Mohon tunggu sampai laporan kesalahan dikirimkan.">
 <!ENTITY zotero.errorReport.submitted "Laporan kesalahan Anda telah dikirimkan.">
-<!ENTITY zotero.errorReport.title "Jurism Error Report">
+<!ENTITY zotero.errorReport.title "Zotero Error Report">
 <!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "Format:">
 <!ENTITY zotero.exportOptions.title "Ekspor...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Importing…">
 <!ENTITY zotero.import.lastModified "Last Modified">
 <!ENTITY zotero.import.size "Size">
-<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Jurism RDF, etc.)">
+<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
 <!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "Tambahkan/Edit Sitasi">
 <!ENTITY zotero.integration.classicView.label "Tampilan Klasik">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Sitasi Ambigu">
 <!ENTITY zotero.rtfScan.cancel.label "Batalkan">
 <!ENTITY zotero.rtfScan.citation.label "Sitasi">
-<!ENTITY zotero.rtfScan.citationsPage.description "Mohon tinjau ulang daftar sitasi-sitasi yang dikenali di bawah ini untuk memastikan bahwa Jurism telah memilih item-item dengan tepat. Semua sitasi yang tidak terpetakan atau ambigu harus diperbaiki terlebih dahulu sebelum Anda melakukan langkah berikutnya.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Mohon tinjau ulang daftar sitasi-sitasi yang dikenali di bawah ini untuk memastikan bahwa Zotero telah memilih item-item dengan tepat. Semua sitasi yang tidak terpetakan atau ambigu harus diperbaiki terlebih dahulu sebelum Anda melakukan langkah berikutnya.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Memverifikasi Item-item yang Dikutip">
 <!ENTITY zotero.rtfScan.completePage.description "Dokumen Anda telah selesai dipindai dan diproses. Mohon pastikan bahwa dokumen tersebut telah terformat secara tepat.">
 <!ENTITY zotero.rtfScan.completePage.label "Pemindaian RTF selesai">
-<!ENTITY zotero.rtfScan.formatPage.description "Jurism sedang memproses dan memformat berkas RTF Anda. Mohon bersabar.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero sedang memproses dan memformat berkas RTF Anda. Mohon bersabar.">
 <!ENTITY zotero.rtfScan.formatPage.label "Memformat Sitasi">
 <!ENTITY zotero.rtfScan.inputFile.label "Berkas Input">
-<!ENTITY zotero.rtfScan.introPage.description "Jurism dapat secara automatis mengekstrak dan memformat ulang sitasi serta memasukkan bibiliografi ke dalam berkas RTF. Saat ini, fitur Pemindaian RTF ini mendukung sitasi dalam beragam format berikut:">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero dapat secara automatis mengekstrak dan memformat ulang sitasi serta memasukkan bibiliografi ke dalam berkas RTF. Saat ini, fitur Pemindaian RTF ini mendukung sitasi dalam beragam format berikut:">
 <!ENTITY zotero.rtfScan.introPage.description2 "Untuk memulai, pilih berkas input dan output RTF di bawah ini:">
 <!ENTITY zotero.rtfScan.introPage.label "Pendahuluan">
 <!ENTITY zotero.rtfScan.itemName.label "Nama Item">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Sitasi yang Terpetakan">
 <!ENTITY zotero.rtfScan.outputFile.label "Berkas Output">
-<!ENTITY zotero.rtfScan.scanPage.description "Jurism sedang memindai dokumen Anda untuk menemukan sitasi. Mohon bersabar.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero sedang memindai dokumen Anda untuk menemukan sitasi. Mohon bersabar.">
 <!ENTITY zotero.rtfScan.scanPage.label "Memindai Sitasi.">
 <!ENTITY zotero.rtfScan.stylePage.label "Pemformatan Dokumen">
 <!ENTITY zotero.rtfScan.title "RTF Scan">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "Kesalahan Sinkronisasi">
 <!ENTITY zotero.sync.longTagFixer.character "karakter">
 <!ENTITY zotero.sync.longTagFixer.characters "karakter">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Tag berikut ini pada perpustakaan Jurism Anda terlalu panjang untuk disinkronisasikan ke server:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "Tag berikut ini pada perpustakaan Zotero Anda terlalu panjang untuk disinkronisasikan ke server:">
 <!ENTITY zotero.sync.longTagFixer.split "Bagi">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Bagi pada">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "Anda dapat membagi tag menjadi beberapa bagian, mengedit tag secara manual agar lebih ringkas, atau menghapusnya.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Namai Ulang Tag...">
 <!ENTITY zotero.tagSelector.selectVisible "Pilih yang Terlihat">
 <!ENTITY zotero.tagSelector.showAutomatic "Tunjukkan Automatis">
-<!ENTITY zotero.toolbar.about.label "Tentang Jurism">
+<!ENTITY zotero.toolbar.about.label "Tentang Zotero">
 <!ENTITY zotero.toolbar.actions.label "Tindakan">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "sebelum melanjutkan.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Yakinkan bahwa Anda telah meninjau ulang">
 <!ENTITY zotero.upgrade.majorUpgradeLink "instruksi upgrade">
-<!ENTITY zotero.upgrade.newVersionInstalled "Anda telah menginstal versi terbaru Jurism.">
-<!ENTITY zotero.upgrade.title "Jurism Upgrade Wizard">
+<!ENTITY zotero.upgrade.newVersionInstalled "Anda telah menginstal versi terbaru Zotero.">
+<!ENTITY zotero.upgrade.title "Zotero Upgrade Wizard">
 <!ENTITY zotero.upgrade.upgradeInProgress "Mohon tunggu sampai proses upgrade selesai dilaksanakan. Hal ini mungkin akan berjalan beberapa menit.">
-<!ENTITY zotero.upgrade.upgradeRequired "Database Jurism Anda harus di-upgrade agar dapat bekerja dengan versi terbaru Jurism.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Database Jurism Anda telah berhasil di-upgrade.">
+<!ENTITY zotero.upgrade.upgradeRequired "Database Zotero Anda harus di-upgrade agar dapat bekerja dengan versi terbaru Zotero.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Database Zotero Anda telah berhasil di-upgrade.">

@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Chọn các trường muốn giữ lại từ các bản khác của mục này:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Chọn phiên bản của mục đề dùng như mục mẫu:">
 <!ENTITY zotero.errorReport.notReviewed "Các báo cáo lỗi không được xem xét trừ khi được tham chiếu tới trên diễn đàn.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "Xin gửi một thông báo tới diễn đàn Zotero (forums.zotero.org) với mã báo cáo này cùng mô tả vấn đề và tình huống sinh ra lỗi.">
 <!ENTITY zotero.errorReport.reportID "ID của Báo cáo:">
 <!ENTITY zotero.errorReport.submissionInProgress "Xin vui lòng chờ trong khi báo cáo lỗi được gửi đi.">
 <!ENTITY zotero.errorReport.submitted "Báo cáo lỗi đã được gửi đi">
-<!ENTITY zotero.errorReport.title "Báo cáo lỗi Jurism">
+<!ENTITY zotero.errorReport.title "Báo cáo lỗi Zotero">
 <!ENTITY zotero.errorReport.unrelatedMessages "Có thể gồm các thông báo không liên quan tới Juris-M">
 <!ENTITY zotero.exportOptions.format.label "Định dạng:">
 <!ENTITY zotero.exportOptions.title "Xuất khẩu...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Importing…">
 <!ENTITY zotero.import.lastModified "Last Modified">
 <!ENTITY zotero.import.size "Size">
-<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Jurism RDF, etc.)">
+<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
 <!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "Thêm/Soạn thảo Trích dẫn">
 <!ENTITY zotero.integration.classicView.label "Classic View">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Ambiguous Citations">
 <!ENTITY zotero.rtfScan.cancel.label "Hủy">
 <!ENTITY zotero.rtfScan.citation.label "Citation">
-<!ENTITY zotero.rtfScan.citationsPage.description "Please review the list of recognized citations below to ensure that Jurism has selected the corresponding items correctly. Any unmapped or ambiguous citations must be resolved before proceeding to the next step.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Please review the list of recognized citations below to ensure that Zotero has selected the corresponding items correctly. Any unmapped or ambiguous citations must be resolved before proceeding to the next step.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Verify Cited Items">
 <!ENTITY zotero.rtfScan.completePage.description "Your document has now been scanned and processed. Please ensure that it is formatted correctly.">
 <!ENTITY zotero.rtfScan.completePage.label "RTF Scan Complete">
-<!ENTITY zotero.rtfScan.formatPage.description "Jurism is processing and formatting your RTF file. Please be patient.">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero is processing and formatting your RTF file. Please be patient.">
 <!ENTITY zotero.rtfScan.formatPage.label "Formatting Citations">
 <!ENTITY zotero.rtfScan.inputFile.label "Input File">
-<!ENTITY zotero.rtfScan.introPage.description "Jurism can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero can automatically extract and reformat citations and insert a bibliography into RTF files. To get started, choose an RTF file below.">
 <!ENTITY zotero.rtfScan.introPage.description2 "To get started, select an RTF input file and an output file below:">
 <!ENTITY zotero.rtfScan.introPage.label "Introduction">
 <!ENTITY zotero.rtfScan.itemName.label "Item Name">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Mapped Citations">
 <!ENTITY zotero.rtfScan.outputFile.label "Output File">
-<!ENTITY zotero.rtfScan.scanPage.description "Jurism is scanning your document for citations. Please be patient.">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero is scanning your document for citations. Please be patient.">
 <!ENTITY zotero.rtfScan.scanPage.label "Scanning for Citations">
 <!ENTITY zotero.rtfScan.stylePage.label "Document Formatting">
 <!ENTITY zotero.rtfScan.title "RTF Scan">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "Sync Error">
 <!ENTITY zotero.sync.longTagFixer.character "character">
 <!ENTITY zotero.sync.longTagFixer.characters "characters">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "The following tag in your Jurism library is too long to sync to the server:">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "The following tag in your Zotero library is too long to sync to the server:">
 <!ENTITY zotero.sync.longTagFixer.split "Split">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "Split at the">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "You can either split the tag into multiple tags, edit the tag manually to shorten it, or delete it.">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "Đổi tên Thẻ...">
 <!ENTITY zotero.tagSelector.selectVisible "Chọn các thẻ nhìn thấy được">
 <!ENTITY zotero.tagSelector.showAutomatic "Hiển thị tự động">
-<!ENTITY zotero.toolbar.about.label "Giới thiệu về Jurism">
+<!ENTITY zotero.toolbar.about.label "Giới thiệu về Zotero">
 <!ENTITY zotero.toolbar.actions.label "Hành động">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "trước khi tiếp tục.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Hãy chắc chắn bạn đã xem kỹ">
 <!ENTITY zotero.upgrade.majorUpgradeLink "các hướng dẫn nâng cấp">
-<!ENTITY zotero.upgrade.newVersionInstalled "Bạn đã cài đặt một phiên bản mới của Jurism.">
-<!ENTITY zotero.upgrade.title "Bộ hướng dẫn nâng cấp Jurism">
+<!ENTITY zotero.upgrade.newVersionInstalled "Bạn đã cài đặt một phiên bản mới của Zotero.">
+<!ENTITY zotero.upgrade.title "Bộ hướng dẫn nâng cấp Zotero">
 <!ENTITY zotero.upgrade.upgradeInProgress "Xin vui lòng chờ đến khi tiến trình cập nhật kết thúc. Tiến trình có thể sẽ kéo dài trong vài phút.">
-<!ENTITY zotero.upgrade.upgradeRequired "Cơ sở dữ liệu Jurism của bạn phải được nâng cấp để có thể làm việc với phiên bản mới.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "Cơ sở dữ liệu Jurism của bạn đã được cập nhật thành công.">
+<!ENTITY zotero.upgrade.upgradeRequired "Cơ sở dữ liệu Zotero của bạn phải được nâng cấp để có thể làm việc với phiên bản mới.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "Cơ sở dữ liệu Zotero của bạn đã được cập nhật thành công.">

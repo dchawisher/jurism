@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "เลิกใช้">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "ออกจาก Jurism">
+<!ENTITY quitApplicationCmdMac.label "ออกจาก Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "ออกจากโปรแกรม">
 <!ENTITY recursiveCollections.label "Show Items from Subcollections">

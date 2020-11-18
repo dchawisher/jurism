@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Select fields to keep from other versions of the item:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Choose the version of the item to use as the master item:">
 <!ENTITY zotero.errorReport.notReviewed "รายงานข้อผิดพลาดจะไม่ได้รับการตรวจสอบหากไม่มีการอ้างถึงในฟอรั่ม">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "กรุณาส่งข้อความในฟอรั่มของ Zotero (forums.zotero.org) และแจ้งรหัสรายงานนี้ รายละเอียดของปัญหาและขั้นตอนที่ทำให้เกิดปัญหานั้นอีก">
 <!ENTITY zotero.errorReport.reportID "รหัสรายงาน:">
 <!ENTITY zotero.errorReport.submissionInProgress "โปรดรอในระหว่างที่รายงานข้อผิดพลาดกำลังส่งอยู่">
 <!ENTITY zotero.errorReport.submitted "รายงานข้อผิดพลาดถูกส่งเรียบร้อยแล้ว">
-<!ENTITY zotero.errorReport.title "Jurism Error Report">
+<!ENTITY zotero.errorReport.title "Zotero Error Report">
 <!ENTITY zotero.errorReport.unrelatedMessages "This may include messages unrelated to Juris-M.">
 <!ENTITY zotero.exportOptions.format.label "รูปแบบ:">
 <!ENTITY zotero.exportOptions.title "ส่งออก...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Importing…">
 <!ENTITY zotero.import.lastModified "Last Modified">
 <!ENTITY zotero.import.size "Size">
-<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Jurism RDF, etc.)">
+<!ENTITY zotero.import.source.file "A file (BibTeX, RIS, Zotero RDF, etc.)">
 <!ENTITY zotero.import.whereToImportFrom "Where do you want to import from?">
 <!ENTITY zotero.integration.addEditCitation.title "เพิ่ม/แก้ไขการอ้างอิง">
 <!ENTITY zotero.integration.classicView.label "มุมมองแบบคลาสสิก">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "การอ้างอิงที่คลุมเครือ">
 <!ENTITY zotero.rtfScan.cancel.label "ยกเลิก">
 <!ENTITY zotero.rtfScan.citation.label "การอ้างอิง">
-<!ENTITY zotero.rtfScan.citationsPage.description "โปรดตรวจทานรายการการอ้างอิงข้างล่างนี้ เพื่อให้แน่ใจว่า Jurism เลือกรายการได้อย่างถูกต้อง การอ้างอิงที่ไม่ถูกต้องหรือคลุมเครือต้องแก้ไขก่อนที่จะดำเนินการขั้นต่อไป">
+<!ENTITY zotero.rtfScan.citationsPage.description "โปรดตรวจทานรายการการอ้างอิงข้างล่างนี้ เพื่อให้แน่ใจว่า Zotero เลือกรายการได้อย่างถูกต้อง การอ้างอิงที่ไม่ถูกต้องหรือคลุมเครือต้องแก้ไขก่อนที่จะดำเนินการขั้นต่อไป">
 <!ENTITY zotero.rtfScan.citationsPage.label "ตรวจสอบรายการที่อ้างถึง">
 <!ENTITY zotero.rtfScan.completePage.description "แฟ้มเอกสารของคุณได้กราดตรวจและดำเนินการแล้ว กรุณาตรวจสอบให้แน่ใจว่ารูปแบบที่ได้นั้นถูกต้อง">
 <!ENTITY zotero.rtfScan.completePage.label "กราดตรวจ RTF เรียบร้อยแล้ว">
-<!ENTITY zotero.rtfScan.formatPage.description "Jurism กำลังดำเนินการและจัดรูปแบบแฟ้ม RTF ของคุณ กรุณารอสักครู่">
+<!ENTITY zotero.rtfScan.formatPage.description "Zotero กำลังดำเนินการและจัดรูปแบบแฟ้ม RTF ของคุณ กรุณารอสักครู่">
 <!ENTITY zotero.rtfScan.formatPage.label "จัดรูปแบบการอ้างอิง">
 <!ENTITY zotero.rtfScan.inputFile.label "แฟ้มนำเข้า">
-<!ENTITY zotero.rtfScan.introPage.description "Jurism สามารถคัดลอกและปรับรูปแบบการอ้างอิง และแทรกบรรณานุกรมในแฟ้ม RTF ได้ คุณสมบัติกราดตรวจ RTF รองรับการอ้างอิงอย่างหลากหลายตามรูปแบบดังต่อไปนี้">
+<!ENTITY zotero.rtfScan.introPage.description "Zotero สามารถคัดลอกและปรับรูปแบบการอ้างอิง และแทรกบรรณานุกรมในแฟ้ม RTF ได้ คุณสมบัติกราดตรวจ RTF รองรับการอ้างอิงอย่างหลากหลายตามรูปแบบดังต่อไปนี้">
 <!ENTITY zotero.rtfScan.introPage.description2 "เริ่มโดยเลือกแฟ้มข้อมูล RTF เพื่อนำเข้าและแฟ้มข้อมูลสำหรับส่งออก:">
 <!ENTITY zotero.rtfScan.introPage.label "คำแนะนำ">
 <!ENTITY zotero.rtfScan.itemName.label "ชื่อรายการ">
 <!ENTITY zotero.rtfScan.mappedCitations.label "ทำผังการอ้างอิง">
 <!ENTITY zotero.rtfScan.outputFile.label "แฟ้มส่งออก">
-<!ENTITY zotero.rtfScan.scanPage.description "Jurism กำลังกราดตรวจแฟ้มเอกสารของคุณเพื่อการอ้างอิง กรุณารอสักครู่">
+<!ENTITY zotero.rtfScan.scanPage.description "Zotero กำลังกราดตรวจแฟ้มเอกสารของคุณเพื่อการอ้างอิง กรุณารอสักครู่">
 <!ENTITY zotero.rtfScan.scanPage.label "กราดตรวจเพื่อการอ้างอิง">
 <!ENTITY zotero.rtfScan.stylePage.label "จัดรูปแบบแฟ้มเอกสาร">
 <!ENTITY zotero.rtfScan.title "กราดตรวจ RTF">
@@ -255,7 +255,7 @@
 <!ENTITY zotero.sync.error "การประสานมีความผิดพลาด">
 <!ENTITY zotero.sync.longTagFixer.character "ตัวอักษร">
 <!ENTITY zotero.sync.longTagFixer.characters "ตัวอักษร">
-<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "แท็กต่อไปนี้ในไลบรารี่ของคุณยาวเกินไปที่จะประสานกับเครื่องบริการ Jurism">
+<!ENTITY zotero.sync.longTagFixer.followingTagTooLong "แท็กต่อไปนี้ในไลบรารี่ของคุณยาวเกินไปที่จะประสานกับเครื่องบริการ Zotero">
 <!ENTITY zotero.sync.longTagFixer.split "แยก">
 <!ENTITY zotero.sync.longTagFixer.splitAtThe "แยก ณ ">
 <!ENTITY zotero.sync.longTagFixer.splitEditDelete "คุณสามารถแยกแท็กไปยังหลายแท็ก แก้ไขแท็กให้สั้นด้วยตัวเองหรือลบแท็ก">
@@ -288,7 +288,7 @@
 <!ENTITY zotero.tagSelector.renameTag "เปลี่ยนชื่อแท็ก...">
 <!ENTITY zotero.tagSelector.selectVisible "เลือกตามที่เห็น">
 <!ENTITY zotero.tagSelector.showAutomatic "แสดงอัตโนมัติ">
-<!ENTITY zotero.toolbar.about.label "เกี่ยวกับ Jurism">
+<!ENTITY zotero.toolbar.about.label "เกี่ยวกับ Zotero">
 <!ENTITY zotero.toolbar.actions.label "ปฏิบัติการ">
 <!ENTITY zotero.toolbar.addChildNote.label "Add Child Note">
 <!ENTITY zotero.toolbar.addStandaloneNote.label "Add Standalone Note">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "ก่อนที่จะทำต่อ">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "ต้องมั่นใจว่าคุณได้ทบทวน">
 <!ENTITY zotero.upgrade.majorUpgradeLink "คำแนะนำการอัพเกรด">
-<!ENTITY zotero.upgrade.newVersionInstalled "ท่านได้ติดตั้ง Jurism รุ่นใหม่แล้ว">
-<!ENTITY zotero.upgrade.title "Jurism Upgrade Wizard">
+<!ENTITY zotero.upgrade.newVersionInstalled "ท่านได้ติดตั้ง Zotero รุ่นใหม่แล้ว">
+<!ENTITY zotero.upgrade.title "Zotero Upgrade Wizard">
 <!ENTITY zotero.upgrade.upgradeInProgress "โปรดรอจนกว่าจะบวนการอัพเกรดจะเสร็จสิ้น ซึ่งอาจใช้เวลาหลายนาที">
-<!ENTITY zotero.upgrade.upgradeRequired "ฐานข้อมูล Jurism ของท่าน ต้องปรับเป็นรุ่นปัจจุบันก่อนเพื่อให้ทำงานได้กับรุ่นใหม่">
-<!ENTITY zotero.upgrade.upgradeSucceeded "ฐานข้อมูล Jurism ของท่านได้รับการปรับให้เป็นรุ่นปัจจุบันแล้ว">
+<!ENTITY zotero.upgrade.upgradeRequired "ฐานข้อมูล Zotero ของท่าน ต้องปรับเป็นรุ่นปัจจุบันก่อนเพื่อให้ทำงานได้กับรุ่นใหม่">
+<!ENTITY zotero.upgrade.upgradeSucceeded "ฐานข้อมูล Zotero ของท่านได้รับการปรับให้เป็นรุ่นปัจจุบันแล้ว">

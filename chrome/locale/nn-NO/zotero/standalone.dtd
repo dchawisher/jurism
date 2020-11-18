@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "A">
 <!ENTITY quitApplicationCmd.label "Avslutt">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Avslutt Jurism">
+<!ENTITY quitApplicationCmdMac.label "Avslutt Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "A">
 <!ENTITY quitApplicationCmdWin.label "Avslutt">
 <!ENTITY recursiveCollections.label "Show Items from Subcollections">

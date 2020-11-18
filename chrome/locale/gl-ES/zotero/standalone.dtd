@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Saír">
 <!ENTITY quitApplicationCmdMac.key "S">
-<!ENTITY quitApplicationCmdMac.label "Pechar Jurism">
+<!ENTITY quitApplicationCmdMac.label "Pechar Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Saír">
 <!ENTITY recursiveCollections.label "Amosar os elementos das subcolecións">

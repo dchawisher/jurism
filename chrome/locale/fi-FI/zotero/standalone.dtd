@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Lopeta">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Lopeta Jurism">
+<!ENTITY quitApplicationCmdMac.label "Lopeta Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Poistu">
 <!ENTITY recursiveCollections.label "Show Items from Subcollections">

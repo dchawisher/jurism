@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "Berradurioù klavier">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Kavlec'h diazez:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Kavlec'h diazez evit ar pezhioù-stag liammet">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism a implijo hentoù relativel evit ar pezhioù-stag liammet e-barzh ar c'havlec'h diazez, reiñ a raio deoc'h an aotre da dizhout restroù war urzhiataerioù disheñvel e-keit ha ma chom framm ar restr er c'havlec'h diazez ar memes hini.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero a implijo hentoù relativel evit ar pezhioù-stag liammet e-barzh ar c'havlec'h diazez, reiñ a raio deoc'h an aotre da dizhout restroù war urzhiataerioù disheñvel e-keit ha ma chom framm ar restr er c'havlec'h diazez ar memes hini.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Distreiñ da hentoù absolut...">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Dibab...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "Em-adpakout metaroadennoù ar PDFoù">
@@ -51,7 +51,7 @@
 <!ENTITY zotero.preferences.default "Dre-ziouer:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Em-stagañ ar PDFoù kevelet da vare enrolladur elfennoù">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Enklozañ URLioù ar pennadoù paperioù en daveennoù">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Pa vez enaouet an dibarzh-mañ, Jurism a enkloz an URLioù pa vez arroudennet pennadoù kelaouennoù, magazinoù, ha kazetennoù ma ne spisa ket ar pennad niverenn ar bajenn.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "Pa vez enaouet an dibarzh-mañ, Zotero a enkloz an URLioù pa vez arroudennet pennadoù kelaouennoù, magazinoù, ha kazetennoù ma ne spisa ket ar pennad niverenn ar bajenn.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Kaout stiloù all...">
@@ -89,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Open/Close Juris-M Pane">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Try to override conflicting shortcuts">
 <!ENTITY zotero.preferences.keys.quicksearch "Enklask prim">
-<!ENTITY zotero.preferences.keys.saveToZotero "Enrollañ e-barzh Jurism (ikon ar varrenn chomlec'hioù)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Enrollañ e-barzh Zotero (ikon ar varrenn chomlec'hioù)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Merkañ holl elfennoù ar froud evel lennet/anlennet">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Gwintañ d'ar mod Skramm-leun">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Gwintañ d'an diuzer balizoù">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Klask war-lerc'h an diskoulmerien">
 <!ENTITY zotero.preferences.openurl.server "Diskoulmer:">
 <!ENTITY zotero.preferences.openurl.version "Stumm:">
-<!ENTITY zotero.preferences.parseRISRefer "Implijout Jurism evit ar restroù BibTex/RIS/Refer pellgarget">
+<!ENTITY zotero.preferences.parseRISRefer "Implijout Zotero evit ar restroù BibTex/RIS/Refer pellgarget">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Araokaet">
 <!ENTITY zotero.preferences.prefpane.cite "Arroudennañ">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Proksioù kefluniet">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Hent ar c'havlec'h (d.sk about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "evit muioc'h a ditouroù.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism ac'h adheñcho ar rekedoù dre broksioù enrollet en un doare treuzwelus. Gwelet">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero ac'h adheñcho ar rekedoù dre broksioù enrollet en un doare treuzwelus. Gwelet">
 <!ENTITY zotero.preferences.proxies.desc_link "titouroù diwar-benn ar proksioù">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Lazhañ an adheñchañ dre broksi pa endalc'h ma anv domani">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Anv ar restr (d.sk index.html)">
@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Pellgargañ ar restroù">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "da vare ar sinkro">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "pa vez ezhomm">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sinkro ar restroù stagadenn e-barzh al levraouegoù strollad en ur implijout stokadur Jurism">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Sinkro ar restroù stagadenn e-barzh al levraouegoù strollad en ur implijout stokadur Zotero">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Sinkro ar restroù stagadenn e-barzh Ma Levraoueg en ur implijout">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "En ur implijout stokadur Jurism, ec'h asantit bezañ liammet gant e">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "En ur implijout stokadur Zotero, ec'h asantit bezañ liammet gant e">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "termoù ha koñdisionoù">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Gwiriañ ar servijer">
@@ -234,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Adloc'hañ roll-istor sinkro ar restroù">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Keñveriañ an holl restroù kenstag gant ar servijer stokañ">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Adsevel adalek al levraoueg enlinenn">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Flastrañ ar roadennoù Jurism lec'hel gant roadennoù o tont eus al levraoueg enlinenn">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Flastrañ ar roadennoù Zotero lec'hel gant roadennoù o tont eus al levraoueg enlinenn">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Erlec'hiañ al levraoueg enlinenn">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Flastrañ roadennoù al levraoueg enlinenn gant roadennoù lec'hel Jurism">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Flastrañ roadennoù al levraoueg enlinenn gant roadennoù lec'hel Zotero">
 <!ENTITY zotero.preferences.sync.reset.warning1 "An oberiadurioù da-heul a zo da vezañ implijet e plegoù ral hag ispisial ha ne rankont ket bezañ implijet evit un distankañ hollek. E-barzh kalz a zegouezhioù, adloc'hañ a zegaso kudennoù ouzhpenn. Sellit ouzh">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Dibarzhioù adloc'hañ sinkro">
 <!ENTITY zotero.preferences.sync.reset.warning3 "evit muioc'h a ditouroù.">
 <!ENTITY zotero.preferences.sync.setUpSync "Termeniñ ar sinkro">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Em-sinkroaat">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Sinkro testenn a-bezh ar stagadennoù">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism a c'hall sinkroaat testenn a-bezh ar pezhioù-stag indekset e-barzh ho levraouegoù Jurism gant zotero.org hag, e-giz-se, gant ho trevnadoù kevreet. An dra-se a ro an aotre da glask en un doare aeset e-barzh endalc'had ho restroù ne vern e pelec'h e vefec'h. Ne vo ket rannet en un doare foran testenn a-bezh ho restroù.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero a c'hall sinkroaat testenn a-bezh ar pezhioù-stag indekset e-barzh ho levraouegoù Zotero gant zotero.org hag, e-giz-se, gant ho trevnadoù kevreet. An dra-se a ro an aotre da glask en un doare aeset e-barzh endalc'had ho restroù ne vern e pelec'h e vefec'h. Ne vo ket rannet en un doare foran testenn a-bezh ho restroù.">
 <!ENTITY zotero.preferences.sync.syncServer "Sinkro ar roadennoù">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Diliammañ ar gont">
 <!ENTITY zotero.preferences.sync.username "Anv-implijer:">
-<!ENTITY zotero.preferences.title "Arventennoù Jurism">
+<!ENTITY zotero.preferences.title "Arventennoù Zotero">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "devezh 'zo">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Em-zilemel an elfennoù er pod-lastez abaoe muioc'h evit">
 <!ENTITY zotero.preferences.updateNow "Hizivaat bremañ">

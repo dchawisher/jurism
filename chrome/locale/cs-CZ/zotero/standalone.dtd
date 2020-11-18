@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Zavřít">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Vypnout Jurism">
+<!ENTITY quitApplicationCmdMac.label "Vypnout Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Zavřít">
 <!ENTITY recursiveCollections.label "Zobrazit položky z podkolekcí">

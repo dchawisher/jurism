@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "B">
 <!ENTITY quitApplicationCmd.label "Baigti darbą">
 <!ENTITY quitApplicationCmdMac.key "B">
-<!ENTITY quitApplicationCmdMac.label "Baigti darbą su Jurism">
+<!ENTITY quitApplicationCmdMac.label "Baigti darbą su Zotero">
 <!ENTITY quitApplicationCmdWin.accesskey "I">
 <!ENTITY quitApplicationCmdWin.label "Išeiti">
 <!ENTITY recursiveCollections.label "Rodyti įrašus iš poaplankių">

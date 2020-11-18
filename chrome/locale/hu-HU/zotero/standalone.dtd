@@ -109,7 +109,7 @@
 <!ENTITY quitApplicationCmd.accesskey "Q">
 <!ENTITY quitApplicationCmd.label "Bezárás">
 <!ENTITY quitApplicationCmdMac.key "Q">
-<!ENTITY quitApplicationCmdMac.label "Jurism bezárása">
+<!ENTITY quitApplicationCmdMac.label "Zotero bezárása">
 <!ENTITY quitApplicationCmdWin.accesskey "x">
 <!ENTITY quitApplicationCmdWin.label "Kilépés">
 <!ENTITY recursiveCollections.label "Show Items from Subcollections">

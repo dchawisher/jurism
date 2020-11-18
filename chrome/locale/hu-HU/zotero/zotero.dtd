@@ -44,11 +44,11 @@
 <!ENTITY zotero.duplicatesMerge.fieldSelect "Select fields to keep from other versions of the item:">
 <!ENTITY zotero.duplicatesMerge.versionSelect "Válassza ki azt az elemverziót, amit mester elemnek kíván használni: ">
 <!ENTITY zotero.errorReport.notReviewed "A fórumba be nem küldött hibaüzenetek nem kerülnek kivizsgálásra.">
-<!ENTITY zotero.errorReport.postToForums "Please post a message to the Jurism support list (juris-m.github.io/mail) with this Report ID, a description of the problem, and any steps necessary to reproduce it.">
+<!ENTITY zotero.errorReport.postToForums "Küldje el a Zotero fórumba (forums.zotero.org) a probléma leírását, hogy hogyan jutott idáig, ill. a hibaüzenet ID-jét .">
 <!ENTITY zotero.errorReport.reportID "Jelentés azonosítója:">
 <!ENTITY zotero.errorReport.submissionInProgress "Várjon a hibajelentés elküldéséig.">
 <!ENTITY zotero.errorReport.submitted "A hibajelentés elküldve.">
-<!ENTITY zotero.errorReport.title "Jurism hibajelentés">
+<!ENTITY zotero.errorReport.title "Zotero hibajelentés">
 <!ENTITY zotero.errorReport.unrelatedMessages "Tartalmazhat a Juris-M-tól független üzeneteket.">
 <!ENTITY zotero.exportOptions.format.label "Formátum:">
 <!ENTITY zotero.exportOptions.title "Exportálás...">
@@ -97,7 +97,7 @@
 <!ENTITY zotero.import.importing "Importálás…">
 <!ENTITY zotero.import.lastModified "Utolsó módosítás">
 <!ENTITY zotero.import.size "Méret">
-<!ENTITY zotero.import.source.file "Egy fájl (BibTeX, RIS, Jurism RDF, stb.)">
+<!ENTITY zotero.import.source.file "Egy fájl (BibTeX, RIS, Zotero RDF, stb.)">
 <!ENTITY zotero.import.whereToImportFrom "Honnét szeretné importálni?">
 <!ENTITY zotero.integration.addEditCitation.title "Hivatkozás hozzáadása/szerkesztése">
 <!ENTITY zotero.integration.classicView.label "Klasszikus nézet">
@@ -229,20 +229,20 @@
 <!ENTITY zotero.rtfScan.ambiguousCitations.label "Bizonytalan hivatkozások">
 <!ENTITY zotero.rtfScan.cancel.label "Mégse">
 <!ENTITY zotero.rtfScan.citation.label "Hivatkozás">
-<!ENTITY zotero.rtfScan.citationsPage.description "Kérem, tekintse át az alábbi felismert hivatkozásokat, hogy meggyőződjön arról, hogy a Jurism a helyesen választotta ki a megfelelő elemeket. A nem egyértelmű vagy mappa nélküli hivatkozásokat javítani kell, mielőtt rátér a következő lépésre.">
+<!ENTITY zotero.rtfScan.citationsPage.description "Kérem, tekintse át az alábbi felismert hivatkozásokat, hogy meggyőződjön arról, hogy a Zotero a helyesen választotta ki a megfelelő elemeket. A nem egyértelmű vagy mappa nélküli hivatkozásokat javítani kell, mielőtt rátér a következő lépésre.">
 <!ENTITY zotero.rtfScan.citationsPage.label "Hivatkozott elemek ellenőrzése">
 <!ENTITY zotero.rtfScan.completePage.description "A dokumentum átvizsgálása és feldolgozása megtörtént. Győződjön meg róla, hogy megfelelően van formázva.">
 <!ENTITY zotero.rtfScan.completePage.label "Az RTF átvizsgálása befejeződött">
-<!ENTITY zotero.rtfScan.formatPage.description "A Jurism feldolgozza és formázza az RTF fájlt. Kérem várjon.">
+<!ENTITY zotero.rtfScan.formatPage.description "A Zotero feldolgozza és formázza az RTF fájlt. Kérem várjon.">
 <!ENTITY zotero.rtfScan.formatPage.label "Hivatkozás formázása">
 <!ENTITY zotero.rtfScan.inputFile.label "Bemeneti fájl">
-<!ENTITY zotero.rtfScan.introPage.description "A Jurism automatikusan képes kinyerni és újraformázni a hivatkozásokat és bibliográfiát beilleszteni RTF fájlokba. Az RTF Scan jelenleg az alábbi formátumokban támogatja a hivatkozásokat:">
+<!ENTITY zotero.rtfScan.introPage.description "A Zotero automatikusan képes kinyerni és újraformázni a hivatkozásokat és bibliográfiát beilleszteni RTF fájlokba. Az RTF Scan jelenleg az alábbi formátumokban támogatja a hivatkozásokat:">
 <!ENTITY zotero.rtfScan.introPage.description2 "A kezdéshez, válasszon egy RTF bemeneti fájlt és egy kimenti fájlt alább:">
 <!ENTITY zotero.rtfScan.introPage.label "Bevezetés">
 <!ENTITY zotero.rtfScan.itemName.label "Elem neve">
 <!ENTITY zotero.rtfScan.mappedCitations.label "Felismert">
 <!ENTITY zotero.rtfScan.outputFile.label "Kimeneti fájl">
-<!ENTITY zotero.rtfScan.scanPage.description "A Jurism hivatkozásokat keres a dokumentumban. Kérem várjon.">
+<!ENTITY zotero.rtfScan.scanPage.description "A Zotero hivatkozásokat keres a dokumentumban. Kérem várjon.">
 <!ENTITY zotero.rtfScan.scanPage.label "Hivatkozások keresése">
 <!ENTITY zotero.rtfScan.stylePage.label "Dokumentum formázása">
 <!ENTITY zotero.rtfScan.title "RTF átvizsgálása…">
@@ -346,8 +346,8 @@
 <!ENTITY zotero.upgrade.majorUpgradeAfterLink "mielőtt folytatná.">
 <!ENTITY zotero.upgrade.majorUpgradeBeforeLink "Mindenképpen olvassa el a">
 <!ENTITY zotero.upgrade.majorUpgradeLink "frissítési útmutatót">
-<!ENTITY zotero.upgrade.newVersionInstalled "A Jurism új verziójának telepítése sikerült.">
-<!ENTITY zotero.upgrade.title "Jurism frissítés varázsló">
+<!ENTITY zotero.upgrade.newVersionInstalled "A Zotero új verziójának telepítése sikerült.">
+<!ENTITY zotero.upgrade.title "Zotero frissítés varázsló">
 <!ENTITY zotero.upgrade.upgradeInProgress "Várjon a frissítés befejezéséig. Ez akár percekig is eltarthat.">
-<!ENTITY zotero.upgrade.upgradeRequired "Frissíteni kell a Jurism adatbázist, hogy működjön az új verzióval.">
-<!ENTITY zotero.upgrade.upgradeSucceeded "A Jurism adatbázis frissítése sikerült.">
+<!ENTITY zotero.upgrade.upgradeRequired "Frissíteni kell a Zotero adatbázist, hogy működjön az új verzióval.">
+<!ENTITY zotero.upgrade.upgradeSucceeded "A Zotero adatbázis frissítése sikerült.">
