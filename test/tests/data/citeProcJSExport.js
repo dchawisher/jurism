@@ -328,6 +328,105 @@
 		},
 		"title": "Title",
 		"container-title": "Publication title",
+		"container-title-short": "Journal abbreviation",
+		"collection-title": "Series",
+		"collection-number": "9",
+		"publisher": "Publisher",
+		"publisher-place": "Place",
+		"page": "1-10",
+		"volume": "6",
+		"number-of-volumes": "7",
+		"edition": "8",
+		"source": "Library catalog",
+		"archive": "Archive",
+		"archive_location": "Archive location",
+		"event-place": "Place",
+		"abstract": "Abstract note",
+		"URL": "http://www.example.com",
+		"ISBN": "978-1-234-56789-7",
+		"call-number": "Call number",
+		"note": "Extra",
+		"title-short": "Short title",
+		"language": "en-US",
+		"author": [
+			{
+				"family": "authorLast",
+				"given": "authorFirst",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"literal": "Institutional Author",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"editor": [
+			{
+				"family": "editorLast",
+				"given": "editorFirst",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"container-author": [
+			{
+				"family": "bookAuthorLast",
+				"given": "bookAuthorFirst",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"collection-editor": [
+			{
+				"family": "seriesEditorLast",
+				"given": "seriesEditorFirst",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"translator": [
+			{
+				"family": "translatorLast",
+				"given": "translatorFirst",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999",
+					12,
+					31
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"1997",
+					6,
+					13
+				]
+			]
+		}
+	},
+	"legalCommentary": {
+		"type": "legal_commentary",
+		"multi": {
+			"main": {},
+			"_keys": {}
+		},
+		"title": "Title",
+		"container-title": "Publication title",
+		"container-title-short": "Journal abbreviation",
 		"collection-title": "Series",
 		"collection-number": "9",
 		"publisher": "Publisher",
@@ -1234,7 +1333,7 @@
 		"call-number": "Call number",
 		"note": "Extra",
 		"title-short": "Short title",
-		"journalAbbreviation": "Journal abbreviation",
+		"container-title-short": "Journal abbreviation",
 		"language": "en-US",
 		"author": [
 			{

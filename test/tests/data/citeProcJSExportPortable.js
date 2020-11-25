@@ -265,7 +265,82 @@
 		"URL": "http://www.example.com",
 		"ISBN": "978-1-234-56789-7",
 		"call-number": "Call number",
-		"note": "Extra",
+		"note": "mlzsync1:0059{\"extrafields\":{\"bookAbbreviation\":\"Journal abbreviation\"}}Extra",
+		"title-short": "Short title",
+		"language": "en-US",
+		"author": [
+			{
+				"family": "authorLast",
+				"given": "authorFirst"
+			},
+			{
+				"literal": "Institutional Author"
+			}
+		],
+		"editor": [
+			{
+				"family": "editorLast",
+				"given": "editorFirst"
+			}
+		],
+		"container-author": [
+			{
+				"family": "bookAuthorLast",
+				"given": "bookAuthorFirst"
+			}
+		],
+		"collection-editor": [
+			{
+				"family": "seriesEditorLast",
+				"given": "seriesEditorFirst"
+			}
+		],
+		"translator": [
+			{
+				"family": "translatorLast",
+				"given": "translatorFirst"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999",
+					12,
+					31
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"1997",
+					6,
+					13
+				]
+			]
+		}
+	},
+	"legalCommentary": {
+		"type": "chapter",
+		"title": "Title",
+		"container-title": "Publication title",
+		"collection-title": "Series",
+		"collection-number": "9",
+		"publisher": "Publisher",
+		"publisher-place": "Place",
+		"page": "1-10",
+		"volume": "6",
+		"number-of-volumes": "7",
+		"edition": "8",
+		"source": "Library catalog",
+		"archive": "Archive",
+		"archive_location": "Archive location",
+		"event-place": "Place",
+		"abstract": "Abstract note",
+		"URL": "http://www.example.com",
+		"ISBN": "978-1-234-56789-7",
+		"call-number": "Call number",
+		"note": "mlzsync1:0085{\"extrafields\":{\"bookAbbreviation\":\"Journal abbreviation\"},\"xtype\":\"legalCommentary\"}Extra",
 		"title-short": "Short title",
 		"language": "en-US",
 		"author": [
@@ -949,7 +1024,7 @@
 		"call-number": "Call number",
 		"note": "mlzsync1:0057{\"extrafields\":{\"place\":\"Place\",\"publisher\":\"Publisher\"}}Extra",
 		"title-short": "Short title",
-		"journalAbbreviation": "Journal abbreviation",
+		"container-title-short": "Journal abbreviation",
 		"language": "en-US",
 		"author": [
 			{

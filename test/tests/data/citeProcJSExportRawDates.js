@@ -312,6 +312,7 @@
 			}
 		],
 		"container-title": "Publication title",
+		"container-title-short": "Journal abbreviation",
 		"edition": "8",
 		"editor": [
 			{
@@ -346,6 +347,93 @@
 			}
 		],
 		"type": "chapter",
+		"volume": "6",
+        "multi": {
+            "main": {},
+            "_keys": {}
+        }
+	},
+	"legalCommentary": {
+		"ISBN": "978-1-234-56789-7",
+		"URL": "http://www.example.com",
+		"abstract": "Abstract note",
+		"accessed": {
+			"raw": "1997-06-13"
+		},
+		"archive": "Archive",
+		"archive_location": "Archive location",
+		"author": [
+			{
+				"family": "authorLast",
+				"given": "authorFirst",
+				"multi": {
+					"_key": {}
+				}
+			},
+			{
+				"literal": "Institutional Author",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"call-number": "Call number",
+		"collection-editor": [
+			{
+				"family": "seriesEditorLast",
+				"given": "seriesEditorFirst",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"collection-number": "9",
+		"collection-title": "Series",
+		"container-author": [
+			{
+				"family": "bookAuthorLast",
+				"given": "bookAuthorFirst",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"container-title": "Publication title",
+		"container-title-short": "Journal abbreviation",
+		"edition": "8",
+		"editor": [
+			{
+				"family": "editorLast",
+				"given": "editorFirst",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"event-place": "Place",
+		"id": 42,
+		"issued": {
+			"raw": "1999-12-31"
+		},
+		"language": "en-US",
+		"note": "Extra",
+		"number-of-volumes": "7",
+		"page": "1-10",
+		"publisher": "Publisher",
+		"publisher-place": "Place",
+		"title-short": "Short title",
+		"source": "Library catalog",
+		"title": "Title",
+		"translator": [
+			{
+				"family": "translatorLast",
+				"given": "translatorFirst",
+				"multi": {
+					"_key": {}
+				}
+			}
+		],
+		"type": "legal_commentary",
 		"volume": "6",
         "multi": {
             "main": {},
@@ -1054,7 +1142,7 @@
 		"issued": {
 			"raw": "1999-12-31"
 		},
-		"journalAbbreviation": "Journal abbreviation",
+		"container-title-short": "Journal abbreviation",
 		"language": "en-US",
 		"note": "Extra",
 		"page": "1-10",

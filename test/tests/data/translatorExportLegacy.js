@@ -545,6 +545,7 @@
     "abstractNote": "Abstract note",
     "title": "Title",
     "bookTitle": "Publication title",
+	"bookAbbreviation": "Journal abbreviation",  
     "shortTitle": "Short title",
     "archive": "Archive",
     "volumeTitle": "Volume title",
@@ -644,6 +645,7 @@
       "abstractNote": "Abstract note",
       "title": "Title",
       "publicationTitle": "Publication title",
+	  "journalAbbreviation": "Journal abbreviation",  
       "shortTitle": "Short title",
       "archive": "Archive",
       "volumeTitle": "Volume title"
@@ -651,6 +653,7 @@
     "itemID": 7,
     "key": "U8Z2X7TH",
     "publicationTitle": "Publication title",
+	"journalAbbreviation": "Journal abbreviation",  
     "libraryID": null,
     "seeAlso": []
   },
@@ -681,6 +684,7 @@
     "abstractNote": "Abstract note",
     "title": "Title",
     "bookTitle": "Publication title",
+	"bookAbbreviation": "Journal abbreviation",  
     "shortTitle": "Short title",
     "archive": "Archive",
     "volumeTitle": "Volume title",
@@ -780,6 +784,7 @@
       "abstractNote": "Abstract note",
       "title": "Title",
       "publicationTitle": "Publication title",
+      "journalAbbreviation": "Journal abbreviation",  
       "shortTitle": "Short title",
       "archive": "Archive",
       "volumeTitle": "Volume title"
@@ -787,6 +792,7 @@
     "itemID": 7,
     "key": "U8Z2X7TH",
     "publicationTitle": "Publication title",
+	"journalAbbreviation": "Journal abbreviation",  
     "libraryID": null,
     "seeAlso": []
   },
