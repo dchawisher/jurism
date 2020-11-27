@@ -441,6 +441,7 @@
 		"event-place": "Place",
 		"abstract": "Abstract note",
 		"URL": "http://www.example.com",
+		"version": "Version",
 		"ISBN": "978-1-234-56789-7",
 		"call-number": "Call number",
 		"note": "Extra",

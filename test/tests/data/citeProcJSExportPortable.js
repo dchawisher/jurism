@@ -340,7 +340,7 @@
 		"URL": "http://www.example.com",
 		"ISBN": "978-1-234-56789-7",
 		"call-number": "Call number",
-		"note": "mlzsync1:0085{\"extrafields\":{\"bookAbbreviation\":\"Journal abbreviation\"},\"xtype\":\"legalCommentary\"}Extra",
+		"note": "mlzsync1:0111{\"extrafields\":{\"bookAbbreviation\":\"Journal abbreviation\",\"versionNumber\":\"Version\"},\"xtype\":\"legalCommentary\"}Extra",
 		"title-short": "Short title",
 		"language": "en-US",
 		"author": [

@@ -356,6 +356,7 @@
 	"legalCommentary": {
 		"ISBN": "978-1-234-56789-7",
 		"URL": "http://www.example.com",
+		"version": "Version",
 		"abstract": "Abstract note",
 		"accessed": {
 			"raw": "1997-06-13"

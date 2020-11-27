@@ -664,6 +664,7 @@
       "_keys": {}
     },
     "url": "http://www.example.com",
+    "version": "Version number",
     "rights": "Rights",
     "series": "Series",
     "volume": "6",
@@ -764,6 +765,7 @@
     "notes": [],
     "uniqueFields": {
       "url": "http://www.example.com",
+      "version": "Version number",
       "rights": "Rights",
       "series": "Series",
       "volume": "6",
@@ -994,8 +996,8 @@
     "attachments": [],
     "notes": [],
     "uniqueFields": {
-      "version": "Version number",
       "url": "http://www.example.com",
+      "version": "Version number",
       "rights": "Rights",
       "place": "Place",
       "ISBN": "978-1-234-56789-7",

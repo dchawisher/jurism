@@ -524,6 +524,7 @@
 		"shortTitle": "Short title",
 		"title": "Title",
 		"url": "http://www.example.com",
+		"versionNumber": "Version number",
 		"volume": 6,
 		"volumeTitle": "Volume title",
 		"multi": {

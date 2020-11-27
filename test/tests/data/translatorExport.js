@@ -495,6 +495,7 @@
       "_keys": {}
     },
     "url": "http://www.example.com",
+    "versionNumber": "Version number",
     "rights": "Rights",
     "series": "Series",
     "volume": "6",
