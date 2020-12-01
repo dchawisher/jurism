@@ -3,7 +3,7 @@
 <!ENTITY zotero.preferences.advanced.keys "Genvägar">
 <!ENTITY zotero.preferences.attachmentBaseDir.basePath "Baskatalog:">
 <!ENTITY zotero.preferences.attachmentBaseDir.caption "Baskatalog för länkande bilagor">
-<!ENTITY zotero.preferences.attachmentBaseDir.message "Zotero använder relativa sökvägar för länkade filbilagor inom baskatalogen, vilket gör att du kan använda nå filerna på olika datorer så länge filstrukturen inom baskatalogen är densamma.">
+<!ENTITY zotero.preferences.attachmentBaseDir.message "Jurism använder relativa sökvägar för länkade filbilagor inom baskatalogen, vilket gör att du kan använda nå filerna på olika datorer så länge filstrukturen inom baskatalogen är densamma.">
 <!ENTITY zotero.preferences.attachmentBaseDir.resetBasePath "Återgå till absoluta sökvägar…">
 <!ENTITY zotero.preferences.attachmentBaseDir.selectBasePath "Välj...">
 <!ENTITY zotero.preferences.autoRecognizeFiles "hämta metadata automatiskt för PDF:er">
@@ -51,7 +51,7 @@
 <!ENTITY zotero.preferences.default "Standardvärde:">
 <!ENTITY zotero.preferences.downloadAssociatedFiles "Bifoga automatiskt associerade PDF:er och andra filer när källor sparas">
 <!ENTITY zotero.preferences.export.citePaperJournalArticleURL "Ta med URL:er för forskningsartiklar i källförteckningen">
-<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "När detta är bortvalt lägger Zotero bara till webblänken om artikeln inte har ett sidintervall specificerat.">
+<!ENTITY zotero.preferences.export.citePaperJournalArticleURL.description "När detta är bortvalt lägger Jurism bara till webblänken om artikeln inte har ett sidintervall specificerat.">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation "Suppress trailing punctuation in note styles">
 <!ENTITY zotero.preferences.export.citeSuppressTrailingPunctuation.description "When this option is enabled, trailing punctuation will be dropped in note styles by default. The setting can be overridden in individual word processor documents, and on individual citations.">
 <!ENTITY zotero.preferences.export.getAdditionalStyles "Få ytterligare stilar...">
@@ -89,7 +89,7 @@
 <!ENTITY zotero.preferences.keys.openZotero "Öppna/stäng Juris-M-panelen">
 <!ENTITY zotero.preferences.keys.overrideGlobal "Försök kringgå motsägelsefulla snabbkommandon">
 <!ENTITY zotero.preferences.keys.quicksearch "Snabbsökning">
-<!ENTITY zotero.preferences.keys.saveToZotero "Spara till Zotero (adressradsikon)">
+<!ENTITY zotero.preferences.keys.saveToZotero "Spara till Jurism (adressradsikon)">
 <!ENTITY zotero.preferences.keys.toggleAllRead "Markera alla matningsobjekt som lästa">
 <!ENTITY zotero.preferences.keys.toggleFullscreen "Växla fullskärmsläge">
 <!ENTITY zotero.preferences.keys.toggleTagSelector "Växla etikettväljare">
@@ -126,7 +126,7 @@
 <!ENTITY zotero.preferences.layout "Utseende:">
 <!ENTITY zotero.preferences.layout.stacked "Staplad">
 <!ENTITY zotero.preferences.layout.standard "Standard">
-<!ENTITY zotero.preferences.locate.addDescription "För att lägga till en söktjänst som inte finns på listan, gå till söktjänstens hemsida i din webbläsare och välj “Lägg till” i Zoteros Hitta-meny.">
+<!ENTITY zotero.preferences.locate.addDescription "För att lägga till en söktjänst som inte finns på listan, gå till söktjänstens hemsida i din webbläsare och välj “Lägg till” i Jurisms Hitta-meny.">
 <!ENTITY zotero.preferences.locate.description "Beskrivning">
 <!ENTITY zotero.preferences.locate.locateEngineManager "Hantera söktjänst för artiklar">
 <!ENTITY zotero.preferences.locate.locateEnginedescription "En söktjänst förbättrar funktionerna i Hitta-menyn ovanför Infofliken. Genom att aktivera söktjänsterna nedan läggs de till Hitta-menyn och kan användas för att hitta källor på ditt bibliotek eller på nätet.">
@@ -142,7 +142,7 @@
 <!ENTITY zotero.preferences.openurl.search "Sök efter länkservrar">
 <!ENTITY zotero.preferences.openurl.server "Länkserver:">
 <!ENTITY zotero.preferences.openurl.version "Version:">
-<!ENTITY zotero.preferences.parseRISRefer "Använd Zotero för nedladdade BibTeX/RIS/Refer-filer">
+<!ENTITY zotero.preferences.parseRISRefer "Använd Jurism för nedladdade BibTeX/RIS/Refer-filer">
 <!ENTITY zotero.preferences.period ".">
 <!ENTITY zotero.preferences.prefpane.advanced "Avancerat">
 <!ENTITY zotero.preferences.prefpane.cite "Källhänvisa">
@@ -162,7 +162,7 @@
 <!ENTITY zotero.preferences.proxies.configured "Inställda proxyservrar">
 <!ENTITY zotero.preferences.proxies.d_variable "&#37;d - Mappnamnet (t.ex., about/)">
 <!ENTITY zotero.preferences.proxies.desc_after_link "för mer information.">
-<!ENTITY zotero.preferences.proxies.desc_before_link "Zotero skickar frågor genomsynligt genom sparade proxyservrar. Läs">
+<!ENTITY zotero.preferences.proxies.desc_before_link "Jurism skickar frågor genomsynligt genom sparade proxyservrar. Läs">
 <!ENTITY zotero.preferences.proxies.desc_link "manualen om proxyservrar">
 <!ENTITY zotero.preferences.proxies.disableByDomain "Inaktivera proxy-omdirigering när mitt domännamn innehåller">
 <!ENTITY zotero.preferences.proxies.f_variable "&#37;f - Filnamnet (t.ex., index.html)">
@@ -213,9 +213,9 @@
 <!ENTITY zotero.preferences.sync.fileSyncing.download "Ladda ner filer">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.atSyncTime "vid synkronisering">
 <!ENTITY zotero.preferences.sync.fileSyncing.download.onDemand "efter behov">
-<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkronisera bifogade filer i gruppens bibliotek med Zotero Storage">
+<!ENTITY zotero.preferences.sync.fileSyncing.groups "Synkronisera bifogade filer i gruppens bibliotek med Jurism Storage">
 <!ENTITY zotero.preferences.sync.fileSyncing.myLibrary "Synkronisera bifogade filer i mitt bibliotek med:">
-<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Genom att använda Zotero Storage godtar du tjänstens">
+<!ENTITY zotero.preferences.sync.fileSyncing.tos1 "Genom att använda Jurism Storage godtar du tjänstens">
 <!ENTITY zotero.preferences.sync.fileSyncing.tos2 "avtalsvillkor">
 <!ENTITY zotero.preferences.sync.fileSyncing.url "URL:">
 <!ENTITY zotero.preferences.sync.fileSyncing.verifyServer "Verifiera Server">
@@ -234,20 +234,20 @@
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory "Återställ filsynkroniseringshistorik">
 <!ENTITY zotero.preferences.sync.reset.resetFileSyncHistory.desc "Jämför alla bifogade filer med lagringstjänsten">
 <!ENTITY zotero.preferences.sync.reset.restoreFromServer "Återställ från onlinebibliotek">
-<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Överskriv lokal Zotero-data med data från onlinebiblioteket.">
+<!ENTITY zotero.preferences.sync.reset.restoreFromServer.desc "Överskriv lokal Jurism-data med data från onlinebiblioteket.">
 <!ENTITY zotero.preferences.sync.reset.restoreToServer "Ersätt onlinebibliotek">
-<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Skriv över onlinebiblioteket med lokala Zotero-data">
+<!ENTITY zotero.preferences.sync.reset.restoreToServer.desc "Skriv över onlinebiblioteket med lokala Jurism-data">
 <!ENTITY zotero.preferences.sync.reset.warning1 "Följande åtgärder är endast till för sällsynta, särskilda situationer och ska inte användas för vanlig felsökning. I många fall kan en återställning istället orsaka nya problem. Se">
 <!ENTITY zotero.preferences.sync.reset.warning2 "Återställningsalternativ för synkronisering">
 <!ENTITY zotero.preferences.sync.reset.warning3 "för mer information.">
 <!ENTITY zotero.preferences.sync.setUpSync "Ställ in synkronisering">
 <!ENTITY zotero.preferences.sync.syncAutomatically "Synkronisera automatiskt">
 <!ENTITY zotero.preferences.sync.syncFullTextContent "Synkronisera innehållet i fulltext">
-<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Zotero kan synkronisera fulltextinnehållet i dina filer i Zotero-biblioteket till zotero.org och andra anslutna enheter, så att du enkelt söka efter dina filer var du än är. Innehållet i dina filer kommer inte att delas offentligt.">
+<!ENTITY zotero.preferences.sync.syncFullTextContent.desc "Jurism kan synkronisera fulltextinnehållet i dina filer i Jurism-biblioteket till zotero.org och andra anslutna enheter, så att du enkelt söka efter dina filer var du än är. Innehållet i dina filer kommer inte att delas offentligt.">
 <!ENTITY zotero.preferences.sync.syncServer "Datasynkronisering">
 <!ENTITY zotero.preferences.sync.unlinkAccount "Koppla från konto...">
 <!ENTITY zotero.preferences.sync.username "Användarnamn:">
-<!ENTITY zotero.preferences.title "Inställningar i Zotero">
+<!ENTITY zotero.preferences.title "Inställningar i Jurism">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPost "dagar sen">
 <!ENTITY zotero.preferences.trashAutoEmptyDaysPre "Ta automatiskt bort källor från papperskorgen som lagts dit för mer än">
 <!ENTITY zotero.preferences.updateNow "Uppdatera nu">
