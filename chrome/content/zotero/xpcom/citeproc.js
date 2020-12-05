@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.50",
+    PROCESSOR_VERSION: "1.4.51",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -6486,6 +6486,7 @@ CSL.Engine.Opt = function () {
     this.development_extensions.force_title_abbrev_fallback = false;
     this.development_extensions.split_container_title = false;
     this.development_extensions.legacy_institution_name_ordering = false;
+    this.development_extensions.etal_min_etal_usefirst_hack = false;
 };
 
 CSL.Engine.Tmp = function () {
@@ -12352,8 +12353,8 @@ CSL.NameOutput.prototype.truncatePersonalNameLists = function () {
             }
         }
     }
-    // Could be factored out to a separate function for clarity.
-    if (this.etal_min === 1 && this.etal_use_first === 1 
+    if (this.state.opt.development_extensions.etal_min_etal_usefirst_hack
+        && this.etal_min === 1 && this.etal_use_first === 1 
         && !(this.state.tmp.extension
              || this.state.tmp.just_looking)) {
         chopvar = v;
@@ -16716,6 +16717,7 @@ CSL.Attributes["@parallel-last"] = function (state, arg) {
     }
 };
 CSL.Attributes["@parallel-last-to-first"] = function (state, arg) {
+    state.opt.parallel.enable = true;
     var vars = arg.split(/\s+/);
     this.parallel_last_to_first = {};
     for (var i=0,ilen=vars.length;i<ilen;i++) {
@@ -16723,9 +16725,11 @@ CSL.Attributes["@parallel-last-to-first"] = function (state, arg) {
     }
 };
 CSL.Attributes["@parallel-delimiter-override"] = function (state, arg) {
+    state.opt.parallel.enable = true;
     this.strings.set_parallel_delimiter_override = arg;
 };
 CSL.Attributes["@parallel-delimiter-override-on-suppress"] = function (state, arg) {
+    state.opt.parallel.enable = true;
     this.strings.set_parallel_delimiter_override_on_suppress = arg;
 };
 CSL.Attributes["@no-repeat"] = function (state, arg) {
