@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.51",
+    PROCESSOR_VERSION: "1.4.52",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -16392,6 +16392,18 @@ CSL.Attributes["@is-plural"] = function (state, arg) {
             } else if (institutions && last_is_person) {
                 return true;
             }
+        }
+        return false;
+    };
+    this.tests.push(func);
+};
+
+CSL.Attributes["@is-multiple"] = function (state, arg) {
+    if (!this.tests) {this.tests = []; };
+    var func = function (Item) {
+        var val = ("" + Item[arg]);
+        if (val.indexOf(" ") > -1) {
+            return true;
         }
         return false;
     };
