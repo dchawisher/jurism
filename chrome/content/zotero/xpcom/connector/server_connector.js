@@ -773,10 +773,17 @@ Zotero.Server.Connector.SaveItems.prototype = {
 									if (attachment.singleFile) {
 										singleFile = true;
 									}
+									// XXXZ OKAY.
+									// This is where the metadata for the attachment gets trimmed,
+									// BUT doesn't this also save the attachment items? Or not?
 									return {
 										id: session.id + '_' + attachment.id, // TODO: Remove prefix
 										title: attachment.title,
 										contentType: attachment.contentType,
+										elementID: attachment.elementID,
+										elementClass: attachment.elementClass,
+										elementName: attachment.elementName,
+										css: attachment.css,
 										mimeType: attachment.mimeType,  // TODO: Remove
 									};
 								});
