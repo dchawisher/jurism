@@ -60,18 +60,15 @@ Zotero.CachedJurisdictionData = new function() {
 				var jurisdiction = jurisdictions.slice(0,i).join(":");
 				yield this.setJurisdictionByIdOrName(jurisdiction);
 			}
-			/*
 			if (item.getField) {
 				courtID = item.getField("court", true);
 			} else {
 				courtID = item["court"];
 			}
-			if (_jurisdictionIdToName[jurisdictionID] && courtID) {
-				yield this.setCourt(jurisdictionID, courtID);
-			}
-			 */
 			// Set all possible courts for this specific jurisdiction
-			yield this.setCourts(jurisdictionID);
+			if (_jurisdictionIdToName[jurisdictionID] && courtID) {
+				yield this.setCourts(jurisdictionID);
+			}
 		}
 	});
 	
