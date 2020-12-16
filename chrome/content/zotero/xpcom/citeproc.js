@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.52",
+    PROCESSOR_VERSION: "1.4.53",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -11212,9 +11212,9 @@ CSL.Node.key = {
             if ("" === keystring) {
                 keystring = undefined;
             }
-            if ("string" !== typeof keystring || state.tmp.empty_date) {
+            if ("string" !== typeof keystring) {
                 keystring = undefined;
-                state.tmp.empty_date = false;
+                //state.tmp.empty_date = false;
             }
             state[state[state.tmp.area].root + "_sort"].keys.push(keystring);
             state.tmp.value = [];
@@ -18860,9 +18860,6 @@ CSL.dateAsSortKey = function (state, Item, isMacro) {
     dp = Item[variable];
     if ("undefined" === typeof dp) {
         dp = {"date-parts": [[0]] };
-        if (!dp.year) {
-            state.tmp.empty_date = true;
-        }
     }
     if ("undefined" === typeof this.dateparts) {
         this.dateparts = ["year", "month", "day"];
@@ -18875,32 +18872,34 @@ CSL.dateAsSortKey = function (state, Item, isMacro) {
     if ("undefined" === typeof dp) {
         dp = {};
     }
-    for (i = 0, ilen = CSL.DATE_PARTS_INTERNAL.length; i < ilen; i += 1) {
-        elem = CSL.DATE_PARTS_INTERNAL[i];
-        value = 0;
-        e = elem;
-        if (e.slice(-4) === "_end") {
-            e = e.slice(0, -4);
-        }
-        if (dp[elem] && this.dateparts.indexOf(e) > -1) {
-            value = dp[elem];
-        }
-        if (elem.slice(0, 4) === "year") {
-            yr = CSL.Util.Dates[e].numeric(state, value);
-            var prefix = "Y";
-            if (yr[0] === "-") {
-                prefix = "X";
-                yr = yr.slice(1);
-                yr = 9999 - parseInt(yr, 10);
+    if (dp.year) {
+        for (i = 0, ilen = CSL.DATE_PARTS_INTERNAL.length; i < ilen; i += 1) {
+            elem = CSL.DATE_PARTS_INTERNAL[i];
+            value = 0;
+            e = elem;
+            if (e.slice(-4) === "_end") {
+                e = e.slice(0, -4);
             }
-            state.output.append(CSL.Util.Dates[elem.slice(0, 4)].numeric(state, (prefix + yr)), macroFlag);
-        } else {
-            value = CSL.Util.Dates[e]["numeric-leading-zeros"](state, value);
-            // Ugh.
-            if (!value) {
-                value = "00";
+            if (dp[elem] && this.dateparts.indexOf(e) > -1) {
+                value = dp[elem];
             }
-            state.output.append(value, macroFlag);
+            if (elem.slice(0, 4) === "year") {
+                yr = CSL.Util.Dates[e].numeric(state, value);
+                var prefix = "1";
+                if (yr[0] === "-") {
+                    prefix = "0";
+                    yr = yr.slice(1);
+                    yr = 9999 - parseInt(yr, 10);
+                }
+                state.output.append(CSL.Util.Dates[elem.slice(0, 4)].numeric(state, (prefix + yr)), macroFlag);
+            } else {
+                value = CSL.Util.Dates[e]["numeric-leading-zeros"](state, value);
+                // Ugh.
+                if (!value) {
+                    value = "00";
+                }
+                state.output.append(value, macroFlag);
+            }
         }
     }
 };
