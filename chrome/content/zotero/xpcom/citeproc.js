@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.53",
+    PROCESSOR_VERSION: "1.4.55",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -14062,8 +14062,8 @@ CSL.NameOutput.prototype._nameSuffix = function (name) {
 
     var str = name.suffix, ret;
 
-    if ("string" === typeof this.state.inheritOpt(this.name, "initialize-with")) {
-        str = CSL.Util.Names.initializeWith(this.state, name.suffix, this.state.inheritOpt(this.name, "initialize-with"), true);
+    if (str && "string" === typeof this.state.inheritOpt(this.name, "initialize-with")) {
+        str = CSL.Util.Names.initializeWith(this.state, str, this.state.inheritOpt(this.name, "initialize-with"), true);
     }
 
     str = this._stripPeriods("family", str);
@@ -16679,6 +16679,19 @@ CSL.Attributes["@has-subunit"] = function (state, arg) {
     this.tests.push(maketest(arg));
 }
 
+CSL.Attributes["@cite-form"] = function (state, arg) {
+    if (!this.tests) {this.tests = []; };
+    var maketest = function(citeForm) {
+        return function (Item) {
+            if (Item["cite-form"] === citeForm) {
+                return true;
+            }
+            return false;
+        };
+    };
+    this.tests.push(maketest(arg));
+}
+
 CSL.Attributes["@disable-duplicate-year-suppression"] = function (state, arg) {
 	state.opt.disable_duplicate_year_suppression = arg.split(/\s+/);
 }
@@ -18072,36 +18085,44 @@ CSL.Transform = function (state) {
         return false;
     }
 
-
+    function citeFormCheck(Item, value) {
+        var m = value.match(/^#([0-9]+).*>>>/);
+        if (m && m[1]) {
+            Item["cite-form"] = m[1];
+        }
+    }
+    
     // The name transform code is placed here to keep similar things
     // in one place.  Obviously this module could do with a little
     // tidying up.
     function quashCheck(jurisdiction, value) {
-        var m = value.match(/^!((?:[-_a-z]+(?:(?:.*)))(?:,(?:[-_a-z]+(?:(?:.*))))*)>>>/);
+        var m = value.match(/^(?:#[0-9]+)*(?:!((?:[-_a-z]+(?:(?:.*)))(?:,(?:[-_a-z]+(?:(?:.*))))*))*>>>/);
         if (m) {
-            var fields = m[1].split(",");
             value = value.slice(m[0].length);
-            for (var i = 0, ilen = fields.length; i < ilen; i += 1) {
-                var rawField = fields[i];
-                var mm = rawField.match(/^([-_a-z]+)(?:\:(.*))*$/);
-                var field = mm[1];
-                // trimmer is not available in getAmbiguousCite
-                var trimmer = state.tmp.abbrev_trimmer;
-                if (mm[2]) {
-                    if (trimmer && jurisdiction) {
-                        if (!trimmer[jurisdiction]) {
-                            trimmer[jurisdiction] = {};
+            if (m[1]) {
+                var fields = m[1].split(",");
+                for (var i = 0, ilen = fields.length; i < ilen; i += 1) {
+                    var rawField = fields[i];
+                    var mm = rawField.match(/^([-_a-z]+)(?:\:(.*))*$/);
+                    var field = mm[1];
+                    // trimmer is not available in getAmbiguousCite
+                    var trimmer = state.tmp.abbrev_trimmer;
+                    if (mm[2]) {
+                        if (trimmer && jurisdiction) {
+                            if (!trimmer[jurisdiction]) {
+                                trimmer[jurisdiction] = {};
+                            }
+                            trimmer[jurisdiction][field] = mm[2];
                         }
-                        trimmer[jurisdiction][field] = mm[2];
-                    }
-                } else if (state.tmp.done_vars.indexOf(field) === -1) {
-                    if (trimmer && jurisdiction) {
-                        if (!trimmer.QUASHES[jurisdiction]) {
-                            trimmer.QUASHES[jurisdiction] = {};
+                    } else if (state.tmp.done_vars.indexOf(field) === -1) {
+                        if (trimmer && jurisdiction) {
+                            if (!trimmer.QUASHES[jurisdiction]) {
+                                trimmer.QUASHES[jurisdiction] = {};
+                            }
+                            trimmer.QUASHES[jurisdiction][field] = true;
                         }
-                        trimmer.QUASHES[jurisdiction][field] = true;
+                        state.tmp.done_vars.push(field);
                     }
-                    state.tmp.done_vars.push(field);
                 }
             }
         }
@@ -18204,7 +18225,8 @@ CSL.Transform = function (state) {
                 // Suppress subsequent use of another variable if requested by
                 // hack syntax in this abbreviation short form.
                 if (primary) {
-                    // The abbreviate() function could use a cleanup, after Zotero correct to use title-short
+                    // We run quash-check in getAmbiguousCite, to possibly pick up a cite-form value.
+                    citeFormCheck(Item, primary);
                     if (!state.tmp.just_looking) {
                         primary = quashCheck(Item.jurisdiction, primary);
                     }
@@ -18990,16 +19012,15 @@ CSL.Util.Names.initializeWith = function (state, name, terminator, normalizeOnly
         terminator = "";
     }
     if (["Lord", "Lady"].indexOf(name) > -1
-        || (!name.match(CSL.STARTSWITH_ROMANESQUE_REGEXP)
+        || (!name.replace(/^(?:<[^>]+>)*/, "").match(CSL.STARTSWITH_ROMANESQUE_REGEXP)
             && !terminator.match("%s"))) {
         return name;
     }
-    var namelist = name;
+
     if (state.opt["initialize-with-hyphen"] === false) {
-        namelist = namelist.replace(/\-/g, " ");
+        name = name.replace(/\-/g, " ");
     }
 
-    // Oh boy.
     // We need to suss out what is a set of initials or abbreviation,
     // so that they can be selectively normalized. Steps might be:
     //   (1) Split the string
@@ -19009,48 +19030,70 @@ CSL.Util.Names.initializeWith = function (state, name, terminator, normalizeOnly
     //       (a) Do the thing below, but only pushing terminator; or else
     //       (b) Do the thing below
 
+    name = name.replace(/\s*\-\s*/g, "-").replace(/\s+/g, " ");
+    name = name.replace(/-([a-z])/g, "\u2013$1");
+
+    for (var i=name.length-2; i>-1; i += -1) {
+        if (name.slice(i, i+1) === "." && name.slice(i+1, i+2) !== " ") {
+            name = name.slice(0, i) + ". " + name.slice(i+1);
+        }
+    }
+
     // (1) Split the string
-    namelist = namelist.replace(/\s*\-\s*/g, "-").replace(/\s+/g, " ");
-    namelist = namelist.replace(/-([a-z])/g, "\u2013$1");
+    var nameSplits = CSL.Output.Formatters.nameDoppel.split(name);
+    var namelist = [];
+    namelist = [nameSplits.strings[0]];
 
-    for (var i=namelist.length-2; i>-1; i += -1) {
-        if (namelist.slice(i, i+1) === "." && namelist.slice(i+1, i+2) !== " ") {
-            namelist = namelist.slice(0, i) + ". " + namelist.slice(i+1);
-        }
-    }
-
-    // Workaround for Internet Explorer
-    //namelist = namelist.split(/(\-|\s+)/);
-    // Workaround for Internet Explorer
-    mm = namelist.match(/[\-\s]+/g);
-    lst = namelist.split(/[\-\s]+/);
-    if (mm === null) {
-        var mmm = lst[0].match(/[^\.]+$/);
+    if (nameSplits.tags.length === 0) {
+        var mmm = namelist[0].match(/[^\.]+$/);
         if (mmm && mmm[0].length === 1 && mmm[0] !== mmm[0].toLowerCase()) {
-            lst[0] += ".";
+            namelist[0] += ".";
         }
     }
 
-    if (lst.length === 0) {
-        // This doesn't make much sense, and may be impossible.
-        namelist = mm;
-    } else {
-        namelist = [lst[0]];
-        for (i = 1, ilen = lst.length; i < ilen; i += 1) {
-            namelist.push(mm[i - 1]);
-            namelist.push(lst[i]);
-        }
+    for (i = 1, ilen = nameSplits.strings.length; i < ilen; i += 1) {
+        namelist.push(nameSplits.tags[i - 1]);
+        namelist.push(nameSplits.strings[i]);
     }
-    lst = namelist;
 
     // Use doInitializeName or doNormalizeName, depending on requirements.
     if (normalizeOnly) {
-        ret = CSL.Util.Names.doNormalize(state, lst, terminator);
+        ret = this.doNormalize(state, namelist, terminator);
     } else {
-        ret = CSL.Util.Names.doInitialize(state, lst, terminator);
+        ret = this.doInitialize(state, namelist, terminator);
     }
     ret = ret.replace(/\u2013([a-z])/g, "-$1");
     return ret;
+};
+
+CSL.Util.Names.notag = function(str) {
+    return str.replace(/^(?:<[^>]+>)*/, "");
+};
+
+CSL.Util.Names.mergetag = function(state, tagstr, newstr) {
+    var m = tagstr.match(/(?:-*<[^>]+>-*)/g);
+    if (!m) {
+        return newstr;
+    } else {
+        tagstr = m.join("");
+    }
+    m = newstr.match(/^(.*[^\s])*(\s+)$/);
+    if (m) {
+        m[1] = m[1] ? m[1] : "";
+        newstr = m[1] + tagstr + m[2];
+    } else {
+        newstr = newstr + tagstr;
+    }
+    return newstr;
+};
+
+CSL.Util.Names.tagonly = function(state, str) {
+    var m = str.match(/(?:<[^>]+>)+/);
+    if (!m) {
+        return str;
+    } else {
+        return m.join("");
+    }
 };
 
 CSL.Util.Names.doNormalize = function (state, namelist, terminator) {
@@ -19060,8 +19103,9 @@ CSL.Util.Names.doNormalize = function (state, namelist, terminator) {
     // Flag elements that look like abbreviations
     var isAbbrev = [];
     for (i = 0, ilen = namelist.length; i < ilen; i += 1) {
-        if (namelist[i].length > 1 && namelist[i].slice(-1) === ".") {
-            namelist[i] = namelist[i].slice(0, -1);
+        if (this.notag(namelist[i]).length > 1 && this.notag(namelist[i]).slice(-1) === ".") {
+            // namelist[i] = namelist[i].slice(0, -1);
+            namelist[i] = namelist[i].replace(/^(.*)\.(.*)$/, "$1$2");
             isAbbrev.push(true);
         } else if (namelist[i].length === 1 && namelist[i].toUpperCase() === namelist[i]) {
             isAbbrev.push(true);
@@ -19076,19 +19120,18 @@ CSL.Util.Names.doNormalize = function (state, namelist, terminator) {
             // For all elements but the last
             if (i < namelist.length - 2) {
                 // Start from scratch on space-like things following an abbreviation
-                namelist[i + 1] = "";
-
+                namelist[i + 1] = this.tagonly(state, namelist[i+1]);
                 if (!isAbbrev[i+2]) {
-                    namelist[i + 1] = " ";
+                    namelist[i + 1] = this.tagonly(state, namelist[i+1]) + " ";
                 }
                 
                 // Add the terminator to the element
                 // If the following element is not a single-character abbreviation, remove a trailing zero-width non-break space, if present
                 // These ops may leave some duplicate cruft in the elements and separators. This will be cleaned at the end of the function.
                 if (namelist[i + 2].length > 1) {
-                    namelist[i] = namelist[i] + terminator.replace(/\ufeff$/, "");
+                    namelist[i+1] = terminator.replace(/\ufeff$/, "") + namelist[i+1];
                 } else {
-                    namelist[i] = namelist[i] + terminator;
+                    namelist[i+1] = this.mergetag(state, namelist[i+1], terminator);
                 }
             }
             // For the last element (if it is an abbreviation), just append the terminator
@@ -19139,9 +19182,9 @@ CSL.Util.Names.doInitialize = function (state, namelist, terminator) {
                     namelist[i] = terminator.replace("%s", namelist[i]);
                 } else {
                     if (namelist[i + 1].indexOf("-") > -1) {
-                        namelist[i + 1] = terminator + namelist[i + 1];
+                        namelist[i + 1] = this.mergetag(state, namelist[i+1].replace("-", ""), terminator) + "-";
                     } else {
-                        namelist[i + 1] = terminator;
+                        namelist[i + 1] = this.mergetag(state, namelist[i+1], terminator);
                     }
                 }
             } else {
@@ -19174,14 +19217,6 @@ CSL.Util.Names.getRawName = function (name) {
     }
     return ret.join(" ");
 };
-
-// deleted CSL.Util.Names.initNameSlices()
-// no longer used.
-
-// deleted CSL.Util.Names,rescueNameElements()
-// apparently not used.
-
-
 
 /*global CSL: true */
 
@@ -21615,6 +21650,8 @@ CSL.Output.Formatters = (function () {
     var tagDoppel = new CSL.Doppeler(rexStr, function(str) {
         return str.replace(/(<span)\s+(class=\"no(?:case|decor)\")[^>]*(>)/g, "$1 $2$3").replace(/(<span)\s+(style=\"font-variant:)\s*(small-caps);?(\")[^>]*(>)/g, "$1 $2 $3;$4$5");
     });
+    var rexNameStr = "(?:[-\\s]*<\\/*(?:span\s+class=\"no(?:case|decor)\"|i|sc|b|sub|sup)>[-\\s]*|[-\\s]+)";
+    var nameDoppel = new CSL.Doppeler(rexNameStr);
     
     var wordDoppel = new CSL.Doppeler("(?:[\u0020\u00A0\u2000-\u200B\u205F\u3000]+)");
     
@@ -21985,6 +22022,7 @@ CSL.Output.Formatters = (function () {
         return _textcaseEngine.call(state, config, string);
     }
     return {
+        nameDoppel: nameDoppel,
         passthrough: passthrough,
         lowercase: lowercase,
         uppercase: uppercase,
@@ -22866,8 +22904,9 @@ CSL.Registry.prototype.dopurge = function (myhash) {
     for (var i=this.mylist.length-1;i>-1;i+=-1) {
         // Might not want to be quite this restrictive.
         if (this.citationreg.citationsByItemId) {
-            if (!this.citationreg.citationsByItemId[this.mylist[i]] && !myhash[this.mylist[i]]) {
+            if ((!this.citationreg.citationsByItemId || !this.citationreg.citationsByItemId[this.mylist[i]]) && !myhash[this.mylist[i]]) {
                 delete this.myhash[this.mylist[i]];
+                delete this.uncited[this.mylist[i]];
                 this.mylist = this.mylist.slice(0,i).concat(this.mylist.slice(i+1));
             }
         }
