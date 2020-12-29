@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.55",
+    PROCESSOR_VERSION: "1.4.56",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -16402,7 +16402,8 @@ CSL.Attributes["@is-multiple"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
     var func = function (Item) {
         var val = ("" + Item[arg]);
-        if (val.indexOf(" ") > -1) {
+        var lst = val.split(/(?:,\s|\sand\s|\&)/);
+        if (lst.length > 1) {
             return true;
         }
         return false;
