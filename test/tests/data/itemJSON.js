@@ -613,6 +613,7 @@
     "reign": "Reign",
     "supplementName": "Supplement name",
     "documentName": "Document name",
+    "documentNumber": "Document number",
     "creators": [
       {
         "firstName": "authorFirst",
@@ -1268,7 +1269,7 @@
     "committee": "Committee",
     "language": "en-US",
     "abstractNote": "Abstract note",
-    "documentNumber": "3",
+    "documentNumber": "Document number",
     "title": "Title",
     "shortTitle": "Short title",
     "jurisdiction": "Jurisdiction",

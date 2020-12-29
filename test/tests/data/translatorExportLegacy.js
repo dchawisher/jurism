@@ -835,6 +835,7 @@
     "reign": "Reign",
     "supplementName": "Supplement name",
     "documentName": "Document name",
+    "documentNumber": "Document number",
     "creators": [
       {
         "firstName": "authorFirst",
@@ -924,7 +925,8 @@
       "publicationDate": "Publication date",
       "reign": "Reign",
       "supplementName": "Supplement name",
-      "documentName": "Document name"
+	  "documentName": "Document name",
+      "documentNumber": "Document number"
     },
     "itemID": 8,
     "key": "E4ZH4SEY",
@@ -1751,7 +1753,7 @@
     "committee": "Committee",
     "language": "en-US",
     "abstractNote": "Abstract note",
-    "documentNumber": "3",
+    "documentNumber": "Document number",
     "title": "Title",
     "shortTitle": "Short title",
     "jurisdiction": "Jurisdiction",
@@ -1821,7 +1823,7 @@
       "committee": "Committee",
       "language": "en-US",
       "abstractNote": "Abstract note",
-      "number": "3",
+      "documentNumber": "Document number",
       "title": "Title",
       "shortTitle": "Short title",
       "jurisdiction": "Jurisdiction",
@@ -1834,7 +1836,6 @@
     "itemID": 17,
     "key": "IMZANEM6",
     "publicationTitle": "Publication title",
-    "number": "3",
     "type": "Type",
     "libraryID": null,
     "seeAlso": []
