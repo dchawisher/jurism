@@ -45,6 +45,8 @@ pref("extensions.zotero.autoRenameFiles", true);
 pref("extensions.zotero.autoRenameFiles.linked", false);
 pref("extensions.zotero.autoRenameFiles.fileTypes", "application/pdf");
 pref("extensions.zotero.attachmentRenameFormatString", "{%c - }{%y - }{%t{50}}");
+pref("extensions.zotero.attachmentRenameFormatStringCases", "{%t{50}#}{%n#}{doc-%D#}{%C#}{%d#}{%a#}{%l}");
+pref("extensions.zotero.attachmentRenameFormatStringCasesNoTitle", "{%C#}{%n#}{doc-%D#}{%d}");
 pref("extensions.zotero.capitalizeTitles", false);
 pref("extensions.zotero.launchNonNativeFiles", false);
 pref("extensions.zotero.sortNotesChronologically", false);

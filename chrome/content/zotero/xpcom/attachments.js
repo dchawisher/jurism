@@ -1940,6 +1940,16 @@ Zotero.Attachments = new function(){
 	 * %c -- firstCreator
 	 * %y -- year (extracted from Date field)
 	 * %t -- title
+	 * 
+	 * Jurism extensions
+	 *
+	 * %n -- number
+	 * %D -- documentNumber
+	 * %C -- court (via Abbrevs Filter)
+	 * %d -- date (full-form, numeric)
+	 * %a -- archive
+	 * %l -- archiveLocation (stripped of prefix)
+	 * 
 	 *
 	 * Fields can be truncated to a certain length by appending an integer
 	 * within curly brackets -- e.g. %t{50} truncates the title to 50 characters
@@ -1952,8 +1962,18 @@ Zotero.Attachments = new function(){
 			throw new Error("'item' must be a Zotero.Item");
 		}
 		
+		var title = item.getField('title', false, true);
+		
 		if (!formatString) {
-			formatString = Zotero.Prefs.get('attachmentRenameFormatString');
+			if (Zotero.ItemTypes.getName(item.itemTypeID) === "case") {
+				if (title) {
+					formatString = Zotero.Prefs.get('attachmentRenameFormatStringCases');
+				} else {
+					formatString = Zotero.Prefs.get('attachmentRenameFormatStringCasesNoTitle');
+				}
+			} else {
+				formatString = Zotero.Prefs.get('attachmentRenameFormatString');
+			}
 		}
 		
 		// Replaces the substitution marker with the field value,
@@ -1976,6 +1996,31 @@ Zotero.Attachments = new function(){
 				case 'title':
 					var rpl = '%t';
 					break;
+				
+				case 'number':
+					var rpl = '%n';
+					break;
+				
+				case 'documentNumber':
+					var rpl = '%D';
+					break;
+				
+				case 'court':
+					var rpl = '%C';
+					break;
+				
+				case 'date':
+					var rpl = '%d';
+					break;
+				
+				case 'archive':
+					var rpl = '%a';
+					break;
+				
+				case 'archiveLocation':
+					var rpl = '%l';
+					break;
+				
 			}
 			
 			var value;
@@ -1992,26 +2037,58 @@ Zotero.Attachments = new function(){
 							value = '';
 						}
 					}
-				break;
-				
-				default:
-					var value = '' + item.getField(field, false, true);
-					if (!value && field === 'title') {
-					  var courtID = item.getField('court', true);
-						if (courtID) {
-							var jurisdictionID = item.getField('jurisdiction', true);
-							if (jurisdictionID) {
-								var courtName = Zotero.CachedJurisdictionData.courtNameFromId(jurisdictionID, courtID);
-							} else {
-								var courtName = courtID;
-							}
-							value = courtName;
-							var docketNumber = item.getField('docketNumber', true);
-							if (docketNumber) {
-								value = value + " " + docketNumber;
-							}
+					break;
+
+				case 'number':
+					value = item.getField('number', false, true).replace(/[:]/g, "+");
+					break;
+
+				case 'documentNumber':
+					value = item.getField('documentNumber', false, true);
+					break;
+
+				case 'court':
+					var acc = [];
+					var jurisdictionID = item.getField('jurisdiction', true);
+					var courtID = item.getField('court', true);
+					if (jurisdictionID) {
+						var jurisdictionName = Zotero.CachedJurisdictionData.jurisdictionNameFromId(jurisdictionID);
+						acc.push(jurisdictionName);
+					}
+					if (courtID) {
+						if (jurisdictionID) {
+							var courtName = Zotero.CachedJurisdictionData.courtNameFromId(jurisdictionID, courtID);
+						} else {
+							var courtName = courtID;
+						}
+						acc.push(courtName);
+					}
+					value = acc.filter(o => o).join("--").replace(/[\|]/g, "+");
+					break;
+
+				case 'date':
+					value = item.getField('date', true, true);
+					if (value) {
+						value = Zotero.Date.multipartToSQL(value);
+						if (value.substr(0, 4) == '0000') {
+							value = '';
 						}
 					}
+					break;
+
+				case 'archive':
+					value = item.getField('archive', false, true);
+					break;
+
+				case 'archiveLocation':
+					value = item.getField('archiveLocation', false, true);
+					if (value) {
+						value = value.replace(/^pacer:\s*/, "");
+					}
+					break;
+
+				default:
+					var value = '' + item.getField(field, false, true);
 			}
 			
 			var re = new RegExp("\{?([^%\{\}]*)" + rpl + "(\{[0-9]+\})?" + "([^%\{\}]*)\}?");
@@ -2027,14 +2104,26 @@ Zotero.Attachments = new function(){
 			var f = function(match, p1, p2, p3) {
 				var maxChars = p2 ? p2.replace(/[^0-9]+/g, '') : false;
 				return p1 + (maxChars ? value.substr(0, maxChars) : value) + p3;
-			}
+			};
 			
 			return str.replace(re, f);
 		}
-		
+
 		formatString = rpl('creator');
 		formatString = rpl('year');
 		formatString = rpl('title');
+		formatString = rpl('number');
+		formatString = rpl('documentNumber');
+		formatString = rpl('court');
+		formatString = rpl('date');
+		formatString = rpl('archive');
+		formatString = rpl('archiveLocation');
+		
+		formatString = formatString.replace(/\#+$/, "").trim();
+
+		if (formatString.indexOf("#") > -1) {
+			formatString = formatString.replace(/\s+/g, "-").replace(/\.\-/g, "-");
+		}
 		
 		formatString = Zotero.Utilities.cleanTags(formatString);
 		formatString = Zotero.File.getValidFileName(formatString);
