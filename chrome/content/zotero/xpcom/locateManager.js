@@ -255,7 +255,7 @@ Zotero.LocateManager = new function() {
 			} else if(param === "year") {
 				return (itemOpenURL["rft.date"] ? [itemOpenURL["rft.date"][0].substr(0, 4)] : false);
 			} else if(param === "docketNumber") {
-				if (!item.jurisdiction || !item.jurisdiction.match(/us:c[0-9]/)) return false;
+				if (!item.jurisdiction || !item.jurisdiction.match(/us:c[0-9]+:/)) return false;
 				var result = item[param];
 				if (result) {
 					var res = [];
