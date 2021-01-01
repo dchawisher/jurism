@@ -878,17 +878,21 @@ Zotero.Attachments = new function(){
 			let tmpFile = OS.Path.join(tmpDirectory, fileName);
 			await Zotero.File.putContentsAsync(tmpFile, snapshotContent);
 
-			// If we're using the title from the document, make some adjustments
-			// Remove e.g. " - Scaled (-17%)" from end of images saved from links,
-			// though I'm not sure why it's getting added to begin with
-			if (contentType.indexOf('image/') === 0) {
-				title = title.replace(/(.+ \([^,]+, [0-9]+x[0-9]+[^\)]+\)) - .+/, "$1" );
+			if (!title) {
+				var parentItem = Zotero.Items.get(parentItemID);
+				title = Zotero.Attachments.getFileBaseNameFromItem(parentItem);
+			} else {
+				// If we're using the title from the document, make some adjustments
+				// Remove e.g. " - Scaled (-17%)" from end of images saved from links,
+				// though I'm not sure why it's getting added to begin with
+				if (contentType.indexOf('image/') === 0) {
+					title = title.replace(/(.+ \([^,]+, [0-9]+x[0-9]+[^\)]+\)) - .+/, "$1" );
+				}
+				// If not native type, strip mime type data in parens
+				else if (!Zotero.MIME.hasNativeHandler(contentType, this._getExtensionFromURL(url))) {
+					title = title.replace(/(.+) \([a-z]+\/[^\)]+\)/, "$1" );
+				}
 			}
-			// If not native type, strip mime type data in parens
-			else if (!Zotero.MIME.hasNativeHandler(contentType, this._getExtensionFromURL(url))) {
-				title = title.replace(/(.+) \([a-z]+\/[^\)]+\)/, "$1" );
-			}
-
 			attachmentItem = await _addToDB({
 				file: 'storage:' + fileName,
 				title,
@@ -924,7 +928,6 @@ Zotero.Attachments = new function(){
 			
 			throw e;
 		}
-		
 		return attachmentItem;
 	};
 
@@ -1963,9 +1966,11 @@ Zotero.Attachments = new function(){
 		}
 		
 		var title = item.getField('title', false, true);
-		
+		var mode = null;
+
 		if (!formatString) {
 			if (Zotero.ItemTypes.getName(item.itemTypeID) === "case") {
+				mode = "case";
 				if (title) {
 					formatString = Zotero.Prefs.get('attachmentRenameFormatStringCases');
 				} else {
@@ -2012,15 +2017,6 @@ Zotero.Attachments = new function(){
 				case 'date':
 					var rpl = '%d';
 					break;
-				
-				case 'archive':
-					var rpl = '%a';
-					break;
-				
-				case 'archiveLocation':
-					var rpl = '%l';
-					break;
-				
 			}
 			
 			var value;
@@ -2076,17 +2072,6 @@ Zotero.Attachments = new function(){
 					}
 					break;
 
-				case 'archive':
-					value = item.getField('archive', false, true);
-					break;
-
-				case 'archiveLocation':
-					value = item.getField('archiveLocation', false, true);
-					if (value) {
-						value = value.replace(/^pacer:\s*/, "");
-					}
-					break;
-
 				default:
 					var value = '' + item.getField(field, false, true);
 			}
@@ -2116,19 +2101,17 @@ Zotero.Attachments = new function(){
 		formatString = rpl('documentNumber');
 		formatString = rpl('court');
 		formatString = rpl('date');
-		formatString = rpl('archive');
-		formatString = rpl('archiveLocation');
 		
-		formatString = formatString.replace(/\#+$/, "").trim();
+		formatString = formatString.replace(/\_+$/, "").trim();
 
-		if (formatString.indexOf("#") > -1) {
-			formatString = formatString.replace(/\s+/g, "-").replace(/\.\-/g, "-");
+		if (mode === "case") {
+			formatString = formatString.replace(/\s+/g, "-").replace(/[\.\,]/g, "");
 		}
 		
 		formatString = Zotero.Utilities.cleanTags(formatString);
 		formatString = Zotero.File.getValidFileName(formatString);
 		return formatString;
-	}
+	};
 	
 	
 	this.shouldAutoRenameFile = function (isLink) {

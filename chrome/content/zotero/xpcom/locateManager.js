@@ -254,6 +254,49 @@ Zotero.LocateManager = new function() {
 				return (ctx ? [ctx] : false);
 			} else if(param === "year") {
 				return (itemOpenURL["rft.date"] ? [itemOpenURL["rft.date"][0].substr(0, 4)] : false);
+			} else if(param === "docketNumber") {
+				if (!item.jurisdiction || !item.jurisdiction.match(/us:c[0-9]/)) return false;
+				var result = item[param];
+				if (result) {
+					var res = [];
+					result = result.split(/,\s+/);
+					for (var num of result) {
+						var m = num.match(/^([0-9]+)[-–~]([0-9]+)$/);
+						// For docket numbers with no case type code, try everything
+						if (m) {
+							res.push(`${m[1]}-cv-${m[2]}`);
+							res.push(`${m[1]}-cr-${m[2]}`);
+							res.push(`${m[1]}-mc-${m[2]}`);
+							res.push(`${m[1]}-mj-${m[2]}`);
+						} else {
+							res.push(num);
+						}
+					}
+					result = res.join(" OR ");
+				}
+				return (result ? [encodeURIComponent(result)] : false);
+			} else if(param === "caseName") {
+				var result = item[param];
+				if (result) {
+					var parties = result.split(/\s+v\.\s+/);
+					var ret = [];
+					for (var i=0,ilen=parties.length;i<ilen;i++) {
+						var party = parties[i];
+						var words = party.split(/\s+/);
+						for (var word of words) {
+							if (word.length > 3 && word.slice(-1) !== ".") {
+								ret.push(word);
+								break;
+							}
+						}
+					}
+					if (ret.length === 0) {
+						result = parties.join(" ");
+					} else {
+						result = ret.join(" AND ");
+					}
+				}
+				return (result ? [encodeURIComponent(result)] : false);
 			} else {
 				var result = item[param];
 				return (result ? [encodeURIComponent(result)] : false);

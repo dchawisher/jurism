@@ -25,5 +25,18 @@
 			"": "http://a9.com/-/spec/opensearch/1.1/"
 		},
 		"_iconSourceURI": "https://scholar.google.com/favicon.ico"
+	},
+	{
+		"name": "CourtListener RECAP Search",
+		"alias": "CourtListener RECAP",
+		"_urlTemplate": "https://www.courtlistener.com/?q=({z:caseName})%20AND%20docketNumber:({z:docketNumber})&type=r&order_by=score%20desc",
+		"description": "CourtListener RECAP Search",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
+		},
+		"_iconSourceURI": "https://www.courtlistener.com/favicon.ico"
 	}
 ]
