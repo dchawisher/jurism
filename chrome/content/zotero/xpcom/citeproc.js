@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.56",
+    PROCESSOR_VERSION: "1.4.58",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -16402,7 +16402,7 @@ CSL.Attributes["@is-multiple"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
     var func = function (Item) {
         var val = ("" + Item[arg]);
-        var lst = val.split(/(?:,\s|\sand\s|\&)/);
+        var lst = val.split(/(?:,\s|\s(?:tot\sen\smet|līdz|oraz|and|bis|έως|και|och|až|do|en|et|in|ir|ja|og|sa|to|un|und|és|și|i|u|y|à|e|a|и|-|–)\s|—|\&)/);
         if (lst.length > 1) {
             return true;
         }
@@ -16410,6 +16410,9 @@ CSL.Attributes["@is-multiple"] = function (state, arg) {
     };
     this.tests.push(func);
 };
+
+
+
 
 CSL.Attributes["@locale"] = function (state, arg) {
     if (!this.tests) {this.tests = []; };
