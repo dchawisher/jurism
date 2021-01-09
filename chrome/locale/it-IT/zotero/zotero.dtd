@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Crea elemento e nota in base alla selezione">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Salva l'immagine in Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Salva il link in Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Salva in Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Per usare questa funzionalità, è necessario prima installare gli strumenti PDF tramite le impostazioni di Juris-M.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "La libreria selezionata non può essere usata per salvare allegati. Questo oggetto sarà salvato nella tua libreria.">

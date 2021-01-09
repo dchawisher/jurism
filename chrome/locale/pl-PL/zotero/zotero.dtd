@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Utwórz element Juris-M i notatkę z zaznaczenia">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Zapisz obraz jako element Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Zapisz odnośnik jako element Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Zapisz w Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Aby użyć tej funkcji, musisz najpierw zainstalować narzędzia PDF w panelu Wyszukiwania w ustawieniach Juris-M.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Załączniki nie mogą być zapisane w aktualnie wybranej bibliotece. Ten element zostanie zapisany zamiast tego w twojej bibliotece.">

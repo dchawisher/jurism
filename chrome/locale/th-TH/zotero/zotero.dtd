@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "สร้างรายการและหมายเหตุใหม่จากสิ่งที่เลือก">
 <!ENTITY zotero.contextMenu.saveImageAsItem "บันทึกรูปภาพเป็นรายการของ Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "บันทึกลิงค์เป็นรายการของ Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "บันทึกไปยัง Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "การใช้คุณสมบัตินี้คุณต้องติดตั้งเครื่องมือ PDF ในการตั้งค่าพึงใจของ Juris-M">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "ไม่สามารถบันทึกเอกสารแนบไปยังไลบรารี่ที่เลือกได้ รายการนี้จะถูกบันทึกไปยังไลบรารี่ของคุณแทน">

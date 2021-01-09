@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Luo Juris-M-nimike and muistiinpano valinnasta">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Tallenna kuva Juris-Mon">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Tallenna linkki Juris-Mon">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Tallenna Juris-Mon">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Käyttääksesi tätä ominaisuutta tulee sinun ensin asentaa PDF-työkalut Juris-Mn asetuksista.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Liitteitä ei voi tallentaa valittuun kirjastoon. Nimike sen sijaan tallennetaan kirjastoon.">

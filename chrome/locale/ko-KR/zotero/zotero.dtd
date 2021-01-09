@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "선택한 내용으로 Juris-M 노트 생성">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Juris-M 항목으로 이미지 저장">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Juris-M 항목으로 링크 저장">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Juris-M로 저장">
 <!ENTITY zotero.downloadManager.noPDFTools.description "이 기능을 사용하려면, 먼저 Juris-M 환경설정에서 PDF 도구를 인스톨해야 합니다.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "첨부물을 현재 선택한 라이브러리에 저장할 수 없습니다. 그 대신 귀하의 라이브러리에 저장됩니다.">

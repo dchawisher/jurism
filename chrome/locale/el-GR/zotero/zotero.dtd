@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Δημιουργία Στοιχείου Juris-M και Σημειώσεων από Επιλογή">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Αποθήκευση Εικόνας ως Στοιχείο Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Αποθήκευση Συνδέσμου ως Στοιχείο Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Αποθήκευση στο Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Για να χρησιμοποιήσετε τη λειτουργία αυτή πρώτα πρέπει να εγκαταστήσετε τα εργαλεία PDF στο πλαίσιο Αναζήτησης των Προτιμήσεων του Juris-M.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Στην επιλεγμένη βιβλιοθήκη δεν μπορούν να αποθηκευτούν προσαρτήματα. Αντ' αυτής, το στοιχείο θα αποθηκευτεί στην βιβλιοθήκη σας.">

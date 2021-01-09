@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "由所選建立 Juris-M 項目與筆記">
 <!ENTITY zotero.contextMenu.saveImageAsItem "將圖片儲存成 Juris-M 項目">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "將連結儲存成 Juris-M 項目">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "儲存到 Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "要使用這個功能，得先至 Juris-M 的偏好設定之搜尋框，安裝 PDF 工具。">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "附件檔不能被存到目前選定的文獻庫。這個項目會被改存到您的文獻庫。">

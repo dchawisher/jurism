@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Buat Item Juris-M dan Catatan dari Pilihan">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Simpan Gambar sebagai Item Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Simpan Tautan sebagai Item Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Simpan ke Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Untuk menggunakan fitur ini, Anda harus menginstal aplikasi PDF dalam preferensi Juris-M terlebih dahulu.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Lampiran tidak dapat disimpan ke dalam perpustakaan yang saat ini terpilih. Sebaliknya, item ini akan disimpan ke dalam perpustakaan Anda.">

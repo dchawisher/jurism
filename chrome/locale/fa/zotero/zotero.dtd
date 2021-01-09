@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote " ساخت آیتم‌ و یادداشت از قسمت انتخاب شده">
 <!ENTITY zotero.contextMenu.saveImageAsItem "ذخیره تصویر به صورت یک آیتم‌ زوترو">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "ذخیره پیوند به صورت یک آیتم‌ زوترو">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "ذخیره در زوترو">
 <!ENTITY zotero.downloadManager.noPDFTools.description "To use this feature, you must first install the PDF tools in the Search pane of the Juris-M preferences.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Attachments cannot be saved to the currently selected library. This item will be saved to your library instead.">

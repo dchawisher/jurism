@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Opret Juris-M-element og note ud fra markering">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Gem billede som Juris-M-element.">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Gem link som Juris-M-element.">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Gem til Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "For at bruge denne funktion skal du først installere PDF-værktøjerne i Juris-Ms indstillinger.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Vedhæftede filer kan ikke gemmes i det aktuelle bibliotek. I stedet gemmes hele elementet  i dit bibliotek.">

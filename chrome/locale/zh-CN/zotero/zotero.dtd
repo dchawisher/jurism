@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "由所选内容创建 Juris-M 条目及笔记">
 <!ENTITY zotero.contextMenu.saveImageAsItem "将图片保存为 Juris-M 条目">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "将链接保存为 Juris-M 条目">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "保存到 Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "要使用该功能, 您必须在 Juris-M 首选项中的搜索选项卡里安装 PDF 工具.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "附件无法保存到当前选中的文献库. 不过, 该条目将被保存到您的文献库中.">

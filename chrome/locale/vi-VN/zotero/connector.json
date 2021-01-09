@@ -63,7 +63,7 @@
     "message": "$1 không thể kết nối với $2. $2 phải chạy để có thể dùng trích dẫn web."
   },
   "integration_googleDocs_unlinkBeforeSaving_warning": {
-    "message": "Tài liệu này có chứa trích dẫn Zotero mà sẽ hiển thị là các liên kết zotero.org trong bản sao đã tải xuống"
+    "message": "Tài liệu này có chứa trích dẫn Jurism mà sẽ hiển thị là các liên kết zotero.org trong bản sao đã tải xuống"
   },
   "general_saveTo": {
     "message": "Lưu vào $1"

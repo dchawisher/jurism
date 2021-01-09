@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Lag notat og element i Juris-M frå utvalet">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Lagre bilete som Juris-M-objekt">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Lagre lenkje som Juris-M-objekt">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Lagra til Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "For å bruka denne funksjonen må du fyrst installera PDF-verktøya i innstillingar-dialogen til Juris-M.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Vedlegg kan ikkje lagrast til det valde biblioteket. Lagrar til hovudbiblioteket i staden.">

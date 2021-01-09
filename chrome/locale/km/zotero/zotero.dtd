@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "បង្កើតបញ្ជីឯកសារហ្ស៊ូតេរ៉ូ និង កំណត់ចំណាំចេញពីជម្រើស">
 <!ENTITY zotero.contextMenu.saveImageAsItem "ទាញរក្សារូបភាពទុកជាឯកសារហ្ស៊ូតេរ៉ូ">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "ទាញរក្សាកម្ជាប់ទុកជាឯកសារហ្ស៊ូតេរ៉ូ">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "ទាញរក្សាទុកក្នុងហ្ស៊ូតេរ៉ូ">
 <!ENTITY zotero.downloadManager.noPDFTools.description "ដើម្បីប្រើលក្ខណៈពិសេស​នេះ ដំបូងអ្នកត្រូវដំឡើងឧបករណ៏ភីឌីអែហ្វនៅ​ក្នុង​​ជម្រើសអាទិភាពហ្ស៊ូតេរ៉ូជាមុនសិន។">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "កម្ជាប់មិនអាចទាញមករក្សាទុកនៅក្នុងបណ្ណល័យដែលកំពុងជ្រើសរើសនោះទេ។ ឯកសារនេះនឹងត្រូវទាញមករក្សាទុកនៅក្នុងបណ្ណល័យរបស់អ្នក។">

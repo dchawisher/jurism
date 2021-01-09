@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "選択範囲から Juris-M アイテムとメモを作成">
 <!ENTITY zotero.contextMenu.saveImageAsItem "画像を Juris-M アイテムとして保存">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "リンクを Juris-M アイテムとして保存">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Juris-M に保存する">
 <!ENTITY zotero.downloadManager.noPDFTools.description "この機能を利用するには、まず Juris-M 環境設定の検索ペインで PDF ツールをインストールする必要があります。">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "添付ファイルは現在選択中のライブラリに保存することができません。その代わり、このアイテムはあなたのライブラリに保存されます。">

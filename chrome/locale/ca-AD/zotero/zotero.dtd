@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Crea un element del Juris-M i una nota amb la selecció">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Desa la imatge com un element del Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Desa l'enllaç com un element del Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Desa al Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Per utilitzar aquesta funció, primer cal instal·lar les eines de PDF en les preferències del Juris-M.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Els adjunts no es poden desar a la biblioteca seleccionada. Aquest element es desarà a la biblioteca.">

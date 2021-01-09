@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Juris-M elem és jegyzet létrehozása a kijelölés alapján">
 <!ENTITY zotero.contextMenu.saveImageAsItem "A kép elmentése Juris-M elemként">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "A hivatkozás elmentése Juris-M elemként">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Mentés Juris-M-ba">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Ahhoz, hogy ezt a tulajdonságot használja, először telepítenie kell a PDF tools-t a Juris-M beállítások keresőpaneljén.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "A csatolmányok nem menthetőek a jelenleg kiválasztott könyvtárba. Ez az elem a saját könyvtárába lesz mentve.">

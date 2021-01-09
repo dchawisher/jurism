@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Створити Juris-M запис та примітку з вибраного">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Зберегти зображення як документ Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Зберегти посилання як документ Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Зберегти в Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Щоб використати цю функцію, необхідно встановити PDF утиліту, вказану в налаштуваннях Juris-M.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Вкладення не можуть бути збережені в обрану бібліотеку. Натомість, цей документ буде збережений в вашу бібліотеку.">

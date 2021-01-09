@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Sortu Juris-M Itema eta Oharra hautapenetik">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Gorde irudia Juris-M Item gisa">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Gorde URLa Juris-M Item gisa">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Save to Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "To use this feature, you must first install the PDF tools in the Search pane of the Juris-M preferences.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Attachments cannot be saved to the currently selected library. This item will be saved to your library instead.">

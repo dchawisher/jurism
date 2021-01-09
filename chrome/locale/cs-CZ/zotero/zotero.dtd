@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Vytvořit Juris-M položku a poznámku z výběru">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Uložit obrázek jako položku Zotera">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Uložit odkaz jako položku Zotera">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Uložit do Zotera">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Pokud chcete využít této funkce, musíte nejdříve v nastavení Zotera nainstalovat nástroje pro práci s PDF.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Do zvolené knihovny nemohou být uloženy přílohy. Tato položka bude místo toho uložena do vaší knihovny.">

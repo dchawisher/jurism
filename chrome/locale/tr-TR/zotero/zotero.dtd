@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Seçimden Juris-M öğesi ve Notu Yarat">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Resmi Juris-M öğesi olarak kaydet">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Bağlantıyı Juris-M öğesi olarak kaydet">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Juris-M'ya Kaydet">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Bu özelliği kullanabilmek için, önce Juris-M tercihlerindeki Arama bölmesinde PDF araçlarını kurmanız gerekmektedir.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Ekler şu an seçili olan kitaplığa kaydedilemedi. Bu eser kitaplığınıza kaydedilecek.">

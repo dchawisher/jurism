@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Tạo một biểu ghi và một ghi chép Juris-M cho phần vừa chọn">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Lưu hình ảnh thành tài liệu tham khảo trong Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Lưu liên kết thành tài liệu tham khảo trong Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Save to Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "To use this feature, you must first install the PDF tools in the Search pane of the Juris-M preferences.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Attachments cannot be saved to the currently selected library. This item will be saved to your library instead.">

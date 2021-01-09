@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Sukurti Juris-M įrašą ir pastabą jam iš pažymėto teksto">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Paveikslėlį įrašyti kaip Juris-M elementą">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Nuorodą išsaugoti kaip Juris-M įrašą">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Įrašyti į Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Norėdami naudotis šia funkcija, turite įdiegti PDF įrankius per Juris-M nuostatų paieškos skydelį.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Priedų negalima įrašyti pasirinktoje bibliotekoje. Šį įrašą įrašysime jūsų bibliotekoje.">

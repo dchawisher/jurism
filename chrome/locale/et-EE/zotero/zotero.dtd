@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Luua valikust Juris-M kirje ja märkus">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Salvestada pilt Juris-M kirjena">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Salvestada link Juris-M kirjena">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Juris-Msse salvestamine">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Selle funktsiooni kasutamiseks on kõigepealt tarvis paigaldada PDF tööriistad Juris-M seadetes.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Valitud raamatukokku ei ole võimalik manuseid salvestada. See kirje salvestatakse teie isiklikku raamatukokku.">

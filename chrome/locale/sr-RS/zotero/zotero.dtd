@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Направите Зотерову ставку и белешку из изабраног">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Сачувај слику као Зотеро ставку">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Сачувај везу као Зотеро ставку">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Сачувај у Зотеро">
 <!ENTITY zotero.downloadManager.noPDFTools.description "За употребу ових могућности морате најпре инсталирати ПДФ алате из поставки претраге Зотера.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Не можете да сачувате прилоге унутар изабране библиотеке. Ова ставка ће зато бити сачувана у вашу личну библиотеку.">

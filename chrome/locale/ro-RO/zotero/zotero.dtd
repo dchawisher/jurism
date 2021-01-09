@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Creează pe baza selecției o înregistrare și o notă Juris-M">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Salvează imaginea ca înregistrare în Juris-M">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Salvează legătura ca înregistrare în Juris-M">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Salvează în Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Pentru a folosi această facilitate, trebuie să instalezi mai întâi uneletele PDF în preferințele Juris-M.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "Anexele nu pot fi salvate în biblioteca selectată. Această înregistrare va fi salvată în schimb în biblioteca ta.">

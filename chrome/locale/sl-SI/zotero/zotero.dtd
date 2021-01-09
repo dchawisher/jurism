@@ -38,6 +38,8 @@
 <!ENTITY zotero.contextMenu.addTextToNewNote "Ustvari vnos in opombo Juris-M iz izbora">
 <!ENTITY zotero.contextMenu.saveImageAsItem "Shrani sliko kot vnos Zotera">
 <!ENTITY zotero.contextMenu.saveLinkAsItem "Shrani povezavo kot vnos Zotera">
+<!ENTITY zotero.createParent.button.manual "Manual Entry">
+<!ENTITY zotero.createParent.title "Create Parent Item">
 <!ENTITY zotero.downloadManager.label "Shrani na Juris-M">
 <!ENTITY zotero.downloadManager.noPDFTools.description "Če želite uporabiti to funkcijo, morate najprej namestiti orodja PDF v nastavitvah Zotera.">
 <!ENTITY zotero.downloadManager.saveToLibrary.description "V trenutno izbrano knjižnico priponk ni mogoče shraniti. Vnos bo namesto tega shranjen v vašo knjižnico.">
