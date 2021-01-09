@@ -3388,7 +3388,7 @@ Zotero.defineProperty(Zotero.Item.prototype, 'attachmentFilename', {
 		}
 		var prefixedPath = path.match(/^(?:attachments|storage):(.*)$/);
 		if (prefixedPath) {
-			return prefixedPath[1];
+			return prefixedPath[1].split('/').pop();
 		}
 		return OS.Path.basename(path);
 	},
@@ -4819,13 +4819,19 @@ Zotero.Item.prototype.isCollection = function() {
 	
 	var isValidForType = {};
 	var setFields = new Set();
-	var { fields: extraFields, creators: extraCreators, extra } = Zotero.Utilities.Internal.extractExtraFields(
-		json.extra || '',
-		this,
-		Object.keys(json)
-			// TEMP until we move creator lines to real creators
-			.concat('creators')
-	);
+	var { itemType, fields: extraFields, creators: extraCreators, extra } =
+		Zotero.Utilities.Internal.extractExtraFields(
+			json.extra || '',
+			this,
+			Object.keys(json)
+				// TEMP until we move creator lines to real creators
+				.concat('creators')
+		);
+	// If a different item type was parsed out of Extra, use that instead
+	if (itemType && json.itemType != itemType) {
+		itemTypeID = Zotero.ItemTypes.getID(itemType);
+		this.setType(itemTypeID);
+	}
 	var invalidFieldLogLines = new Map();
 	
 	// Transfer valid fields from Extra to regular fields

@@ -1060,6 +1060,11 @@ describe("Zotero.Item", function () {
 	})
 	
 	describe("#attachmentFilename", function () {
+		afterEach(function () {
+			Zotero.Prefs.set('saveRelativeAttachmentPath', false)
+			Zotero.Prefs.clear('baseAttachmentPath')
+		});
+		
 		it("should get and set a filename for a stored file", function* () {
 			var filename = "test.txt";
 			
@@ -1090,12 +1095,42 @@ describe("Zotero.Item", function () {
 			assert.equal(item.getFilePath(), file.path);
 		});
 		
-		it.skip("should get and set a filename for a base-dir-relative file", function* () {
+		it("should get a filename for a base-dir-relative file", function () {
+			var dir = getTestDataDirectory().path;
+			Zotero.Prefs.set('saveRelativeAttachmentPath', true)
+			Zotero.Prefs.set('baseAttachmentPath', dir)
 			
-		})
+			var file = OS.Path.join(dir, 'test.png');
+			
+			var item = new Zotero.Item('attachment');
+			item.attachmentLinkMode = 'linked_file';
+			item.attachmentPath = file;
+			
+			assert.equal(item.attachmentFilename, 'test.png');
+		});
+		
+		it("should get a filename for a base-dir-relative file in a subdirectory", function () {
+			var dir = getTestDataDirectory().path;
+			var baseDir = OS.Path.dirname(dir);
+			Zotero.Prefs.set('saveRelativeAttachmentPath', true)
+			Zotero.Prefs.set('baseAttachmentPath', baseDir)
+			
+			var file = OS.Path.join(dir, 'test.png');
+			
+			var item = new Zotero.Item('attachment');
+			item.attachmentLinkMode = 'linked_file';
+			item.attachmentPath = file;
+			
+			assert.equal(item.attachmentFilename, 'test.png');
+		});
 	})
 	
 	describe("#attachmentPath", function () {
+		afterEach(function () {
+			Zotero.Prefs.set('saveRelativeAttachmentPath', false)
+			Zotero.Prefs.clear('baseAttachmentPath')
+		});
+		
 		it("should return an absolute path for a linked attachment", function* () {
 			var file = getTestDataDirectory();
 			file.append('test.png');
@@ -1113,7 +1148,6 @@ describe("Zotero.Item", function () {
 		
 		it("should set a prefixed relative path for a path within the defined base directory", function* () {
 			var dir = getTestDataDirectory().path;
-			var dirname = OS.Path.basename(dir);
 			var baseDir = OS.Path.dirname(dir);
 			Zotero.Prefs.set('saveRelativeAttachmentPath', true)
 			Zotero.Prefs.set('baseAttachmentPath', baseDir)
@@ -1125,14 +1159,10 @@ describe("Zotero.Item", function () {
 			item.attachmentPath = file;
 			
 			assert.equal(item.attachmentPath, "attachments:data/test.png");
-			
-			Zotero.Prefs.set('saveRelativeAttachmentPath', false)
-			Zotero.Prefs.clear('baseAttachmentPath')
 		})
 		
 		it("should return a prefixed path for a linked attachment within the defined base directory", function* () {
 			var dir = getTestDataDirectory().path;
-			var dirname = OS.Path.basename(dir);
 			var baseDir = OS.Path.dirname(dir);
 			Zotero.Prefs.set('saveRelativeAttachmentPath', true)
 			Zotero.Prefs.set('baseAttachmentPath', baseDir)
@@ -1144,9 +1174,6 @@ describe("Zotero.Item", function () {
 			});
 			
 			assert.equal(item.attachmentPath, "attachments:data/test.png");
-			
-			Zotero.Prefs.set('saveRelativeAttachmentPath', false)
-			Zotero.Prefs.clear('baseAttachmentPath')
 		})
 	})
 	
@@ -2080,6 +2107,30 @@ describe("Zotero.Item", function () {
 			assert.equal(item.getField('DOI'), doi1);
 			assert.equal(item.getField('extra'), `doi: ${doi2}`);
 		});*/
+		
+		it("should use valid CSL type from Extra", function () {
+			var json = {
+				itemType: "journalArticle",
+				pages: "123",
+				extra: "Type: song"
+			};
+			var item = new Zotero.Item;
+			item.fromJSON(json);
+			assert.equal(item.itemTypeID, Zotero.ItemTypes.getID('audioRecording'));
+			// A field valid for the old item type should be moved to Extra
+			assert.equal(item.getField('extra'), 'Pages: 123');
+		});
+		
+		it("shouldn't convert 'Type: article' from Extra into Document item", function () {
+			var json = {
+				itemType: "report",
+				extra: "Type: article"
+			};
+			var item = new Zotero.Item;
+			item.fromJSON(json);
+			assert.equal(Zotero.ItemTypes.getName(item.itemTypeID), 'report');
+			assert.equal(item.getField('extra'), 'Type: article');
+		});
 		
 		it("should ignore creator field in Extra", async function () {
 			var json = {

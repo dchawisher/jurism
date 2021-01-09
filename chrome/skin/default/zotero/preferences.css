@@ -388,11 +388,22 @@ treechildren::-moz-tree-checkbox(checked){
 }
 
 /*
- * Not sure if this is removed from Zotero or added by JM.
+ * Added by JM.
  */
 label.zotero-clicky.thin-border {
 	border: 1px solid rgb(109, 149, 224);
 }
+
+#zotero-prefpane-advanced-feeds-feedDefaults .html-input {
+	width: 50px;
+	text-align: right;
+}
+
+#zotero-prefpane-advanced-feeds-feedDefaults hbox {
+	display: flex;
+	align-items: center;
+}
+
 
 /* BEGIN 2X BLOCK -- DO NOT EDIT MANUALLY -- USE 2XIZE */
 @media (min-resolution: 1.25dppx) {

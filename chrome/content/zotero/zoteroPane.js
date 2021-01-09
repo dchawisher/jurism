@@ -2820,8 +2820,8 @@ var ZoteroPane = new function()
 						&& items.some(item => item.isRegularItem())) {
 					show.push(m.findPDF, m.sep3);
 				}
-				
-				var canCreateParent = true;
+
+				let canCreateParent = true;
 				for (let i = 0; i < items.length; i++) {
 					let item = items[i];
 					if (!item.isTopLevelItem() || !item.isAttachment() || item.isFeedItem) {
@@ -4517,40 +4517,73 @@ var ZoteroPane = new function()
 	};
 	
 	
-	this.createParentItemsFromSelected = Zotero.Promise.coroutine(function* () {
+	this.createParentItemsFromSelected = async function () {
 		if (!this.canEdit()) {
 			this.displayCannotEditLibraryMessage();
 			return;
 		}
 		
-		var items = this.getSelectedItems();
-		for (var i=0; i<items.length; i++) {
-			var item = items[i];
-			if (!item.isTopLevelItem() || item.isRegularItem()) {
-				throw('Item ' + itemID + ' is not a top-level attachment or note in ZoteroPane_Local.createParentItemsFromSelected()');
+		let items = this.getSelectedItems();
+
+		if (items.length > 1) {
+			for (let i = 0; i < items.length; i++) {
+				let item = items[i];
+				if (!item.isTopLevelItem() || item.isRegularItem()) {
+					throw new Error('Item ' + item.id + ' is not a top-level attachment');
+				}
+
+				await this.createEmptyParent(item);
 			}
-			
-			yield Zotero.DB.executeTransaction(function* () {
-				// TODO: remove once there are no top-level web attachments
-				if (item.isWebAttachment()) {
-					var parent = new Zotero.Item('webpage');
-				}
-				else {
-					var parent = new Zotero.Item('document');
-				}
-				parent.libraryID = item.libraryID;
-				parent.setField('title', item.getField('title'));
-				if (item.isWebAttachment()) {
-					parent.setField('accessDate', item.getField('accessDate'));
-					parent.setField('url', item.getField('url'));
-				}
-				var itemID = yield parent.save();
-				item.parentID = itemID;
-				yield item.save();
-			});
 		}
-	});
-	
+		else {
+			// Ask for an identifier if there is only one item
+			let item = items[0];
+			if (!item.isAttachment() || !item.isTopLevelItem()) {
+				throw new Error('Item ' + item.id + ' is not a top-level attachment');
+			}
+
+			let io = { dataIn: { item }, dataOut: null };
+			window.openDialog('chrome://zotero/content/createParentDialog.xul', '', 'chrome,modal,centerscreen', io);
+			if (!io.dataOut) {
+				return false;
+			}
+
+			// If we made a parent, attach the child
+			if (io.dataOut.parent) {
+				await Zotero.DB.executeTransaction(async function () {
+					item.parentID = io.dataOut.parent.id;
+					await item.save();
+				});
+			}
+			// If they clicked manual entry then make a dummy parent
+			else {
+				this.createEmptyParent(item);
+			}
+		}
+	};
+
+
+	this.createEmptyParent = async function (item) {
+		await Zotero.DB.executeTransaction(async function () {
+			// TODO: remove once there are no top-level web attachments
+			if (item.isWebAttachment()) {
+				var parent = new Zotero.Item('webpage');
+			}
+			else {
+				var parent = new Zotero.Item('document');
+			}
+			parent.libraryID = item.libraryID;
+			parent.setField('title', item.getField('title'));
+			if (item.isWebAttachment()) {
+				parent.setField('accessDate', item.getField('accessDate'));
+				parent.setField('url', item.getField('url'));
+			}
+			let itemID = await parent.save();
+			item.parentID = itemID;
+			await item.save();
+		});
+	};
+
 	
 	this.renameSelectedAttachmentsFromParents = Zotero.Promise.coroutine(function* () {
 		// TEMP: fix

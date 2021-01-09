@@ -238,10 +238,11 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 			   .getService(Components.interfaces.nsIAppShellService)
 			   .hiddenDOMWindow;
 		this.platform = win.navigator.platform;
-		this.isMac = (this.platform.substr(0, 3) == "Mac");
+		this.isMac = this.platform.substr(0, 3) == "Mac";
 		this.isWin = (this.platform.substr(0, 3) == "Win");
 		this.isLinux = (this.platform.substr(0, 5) == "Linux");
 		this.oscpu = win.navigator.oscpu;
+		this.isBigSurOrLater = this.isMac && !/Mac OS X 10.([1-9]|1[0-5])/.test(win.navigator.oscpu);
 		
 		// Browser
 		Zotero.browser = "g";
@@ -1251,6 +1252,9 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 	 */
 	this.crash = function (popup) {
 		this.crashed = true;
+		
+		// Check the database after restart
+		Zotero.Schema.setIntegrityCheckRequired(true).catch(e => this.logError(e));
 		
 		var reportErrorsStr = Zotero.getString('errorReport.reportErrors');
 		var reportInstructions = Zotero.getString('errorReport.reportInstructions', reportErrorsStr);

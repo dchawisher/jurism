@@ -40,8 +40,19 @@ const symlinkFiles = [
 	'!resource/SingleFile/**/*',
 	'resource/SingleFile/lib/**/*',
 	'resource/SingleFile/extension/lib/single-file/fetch/content/content-fetch.js',
-	'!resource/SingleFile/lib/single-file/processors/frame-tree/content/content-frame-tree.js',
 	'!resource/SingleFile/lib/single-file/single-file.js',
+	// We only need a couple Ace Editor files
+	'!resource/ace/**/*',
+	'resource/ace/ace.js',
+	// Enable for autocomplete
+	//'resource/ace/ext-language_tools.js',
+	'resource/ace/ext-searchbox.js',
+	'resource/ace/keybinding-emacs.js',
+	'resource/ace/keybinding-vim.js',
+	'resource/ace/mode-javascript.js',
+	'resource/ace/theme-chrome.js',
+	'resource/ace/theme-monokai.js',
+	'resource/ace/worker-javascript.js',
 	'update.rdf'
 ];
 
@@ -94,7 +105,6 @@ const jsFiles = [
 	'resource/react.js',
 	'resource/react-dom.js',
 	'resource/react-virtualized.js',
-	'resource/SingleFile/lib/single-file/processors/frame-tree/content/content-frame-tree.js',
 	'resource/SingleFile/lib/single-file/single-file.js'
 ];
 
