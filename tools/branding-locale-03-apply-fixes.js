@@ -105,6 +105,8 @@ const setStringsInLocaleFiles = (repl) => {
 					} else {
 						continue;
 					}
+
+					str = str.trim();
 						
 					if (mode === "dtd") {
 						lines[i] = line.replace(rex, ` ${key} "${str}"`);
