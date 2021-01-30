@@ -33,13 +33,11 @@ Zotero.CachedJurisdictionData = new function() {
 	var _jurisdictionNameToId = {};
 	var _courtIdToName = {};
 	var _courtNameToId = {};
-	var jurisdictionFieldID = null;
-	var courtFieldID = null;
 
 	this.jurisdictionNameFromId = jurisdictionNameFromId;
 	this.courtNameFromId = courtNameFromId;
 	this.courtIdFromName = courtIdFromName;
-	
+
 	this.init = function() {
 		// Get jurisdiction and court fieldIDs
 		jurisdictionFieldID = Zotero.ItemFields.getID('jurisdiction');
@@ -79,11 +77,12 @@ Zotero.CachedJurisdictionData = new function() {
 		} else if (_jurisdictionIdToName[idOrName]) {
 			id = idOrName;
 		} else {
-			var sql = "SELECT jurisdictionID,jurisdictionName FROM jurisdictions WHERE jurisdictionID=?";
-			var row = yield Zotero.DB.rowQueryAsync(sql, [idOrName]);
+			var locale = Zotero.locale ? Zotero.locale.split("-")[0] : "en";
+			var sql = "SELECT jurisdictionID,jurisdictionName FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) WHERE (lang=? OR lang IS NULL) AND jurisdictionID=? ORDER BY lang DESC";
+			var row = yield Zotero.DB.rowQueryAsync(sql, [locale, idOrName]);
 			if (!row) {
-				sql = "SELECT jurisdictionID,jurisdictionName FROM jurisdictions WHERE jurisdictionName=?";
-				row = yield Zotero.DB.rowQueryAsync(sql, [idOrName]);
+				sql = "SELECT jurisdictionID,jurisdictionName FROM jurisdictions LEFT JOIN uiLanguages USING(langIdx) WHERE (lang=? OR lang IS NULL) AND jurisdictionName=? ORDER BY lang DESC";
+				row = yield Zotero.DB.rowQueryAsync(sql, [locale, idOrName]);
 			}
 			if (row) {
 				id = row.jurisdictionID;
