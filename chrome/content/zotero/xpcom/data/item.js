@@ -68,7 +68,6 @@ Zotero.Item = function(itemTypeOrID) {
 	this._bestAttachmentState = null;
 	this._fileExists = null;
 	
-	this._deleted = null;
 	this._hasNote = null;
 	
 	this._noteAccessTime = null;
@@ -1495,7 +1494,7 @@ Zotero.Item.prototype.removeCreator = function(orderIndex, allowMissing, langTag
 
 
 // Define boolean properties
-for (let name of ['deleted', 'inPublications']) {
+for (let name of ['inPublications']) {
 	let prop = '_' + name;
 	Zotero.defineProperty(Zotero.Item.prototype, name, {
 		get: function() {
@@ -2067,8 +2066,8 @@ Zotero.Item.prototype._saveData = Zotero.Promise.coroutine(function* (env) {
 	}
 	
 	// Trashed status
-	if (this._changed.deleted) {
-		if (this._deleted) {
+	if (this._changedData.deleted !== undefined) {
+		if (this._changedData.deleted) {
 			sql = "REPLACE INTO deletedItems (itemID) VALUES (?)";
 		}
 		else {
@@ -2101,7 +2100,7 @@ Zotero.Item.prototype._saveData = Zotero.Promise.coroutine(function* (env) {
 		// Refresh trash
 		if (!env.options.skipNotifier) {
 			Zotero.Notifier.queue('refresh', 'trash', this.libraryID, {}, env.options.notifierQueue);
-			if (this._deleted) {
+			if (this._changedData.deleted) {
 				Zotero.Notifier.queue('trash', 'item', this.id, {}, env.options.notifierQueue);
 			}
 		}
@@ -2109,6 +2108,9 @@ Zotero.Item.prototype._saveData = Zotero.Promise.coroutine(function* (env) {
 		if (parentItemID) {
 			reloadParentChildItems[parentItemID] = true;
 		}
+		
+		this._clearChanged('deleted');
+		this._markForReload('primaryData');
 	}
 	
 	if (this._changed.inPublications) {
@@ -4219,8 +4221,8 @@ Zotero.DataObject.prototype.setDeleted = Zotero.Promise.coroutine(function* (del
 	
 	this._deleted = !!deleted;
 	
-	if (this._changed.deleted) {
-		delete this._changed.deleted;
+	if (this._changedData.deleted !== undefined) {
+		delete this._changedData.deleted;
 	}
 });
 
@@ -5264,13 +5266,6 @@ Zotero.Item.prototype.toJSON = function (options = {}) {
 			// Include in 'full' mode, but only in My Library
 			|| (mode == 'full' && this.library && this.library.libraryType == 'user')) {
 		obj.inPublications = this._inPublications;
-	}
-	
-	// Deleted
-	let deleted = this.deleted;
-	if (deleted || mode == 'full') {
-		// Match what APIv3 returns, though it would be good to change this
-		obj.deleted = deleted ? 1 : 0;
 	}
 	
 	// Relations

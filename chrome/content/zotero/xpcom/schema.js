@@ -240,6 +240,13 @@ Zotero.Schema = new function(){
 			await Zotero.DB.backupDatabase(false, true);
 		}
 		
+		var logLines = [];
+		var listener = function (line) {
+			logLines.push(line);
+		}
+		Zotero.Debug.addListener(listener);
+		
+		var updated;
 		await Zotero.DB.queryAsync("PRAGMA foreign_keys = false");
 		try {
 			// If bundled global schema file is newer than DB, apply it
@@ -262,7 +269,7 @@ Zotero.Schema = new function(){
 				await _loadGlobalSchema(data, bundledGlobalSchema.version);
 			}
 			
-			var updated = await Zotero.DB.executeTransaction(async function (conn) {
+			updated = await Zotero.DB.executeTransaction(async function (conn) {
 				var updated = await _updateSchema('system');
 				
 				// Update custom tables if they exist so that changes are in
@@ -273,7 +280,10 @@ Zotero.Schema = new function(){
 				
 				// Auto-repair databases flagged for repair or coming from the DB Repair Tool
 				if (integrityCheck) {
-					await this.integrityCheck(true);
+					// If we need to run migration steps, don't reconcile tables, since it might
+					// create tables that aren't expected to exist yet
+					let toVersion = await _getSchemaSQLVersion('userdata');
+					await this.integrityCheck(true, { skipReconcile: userdata < toVersion });
 					options.skipIntegrityCheck = true;
 				}
 				
@@ -294,6 +304,28 @@ Zotero.Schema = new function(){
 		}
 		finally {
 			await Zotero.DB.queryAsync("PRAGMA foreign_keys = true");
+			
+			Zotero.Debug.removeListener(listener);
+			
+			// If upgrade succeeded or failed (but not if there was nothing to do), save a log file
+			// in logs/upgrade.log in the data directory
+			if (updated || updated === undefined) {
+				Zotero.getSystemInfo()
+					.then(async function (sysInfo) {
+						var logDir = OS.Path.join(Zotero.DataDirectory.dir, 'logs');
+						Zotero.File.createDirectoryIfMissing(logDir)
+						
+						await OS.Path
+						var output = Zotero.getErrors(true).join('\n\n')
+							+ "\n\n" + sysInfo + "\n\n"
+							+ "=========================================================\n\n"
+							+ logLines.join('\n\n');
+						return Zotero.File.putContentsAsync(
+							OS.Path.join(logDir, 'upgrade.log'),
+							output
+						);
+					});
+			}
 		}
 		
 		if (updated) {
@@ -1935,7 +1967,14 @@ Zotero.Schema = new function(){
 	};
 	
 	
-	this.integrityCheck = Zotero.Promise.coroutine(function* (fix) {
+	/**
+	 * @param {Boolean} [fix=false]
+	 * @param {Object} [options]
+	 * @param {Boolean} [options.skipReconcile=false] - Don't reconcile the schema to create tables
+	 *     and indexes that should have been created and drop existing ones that should have been
+	 *     deleted
+	 */
+	this.integrityCheck = Zotero.Promise.coroutine(function* (fix, options = {}) {
 		Zotero.debug("Checking database integrity");
 		
 		// Just as a sanity check, make sure combined field tables are populated,
@@ -1959,15 +1998,12 @@ Zotero.Schema = new function(){
 		// error, and either true or data to pass to the repair function on error. Functions should
 		// avoid assuming any global state (e.g., loaded data).
 		var checks = [
-			/*
-			Currently disabled, because it can cause problems with schema update steps that don't
-			expect tables to exist.
-			
-			The test "should repair a missing userdata table" is also disabled.
-			
-			// Create any tables or indexes that are missing and delete any tables or triggers that
-			// still exist but should have been deleted
 			[
+				// Create any tables or indexes that are missing and delete any tables or triggers
+				// that still exist but should have been deleted
+				//
+				// This is skipped for automatic checks, because it can cause problems with schema
+				// update steps that don't expect tables to exist.
 				async function () {
 					var statementsToRun = [];
 					
@@ -2036,10 +2072,12 @@ Zotero.Schema = new function(){
 					for (let statement of statements) {
 						await Zotero.DB.queryAsync(statement);
 					}
+				},
+				{
+					reconcile: true
 				}
 			],
-			*/
-			
+		
 			// Foreign key checks
 			[
 				async function () {
@@ -2209,6 +2247,11 @@ Zotero.Schema = new function(){
 			]
 		];
 		
+		// Remove reconcile steps
+		if (options && options.skipReconcile) {
+			checks = checks.filter(x => !x[2] || !x[2].reconcile);
+		}
+	
 		for (let check of checks) {
 			let errorsFound = false;
 			// SQL statement
@@ -2394,7 +2437,11 @@ Zotero.Schema = new function(){
 			Components.utils.reportError(e);
 			let ps = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
 				.getService(Components.interfaces.nsIPromptService);
-			ps.alert(null, Zotero.getString('general.error'), Zotero.getString('startupError'));
+			ps.alert(
+				null,
+				Zotero.getString('general.error'),
+				Zotero.getString('startupError', Zotero.appName)
+			);
 			throw e;
 		});
 	}
@@ -2730,8 +2777,8 @@ Zotero.Schema = new function(){
 		}
 		
 		if (!options.skipIntegrityCheck) {
-			// TEMP: Disabled
-			//yield Zotero.Schema.integrityCheck(true);
+			// Check integrity, but don't create missing tables
+			yield Zotero.Schema.integrityCheck(true, { skipReconcile: true });
 		}
 		
 		Zotero.debug('Updating user data tables from version ' + fromVersion + ' to ' + toVersion);
@@ -3394,6 +3441,13 @@ Zotero.Schema = new function(){
 			else if (i == 110) {
 				yield Zotero.DB.queryAsync("UPDATE itemAttachments SET parentItemID=NULL WHERE itemID=parentItemID");
 				yield Zotero.DB.queryAsync("UPDATE itemNotes SET parentItemID=NULL WHERE itemID=parentItemID");
+			}
+			
+			else if (i == 111) {
+				yield Zotero.DB.queryAsync("CREATE TABLE deletedCollections (\n    collectionID INTEGER PRIMARY KEY,\n    dateDeleted DEFAULT CURRENT_TIMESTAMP NOT NULL,\n    FOREIGN KEY (collectionID) REFERENCES collections(collectionID) ON DELETE CASCADE\n)");
+				yield Zotero.DB.queryAsync("CREATE INDEX deletedCollections_dateDeleted ON deletedCollections(dateDeleted)");
+				yield Zotero.DB.queryAsync("CREATE TABLE deletedSearches (\n    savedSearchID INTEGER PRIMARY KEY,\n    dateDeleted DEFAULT CURRENT_TIMESTAMP NOT NULL,\n    FOREIGN KEY (savedSearchID) REFERENCES savedSearches(savedSearchID) ON DELETE CASCADE\n)");
+				yield Zotero.DB.queryAsync("CREATE INDEX deletedSearches_dateDeleted ON deletedSearches(dateDeleted)");
 			}
 			
 			// If breaking compatibility or doing anything dangerous, clear minorUpdateFrom

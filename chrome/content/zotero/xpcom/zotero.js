@@ -775,7 +775,9 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 		catch (e) {
 			Zotero.logError(e);
 			if (!Zotero.startupError) {
-				Zotero.startupError = Zotero.getString('startupError') + "\n\n" + (e.stack || e);
+				Zotero.startupError = Zotero.getString('startupError', Zotero.appName) + "\n\n"
+					+ Zotero.getString('db.integrityCheck.reportInForums') + "\n\n"
+					+ (e.stack || e);
 			}
 			return false;
 		}
@@ -831,7 +833,9 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 			}
 			else {
 				let stack = e.stack ? Zotero.Utilities.Internal.filterStack(e.stack) : null;
-				Zotero.startupError = Zotero.getString('startupError') + "\n\n" + (stack || e);
+				Zotero.startupError = Zotero.getString('startupError', Zotero.appName) + "\n\n"
+					+ Zotero.getString('db.integrityCheck.reportInForums') + "\n\n"
+					+ (stack || e);
 			}
 			
 			Zotero.debug(e.toString(), 1);
@@ -1478,6 +1482,8 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 	 * @return	void
 	 */
 	this.showZoteroPaneProgressMeter = function (msg, determinate, icon, modalOnly) {
+		const HTML_NS = "http://www.w3.org/1999/xhtml"
+		
 		// If msg is undefined, keep any existing message. If false/null/"", clear.
 		// The message is also cleared when the meters are hidden.
 		_progressMessage = msg = (msg === undefined ? _progressMessage : msg) || "";
@@ -1512,21 +1518,15 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 			let id = 'zotero-pane-progressmeter';
 			let progressMeter = doc.getElementById(id);
 			if (!progressMeter) {
-				progressMeter = doc.createElement('progressmeter');
+				progressMeter = doc.createElementNS(HTML_NS, 'progress');
 				progressMeter.id = id;
 			}
-			progressMeter.setAttribute('mode', 'undetermined');
 			if (determinate) {
-				progressMeter.setAttribute('mode', 'determined');
 				progressMeter.setAttribute('value', 0);
-				progressMeter.setAttribute('max', 1000);
-				progressMeter.mode = 'determined';
-				progressMeter.value = 0;
 				progressMeter.max = 1000;
 			}
 			else {
-				progressMeter.setAttribute('mode', 'undetermined');
-				progressMeter.mode = 'undetermined';
+				progressMeter.removeAttribute('value');
 			}
 			container.appendChild(progressMeter);
 			
@@ -1556,14 +1556,13 @@ Services.scriptloader.loadSubScript("resource://zotero/polyfill.js");
 		}
 		for (let pm of _progressMeters) {
 			if (percentage !== null) {
-				if (pm.mode == 'undetermined') {
+				if (!pm.hasAttribute('value')) {
 					pm.max = 1000;
-					pm.mode = 'determined';
 				}
 				pm.setAttribute('value', percentage);
-				pm.value = percentage;
-			} else if(pm.mode === 'determined') {
-				pm.mode = 'undetermined';
+			}
+			else if (pm.hasAttribute('value')) {
+				pm.removeAttribute('value');
 			}
 		}
 		_lastPercentage = percentage;

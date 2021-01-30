@@ -364,8 +364,7 @@ describe("Zotero.Attachments", function() {
 			assert.isTrue(await OS.File.exists(file));
 			//assert.isTrue(await OS.File.exists(path));
 			let contents = await Zotero.File.getContentsAsync(path);
-			contents = contents.replace(/<html[^>]*>/, "<html>");
-			assert.isTrue(contents.startsWith("<html><!--\n Page saved with SingleFile"));
+			assert.include(contents, "><!--\n Page saved with SingleFile");
 			
 			// Check attachment base64 contents
 			let expectedPath = getTestDataDirectory();
@@ -411,7 +410,7 @@ describe("Zotero.Attachments", function() {
 			let path = OS.Path.join(storageDir, 'index.html');
 			assert.isTrue(await OS.File.exists(path));
 			let contents = await Zotero.File.getContentsAsync(path);
-			assert.include(contents, "<html><!--\n Page saved with SingleFile");
+			assert.include(contents, "><!--\n Page saved with SingleFile");
 
 			// Check attachment base64 contents
 			let expectedPath = getTestDataDirectory();
@@ -463,7 +462,7 @@ describe("Zotero.Attachments", function() {
 			let path = OS.Path.join(storageDir, 'index.html');
 			assert.isTrue(await OS.File.exists(path));
 			let contents = await Zotero.File.getContentsAsync(path);
-			assert.include(contents, "<html><!--\n Page saved with SingleFile");
+			assert.include(contents, "><!--\n Page saved with SingleFile");
 		});
 
 		it("should save a document but not save the iframe", async function () {
