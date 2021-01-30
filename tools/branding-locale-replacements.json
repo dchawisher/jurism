@@ -567,7 +567,8 @@
     },
     "sync.error.corruptedLoginManager": {
       "words": [
-        "Zotero"
+        "Zotero",
+        "Juris-M"
       ]
     },
     "sync.error.invalidCharsFilename": {

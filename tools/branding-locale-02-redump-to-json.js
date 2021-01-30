@@ -38,7 +38,7 @@ const processStringEdits = (repl) => {
 		let key = m[1];
 		let fn = m[2];
 		let str = lines[i+1].trim();
-		var mm = str.match(/(Jurism|Zotero)/g);
+		var mm = str.match(/(Juris-M|Jurism|Zotero)/g);
 		if (!mm) {
 			throw new Error(`No replacement in: ${str}`);
 		}
