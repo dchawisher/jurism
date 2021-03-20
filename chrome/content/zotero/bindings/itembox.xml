@@ -2214,7 +2214,6 @@
 						}
 					}
 					await this.blurOpenField();
-					this.item.removeCreator(index);
 					await this.item.saveTx();
 				}.bind(this))();
 				]]></body>
@@ -4034,7 +4033,6 @@
 							}
 						}
 					}
-					
 					return this.item.setCreator(index, creator);
 				]]></body>
 			</method>
