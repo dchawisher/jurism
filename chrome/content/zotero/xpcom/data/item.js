@@ -1843,8 +1843,10 @@ Zotero.Item.prototype._saveData = Zotero.Promise.coroutine(function* (env) {
 							orderIndex
 						]
 					);
-					
+
+					/*
 					// Realign creator variants to new creatorID
+					// (the need for the operation above may be open to question?)
 					var sql = "UPDATE itemCreatorsAlt "
 						+ "SET creatorID=? WHERE itemID=? AND creatorID=? AND orderIndex=?";
 					yield Zotero.DB.queryAsync(
@@ -1856,6 +1858,7 @@ Zotero.Item.prototype._saveData = Zotero.Promise.coroutine(function* (env) {
 							orderIndex
 						]
 					);
+					 */
 				}
 			}
 			
