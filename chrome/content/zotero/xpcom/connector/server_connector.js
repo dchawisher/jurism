@@ -1150,7 +1150,9 @@ Zotero.Server.Connector.SaveSnapshot.prototype = {
 			return 500;
 		}
 		
-		return [201, "application/json", JSON.stringify({ saveSingleFile: !data.skipSnapshot })];
+		return [201,
+			"application/json",
+			JSON.stringify({ saveSingleFile: !data.skipSnapshot && !data.pdf })];
 	},
 	
 	/*

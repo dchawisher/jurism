@@ -410,15 +410,13 @@ Zotero.ItemFields = new function() {
 	
 	
 	/**
-	 * A long field expands into a multiline textbox while editing but displays
-	 * as a single line in non-editing mode; newlines are not allowed
+	 * A long field expands into a multiline textbox while editing; newlines are not allowed
 	 */
 	this.isLong = function (field) {
 		field = this.getName(field);
 		var fields = [
 			'title',
-			'nameOfAct',
-			'caseName',
+			...this.getTypeFieldsFromBase('title', true),
 			'bookTitle'
 		];
 		return fields.indexOf(field) != -1;
@@ -426,8 +424,7 @@ Zotero.ItemFields = new function() {
 	
 	
 	/**
-	 * A multiline field displays as a multiline text box in editing mode
-	 * and non-editing mode; newlines are allowed
+	 * A multiline field displays as a multiline text box in editing mode; newlines are allowed
 	 */
 	this.isMultiline = function (field) {
 		field = this.getName(field);
