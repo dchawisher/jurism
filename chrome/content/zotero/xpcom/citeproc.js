@@ -59,7 +59,7 @@ Copyright (c) 2009-2019 Frank Bennett
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.4.59",
+    PROCESSOR_VERSION: "1.4.61",
 
     error: function(str) { // default error function
         if ("undefined" === typeof Error) {
@@ -120,7 +120,6 @@ var CSL = {
         "cmt.": "comment",
         "dec.": "decision",
         "dept.": "department",
-        "div.": "division",
         "ex.": "example",
         "fig.": "figure",
         "fld.": "field",
@@ -170,7 +169,6 @@ var CSL = {
         "comment": "cmt.",
         "decision": "dec.",
         "department": "dept.",
-        "division": "div.",
         "example": "ex.",
         "figure": "fig.",
         "field": "fld.",
@@ -219,7 +217,6 @@ var CSL = {
         "cmt": "comment",
         "dec": "decision",
         "dept": "department",
-        "div": "division",
         "ex": "example",
         "fig": "figure",
         "fld": "field",
@@ -725,33 +722,61 @@ var CSL = {
 
     NAME_VARIABLES: [
         "author",
+        "chair",
         "collection-editor",
+        "compiler",
         "composer",
         "container-author",
+        "contributor",
+        "curator",
         "director",
         "editor",
+        "editor-translator", 
         "editorial-director",
+        "executive-producer",
+        "guest",
+        "host",
         "illustrator",
         "interviewer",
+        "narrator", 
+        "organizer",
         "original-author",
+        "performer",
+        "producer",
         "recipient",
         "reviewed-author",
+        "script-writer",
+        "series-creator",
         "translator",
         "commenter"
     ],
     CREATORS: [
         "author",
+        "chair",
         "collection-editor",
+        "compiler",
         "composer",
         "container-author",
+        "contributor",
+        "curator",
         "director",
         "editor",
+        "editor-translator", 
         "editorial-director",
+        "executive-producer",
+        "guest",
+        "host",
         "illustrator",
         "interviewer",
+        "narrator", 
+        "organizer",
         "original-author",
+        "performer",
+        "producer",
         "recipient",
         "reviewed-author",
+        "script-writer",
+        "series-creator",
         "translator",
         "commenter"
     ],
@@ -768,10 +793,13 @@ var CSL = {
         "number",
         "number-of-pages",
         "number-of-volumes",
+        "part-number",
+        "printing-number",
+        "section",
+        "supplement-number",
         "version",
         "volume",
-        // "section", ??? add this?
-        "supplement",
+        "supplement", // maybe deprecated this? supplement-number should serve this purpose in standard CSL.
         "citation-number"
     ],
     //var x = new Array();
@@ -1476,6 +1504,9 @@ var CSL = {
     },
 
     INIT_JURISDICTION_MACROS: function (state, Item, item, macroName) {
+        if (Item["best-jurisdiction"]) {
+            return true;
+        }
         if (!state.sys.retrieveStyleModule || !CSL.MODULE_MACROS[macroName] || !Item.jurisdiction) {
             return false;
         }
@@ -1505,7 +1536,7 @@ var CSL = {
             var jurisdiction = jurisdictionList[i];
             if (item) {
                 if (state.juris[jurisdiction] && !item["best-jurisdiction"] && state.juris[jurisdiction].types.locator) {
-                    item["best-jurisdiction"] = jurisdiction;
+                    Item["best-jurisdiction"] = jurisdiction;
                 }
             }
             if(state.juris[jurisdiction] && state.juris[jurisdiction].types[Item.type]) {
@@ -10295,7 +10326,7 @@ CSL.Node["date-part"] = {
                     last_string_output = "x";
                     num = parseInt(state.registry.registry[Item.id].disambig.year_suffix, 10);
                     // first argument is for number particle [a-zA-Z], never present on dates
-                    number = new CSL.NumericBlob(false, num, this, Item.id);
+                    number = new CSL.NumericBlob(state, false, num, this, Item.id);
                     this.successor_prefix = state[state.build.area].opt.layout_delimiter;
                     this.splice_prefix = state[state.build.area].opt.layout_delimiter;
                     formatter = new CSL.Util.Suffixator(CSL.SUFFIX_CHARS);
@@ -15390,7 +15421,7 @@ CSL.Node.text = {
                             if (state.opt.citation_number_slug) {
                                 state.output.append(state.opt.citation_number_slug, this);
                             } else {
-                                number = new CSL.NumericBlob(false, num, this, Item.id);
+                                number = new CSL.NumericBlob(state, false, num, this, Item.id);
                                 if (state.tmp.in_cite_predecessor) {
                                     number.suppress_splice_prefix = true;
                                 }
@@ -15424,7 +15455,7 @@ CSL.Node.text = {
                             if (state[state.tmp.area].opt.cite_group_delimiter) {
                                 this.successor_prefix = state[state.tmp.area].opt.cite_group_delimiter;
                             }
-                            number = new CSL.NumericBlob(false, num, this, Item.id);
+                            number = new CSL.NumericBlob(state, false, num, this, Item.id);
                             formatter = new CSL.Util.Suffixator(CSL.SUFFIX_CHARS);
                             number.setFormatter(formatter);
                             state.output.append(number, "literal");
@@ -18625,7 +18656,7 @@ CSL.Blob.prototype.push = function (blob) {
  * @namespace Range object and friends.
  */
 
-CSL.NumericBlob = function (particle, num, mother_token, id) {
+CSL.NumericBlob = function (state, particle, num, mother_token, id) {
     // item id is used to assure that prefix delimiter is invoked only
     // when joining blobs across items
     this.id = id;
@@ -18636,6 +18667,11 @@ CSL.NumericBlob = function (particle, num, mother_token, id) {
     this.status = CSL.START;
     this.strings = {};
     if (mother_token) {
+        if (mother_token.strings["text-case"]) {
+            var textCase = mother_token.strings["text-case"];
+            this.particle = CSL.Output.Formatters[textCase](state, this.particle);
+            this.blobs = CSL.Output.Formatters[textCase](state, this.blobs);
+        }
         this.gender = mother_token.gender;
         this.decorations = mother_token.decorations;
         this.strings.prefix = mother_token.strings.prefix;
@@ -20190,8 +20226,10 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable) {
         str = normalizeFieldValue(str, defaultLabel);
 
         var jmrex, jsrex, mystr;
-        if (str.indexOf("\u2013") > -1) {
-            str = str.replace(/\u2013/g, "-");
+        if ("page" === variable) {
+            if (str.indexOf("\u2013") > -1) {
+                str = str.replace(/\u2013/g, "-");
+            }
         }
         if (str.indexOf("\\-") > -1) {
             jmrex = new RegExp(joinerMatchRex.source.replace("\\-", ""));
@@ -20873,9 +20911,9 @@ CSL.Util.outputNumericField = function(state, varname, itemID) {
         if (num.collapsible) {
             var blob;
             if (num.value.match(/^[1-9][0-9]*$/)) {
-                blob = new CSL.NumericBlob(num.particle, parseInt(num.value, 10), numStyling, itemID);
+                blob = new CSL.NumericBlob(state, num.particle, parseInt(num.value, 10), numStyling, itemID);
             } else {
-                blob = new CSL.NumericBlob(num.particle, num.value, numStyling, itemID);
+                blob = new CSL.NumericBlob(state, num.particle, num.value, numStyling, itemID);
             }
             if ("undefined" === typeof blob.gender) {
                 blob.gender = state.locale[state.opt.lang]["noun-genders"][varname];
@@ -21661,7 +21699,7 @@ CSL.Output.Formatters = (function () {
     var rexNameStr = "(?:[-\\s]*<\\/*(?:span\s+class=\"no(?:case|decor)\"|i|sc|b|sub|sup)>[-\\s]*|[-\\s]+)";
     var nameDoppel = new CSL.Doppeler(rexNameStr);
     
-    var wordDoppel = new CSL.Doppeler("(?:[\u0020\u00A0\u2000-\u200B\u205F\u3000]+)");
+    var wordDoppel = new CSL.Doppeler("(?:[\u00A0\u0020\u00A0\u2000-\u200B\u205F\u3000]+)");
     
     /**
      * INTERNAL
@@ -21934,7 +21972,6 @@ CSL.Output.Formatters = (function () {
             quoteState: [],
             capitaliseWords: function(str, i, followingTag) {
                 if (str.trim()) {
-                    var words = str.split(/[ \u00A0]+/);
                     var wordle = wordDoppel.split(str);
                     var words = wordle.strings;
                     for (var j=0,jlen=words.length;j<jlen;j++) {
@@ -21942,17 +21979,23 @@ CSL.Output.Formatters = (function () {
                         if (!word) {
                             continue;
                         }
-                        if (word.length > 1 && !CSL.toLocaleLowerCase.call(state, word).match(config.skipWordsRex)) {
+                        let lcase = CSL.toLocaleLowerCase.call(state, word);
+                        let capitalize = false;
+                        if (word.length > 1 && !lcase.match(config.skipWordsRex)) {
                             // Capitalize every word that is not a stop-word
-                            words[j] = _capitalise.call(state, words[j]);
+                            capitalize = true;
                         } else if (j === (words.length - 1) && followingTag === "-") {
-                            words[j] = _capitalise.call(state, words[j]);
+                            capitalize = true;
                         } else if (config.isFirst) {
                             // Capitalize first word, even if a stop-word
-                            words[j] = _capitalise.call(state, words[j]);
+                            capitalize = true;
                         } else if (config.afterPunct) {
                             // Capitalize after punctuation
-                            words[j] = _capitalise.call(state, words[j]);
+                            capitalize = true;
+                        }
+                        // Don't capitalize if word already contains capitalization
+                        if (capitalize && word === lcase) {
+                            words[j] = _capitalise.call(state, word);
                         }
                         config.afterPunct = false;
                         config.isFirst = false;
@@ -21982,18 +22025,22 @@ CSL.Output.Formatters = (function () {
         var config = {
             quoteState: [],
             capitaliseWords: function(str) {
-                var words = str.split(" ");
+                var wordle = wordDoppel.split(str);
+                var words = wordle.strings;
                 for (var i=0,ilen=words.length;i<ilen;i++) {
                     var word = words[i];
                     if (word) {
                         if (config.isFirst) {
-                            words[i] = _capitalise.call(state, word);
+                            // Don't capitalize if word already contains capitalization
+                            if (word === CSL.toLocaleLowerCase.call(state, word)) {
+                                words[i] = _capitalise.call(state, word);
+                            }
                             config.isFirst = false;
                             break;
                         }
                     }
                 }
-                return words.join(" ");
+                return wordDoppel.join(wordle);
             },
             skipWordsRex: null,
             tagState: [],
@@ -22013,14 +22060,18 @@ CSL.Output.Formatters = (function () {
         var config = {
             quoteState: [],
             capitaliseWords: function(str) {
-                var words = str.split(" ");
+                var wordle = wordDoppel.split(str);
+                var words = wordle.strings;
                 for (var i=0,ilen=words.length;i<ilen;i++) {
                     var word = words[i];
                     if (word) {
-                        words[i] = _capitalise.call(state, word);
+                        // Don't capitalize if word already contains capitalization
+                        if (word === CSL.toLocaleLowerCase.call(state, word)) {
+                            words[i] = _capitalise.call(state, word);
+                        }
                     }
                 }
-                return words.join(" ");
+                return wordDoppel.join(wordle);
             },
             skipWordsRex: null,
             tagState: [],

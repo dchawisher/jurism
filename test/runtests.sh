@@ -196,8 +196,8 @@ if [ -z $IS_CYGWIN ]; then
 	echo "`MOZ_NO_REMOTE=1 NO_EM_RESTART=1 \"$FX_EXECUTABLE\" -v`"
 fi
 
-if [ "$TRAVIS" = true ]; then
-	FX_ARGS="$FX_ARGS -ZoteroAutomatedTest -ZoteroTestTimeout 20000"
+if [ -n "$CI" ]; then
+	FX_ARGS="$FX_ARGS -ZoteroAutomatedTest -ZoteroTestTimeout 15000"
 fi
 
 # Clean up on exit
@@ -205,7 +205,7 @@ trap "{ rm -rf \"$TEMPDIR\"; }" EXIT
 
 # Check if build watch process is running
 # If not, run now
-if [[ "$TRAVIS" != true ]] && ! ps | grep scripts/build.js | grep -v grep > /dev/null; then
+if [[ -z "$CI" ]] && ! ps | grep scripts/build.js | grep -v grep > /dev/null; then
 	echo
 	echo "Running JS build process"
 	cd "$ROOT_DIR"
