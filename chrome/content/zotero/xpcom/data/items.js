@@ -373,7 +373,7 @@ Zotero.Items = function() {
 			+ 'SELECT itemID, creatorID, creatorTypeID, orderIndex, languageTag, 0 AS forceTop '
 			+ 'FROM items JOIN itemCreatorsAlt USING(itemID) '
 			+ 'WHERE libraryID=?' + idSQL 
-			+ " ORDER BY itemID, orderIndex";
+			+ " ORDER BY itemID, orderIndex, forceTop DESC";
 		var params = [libraryID, libraryID];
 		var rows = yield Zotero.DB.queryAsync(sql, params);
 		
