@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Open CSL-stijl bewerker">
 <!ENTITY zotero.preferences.openCSLPreview "Open CSL-stijl voorbeeld">
 <!ENTITY zotero.preferences.openurl.caption "OpenURL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Aangepast...">
 <!ENTITY zotero.preferences.openurl.search "Resolvers opzoeken">
 <!ENTITY zotero.preferences.openurl.server "Resolver:">

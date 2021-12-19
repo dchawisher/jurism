@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Breyta stíl">
 <!ENTITY zotero.preferences.openCSLPreview "Forskoðun stíls">
 <!ENTITY zotero.preferences.openurl.caption "Opna slóð">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Sérsniðið…">
 <!ENTITY zotero.preferences.openurl.search "Leita að auðkennum netþjóna">
 <!ENTITY zotero.preferences.openurl.server "Auðkennir:">

@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Åbn formatredigering">
 <!ENTITY zotero.preferences.openCSLPreview "Åbn formatforhåndsvisning">
 <!ENTITY zotero.preferences.openurl.caption "OpenURL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Tilpasset...">
 <!ENTITY zotero.preferences.openurl.search "Søg efter &quot;resolvers&quot;">
 <!ENTITY zotero.preferences.openurl.server "&quot;Resolver&quot;:">

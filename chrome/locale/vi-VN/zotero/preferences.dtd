@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Mở Bộ soạn thảo kiểu trích dẫn">
 <!ENTITY zotero.preferences.openCSLPreview "Mở trình xem kiểu trích dẫn">
 <!ENTITY zotero.preferences.openurl.caption "OpenURL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Tùy chỉnh...">
 <!ENTITY zotero.preferences.openurl.search "Tìm kiếm các bộ phân giải">
 <!ENTITY zotero.preferences.openurl.server "Bộ phân giải:">

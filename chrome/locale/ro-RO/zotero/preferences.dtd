@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Deschide Editorul de stil">
 <!ENTITY zotero.preferences.openCSLPreview "Deschide Previzualizare stil">
 <!ENTITY zotero.preferences.openurl.caption "Deschide URL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Personalizare...">
 <!ENTITY zotero.preferences.openurl.search "Caută rezolvatori">
 <!ENTITY zotero.preferences.openurl.server "Rezolvator:">

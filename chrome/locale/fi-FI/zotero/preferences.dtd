@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Avaa tyylimuokkain">
 <!ENTITY zotero.preferences.openCSLPreview "Avaa tyylin esikatselu">
 <!ENTITY zotero.preferences.openurl.caption "OpenURL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Oma asetus...">
 <!ENTITY zotero.preferences.openurl.search "Etsi linkkipalvelimia">
 <!ENTITY zotero.preferences.openurl.server "Palvelin:">

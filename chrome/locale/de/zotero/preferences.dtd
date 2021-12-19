@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Zitierstil Editor öffnen">
 <!ENTITY zotero.preferences.openCSLPreview "Zitierstil Vorschau öffnen">
 <!ENTITY zotero.preferences.openurl.caption "OpenURL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Benutzerdefiniert...">
 <!ENTITY zotero.preferences.openurl.search "Nach Resolvern suchen">
 <!ENTITY zotero.preferences.openurl.server "Resolver:">

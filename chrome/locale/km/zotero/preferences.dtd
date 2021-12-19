@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Open Style Editor">
 <!ENTITY zotero.preferences.openCSLPreview "Open Style Preview">
 <!ENTITY zotero.preferences.openurl.caption "បើកគេហទំព័រ">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Custom…">
 <!ENTITY zotero.preferences.openurl.search "ស្វែងរកដំណោះស្រាយ">
 <!ENTITY zotero.preferences.openurl.server "ដំណោះស្រាយ:">

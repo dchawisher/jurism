@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "開啟文獻格式編輯器">
 <!ENTITY zotero.preferences.openCSLPreview "預覽文獻格式">
 <!ENTITY zotero.preferences.openurl.caption "開啟 URL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "自訂...">
 <!ENTITY zotero.preferences.openurl.search "搜尋解析器">
 <!ENTITY zotero.preferences.openurl.server "解析器：">

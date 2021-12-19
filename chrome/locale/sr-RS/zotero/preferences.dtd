@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Отвори Уређивач стилова">
 <!ENTITY zotero.preferences.openCSLPreview "Отвори Преглед стилова">
 <!ENTITY zotero.preferences.openurl.caption "ОпенУРЛ">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Произвољно…">
 <!ENTITY zotero.preferences.openurl.search "Нађи разрешиваче">
 <!ENTITY zotero.preferences.openurl.server "Разрешивач:">

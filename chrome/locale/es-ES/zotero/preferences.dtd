@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "Abrir editor de estilo">
 <!ENTITY zotero.preferences.openCSLPreview "Abrir previsualizador de estilo">
 <!ENTITY zotero.preferences.openurl.caption "AbrirURL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "Personalizar...">
 <!ENTITY zotero.preferences.openurl.search "Buscar sistemas de resolución">
 <!ENTITY zotero.preferences.openurl.server "Sistema de resolución:">

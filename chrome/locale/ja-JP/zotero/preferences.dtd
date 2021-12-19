@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "スタイルエディタを開く">
 <!ENTITY zotero.preferences.openCSLPreview "スタイルのプレビューを開く">
 <!ENTITY zotero.preferences.openurl.caption "OpenURL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "カスタム...">
 <!ENTITY zotero.preferences.openurl.search "リンク・リゾルバを検索">
 <!ENTITY zotero.preferences.openurl.server "リンク・リゾルバ:">

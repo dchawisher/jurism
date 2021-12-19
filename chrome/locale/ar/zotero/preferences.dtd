@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "افتح محرر الانماط">
 <!ENTITY zotero.preferences.openCSLPreview "افتح عرض النمط">
 <!ENTITY zotero.preferences.openurl.caption "الرابط المفتوح">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "تخصيص...">
 <!ENTITY zotero.preferences.openurl.search "البحث عن مقرر">
 <!ENTITY zotero.preferences.openurl.server "رابط المقرر:">

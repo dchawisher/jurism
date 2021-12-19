@@ -138,6 +138,7 @@
 <!ENTITY zotero.preferences.openCSLEdit "스타일 편집기 열기">
 <!ENTITY zotero.preferences.openCSLPreview "스타일 미리보기 열기">
 <!ENTITY zotero.preferences.openurl.caption "OpenURL">
+<!ENTITY zotero.preferences.openurl.choose "Choose a resolver…">
 <!ENTITY zotero.preferences.openurl.custom "사용자 지정...">
 <!ENTITY zotero.preferences.openurl.search "해독기로 검색">
 <!ENTITY zotero.preferences.openurl.server "해독기:">
